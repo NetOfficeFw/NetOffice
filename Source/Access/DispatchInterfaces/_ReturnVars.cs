@@ -189,7 +189,7 @@ namespace NetOffice.AccessApi
 
         ICOMObject IEnumerableProvider<NetOffice.AccessApi.ReturnVar>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.AccessApi.ReturnVar>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -222,7 +222,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

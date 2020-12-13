@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
 
         ICOMObject IEnumerableProvider<NetOffice.WordApi.Shape>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.WordApi.Shape>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -492,7 +492,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

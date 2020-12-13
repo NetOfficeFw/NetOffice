@@ -29,8 +29,6 @@ namespace NetOffice
         private bool _enableMoreDebugOutput = false;
         private bool _enableEventDebugOutput = false;
         private bool _enableSafeMode = false;
-        private bool _enableDynamicObjects = true;
-        private bool _enableDynamicEventArguments;
         private bool _enableKnownReferenceInspection;
         private bool _enableAutoDisposeEventArguments;
 
@@ -507,11 +505,10 @@ namespace NetOffice
            
             // todo: handle that better by reflection
 
-            if (PerformanceTrace.Enabled != other.PerformanceTrace.Enabled || EnableProxyManagement != other.EnableProxyManagement ||
-                EnableDynamicObjects != other.EnableDynamicObjects || EnableDynamicEventArguments != other.EnableDynamicEventArguments)
+            if (PerformanceTrace.Enabled != other.PerformanceTrace.Enabled || EnableProxyManagement != other.EnableProxyManagement)
                 return false;
 
-            if ( EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != other.EnableDynamicEventArguments ||
+            if ( EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments ||
                  ExceptionMessageBehavior != other.ExceptionMessageBehavior || ExceptionDefaultMessage != other.ExceptionDefaultMessage)
                 return false;
 

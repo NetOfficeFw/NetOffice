@@ -192,7 +192,7 @@ namespace NetOffice.PowerPointApi
 
         ICOMObject IEnumerableProvider<NetOffice.PowerPointApi.Series>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.PowerPointApi.Series>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -225,7 +225,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 15, 16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

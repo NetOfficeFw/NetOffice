@@ -157,7 +157,7 @@ namespace NetOffice.ADODBApi
 
         ICOMObject IEnumerableProvider<NetOffice.ADODBApi._Parameter_Deprecated>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.ADODBApi._Parameter_Deprecated>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -190,7 +190,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

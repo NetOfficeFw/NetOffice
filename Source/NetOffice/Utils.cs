@@ -66,17 +66,14 @@ namespace NetOffice
         /// </summary>
         ///  <param name="parent">parent instance or null in com proxy management</param>
         /// <param name="comObject"><see cref="ICOMObject"/> instance to access the enumerator</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>managed enumerator</returns>
-        public static ICOMObject GetComObjectEnumeratorAsProperty(ICOMObject parent, ICOMObject comObject, bool allowDynamicObject)
+        public static ICOMObject GetComObjectEnumeratorAsProperty(ICOMObject parent, ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
             lock (comObject.SyncRoot)
             {
-                if (!comObject.Settings.EnableDynamicObjects)
-                    allowDynamicObject = false;
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Invoker.PropertyGet(comObject, "_NewEnum");
                 ICOMObject enumerator = new COMObject(comObject.Factory, parent, enumProxy, true, "Variant Enumerator");
@@ -89,17 +86,14 @@ namespace NetOffice
         /// </summary>
         ///  <param name="parent">parent instance or null in com proxy management</param>
         /// <param name="comObject"><see cref="ICOMObject"/> instance to access the enumerator</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>managed enumerator</returns>
-        public static ICOMObject GetComObjectEnumeratorAsMethod(ICOMObject parent, ICOMObject comObject, bool allowDynamicObject)
+        public static ICOMObject GetComObjectEnumeratorAsMethod(ICOMObject parent, ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
             lock (comObject.SyncRoot)
             {
-                if (!comObject.Settings.EnableDynamicObjects)
-                    allowDynamicObject = false;
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Invoker.MethodReturn(comObject, "_NewEnum");
                 ICOMObject enumerator = new COMObject(comObject.Factory, parent, enumProxy, true, "Variant Enumerator");
@@ -125,7 +119,7 @@ namespace NetOffice
                     object itemProxy = enumerator.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
                     {
-                        ICOMObject returnClass = enumerator.Factory.CreateObjectFromComProxy(parent, itemProxy, allowDynamicObject);
+                        ICOMObject returnClass = enumerator.Factory.CreateObjectFromComProxy(parent, itemProxy);
                         yield return returnClass;
                     }
                     else
@@ -135,22 +129,19 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Returns an enumerator with variant items - that means item(s) can be proxy or scalar
         /// </summary>
         /// <param name="comObject"><see cref="ICOMObject"/> instance as any</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetVariantEnumeratorAsProperty(ICOMObject comObject, bool allowDynamicObject)
+        public static IEnumerator GetVariantEnumeratorAsProperty(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
             lock (comObject.SyncRoot)
             {
-                if (!comObject.Settings.EnableDynamicObjects)
-                    allowDynamicObject = false;
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Invoker.PropertyGet(comObject, "_NewEnum");
                 ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Variant Enumerator");
@@ -161,7 +152,7 @@ namespace NetOffice
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
                     { 
-                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, allowDynamicObject);
+                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                         yield return returnClass;
                     }
                     else
@@ -176,17 +167,14 @@ namespace NetOffice
         /// Returns an enumerator with com proxies
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetVariantEnumeratorAsMethod(ICOMObject comObject, bool allowDynamicObject)
+        public static IEnumerator GetVariantEnumeratorAsMethod(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
             lock (comObject.SyncRoot)
             {
-                if (!comObject.Settings.EnableDynamicObjects)
-                    allowDynamicObject = false;
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Invoker.MethodReturn(comObject, "_NewEnum");
                 ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Variant Enumerator");
@@ -197,7 +185,7 @@ namespace NetOffice
                     object itemProxy = comObject.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
                     {
-                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, allowDynamicObject);
+                        ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                         yield return returnClass;
                     }
                     else
@@ -207,22 +195,19 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Returns an enumerator with com proxies
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetProxyEnumeratorAsProperty(ICOMObject comObject, bool allowDynamicObject)
+        public static IEnumerator GetProxyEnumeratorAsProperty(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
             lock (comObject.SyncRoot)
             {
-                if (!comObject.Settings.EnableDynamicObjects)
-                    allowDynamicObject = false;
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Factory.Invoker.PropertyGet(comObject, "_NewEnum");
                 ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Proxy Enumerator");
@@ -231,7 +216,7 @@ namespace NetOffice
                 while (true == isMoveNextTrue)
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, allowDynamicObject);
+                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                     yield return returnClass;
                     isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }
@@ -242,17 +227,14 @@ namespace NetOffice
         /// Returns an enumerator with com proxies
         /// </summary>
         /// <param name="comObject">COMObject instance as any</param>
-        /// <param name="allowDynamicObject">allow to create a COMDynamicObject instance if its failed to resolve the wrapper type</param>
         /// <returns>IEnumerator instance</returns>
-        public static IEnumerator GetProxyEnumeratorAsMethod(ICOMObject comObject, bool allowDynamicObject)
+        public static IEnumerator GetProxyEnumeratorAsMethod(ICOMObject comObject)
         {
             if (null == comObject)
                 throw new ArgumentNullException("comObject");
 
             lock (comObject.SyncRoot)
             {
-                if (!comObject.Settings.EnableDynamicObjects)
-                    allowDynamicObject = false;
                 comObject.Factory.CheckInitialize();
                 object enumProxy = comObject.Factory.Invoker.MethodReturn(comObject, "_NewEnum");
                 ICOMObject enumerator = new COMObject(comObject.Factory, comObject, enumProxy, true, "Proxy Enumerator");
@@ -261,7 +243,7 @@ namespace NetOffice
                 while (true == isMoveNextTrue)
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
-                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, allowDynamicObject);
+                    ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                     yield return returnClass;
                     isMoveNextTrue = (bool)comObject.Factory.Invoker.MethodReturnWithoutSafeMode(enumerator, "MoveNext", null);
                 }

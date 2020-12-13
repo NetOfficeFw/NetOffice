@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi
 
         ICOMObject IEnumerableProvider<NetOffice.ExcelApi.PivotCache>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.ExcelApi.PivotCache>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

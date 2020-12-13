@@ -189,7 +189,7 @@ namespace NetOffice.VBIDEApi
 
         ICOMObject IEnumerableProvider<NetOffice.VBIDEApi.Property>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.VBIDEApi.Property>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -222,7 +222,7 @@ namespace NetOffice.VBIDEApi
         [SupportByVersion("VBIDE", 12,14,5.3)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

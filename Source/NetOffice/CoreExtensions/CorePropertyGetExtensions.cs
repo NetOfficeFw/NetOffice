@@ -1511,7 +1511,7 @@ namespace NetOffice
         internal static ICOMObject ExecuteReferencePropertyGetInternal(this Core value, ICOMObject caller, string name, object[] validatedArgs)
         {
             object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);         
-            ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, true);
+            ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem);
             return newObject;
         }
 
@@ -1611,7 +1611,7 @@ namespace NetOffice
         internal static T ExecuteReferencePropertyGetInternal<T>(this Core value, ICOMObject caller, string name, object[] validatedArgs) where T : class, ICOMObject
         {
             object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
-            T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
             return newObject;
         }
 
@@ -1711,7 +1711,7 @@ namespace NetOffice
         internal static T ExecuteBaseReferencePropertyGetInternal<T>(this Core value, ICOMObject caller, string name, object[] validatedArgs) where T : class, ICOMObject
         {
             object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
-            T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
             return newObject;
         }
 
@@ -1919,7 +1919,7 @@ namespace NetOffice
             object returnItem = value.Invoker.PropertyGet(caller, name, validatedArgs);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, false);
+                ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem);
                 return newObject;
             }
             else

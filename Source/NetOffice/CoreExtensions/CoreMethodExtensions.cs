@@ -1797,7 +1797,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.MethodReturn(caller, name, args);
-            T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
             return newObject;
         }
 
@@ -1959,7 +1959,7 @@ namespace NetOffice
         {
             object[] args = Invoker.ValidateParamsArray(paramsArray);
             object returnItem = value.Invoker.MethodReturn(caller, name, args);
-            T newObject = value.CreateObjectFromComProxy(caller, returnItem, true) as T;
+            T newObject = value.CreateObjectFromComProxy(caller, returnItem) as T;
             return newObject;
         }
 
@@ -2294,7 +2294,7 @@ namespace NetOffice
             object returnItem = value.Invoker.MethodReturn(caller, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem, true);
+                ICOMObject newObject = value.CreateObjectFromComProxy(caller, returnItem);
                 return newObject;
             }
             else

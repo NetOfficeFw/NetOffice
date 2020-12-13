@@ -2454,7 +2454,7 @@ namespace NetOffice.AccessApi
             object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
                 return newObject;
             }
             else

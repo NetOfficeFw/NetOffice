@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi
 
         ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this);
         }
 
         IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -227,7 +227,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

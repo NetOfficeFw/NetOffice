@@ -738,7 +738,7 @@ namespace NetOffice
         {
             if (caller.Settings.EnableKnownReferenceInspection)
             {
-                return CreateObjectFromComProxy(caller, comProxy, false);
+                return CreateObjectFromComProxy(caller, comProxy);
             }
 
             CheckInitialize();           
@@ -831,7 +831,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
         {
-            return CreateObjectFromComProxy(caller, comProxy, false);
+            return CreateObjectFromComProxy(caller, comProxy);
         }
 
         /// <summary>
@@ -839,10 +839,9 @@ namespace NetOffice
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding wrapper class instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
+        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy)
         {
             CheckInitialize();         
             try
@@ -857,7 +856,7 @@ namespace NetOffice
                     {
                         Type comProxyType2 = null;
                         ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, 
-                                                                            String.Empty, String.Empty, allowDynamicObject);
+                                                                            String.Empty, String.Empty);
                         newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
                         return newInstance2;
                     }
@@ -873,7 +872,7 @@ namespace NetOffice
                         _proxyTypeCache.Add(fullClassName, comProxyType);
                     }
 
-                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName, allowDynamicObject);
+                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
                     newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
 
                     return newInstance;
@@ -892,10 +891,9 @@ namespace NetOffice
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="comProxyType">Type of comProxy</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding Wrapper class Instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType, bool allowDynamicObject)
+        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType)
         {
             CheckInitialize();           
             try
@@ -909,7 +907,7 @@ namespace NetOffice
                     if (null == factoryInfo)
                     {
                         Type comProxyType2 = null;
-                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty, allowDynamicObject);
+                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty);
                         newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
 
                         return newInstance2;
@@ -919,7 +917,7 @@ namespace NetOffice
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
                     // create new classType
-                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName, allowDynamicObject);
+                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
                     newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
 
                     return newInstance;
@@ -941,12 +939,11 @@ namespace NetOffice
         /// <param name="comProxyType">Type of comProxy</param>
         /// <param name="className">name of COMServer proxy class</param>
         /// <param name="fullClassName">full namespace and name of COMServer proxy class</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding Wrapper class Instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find corresponding wrapper class type</exception>
         public ICOMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, ICOMObject caller, object comProxy, 
-            Type comProxyType, string className, string fullClassName, bool allowDynamicObject)
+            Type comProxyType, string className, string fullClassName)
         {
             CheckInitialize();           
             try
@@ -1010,11 +1007,10 @@ namespace NetOffice
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxyArray">new created proxy array</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding Wrapper class Instance array or plain <see cref="COMObject"/> array</returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find factory info</exception>
-        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)
+        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray)
         {
             CheckInitialize();
             try
@@ -1031,7 +1027,7 @@ namespace NetOffice
                         IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxyArray[i]);
                         string className = TypeDescriptor.GetClassName(comProxyArray[i]);
                         string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
-                        newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName, allowDynamicObject);
+                        newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName);
                     }
                     return newVariantArray;
                 }
@@ -1214,7 +1210,7 @@ namespace NetOffice
         {
             if ((null != value) && (value is MarshalByRefObject))
             {
-                ICOMObject newObject = CreateObjectFromComProxy(null, value, allowDynamicObject);
+                ICOMObject newObject = CreateObjectFromComProxy(null, value);
                 return newObject;
             }
             else

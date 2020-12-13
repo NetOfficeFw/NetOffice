@@ -303,7 +303,7 @@ namespace NetOffice.ExcelApi
 
         ICOMObject IEnumerableProvider<NetOffice.ExcelApi.Slicer>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.ExcelApi.Slicer>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -336,7 +336,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

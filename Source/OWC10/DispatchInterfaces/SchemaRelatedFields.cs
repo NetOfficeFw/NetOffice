@@ -159,7 +159,7 @@ namespace NetOffice.OWC10Api
 
         ICOMObject IEnumerableProvider<NetOffice.OWC10Api.SchemaRelatedField>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.OWC10Api.SchemaRelatedField>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -192,7 +192,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
 		}
 
 		#endregion

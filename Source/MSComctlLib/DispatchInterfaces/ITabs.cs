@@ -275,7 +275,7 @@ namespace NetOffice.MSComctlLibApi
 
         ICOMObject IEnumerableProvider<NetOffice.MSComctlLibApi.ITab>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.MSComctlLibApi.ITab>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -308,7 +308,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

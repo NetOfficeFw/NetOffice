@@ -135,7 +135,7 @@ namespace NetOffice.DAOApi
 
         ICOMObject IEnumerableProvider<NetOffice.DAOApi.Index>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<NetOffice.DAOApi.Index>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -168,7 +168,7 @@ namespace NetOffice.DAOApi
         [SupportByVersion("DAO", 3.6,12.0)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion
