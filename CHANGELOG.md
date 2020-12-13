@@ -24,7 +24,7 @@
 
 * Improved documentation for many members in the **NetOffice** project
 * Refactored small portion of the `CurrentAppDomain.CurrentDomain_AssemblyResolve()` method
-* Deprecated code related to dynamic types and "duck tales" implementation (will be removed in **v1.8**) [#283](https://github.com/NetOfficeFw/NetOffice/issues/283)
+* Deprecated code related to dynamic types and "duck tales" implementation (will be removed in **v2.0**) [#283](https://github.com/NetOfficeFw/NetOffice/issues/283)
 
 ### Breaking Changes
 * Some exceptions have better error messages and use correct parameters  

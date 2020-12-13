@@ -126,7 +126,7 @@ namespace NetOffice
         /// Wrap proxy into COMDynamicObject if proxy has no wrapper class in current app domain. true by default
         /// </summary>
         [Category("Settings"), Description("Convert unknown proxies in dynamic objects if no wrapper is available."), DefaultValue(true)]
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
         public bool EnableDynamicObjects
         {
             get
@@ -187,7 +187,7 @@ namespace NetOffice
         /// Wrap event arguments into COMDynamicObject if proxy has no wrapper class in current app domain. false by default
         /// </summary>
         [Category("Settings"), Description("Convert unknown proxies in dynamic objects incl. proxy management."), DefaultValue(false)]
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
         public bool EnableDynamicEventArguments
         {
             get
@@ -524,7 +524,7 @@ namespace NetOffice
 
         #region Methods
 
-        [Obsolete("Use the IEquatable.Equals() method to compare Settings objects. Will be removed in NetOffice 1.8")]
+        [Obsolete("Use the IEquatable.Equals() method to compare Settings objects. Will be removed in NetOffice 2.0")]
         public bool IsEqualTo(Settings settings)
         {
             return this.Equals(settings);

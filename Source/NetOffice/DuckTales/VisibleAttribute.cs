@@ -8,7 +8,7 @@ namespace NetOffice.Duck
     /// <summary>
     /// Indicates a special method, name starts with get_ or set_ which is not compiler generated
     /// </summary>
-    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
     public class VisibleAttribute : System.Attribute
     {
         /// <summary>

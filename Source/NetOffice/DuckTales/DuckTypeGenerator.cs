@@ -10,7 +10,7 @@ using NetOffice.Attributes;
 
 namespace NetOffice.Duck
 {
-    [Obsolete("Support for dynamic objects will be removed in NetOffice 1.8")]
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
     internal class DuckTypeGenerator
     {
         private ulong _counter = ulong.MinValue;
