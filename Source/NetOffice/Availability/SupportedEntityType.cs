@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetOffice.Availity
+namespace NetOffice.Availability
 {
     /// <summary>
     /// Search parameter for the EntityIsAvailable Method

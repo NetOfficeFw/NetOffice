@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.ComponentModel;
 using System.Collections.Generic;
 using NetOffice.Resolver;
-using NetOffice.Availity;
+using NetOffice.Availability;
 using NetOffice.Exceptions;
 
 namespace NetOffice
@@ -1194,15 +1194,15 @@ namespace NetOffice
 
         #endregion
 
-        #region ICOMObjectAvaility
+        #region ICOMObjectAvailability
 
         /// <summary>
         /// NetOffice method: Returns information the proxy provides a method or property.
         /// Check want be made at runtime through IDispatch interface.
         /// </summary>
-        /// <param name="name">name of the enitity</param>
+        /// <param name="name">name of the entity</param>
         /// <returns>true if available, otherwise false</returns>
-        /// <exception cref="AvailityException">Unexpected error, see inner exception(s) for details.</exception>
+        /// <exception cref="AvailabilityException">Unexpected error, see inner exception(s) for details.</exception>
         public bool EntityIsAvailable(string name)
         {
             return EntityIsAvailable(name, SupportedEntityType.Both);
@@ -1212,10 +1212,10 @@ namespace NetOffice
         /// NetOffice method: Returns information the proxy provides a method or property.
         /// Check want be made at runtime through IDispatch interface.
         /// </summary>
-        /// <param name="name">name of the enitity</param>
-        /// <param name="searchType">indicate the kind of enitity the caller is looking for</param>
+        /// <param name="name">name of the entity</param>
+        /// <param name="searchType">indicate the kind of entity the caller is looking for</param>
         /// <returns>true if available, otherwise false</returns>
-        /// <exception cref="AvailityException">Unexpected error, see inner exception(s) for details.</exception>
+        /// <exception cref="AvailabilityException">Unexpected error, see inner exception(s) for details.</exception>
         public bool EntityIsAvailable(string name, SupportedEntityType searchType)
         {
             return new SupportedEntityFinder().Find(Factory, ref _listSupportedEntities, searchType, UnderlyingObject, name);
@@ -1379,7 +1379,7 @@ namespace NetOffice
         ///// <returns></returns>
         //public static bool operator ==(COMObject objectA, COMDynamicObject objectB)
         //{
-        //    if (!Settings.Default.EnableOperatorOverlads)
+        //    if (!Settings.Default.EnableOperatorOverloads)
         //        return Object.ReferenceEquals(objectA, objectB);
 
         //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1398,7 +1398,7 @@ namespace NetOffice
         ///// <returns>true if equal, otherwise false</returns>
         //public static bool operator !=(COMObject objectA, COMDynamicObject objectB)
         //{
-        //    if (!Settings.Default.EnableOperatorOverlads)
+        //    if (!Settings.Default.EnableOperatorOverloads)
         //        return Object.ReferenceEquals(objectA, objectB);
 
         //    if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1418,7 +1418,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(COMObject objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1437,7 +1437,7 @@ namespace NetOffice
         /// <returns></returns>
         public static bool operator ==(COMObject objectA, object objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1456,7 +1456,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator ==(object objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1481,7 +1481,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(COMObject objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1500,7 +1500,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(COMObject objectA, object objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))
@@ -1519,7 +1519,7 @@ namespace NetOffice
         /// <returns>true if equal, otherwise false</returns>
         public static bool operator !=(object objectA, COMObject objectB)
         {
-            if (!Settings.Default.EnableOperatorOverlads)
+            if (!Settings.Default.EnableOperatorOverloads)
                 return Object.ReferenceEquals(objectA, objectB);
 
             if (Object.ReferenceEquals(objectA, null) && Object.ReferenceEquals(objectB, null))

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using NetOffice.Availity;
+using NetOffice.Availability;
 
 namespace NetOffice.Tests.Helpers
 {
