@@ -7,7 +7,7 @@ namespace NetOffice.PowerPointApi
 {
 	/// <summary>
 	/// Represents timing information about a slide animation.
-	/// Use the <see cref="Sequence.AddEffect"/> method to add an effect. 
+	/// Use the <see cref="Sequence.AddEffect(PowerPointApi.Shape, Enums.MsoAnimEffect)"/> method to add an effect. 
 	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
 	/// </summary>
 	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
