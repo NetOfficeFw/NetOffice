@@ -524,12 +524,6 @@ namespace NetOffice
 
         #region Methods
 
-        [Obsolete("Use the IEquatable.Equals() method to compare Settings objects. Will be removed in NetOffice 2.0")]
-        public bool IsEqualTo(Settings settings)
-        {
-            return this.Equals(settings);
-        }
-
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {
