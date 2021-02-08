@@ -226,7 +226,11 @@ namespace NetOffice.DeveloperToolbox.Forms
                 document = CreateDefaultConfiguration();
 
             foreach (var item in _toolboxControls)
-                item.LoadConfiguration(document.SelectSingleNode("NODeveloperToolbox.Settings/" + item.ControlName));
+            {
+                XmlNode sectionNode = document.SelectSingleNode("NODeveloperToolbox.Settings/" + item.ControlName);
+                if(null != sectionNode)
+                    item.LoadConfiguration(sectionNode);
+            }
         }
 
         private void SaveConfiguration()
