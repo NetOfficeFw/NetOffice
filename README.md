@@ -64,7 +64,7 @@ These branches are archives of the source code from CodePlex and OSDN.
 NetOffice source code is licensed under [MIT License](LICENSE.txt).
 
 Copyright © 2011-2018 Sebastian Lange  
-Copyright © 2015-2020 Jozef Izso
+Copyright © 2015-2021 Jozef Izso
 
 
 [VSTO]: https://docs.microsoft.com/en-us/visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
