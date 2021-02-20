@@ -70,6 +70,7 @@
     <Compile Include="NetOffice\Events\EventClassStub.cs" />
     <Compile Include="NetOffice\SettingsTests.cs" />
     <Compile Include="NetOffice\StringExTests.cs" />
+    <Compile Include="NetOffice\Tools\OfficeResiliencyTests.cs" />
     <Compile Include="OfficeApi\Tools\Contribution\ResourceUtilsTests.cs" />
     <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
     <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
@@ -107,6 +108,12 @@
     <None Include="..\NetOffice\NetOffice_v4.0.snk">
       <Link>NetOffice_v4.0.snk</Link>
     </None>
+    <Content Include="NetOffice\Tools\data\NativeAddinResiliency.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NetOffice\Tools\data\NetFrameworkAddinResiliency.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
