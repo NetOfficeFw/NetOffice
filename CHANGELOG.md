@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.8.1
+
+### Added
+* Parser for the resiliency binary data stored by Microsoft Office when add-ins crash.
+
 ## v1.8.0
 
 ### Breaking Changes
