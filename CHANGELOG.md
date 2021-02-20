@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.8.1
+### Added
+* You can use the `nameof()` operator with event name in the `CoClassEventReflector` methods
+
 ## v1.8.0
 
 ### Breaking Changes
