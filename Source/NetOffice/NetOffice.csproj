@@ -169,6 +169,8 @@
     <Compile Include="Resolver\InstanceTypeNameResolver.cs" />
     <Compile Include="Diagnostics\SelfDiagnostics.cs" />
     <Compile Include="StringEx.cs" />
+    <Compile Include="Tools\DisabledItem.cs" />
+    <Compile Include="Tools\DisabledItemType.cs" />
     <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
     <Compile Include="Dynamics\DynamicObjectEntity.cs" />
     <Compile Include="Availability\SupportedEntityFinder.cs" />
@@ -196,6 +198,7 @@
     <Compile Include="Tools\Native\Bridge\CdeclHandle.cs" />
     <Compile Include="Tools\Native\Bridge\Interop.cs" />
     <Compile Include="Tools\OfficeRegisterKeyState.cs" />
+    <Compile Include="Tools\OfficeResiliency.cs" />
     <Compile Include="Tools\OfficeUnRegisterKeyState.cs" />
     <Compile Include="Tools\OnErrorHandler.cs" />
     <Compile Include="Tools\ProgrammableAttribute.cs" />
