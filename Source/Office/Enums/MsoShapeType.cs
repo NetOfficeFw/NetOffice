@@ -4,6 +4,7 @@ using NetOffice.Attributes;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
+	 /// Specifies the type of a shape or range of shapes.
 	 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
 	 /// </summary>
 	 ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoShapeType"/> </remarks>
@@ -12,192 +13,323 @@ namespace NetOffice.OfficeApi.Enums
 	public enum MsoShapeType
 	{
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Mixed shape type
 		 /// </summary>
-		 /// <remarks>-2</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>-2</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoShapeTypeMixed = -2,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// AutoShape
 		 /// </summary>
-		 /// <remarks>1</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>1</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoAutoShape = 1,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Callout
 		 /// </summary>
-		 /// <remarks>2</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>2</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoCallout = 2,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Chart
 		 /// </summary>
-		 /// <remarks>3</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>3</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoChart = 3,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Comment
 		 /// </summary>
-		 /// <remarks>4</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>4</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoComment = 4,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Freeform
 		 /// </summary>
-		 /// <remarks>5</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>5</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoFreeform = 5,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Group
 		 /// </summary>
-		 /// <remarks>6</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>6</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoGroup = 6,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Embedded OLE object
 		 /// </summary>
-		 /// <remarks>7</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>7</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoEmbeddedOLEObject = 7,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Form control
 		 /// </summary>
-		 /// <remarks>8</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>8</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoFormControl = 8,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Line
 		 /// </summary>
-		 /// <remarks>9</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>9</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoLine = 9,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Linked OLE object
 		 /// </summary>
-		 /// <remarks>10</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>10</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoLinkedOLEObject = 10,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Linked picture
 		 /// </summary>
-		 /// <remarks>11</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>11</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoLinkedPicture = 11,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// OLE control object
 		 /// </summary>
-		 /// <remarks>12</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>12</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoOLEControlObject = 12,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Picture
 		 /// </summary>
-		 /// <remarks>13</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>13</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoPicture = 13,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Placeholder
 		 /// </summary>
-		 /// <remarks>14</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>14</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoPlaceholder = 14,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Text effect
 		 /// </summary>
-		 /// <remarks>15</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>15</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoTextEffect = 15,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Media
 		 /// </summary>
-		 /// <remarks>16</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>16</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoMedia = 16,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Text box
 		 /// </summary>
-		 /// <remarks>17</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>17</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoTextBox = 17,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Script anchor
 		 /// </summary>
-		 /// <remarks>18</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>18</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoScriptAnchor = 18,
 
 		 /// <summary>
-		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// Table
 		 /// </summary>
-		 /// <remarks>19</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>19</value>
 		 [SupportByVersion("Office", 9,10,11,12,14,15,16)]
 		 msoTable = 19,
 
 		 /// <summary>
-		 /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+		 /// Canvas
 		 /// </summary>
-		 /// <remarks>20</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>20</value>
 		 [SupportByVersion("Office", 10,11,12,14,15,16)]
 		 msoCanvas = 20,
 
 		 /// <summary>
-		 /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+		 /// Diagram
 		 /// </summary>
-		 /// <remarks>21</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>21</value>
 		 [SupportByVersion("Office", 10,11,12,14,15,16)]
 		 msoDiagram = 21,
 
 		 /// <summary>
-		 /// SupportByVersion Office 11, 12, 14, 15, 16
+		 /// Ink
 		 /// </summary>
-		 /// <remarks>22</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>22</value>
 		 [SupportByVersion("Office", 11,12,14,15,16)]
 		 msoInk = 22,
 
 		 /// <summary>
-		 /// SupportByVersion Office 11, 12, 14, 15, 16
+		 /// Ink comment
 		 /// </summary>
-		 /// <remarks>23</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 11, 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>23</value>
 		 [SupportByVersion("Office", 11,12,14,15,16)]
 		 msoInkComment = 23,
 
 		 /// <summary>
-		 /// SupportByVersion Office 12, 14, 15, 16
+		 /// SmartArt graphic
 		 /// </summary>
-		 /// <remarks>24</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 12, 14, 15, 16
+		 /// </remarks>
+		 /// <value>24</value>
 		 [SupportByVersion("Office", 12,14,15,16)]
 		 msoSmartArt = 24,
 
 		 /// <summary>
-		 /// SupportByVersion Office 14, 15, 16
+		 /// Slicer
 		 /// </summary>
-		 /// <remarks>25</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 14, 15, 16
+		 /// </remarks>
+		 /// <value>25</value>
 		 [SupportByVersion("Office", 14,15,16)]
 		 msoSlicer = 25,
 
 		 /// <summary>
-		 /// SupportByVersion Office 15,16
+		 /// Web video
 		 /// </summary>
-		 /// <remarks>26</remarks>
+		 /// <remarks>
+		 /// SupportByVersion Office 15,16
+		 /// </remarks>
+		 /// <value>26</value>
 		 [SupportByVersion("Office", 15, 16)]
-		 msoWebVideo = 26
+		 msoWebVideo = 26,
+
+		 /// <summary>
+		 /// Content Office Add-in
+		 /// </summary>
+		 /// <remarks>
+		 /// SupportByVersion Office 15,16
+		 /// </remarks>
+		 /// <value>26</value>
+		 [SupportByVersion("Office", 15, 16)]
+		 msoContentApp = 27,
+
+		 /// <summary>
+		 /// Graphic
+		 /// </summary>
+		 /// <remarks>
+		 /// SupportByVersion Office 15,16
+		 /// </remarks>
+		 /// <value>26</value>
+		 [SupportByVersion("Office", 15, 16)]
+		 msoGraphic = 28,
+
+		 /// <summary>
+		 /// Linked graphic
+		 /// </summary>
+		 /// <remarks>
+		 /// SupportByVersion Office 15,16
+		 /// </remarks>
+		 /// <value>26</value>
+		 [SupportByVersion("Office", 15, 16)]
+		 msoLinkedGraphic = 29,
+
+		 /// <summary>
+		 /// 3D model
+		 /// </summary>
+		 /// <remarks>
+		 /// SupportByVersion Office 15,16
+		 /// </remarks>
+		 /// <value>26</value>
+		 [SupportByVersion("Office", 15, 16)]
+		 mso3DModel = 30,
+
+		 /// <summary>
+		 /// Linked 3D model
+		 /// </summary>
+		 /// <remarks>
+		 /// SupportByVersion Office 15,16
+		 /// </remarks>
+		 /// <value>26</value>
+		 [SupportByVersion("Office", 15, 16)]
+		 msoLinked3DModel = 31,
 	}
 }
