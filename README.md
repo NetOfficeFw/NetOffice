@@ -1,6 +1,6 @@
 # NetOffice - Microsoft Office in .NET
 
-[![Build Status](https://dev.azure.com/netoffice/NetOffice/_apis/build/status/NetOfficeFw.NetOffice?branchName=master)](https://dev.azure.com/netoffice/NetOffice/_build/latest?definitionId=1&branchName=master)
+[![Build Status](https://dev.azure.com/netoffice/NetOffice/_apis/build/status/NetOfficeFw.NetOffice?branchName=main)](https://dev.azure.com/netoffice/NetOffice/_build/latest?definitionId=1&branchName=main)
 [![NetOfficeFw.Core](https://img.shields.io/nuget/v/netofficefw.core?label=NetOfficeFw.Core)](https://www.nuget.org/profiles/netoffice)
 [![NetOfficeFw.Outlook](https://img.shields.io/nuget/v/netofficefw.outlook?color=%230078D4&label=&logo=microsoft-outlook&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Outlook/)
 [![NetOfficeFw.Word](https://img.shields.io/nuget/v/netofficefw.word?color=%232B579A&label=&logo=microsoft-word&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Word/)
@@ -44,7 +44,7 @@ You can find more information about [NetOffice Git repository in documentation](
 
 ### Branches
 
-* `master` - main branch
+* `main` - main branch
 * `releases/netoffice_v1.7.7` - branch with **current NetOffice 1.7.7 source code**
 * `releases/netoffice_v1.7.6` - branch with NetOffice 1.7.6 source code
 * `releases/netoffice_v1.7.5` - branch with NetOffice 1.7.5 source code
