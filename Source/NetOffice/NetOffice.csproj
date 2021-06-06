@@ -41,4 +41,6 @@
     <Compile Remove="Tools\ErrorHandlerFunctionAttribute.cs" />
     <Compile Remove="Tools\IErrorHandler.cs" />
   </ItemGroup>
+
+  <Import Project="..\NetOffice.targets" />
 </Project>

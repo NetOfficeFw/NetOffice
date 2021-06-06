@@ -1,0 +1,20 @@
+﻿<Project>
+  <!-- Code signing -->
+  <PropertyGroup>
+    <TargetsTriggeredByCompilation>$(TargetsTriggeredByCompilation);SignOutputTarget</TargetsTriggeredByCompilation>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TargetToSign Include="$(TargetPath)" Condition=" '$(OutputType)' == 'Library' Or '$(OutputType)' == 'Exe' ">
+      <SignToolSha2LogFile>$(IntermediateOutputPath)$(ProjectName)_sign_sha256.log</SignToolSha2LogFile>
+    </TargetToSign>
+  </ItemGroup>
+
+  <Target Name="SignOutputTarget"
+          Outputs="@(TargetToSign)"
+          Condition=" '$(SignOutput)' == 'true' And '@(TargetToSign)' != '' ">
+    <Exec Command="$(SignTool) sign /v /fd sha256 /td sha256 /sha1 $(SignCertificateThumbprint) /sm /tr $(SignTimestampServerSha256) &quot;%(TargetToSign.FullPath)&quot; &gt; &quot;%(TargetToSign.SignToolSha2LogFile)&quot;" />
+
+    <Message Text="Signed %(TargetToSign.FullPath)" Importance="high" />
+  </Target>
+</Project>

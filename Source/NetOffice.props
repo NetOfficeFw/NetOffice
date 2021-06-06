@@ -33,6 +33,13 @@
     <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
   </PropertyGroup>
 
+  <!-- Code signing -->
+  <PropertyGroup>
+    <SignTool>signtool.exe</SignTool>
+    <SignCertificateThumbprint>CA24B654C5FFAC7D97BD196269BD0E80FADF1841</SignCertificateThumbprint>
+    <SignTimestampServerSha256>http://timestamp.comodoca.com</SignTimestampServerSha256>
+  </PropertyGroup>
+
   <!-- Source Link support -->
   <PropertyGroup>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
