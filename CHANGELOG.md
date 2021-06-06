@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.0.0
+
+* Enable support for compilation with .NET Core 3.1 [#219](https://github.com/NetOfficeFw/NetOffice/issues/219)
+
 ## v1.8.1
 
 ### Added

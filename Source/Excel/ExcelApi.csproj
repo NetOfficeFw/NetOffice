@@ -10,7 +10,7 @@
 
   <Import Project="..\NetOffice.props" />
 
-  <ItemGroup>
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
