@@ -6,6 +6,12 @@ pool:
 variables:
   solution: Source/NetOffice.sln
 
+trigger:
+  branches:
+    exclude:
+    - dev/net6
+    - dev/github_actions
+
 strategy:
   maxParallel: 2
   matrix:

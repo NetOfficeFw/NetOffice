@@ -1,0 +1,55 @@
+name: build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'dev/*'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      ContinuousIntegrationBuild: true
+      VersionSuffix: 'preview${{ github.run_id }}'
+      RepositoryBranch: '${{ github.ref_name }}'
+      RepositoryCommit: '${{ github.sha }}'
+      PackageOutputPath: '${{ github.workspace }}\nuget'
+
+    runs-on: windows-2022
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Setup AzureSignTool
+      run: dotnet tool install --global azuresigntool --version 3.0.0
+
+    - name: Setup NuGetKeyVaultSignTool
+      run: dotnet tool install --global NuGetKeyVaultSignTool --version 3.2.2
+
+    - name: Report NetOffice version
+      run: |
+        [xml]$project = Get-Content (Join-Path -Path $env:GITHUB_WORKSPACE -ChildPath 'Source\NetOffice.props')
+        $version = $project.Project.PropertyGroup[0].NetOfficeRelease
+
+        Write-Host "NetOfficeRelease=$version" | Out-File -FilePath $env:GITHUB_PATH
+
+    - name: Build NetOffice
+      run: |
+        dotnet restore Source\NetOffice.sln
+        dotnet build Source\NetOffice.sln
+      env:
+        Configuration: ${{ matrix.configuration }}
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: NetOffice_${{ env.VersionSuffix }}_${{ matrix.configuration }}
+        path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
