@@ -6,6 +6,8 @@
     <Description>NetOffice unit tests</Description>
     <Copyright>Copyright © 2018 Jozef Izso</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
