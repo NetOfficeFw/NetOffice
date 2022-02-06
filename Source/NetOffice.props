@@ -12,6 +12,8 @@
     <Authors>Sebastian Lange, Jozef Izso</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <ProjectUrl>https://netoffice.io</ProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeLogo_200x200.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
   <!-- Versioning and packaging for NetOffice projects -->
@@ -21,6 +23,11 @@
     <AssemblyVersion>$(NetOfficeRelease).0</AssemblyVersion>
     <FileVersion>$(NetOfficeRelease).0</FileVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../LICENSE.txt" Pack="true" PackagePath="/" />
+    <None Include="../../icon.png" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net462</TargetFramework>
