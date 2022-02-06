@@ -6,23 +6,20 @@
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
   <ItemGroup>
-    <Reference Include="stdole" Version="7.0.3300.0">
-      <!-- <HintPath>C:\Windows\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll</HintPath> -->
-      <Private>false</Private>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-    </Reference>
+    <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
+    <PackageReference Include="System.Resources.Extensions" Version="[4.6.0,)" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETCoreApp' ">
-    <PackageReference Include="System.Drawing.Common" Version="4.6.1" />
-    <PackageReference Include="System.Resources.Extensions" Version="4.6.0" />
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' != '.NETFramework' ">
+    <PackageReference Include="System.Drawing.Common" Version="[4.6.0,)" />
   </ItemGroup>
 
   <ItemGroup>

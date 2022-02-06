@@ -1,7 +1,7 @@
 # NetOffice project build pipeline
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-2022'
 
 variables:
   solution: Source/NetOffice.sln
@@ -22,10 +22,9 @@ steps:
 - task: NuGetToolInstaller@1
 
 - task: UseDotNet@2
-  displayName: 'Use .NET 6 Runtime'
+  displayName: 'Use .NET 6'
   inputs:
-    packageType: runtime
-    version: 6.0.x
+    version: 6.x
 
 - task: DotNetCoreCLI@2
   displayName: Install AzureSignTool
@@ -67,10 +66,10 @@ steps:
   displayName: Build NetOffice
   inputs:
     solution: '$(solution)'
-    vsVersion: '16.0'
+    vsVersion: '17.0'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix)" /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
+    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix)" /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget" /p:ContinuousIntegrationBuild=true'
     createLogFile: true
     logFileVerbosity: 'detailed'
 

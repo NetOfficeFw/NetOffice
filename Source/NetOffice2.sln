@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 16
+# Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 15.0.28010.2048
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetOffice", "NetOffice\NetOffice.csproj", "{65442327-D01F-4ECB-8C39-6D5C7622A80F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeApi", "Office\OfficeApi.csproj", "{750DD273-9958-4E07-BDA2-3C60503F35F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VBIDEApi", "VBIDE\VBIDEApi.csproj", "{C3C863AF-73E3-419C-9F88-D56D44A32A7D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OutlookApi", "Outlook\OutlookApi.csproj", "{A65B8495-17FF-4AE5-9021-E8341238F3C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordApi", "Word\WordApi.csproj", "{360FFF09-AC5A-421E-AF42-DCC435C821A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,5 +23,27 @@ Global
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65442327-D01F-4ECB-8C39-6D5C7622A80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750DD273-9958-4E07-BDA2-3C60503F35F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750DD273-9958-4E07-BDA2-3C60503F35F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750DD273-9958-4E07-BDA2-3C60503F35F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750DD273-9958-4E07-BDA2-3C60503F35F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C863AF-73E3-419C-9F88-D56D44A32A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C863AF-73E3-419C-9F88-D56D44A32A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C863AF-73E3-419C-9F88-D56D44A32A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C863AF-73E3-419C-9F88-D56D44A32A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A65B8495-17FF-4AE5-9021-E8341238F3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65B8495-17FF-4AE5-9021-E8341238F3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65B8495-17FF-4AE5-9021-E8341238F3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65B8495-17FF-4AE5-9021-E8341238F3C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{360FFF09-AC5A-421E-AF42-DCC435C821A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360FFF09-AC5A-421E-AF42-DCC435C821A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360FFF09-AC5A-421E-AF42-DCC435C821A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360FFF09-AC5A-421E-AF42-DCC435C821A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F27FC48-E854-46E1-8506-2F52FFD286E3}
 	EndGlobalSection
 EndGlobal

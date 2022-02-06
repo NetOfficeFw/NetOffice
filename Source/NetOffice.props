@@ -23,7 +23,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net40;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net461;netcoreapp3.1;net6.0-windows</TargetFrameworks>
     <Configuration>Debug</Configuration>
   </PropertyGroup>
 
