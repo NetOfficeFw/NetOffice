@@ -1,28 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
     <AssemblyTitle>NetOffice.Tests</AssemblyTitle>
-    <Product>NetOffice</Product>
     <Description>NetOffice unit tests</Description>
-    <Copyright>Copyright © 2018 Jozef Izso</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <NoWarn>CS0067</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <NoWarn>CS0067</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\NetOffice\NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS0067</NoWarn>
   </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
   </ItemGroup>

@@ -1,23 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
     <AssemblyTitle>PowerPoint</AssemblyTitle>
-    <Company>NetOfficeFw</Company>
-    <Product>NetOffice</Product>
     <Description>Netoffice PowerPoint Api</Description>
-    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2021 Jozef Izso</Copyright>
-    <AssemblyVersion>1.8.1.0</AssemblyVersion>
-    <FileVersion>1.8.1.0</FileVersion>
     <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>PowerPointApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
-  </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
   <ItemGroup>
     <Reference Include="stdole" Version="7.0.3300.0">
       <!-- <HintPath>C:\Windows\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll</HintPath> -->

@@ -1,14 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
     <OutputType>WinExe</OutputType>
     <AssemblyTitle>ClientApplication</AssemblyTitle>
-    <Company>netoffice.codeplex.com</Company>
-    <Product>NetOffice</Product>
     <Description>Compile Dumy</Description>
-    <Copyright>Copyright © 2011 Sebastian Lange</Copyright>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1701;1702;1519</NoWarn>
+  </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />

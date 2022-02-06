@@ -1,0 +1,35 @@
+﻿<Project>
+  <!-- Common properties for NetOffice projects -->
+  <PropertyGroup>
+    <NetOfficeRelease>1.8.1</NetOfficeRelease>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>NetOffice</Product>
+    <PackageId>NetOfficeFw.$(AssemblyName)</PackageId>
+    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2021 Jozef Izso</Copyright>
+    <Company>NetOfficeFw</Company>
+    <Authors>Sebastian Lange, Jozef Izso</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <ProjectUrl>https://netoffice.io</ProjectUrl>
+  </PropertyGroup>
+
+  <!-- Versioning and packaging for NetOffice projects -->
+  <PropertyGroup>
+    <VersionPrefix>$(NetOfficeRelease)</VersionPrefix>
+    <VersionSuffix Condition=" '$(VersionSuffix)'=='' ">local</VersionSuffix>
+    <AssemblyVersion>$(NetOfficeRelease).0</AssemblyVersion>
+    <FileVersion>$(NetOfficeRelease).0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>net40;netcoreapp3.1</TargetFrameworks>
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile Condition=" '$(GenerateDocumentationFile)' == '' ">true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
+</Project>

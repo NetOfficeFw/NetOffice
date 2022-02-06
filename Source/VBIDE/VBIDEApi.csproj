@@ -1,20 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
     <AssemblyTitle>VBIDE</AssemblyTitle>
-    <Company>NetOfficeFw</Company>
-    <Product>NetOffice</Product>
     <Description>Netoffice VBIDE Api</Description>
-    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2021 Jozef Izso</Copyright>
-    <AssemblyVersion>1.8.1.0</AssemblyVersion>
-    <FileVersion>1.8.1.0</FileVersion>
     <RootNamespace>NetOffice.VBIDEApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>VBIDEApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
   <ItemGroup>
     <None Include="VBIDEApi_v4.0.snk" />
   </ItemGroup>
