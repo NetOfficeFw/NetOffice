@@ -7,6 +7,12 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <Description>NetOffice core library for building Microsoft Office add-ins and automation of Microsoft Office applications.
+
+NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint and Access.</Description>
+    <PackageTags>netoffice netofficefw NetOffice.Office office interop wrapper vsto addin</PackageTags>
+  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 

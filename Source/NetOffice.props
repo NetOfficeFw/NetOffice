@@ -6,7 +6,7 @@
 
   <PropertyGroup>
     <Product>NetOffice</Product>
-    <PackageId>NetOfficeFw.$(AssemblyName)</PackageId>
+    <PackageId Condition=" '$(PackageId)' == '' ">NetOfficeFw.$(AssemblyName)</PackageId>
     <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2022 Jozef Izso</Copyright>
     <Company>NetOfficeFw</Company>
     <Authors>Sebastian Lange, Jozef Izso</Authors>
