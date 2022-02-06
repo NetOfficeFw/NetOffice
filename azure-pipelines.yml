@@ -15,11 +15,11 @@ strategy:
     Debug:
       buildPlatform: 'Any CPU'
       buildConfiguration: 'Debug'
-      VersionSuffix: alpha
+      VersionSuffix: preview$(Build.BuildId)
     Release:
       buildPlatform: 'Any CPU'
       buildConfiguration: 'Release'
-      VersionSuffix: alpha
+      VersionSuffix: preview$(Build.BuildId)
 
 steps:
 - task: NuGetToolInstaller@1
@@ -37,14 +37,25 @@ steps:
     custom: 'tool'
     arguments: 'install --global azuresigntool --version 3.0.0'
 
+# Run build tasks
+- task: PowerShell@2
+  displayName: Report NetOffice version
+  inputs:
+    pwsh: true
+    targetType: inline
+    script: |
+      [xml]$project = Get-Content (Join-Path -Path $(Build.SourcesDirectory) -ChildPath 'Source\NetOffice.props')
+      $version = $project.Project.PropertyGroup[0].NetOfficeRelease
+
+      Write-Host "##vso[task.setvariable variable=NetOfficeRelease]$version"
+      Write-Host "##vso[task.setvariable variable=NetOfficePackageName]NetOffice_v$version-$(VersionSuffix)_$(buildConfiguration)_build$(Build.BuildId).zip"
+
 - task: CopyFiles@2
   displayName: Copy source code to artifact
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: |
       Source/**
-      Documentation/**
-      !Documentation/History.md
       Examples/**
       Tutorials/**
       CHANGELOG.md
@@ -62,7 +73,7 @@ steps:
     vsVersion: '16.0'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix).$(Build.BuildNumber)" /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
+    msbuildArgs: '/t:Build;Pack /p:VersionSuffix="$(VersionSuffix)" /p:RepositoryBranch="$(Build.SourceBranchName)" /p:RepositoryCommit="$(Build.SourceVersion)" /p:PackageOutputPath="$(Build.ArtifactStagingDirectory)\nuget"'
     createLogFile: true
     logFileVerbosity: 'detailed'
 
@@ -112,7 +123,7 @@ steps:
       !ClientApplication.**
       !stdole.dll
       !signlist.txt
-    targetFolder: '$(Build.ArtifactStagingDirectory)\Assemblies\Any CPU'
+    targetFolder: '$(Build.ArtifactStagingDirectory)\Assemblies'
 
 - task: ArchiveFiles@2
   displayName: Create NetOffice Package
@@ -120,15 +131,16 @@ steps:
     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.8.1.0_$(buildConfiguration)_build$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(NetOfficePackageName)'
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)/NetOffice_v1.8.1.0_$(buildConfiguration)_build$(Build.BuildId).zip'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(NetOfficePackageName)'
     artifactName: NetOffice $(buildConfiguration) Package
 
 - task: PublishBuildArtifacts@1
+  condition: eq(variables['buildConfiguration'], 'Release')
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)\nuget'
     artifactName: NetOffice NuGet Packages
