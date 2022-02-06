@@ -6,7 +6,7 @@ namespace NetOffice.Tools
     /// Represents information about a disabled add-in in a Microsoft Office application.
     /// </summary>
     /// <remarks>
-    /// Use the <see cref="OfficeResiliency.Parse()"/> method to convert the binary
+    /// Use the <see cref="OfficeResiliency.Parse(byte[])"/> method to convert the binary
     /// data from the Resiliency\DisabledItems registry keys into the <see cref="DisabledItem"/> object.
     /// </remarks>
     public class DisabledItem

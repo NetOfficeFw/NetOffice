@@ -150,7 +150,7 @@ namespace NetOffice.Running
         {
             GCHandle gcChildhandlesList = GCHandle.FromIntPtr(lParam);
 
-            if (gcChildhandlesList == null || gcChildhandlesList.Target == null)
+            if (gcChildhandlesList.Target == null)
             {
                 return false;
             }

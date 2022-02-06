@@ -35,11 +35,6 @@ namespace NetOffice.VBIDEApi.Tools
         private int _automationCode = -1;
 
         /// <summary>
-        /// Cache field used in IsLoadedFromSystem() method
-        /// </summary>
-        private bool? _isLoadedFromSystem;
-
-        /// <summary>
         /// Instance factory to avoid trouble with addins in same appdomain
         /// </summary>
         private Core _factory;

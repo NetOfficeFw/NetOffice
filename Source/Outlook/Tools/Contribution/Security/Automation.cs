@@ -207,11 +207,11 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
                         DoControlClick(leftButton);
                     }
 
-                    if ((null != _onAction) && (null != checkBox) && (IntPtr.Zero != leftButton) && (checkBox != leftButton))
+                    if ((null != _onAction) && (IntPtr.Zero != checkBox) && (IntPtr.Zero != leftButton) && (checkBox != leftButton))
                     {
                         SecurityDialogCheckBox securityCheckbox = null;
                         SecurityDialogLeftButton securityButton = null;
-                        if (null != checkBox)
+                        if (IntPtr.Zero != checkBox)
                         {
                             User32.RECT rect = new User32.RECT();
                             User32.GetWindowRect(checkBox, out rect);

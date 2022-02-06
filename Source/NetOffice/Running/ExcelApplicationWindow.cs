@@ -33,9 +33,6 @@ namespace NetOffice.Running
         /// <returns>com proxy or null</returns>
         internal static object GetApplicationProxyFromHandle(IntPtr hwnd)
         {
-            if (null == hwnd)
-                throw new ArgumentNullException("hwnd");
-
             try
             {
                 IntPtr hwnd2 = FindWindowEx(hwnd, IntPtr.Zero, "XLDESK", null);

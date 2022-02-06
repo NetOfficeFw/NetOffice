@@ -135,6 +135,7 @@ namespace NetOffice.Running
                     bool result = WaitHandle.WaitAll(waitHandles, milliSecondsTimeout);
                     if (!result)
                     {
+                        // TODO: fix this for .NET Core library
                         thread1.Abort();
                         Result.Clear();
                         _currentInstance = null;
@@ -210,7 +211,7 @@ namespace NetOffice.Running
         {
             GCHandle gcChildhandlesList = GCHandle.FromIntPtr(lParam);
 
-            if (gcChildhandlesList == null || gcChildhandlesList.Target == null)
+            if (gcChildhandlesList.Target == null)
             {
                 return false;
             }
