@@ -7,6 +7,10 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>WordApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <Description>NetOffice Word library for building Word add-ins and automation of Microsoft Word.</Description>
+    <PackageTags>netoffice netofficefw NetOffice.Word office word interop wrapper vsto addin</PackageTags>
+  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 

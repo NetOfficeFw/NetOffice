@@ -7,6 +7,10 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>ExcelApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <Description>NetOffice Excel library for building Excel add-ins and automation of Microsoft Excel.</Description>
+    <PackageTags>netoffice netofficefw NetOffice.Excel office excel interop wrapper vsto addin</PackageTags>
+  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 

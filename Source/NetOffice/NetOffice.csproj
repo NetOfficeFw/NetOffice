@@ -1,12 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <AssemblyTitle>NetOffice</AssemblyTitle>
-    <Description>NetOffice Core Api</Description>
     <RootNamespace>NetOffice</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>NetOfficeFw.Core</PackageId>
+    <Description>NetOffice core library for building Microsoft Office add-ins and automation of Microsoft Office applications.
+
+NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint and Access.</Description>
+    <PackageTags>netoffice netofficefw NetOffice.Core office excel word outlook powerpoint access interop wrapper vsto addin</PackageTags>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
