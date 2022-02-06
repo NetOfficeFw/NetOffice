@@ -37,6 +37,13 @@ steps:
     custom: 'tool'
     arguments: 'install --global azuresigntool --version 3.0.0'
 
+- task: DotNetCoreCLI@2
+  displayName: Install NuGetKeyVaultSignTool
+  inputs:
+    command: 'custom'
+    custom: 'tool'
+    arguments: 'install --global NuGetKeyVaultSignTool --version 3.2.2'
+
 # Run build tasks
 - task: PowerShell@2
   displayName: Report NetOffice version
@@ -138,6 +145,22 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(NetOfficePackageName)'
     artifactName: NetOffice $(buildConfiguration) Package
+
+- task: CmdLine@2
+  displayName: Sign NetOffice packages
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), eq(variables['buildConfiguration'], 'Release'), or (startsWith(variables['Build.SourceBranch'], 'refs/heads/releases/'), startsWith(variables['Build.SourceBranch'], 'refs/heads/dev/')))
+  inputs:
+    workingDirectory: '$(Build.ArtifactStagingDirectory)\nuget'
+    script: |
+      NuGetKeyVaultSignTool.exe sign *.nupkg ^
+      --file-digest sha256 ^
+      --timestamp-rfc3161 http://timestamp.digicert.com ^
+      --timestamp-digest sha256 ^
+      --azure-key-vault-url https://opensourcesigning.vault.azure.net ^
+      --azure-key-vault-tenant-id "$(KeyVaultTenantId)" ^
+      --azure-key-vault-client-id "$(KeyVaultClientId)" ^
+      --azure-key-vault-client-secret "$(KeyVaultClientSecret)" ^
+      --azure-key-vault-certificate "goITSolutions-until-2024-01" ^
 
 - task: PublishBuildArtifacts@1
   condition: eq(variables['buildConfiguration'], 'Release')
