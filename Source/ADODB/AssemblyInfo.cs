@@ -12,16 +12,6 @@ using NetOffice.Attributes;
 
 */
 
-[assembly: AssemblyTitle("ADODB")]
-[assembly: AssemblyDescription("NetOffice ADODB Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange, © 2015-2021 Jozef Izso")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.8.1.0")]
-[assembly: AssemblyFileVersion("1.8.1.0")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("ADODB")]
 [assembly: Guid("00000201-0000-0010-8000-00AA006D2EA4")]

@@ -1,42 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props')" />
-  <Import Project="..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props" Condition="Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props')" />
-  <Import Project="..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props')" />
-  <Import Project="..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" />
-  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{67372CD1-E220-44DA-AB36-F489A593923C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetOffice.Tests</RootNamespace>
-    <AssemblyName>NetOffice.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <TargetFramework>net40</TargetFramework>
+    <AssemblyTitle>NetOffice.Tests</AssemblyTitle>
+    <Product>NetOffice</Product>
+    <Description>NetOffice unit tests</Description>
+    <Copyright>Copyright © 2018 Jozef Izso</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <NoWarn>CS0067</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>portable</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
     <NoWarn>CS0067</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -46,63 +22,18 @@
     <AssemblyOriginatorKeyFile>..\NetOffice\NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.12.0\lib\net40\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xml.Linq" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessApi\Utils\ProjectInfoTests.cs" />
-    <Compile Include="ExcelApi\ApplicationTests.cs" />
-    <Compile Include="ExcelApi\DispatchInterfaces\CustomXMLPartIntegrationTests.cs" />
-    <Compile Include="ExcelApi\DispatchInterfaces\RangeIntegrationTests.cs" />
-    <Compile Include="Helpers\ConnectionPointStub.cs" />
-    <Compile Include="Helpers\TestableComObjectStub.cs" />
-    <Compile Include="Helpers\FakeComObject.cs" />
-    <Compile Include="NetOffice\Events\CoClassEventReflectorTests.cs" />
-    <Compile Include="NetOffice\Events\EventClassStub.cs" />
-    <Compile Include="NetOffice\SettingsTests.cs" />
-    <Compile Include="NetOffice\StringExTests.cs" />
-    <Compile Include="NetOffice\Tools\OfficeResiliencyTests.cs" />
-    <Compile Include="OfficeApi\Tools\Contribution\ResourceUtilsTests.cs" />
-    <Compile Include="OutlookApi\Tools\OlRibbonTypeTests.cs" />
-    <Compile Include="OutlookApi\Tools\OlCustomUIAttributeTests.cs" />
-    <Compile Include="OutlookApi\Utils\ProjectInfoTests.cs" />
-    <Compile Include="PowerPointApi\Events\EApplication_SinkHelperTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Access\AccessApi.csproj">
-      <Project>{61C1EB27-64CC-4E88-A3AE-1E6D002E15D1}</Project>
-      <Name>AccessApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Excel\ExcelApi.csproj">
-      <Project>{43c2ffd2-1680-490a-b0cf-be425d6eec7c}</Project>
-      <Name>ExcelApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NetOffice\NetOffice.csproj">
-      <Project>{65442327-d01f-4ecb-8c39-6d5c7622a80f}</Project>
-      <Name>NetOffice</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Office\OfficeApi.csproj">
-      <Project>{79B19A83-A79F-446C-9B7E-9B595E918E40}</Project>
-      <Name>OfficeApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Outlook\OutlookApi.csproj">
-      <Project>{98DE103A-F036-4814-A740-9B4DE13001FF}</Project>
-      <Name>OutlookApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj">
-      <Project>{D2DF07D1-46EA-4578-9183-9ABB368547E5}</Project>
-      <Name>PowerPointApi</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\Access\AccessApi.csproj" />
+    <ProjectReference Include="..\Excel\ExcelApi.csproj" />
+    <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
+    <ProjectReference Include="..\Outlook\OutlookApi.csproj" />
+    <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\NetOffice\NetOffice_v4.0.snk">
@@ -114,32 +45,5 @@
     <Content Include="NetOffice\Tools\data\NetFrameworkAddinResiliency.bin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Data\SampleIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Data\SampleImage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Data\SampleText.txt" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
-    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets'))" />
-  </Target>
-  <Import Project="..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets')" />
-  <Import Project="..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets" Condition="Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets')" />
-  <Import Project="..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets')" />
 </Project>
