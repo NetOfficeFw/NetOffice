@@ -167,3 +167,11 @@ steps:
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)\nuget'
     artifactName: NetOffice NuGet Packages
+
+- task: CmdLine@2
+  displayName: Public NetOffice packages to MyGet
+  condition: and(succeeded(), eq(variables['buildConfiguration'], 'Release'))
+  inputs:
+    workingDirectory: '$(Build.ArtifactStagingDirectory)\nuget'
+    script: |
+      nuget.exe push **.nupkg "$(MyGetApiToken)" -NonInteractive -ForceEnglishOutput -Source https://www.myget.org/F/netoffice/api/v2/package
