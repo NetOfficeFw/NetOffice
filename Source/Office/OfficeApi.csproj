@@ -1,20 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <RootNamespace>NetOffice.OfficeApi</RootNamespace>
     <TargetFramework>net40</TargetFramework>
+    <AssemblyTitle>Office</AssemblyTitle>
+    <Company>NetOfficeFw</Company>
+    <Product>Netoffice</Product>
+    <Description>Netoffice Office Api</Description>
+    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2022 Jozef Izso</Copyright>
+    <AssemblyVersion>1.8.1.0</AssemblyVersion>
+    <FileVersion>1.8.1.0</FileVersion>
+    <RootNamespace>NetOffice.OfficeApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <DocumentationFile>bin\Release\OfficeApi.XML</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <DocumentationFile>bin\$(Configuration)\OfficeApi.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>

@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <RootNamespace>NetOffice.VBIDEApi</RootNamespace>
     <TargetFramework>net40</TargetFramework>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>VBIDEApi_v4.0.snk</AssemblyOriginatorKeyFile>
     <AssemblyTitle>VBIDE</AssemblyTitle>
     <Company>NetOfficeFw</Company>
     <Product>NetOffice</Product>
@@ -12,15 +8,12 @@
     <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2022 Jozef Izso</Copyright>
     <AssemblyVersion>1.8.1.0</AssemblyVersion>
     <FileVersion>1.8.1.0</FileVersion>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <RootNamespace>NetOffice.VBIDEApi</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-    <DocumentationFile>bin\Release\VBIDEApi.XML</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <DocumentationFile>bin\$(Configuration)\VBIDEApi.XML</DocumentationFile>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>VBIDEApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <None Include="VBIDEApi_v4.0.snk" />
