@@ -1,7 +1,7 @@
 ﻿<Project>
   <!-- Common properties for NetOffice projects -->
   <PropertyGroup>
-    <NetOfficeRelease>1.8.1</NetOfficeRelease>
+    <NetOfficeRelease>1.9.0</NetOfficeRelease>
   </PropertyGroup>
 
   <PropertyGroup>
