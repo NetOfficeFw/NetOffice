@@ -8,6 +8,7 @@
     <AssemblyOriginatorKeyFile>PowerPointApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
+    <PackageId>NetOfficeFw.PowerPoint</PackageId>
     <Description>NetOffice PowerPoint library for building PowerPoint add-ins and automation of Microsoft PowerPoint.</Description>
     <PackageTags>netoffice netofficefw NetOffice.PowerPoint office powerpoint interop wrapper vsto addin</PackageTags>
   </PropertyGroup>

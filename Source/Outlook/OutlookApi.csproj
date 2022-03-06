@@ -8,6 +8,7 @@
     <AssemblyOriginatorKeyFile>OutlookApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
+    <PackageId>NetOfficeFw.Outlook</PackageId>
     <Description>NetOffice Outlook library for building Outlook add-ins and automation of Microsoft Outlook.</Description>
     <PackageTags>netoffice netofficefw NetOffice.Outlook office outlook interop wrapper vsto addin</PackageTags>
   </PropertyGroup>
