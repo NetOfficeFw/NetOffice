@@ -8,6 +8,7 @@
     <AssemblyOriginatorKeyFile>AccessApi_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
+    <PackageId>NetOfficeFw.Access</PackageId>
     <Description>NetOffice Access library for building Access add-ins and automation of Microsoft Access.</Description>
     <PackageTags>netoffice netofficefw NetOffice.Access office access interop wrapper vsto addin</PackageTags>
   </PropertyGroup>
