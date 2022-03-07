@@ -9,6 +9,12 @@ variables:
   DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
   solution: Source/NetOffice.sln
 
+trigger:
+  branches:
+    exclude:
+    - dev/net6
+    - dev/github_actions
+
 strategy:
   maxParallel: 2
   matrix:
