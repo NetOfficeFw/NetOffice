@@ -70,6 +70,27 @@ jobs:
       env:
         Configuration: ${{ matrix.configuration }}
 
+    - name: Sign NetOffice libraries
+      if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
+      working-directory: '${{ github.workspace}}\Source\ClientApplication\bin\${{ matrix.configuration }}'
+      run: |
+          Get-ChildItem "*Api.dll" -Recurse | Select-Object -ExpandProperty FullName > signlist.txt
+          Get-ChildItem "NetOffice.dll" -Recurse | Select-Object -ExpandProperty FullName >> signlist.txt
+
+          AzureSignTool.exe sign `
+          --file-digest sha256 `
+          --description-url "https://github.com/NetOfficeFw/NetOffice" `
+          --no-page-hashing `
+          --timestamp-rfc3161 http://timestamp.digicert.com `
+          --timestamp-digest sha256 `
+          --azure-key-vault-url https://opensourcesigning.vault.azure.net `
+          --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
+          --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
+          --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
+          --azure-key-vault-certificate "goITSolutions-until-2024-01" `
+          --input-file-list signlist.txt `
+          --verbose
+
     - uses: actions/upload-artifact@v3
       with:
         name: NetOffice_${{ env.VersionSuffix }}_${{ matrix.configuration }}
