@@ -6,7 +6,6 @@
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
-    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Office</PackageId>
@@ -20,7 +19,6 @@ NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint 
 
   <ItemGroup>
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
-    <PackageReference Include="System.Resources.Extensions" Version="[4.6.0,)" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">
     <Reference Include="System.Windows.Forms" />
@@ -30,42 +28,6 @@ NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint 
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Tools\Dialogs\AboutDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\AboutDialog.Designer.cs">
-      <DependentUpon>AboutDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\DiagnosticsDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\DiagnosticsDialog.Designer.cs">
-      <DependentUpon>DiagnosticsDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ErrorDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ErrorDialog.Designer.cs">
-      <DependentUpon>ErrorDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\PropertyGridDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\PropertyGridDialog.Designer.cs">
-      <DependentUpon>PropertyGridDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\RichTextDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\RichTextDialog.Designer.cs">
-      <DependentUpon>RichTextDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ToolsDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ToolsDialog.Designer.cs">
-      <DependentUpon>ToolsDialog.cs</DependentUpon>
-    </Compile>
     <Compile Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,47 +40,9 @@ NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint 
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1031.xml" />
-    <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1033.xml" />
     <EmbeddedResource Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.resx">
       <DependentUpon>TrayMenuMonitorItemControl.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Tools\Dialogs\AboutDialog.resx">
-      <DependentUpon>AboutDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Dialogs\DiagnosticsDialog.1031.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\DiagnosticsDialog.resx">
-      <DependentUpon>DiagnosticsDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\ErrorDialog.resx">
-      <DependentUpon>ErrorDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\PropertyGridDialog.resx">
-      <DependentUpon>PropertyGridDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\RichTextDialog.resx">
-      <DependentUpon>RichTextDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\ToolsDialog.resx">
-      <DependentUpon>ToolsDialog.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\DiagnosticsDialog.1033.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\AboutDialog.1031.xml" />
-    <EmbeddedResource Include="Tools\Dialogs\AboutDialog.1033.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1031.xml" />
-    <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1033.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

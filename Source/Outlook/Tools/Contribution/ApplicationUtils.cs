@@ -13,6 +13,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         #region Fields
 
         private CommonUtils _owner;
+        private OutlookDialogUtils _dialogUtils;
 
         #endregion
 
@@ -27,6 +28,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
             if (null == owner)
                 throw new ArgumentNullException("owner");
             _owner = owner;
+            _dialogUtils = new OutlookDialogUtils();
         }
 
         #endregion
@@ -40,9 +42,8 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         {
             get
             {
-                OutlookDialogUtils utils = _owner.Dialog as OutlookDialogUtils;
-                if (null != utils)
-                    return utils.HostVisible;
+                if (null != _dialogUtils)
+                    return _dialogUtils.HostVisible;
                 else
                     return false;
             }

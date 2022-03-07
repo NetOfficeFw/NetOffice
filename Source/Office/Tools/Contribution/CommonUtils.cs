@@ -44,7 +44,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         private bool? _applicationIs2007OrHigher;
         private bool? _adminPermissions;
         private bool _isAutomation;
-        private DialogUtils _dialogUtils;
         private ColorUtils _colorUtils;
         private ImageUtils _imageUtils;
         private TrayUtils _trayUtils;
@@ -219,22 +218,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             get
             {
                 return _isAutomation;
-            }
-        }
-
-        /// <summary>
-        /// Dialog related utils
-        /// </summary>
-        public DialogUtils Dialog
-        {
-            get
-            {
-                lock (_lock)
-                {
-                    if (null == _dialogUtils)
-                        _dialogUtils = OnCreateDialogUtils();
-                }
-                return _dialogUtils;
             }
         }
 
@@ -449,15 +432,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             {
                 throw;
             }
-        }
-
-        /// <summary>
-        /// Creates an instance of DialogUtils
-        /// </summary>
-        /// <returns>instance of DialogUtils</returns>
-        protected internal virtual DialogUtils OnCreateDialogUtils()
-        {
-            return new DialogUtils(this);
         }
 
         /// <summary>

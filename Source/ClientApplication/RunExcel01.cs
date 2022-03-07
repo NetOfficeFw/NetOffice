@@ -25,9 +25,9 @@ namespace ClientApplication
                 sheet.Cells[1, 1].Value = "This is a sample value";
                 sheet.Protect();
 
-                utils.Dialog.SuppressOnAutomation = false;
-                utils.Dialog.SuppressOnHide = false;
-                utils.Dialog.ShowDiagnostics(true);
+                //utils.Dialog.SuppressOnAutomation = false;
+                //utils.Dialog.SuppressOnHide = false;
+                //utils.Dialog.ShowDiagnostics(true);
             }
             catch (Exception exception)
             {

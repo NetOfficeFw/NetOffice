@@ -8,7 +8,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
     /// <summary>
     /// Outlook dialog related utils
     /// </summary>
-    public class OutlookDialogUtils : NetOffice.OfficeApi.Tools.Contribution.DialogUtils
+    public class OutlookDialogUtils
     {
         #region Ctor
 
@@ -16,7 +16,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
-        internal OutlookDialogUtils(CommonUtils owner) : base(owner)
+        internal OutlookDialogUtils()
         {
         }
 
@@ -45,7 +45,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         /// </summary>
         /// <param name="defaultResult">fallback result if its failed</param>
         /// <returns>true if application is visible, otherwise false</returns>
-        protected override bool TryGetApplicationVisible(bool defaultResult)
+        protected bool TryGetApplicationVisible(bool defaultResult)
         {
             try
             {

@@ -119,18 +119,5 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         }
 
         #endregion
-
-        #region Overrides
-
-        /// <summary>
-        /// Creates an instance of DialogUtils
-        /// </summary>
-        /// <returns>instance of DialogUtils</returns>
-        protected override OfficeApi.Tools.Contribution.DialogUtils OnCreateDialogUtils()
-        {
-            return new OutlookDialogUtils(this);
-        }
-
-        #endregion
     }
 }
