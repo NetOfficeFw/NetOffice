@@ -4,6 +4,9 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
+  DOTNET_NOLOGO: 1
+  DOTNET_CLI_TELEMETRY_OPTOUT: 0
+  DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
   solution: Source/NetOffice.sln
 
 strategy:
