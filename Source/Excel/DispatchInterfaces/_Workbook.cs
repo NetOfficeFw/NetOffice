@@ -334,6 +334,26 @@ namespace NetOffice.ExcelApi
 		}
 
 		/// <summary>
+		/// True if the edits in the workbook are automatically saved. Read/write Boolean.
+		/// 
+		/// SupportByVersion Excel 16
+		/// Get/Set
+		/// </summary>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Workbook.AutoSaveOn"/> </remarks>
+		[SupportByVersion("Excel", 16)]
+		public bool AutoSaveOn
+		{
+			get
+			{
+				return Factory.ExecuteBoolPropertyGet(this, "AutoSaveOn");
+			}
+			set
+			{
+				Factory.ExecuteValuePropertySet(this, "AutoSaveOn", value);
+			}
+		}
+
+		/// <summary>
 		/// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
