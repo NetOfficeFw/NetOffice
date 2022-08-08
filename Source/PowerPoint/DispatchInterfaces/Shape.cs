@@ -892,6 +892,24 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// Specifies whether the specified shape range contains a narration. Read/write.
+		/// SupportByVersion PowerPoint 16 (2004)
+		/// </summary>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.IsNarration"/> </remarks>
+		[SupportByVersion("PowerPoint", 16)]
+		public NetOffice.OfficeApi.Enums.MsoTriState IsNarration
+		{
+			get
+			{
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "IsNarration");
+			}
+			set
+			{
+				Factory.ExecuteEnumPropertySet(this, "IsNarration", value);
+			}
+		}
+
+		/// <summary>
 		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
 		/// Get/Set
 		/// </summary>
