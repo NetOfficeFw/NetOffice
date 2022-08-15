@@ -1,22 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props')" />
-  <Import Project="..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props" Condition="Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props')" />
-  <Import Project="..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetOffice</RootNamespace>
-    <AssemblyName>NetOffice</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
+    <TargetFramework>net40</TargetFramework>
+    <FileUpgradeFlags />
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
     <PublishUrl>publish\</PublishUrl>
@@ -35,28 +21,23 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AssemblyTitle>NetOffice</AssemblyTitle>
+    <Company>NetOfficeFw</Company>
+    <Product>Netoffice</Product>
+    <Description>NetOffice Core Api</Description>
+    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2022 Jozef Izso</Copyright>
+    <AssemblyVersion>1.8.1.0</AssemblyVersion>
+    <FileVersion>1.8.1.0</FileVersion>
+    <DocumentationFile>bin\$(Configuration)\NetOffice.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <RegisterForComInterop>false</RegisterForComInterop>
-    <DocumentationFile>bin\Debug\NetOffice.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>portable</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\NetOffice.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -65,231 +46,18 @@
     <AssemblyOriginatorKeyFile>NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\AttributeExtensions.cs" />
-    <Compile Include="Attributes\BaseResultAttribute.cs" />
-    <Compile Include="Attributes\BaseTypeAttribute.cs" />
-    <Compile Include="Attributes\ComEventInterfaceAttribute.cs" />
-    <Compile Include="Attributes\ComRegExportCallAttribute.cs" />
-    <Compile Include="Attributes\ComRegisterCallAttribute.cs" />
-    <Compile Include="Attributes\ComUnregisterCallAttribute.cs.cs" />
-    <Compile Include="Attributes\CoreOverriddenAttribute.cs" />
-    <Compile Include="Attributes\CustomIndexerAttribute.cs" />
-    <Compile Include="Attributes\DuplicateAttribute.cs" />
-    <Compile Include="Attributes\InternalEntityAttribute.cs" />
-    <Compile Include="Attributes\KnownIssueAttribute.cs" />
-    <Compile Include="Attributes\ModuleBaseTypeAttribute.cs" />
-    <Compile Include="Attributes\ModuleProviderAttribute.cs" />
-    <Compile Include="Attributes\NativeCaller.cs" />
-    <Compile Include="Attributes\NativeResultAttribute.cs" />
-    <Compile Include="Attributes\ProxyResultAttribute.cs" />
-    <Compile Include="Attributes\SinkArgumentAttribute.cs" />
-    <Compile Include="CollectionsGeneric\IEnumerableProvider.cs" />
-    <Compile Include="ComTypes\ITypeInfoExtensions.cs" />
-    <Compile Include="ComTypes\TypeDescriptor.cs" />
-    <Compile Include="Contribution\CollectionsGeneric\DisposableSequence.cs" />
-    <Compile Include="Contribution\Controls\InstanceMonitor.cs">
+    <Compile Update="Contribution\Controls\InstanceMonitor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Contribution\Controls\InstanceMonitor.designer.cs">
+    <Compile Update="Contribution\Controls\InstanceMonitor.designer.cs">
       <DependentUpon>InstanceMonitor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Converter\ExpandableSettingsConverter.cs" />
-    <Compile Include="CoreExtensions\Core.Nested.cs" />
-    <Compile Include="CoreExtensions\CoreFactoryExtensions.cs" />
-    <Compile Include="CoreExtensions\CoreMethodExtensions.cs" />
-    <Compile Include="CoreExtensions\CorePropertyGetExtensions.cs" />
-    <Compile Include="CoreExtensions\CorePropertySetExtensions.cs" />
-    <Compile Include="Diagnostics\DiagnosticItem.cs" />
-    <Compile Include="Diagnostics\Internal\InternalDebugDiagnostics.cs" />
-    <Compile Include="DuckTales\DuckTypeClassGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeEnumeratorGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeEventsGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeIndexerGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeIssueClassGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypeMethodsGenerator.cs" />
-    <Compile Include="DuckTales\DuckTypePropertiesGenerator.cs" />
-    <Compile Include="Attributes\EnumeratorAttribute.cs" />
-    <Compile Include="Attributes\EventSinkAttribute.cs" />
-    <Compile Include="Attributes\IndexPropertyAttribute.cs" />
-    <Compile Include="Attributes\InvokeAsAttribute.cs" />
-    <Compile Include="COMDynamicObject.cs" />
-    <Compile Include="Converter\COMDynamicObjectExpandableObjectConverter.cs" />
-    <Compile Include="Dynamics\COMDynamicMetaObject.cs" />
-    <Compile Include="Converter\COMObjectExpandableObjectConverter.cs" />
-    <Compile Include="COMProxyShare.cs" />
-    <Compile Include="DuckTales\DuckInterface.cs" />
-    <Compile Include="DuckTales\DuckTypeGenerator.cs" />
-    <Compile Include="Attributes\InternalNameAttribute.cs" />
-    <Compile Include="Attributes\ComProgIdAttribute.cs" />
-    <Compile Include="Attributes\RedirectAttribute.cs" />
-    <Compile Include="DuckTales\Resources.cs" />
-    <Compile Include="Attributes\SyntaxBypassAttribute.cs" />
-    <Compile Include="DuckTales\VisibleAttribute.cs" />
-    <Compile Include="Events\CoClassEventReflector.cs" />
-    <Compile Include="Exceptions\AvailabilityException.cs" />
-    <Compile Include="Exceptions\CloneException.cs" />
-    <Compile Include="Exceptions\COMChildRelationException.cs" />
-    <Compile Include="Exceptions\COMDisposeException.cs" />
-    <Compile Include="Exceptions\CreateCOMProxyShareException.cs" />
-    <Compile Include="Exceptions\CreateInstanceException.cs" />
-    <Compile Include="Exceptions\DuckException.cs" />
-    <Compile Include="Exceptions\ExceptionMessageBuilder.cs" />
-    <Compile Include="Exceptions\FactoryException.cs" />
-    <Compile Include="Exceptions\IDispatchNotImplementedException.cs" />
-    <Compile Include="Exceptions\InvokerCOMException.cs" />
-    <Compile Include="Exceptions\MethodCOMException.cs" />
-    <Compile Include="Exceptions\NetOfficeCOMException.cs" />
-    <Compile Include="Exceptions\NetOfficeIOException.cs" />
-    <Compile Include="Exceptions\PropertyGetCOMException.cs" />
-    <Compile Include="Exceptions\PropertySetCOMException.cs" />
-    <Compile Include="Exceptions\RegisterException.cs" />
-    <Compile Include="Exceptions\UnregisterException.cs" />
-    <Compile Include="Extensions\CallExtensions.cs" />
-    <Compile Include="Extensions\ConversionExtensions.cs" />
-    <Compile Include="Extensions\InvokerExtensions.cs" />
-    <Compile Include="Extensions\EnumerableExtensions.cs" />
-    <Compile Include="Filtering\IMessageFilter.cs" />
-    <Compile Include="Filtering\InterfaceInfo.cs" />
-    <Compile Include="Filtering\RetryMessageFilterLogMode.cs" />
-    <Compile Include="Filtering\RetryMessageFilterMode.cs" />
-    <Compile Include="Interfaces\ICloneable.cs" />
-    <Compile Include="Interfaces\ICOMObjectAvailability.cs" />
-    <Compile Include="Interfaces\ICOMProxyShareProvider.cs" />
-    <Compile Include="IO\IOPath.cs" />
-    <Compile Include="Loader\FactoryList.cs" />
-    <Compile Include="Loader\KnownKeyTokens.cs" />
-    <Compile Include="Loader\PathBuilder.cs" />
-    <Compile Include="Resolver\InstanceTypeNameResolver.cs" />
-    <Compile Include="Diagnostics\SelfDiagnostics.cs" />
-    <Compile Include="StringEx.cs" />
-    <Compile Include="Tools\DisabledItem.cs" />
-    <Compile Include="Tools\DisabledItemType.cs" />
-    <Compile Include="Tools\DontRegisterAddinAttribute.cs" />
-    <Compile Include="Dynamics\DynamicObjectEntity.cs" />
-    <Compile Include="Availability\SupportedEntityFinder.cs" />
-    <Compile Include="Tools\ForceInitializeAttribute.cs" />
-    <Compile Include="Tools\ICOMAddin.cs" />
-    <Compile Include="Running\Win32Window.cs" />
-    <Compile Include="Resolver\UnderlyingTypeNameResolver.cs" />
-    <Compile Include="Interfaces\ICOMObject.cs" />
-    <Compile Include="Interfaces\ICOMObjectDisposable.cs" />
-    <Compile Include="Interfaces\ICOMObjectEvents.cs" />
-    <Compile Include="Interfaces\ICOMObjectProxy.cs" />
-    <Compile Include="Interfaces\ICOMObjectTable.cs" />
-    <Compile Include="Interfaces\ICOMObjectTableDisposable.cs" />
-    <Compile Include="Core.cs" />
-    <Compile Include="Loader\CurrentAppDomain.cs" />
-    <Compile Include="Contribution\CollectionsGeneric\SortableBindingList.cs" />
-    <Compile Include="Running\ProxyInformation.cs" />
-    <Compile Include="Running\ProxyService.cs" />
-    <Compile Include="Callers\QuitCaller.cs" />
-    <Compile Include="Running\RunningWindowTable.cs" />
-    <Compile Include="Running\RunningWindowTable.Nested.cs" />
-    <Compile Include="Tools\IDisposableState.cs" />
-    <Compile Include="Tools\LockbackAttribute.cs" />
-    <Compile Include="Tools\CodebaseAttribute.cs" />
-    <Compile Include="Tools\Native\Bridge\CdeclHandle.cs" />
-    <Compile Include="Tools\Native\Bridge\Interop.cs" />
-    <Compile Include="Tools\OfficeRegisterKeyState.cs" />
-    <Compile Include="Tools\OfficeResiliency.cs" />
-    <Compile Include="Tools\OfficeUnRegisterKeyState.cs" />
-    <Compile Include="Tools\OnErrorHandler.cs" />
-    <Compile Include="Tools\ProgrammableAttribute.cs" />
-    <Compile Include="Tools\RegExport.cs" />
-    <Compile Include="Tools\RegExportFunctionAttribute.cs" />
-    <Compile Include="Tools\RegExportHandler.cs" />
-    <Compile Include="Tools\RegisterErrorHandler.cs" />
-    <Compile Include="Tools\COMAddinRegisterHandler.cs" />
-    <Compile Include="Tools\InstallScope.cs" />
-    <Compile Include="Tools\TimestampAttribute.cs" />
-    <Compile Include="Tools\COMAddinUnRegisterHandler.cs" />
-    <Compile Include="Running\ChildWindowBatchEnumerator.cs" />
-    <Compile Include="Running\Win32.cs" />
-    <Compile Include="Trace\DebugConsoleMode.cs" />
-    <Compile Include="CollectionsGeneric\IDisposableSequence.cs" />
-    <Compile Include="Trace\PerformanceTrace.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Tools\AttributeReflector.cs" />
-    <Compile Include="Tools\COMAddinAttribute.cs" />
-    <Compile Include="Attributes\CustomEnumeratorAttribute.cs" />
-    <Compile Include="Attributes\CustomMethodAttribute.cs" />
-    <Compile Include="Tools\COMAddinBase.cs" />
-    <Compile Include="Tools\CustomPaneAttribute.cs" />
-    <Compile Include="Tools\CustomUIAttribute.cs" />
-    <Compile Include="Attributes\NetOfficeAssemblyAttribute.cs" />
-    <Compile Include="Tools\ErrorMethodKind.cs" />
-    <Compile Include="Tools\RegisterErrorHandlerAttribute.cs" />
-    <Compile Include="Tools\RegisterFunctionAttribute.cs" />
-    <Compile Include="Tools\RegistryLocationAttribute.cs" />
-    <Compile Include="Tools\TweakAttribute.cs" />
-    <Compile Include="Tools\Tweaks.cs" />
-    <Compile Include="Tools\UnRegisterFunctionAttribute.cs" />
-    <Compile Include="CacheOptions.cs" />
-    <Compile Include="Trace\DebugConsole.cs" />
-    <Compile Include="Attributes\EntityTypeAttribute.cs" />
-    <Compile Include="Loader\DependentAssembly.cs" />
-    <Compile Include="Exceptions\EntityNotSupportedException.cs" />
-    <Compile Include="ExceptionMessageHandling.cs" />
-    <Compile Include="Exceptions\NetOfficeException.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="COMObject.cs" />
-    <Compile Include="Interfaces\IFactoryInfo.cs" />
-    <Compile Include="Invoker.cs" />
-    <Compile Include="Filtering\RetryMessageFilter.cs" />
-    <Compile Include="Running\RunningObjectTable.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="SinkHelper.cs" />
-    <Compile Include="Attributes\SupportByVersionAttribute.cs" />
-    <Compile Include="Interfaces\IEventBinding.cs" />
-    <Compile Include="Availability\SupportedEntityType.cs" />
-    <Compile Include="Tools\COMAddinEventHandler.cs" />
-    <Compile Include="Tools\Native\IDTExtensibility2.cs" />
-    <Compile Include="Running\ChildWindowEnumerator.cs" />
-    <Compile Include="Trace\PerformanceTraceSetting.cs" />
-    <Compile Include="Trace\PerformanceTraceSettingCollection.cs" />
-    <Compile Include="Utils.cs" />
-    <Compile Include="Running\WindowEnumerator.cs" />
-    <Compile Include="Running\ExcelApplicationWindow.cs" />
-    <Compile Include="Running\ProcessElevation.cs" />
-    <Compile Include="Resolver\UriResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Contribution\Controls\InstanceMonitor.resx">
-      <DependentUpon>InstanceMonitor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="KeyTokens.txt" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="NetOffice_v4.0.snk" />
@@ -298,20 +66,12 @@
   <ItemGroup>
     <EmbeddedResource Include="DuckTales\EventBinding.txt" />
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets'))" />
-  </Target>
-  <Import Project="..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets" Condition="Exists('..\packages\Microsoft.Build.Tasks.Git.1.1.1\build\Microsoft.Build.Tasks.Git.targets')" />
-  <Import Project="..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets" Condition="Exists('..\packages\Microsoft.SourceLink.Common.1.1.1\build\Microsoft.SourceLink.Common.targets')" />
-  <Import Project="..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets" Condition="Exists('..\packages\Microsoft.SourceLink.GitHub.1.1.1\build\Microsoft.SourceLink.GitHub.targets')" />
+  <ItemGroup>
+    <Compile Remove="Factory.cs" />
+    <Compile Remove="Tools\ErrorHandlerAttribute.cs" />
+    <Compile Remove="Tools\ErrorHandlerFunctionAttribute.cs" />
+    <Compile Remove="Tools\IErrorHandler.cs" />
+    <Compile Remove="Contribution\Controls\InstanceMonitor.cs" />
+    <Compile Remove="Contribution\Controls\InstanceMonitor.designer.cs" />
+  </ItemGroup>
 </Project>
