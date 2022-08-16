@@ -35,7 +35,6 @@
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Power Point", 3);
             System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Access", 4);
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Project", 5);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Visio", 6);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectOfficeAppControl));
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -72,8 +71,7 @@
             listViewItem3,
             listViewItem4,
             listViewItem5,
-            listViewItem6,
-            listViewItem7});
+            listViewItem6});
             this.listView1.LargeImageList = this.imageList1;
             this.listView1.Location = new System.Drawing.Point(0, 48);
             this.listView1.MultiSelect = false;
@@ -98,7 +96,6 @@
             this.imageList1.Images.SetKeyName(3, "PowerPoint.ico");
             this.imageList1.Images.SetKeyName(4, "Access.ico");
             this.imageList1.Images.SetKeyName(5, "project.PNG");
-            this.imageList1.Images.SetKeyName(6, "visio.PNG");
             // 
             // buttonSelect
             // 

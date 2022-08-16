@@ -753,7 +753,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         case "PowerPointApi":
                         case "AccessApi":
                         case "OfficeApi":
-                        case "VisioApi":
                         case "PublisherApi":
                             return true;
                     }
@@ -775,7 +774,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     case "PowerPointApi":
                     case "AccessApi":
                     case "OfficeApi":
-                    case "VisioApi":
                         if (!listReferences.Contains(item))
                             listReferences.Add(item);
                         break;

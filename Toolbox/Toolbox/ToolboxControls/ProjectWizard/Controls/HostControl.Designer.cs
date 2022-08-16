@@ -63,20 +63,6 @@
             this.labelHint.TabIndex = 119;
             this.labelHint.Text = "Use also number keys(1-7) on your keyboard to select/deselect an application";
             // 
-            // checkBoxVisio
-            // 
-            this.checkBoxVisio.AutoSize = true;
-            this.checkBoxVisio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBoxVisio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxVisio.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxVisio.Location = new System.Drawing.Point(40, 176);
-            this.checkBoxVisio.Name = "checkBoxVisio";
-            this.checkBoxVisio.Size = new System.Drawing.Size(52, 21);
-            this.checkBoxVisio.TabIndex = 11;
-            this.checkBoxVisio.Text = "Visio";
-            this.checkBoxVisio.UseVisualStyleBackColor = true;
-            this.checkBoxVisio.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
             // checkBoxProject
             // 
             this.checkBoxProject.AutoSize = true;

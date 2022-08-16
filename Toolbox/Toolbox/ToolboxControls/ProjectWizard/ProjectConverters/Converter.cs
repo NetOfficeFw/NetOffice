@@ -601,8 +601,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                         if (!dependecies.Any(a => a == "MSComctlLib"))
                             dependecies.Add("MSComctlLib");
                         break;
-                    case "Visio":
-                        break;
                     default:
                         break;
                 }

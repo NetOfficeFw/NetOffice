@@ -55,8 +55,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                     list.Add("PowerPoint");
                 if (checkBoxAccess.Checked)
                     list.Add("Access");
-                if (checkBoxVisio.Checked)
-                    list.Add("Visio");                
                 return list;
             }
         }
@@ -143,24 +141,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
 
         public void Activate()
         {
-            foreach (var item in ProjectWizardControl.Singleton.WizardControls)
-            {
-                ProjectControl ctrl = item as ProjectControl;
-                if (null != ctrl)
-                {
-                    // visio is not supported in NetOffice Tools because it works much different under the hood
-                    if (ctrl.IsToolAddinProject)
-                    {
-                        checkBoxVisio.Checked = false;
-                        checkBoxVisio.Enabled = false;
-                    }
-                    else
-                    {
-                        checkBoxVisio.Enabled = true;
-                    }
-                    return;
-                }
-            }
         }
 
         public void Deactivate()
@@ -219,7 +199,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             _settings.FirstChild.AppendChild(_settings.CreateElement("PowerPoint"));
             _settings.FirstChild.AppendChild(_settings.CreateElement("Access"));
             _settings.FirstChild.AppendChild(_settings.CreateElement("Project"));
-            _settings.FirstChild.AppendChild(_settings.CreateElement("Visio"));
 
             _settings.FirstChild.ChildNodes.Item(0).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(1).Attributes.Append(_settings.CreateAttribute("Selected"));
@@ -227,7 +206,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
             _settings.FirstChild.ChildNodes.Item(3).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(4).Attributes.Append(_settings.CreateAttribute("Selected"));
             _settings.FirstChild.ChildNodes.Item(5).Attributes.Append(_settings.CreateAttribute("Selected"));
-            _settings.FirstChild.ChildNodes.Item(6).Attributes.Append(_settings.CreateAttribute("Selected"));
         }
 
         #endregion

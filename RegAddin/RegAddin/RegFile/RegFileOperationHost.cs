@@ -229,7 +229,7 @@ namespace RegAddin.RegFile
             File.AppendAllText(Settings.RegFilePath, fullContent.ToString(), Encoding.Unicode);            
         }
 
-        public static string[] _multiRegisterIn = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access", "Visio" };
+        public static string[] _multiRegisterIn = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access" };
 
         private string CreateRegistryFileContent(Assembly addinAssembly, IEnumerable<object> assemblyAttributes, SingletonSettings.RegisterMode mode,
             Type addinClassType, IEnumerable<object> addinClassAttributes)
@@ -325,7 +325,6 @@ namespace RegAddin.RegFile
                                                         "NetOffice.OutlookApi.Tools.COMAddin",
                                                         "NetOffice.PowerPointApi.Tools.COMAddin",
                                                         "NetOffice.AccessApi.Tools.COMAddin",
-                                                        "NetOffice.VisioApi.Tools.COMAddin",
                                                         "NetOffice.OfficeApi.Tools.COMAddin"};
 
         private string GetKeyName(Type addin)
@@ -350,7 +349,7 @@ namespace RegAddin.RegFile
             return _classKeys[index];
         }
 
-        private static string[] _classKeys = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access", "Visio" };
+        private static string[] _classKeys = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access" };
 
         private static string _officeRelatedKey = "Software\\Microsoft\\Office\\{0}\\Addins";
 

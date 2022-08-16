@@ -165,7 +165,6 @@ namespace NetOffice
                 TryLoadAssembly("OutlookApi.dll");
                 TryLoadAssembly("PowerPointApi.dll");
                 TryLoadAssembly("AccessApi.dll");
-                TryLoadAssembly("VisioApi.dll");
 
                 if (!_assemblyResolveEventConnected)
                 {

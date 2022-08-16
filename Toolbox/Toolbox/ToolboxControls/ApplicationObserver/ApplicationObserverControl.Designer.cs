@@ -35,9 +35,6 @@
             System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "WinProj",
             ""}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Visio",
-            ""}, -1);
             this.labelNoOfficeAppRunning = new System.Windows.Forms.Label();
             this.labelOneOrMoreIsRunning = new System.Windows.Forms.Label();
             this.pictureBoxRunningOff = new System.Windows.Forms.PictureBox();
@@ -172,15 +169,13 @@
             listViewItem4.StateImageIndex = 0;
             listViewItem5.StateImageIndex = 0;
             listViewItem6.StateImageIndex = 0;
-            listViewItem7.StateImageIndex = 0;
             this.listViewApps.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
             listViewItem3,
             listViewItem4,
             listViewItem5,
-            listViewItem6,
-            listViewItem7});
+            listViewItem6});
             this.listViewApps.Location = new System.Drawing.Point(49, 52);
             this.listViewApps.Margin = new System.Windows.Forms.Padding(4);
             this.listViewApps.Name = "listViewApps";
@@ -393,7 +388,6 @@
             this.imageList1.Images.SetKeyName(4, "PowerPoint.ico");
             this.imageList1.Images.SetKeyName(5, "Access.ico");
             this.imageList1.Images.SetKeyName(6, "project.PNG");
-            this.imageList1.Images.SetKeyName(7, "visio.PNG");
             // 
             // pictureBox8
             // 

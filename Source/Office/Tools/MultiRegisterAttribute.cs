@@ -33,11 +33,6 @@ namespace NetOffice.OfficeApi.Tools
         Access = 4,
 
         /// <summary>
-        /// MS Visio in any version
-        /// </summary>
-        Visio = 6,
-
-        /// <summary>
         /// MS Publisher
         /// </summary>
         Publisher = 7,

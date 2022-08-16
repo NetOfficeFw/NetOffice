@@ -158,9 +158,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             val = configNode.SelectSingleNode("Project").Attributes[0].Value;
             listViewApps.Items[5].Checked = Convert.ToBoolean(val);
 
-            val = configNode.SelectSingleNode("Visio").Attributes[0].Value;
-            listViewApps.Items[6].Checked = Convert.ToBoolean(val);
-
             val = configNode.SelectSingleNode("Tray").Attributes[0].Value;
             checkBoxAppsTray.Checked = Convert.ToBoolean(val);
 
@@ -186,7 +183,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             configNode.SelectSingleNode("PowerPnt").Attributes[0].Value = listViewApps.Items[3].Checked.ToString();
             configNode.SelectSingleNode("MsAccess").Attributes[0].Value = listViewApps.Items[4].Checked.ToString();
             configNode.SelectSingleNode("Project").Attributes[0].Value = listViewApps.Items[5].Checked.ToString();
-            configNode.SelectSingleNode("Visio").Attributes[0].Value = listViewApps.Items[6].Checked.ToString();
             configNode.SelectSingleNode("Tray").Attributes[0].Value = checkBoxAppsTray.Checked.ToString();
             configNode.SelectSingleNode("HotKey").Attributes[0].Value = checkBoxAppKill.Checked.ToString();
             configNode.SelectSingleNode("HotKey").Attributes[1].Value = ((int)_applicationObserver.HotKey).ToString();
@@ -228,8 +224,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 case "MSACCESS":
                     return 5;
                 case "WINPROJ":
-                    return 6;
-                case "VISIO":
                     return 6;
                 default:
                     return 0;
@@ -323,9 +317,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                         break;
                     case "WinProj":
                         _applicationObserver.Project = e.Item.Checked;
-                        break;
-                    case "Visio":
-                        _applicationObserver.Visio = e.Item.Checked;
                         break;
                 }
             }

@@ -30,7 +30,6 @@
     <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj" />
     <ProjectReference Include="..\Publisher\PublisherApi.csproj" />
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj" />
-    <ProjectReference Include="..\Visio\VisioApi.csproj" />
     <ProjectReference Include="..\Word\WordApi.csproj" />
   </ItemGroup>
   <ItemGroup>

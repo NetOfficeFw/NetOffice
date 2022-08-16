@@ -43,7 +43,7 @@ namespace NetOffice.DeveloperToolbox
                                                                 "ExcelApi.dll", "MSComctlLibApi.dll", "MSDATASRCApi.dll",
                                                                 "NetOffice.dll",
                                                                 "OfficeApi.dll", "OutlookApi.dll", "OWC10Api.dll",
-                                                                "PowerPointApi.dll", "VBIDEApi.dll", "VisioApi.dll",
+                                                                "PowerPointApi.dll", "VBIDEApi.dll"
                                                                 "WordApi.dll", "PublisherApi.dll" };
 
 

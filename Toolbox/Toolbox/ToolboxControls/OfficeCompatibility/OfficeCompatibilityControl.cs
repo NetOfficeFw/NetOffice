@@ -69,7 +69,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             PictureBox box15 = tableLayoutResult.Controls["pictureBox" + name + "15"] as PictureBox;
             PictureBox box16 = tableLayoutResult.Controls["pictureBox" + name + "16"] as PictureBox;
 
-            if (name != "Project" && name != "Visio")
+            if (name != "Project")
             {
                 SetImage(box09, info[0].Support);
                 SetImage(box10, info[1].Support);
@@ -272,7 +272,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     SetupVersionInfo(_result.PowerPoint, "PowerPoint");
                     SetupVersionInfo(_result.Access, "Access");
                     SetupVersionInfo(_result.Project, "Project");
-                    SetupVersionInfo(_result.Visio, "Visio");
                 }
                 else
                 {

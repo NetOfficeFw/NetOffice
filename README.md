@@ -10,7 +10,7 @@
 
 > NetOffice is a set of libraries for building Microsoft Office Addins and automation of Microsoft Office applications.
 
-Use NetOffice to extend and automate Microsoft Office applications: Excel, Word, Outlook, PowerPoint, Access and Visio.
+Use NetOffice to extend and automate Microsoft Office applications: Excel, Word, Outlook, PowerPoint and Access.
 
 :rotating_light: **Notice**: Use official packages with [__NetOfficeFw.*__ prefix](https://www.nuget.org/packages?q=NetOfficeFw). Using old 1.7.4 packages? [Learn how to migrate.](https://netoffice.io/migrate-notice/)
 

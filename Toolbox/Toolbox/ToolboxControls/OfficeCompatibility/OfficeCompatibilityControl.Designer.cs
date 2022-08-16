@@ -614,21 +614,6 @@
             this.pictureBoxExcel11.TabIndex = 94;
             this.pictureBoxExcel11.TabStop = false;
             // 
-            // labelVisio
-            // 
-            this.labelVisio.AutoSize = true;
-            this.labelVisio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));
-            this.labelVisio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelVisio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.labelVisio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVisio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelVisio.Location = new System.Drawing.Point(5, 242);
-            this.labelVisio.Name = "labelVisio";
-            this.labelVisio.Size = new System.Drawing.Size(238, 28);
-            this.labelVisio.TabIndex = 111;
-            this.labelVisio.Text = "Visio";
-            this.labelVisio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // pictureBoxOffice11
             // 
             this.pictureBoxOffice11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(227)))), ((int)(((byte)(243)))));

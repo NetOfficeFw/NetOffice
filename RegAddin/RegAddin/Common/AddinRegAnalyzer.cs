@@ -10,7 +10,7 @@ namespace RegAddin.Common
 {
     internal class AddinRegAnalyzer
     {
-        public static string[] _multiRegisterIn = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access", "Visio" };
+        public static string[] _multiRegisterIn = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access" };
 
         private static string _systemObject = "System.Object";
 
@@ -26,10 +26,9 @@ namespace RegAddin.Common
                                                         "NetOffice.OutlookApi.Tools.COMAddin",
                                                         "NetOffice.PowerPointApi.Tools.COMAddin",
                                                         "NetOffice.AccessApi.Tools.COMAddin",
-                                                        "NetOffice.VisioApi.Tools.COMAddin",
                                                         "NetOffice.OfficeApi.Tools.COMAddin"};
 
-        private static string[] _classKeys = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access", "Visio"};
+        private static string[] _classKeys = new string[] { "Excel", "Word", "Outlook", "PowerPoint", "Access" };
 
         private static string _multiClassName = "NetOffice.OfficeApi.Tools.COMAddin";
 

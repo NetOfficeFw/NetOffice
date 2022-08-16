@@ -95,10 +95,6 @@
       <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
       <Name>VBIDEApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\Visio\VisioApi.csproj">
-      <Project>{581B0DB6-8146-4729-9AE6-61B27F53B3E6}</Project>
-      <Name>VisioApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Source\Word\WordApi.csproj">
       <Project>{5C457066-D488-4BC1-B7F8-1E90F2A80648}</Project>
       <Name>WordApi</Name>

@@ -112,7 +112,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         private SupportInfo[] _powerPoint;
         private SupportInfo[] _access;
         private SupportInfo[] _project;
-        private SupportInfo[] _visio;
         private SupportInfo[] _publisher;
 
         #endregion
@@ -143,7 +142,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             _powerPoint = new SupportInfo[7];
             _access = new SupportInfo[7];
             _project = new SupportInfo[7];
-            _visio = new SupportInfo[7];
             _publisher = new SupportInfo[7];
 
             RemoveDelegateTypes();
@@ -154,7 +152,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             SetupSupportInfo(_outlook, "Outlook");
             SetupSupportInfo(_powerPoint, "PowerPoint");
             SetupSupportInfo(_access, "Access");
-            SetupSupportInfo(_visio, "Visio");
             SetupSupportInfo(_publisher, "Publisher");
         }
 
@@ -258,17 +255,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             get
             {
                 return _project;
-            }
-        }
-
-        /// <summary>
-        /// Visio support info
-        /// </summary>
-        public SupportInfo[] Visio
-        {
-            get
-            {
-                return _visio;
             }
         }
 

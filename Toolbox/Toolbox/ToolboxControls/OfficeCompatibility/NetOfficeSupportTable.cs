@@ -9,7 +9,6 @@ using System.IO;
 using System.IO.Compression;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
-using Visio = NetOffice.VisioApi;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
@@ -21,7 +20,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         AssemblyDefinition _assOutlook;
         AssemblyDefinition _assPowerPoint;
         AssemblyDefinition _assAccess;
-        AssemblyDefinition _assVisio;
         AssemblyDefinition _assPublisher;
 
         Assembly _thisAssembly = Assembly.GetExecutingAssembly();
@@ -73,12 +71,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         string assemblyPath = GetPhysicalPath(item);
                         Stream stream = System.IO.File.OpenRead(assemblyPath);
                         _assAccess = AssemblyDefinition.ReadAssembly(stream);
-                    }
-                    else if (item.Name.StartsWith("VisioApi"))
-                    {
-                        string assemblyPath = GetPhysicalPath(item);
-                        Stream stream = System.IO.File.OpenRead(assemblyPath);
-                        _assVisio = AssemblyDefinition.ReadAssembly(stream);
                     }
                     else if (item.Name.StartsWith("PublisherApi"))
                     {
@@ -244,8 +236,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     return _assPowerPoint;
                 case "Access":
                     return _assAccess;
-                case "Visio":
-                    return _assVisio;
                 case "Publisher":
                     return _assPublisher;
                 default:

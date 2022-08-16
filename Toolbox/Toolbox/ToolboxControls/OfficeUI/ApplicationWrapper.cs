@@ -9,7 +9,6 @@ using Word = NetOffice.WordApi;
 using Outlook = NetOffice.OutlookApi;
 using PowerPoint = NetOffice.PowerPointApi;
 using Access = NetOffice.AccessApi;
-using Visio = NetOffice.VisioApi;
 using Office = NetOffice.OfficeApi;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
@@ -27,7 +26,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
         private Outlook.Application _outlookApplication;
         private PowerPoint.Application _powerpointApplication;
         private Access.Application _accessApplication;
-        private Visio.Application _visioApplication;
 
         #endregion
 
@@ -69,8 +67,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
                         return _powerpointApplication.CommandBars;
                     case "Access":
                         return _accessApplication.CommandBars;
-                    case "Visio":
-                        return _visioApplication.CommandBars as Office.CommandBars;
                     default:
                         throw new ArgumentOutOfRangeException("officeApp");
                 }
@@ -103,9 +99,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
                 case "Access":
                     _accessApplication.Quit();
                     break;
-                case "Visio":
-                    _visioApplication.Quit();
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException("officeApp");
             }
@@ -131,9 +124,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
                     _powerpointApplication.Dispose();
                     break;
                 case "Access":
-                    _accessApplication.Dispose();
-                    break;
-                case "Visio":
                     _accessApplication.Dispose();
                     break;
                 default:
@@ -162,9 +152,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeUI
                     break;
                 case "Access":
                     _accessApplication = new Access.Application("Access.Application");
-                    break;
-                case "Visio":
-                    _visioApplication = new Visio.Application("Visio.Application");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException("officeApp");

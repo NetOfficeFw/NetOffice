@@ -123,10 +123,6 @@
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="VisioApi">
-      <HintPath>..\..\Assemblies\Any CPU\VisioApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="WordApi">
       <HintPath>..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
