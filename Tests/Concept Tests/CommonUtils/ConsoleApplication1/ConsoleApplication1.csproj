@@ -71,10 +71,6 @@
       <Project>{9D83E8F2-4EFD-4A2E-88CE-9F5943620DB6}</Project>
       <Name>MSDATASRCApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\MSForms\MSFormsApi.csproj">
-      <Project>{F1A3EBA7-5C09-4986-9821-244E8468FBAE}</Project>
-      <Name>MSFormsApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Source\MSHTML\MSHTMLApi.csproj">
       <Project>{26837F52-660E-424D-80B8-30D0427E00B5}</Project>
       <Name>MSHTMLApi</Name>

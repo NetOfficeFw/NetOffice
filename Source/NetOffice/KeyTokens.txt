@@ -14,6 +14,5 @@ PowerPointApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=f3aefb8851e52dd2
 VBIDEApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=931cec8882205047
 VisioApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=bfcd37a3a83f1609
 WordApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=f66d74591aaf8089
-MSFormsApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=a65c2341212e2d10
 PublisherApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=2133a4c2cfc56bf6
 IExcelApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=c507a5667bd1b6bd

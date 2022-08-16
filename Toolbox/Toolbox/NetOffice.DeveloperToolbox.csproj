@@ -87,11 +87,6 @@
       <HintPath>..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="MSFormsApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=a65c2341212e2d10, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Assemblies\Any CPU\MSFormsApi.dll</HintPath>
-    </Reference>
     <Reference Include="MSHTMLApi">
       <HintPath>..\..\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>

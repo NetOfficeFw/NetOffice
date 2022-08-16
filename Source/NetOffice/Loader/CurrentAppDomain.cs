@@ -17,7 +17,7 @@ namespace NetOffice.Loader
                                                                         "OfficeApi.dll", "ExcelApi.dll", "WordApi.dll",
                                                                         "OutlookApi.dll", "PowerPointApi.dll", "AccessApi.dll",
                                                                         "VisioApi.dll", "MSProjectApi.dll", "PublisherApi.dll",
-                                                                        "VBIDEApi.dll", "MSFormsApi.dll"
+                                                                        "VBIDEApi.dll"
                                                                        };
         #endregion
 
