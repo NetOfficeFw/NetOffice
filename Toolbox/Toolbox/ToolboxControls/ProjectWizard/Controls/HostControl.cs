@@ -55,8 +55,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                     list.Add("PowerPoint");
                 if (checkBoxAccess.Checked)
                     list.Add("Access");
-                if (checkBoxProject.Checked)
-                    list.Add("Project");
                 if (checkBoxVisio.Checked)
                     list.Add("Visio");                
                 return list;
@@ -133,9 +131,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
                     break;
                 case Keys.D5:
                     checkBoxAccess.Checked = !checkBoxAccess.Checked;
-                    break;
-                case Keys.D6:
-                    checkBoxProject.Checked = !checkBoxProject.Checked;
                     break;
                 case Keys.D7:
                     if (checkBoxVisio.Enabled)

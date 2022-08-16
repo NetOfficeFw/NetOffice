@@ -539,20 +539,6 @@ namespace NOBuildTools.ReferenceAnalyzer
 
         #region Parse Project
 
-        /// <summary>
-        /// Parse MSProject Docu pages
-        /// </summary>
-        /// <param name="document">document to fill</param>
-        /// <param name="func">progress handler</param>
-        internal static void ParseProject(XDocument document, LogAction func)
-        {
-            XElement projectNode = new XElement("MSProject");
-            (document.FirstNode as XElement).Add(projectNode);
-            ParseProjectTypes(projectNode, func);
-            ParseProjectEnums(projectNode, func);
-            ParseProjectTypesMembers(projectNode, func);
-        }
-
         private static void ParseProjectTypes(XElement excelNode, LogAction func)
         {
             func("Parse Project Types");
@@ -2037,7 +2023,6 @@ namespace NOBuildTools.ReferenceAnalyzer
             ParseOffice(document, func);
             ParseOutlook(document, func);
             ParsePowerPoint(document, func);
-            ParseProject(document, func);
             ParseVisio(document, func);
             ParseWord(document, func);
             func("Done!");

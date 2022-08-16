@@ -71,14 +71,6 @@
       <Project>{9D83E8F2-4EFD-4A2E-88CE-9F5943620DB6}</Project>
       <Name>MSDATASRCApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\MSHTML\MSHTMLApi.csproj">
-      <Project>{26837F52-660E-424D-80B8-30D0427E00B5}</Project>
-      <Name>MSHTMLApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\MSProject\MSProjectApi.csproj">
-      <Project>{6C715072-6B0D-43D5-B620-2AC997CEF2CA}</Project>
-      <Name>MSProjectApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Source\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>

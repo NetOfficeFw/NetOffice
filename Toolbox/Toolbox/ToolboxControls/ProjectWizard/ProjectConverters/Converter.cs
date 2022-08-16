@@ -476,7 +476,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                 case "Access":
                 case "Outlook":
                 case "Word":
-                case "MSProject":
                 case "PowerPoint":
                 case "Publisher":
                     return true;
@@ -601,14 +600,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                             dependecies.Add("MSDATASRC");
                         if (!dependecies.Any(a => a == "MSComctlLib"))
                             dependecies.Add("MSComctlLib");
-                        break;
-                    case "MSProject":
-                        if (!dependecies.Any(a => a == "Office"))
-                            dependecies.Add("Office");
-                        if (!dependecies.Any(a => a == "VBIDE"))
-                            dependecies.Add("VBIDE");
-                        if (!dependecies.Any(a => a == "MSHTML"))
-                            dependecies.Add("MSHTML");
                         break;
                     case "Visio":
                         break;

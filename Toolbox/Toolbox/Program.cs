@@ -41,7 +41,7 @@ namespace NetOffice.DeveloperToolbox
         private static string[] _dependencies = new string[] { "ICSharpCode.SharpZipLib.dll", "Mono.Cecil.dll", "NetOffice.OutlookSecurity.dll",
                                                                 "AccessApi.dll", "ADODBApi.dll", "DAOApi.dll",
                                                                 "ExcelApi.dll", "MSComctlLibApi.dll", "MSDATASRCApi.dll",
-                                                                "MSHTMLApi.dll", "MSProjectApi.dll", "NetOffice.dll",
+                                                                "NetOffice.dll",
                                                                 "OfficeApi.dll", "OutlookApi.dll", "OWC10Api.dll",
                                                                 "PowerPointApi.dll", "VBIDEApi.dll", "VisioApi.dll",
                                                                 "WordApi.dll", "PublisherApi.dll" };

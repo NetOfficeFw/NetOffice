@@ -61,14 +61,6 @@
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="MSHTMLApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSHTMLApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="MSProjectApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSProjectApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="NetOffice">
       <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
     </Reference>

@@ -23,8 +23,6 @@
     <ProjectReference Include="..\Excel\ExcelApi.csproj" />
     <ProjectReference Include="..\MSComctlLib\MSComctlLibApi.csproj" />
     <ProjectReference Include="..\MSDATASRC\MSDATASRCApi.csproj" />
-    <ProjectReference Include="..\MSHTML\MSHTMLApi.csproj" />
-    <ProjectReference Include="..\MSProject\MSProjectApi.csproj" />
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\Outlook\OutlookApi.csproj" />

@@ -154,7 +154,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             SetupSupportInfo(_outlook, "Outlook");
             SetupSupportInfo(_powerPoint, "PowerPoint");
             SetupSupportInfo(_access, "Access");
-            SetupSupportInfo(_project, "MSProject");
             SetupSupportInfo(_visio, "Visio");
             SetupSupportInfo(_publisher, "Publisher");
         }

@@ -33,11 +33,6 @@ namespace NetOffice.OfficeApi.Tools
         Access = 4,
 
         /// <summary>
-        /// MS Project in any version
-        /// </summary>
-        MSProject = 5,
-
-        /// <summary>
         /// MS Visio in any version
         /// </summary>
         Visio = 6,
@@ -92,10 +87,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <returns>registry sub string from office application</returns>
         internal static string RegistryEntry(RegisterIn register)
         {
-            if (register == RegisterIn.MSProject)
-                return "MS Project"; // Project use one empty space. Some previous NetOffice(<1.7.3) releases handle this wrong
-            else
-                return register.ToString();
+            return register.ToString();
         }
     }
 }

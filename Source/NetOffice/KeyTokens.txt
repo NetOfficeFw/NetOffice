@@ -5,8 +5,6 @@ DAOApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=19cb4234a61cee95
 ExcelApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=9084b9221296229e
 MSComctlLibApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=b97b7d9cfa816715
 MSDATASRCApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=afe692b65e0db609
-MSHTMLApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=9fe3ce00842d84e9
-MSProjectApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=b3f793e50f46b653
 OfficeApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e
 OutlookApi, Version=1.8.1.0, Culture=neutral, PublicKeyToken=b118031aaa1097f3
 OWC10Api, Version=1.8.1.0, Culture=neutral, PublicKeyToken=a2b945645f1c78b9
