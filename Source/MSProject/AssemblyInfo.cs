@@ -14,16 +14,6 @@ using NetOffice.Attributes;
 	MSProject - Microsoft.Office.Interop.MSProject, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 16
 */
 
-[assembly: AssemblyTitle("MSProject")]
-[assembly: AssemblyDescription("NetOffice MSProject Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange, © 2015-2021 Jozef Izso")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.8.1.0")]
-[assembly: AssemblyFileVersion("1.8.1.0")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("MSProject")]
 [assembly: Guid("A7107640-94DF-1068-855E-00DD01075445")]

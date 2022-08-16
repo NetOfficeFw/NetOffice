@@ -1,0 +1,54 @@
+﻿<Project>
+  <!-- Common properties for NetOffice projects -->
+  <PropertyGroup>
+    <NetOfficeRelease>1.8.1</NetOfficeRelease>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>NetOffice</Product>
+    <PackageId Condition=" '$(PackageId)' == '' ">NetOfficeFw.$(AssemblyName)</PackageId>
+    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2022 Jozef Izso</Copyright>
+    <Company>NetOfficeFw</Company>
+    <Authors>Sebastian Lange, Jozef Izso</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <ProjectUrl>https://netoffice.io</ProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/NetOfficeFw/NetOffice-Assets/master/NetOfficeLogo_200x200.png</PackageIconUrl>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <!-- Versioning and packaging for NetOffice projects -->
+  <PropertyGroup>
+    <VersionPrefix>$(NetOfficeRelease)</VersionPrefix>
+    <VersionSuffix Condition=" '$(VersionSuffix)'=='' ">local</VersionSuffix>
+    <AssemblyVersion>$(NetOfficeRelease).0</AssemblyVersion>
+    <FileVersion>$(NetOfficeRelease).0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../LICENSE.txt" Pack="true" PackagePath="/" />
+    <None Include="../../icon.png" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Configuration>Debug</Configuration>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile Condition=" '$(GenerateDocumentationFile)' == '' ">true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
+  </PropertyGroup>
+
+  <!-- Source Link support -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

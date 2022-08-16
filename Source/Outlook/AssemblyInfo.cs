@@ -16,16 +16,6 @@ using NetOffice.Attributes;
     Outlook - Microsoft Outlook 15.0 Object Library - 16
 */
 
-[assembly: AssemblyTitle("Outlook")]
-[assembly: AssemblyDescription("NetOffice Outlook Api")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("NetOfficeFw")]
-[assembly: AssemblyProduct("NetOffice")]
-[assembly: AssemblyCopyright("Copyright © 2012-2018 Sebastian Lange, © 2015-2021 Jozef Izso")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.8.1.0")]
-[assembly: AssemblyFileVersion("1.8.1.0")]
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("Outlook")]
 [assembly: Guid("00062FFF-0000-0000-C000-000000000046")]
