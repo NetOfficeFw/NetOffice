@@ -30,7 +30,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         private Process[]   _powerProcs;
         private Process[]   _accessProcs;
         private Process[]   _projectProcs;
-        private Process[]   _visioProcs;
         private int         _currentLanguageID = 1031;
 
         #endregion
@@ -252,8 +251,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
         /// </summary>
         public bool Project { get; set; }
 
-        public bool Visio { get; set; }
-
         #endregion
 
         #region Methods
@@ -283,10 +280,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
             if (Project)
                 KillProcesses(_projectProcs);
-
-            if (Visio)
-                KillProcesses(_visioProcs);
-
         }
 
         private void KillProcesses(string name)
@@ -368,9 +361,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
                 procs = Process.GetProcessesByName("WINPROJ");
                 AttachedControl.Items[5].SubItems[1].Text = procs.Length.ToString();
-
-                procs = Process.GetProcessesByName("VISIO");
-                AttachedControl.Items[6].SubItems[1].Text = procs.Length.ToString();
             }
         }
         
@@ -396,9 +386,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
             if ((true == Project) && (null != _projectProcs))
                 result += _projectProcs.Length;
 
-            if ((true == Visio) && (null != _visioProcs))
-                result += _visioProcs.Length;
-
             return result;
         }
 
@@ -413,7 +400,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
                 case "POWERPNT":
                 case "MSACCESS":
                 case "WINPROJ":
-                case "VISIO":
                     return true;
                 default:
                     return false;
@@ -527,9 +513,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ApplicationObserver
 
                 _projectProcs = Process.GetProcessesByName("WINPROJ");
                 ShowProcesses("WINPROJ", _projectProcs);
-
-                _visioProcs = Process.GetProcessesByName("VISIO");
-                ShowProcesses("VISIO", _visioProcs);
 
                 int procCount = ProcessCount();
                 if (procCount > 0)

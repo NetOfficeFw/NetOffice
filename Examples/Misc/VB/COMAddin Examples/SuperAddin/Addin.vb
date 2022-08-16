@@ -10,7 +10,7 @@ Imports NetOffice.OfficeApi.Enums
 <COMAddin("Super Addin Sample VB4", "Multi-host addin example", LoadBehavior.LoadAtStartup), Codebase>
 <CustomUI("RibbonUI.xml", True), RegistryLocation(RegistrySaveLocation.CurrentUser)>
 <ProgId("SuperAddinVB4.Connect"), Guid("B7561D9F-E3DE-49cd-B5FE-D812F8999EFD")>
-<MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access, RegisterIn.MSProject)> _
+<MultiRegister(RegisterIn.Excel, RegisterIn.Word, RegisterIn.PowerPoint, RegisterIn.Outlook, RegisterIn.Access)> _
 Public Class Addin
     Inherits COMAddin
 

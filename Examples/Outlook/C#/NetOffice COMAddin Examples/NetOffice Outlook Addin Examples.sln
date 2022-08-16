@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 Ribbons and Panes", "02 Ribbons And Panes\02 Ribbons and Panes.csproj", "{372327EE-02AD-435D-AB29-5699137F41E6}"
 EndProject
@@ -12,8 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Register and Unregister", "04 Register and Unregister\04 Register and Unregister.csproj", "{F7879329-DDE9-49E5-A6A5-FE5619BB9B11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 Custom Property Page", "05 Custom Property Page\05 Custom Property Page.csproj", "{8EBE9076-3429-4A80-8B35-14B3CA5565DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 FormRegions", "06 FormRegions\06 FormRegions.csproj", "{14E4E752-777A-4A98-900B-0FC88CE02CB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +39,11 @@ Global
 		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EBE9076-3429-4A80-8B35-14B3CA5565DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14E4E752-777A-4A98-900B-0FC88CE02CB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EC7A968-7DCC-4C56-A34D-7D9C3CA458E0}
 	EndGlobalSection
 EndGlobal

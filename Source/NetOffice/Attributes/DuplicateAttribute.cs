@@ -122,9 +122,4 @@ ADODB.ConnectionEventsVt_Deprecated	        ADODB.ConnectionEventsVt	    0000040
 ADODB.RecordsetEventsVt_Deprecated	        ADODB.RecordsetEventsVt	        00000403-0000-0010-8000-00AA006D2EA4
 ADODB.ADORecordsetConstruction_Deprecated	ADODB.ADORecordsetConstruction	00000283-0000-0010-8000-00AA006D2EA4
 
-*  Known duplicate types by type-id in a another type library we don't spend a wrapper for
-*  ----------------------------------
-MSForms.Font	stdole.Font	    BEF6E003-A874-101A-8BBA-00AA00300CAB
-MSForms.IFont	stdole.IFont	BEF6E002-A874-101A-8BBA-00AA00300CAB
-* 
 */

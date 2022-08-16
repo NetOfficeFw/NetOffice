@@ -71,18 +71,6 @@
       <Project>{9D83E8F2-4EFD-4A2E-88CE-9F5943620DB6}</Project>
       <Name>MSDATASRCApi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\MSForms\MSFormsApi.csproj">
-      <Project>{F1A3EBA7-5C09-4986-9821-244E8468FBAE}</Project>
-      <Name>MSFormsApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\MSHTML\MSHTMLApi.csproj">
-      <Project>{26837F52-660E-424D-80B8-30D0427E00B5}</Project>
-      <Name>MSHTMLApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\MSProject\MSProjectApi.csproj">
-      <Project>{6C715072-6B0D-43D5-B620-2AC997CEF2CA}</Project>
-      <Name>MSProjectApi</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Source\NetOffice\NetOffice.csproj">
       <Project>{65442327-D01F-4ECB-8C39-6D5C7622A80F}</Project>
       <Name>NetOffice</Name>
@@ -106,10 +94,6 @@
     <ProjectReference Include="..\..\..\..\Source\VBIDE\VBIDEApi.csproj">
       <Project>{ACD7DB2E-DDB2-4BBB-BDB9-C2FD953585C4}</Project>
       <Name>VBIDEApi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\Source\Visio\VisioApi.csproj">
-      <Project>{581B0DB6-8146-4729-9AE6-61B27F53B3E6}</Project>
-      <Name>VisioApi</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\Source\Word\WordApi.csproj">
       <Project>{5C457066-D488-4BC1-B7F8-1E90F2A80648}</Project>

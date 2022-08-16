@@ -137,10 +137,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard
                 list.Add("PowerPoint");
             if (control.checkBoxAccess.Checked)
                 list.Add("Access");
-            if (control.checkBoxProject.Checked)
-                list.Add("MSProject");
-            if (control.checkBoxVisio.Checked)
-                list.Add("Visio");
 
             OfficeApps = list.ToArray();
         }

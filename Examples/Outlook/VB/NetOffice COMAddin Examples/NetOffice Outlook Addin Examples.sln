@@ -13,8 +13,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "04 Register and Unregister"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "05 Custom Property Page", "05 Custom Property Page\05 Custom Property Page.vbproj", "{39FE7D65-86CE-4482-932E-F228631994B2}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "06 FormRegions", "06 FormRegions\06 FormRegions.vbproj", "{990C94CC-AECC-4A99-852E-50A998B5677A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,10 +39,6 @@ Global
 		{39FE7D65-86CE-4482-932E-F228631994B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39FE7D65-86CE-4482-932E-F228631994B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39FE7D65-86CE-4482-932E-F228631994B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{990C94CC-AECC-4A99-852E-50A998B5677A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{990C94CC-AECC-4A99-852E-50A998B5677A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{990C94CC-AECC-4A99-852E-50A998B5677A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{990C94CC-AECC-4A99-852E-50A998B5677A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

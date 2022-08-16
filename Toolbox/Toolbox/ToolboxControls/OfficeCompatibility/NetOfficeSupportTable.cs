@@ -9,8 +9,6 @@ using System.IO;
 using System.IO.Compression;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
-using Project = NetOffice.MSProjectApi;
-using Visio = NetOffice.VisioApi;
 
 namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
 {
@@ -22,10 +20,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         AssemblyDefinition _assOutlook;
         AssemblyDefinition _assPowerPoint;
         AssemblyDefinition _assAccess;
-        AssemblyDefinition _assMSProject;
-        AssemblyDefinition _assVisio;
-        AssemblyDefinition _assPublisher;
-
         Assembly _thisAssembly = Assembly.GetExecutingAssembly();
         
         public NetOfficeSupportTable()
@@ -76,26 +70,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         Stream stream = System.IO.File.OpenRead(assemblyPath);
                         _assAccess = AssemblyDefinition.ReadAssembly(stream);
                     }
-                    else if (item.Name.StartsWith("MSProjectApi"))
-                    {
-                        string assemblyPath = GetPhysicalPath(item);
-                        Stream stream = System.IO.File.OpenRead(assemblyPath);
-                        _assMSProject = AssemblyDefinition.ReadAssembly(stream);
-                    }
-                    else if (item.Name.StartsWith("VisioApi"))
-                    {
-                        string assemblyPath = GetPhysicalPath(item);
-                        Stream stream = System.IO.File.OpenRead(assemblyPath);
-                        _assVisio = AssemblyDefinition.ReadAssembly(stream);
-                    }
-                    else if (item.Name.StartsWith("PublisherApi"))
-                    {
-                        string assemblyPath = GetPhysicalPath(item);
-                        Stream stream = System.IO.File.OpenRead(assemblyPath);
-                        _assPublisher = AssemblyDefinition.ReadAssembly(stream);
-                    }
                 }
-            }        
+            }
         }
 
         /// <summary>
@@ -252,12 +228,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     return _assPowerPoint;
                 case "Access":
                     return _assAccess;
-                case "MSProject":
-                    return _assMSProject;
-                case "Visio":
-                    return _assVisio;
-                case "Publisher":
-                    return _assPublisher;
                 default:
                     return null;
             }

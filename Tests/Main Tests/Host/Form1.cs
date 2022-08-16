@@ -52,8 +52,7 @@ namespace Host
                    item.ProcessName.Equals("word", StringComparison.InvariantCultureIgnoreCase) ||
                     item.ProcessName.Equals("outlook", StringComparison.InvariantCultureIgnoreCase) ||
                     item.ProcessName.Equals("ppoint", StringComparison.InvariantCultureIgnoreCase) ||
-                    item.ProcessName.Equals("access", StringComparison.InvariantCultureIgnoreCase) ||
-                    item.ProcessName.Equals("msproject", StringComparison.InvariantCultureIgnoreCase))
+                    item.ProcessName.Equals("access", StringComparison.InvariantCultureIgnoreCase))
                 {
                     found = true;
                     break;
@@ -369,9 +368,6 @@ namespace Host
 
                 if (checkBoxAccess.Checked)
                     RunAccessTests();
-
-                if (checkBoxProject.Checked)
-                    RunProjectTests();
             }
             catch (Exception exception)
             {

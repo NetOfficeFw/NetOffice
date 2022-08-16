@@ -47,19 +47,9 @@ namespace NetOffice.OfficeApi.Tools
             Access = 5,
 
             /// <summary>
-            /// Visio
-            /// </summary>
-            Visio = 6,
-
-            /// <summary>
             /// MS Project
             /// </summary>
-            MS_Project = 7,
-
-            /// <summary>
-            /// Publisher
-            /// </summary>
-            Publisher = 8
+            MS_Project = 7
         }
 
         static ApplicationIdentifiers()
@@ -69,9 +59,7 @@ namespace NetOffice.OfficeApi.Tools
             Outlook = new Guid("00063001-0000-0000-C000-000000000046");
             PowerPoint = new Guid("91493442-5A91-11CF-8700-00AA0060263B");
             Access = new Guid("68CCE6C0-6129-101B-AF4E-00AA003F0F07");
-            Visio = new Guid("000D0700-0000-0000-C000-000000000046");
             MS_Project = new Guid("00020AFF-0000-0000-C000-000000000046");
-            Publisher = new Guid("0002123E-0000-0000-C000-000000000046");
         }
 
         /// <summary>
@@ -98,21 +86,11 @@ namespace NetOffice.OfficeApi.Tools
         /// 68CCE6C0-6129-101B-AF4E-00AA003F0F07
         /// </summary>
         public static Guid Access { get; private set; }
-         
-        /// <summary>
-        /// 000D0700-0000-0000-C000-000000000046
-        /// </summary>
-        public static Guid Visio { get; private set; }
 
         /// <summary>
         /// 00020AFF-0000-0000-C000-000000000046
         /// </summary>
         public static Guid MS_Project { get; private set; }
-
-        /// <summary>
-        /// 0002123E-0000-0000-C000-000000000046
-        /// </summary>
-        public static Guid Publisher { get; private set; }
 
         /// <summary>
         /// Compare the id with application interface id's.
@@ -132,12 +110,8 @@ namespace NetOffice.OfficeApi.Tools
                 return ApplicationType.PowerPoint;
             if (id == Access)
                 return ApplicationType.Access;
-            if (id == Visio)
-                return ApplicationType.Visio;
             if (id == MS_Project)
                 return ApplicationType.MS_Project;
-            if (id == Publisher)
-                return ApplicationType.Publisher;
             return ApplicationType.None;
         }
 
