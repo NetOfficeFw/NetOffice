@@ -112,7 +112,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         private SupportInfo[] _powerPoint;
         private SupportInfo[] _access;
         private SupportInfo[] _project;
-        private SupportInfo[] _publisher;
 
         #endregion
 
@@ -142,7 +141,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             _powerPoint = new SupportInfo[7];
             _access = new SupportInfo[7];
             _project = new SupportInfo[7];
-            _publisher = new SupportInfo[7];
 
             RemoveDelegateTypes();
 
@@ -152,7 +150,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
             SetupSupportInfo(_outlook, "Outlook");
             SetupSupportInfo(_powerPoint, "PowerPoint");
             SetupSupportInfo(_access, "Access");
-            SetupSupportInfo(_publisher, "Publisher");
         }
 
         #endregion

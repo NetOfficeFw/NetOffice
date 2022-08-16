@@ -49,12 +49,7 @@ namespace NetOffice.OfficeApi.Tools
             /// <summary>
             /// MS Project
             /// </summary>
-            MS_Project = 7,
-
-            /// <summary>
-            /// Publisher
-            /// </summary>
-            Publisher = 8
+            MS_Project = 7
         }
 
         static ApplicationIdentifiers()
@@ -65,7 +60,6 @@ namespace NetOffice.OfficeApi.Tools
             PowerPoint = new Guid("91493442-5A91-11CF-8700-00AA0060263B");
             Access = new Guid("68CCE6C0-6129-101B-AF4E-00AA003F0F07");
             MS_Project = new Guid("00020AFF-0000-0000-C000-000000000046");
-            Publisher = new Guid("0002123E-0000-0000-C000-000000000046");
         }
 
         /// <summary>
@@ -99,11 +93,6 @@ namespace NetOffice.OfficeApi.Tools
         public static Guid MS_Project { get; private set; }
 
         /// <summary>
-        /// 0002123E-0000-0000-C000-000000000046
-        /// </summary>
-        public static Guid Publisher { get; private set; }
-
-        /// <summary>
         /// Compare the id with application interface id's.
         /// (Typical you got with comProxy.GetType().GUID)
         /// </summary>
@@ -123,8 +112,6 @@ namespace NetOffice.OfficeApi.Tools
                 return ApplicationType.Access;
             if (id == MS_Project)
                 return ApplicationType.MS_Project;
-            if (id == Publisher)
-                return ApplicationType.Publisher;
             return ApplicationType.None;
         }
 

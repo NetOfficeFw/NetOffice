@@ -43,9 +43,8 @@ namespace NetOffice.DeveloperToolbox
                                                                 "ExcelApi.dll", "MSComctlLibApi.dll", "MSDATASRCApi.dll",
                                                                 "NetOffice.dll",
                                                                 "OfficeApi.dll", "OutlookApi.dll", "OWC10Api.dll",
-                                                                "PowerPointApi.dll", "VBIDEApi.dll"
-                                                                "WordApi.dll", "PublisherApi.dll" };
-
+                                                                "PowerPointApi.dll", "VBIDEApi.dll",
+                                                                "WordApi.dll" };
 
         /// <summary>
         /// The main entry point for the component-based application. No need for a service architecture here so far. May this want be changed to CAB in the future

@@ -107,11 +107,6 @@
       <HintPath>..\..\Assemblies\Any CPU\PowerPointApi.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="PublisherApi, Version=1.7.4.1, Culture=neutral, PublicKeyToken=2133a4c2cfc56bf6, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\Assemblies\Any CPU\PublisherApi.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>

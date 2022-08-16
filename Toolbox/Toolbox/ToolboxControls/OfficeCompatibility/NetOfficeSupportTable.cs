@@ -20,8 +20,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
         AssemblyDefinition _assOutlook;
         AssemblyDefinition _assPowerPoint;
         AssemblyDefinition _assAccess;
-        AssemblyDefinition _assPublisher;
-
         Assembly _thisAssembly = Assembly.GetExecutingAssembly();
         
         public NetOfficeSupportTable()
@@ -72,14 +70,8 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         Stream stream = System.IO.File.OpenRead(assemblyPath);
                         _assAccess = AssemblyDefinition.ReadAssembly(stream);
                     }
-                    else if (item.Name.StartsWith("PublisherApi"))
-                    {
-                        string assemblyPath = GetPhysicalPath(item);
-                        Stream stream = System.IO.File.OpenRead(assemblyPath);
-                        _assPublisher = AssemblyDefinition.ReadAssembly(stream);
-                    }
                 }
-            }        
+            }
         }
 
         /// <summary>
@@ -236,8 +228,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                     return _assPowerPoint;
                 case "Access":
                     return _assAccess;
-                case "Publisher":
-                    return _assPublisher;
                 default:
                     return null;
             }

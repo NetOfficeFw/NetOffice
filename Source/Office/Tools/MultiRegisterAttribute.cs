@@ -31,11 +31,6 @@ namespace NetOffice.OfficeApi.Tools
         /// MS Access in any version
         /// </summary>
         Access = 4,
-
-        /// <summary>
-        /// MS Publisher
-        /// </summary>
-        Publisher = 7,
     }
 
     /// <summary>

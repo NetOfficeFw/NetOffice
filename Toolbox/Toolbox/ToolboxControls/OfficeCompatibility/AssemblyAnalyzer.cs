@@ -753,7 +753,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.OfficeCompatibility
                         case "PowerPointApi":
                         case "AccessApi":
                         case "OfficeApi":
-                        case "PublisherApi":
                             return true;
                     }
                 }

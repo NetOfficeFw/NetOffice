@@ -477,7 +477,6 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.ProjectConver
                 case "Outlook":
                 case "Word":
                 case "PowerPoint":
-                case "Publisher":
                     return true;
                 default:
                     return false;

@@ -16,7 +16,6 @@ namespace NetOffice.Loader
         private static readonly string[] _assemblyNames = new string[] {
                                                                         "OfficeApi.dll", "ExcelApi.dll", "WordApi.dll",
                                                                         "OutlookApi.dll", "PowerPointApi.dll", "AccessApi.dll",
-                                                                        "PublisherApi.dll",
                                                                         "VBIDEApi.dll"
                                                                        };
         #endregion
