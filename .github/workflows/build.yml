@@ -33,11 +33,20 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
 
+    - name: Cache dotnet tools
+      uses: actions/cache@v3
+      id: cache-dotnettools
+      with:
+        path: ~/.dotnet/tools
+        key: dotnettools
+
     - name: Setup AzureSignTool
-      run: dotnet tool install --global azuresigntool --version 3.0.0
+      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
+      run: dotnet tool install --verbosity minimal --global azuresigntool --version 3.0.0
 
     - name: Setup NuGetKeyVaultSignTool
-      run: dotnet tool install --global NuGetKeyVaultSignTool --version 3.2.2
+      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
+      run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.2
 
     - name: Report NetOffice version
       run: |
