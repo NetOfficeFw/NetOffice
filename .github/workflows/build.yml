@@ -26,6 +26,7 @@ jobs:
       VersionSuffix: 'preview${{ github.run_id }}'
       RepositoryBranch: '${{ github.ref_name }}'
       RepositoryCommit: '${{ github.sha }}'
+      Configuration: '${{ matrix.configuration }}'
 
     steps:
     - name: Checkout
@@ -66,9 +67,7 @@ jobs:
 
     - name: Build NetOffice
       run: |
-        msbuild Source\NetOffice.sln /restore /t:Build /m /v:normal
-      env:
-        Configuration: ${{ matrix.configuration }}
+        dotnet build Source\NetOffice.sln
 
     - name: Sign NetOffice libraries
       if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
@@ -93,5 +92,28 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: NetOffice_${{ env.VersionSuffix }}_${{ matrix.configuration }}
+        name: NetOffice_binaries_${{ env.VersionSuffix }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
+
+    - name: Pack NetOffice
+      run: |
+        dotnet pack Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
+
+    - name: Sign NetOffice packages
+      if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
+      working-directory: '${{ github.workspace}}\dist'
+      run: |
+          NuGetKeyVaultSignTool.exe sign *.nupkg `
+          --file-digest sha256 `
+          --timestamp-rfc3161 http://timestamp.digicert.com `
+          --timestamp-digest sha256 `
+          --azure-key-vault-url https://opensourcesigning.vault.azure.net `
+          --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
+          --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
+          --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
+          --azure-key-vault-certificate "goITSolutions-until-2024-01"
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: NetOffice_packages_${{ env.VersionSuffix }}_${{ matrix.configuration }}
+        path: '${{ github.workspace }}\dist'
