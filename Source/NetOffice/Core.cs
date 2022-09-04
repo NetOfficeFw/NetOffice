@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using NetOffice.Loader;
 using NetOffice.Duck;
 using NetOffice.Exceptions;
+using System.Diagnostics;
 #if DEBUG
 using NetOffice.Diagnostics.Internal;
 #endif
@@ -542,7 +543,7 @@ namespace NetOffice
 
             try
             {
-                DateTime startTime = DateTime.Now;
+                Stopwatch sw = Stopwatch.StartNew();
 
                 lock (_factoryListLock)
                 {
@@ -562,14 +563,15 @@ namespace NetOffice
                     LoadAPIFactories();
                     LoadDependentAPIFactories();
 
-                    InitializedTime = DateTime.Now - startTime;
+                    sw.Stop();
+                    InitializedTime = sw.Elapsed;
 
                     if (Settings.EnableMoreDebugOutput)
                     {
                         Console.WriteLine("NetOffice Core contains {0} assemblies", Assemblies.Count);
                         Console.WriteLine("NetOffice Core.Initialize() passed in {0} milliseconds", InitializedTime.TotalMilliseconds);
                     }
-                }            
+                }
             }
             catch (Exception throwedException)
             {
