@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace NetOffice.OfficeApi.Tools.Dialogs
+namespace NetOffice.OfficeApi.Tools.Contribution
 {
     /// <summary>
     /// Color settings in default dialogs

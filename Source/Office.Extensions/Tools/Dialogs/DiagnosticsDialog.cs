@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using NetOffice.OfficeApi.Tools.Contribution;
 using NetOffice.OfficeApi.Tools.Informations;
 
 namespace NetOffice.OfficeApi.Tools.Dialogs

@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyTitle>NetOffice Office Extensions</AssemblyTitle>
+    <RootNamespace>NetOffice.OfficeApi</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Office\OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>NetOfficeFw.Office.Extensions</PackageId>
+    <Description>NetOffice core library for building Microsoft Office add-ins and automation of Microsoft Office applications.
+
+NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint and Access.</Description>
+    <PackageTags>netoffice netofficefw NetOffice.Office office interop wrapper vsto addin userinterface UI</PackageTags>
+  </PropertyGroup>
+
+  <Import Project="..\NetOffice.props" />
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Office\OfficeApi_v4.0.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Office\OfficeApi.csproj" />
+  </ItemGroup>
+</Project>
