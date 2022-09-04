@@ -179,12 +179,12 @@ namespace NetOffice.Running
         /// <summary>
         /// Enumerates all top level windows on desktop. WARNING: The method returns null if operation timeout is reached.
         /// </summary>
-        /// <param name="milliSecondsTimeout">a timeout for the operation. when a desktop windows is busy or non responding these method freeze. you can handle this with the operation timeout</param>
+        /// <param name="millisecondsTimeout">a timeout for the operation. when a desktop windows is busy or non responding these method freeze. you can handle this with the operation timeout</param>
         /// <returns>result array or null</returns>
-        public IntPtr[] EnumerateWindows(int milliSecondsTimeout)
+        public IntPtr[] EnumerateWindows(int millisecondsTimeout)
         {
-            if (milliSecondsTimeout < 0)
-                throw new ArgumentOutOfRangeException("milliSecondsTimeout");
+            if (millisecondsTimeout < 0)
+                throw new ArgumentOutOfRangeException(nameof(millisecondsTimeout));
 
             try
             {
@@ -197,7 +197,7 @@ namespace NetOffice.Running
                     ManualResetEvent mre1 = new ManualResetEvent(false);
                     waitHandles[0] = mre1;
                     thread1.Start(mre1);
-                    bool result = WaitHandle.WaitAll(waitHandles, milliSecondsTimeout);
+                    bool result = WaitHandle.WaitAll(waitHandles, millisecondsTimeout);
                     if (!result)
                     {
                         thread1.Abort();

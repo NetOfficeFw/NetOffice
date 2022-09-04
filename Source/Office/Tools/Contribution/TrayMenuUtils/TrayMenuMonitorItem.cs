@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         #region Methods
 
         /// <summary>
-        /// Enable or disable category visibilty. Core is ignored
+        /// Enable or disable category visibility. Core is ignored
         /// </summary>
         /// <param name="mode">mode to set</param>
         /// <param name="visible">visibility</param>
@@ -273,7 +273,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Get current category visibilty
+        /// Get current category visibility
         /// </summary>
         /// <param name="mode">target mode</param>
         /// <returns>visibility</returns>

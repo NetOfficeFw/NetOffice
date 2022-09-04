@@ -1161,7 +1161,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
         
         /// <summary>
-        /// Try to detect the visibilty of host application main window.
+        /// Try to detect the visibility of host application main window.
         /// The implementation want find a Visible property and analyze its current state
         /// </summary>
         /// <param name="defaultResult">fallback result if its failed</param>

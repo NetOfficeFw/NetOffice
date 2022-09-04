@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         #region Fields
 
         /// <summary>
-        /// Save checkbox using explicitly because its unsafe to check for visibilty in result
+        /// Save checkbox using explicitly because its unsafe to check for visibility in result
         /// </summary>
         private bool _useCondition = false;
 

@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// Set View Category Visibility
         /// </summary>
         /// <param name="mode">target mode, Core is unsupported</param>
-        /// <param name="visible">visibilty</param>
+        /// <param name="visible">visibility</param>
         public void SetModeVisible(TrayMenuMonitorItem.ShowMode mode, bool visible)
         {
             if (InvokeRequired)
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// Get Category Visibility
         /// </summary>
         /// <param name="mode">target mode</param>
-        /// <returns>visibilty</returns>
+        /// <returns>visibility</returns>
         public bool GetModeVisible(TrayMenuMonitorItem.ShowMode mode)
         {
             if (InvokeRequired)

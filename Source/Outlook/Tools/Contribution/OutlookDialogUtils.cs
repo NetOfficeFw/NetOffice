@@ -40,10 +40,11 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         #region Overrides
 
         /// <summary>
-        /// Try to detect the visibilty of host application main window.
-        /// The implementation try to find a visible Outlook application main window and returns true if found.
+        /// Try to detect the visibility of host application main window.
+        /// The implementation tries to find a visible Outlook application main window and returns true if
+        /// it was found.
         /// </summary>
-        /// <param name="defaultResult">fallback result if its failed</param>
+        /// <param name="defaultResult">fallback result if method fails</param>
         /// <returns>true if application is visible, otherwise false</returns>
         protected override bool TryGetApplicationVisible(bool defaultResult)
         {

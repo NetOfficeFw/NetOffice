@@ -70,7 +70,7 @@ namespace NetOffice.DeveloperToolbox.ToolboxControls.ProjectWizard.Controls
         }
 
         /// <summary>
-        /// User want a ribbon toogle button for taskpane visibilty
+        /// User want a ribbon toogle button for taskpane visibility
         /// </summary>
         internal bool ToogleEnabled
         {
