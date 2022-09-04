@@ -402,6 +402,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default diagnostics dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
@@ -454,6 +455,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default diagnostics dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         public static void ShowDiagnostics(this DialogUtils utils, object modalOwner, bool modal)
@@ -464,6 +466,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default diagnostics dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         public static void ShowDiagnostics(this DialogUtils utils, bool modal)
         {
@@ -473,6 +476,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default diagnostics dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         public static void ShowDiagnostics(this DialogUtils utils)
         {
             ShowDiagnostics(utils, null, false, Size.Empty);
@@ -481,6 +485,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default error dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="error">occured error to display</param>
         /// <param name="friendlyErrorDescription">User-friendly error message to explain what happen</param>
@@ -528,6 +533,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default error dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="error">occured error to display</param>
         /// <param name="friendlyErrorDescription">User-friendly error message to explain what happen</param>
@@ -539,6 +545,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default error dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="error">occured error to display</param>
         /// <param name="friendlyErrorDescription">User-friendly error message to explain what happen</param>
         public static void ShowError(this DialogUtils utils, Exception error, string friendlyErrorDescription)
@@ -549,6 +556,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default error dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="kind">The method where the error comes from</param>
         /// <param name="error">occured error to display</param>
         public static void ShowErrorDefault(this DialogUtils utils, NetOffice.Tools.ErrorMethodKind kind, Exception error)
@@ -559,6 +567,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show an (un)register error
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">caption</param>
         /// <param name="methodKind">The method where the error comes from</param>
         /// <param name="exception">occured error to display</param>
@@ -577,6 +586,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show message box with register values
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">message box caption</param>
         /// <param name="type">type to register</param>
         /// <param name="registerCall">call kind</param>
@@ -590,6 +600,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show message box with register values
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">message box caption</param>
         /// <param name="type">type to register</param>
         /// <param name="registerCall">call kind</param>
@@ -611,6 +622,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show message box with unregister values
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">message box caption</param>
         /// <param name="type">type to register</param>
         /// <param name="registerCall">call kind</param>
@@ -624,6 +636,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show message box with unregister values
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">message box caption</param>
         /// <param name="type">type to register</param>
         /// <param name="registerCall">call kind</param>
@@ -646,6 +659,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default about dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
@@ -702,6 +716,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default about dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="headerCaption">header caption on top</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
         /// <param name="licenceText">licence information</param>
@@ -713,6 +728,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show the NetOffice default about dialog
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
@@ -727,6 +743,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Shows multi-line/rich text to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="caption">header caption on top</param>
         /// <param name="text">text to display. rich text is supported</param>
@@ -781,6 +798,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Shows multi-line/rich text to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="caption">header caption on top</param>
         /// <param name="text">text to display. rich text is supported</param>
@@ -797,6 +815,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Shows multi-line/rich text to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">header caption on top</param>
         /// <param name="text">text to display. rich text is supported</param>
         /// <param name="checkText">additional checkbox want be shown if set. If its true, the checkbox must be checked for result DialogResult.Ok</param>
@@ -812,6 +831,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Shows multi-line/rich text to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">header caption on top</param>
         /// <param name="text">text to display. rich text is supported</param>
         /// <param name="checkText">additional checkbox want be shown if set. If its true, the checkbox must be checked for result DialogResult.Ok</param>
@@ -825,6 +845,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Shows multi-line/rich text to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="caption">header caption on top</param>
         /// <param name="text">text to display. rich text is supported</param>
         /// <param name="timeoutSeconds">timeout in seconds</param>
@@ -839,6 +860,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
@@ -871,6 +893,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
         /// <param name="buttons">user selection buttons</param>
@@ -900,6 +923,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="text">text to display</param>
         /// <param name="icon">default icon</param>
         /// <param name="defaultResult">result if its not shown</param>
@@ -912,6 +936,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
         /// <param name="icon">default icon</param>
@@ -925,6 +950,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
         /// <param name="buttons">user selection buttons</param>
@@ -938,6 +964,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
         /// <param name="defaultResult">result if its not shown</param>
@@ -950,6 +977,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="text">text to display</param>
         /// <param name="defaultResult">result if its not shown</param>
         /// <returns>user selection</returns>
@@ -961,6 +989,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show dialog instance
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="dialogInstance">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
@@ -1003,6 +1032,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show dialog instance
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="dialog">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
@@ -1015,6 +1045,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show dialog instance
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="dialog">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
@@ -1028,6 +1059,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show dialog instance
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="dialog">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="arguments">custom arguments</param>
@@ -1041,6 +1073,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show dialog instance
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="dialog">dialog instance to show</param>
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="defaultResult">result if its not shown</param>
@@ -1053,6 +1086,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Show modal Windows.Forms message box to the user
         /// </summary>
+        /// <param name="utils">DialogUtils instance</param>
         /// <param name="modalOwner">owner window. can be null(Nothing in Visual Basic)</param>
         /// <param name="text">text to display</param>
         /// <param name="caption">dialog title</param>
@@ -1087,6 +1121,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         /// <param name="dialog">new instance</param>
         /// <param name="dialogName">name of the dialog</param>
+        /// <param name="layout">Dialog layout settings</param>
         private static void OnCreateToolsDialog(ToolsDialog dialog, string dialogName, DialogLayoutSettings layout)
         {
             //dialog.DoLocalization(Localization[dialogName][CurrentLanguage, true]);
