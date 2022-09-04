@@ -30,20 +30,7 @@ NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint 
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.Designer.cs">
-      <DependentUpon>TrayMenuMonitorItemControl.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="OfficeApi_v4.0.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.resx">
-      <DependentUpon>TrayMenuMonitorItemControl.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

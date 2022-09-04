@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Windows.Forms;
 
 namespace NetOffice.OfficeApi.Tools.Contribution
-{       
+{
     /// <summary>
     /// Tray related utils
     /// </summary>
@@ -28,12 +28,12 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// Creates an instance of the class
         /// </summary>
         /// <param name="owner">owner instance</param>
-        internal TrayUtils(CommonUtils owner)
+        public TrayUtils(CommonUtils owner)
         {
             if (null == owner)
                 throw new ArgumentNullException("owner");
             _owner = owner;
-            Menu = new TrayMenu(owner.Owner);             
+            Menu = new TrayMenu(owner.Owner);
         }
 
         #endregion
@@ -479,7 +479,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             if (null == _owner || null == _owner.Owner || null == _owner.OwnerAssembly)
                 return null;
 
-            System.Reflection.Assembly assembly = _owner.OwnerAssembly;
+            Assembly assembly = _owner.OwnerAssembly;
             System.IO.Stream stream = assembly.GetManifestResourceStream(address);
             if (null == stream)
             {

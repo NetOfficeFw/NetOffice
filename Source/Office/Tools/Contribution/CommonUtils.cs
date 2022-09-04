@@ -47,7 +47,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         private DialogUtils _dialogUtils;
         private ColorUtils _colorUtils;
         private ImageUtils _imageUtils;
-        private TrayUtils _trayUtils;
         private ResourceUtils _resourceUtils;
         private Infos _infos;
 
@@ -255,22 +254,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Tray related utils
-        /// </summary>
-        public TrayUtils Tray
-        {
-            get
-            {
-                lock (_lock)
-                {
-                    if (null == _trayUtils)
-                        _trayUtils = OnCreateTrayUtils();                    
-                }
-                return _trayUtils;
-            }
-        }
-
-        /// <summary>
         /// Image related utils
         /// </summary>
         public ImageUtils Image
@@ -348,7 +331,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Assembly information used in AssemblyInfo
         /// </summary>
-        protected internal Assembly OwnerAssembly
+        public Assembly OwnerAssembly
         {
             get
             {
@@ -467,15 +450,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         protected internal virtual ResourceUtils OnCreateResourceUtils()
         {
             return new ResourceUtils(this);
-        }
-
-        /// <summary>
-        /// Creates an instance of TrayUtils
-        /// </summary>
-        /// <returns>instance of TrayUtils</returns>
-        protected internal virtual TrayUtils OnCreateTrayUtils()
-        {
-            return new TrayUtils(this);
         }
 
         /// <summary>
@@ -607,8 +581,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         public virtual void Dispose()
         {
-            if (null != _trayUtils)
-                _trayUtils.DisposeTray();
         }
 
         #endregion
