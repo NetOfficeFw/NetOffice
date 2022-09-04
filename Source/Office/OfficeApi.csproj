@@ -74,7 +74,6 @@ NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint 
   </ItemGroup>
   <ItemGroup>
     <None Include="OfficeApi_v4.0.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1031.xml" />

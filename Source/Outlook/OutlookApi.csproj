@@ -29,6 +29,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="OutlookApi_v4.0.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

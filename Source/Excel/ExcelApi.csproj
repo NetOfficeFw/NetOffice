@@ -25,6 +25,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ExcelApi_v4.0.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

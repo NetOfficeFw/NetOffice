@@ -27,6 +27,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AccessApi_v4.0.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

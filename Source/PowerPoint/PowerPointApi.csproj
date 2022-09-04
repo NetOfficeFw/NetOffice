@@ -31,7 +31,6 @@
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="PowerPointApi_v4.0.snk" />
   </ItemGroup>
 </Project>
