@@ -15,7 +15,7 @@ using NetOffice.Attributes;
 [assembly: PrimaryInteropAssembly(1, 0)]
 [assembly: ImportedFromTypeLib("ADODB")]
 [assembly: Guid("00000201-0000-0010-8000-00AA006D2EA4")]
-[assembly: NetOfficeAssemblyAttribute("1.8.1.0")]
+[assembly: NetOfficeAssemblyAttribute("1.9.0.0")]
 [assembly: Dependency("NetOffice.dll", LoadHint.Default)]
 
 
