@@ -131,6 +131,37 @@ namespace NetOffice.OutlookApi.Tools.Contribution
             return new OutlookDialogUtils(this);
         }
 
+        /// <summary>
+        /// Try to detect the visibility of host application main window.
+        /// The implementation tries to find a visible Outlook application main window and returns true if
+        /// it was found.
+        /// </summary>
+        /// <param name="defaultResult">fallback result if method fails</param>
+        /// <returns>true if application is visible, otherwise false</returns>
+        public override bool TryGetApplicationVisible(bool defaultResult)
+        {
+            try
+            {
+                Running.WindowEnumerator enumerator = new Running.WindowEnumerator("rctrl_renwnd32");
+                IntPtr[] handles = enumerator.EnumerateWindows(2000);
+                if (null != handles)
+                {
+                    // once again, no linq possible here to keep .Net2 support
+                    foreach (IntPtr item in handles)
+                    {
+                        if (enumerator.IsVisible(item))
+                            return true;
+                    }
+                }
+                return false;
+            }
+            catch (System.Exception exception)
+            {
+                NetOffice.Core.Default.Console.WriteException(exception);
+                return defaultResult;
+            }
+        }
+
         #endregion
     }
 }

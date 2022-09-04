@@ -564,6 +564,40 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }
         }
 
+        /// <summary>
+        /// Try to detect the visibility of host application main window.
+        /// The implementation want find a Visible property and analyze its current state
+        /// </summary>
+        /// <param name="defaultResult">fallback result if its failed</param>
+        /// <returns>true if application is visible, otherwise false</returns>
+        public virtual bool TryGetApplicationVisible(bool defaultResult)
+        {
+            try
+            {
+                if (this.OwnerApplication.EntityIsAvailable("Visible"))
+                {
+                    object result = this.OwnerApplication.Invoker.PropertyGet(this.OwnerApplication, "Visible");
+                    if (result is bool)
+                        return Convert.ToBoolean(result);
+                    else
+                    {
+                        int i = Convert.ToInt32(result);
+                        return i != 0;
+                    }
+                }
+                else
+                {
+                    return defaultResult;
+                }
+
+            }
+            catch (Exception exception)
+            {
+                Core.Default.Console.WriteException(exception);
+                return defaultResult;
+            }
+        }
+
         #endregion
 
         #region IDisposable

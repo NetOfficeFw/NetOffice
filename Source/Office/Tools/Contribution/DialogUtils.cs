@@ -437,6 +437,14 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         public DialogLocalizationSettings Localization { get; private set; }
 
+        protected CommonUtils Owner
+        {
+            get
+            {
+                return _owner;
+            }
+        }
+
         #endregion
 
         #region Methods
@@ -451,7 +459,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 return true;
             if (SuppressOnAutomation && _owner.IsAutomation)
                 return true;
-            if (SuppressOnHide && false == TryGetApplicationVisible(true))
+            if (SuppressOnHide && false == _owner.TryGetApplicationVisible(true))
                 return true;
             return false;
         }
@@ -1158,40 +1166,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         {
             dialog.DoLocalization(Localization[dialogName][CurrentLanguage, true]);
             dialog.DoLayout(Layout);
-        }
-        
-        /// <summary>
-        /// Try to detect the visibility of host application main window.
-        /// The implementation want find a Visible property and analyze its current state
-        /// </summary>
-        /// <param name="defaultResult">fallback result if its failed</param>
-        /// <returns>true if application is visible, otherwise false</returns>
-        protected virtual bool TryGetApplicationVisible(bool defaultResult)
-        {
-            try
-            {
-                if (_owner.OwnerApplication.EntityIsAvailable("Visible"))
-                {
-                    object result = _owner.OwnerApplication.Invoker.PropertyGet(_owner.OwnerApplication, "Visible");
-                    if (result is bool)
-                        return Convert.ToBoolean(result);
-                    else
-                    {
-                        int i = Convert.ToInt32(result);
-                        return i != 0;
-                    }
-                }
-                else
-                {
-                    return defaultResult;
-                }
-
-            }
-            catch (Exception exception)
-            {
-                OnDialogError(exception);
-                return defaultResult;
-            }
         }
 
         /// <summary>
