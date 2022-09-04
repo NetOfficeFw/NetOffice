@@ -123,15 +123,6 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         #region Overrides
 
         /// <summary>
-        /// Creates an instance of DialogUtils
-        /// </summary>
-        /// <returns>instance of DialogUtils</returns>
-        protected override OfficeApi.Tools.Contribution.DialogUtils OnCreateDialogUtils()
-        {
-            return new OutlookDialogUtils(this);
-        }
-
-        /// <summary>
         /// Try to detect the visibility of host application main window.
         /// The implementation tries to find a visible Outlook application main window and returns true if
         /// it was found.

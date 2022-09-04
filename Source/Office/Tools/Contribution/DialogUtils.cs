@@ -437,14 +437,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         public DialogLocalizationSettings Localization { get; private set; }
 
-        protected CommonUtils Owner
-        {
-            get
-            {
-                return _owner;
-            }
-        }
-
         #endregion
 
         #region Methods
