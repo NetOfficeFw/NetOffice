@@ -90,12 +90,14 @@ jobs:
           --input-file-list signlist.txt `
           --verbose
 
-    - uses: actions/upload-artifact@v3
+    - name: Archive NetOffice binaries
+      uses: actions/upload-artifact@v3
       with:
         name: NetOffice_binaries_${{ env.VersionSuffix }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
 
     - name: Pack NetOffice
+      if: matrix.configuration == 'Release'
       run: |
         dotnet pack Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
 
@@ -113,7 +115,9 @@ jobs:
           --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
           --azure-key-vault-certificate "goITSolutions-until-2024-01"
 
-    - uses: actions/upload-artifact@v3
+    - name: Archive NetOffice packages
+      if: success() && matrix.configuration == 'Release'
+      uses: actions/upload-artifact@v3
       with:
-        name: NetOffice_packages_${{ env.VersionSuffix }}_${{ matrix.configuration }}
+        name: NetOffice_packages_${{ env.VersionSuffix }}
         path: '${{ github.workspace }}\dist'
