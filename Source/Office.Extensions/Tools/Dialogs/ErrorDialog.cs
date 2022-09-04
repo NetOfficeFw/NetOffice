@@ -144,24 +144,6 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         #region Overrides
 
         /// <summary>
-        /// <see cref="ToolsDialog.DoLocalization"/>
-        /// </summary>
-        /// <param name="localization">localized values</param>
-        protected internal override void DoLocalization(DialogLocalization localization)
-        {
-            Text = localization["Title", Text];
-            labelErrorHeader.Text = localization["ErrorHeader", labelErrorHeader.Text];
-            if (labelErrorMessage.Text.Equals(_errorMessageTemplate, StringComparison.InvariantCultureIgnoreCase))
-                labelErrorMessage.Text = localization["ErrorMessage", ""];
-            colMessage.HeaderText = localization["Message", colMessage.HeaderText];
-            colType.HeaderText = localization["Type", colType.HeaderText];
-            colSource.HeaderText = localization["Source", colSource.HeaderText];
-            buttonShowDetails.Text = localization["buttonShowDetails", buttonShowDetails.Text];
-            buttonClose.Text = localization["buttonClose", buttonClose.Text];
-            buttonClipboardCopy.Text = localization["buttonClipboardCopy", buttonClipboardCopy.Text];
-        }
-
-        /// <summary>
         /// <see cref="ToolsDialog.DoLayout"/>
         /// </summary>
         /// <param name="layout">layout settings</param>

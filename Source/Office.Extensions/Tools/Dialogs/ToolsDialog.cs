@@ -41,15 +41,6 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         }
 
         /// <summary>
-        /// Do localization in form instance
-        /// </summary>
-        /// <param name="localization">localized values</param>
-        protected internal virtual void DoLocalization(DialogLocalization localization)
-        { 
-            
-        }
-
-        /// <summary>
         /// Get name, ressource path root schema for all NetOffice default dialogs
         /// </summary>
         /// <returns>enumerator to iterate the schema</returns>

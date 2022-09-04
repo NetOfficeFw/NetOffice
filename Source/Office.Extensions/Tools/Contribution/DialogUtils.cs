@@ -388,15 +388,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
 
         #endregion
 
-        #region Properties
-
-        ///// <summary>
-        ///// Default dialogs localization settings
-        ///// </summary>
-        //public DialogLocalizationSettings Localization { get; private set; }
-
-        #endregion
-
         #region Methods
 
         /// <summary>
@@ -1124,7 +1115,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="layout">Dialog layout settings</param>
         private static void OnCreateToolsDialog(ToolsDialog dialog, string dialogName, DialogLayoutSettings layout)
         {
-            //dialog.DoLocalization(Localization[dialogName][CurrentLanguage, true]);
             dialog.DoLayout(layout);
         }
 

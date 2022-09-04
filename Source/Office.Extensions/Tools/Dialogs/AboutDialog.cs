@@ -83,17 +83,6 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         #region Overrides
 
         /// <summary>
-        /// <see cref="ToolsDialog.DoLocalization"/>
-        /// </summary>
-        /// <param name="localization">localized values</param>
-        protected internal override void DoLocalization(DialogLocalization localization)
-        {
-            Text = String.Format("{0} {1}", localization["Title", Text], _headerCaption);
-            labelLicenseHeader.Text = localization["LicenseHeader", labelLicenseHeader.Text];
-            buttonClose.Text = localization["buttonClose", buttonClose.Text];
-        }
-
-        /// <summary>
         /// <see cref="ToolsDialog.DoLayout"/>
         /// </summary>
         /// <param name="layout">layout settings</param>
