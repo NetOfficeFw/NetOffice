@@ -2,6 +2,7 @@
 using NetOffice;
 using Excel = NetOffice.ExcelApi;
 using Contribution = NetOffice.OfficeApi.Tools.Contribution;
+using NetOffice.OfficeApi.Extensions.Dialogs;
 
 namespace ClientApplication
 {

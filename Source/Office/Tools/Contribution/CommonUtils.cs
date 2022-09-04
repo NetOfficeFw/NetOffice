@@ -47,7 +47,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         private DialogUtils _dialogUtils;
         private ColorUtils _colorUtils;
         private ImageUtils _imageUtils;
-        private TrayUtils _trayUtils;
         private ResourceUtils _resourceUtils;
         private Infos _infos;
 
@@ -255,22 +254,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Tray related utils
-        /// </summary>
-        public TrayUtils Tray
-        {
-            get
-            {
-                lock (_lock)
-                {
-                    if (null == _trayUtils)
-                        _trayUtils = OnCreateTrayUtils();                    
-                }
-                return _trayUtils;
-            }
-        }
-
-        /// <summary>
         /// Image related utils
         /// </summary>
         public ImageUtils Image
@@ -348,7 +331,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <summary>
         /// Assembly information used in AssemblyInfo
         /// </summary>
-        protected internal Assembly OwnerAssembly
+        public Assembly OwnerAssembly
         {
             get
             {
@@ -470,15 +453,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         /// <summary>
-        /// Creates an instance of TrayUtils
-        /// </summary>
-        /// <returns>instance of TrayUtils</returns>
-        protected internal virtual TrayUtils OnCreateTrayUtils()
-        {
-            return new TrayUtils(this);
-        }
-
-        /// <summary>
         /// Creates an instance of ImageUtils
         /// </summary>
         /// <returns>instance of ImageUtils</returns>
@@ -564,6 +538,40 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }
         }
 
+        /// <summary>
+        /// Try to detect the visibility of host application main window.
+        /// The implementation want find a Visible property and analyze its current state
+        /// </summary>
+        /// <param name="defaultResult">fallback result if its failed</param>
+        /// <returns>true if application is visible, otherwise false</returns>
+        public virtual bool TryGetApplicationVisible(bool defaultResult)
+        {
+            try
+            {
+                if (this.OwnerApplication.EntityIsAvailable("Visible"))
+                {
+                    object result = this.OwnerApplication.Invoker.PropertyGet(this.OwnerApplication, "Visible");
+                    if (result is bool)
+                        return Convert.ToBoolean(result);
+                    else
+                    {
+                        int i = Convert.ToInt32(result);
+                        return i != 0;
+                    }
+                }
+                else
+                {
+                    return defaultResult;
+                }
+
+            }
+            catch (Exception exception)
+            {
+                Core.Default.Console.WriteException(exception);
+                return defaultResult;
+            }
+        }
+
         #endregion
 
         #region IDisposable
@@ -573,8 +581,6 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         public virtual void Dispose()
         {
-            if (null != _trayUtils)
-                _trayUtils.DisposeTray();
         }
 
         #endregion

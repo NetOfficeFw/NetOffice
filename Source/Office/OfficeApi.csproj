@@ -20,103 +20,13 @@ NetOffice supports extending and automation of Excel, Word, Outlook, PowerPoint 
   <PropertyGroup>
     <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="stdole" Version="7.0.3300.0">
-      <!-- <HintPath>C:\Windows\assembly\GAC\stdole\7.0.3300.0__b03f5f7f11d50a3a\stdole.dll</HintPath> -->
-      <Private>false</Private>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-    </Reference>
+    <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Tools\Dialogs\AboutDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\AboutDialog.Designer.cs">
-      <DependentUpon>AboutDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\DiagnosticsDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\DiagnosticsDialog.Designer.cs">
-      <DependentUpon>DiagnosticsDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ErrorDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ErrorDialog.Designer.cs">
-      <DependentUpon>ErrorDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\PropertyGridDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\PropertyGridDialog.Designer.cs">
-      <DependentUpon>PropertyGridDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\RichTextDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\RichTextDialog.Designer.cs">
-      <DependentUpon>RichTextDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ToolsDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Tools\Dialogs\ToolsDialog.Designer.cs">
-      <DependentUpon>ToolsDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.Designer.cs">
-      <DependentUpon>TrayMenuMonitorItemControl.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="OfficeApi_v4.0.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1031.xml" />
-    <EmbeddedResource Include="Tools\Dialogs\ErrorDialog.1033.xml" />
-    <EmbeddedResource Update="Tools\Contribution\TrayMenuUtils\TrayMenuMonitorItemControl.resx">
-      <DependentUpon>TrayMenuMonitorItemControl.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Tools\Dialogs\AboutDialog.resx">
-      <DependentUpon>AboutDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Dialogs\DiagnosticsDialog.1031.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\DiagnosticsDialog.resx">
-      <DependentUpon>DiagnosticsDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\ErrorDialog.resx">
-      <DependentUpon>ErrorDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\PropertyGridDialog.resx">
-      <DependentUpon>PropertyGridDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\RichTextDialog.resx">
-      <DependentUpon>RichTextDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Tools\Dialogs\ToolsDialog.resx">
-      <DependentUpon>ToolsDialog.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\DiagnosticsDialog.1033.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\AboutDialog.1031.xml" />
-    <EmbeddedResource Include="Tools\Dialogs\AboutDialog.1033.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1031.xml" />
-    <EmbeddedResource Include="Tools\Dialogs\RichTextDialog.1033.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

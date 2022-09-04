@@ -40,11 +40,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
         {
             get
             {
-                OutlookDialogUtils utils = _owner.Dialog as OutlookDialogUtils;
-                if (null != utils)
-                    return utils.HostVisible;
-                else
-                    return false;
+                return this._owner.TryGetApplicationVisible(false);
             }
         }
 
