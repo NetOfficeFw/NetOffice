@@ -22,6 +22,7 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
       DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
       ContinuousIntegrationBuild: true
+      RestoreLockedMode: true
       VersionSuffix: 'preview${{ github.run_id }}'
       RepositoryBranch: '${{ github.ref_name }}'
       RepositoryCommit: '${{ github.sha }}'
@@ -48,6 +49,14 @@ jobs:
       if: steps.cache-dotnettools.outputs.cache-hit != 'true'
       run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.2
 
+    - name: Cache packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          NetOffice-nuget-
+
     - name: Report NetOffice version
       run: |
         [xml]$project = Get-Content (Join-Path -Path $env:GITHUB_WORKSPACE -ChildPath 'Source\NetOffice.props')
@@ -55,13 +64,9 @@ jobs:
 
         Write-Host "NetOfficeRelease=$version" | Out-File -FilePath $env:GITHUB_ENV
 
-    - name: Restore packages
-      run: |
-        nuget restore Source\NetOffice.sln
-
     - name: Build NetOffice
       run: |
-        msbuild Source\NetOffice.sln /t:Build /m /v:normal
+        msbuild Source\NetOffice.sln /restore /t:Build /m /v:normal
       env:
         Configuration: ${{ matrix.configuration }}
 
