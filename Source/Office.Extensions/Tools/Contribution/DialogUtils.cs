@@ -669,8 +669,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="copyrightHint">copyright hints of the owner assembly</param>
         /// <param name="companyName">name of the manufactor</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
-        /// <param name="licenceText">licence information</param>
-        public static void ShowAbout(this DialogUtils utils, object modalOwner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenceText)
+        /// <param name="licenseText">license information</param>
+        public static void ShowAbout(this DialogUtils utils, object modalOwner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenseText)
         {
             IWin32Window owner = Running.Win32Window.Create(modalOwner);
 
@@ -683,7 +683,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             arguments.Add(new KeyValuePair<string, object>("Copyright", copyrightHint));
             arguments.Add(new KeyValuePair<string, object>("CompanyName", companyName));
             arguments.Add(new KeyValuePair<string, object>("CompanyUrl", companyUrl));
-            arguments.Add(new KeyValuePair<string, object>("Licence", licenceText));
+            arguments.Add(new KeyValuePair<string, object>("License", licenseText));
 
             RaiseDialogShow(DialogType.About, isCurrentlySuspended, modal, arguments);
             if (isCurrentlySuspended)
@@ -692,7 +692,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 return;
             }
 
-            Dialogs.AboutDialog dlg = new AboutDialog(headerCaption, assemblyTitle, assemblyVersion, copyrightHint, companyName, companyUrl, licenceText);
+            Dialogs.AboutDialog dlg = new AboutDialog(headerCaption, assemblyTitle, assemblyVersion, copyrightHint, companyName, companyUrl, licenseText);
             OnCreateToolsDialog(dlg, "AboutDialog", utils.Layout);
 
             if (null == owner)
@@ -719,10 +719,10 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="utils">DialogUtils instance</param>
         /// <param name="headerCaption">header caption on top</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
-        /// <param name="licenceText">licence information</param>
-        public static void ShowAbout(this DialogUtils utils, string headerCaption, string companyUrl, string licenceText)
+        /// <param name="licenseText">license information</param>
+        public static void ShowAbout(this DialogUtils utils, string headerCaption, string companyUrl, string licenseText)
         {
-            ShowAbout(utils, null, true, Size.Empty, headerCaption, utils.Owner.Infos.Assembly.AssemblyTitle, utils.Owner.Infos.Assembly.AssemblyVersion, utils.Owner.Infos.Assembly.AssemblyCopyright, utils.Owner.Infos.Assembly.AssemblyCompany, companyUrl, licenceText);
+            ShowAbout(utils, null, true, Size.Empty, headerCaption, utils.Owner.Infos.Assembly.AssemblyTitle, utils.Owner.Infos.Assembly.AssemblyVersion, utils.Owner.Infos.Assembly.AssemblyCopyright, utils.Owner.Infos.Assembly.AssemblyCompany, companyUrl, licenseText);
         }
 
         /// <summary>
@@ -734,10 +734,10 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="headerCaption">header caption on top</param>
         /// <param name="companyUrl">optional url of the manufactor</param>
-        /// <param name="licenceText">licence information</param>
-        public static void ShowAbout(this DialogUtils utils, object modalOwner, bool modal, Size size, string headerCaption, string companyUrl, string licenceText)
+        /// <param name="licenseText">license information</param>
+        public static void ShowAbout(this DialogUtils utils, object modalOwner, bool modal, Size size, string headerCaption, string companyUrl, string licenseText)
         {
-            ShowAbout(utils, modalOwner, modal, size, headerCaption, utils.Owner.Infos.Assembly.AssemblyTitle, utils.Owner.Infos.Assembly.AssemblyVersion, utils.Owner.Infos.Assembly.AssemblyCopyright, utils.Owner.Infos.Assembly.AssemblyCompany, companyUrl, licenceText);
+            ShowAbout(utils, modalOwner, modal, size, headerCaption, utils.Owner.Infos.Assembly.AssemblyTitle, utils.Owner.Infos.Assembly.AssemblyVersion, utils.Owner.Infos.Assembly.AssemblyCopyright, utils.Owner.Infos.Assembly.AssemblyCompany, companyUrl, licenseText);
         }
 
         /// <summary>

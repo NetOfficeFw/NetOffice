@@ -43,7 +43,7 @@
             this.linkLabelMailContact = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.labelLicense = new System.Windows.Forms.Label();
-            this.linkLabelLicenceLink = new System.Windows.Forms.LinkLabel();
+            this.linkLabelLicenseLink = new System.Windows.Forms.LinkLabel();
             this.labelCopyrightText = new System.Windows.Forms.Label();
             this.labelVersionText = new System.Windows.Forms.Label();
             this.labelTechnicalDetails = new System.Windows.Forms.Label();
@@ -195,7 +195,7 @@
             this.panelAboutDetails.Controls.Add(this.linkLabelMailContact);
             this.panelAboutDetails.Controls.Add(this.label1);
             this.panelAboutDetails.Controls.Add(this.labelLicense);
-            this.panelAboutDetails.Controls.Add(this.linkLabelLicenceLink);
+            this.panelAboutDetails.Controls.Add(this.linkLabelLicenseLink);
             this.panelAboutDetails.Controls.Add(this.labelCopyrightText);
             this.panelAboutDetails.Controls.Add(this.labelVersionText);
             this.panelAboutDetails.Controls.Add(this.labelTechnicalDetails);
@@ -241,19 +241,19 @@
             this.labelLicense.TabIndex = 95;
             this.labelLicense.Text = "The developer toolbox is licensed under the MIT License (MIT).";
             // 
-            // linkLabelLicenceLink
+            // linkLabelLicenseLink
             // 
-            this.linkLabelLicenceLink.AutoSize = true;
-            this.linkLabelLicenceLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelLicenceLink.Location = new System.Drawing.Point(29, 75);
-            this.linkLabelLicenceLink.Name = "linkLabelLicenceLink";
-            this.linkLabelLicenceLink.Size = new System.Drawing.Size(216, 16);
-            this.linkLabelLicenceLink.TabIndex = 94;
-            this.linkLabelLicenceLink.TabStop = true;
-            this.linkLabelLicenceLink.Tag = "http://opensource.org/licenses/MIT";
-            this.linkLabelLicenceLink.Text = "http://opensource.org/licenses/MIT";
-            this.linksToolTip.SetToolTip(this.linkLabelLicenceLink, "http://opensource.org/licenses/MIT");
-            this.linkLabelLicenceLink.Click += new System.EventHandler(this.linkLabelCompany_Clicked);
+            this.linkLabelLicenseLink.AutoSize = true;
+            this.linkLabelLicenseLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelLicenseLink.Location = new System.Drawing.Point(29, 75);
+            this.linkLabelLicenseLink.Name = "linkLabelLicenseLink";
+            this.linkLabelLicenseLink.Size = new System.Drawing.Size(216, 16);
+            this.linkLabelLicenseLink.TabIndex = 94;
+            this.linkLabelLicenseLink.TabStop = true;
+            this.linkLabelLicenseLink.Tag = "http://opensource.org/licenses/MIT";
+            this.linkLabelLicenseLink.Text = "http://opensource.org/licenses/MIT";
+            this.linksToolTip.SetToolTip(this.linkLabelLicenseLink, "http://opensource.org/licenses/MIT");
+            this.linkLabelLicenseLink.Click += new System.EventHandler(this.linkLabelCompany_Clicked);
             // 
             // labelCopyrightText
             // 
@@ -522,7 +522,7 @@
         private System.Windows.Forms.Label labelHexBox;
         private System.Windows.Forms.LinkLabel linkLabelHexBox;
         private System.Windows.Forms.Panel panelAboutDetails;
-        private System.Windows.Forms.LinkLabel linkLabelLicenceLink;
+        private System.Windows.Forms.LinkLabel linkLabelLicenseLink;
         private System.Windows.Forms.Label labelCopyrightText;
         private System.Windows.Forms.Label labelVersionText;
         private System.Windows.Forms.Label labelTechnicalDetails;

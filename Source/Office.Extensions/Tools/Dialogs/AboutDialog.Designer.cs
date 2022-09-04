@@ -36,15 +36,15 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.linkLabelCompany = new System.Windows.Forms.LinkLabel();
             this.labelCopyright = new System.Windows.Forms.Label();
-            this.richTextBoxLicence = new System.Windows.Forms.RichTextBox();
-            this.panelLicenceContent = new System.Windows.Forms.Panel();
-            this.panelLicenceHeader = new System.Windows.Forms.Panel();
-            this.labelLicenceHeader = new System.Windows.Forms.Label();
+            this.richTextBoxLicense = new System.Windows.Forms.RichTextBox();
+            this.panelLicenseContent = new System.Windows.Forms.Panel();
+            this.panelLicenseHeader = new System.Windows.Forms.Panel();
+            this.labelLicenseHeader = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).BeginInit();
-            this.panelLicenceContent.SuspendLayout();
-            this.panelLicenceHeader.SuspendLayout();
+            this.panelLicenseContent.SuspendLayout();
+            this.panelLicenseHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,55 +132,55 @@
             this.labelCopyright.TabIndex = 8;
             this.labelCopyright.Text = "%Copyright";
             // 
-            // richTextBoxLicence
+            // richTextBoxLicense
             // 
-            this.richTextBoxLicence.BackColor = System.Drawing.Color.White;
-            this.richTextBoxLicence.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBoxLicence.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxLicence.Location = new System.Drawing.Point(0, 0);
-            this.richTextBoxLicence.Name = "richTextBoxLicence";
-            this.richTextBoxLicence.ReadOnly = true;
-            this.richTextBoxLicence.Size = new System.Drawing.Size(376, 143);
-            this.richTextBoxLicence.TabIndex = 9;
-            this.richTextBoxLicence.Text = "";
-            this.richTextBoxLicence.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxLicence_LinkClicked);
+            this.richTextBoxLicense.BackColor = System.Drawing.Color.White;
+            this.richTextBoxLicense.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxLicense.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxLicense.Location = new System.Drawing.Point(0, 0);
+            this.richTextBoxLicense.Name = "richTextBoxLicense";
+            this.richTextBoxLicense.ReadOnly = true;
+            this.richTextBoxLicense.Size = new System.Drawing.Size(376, 143);
+            this.richTextBoxLicense.TabIndex = 9;
+            this.richTextBoxLicense.Text = "";
+            this.richTextBoxLicense.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxLicense_LinkClicked);
             // 
-            // panelLicenceContent
+            // panelLicenseContent
             // 
-            this.panelLicenceContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelLicenseContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelLicenceContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelLicenceContent.Controls.Add(this.richTextBoxLicence);
-            this.panelLicenceContent.Location = new System.Drawing.Point(0, 36);
-            this.panelLicenceContent.Name = "panelLicenceContent";
-            this.panelLicenceContent.Size = new System.Drawing.Size(376, 143);
-            this.panelLicenceContent.TabIndex = 10;
+            this.panelLicenseContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelLicenseContent.Controls.Add(this.richTextBoxLicense);
+            this.panelLicenseContent.Location = new System.Drawing.Point(0, 36);
+            this.panelLicenseContent.Name = "panelLicenseContent";
+            this.panelLicenseContent.Size = new System.Drawing.Size(376, 143);
+            this.panelLicenseContent.TabIndex = 10;
             // 
-            // panelLicenceHeader
+            // panelLicenseHeader
             // 
-            this.panelLicenceHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelLicenseHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelLicenceHeader.BackColor = System.Drawing.Color.Orange;
-            this.panelLicenceHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLicenceHeader.Controls.Add(this.labelLicenceHeader);
-            this.panelLicenceHeader.Controls.Add(this.pictureBox1);
-            this.panelLicenceHeader.Controls.Add(this.panelLicenceContent);
-            this.panelLicenceHeader.Location = new System.Drawing.Point(25, 105);
-            this.panelLicenceHeader.Name = "panelLicenceHeader";
-            this.panelLicenceHeader.Size = new System.Drawing.Size(378, 181);
-            this.panelLicenceHeader.TabIndex = 11;
+            this.panelLicenseHeader.BackColor = System.Drawing.Color.Orange;
+            this.panelLicenseHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelLicenseHeader.Controls.Add(this.labelLicenseHeader);
+            this.panelLicenseHeader.Controls.Add(this.pictureBox1);
+            this.panelLicenseHeader.Controls.Add(this.panelLicenseContent);
+            this.panelLicenseHeader.Location = new System.Drawing.Point(25, 105);
+            this.panelLicenseHeader.Name = "panelLicenseHeader";
+            this.panelLicenseHeader.Size = new System.Drawing.Size(378, 181);
+            this.panelLicenseHeader.TabIndex = 11;
             // 
-            // labelLicenceHeader
+            // labelLicenseHeader
             // 
-            this.labelLicenceHeader.AutoSize = true;
-            this.labelLicenceHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLicenceHeader.Location = new System.Drawing.Point(39, 10);
-            this.labelLicenceHeader.Name = "labelLicenceHeader";
-            this.labelLicenceHeader.Size = new System.Drawing.Size(131, 17);
-            this.labelLicenceHeader.TabIndex = 12;
-            this.labelLicenceHeader.Text = "Licence Information";
+            this.labelLicenseHeader.AutoSize = true;
+            this.labelLicenseHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLicenseHeader.Location = new System.Drawing.Point(39, 10);
+            this.labelLicenseHeader.Name = "labelLicenseHeader";
+            this.labelLicenseHeader.Size = new System.Drawing.Size(131, 17);
+            this.labelLicenseHeader.TabIndex = 12;
+            this.labelLicenseHeader.Text = "License Information";
             // 
             // pictureBox1
             // 
@@ -198,7 +198,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonClose;
             this.ClientSize = new System.Drawing.Size(432, 380);
-            this.Controls.Add(this.panelLicenceHeader);
+            this.Controls.Add(this.panelLicenseHeader);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.linkLabelCompany);
             this.Controls.Add(this.buttonClose);
@@ -209,9 +209,9 @@
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHeader)).EndInit();
-            this.panelLicenceContent.ResumeLayout(false);
-            this.panelLicenceHeader.ResumeLayout(false);
-            this.panelLicenceHeader.PerformLayout();
+            this.panelLicenseContent.ResumeLayout(false);
+            this.panelLicenseHeader.ResumeLayout(false);
+            this.panelLicenseHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,10 +227,10 @@
         private System.Windows.Forms.Label labelAssemblyTitleVersion;
         private System.Windows.Forms.LinkLabel linkLabelCompany;
         private System.Windows.Forms.Label labelCopyright;
-        private System.Windows.Forms.RichTextBox richTextBoxLicence;
-        private System.Windows.Forms.Panel panelLicenceContent;
-        private System.Windows.Forms.Panel panelLicenceHeader;
+        private System.Windows.Forms.RichTextBox richTextBoxLicense;
+        private System.Windows.Forms.Panel panelLicenseContent;
+        private System.Windows.Forms.Panel panelLicenseHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelLicenceHeader;
+        private System.Windows.Forms.Label labelLicenseHeader;
     }
 }

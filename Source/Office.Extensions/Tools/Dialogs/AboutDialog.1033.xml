@@ -5,8 +5,8 @@
       <Value>About</Value>
     </String>
     <String>
-      <Name>LicenceHeader</Name>
-      <Value>Licence Information</Value>
+      <Name>LicenseHeader</Name>
+      <Value>License Information</Value>
     </String>
     <String>
       <Name>buttonClose</Name>

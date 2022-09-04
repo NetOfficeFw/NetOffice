@@ -41,8 +41,8 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         /// <param name="copyrightHint">copyright info</param>
         /// <param name="companyTextUrl">company text url</param>
         /// <param name="companyUrl">company url</param>
-        /// <param name="licenceText">licence info</param>
-        public AboutDialog(string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyTextUrl, string companyUrl, string licenceText)
+        /// <param name="licenseText">license info</param>
+        public AboutDialog(string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyTextUrl, string companyUrl, string licenseText)
         {
             InitializeComponent();
             _headerCaption = String.IsNullOrEmpty(headerCaption) ? _emptyValue : headerCaption;
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
             {
                 linkLabelCompany.Visible = false;
             }
-            richTextBoxLicence.Text = licenceText;
+            richTextBoxLicense.Text = licenseText;
         }
 
         #endregion
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         protected internal override void DoLocalization(DialogLocalization localization)
         {
             Text = String.Format("{0} {1}", localization["Title", Text], _headerCaption);
-            labelLicenceHeader.Text = localization["LicenceHeader", labelLicenceHeader.Text];
+            labelLicenseHeader.Text = localization["LicenseHeader", labelLicenseHeader.Text];
             buttonClose.Text = localization["buttonClose", buttonClose.Text];
         }
 
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
         /// <param name="layout">layout settings</param>
         protected internal override void DoLayout(DialogLayoutSettings layout)
         {
-            panelLicenceHeader.BackColor = layout.BackAlternateColor;
+            panelLicenseHeader.BackColor = layout.BackAlternateColor;
             base.DoLayout(layout);
         }
 
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi.Tools.Dialogs
             }
         }
 
-        private void richTextBoxLicence_LinkClicked(object sender, LinkClickedEventArgs e)
+        private void richTextBoxLicense_LinkClicked(object sender, LinkClickedEventArgs e)
         {
             try
             {

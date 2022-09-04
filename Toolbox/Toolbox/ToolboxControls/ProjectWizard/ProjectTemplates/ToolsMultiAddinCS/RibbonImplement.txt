@@ -1,6 +1,6 @@
 ﻿        public void AboutButton_Click(Office.IRibbonControl control)
         {
-			Utils.Dialog.ShowAbout("$safeprojectname$", "<your url here>", "<No Licence set>");
+			Utils.Dialog.ShowAbout("$safeprojectname$", "<your url here>", "<No License set>");
         }
 
 $tooglecode$
