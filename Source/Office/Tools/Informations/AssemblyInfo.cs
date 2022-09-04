@@ -121,7 +121,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         }
 
         /// <summary>
-        /// Manufactor info for the assembly
+        /// Company info for the assembly
         /// </summary>
         public virtual string AssemblyCompany
         {

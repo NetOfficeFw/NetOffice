@@ -667,8 +667,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="assemblyTitle">title of the owner assembly</param>
         /// <param name="assemblyVersion">version of the owner assembly</param>
         /// <param name="copyrightHint">copyright hints of the owner assembly</param>
-        /// <param name="companyName">name of the manufactor</param>
-        /// <param name="companyUrl">optional url of the manufactor</param>
+        /// <param name="companyName">name of the company</param>
+        /// <param name="companyUrl">optional company website address</param>
         /// <param name="licenseText">license information</param>
         public static void ShowAbout(this DialogUtils utils, object modalOwner, bool modal, Size size, string headerCaption, string assemblyTitle, string assemblyVersion, string copyrightHint, string companyName, string companyUrl, string licenseText)
         {
@@ -718,7 +718,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// </summary>
         /// <param name="utils">DialogUtils instance</param>
         /// <param name="headerCaption">header caption on top</param>
-        /// <param name="companyUrl">optional url of the manufactor</param>
+        /// <param name="companyUrl">optional company website address</param>
         /// <param name="licenseText">license information</param>
         public static void ShowAbout(this DialogUtils utils, string headerCaption, string companyUrl, string licenseText)
         {
@@ -733,7 +733,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <param name="modal">show dialog modal to its owner window</param>
         /// <param name="size">size for the dialog. Size.Empty to use default size</param>
         /// <param name="headerCaption">header caption on top</param>
-        /// <param name="companyUrl">optional url of the manufactor</param>
+        /// <param name="companyUrl">optional company website address</param>
         /// <param name="licenseText">license information</param>
         public static void ShowAbout(this DialogUtils utils, object modalOwner, bool modal, Size size, string headerCaption, string companyUrl, string licenseText)
         {
