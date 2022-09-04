@@ -5,7 +5,7 @@ using System.Text;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 {
     /// <summary>
     /// Represents a tray menu diagnostic monitor item

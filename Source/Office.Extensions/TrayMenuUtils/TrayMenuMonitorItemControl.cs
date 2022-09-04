@@ -13,7 +13,7 @@ using NetOffice.Attributes;
 using NetOffice.Tools;
 using NetOffice.Contribution.CollectionsGeneric;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 {
     /// <summary>
     /// Shows various diagnostics and monitor proxy management

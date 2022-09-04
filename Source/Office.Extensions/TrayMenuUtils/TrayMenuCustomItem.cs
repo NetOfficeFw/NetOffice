@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 {
     /// <summary>
     /// Represents a tray menu custom item

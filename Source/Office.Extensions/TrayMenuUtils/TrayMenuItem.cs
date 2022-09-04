@@ -9,7 +9,7 @@ using System.Runtime;
 using System.Collections;
 using NetOffice.Tools;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 {
     /// <summary>
     /// Represents a tray menu item

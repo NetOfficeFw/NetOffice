@@ -3,8 +3,10 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using NetOffice.OfficeApi.Tools.Contribution;
+using NetOffice.OfficeApi.Extensions.TrayMenuUtils;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions
 {
     /// <summary>
     /// Tray related utils

@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Drawing;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 {
     /// <summary>
     /// Represents a tray menu drop down box item

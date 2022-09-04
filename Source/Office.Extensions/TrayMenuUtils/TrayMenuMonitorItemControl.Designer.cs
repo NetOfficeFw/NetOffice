@@ -1,4 +1,4 @@
-﻿namespace NetOffice.OfficeApi.Tools.Contribution
+﻿namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 {
     partial class TrayMenuMonitorItemControl
     {
