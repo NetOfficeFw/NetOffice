@@ -37,6 +37,14 @@ namespace NetOffice.OfficeApi.Tools.Contribution
 
         #region Properties
 
+        public CommonUtils Owner
+        {
+            get
+            {
+                return this._owner;
+            }
+        }
+
         /// <summary>
         /// Current used language in dialogs. Default is 1033(en-us) If its failed to find a dialog localization set for current language - en-us want be used
         /// </summary>

@@ -1,5 +1,6 @@
 ﻿using System;
 using NetOffice;
+using NetOffice.OfficeApi.Tools.Contribution;
 using Excel = NetOffice.ExcelApi;
 using Contribution = NetOffice.OfficeApi.Tools.Contribution;
 
