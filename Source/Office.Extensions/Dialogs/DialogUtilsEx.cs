@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using NetOffice.OfficeApi.Tools.Dialogs;
+using NetOffice.OfficeApi.Tools.Contribution;
+using NetOffice.OfficeApi.Tools.Informations;
 
-namespace NetOffice.OfficeApi.Tools.Contribution
+namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
     /// <summary>
     /// Dialog extensions for NetOffice applications.
@@ -422,7 +423,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 consoleMessages = utils.Owner.Owner.Factory.Console.Messages;
             }
 
-            Dialogs.DiagnosticsDialog dlg = new DiagnosticsDialog(new Informations.DiagnosticPairCollection(utils.Owner), consoleMessages);
+            DiagnosticsDialog dlg = new DiagnosticsDialog(new DiagnosticPairCollection(utils.Owner), consoleMessages);
             OnCreateToolsDialog(dlg, "DiagnosticsDialog", utils.Layout);
 
             if (null == owner)
@@ -500,7 +501,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 return;
             }
 
-            Dialogs.ErrorDialog dlg = new ErrorDialog(error, friendlyErrorDescription, allowDetails);
+            ErrorDialog dlg = new ErrorDialog(error, friendlyErrorDescription, allowDetails);
             OnCreateToolsDialog(dlg, "ErrorDialog", utils.Layout);
 
             if (null == owner)
@@ -683,7 +684,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 return;
             }
 
-            Dialogs.AboutDialog dlg = new AboutDialog(headerCaption, assemblyTitle, assemblyVersion, copyrightHint, companyName, companyUrl, licenseText);
+            AboutDialog dlg = new AboutDialog(headerCaption, assemblyTitle, assemblyVersion, copyrightHint, companyName, companyUrl, licenseText);
             OnCreateToolsDialog(dlg, "AboutDialog", utils.Layout);
 
             if (null == owner)
@@ -763,7 +764,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 return defaultResult;
             }
 
-            Dialogs.RichTextDialog dlg = new RichTextDialog(caption, text, checkText, timeoutSeconds, skipOnUserAction);
+            RichTextDialog dlg = new RichTextDialog(caption, text, checkText, timeoutSeconds, skipOnUserAction);
             OnCreateToolsDialog(dlg, "RichTextDialog", utils.Layout);
 
             if (null == owner)
@@ -995,8 +996,8 @@ namespace NetOffice.OfficeApi.Tools.Contribution
 
             bool isCurrentlySuspended = utils.IsCurrentlySuspended();
 
-            if(null == arguments)
-                 arguments = new List<KeyValuePair<string, object>>();
+            if (null == arguments)
+                arguments = new List<KeyValuePair<string, object>>();
 
             RaiseDialogShow(DialogType.Custom, isCurrentlySuspended, modal, arguments);
             if (isCurrentlySuspended)

@@ -1,4 +1,4 @@
-﻿namespace NetOffice.OfficeApi.Tools.Dialogs
+﻿namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
     partial class AboutDialog
     {

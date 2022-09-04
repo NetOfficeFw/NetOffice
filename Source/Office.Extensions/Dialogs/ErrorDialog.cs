@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using NetOffice.OfficeApi.Tools.Contribution;
 
-namespace NetOffice.OfficeApi.Tools.Dialogs
+namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
     /// <summary>
     /// Shows error information to the user

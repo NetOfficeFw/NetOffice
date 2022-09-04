@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyTitle>NetOffice Office Extensions</AssemblyTitle>
-    <RootNamespace>NetOffice.OfficeApi</RootNamespace>
+    <RootNamespace>NetOffice.OfficeApi.Extensions</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\Office\OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>

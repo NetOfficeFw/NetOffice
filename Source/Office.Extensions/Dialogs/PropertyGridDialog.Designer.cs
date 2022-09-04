@@ -1,6 +1,6 @@
-﻿namespace NetOffice.OfficeApi.Tools.Dialogs
+﻿namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
-    partial class ToolsDialog
+    partial class PropertyGridDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.SuspendLayout();
             // 
-            // ToolsDialog
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid1.Location = new System.Drawing.Point(0, 0);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.PropertySort = System.Windows.Forms.PropertySort.Alphabetical;
+            this.propertyGrid1.Size = new System.Drawing.Size(284, 262);
+            this.propertyGrid1.TabIndex = 0;
+            // 
+            // PropertyGridDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(292, 273);
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.propertyGrid1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ToolsDialog";
+            this.MinimumSize = new System.Drawing.Size(300, 300);
+            this.Name = "PropertyGridDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ToolsDialog";
+            this.Text = "Details";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
     }
 }

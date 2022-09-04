@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace NetOffice.OfficeApi.Tools.Dialogs
+namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
     /// <summary>
     /// Show multi-line/rich text to the user

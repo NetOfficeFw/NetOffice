@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using NetOffice.OfficeApi.Tools.Contribution;
 using NetOffice.OfficeApi.Tools.Informations;
 
-namespace NetOffice.OfficeApi.Tools.Dialogs
+namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
     /// <summary>
     /// Shows essential technical environment information to the user 

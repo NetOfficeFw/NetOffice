@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace NetOffice.OfficeApi.Tools.Dialogs
+namespace NetOffice.OfficeApi.Extensions.Dialogs
 {
     /// <summary>
     /// PropertyGrid Dialog
