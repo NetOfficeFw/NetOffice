@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi.Extensions
         /// <summary>
         /// Gets or sets the text to display on the balloon tip associated with the NotifyIcon
         /// </summary>
-        public string BallonTipText
+        public string BalloonTipText
         {
             get 
             {
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Extensions
         /// <summary>
         /// Gets or sets the icon to display on the balloon tip associated with the NotifyIcon
         /// </summary>
-        public TrayToolTipIcon BallonTipIcon
+        public TrayToolTipIcon BalloonTipIcon
         {
             get
             {
