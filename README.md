@@ -5,7 +5,7 @@
 [![NetOfficeFw.Outlook](https://img.shields.io/nuget/v/netofficefw.outlook?color=%230078D4&label=&logo=microsoft-outlook&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Outlook/)
 [![NetOfficeFw.Word](https://img.shields.io/nuget/v/netofficefw.word?color=%232B579A&label=&logo=microsoft-word&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Word/)
 [![NetOfficeFw.Excel](https://img.shields.io/nuget/v/netofficefw.excel?color=%23217346&label=&logo=microsoft-excel&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Excel/)
-[![NetOfficeFw.Powerpoint](https://img.shields.io/nuget/v/netofficefw.powerpoint?color=%23B7472A&label=&logo=microsoft-powerpoint&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Powerpoint/)
+[![NetOfficeFw.PowerPoint](https://img.shields.io/nuget/v/netofficefw.powerpoint?color=%23B7472A&label=&logo=microsoft-powerpoint&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.PowerPoint/)
 [![NetOfficeFw.Access](https://img.shields.io/nuget/v/netofficefw.access?color=%23A4373A&label=&logo=microsoft-access&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Access/)
 
 > NetOffice is a set of libraries for building Microsoft Office Addins and automation of Microsoft Office applications.
@@ -16,13 +16,13 @@ Use NetOffice to extend and automate Microsoft Office applications: Excel, Word,
 
 ## Features
 
-* MS Office integration without version limitations
-* All features of the MS Office versions 2000, 2002, 2003, 2007, 2010, 2013 and 2016 are included
+* Microsoft Office integration without version limitations
+* All features of the Microsoft Office versions 2000, 2002, 2003, 2007, 2010, 2013 and 2016 are included
 * Active support in version independent development
 * Syntactically and semantically identical to the Microsoft Interop Assemblies
 * No training if you already know the MS Office object model, use your existing PIA code
 * Reduced and more readable code with automatic management of COM proxies
-* Usable with .NET Framework 4.0 or higher
+* Usable with .NET Framework 4.6 or higher
 * Easy add-ins development
 * No deployment hurdles, no registration
 * No dependencies, no interop assemblies, no need for [VSTO][VSTO]
