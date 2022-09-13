@@ -1,0 +1,123 @@
+name: build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'dev/*'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
+    env:
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
+      ContinuousIntegrationBuild: true
+      RestoreLockedMode: true
+      VersionSuffix: 'preview${{ github.run_id }}'
+      RepositoryBranch: '${{ github.ref_name }}'
+      RepositoryCommit: '${{ github.sha }}'
+      Configuration: '${{ matrix.configuration }}'
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Cache dotnet tools
+      uses: actions/cache@v3
+      id: cache-dotnettools
+      with:
+        path: ~/.dotnet/tools
+        key: dotnettools
+
+    - name: Setup AzureSignTool
+      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
+      run: dotnet tool install --verbosity minimal --global azuresigntool --version 3.0.0
+
+    - name: Setup NuGetKeyVaultSignTool
+      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
+      run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.2
+
+    - name: Cache packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          NetOffice-nuget-
+
+    - name: Report NetOffice version
+      run: |
+        [xml]$project = Get-Content (Join-Path -Path $env:GITHUB_WORKSPACE -ChildPath 'Source\NetOffice.props')
+        $version = $project.Project.PropertyGroup[0].NetOfficeRelease
+
+        Write-Host "NetOfficeRelease=$version" | Out-File -FilePath $env:GITHUB_ENV
+
+    - name: Build NetOffice
+      run: |
+        dotnet build Source\NetOffice.sln
+
+    - name: Sign NetOffice libraries
+      if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
+      working-directory: '${{ github.workspace}}\Source\ClientApplication\bin\${{ matrix.configuration }}'
+      run: |
+          Get-ChildItem "*Api.dll" -Recurse | Select-Object -ExpandProperty FullName > signlist.txt
+          Get-ChildItem "NetOffice.dll" -Recurse | Select-Object -ExpandProperty FullName >> signlist.txt
+
+          AzureSignTool.exe sign `
+          --file-digest sha256 `
+          --description-url "https://github.com/NetOfficeFw/NetOffice" `
+          --no-page-hashing `
+          --timestamp-rfc3161 http://timestamp.digicert.com `
+          --timestamp-digest sha256 `
+          --azure-key-vault-url https://opensourcesigning.vault.azure.net `
+          --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
+          --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
+          --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
+          --azure-key-vault-certificate "goITSolutions-until-2024-01" `
+          --input-file-list signlist.txt `
+          --verbose
+
+    - name: Archive NetOffice binaries
+      uses: actions/upload-artifact@v3
+      with:
+        name: NetOffice_binaries_${{ env.VersionSuffix }}_${{ matrix.configuration }}
+        path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
+
+    - name: Pack NetOffice
+      if: matrix.configuration == 'Release'
+      run: |
+        dotnet pack Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
+
+    - name: Sign NetOffice packages
+      if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
+      working-directory: '${{ github.workspace}}\dist'
+      run: |
+          NuGetKeyVaultSignTool.exe sign *.nupkg `
+          --file-digest sha256 `
+          --timestamp-rfc3161 http://timestamp.digicert.com `
+          --timestamp-digest sha256 `
+          --azure-key-vault-url https://opensourcesigning.vault.azure.net `
+          --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
+          --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
+          --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
+          --azure-key-vault-certificate "goITSolutions-until-2024-01"
+
+    - name: Archive NetOffice packages
+      if: success() && matrix.configuration == 'Release'
+      uses: actions/upload-artifact@v3
+      with:
+        name: NetOffice_packages_${{ env.VersionSuffix }}
+        path: '${{ github.workspace }}\dist'
