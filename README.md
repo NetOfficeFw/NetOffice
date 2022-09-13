@@ -1,6 +1,6 @@
 # NetOffice - Microsoft Office in .NET
 
-[![Build Status](https://dev.azure.com/netoffice/NetOffice/_apis/build/status/NetOfficeFw.NetOffice?branchName=main)](https://dev.azure.com/netoffice/NetOffice/_build/latest?definitionId=1&branchName=main)
+[![Build status](https://img.shields.io/github/workflow/status/NetOfficeFw/NetOffice/build)](https://github.com/NetOfficeFw/NetOffice/actions)
 [![NetOfficeFw.Core](https://img.shields.io/nuget/v/netofficefw.core?label=NetOfficeFw.Core)](https://www.nuget.org/profiles/netoffice)
 [![NetOfficeFw.Outlook](https://img.shields.io/nuget/v/netofficefw.outlook?color=%230078D4&label=&logo=microsoft-outlook&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Outlook/)
 [![NetOfficeFw.Word](https://img.shields.io/nuget/v/netofficefw.word?color=%232B579A&label=&logo=microsoft-word&style=flat-square)](https://www.nuget.org/packages/NetOfficeFw.Word/)
