@@ -378,6 +378,21 @@ namespace NetOffice.AccessApi
 		}
 
 		/// <summary>
+		/// Returns True if the current project was created in Access 2013 and onwards and False if the current project was created prior to Access 2013. Read-only Boolean.
+		/// SupportByVersion Access 16
+		/// Get
+		/// </summary>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/access/concepts/miscellaneous/currentproject-issqlbackend-property-access"/> </remarks>
+		[SupportByVersion("Access", 16)]
+		public bool IsSQLBackend
+		{
+			get
+			{
+				return Factory.ExecuteBoolPropertyGet(this, "IsSQLBackend");
+			}
+		}
+
+		/// <summary>
 		/// SupportByVersion Access 12, 14, 15, 16
 		/// Get
 		/// </summary>
