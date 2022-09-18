@@ -4,7 +4,11 @@ on:
   workflow_dispatch:
   push:
     branches:
+      - 'main'
       - 'dev/*'
+      - 'releases/*'
+    tags:
+      - 'v*.*.*'
 
 permissions:
   contents: read
@@ -23,7 +27,6 @@ jobs:
       DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
       ContinuousIntegrationBuild: true
       RestoreLockedMode: true
-      VersionSuffix: 'preview${{ github.run_id }}'
       RepositoryBranch: '${{ github.ref_name }}'
       RepositoryCommit: '${{ github.sha }}'
       Configuration: '${{ matrix.configuration }}'
@@ -58,19 +61,18 @@ jobs:
         restore-keys: |
           NetOffice-nuget-
 
-    - name: Report NetOffice version
-      run: |
-        [xml]$project = Get-Content (Join-Path -Path $env:GITHUB_WORKSPACE -ChildPath 'Source\NetOffice.props')
-        $version = $project.Project.PropertyGroup[0].NetOfficeRelease
-
-        Write-Host "NetOfficeRelease=$version" | Out-File -FilePath $env:GITHUB_ENV
+    - name: Build information
+      id: build
+      run: .\.github\Get-BuildInfo.ps1 -ref '${{ github.ref }}' -event_name '${{ github.event_name }}' -configuration '${{ matrix.configuration }}'
 
     - name: Build NetOffice
       run: |
         dotnet build Source\NetOffice.sln
+      env:
+        VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
     - name: Sign NetOffice libraries
-      if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
+      if: success() && steps.build.outputs.sign_binaries == 'true'
       working-directory: '${{ github.workspace}}\Source\ClientApplication\bin\${{ matrix.configuration }}'
       run: |
           Get-ChildItem "*Api.dll" -Recurse | Select-Object -ExpandProperty FullName > signlist.txt
@@ -93,16 +95,18 @@ jobs:
     - name: Archive NetOffice binaries
       uses: actions/upload-artifact@v3
       with:
-        name: NetOffice_binaries_${{ env.VersionSuffix }}_${{ matrix.configuration }}
+        name: NetOffice_binaries_${{ steps.build.outputs.app_version }}-${{ steps.build.outputs.app_version_suffix }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
 
     - name: Pack NetOffice
-      if: matrix.configuration == 'Release'
+      if: steps.build.outputs.publish_nuget == 'true'
       run: |
         dotnet pack Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
+      env:
+        VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
     - name: Sign NetOffice packages
-      if: success() && github.event_name != 'pull_request' && matrix.configuration == 'Release'
+      if: success() && steps.build.outputs.publish_nuget == 'true' && steps.build.outputs.sign_binaries == 'true'
       working-directory: '${{ github.workspace}}\dist'
       run: |
           NuGetKeyVaultSignTool.exe sign *.nupkg `
@@ -115,9 +119,17 @@ jobs:
           --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
           --azure-key-vault-certificate "goITSolutions-until-2024-01"
 
+    - name: Publish packages
+      if: success()  && steps.build.outputs.publish_nuget == 'true'
+      working-directory: '${{ github.workspace}}\dist'
+      run: |
+        dotnet nuget push *.nupkg --api-key $env:NUGET_TOKEN --source https://api.nuget.org/v3/index.json
+      env:
+        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+
     - name: Archive NetOffice packages
-      if: success() && matrix.configuration == 'Release'
+      if: success() && steps.build.outputs.publish_nuget == 'true'
       uses: actions/upload-artifact@v3
       with:
-        name: NetOffice_packages_${{ env.VersionSuffix }}
+        name: NetOffice_packages_${{ steps.build.outputs.app_version_suffix }}
         path: '${{ github.workspace }}\dist'
