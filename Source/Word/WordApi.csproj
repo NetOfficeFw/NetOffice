@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>Word</AssemblyTitle>
-    <Description>Netoffice Word Api</Description>
+    <AssemblyTitle>NetOffice.WordApi</AssemblyTitle>
+    <Description>NetOffice Word library</Description>
     <RootNamespace>NetOffice.WordApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
@@ -9,8 +9,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Word</PackageId>
-    <Description>NetOffice Word library for building Word add-ins and automation of Microsoft Word.</Description>
     <PackageTags>netoffice netofficefw NetOffice.Word office word interop wrapper vsto addin</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
@@ -19,6 +19,7 @@
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="/" />
     <None Include="WordApi_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>

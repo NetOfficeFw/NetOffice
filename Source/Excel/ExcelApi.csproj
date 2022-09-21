@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>Excel</AssemblyTitle>
-    <Description>Netoffice Excel Api</Description>
+    <AssemblyTitle>NetOffice.ExcelApi</AssemblyTitle>
+    <Description>NetOffice Excel library</Description>
     <RootNamespace>NetOffice.ExcelApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
@@ -9,8 +9,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Excel</PackageId>
-    <Description>NetOffice Excel library for building Excel add-ins and automation of Microsoft Excel.</Description>
     <PackageTags>netoffice netofficefw NetOffice.Excel office excel interop wrapper vsto addin</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />

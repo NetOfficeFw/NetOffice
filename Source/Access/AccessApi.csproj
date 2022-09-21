@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>Access</AssemblyTitle>
-    <Description>Netoffice Access Api</Description>
+    <AssemblyTitle>NetOffice.AccessApi</AssemblyTitle>
+    <Description>NetOffice Access library</Description>
     <RootNamespace>NetOffice.AccessApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
@@ -9,8 +9,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Access</PackageId>
-    <Description>NetOffice Access library for building Access add-ins and automation of Microsoft Access.</Description>
     <PackageTags>netoffice netofficefw NetOffice.Access office access interop wrapper vsto addin</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />

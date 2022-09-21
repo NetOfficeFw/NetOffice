@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>PowerPoint</AssemblyTitle>
-    <Description>Netoffice PowerPoint Api</Description>
+    <AssemblyTitle>NetOffice.PowerPointApi</AssemblyTitle>
+    <Description>NetOffice PowerPoint library</Description>
     <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
@@ -9,8 +9,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.PowerPoint</PackageId>
-    <Description>NetOffice PowerPoint library for building PowerPoint add-ins and automation of Microsoft PowerPoint.</Description>
     <PackageTags>netoffice netofficefw NetOffice.PowerPoint office powerpoint interop wrapper vsto addin</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />

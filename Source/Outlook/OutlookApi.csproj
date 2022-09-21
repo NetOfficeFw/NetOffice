@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyTitle>Outlook</AssemblyTitle>
-    <Description>Netoffice Outlook Api</Description>
+    <AssemblyTitle>NetOffice.OutlookApi</AssemblyTitle>
+    <Description>NetOffice Outlook library</Description>
     <RootNamespace>NetOffice.OutlookApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
@@ -9,8 +9,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Outlook</PackageId>
-    <Description>NetOffice Outlook library for building Outlook add-ins and automation of Microsoft Outlook.</Description>
     <PackageTags>netoffice netofficefw NetOffice.Outlook office outlook interop wrapper vsto addin</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />

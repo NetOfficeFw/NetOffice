@@ -27,6 +27,7 @@
   <ItemGroup>
     <None Include="../../LICENSE.txt" Pack="true" PackagePath="/" />
     <None Include="../../icon.png" Pack="true" PackagePath="/" />
+    <None Include="$(PackageReadmeFile)" Pack="true" PackagePath="/" Condition=" '$(PackageReadmeFile)' != '' " />
   </ItemGroup>
 
   <PropertyGroup>
