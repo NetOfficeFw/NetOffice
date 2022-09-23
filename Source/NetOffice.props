@@ -19,7 +19,6 @@
   <!-- Versioning and packaging for NetOffice projects -->
   <PropertyGroup>
     <VersionPrefix>$(NetOfficeRelease)</VersionPrefix>
-    <VersionSuffix Condition=" '$(VersionSuffix)'=='' ">local</VersionSuffix>
     <AssemblyVersion>$(NetOfficeRelease).0</AssemblyVersion>
     <FileVersion>$(NetOfficeRelease).0</FileVersion>
   </PropertyGroup>
