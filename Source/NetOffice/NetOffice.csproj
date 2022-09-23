@@ -24,9 +24,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="KeyTokens.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="DuckTales\EventBinding.txt" />
   </ItemGroup>
   <ItemGroup>

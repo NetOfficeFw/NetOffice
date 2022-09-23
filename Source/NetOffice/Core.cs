@@ -8,9 +8,6 @@ using NetOffice.Loader;
 using NetOffice.Duck;
 using NetOffice.Exceptions;
 using System.Diagnostics;
-#if DEBUG
-using NetOffice.Diagnostics.Internal;
-#endif
 
 namespace NetOffice
 {
@@ -99,7 +96,6 @@ namespace NetOffice
         private List<ICOMObject> _globalObjectList = new List<ICOMObject>();
         private Dictionary<string, Type> _proxyTypeCache = new Dictionary<string, Type>();
         private Dictionary<string, Type> _wrapperTypeCache = new Dictionary<string, Type>();
-        private KnownKeyTokens _knownNetOfficeKeyTokens;
         private Assembly _thisAssembly;
         private static Type _thisType;
         private static ICOMObject[] _emptyOwnerPath = new ICOMObject[0];
@@ -436,25 +432,6 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Contains a list of all known key tokens of NetOffice assemblies.
-        /// </summary>
-        [Browsable(false)]
-        public KnownKeyTokens KnownNetOfficeKeyTokens
-        {
-            get
-            {
-                if (null == _knownNetOfficeKeyTokens)
-                {
-                    string[] tokens = CurrentAppDomain.KeyTokens(this);
-                    _knownNetOfficeKeyTokens = new KnownKeyTokens();
-                    foreach (string item in tokens)
-                        _knownNetOfficeKeyTokens.Add(item);
-                }
-                return _knownNetOfficeKeyTokens;
-            }
-        }
-
-        /// <summary>
         /// Current NetOffice Core Assembly
         /// </summary>
         internal Assembly ThisAssembly
@@ -469,7 +446,7 @@ namespace NetOffice
                 return _thisAssembly;
             }
         }
-        
+
         /// <summary>
         /// Assembly Loader
         /// </summary>
@@ -529,10 +506,6 @@ namespace NetOffice
         [Obsolete("Not necessary anymore(self-initializing)")]
         public void Initialize(CacheOptions cacheOptions)
         {
-            #if DEBUG
-                new InternalDebugDiagnostics().ValidateCore(this);
-            #endif
-            
             Settings.CacheOptions = cacheOptions;
 
             if (!_initalized)
@@ -650,8 +623,8 @@ namespace NetOffice
             foreach (Assembly itemAssembly in assemblies)
             {
                 string assemblyName = itemAssembly.GetName().Name;
-                if (KnownNetOfficeKeyTokens.ContainsNetOfficeAttribute(itemAssembly))
-                {                    
+                if (itemAssembly.ContainsNetOfficeAttribute())
+                {
                     string[] depends = ReceiveAssemblyFactory(assemblyName, itemAssembly);
                     foreach (string depend in depends)
                     {
@@ -664,7 +637,7 @@ namespace NetOffice
                 {
                     foreach (AssemblyName itemName in itemAssembly.GetReferencedAssemblies())
                     {
-                        if (KnownNetOfficeKeyTokens.ContainsNetOfficePublicKeyToken(itemName))
+                        if (itemName.ContainsNetOfficePublicKeyToken())
                         {
                             Assembly deepAssembly = CoreDomain.Load(itemName);
                             if (null == deepAssembly)
@@ -682,7 +655,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Analyze dependent assemblies and connect there NetOffice API factories to the core runtime
         /// </summary>

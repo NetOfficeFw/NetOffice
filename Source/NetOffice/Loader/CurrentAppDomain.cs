@@ -214,26 +214,9 @@ namespace NetOffice.Loader
         {
             foreach (string item in AssemblyNames)
             {
-                string fileName = PathBuilder.BuildLocalPathFromAssemblyFileName(factory, item);               
+                string fileName = PathBuilder.BuildLocalPathFromAssemblyFileName(factory, item);
                 Assembly assembly = Load(fileName);
                 Owner.Console.WriteLine("TryLoad {0} {1}", fileName, null != assembly ? "#ok" : "#fail");
-            }
-        }
-
-        /// <summary>
-        /// Returns embedded keytoken schema
-        /// </summary>
-        /// <param name="factory">factory type to use</param>
-        /// <returns>keytoken line array</returns>
-        internal static string[] KeyTokens(Core factory)
-        {
-            using (System.IO.Stream ressourceStream = factory.ThisAssembly.GetManifestResourceStream(factory.ThisType.Namespace + ".KeyTokens.txt"))
-            {
-                using (System.IO.StreamReader textStreamReader = new System.IO.StreamReader(ressourceStream))
-                {
-                    string text = textStreamReader.ReadToEnd();
-                    return text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                }
             }
         }
 
