@@ -5,18 +5,11 @@
     <RootNamespace>NetOffice.VBIDEApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>VBIDEApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.VBIDE</PackageId>
     <Description>NetOffice VBIDE Access library.</Description>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
-
-  <ItemGroup>
-    <None Include="VBIDEApi_v4.0.snk" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\Office\OfficeApi.csproj" />

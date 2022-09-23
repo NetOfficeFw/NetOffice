@@ -4,16 +4,10 @@
     <Description>Netoffice ADODB Api</Description>
     <RootNamespace>NetOffice.ADODBApi</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ADODBApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ADODBApi_v4.0.snk" />
   </ItemGroup>
 </Project>

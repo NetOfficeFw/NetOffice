@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice.WordApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>WordApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Word</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Word office word interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -20,7 +17,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="/" />
-    <None Include="WordApi_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

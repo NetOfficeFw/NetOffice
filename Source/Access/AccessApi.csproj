@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice.AccessApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>AccessApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Access</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Access office access interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -24,8 +21,5 @@
     <ProjectReference Include="..\ADODB\ADODBApi.csproj" />
     <ProjectReference Include="..\OWC10\OWC10Api.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AccessApi_v4.0.snk" />
   </ItemGroup>
 </Project>

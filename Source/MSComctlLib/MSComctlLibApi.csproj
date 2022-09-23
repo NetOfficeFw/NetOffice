@@ -4,9 +4,6 @@
     <Description>Netoffice MSComctlLib Api</Description>
     <RootNamespace>NetOffice.MSComctlLibApi</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>MSComctlLibApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
@@ -15,8 +12,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MSComctlLibApi_v4.0.snk" />
   </ItemGroup>
 </Project>

@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice.OutlookApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>OutlookApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Outlook</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Outlook office outlook interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -24,8 +21,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="OutlookApi_v4.0.snk" />
   </ItemGroup>
 </Project>

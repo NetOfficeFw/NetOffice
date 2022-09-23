@@ -4,13 +4,12 @@
     <RootNamespace>NetOffice.OfficeApi.Extensions</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\Office\OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
-    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Office.Extensions</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Office office interop wrapper vsto addin userinterface UI</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
@@ -18,9 +17,6 @@
   <ItemGroup>
     <PackageReference Include="System.Resources.Extensions" Version="[6.0.0,)" />
     <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Office\OfficeApi_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Office\OfficeApi.csproj" />

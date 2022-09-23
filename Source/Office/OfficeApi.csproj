@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice.OfficeApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>OfficeApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Office</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Office office interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,9 +19,6 @@
   <ItemGroup>
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
     <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="OfficeApi_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

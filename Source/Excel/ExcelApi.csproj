@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice.ExcelApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ExcelApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Excel</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Excel office excel interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -22,8 +19,5 @@
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ExcelApi_v4.0.snk" />
   </ItemGroup>
 </Project>
