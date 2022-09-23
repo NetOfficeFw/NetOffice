@@ -4,6 +4,7 @@ using NetOffice.Attributes;
 namespace NetOffice.OfficeApi.Enums
 {
 	 /// <summary>
+	 /// Represents preset Graphic styles.
 	 /// SupportByVersion Office 12, 14, 15, 16
 	 /// </summary>
 	 ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoShapeStyleIndex"/> </remarks>
@@ -12,6 +13,7 @@ namespace NetOffice.OfficeApi.Enums
 	public enum MsoShapeStyleIndex
 	{
 		 /// <summary>
+		 /// A mix of shape styles.
 		 /// SupportByVersion Office 12, 14, 15, 16
 		 /// </summary>
 		 /// <remarks>-2</remarks>
@@ -19,6 +21,7 @@ namespace NetOffice.OfficeApi.Enums
 		 msoShapeStyleMixed = -2,
 
 		 /// <summary>
+		 /// No shape style.
 		 /// SupportByVersion Office 12, 14, 15, 16
 		 /// </summary>
 		 /// <remarks>0</remarks>

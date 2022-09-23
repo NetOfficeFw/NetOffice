@@ -614,11 +614,15 @@ namespace NetOffice.OutlookApi
 		}
 
 		/// <summary>
+		/// Removes a Personal Folders file (.pst) from the current MAPI profile or session.
+		/// This method removes a store only from the Microsoft Outlook user interface.
+		/// You cannot remove a store from the main mailbox on the server or from a user's
+		/// hard disk using the Outlook object model.
+		/// 
 		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
 		/// </summary>
 		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.NameSpace.RemoveStore"/> </remarks>
-		/// <param name="folder">NetOffice.OutlookApi.MAPIFolder folder</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+		/// <param name="folder">The Personal Folders file (.pst) to be deleted from the list.</param>
 		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
 		public void RemoveStore(NetOffice.OutlookApi.MAPIFolder folder)
 		{
