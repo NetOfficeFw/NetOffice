@@ -7,7 +7,6 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\NetOffice\NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS0067</NoWarn>
   </PropertyGroup>
@@ -29,9 +28,6 @@
     <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\NetOffice\NetOffice_v4.0.snk">
-      <Link>NetOffice_v4.0.snk</Link>
-    </None>
     <Content Include="NetOffice\Tools\data\NativeAddinResiliency.bin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

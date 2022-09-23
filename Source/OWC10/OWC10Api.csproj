@@ -4,9 +4,6 @@
     <Description>Netoffice OWC10 Api</Description>
     <RootNamespace>NetOffice.OWC10Api</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>OWC10Api_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
@@ -18,8 +15,5 @@
     <ProjectReference Include="..\MSDATASRC\MSDATASRCApi.csproj" />
     <ProjectReference Include="..\MSComctlLib\MSComctlLibApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="OWC10Api_v4.0.snk" />
   </ItemGroup>
 </Project>

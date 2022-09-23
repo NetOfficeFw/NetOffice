@@ -4,16 +4,10 @@
     <Description>Netoffice DAO Api</Description>
     <RootNamespace>NetOffice.DAOApi</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>DAOApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DAOApi_v4.0.snk" />
   </ItemGroup>
 </Project>

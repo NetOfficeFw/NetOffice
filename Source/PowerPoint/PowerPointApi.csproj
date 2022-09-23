@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice.PowerPointApi</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>PowerPointApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.PowerPoint</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.PowerPoint office powerpoint interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -25,8 +22,5 @@
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PowerPointApi_v4.0.snk" />
   </ItemGroup>
 </Project>

@@ -4,16 +4,10 @@
     <Description>Netoffice MSDATASRC Api</Description>
     <RootNamespace>NetOffice.MSDATASRCApi</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>MSDATASRCApi_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
 
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="MSDATASRCApi_v4.0.snk" />
   </ItemGroup>
 </Project>

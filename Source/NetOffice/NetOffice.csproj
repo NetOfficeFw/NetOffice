@@ -5,9 +5,6 @@
     <RootNamespace>NetOffice</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>NetOffice_v4.0.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
     <PackageId>NetOfficeFw.Core</PackageId>
     <PackageTags>netoffice netofficefw NetOffice.Core office excel word outlook powerpoint access interop wrapper vsto addin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -28,9 +25,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="KeyTokens.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="NetOffice_v4.0.snk" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DuckTales\EventBinding.txt" />
