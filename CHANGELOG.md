@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.9.0
+
+### Added
+* Make `NameSpace.RemoveStore()` method in OutlookApi visible to IntelliSense [#333](https://github.com/NetOfficeFw/NetOffice/issues/333)
+* Implement `Workbook.AutoSaveOn` property in ExcelApi [#349](https://github.com/NetOfficeFw/NetOffice/issues/349)
+* Implement `Shape.IsNarration` property in PowerPointApi [#355](https://github.com/NetOfficeFw/NetOffice/issues/355)
+
+
+### Breaking Changes
+* Moved utility and diagnostic dialogs to new **NetOfficeFw.Office.Extensions** library [#360](https://github.com/NetOfficeFw/NetOffice/issues/360)
+* Removed Visio, Publisher, Project and Forms libraries [#342](https://github.com/NetOfficeFw/NetOffice/issues/342)
+
 ## v1.8.1
 
 ### Added
