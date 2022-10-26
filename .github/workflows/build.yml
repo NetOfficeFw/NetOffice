@@ -98,7 +98,7 @@ jobs:
     - name: Pack NetOffice
       if: steps.build.outputs.publish_nuget == 'true'
       run: |
-        dotnet pack Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
+        dotnet pack --no-build --no-restore Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
