@@ -1,4 +1,5 @@
-#Requires -Version 3.0
+#Requires -Version 7.0
+#Requires -PSEdition Core
 #
 # Generates deployment information for the build.
 #
@@ -17,8 +18,8 @@ param (
 
 function Write-GitHubVariable {
   param ($name, $value)
-  Write-Output "::set-output name=$name::$value"
-  Write-Host "variable $name=$value" -ForegroundColor Cyan
+  Write-Output "$name=$value" >> $env:GITHUB_OUTPUT
+  Write-Host "  steps.${env:GITHUB_ACTION}.outputs.$name=$value" -ForegroundColor Cyan
 }
 
 [xml]$project = Get-Content (Join-Path -Path $PSScriptRoot -ChildPath '..\Source\NetOffice.props')
@@ -47,7 +48,13 @@ if ($configuration -ieq 'release') {
   # }
 }
 
+$app_version_full = $app_version
+if ($app_version_suffix -ne '') {
+  $app_version_full += '-' + $app_version_suffix
+}
+
 Write-GitHubVariable "app_version" $app_version
 Write-GitHubVariable "app_version_suffix" $app_version_suffix
+Write-GitHubVariable "app_version_full" $app_version_full
 Write-GitHubVariable "sign_binaries" $sign_binaries
 Write-GitHubVariable "publish_nuget" $publish_nuget

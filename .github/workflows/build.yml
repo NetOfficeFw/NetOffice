@@ -95,7 +95,7 @@ jobs:
     - name: Archive NetOffice binaries
       uses: actions/upload-artifact@v3
       with:
-        name: NetOffice_binaries_${{ steps.build.outputs.app_version }}-${{ steps.build.outputs.app_version_suffix }}_${{ matrix.configuration }}
+        name: NetOffice_binaries_v${{ steps.build.outputs.app_version_full }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
 
     - name: Pack NetOffice
@@ -131,5 +131,5 @@ jobs:
       if: success() && steps.build.outputs.publish_nuget == 'true'
       uses: actions/upload-artifact@v3
       with:
-        name: NetOffice_packages_${{ steps.build.outputs.app_version_suffix }}
+        name: NetOffice_packages_v${{ steps.build.outputs.app_version_full }}
         path: '${{ github.workspace }}\dist'
