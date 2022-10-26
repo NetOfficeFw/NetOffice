@@ -1,0 +1,5 @@
+<Project>
+  <Target Name="AfterBuild" DependsOnTargets="$(AfterBuildDependsOn)">
+    <WriteLinesToFile File="$(SignListPath)" Lines="$(TargetPath)" />
+  </Target>
+</Project>

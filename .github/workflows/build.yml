@@ -73,11 +73,8 @@ jobs:
 
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
-      working-directory: '${{ github.workspace}}\Source\ClientApplication\bin\${{ matrix.configuration }}'
+      working-directory: '${{ github.workspace}}'
       run: |
-          Get-ChildItem "*Api.dll" -Recurse | Select-Object -ExpandProperty FullName > signlist.txt
-          Get-ChildItem "NetOffice.dll" -Recurse | Select-Object -ExpandProperty FullName >> signlist.txt
-
           AzureSignTool.exe sign `
           --file-digest sha256 `
           --description-url "https://github.com/NetOfficeFw/NetOffice" `
@@ -89,7 +86,7 @@ jobs:
           --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
           --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
           --azure-key-vault-certificate "goITSolutions-until-2024-01" `
-          --input-file-list signlist.txt `
+          --input-file-list obj/signlist.txt `
           --verbose
 
     - name: Archive NetOffice binaries

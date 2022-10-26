@@ -56,6 +56,11 @@
     <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)NetOffice.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
+  <!-- Authenticode signing -->
+  <PropertyGroup>
+    <SignListPath Condition=" '$(SignListPath)' == '' ">$(MSBuildThisFileDirectory)..\obj\signlist.txt</SignListPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Include="$(AssemblyOriginatorKeyFile)">
       <Link>NetOffice.snk</Link>
