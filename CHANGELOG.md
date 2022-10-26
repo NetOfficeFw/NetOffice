@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.1
+
+### Fixed
+* Assemblies in nuget packages are signed by Authenticode certificate [#369](https://github.com/NetOfficeFw/NetOffice/issues/369)
+
+
 ## v1.9.0
 
 ### Added
