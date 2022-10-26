@@ -16,9 +16,6 @@
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="/" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj" />
