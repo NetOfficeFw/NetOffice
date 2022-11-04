@@ -16,6 +16,7 @@ namespace NetOffice.Tools
     /// </remarks>
     public enum DisabledItemType
     {
+#pragma warning disable CS1591
         None = 0,
         AddInByFilename = 1,
         DocumentByPath = 2,
@@ -29,5 +30,6 @@ namespace NetOffice.Tools
         AppSpecificItems = 0x40000000,
         OutlookDisablePreviewPane = 0x40000000,
         OutlookAddinAutoDisabledByFileName = 1073741825
+#pragma warning restore CS1591
     }
 }

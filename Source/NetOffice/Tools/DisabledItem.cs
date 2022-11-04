@@ -11,10 +11,19 @@ namespace NetOffice.Tools
     /// </remarks>
     public class DisabledItem
     {
+        /// <summary>
+        /// Type of the disabled item.
+        /// </summary>
         public DisabledItemType DisabledItemType { get; set; }
 
+        /// <summary>
+        /// Friendly name of the disabled add-in.
+        /// </summary>
         public string FriendlyName { get; set; }
 
+        /// <summary>
+        /// Module name of the disabled add-in.
+        /// </summary>
         public string Module { get; set; }
     }
 }
