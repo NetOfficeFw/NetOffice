@@ -5,8 +5,14 @@ using NetOffice.Attributes;
 
 namespace NetOffice.Loader
 {
+    /// <summary>
+    /// Helper class to verify an assembly was signed with the NetOffice public key token.
+    /// </summary>
     public static class NetOfficeAssemblyEx
     {
+        /// <summary>
+        /// Public key token of NetOffice libraries.
+        /// </summary>
         public static readonly byte[] NetOfficePubliKeyToken = { 0x29, 0x7f, 0x57, 0xb4, 0x3a, 0xe7, 0xc1, 0xde };
 
         /// <summary>
