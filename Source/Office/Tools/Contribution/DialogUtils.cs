@@ -37,6 +37,9 @@ namespace NetOffice.OfficeApi.Tools.Contribution
 
         #region Properties
 
+        /// <summary>
+        /// Reference to <see cref="CommonUtils"/> object which owns this instance of DialogUtils class.
+        /// </summary>
         public CommonUtils Owner
         {
             get
