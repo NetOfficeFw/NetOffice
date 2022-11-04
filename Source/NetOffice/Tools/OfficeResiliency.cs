@@ -4,6 +4,10 @@ using System.Text;
 
 namespace NetOffice.Tools
 {
+    /// <summary>
+    /// Helper class to read data from the Microsoft Office resiliency registry values.
+    /// Converts binary data to the <see cref="DisabledItemType"/> values.
+    /// </summary>
     public class OfficeResiliency
     {
         private static readonly Encoding UTF16LE = Encoding.Unicode;
