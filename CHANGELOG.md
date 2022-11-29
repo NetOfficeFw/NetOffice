@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.2
+
+### Fixed
+* Fixed bug in `ProxyService.GetActiveInstance()` methods [#372](https://github.com/NetOfficeFw/NetOffice/issues/372)
+* Documented few data types
+
 ## v1.9.1
 
 ### Fixed
