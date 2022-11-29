@@ -61,7 +61,7 @@ namespace NetOffice.Running
             string compName = ValidateArgumentString(componentName);
             string clsName = ValidateArgumentString(className);
 
-            if (compName == "EXCEL" && className == "APPLICATION")
+            if (compName == "EXCEL" && clsName == "APPLICATION")
             {
                 return GetActiveExcelApplicationProxiesFromDesktop();
             }
@@ -83,7 +83,7 @@ namespace NetOffice.Running
             string compName = ValidateArgumentString(componentName);
             string clsName = ValidateArgumentString(className);
 
-            if (compName == "EXCEL" && className == "APPLICATION")
+            if (compName == "EXCEL" && clsName == "APPLICATION")
             {
                 object result = GetActiveExcelApplicationProxyFromDesktop();
                 if (null == result && throwExceptionIfNothingFound)
