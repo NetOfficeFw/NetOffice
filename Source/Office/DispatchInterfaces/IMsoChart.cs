@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object axisType, object axisGroup, object value)
 		{
-			Factory.ExecutePropertySet(this, "HasAxis", axisType, axisGroup, value);
+			Factory.ExecutePropertySet(this, "HasAxis", value, axisType, axisGroup);
 		}
 
 		/// <summary>

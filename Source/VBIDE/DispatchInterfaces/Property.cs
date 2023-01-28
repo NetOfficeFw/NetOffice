@@ -226,7 +226,7 @@ namespace NetOffice.VBIDEApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IndexedValue(object index1, object index2, object value)
 		{
-			Factory.ExecutePropertySet(this, "IndexedValue", index1, index2, value);
+			Factory.ExecutePropertySet(this, "IndexedValue", value, index1, index2);
 		}
 
 		/// <summary>
