@@ -327,7 +327,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_PrivateProfileString(string fileName, string section, string key, string value)
 		{
-			Factory.ExecutePropertySet(this, "PrivateProfileString", fileName, section, key, value);
+			Factory.ExecutePropertySet(this, "PrivateProfileString", value, fileName, section, key);
 		}
 
 		/// <summary>
