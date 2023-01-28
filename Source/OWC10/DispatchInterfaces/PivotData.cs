@@ -252,7 +252,7 @@ namespace NetOffice.OWC10Api
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DetailLeft(NetOffice.OWC10Api.PivotColumnMember column, Int32 value)
 		{
-			Factory.ExecutePropertySet(this, "DetailLeft", column, value);
+			Factory.ExecutePropertySet(this, "DetailLeft", value, column);
 		}
 
 		/// <summary>

@@ -285,7 +285,7 @@ namespace NetOffice.OWC10Api
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Value(object rangeValueDataType, object value)
 		{
-			Factory.ExecutePropertySet(this, "Value", rangeValueDataType, value);
+			Factory.ExecutePropertySet(this, "Value", value, rangeValueDataType);
 		}
 
 		/// <summary>

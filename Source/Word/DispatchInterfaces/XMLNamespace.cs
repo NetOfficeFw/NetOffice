@@ -100,7 +100,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Location(object allUsers, string value)
 		{
-			Factory.ExecutePropertySet(this, "Location", allUsers, value);
+			Factory.ExecutePropertySet(this, "Location", value, allUsers);
 		}
 
 		/// <summary>
@@ -138,7 +138,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Alias(object allUsers, string value)
 		{
-			Factory.ExecutePropertySet(this, "Alias", allUsers, value);
+			Factory.ExecutePropertySet(this, "Alias", value, allUsers);
 		}
 
 		/// <summary>
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DefaultTransform(object allUsers, NetOffice.WordApi.XSLTransform value)
 		{
-			Factory.ExecutePropertySet(this, "DefaultTransform", allUsers, value);
+			Factory.ExecutePropertySet(this, "DefaultTransform", value, allUsers);
 		}
 
 		/// <summary>

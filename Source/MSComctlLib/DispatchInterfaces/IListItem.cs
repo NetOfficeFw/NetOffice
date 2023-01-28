@@ -349,7 +349,7 @@ namespace NetOffice.MSComctlLibApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_SubItems(Int16 index, string value)
 		{
-			Factory.ExecutePropertySet(this, "SubItems", index, value);
+			Factory.ExecutePropertySet(this, "SubItems", value, index);
 		}
 
 		/// <summary>

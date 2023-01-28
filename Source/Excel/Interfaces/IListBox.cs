@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_List(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "List", index, value);
+			Factory.ExecutePropertySet(this, "List", value, index);
 		}
 
 		/// <summary>
@@ -135,7 +135,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Selected(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "Selected", index, value);
+			Factory.ExecutePropertySet(this, "Selected", value, index);
 		}
 
 		/// <summary>

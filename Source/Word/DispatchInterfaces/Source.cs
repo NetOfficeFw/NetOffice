@@ -187,7 +187,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Field(string name, string value)
 		{
-			Factory.ExecutePropertySet(this, "Field", name, value);
+			Factory.ExecutePropertySet(this, "Field", value, name);
 		}
 
 		/// <summary>

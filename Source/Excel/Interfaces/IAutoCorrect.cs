@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ReplacementList(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "ReplacementList", index, value);
+			Factory.ExecutePropertySet(this, "ReplacementList", value, index);
 		}
 
 		/// <summary>

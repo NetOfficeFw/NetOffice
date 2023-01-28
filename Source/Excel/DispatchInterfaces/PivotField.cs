@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Subtotals(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "Subtotals", index, value);
+			Factory.ExecutePropertySet(this, "Subtotals", value, index);
 		}
 
 		/// <summary>

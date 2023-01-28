@@ -274,7 +274,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Ink(Int32 index, Single value)
 		{
-			Factory.ExecutePropertySet(this, "Ink", index, value);
+			Factory.ExecutePropertySet(this, "Ink", value, index);
 		}
 
 		/// <summary>

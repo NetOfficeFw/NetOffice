@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Recipients(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "Recipients", index, value);
+			Factory.ExecutePropertySet(this, "Recipients", value, index);
 		}
 
 		/// <summary>

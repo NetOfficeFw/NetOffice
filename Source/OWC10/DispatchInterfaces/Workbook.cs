@@ -99,7 +99,7 @@ namespace NetOffice.OWC10Api
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Colors(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "Colors", index, value);
+			Factory.ExecutePropertySet(this, "Colors", value, index);
 		}
 
 		/// <summary>

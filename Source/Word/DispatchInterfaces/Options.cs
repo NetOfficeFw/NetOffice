@@ -813,7 +813,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_DefaultFilePath(NetOffice.WordApi.Enums.WdDefaultFilePath path, string value)
 		{
-			Factory.ExecutePropertySet(this, "DefaultFilePath", path, value);
+			Factory.ExecutePropertySet(this, "DefaultFilePath", value, path);
 		}
 
 		/// <summary>

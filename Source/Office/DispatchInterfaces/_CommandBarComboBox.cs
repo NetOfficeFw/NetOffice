@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_List(Int32 index, string value)
 		{
-			Factory.ExecutePropertySet(this, "List", index, value);
+			Factory.ExecutePropertySet(this, "List", value, index);
 		}
 
 		/// <summary>
