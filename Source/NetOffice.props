@@ -27,6 +27,7 @@
     <None Include="../../LICENSE.txt" Pack="true" PackagePath="/" />
     <None Include="../../icon.png" Pack="true" PackagePath="/" />
     <None Include="$(PackageReadmeFile)" Pack="true" PackagePath="/" Condition=" '$(PackageReadmeFile)' != '' " />
+    <None Include="tools/install.ps1" Pack="true" PackagePath="/tools/install.ps1" Condition=" Exists('tools/install.ps1') " />
   </ItemGroup>
 
   <PropertyGroup>
