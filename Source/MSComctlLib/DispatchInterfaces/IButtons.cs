@@ -148,7 +148,7 @@ namespace NetOffice.MSComctlLibApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ControlDefault(object index, NetOffice.MSComctlLibApi.IButton value)
 		{
-			Factory.ExecutePropertySet(this, "ControlDefault", index, value);
+			Factory.ExecutePropertySet(this, "ControlDefault", value, index);
 		}
 
 		/// <summary>

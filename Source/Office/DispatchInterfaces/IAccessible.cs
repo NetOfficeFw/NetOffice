@@ -100,7 +100,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_accName(object varChild, string value)
 		{
-			Factory.ExecutePropertySet(this, "accName", varChild, value);
+			Factory.ExecutePropertySet(this, "accName", value, varChild);
 		}
 
 		/// <summary>
@@ -136,7 +136,7 @@ namespace NetOffice.OfficeApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_accValue(object varChild, string value)
 		{
-			Factory.ExecutePropertySet(this, "accValue", varChild, value);
+			Factory.ExecutePropertySet(this, "accValue", value, varChild);
 		}
 
 		/// <summary>

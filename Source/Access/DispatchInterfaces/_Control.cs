@@ -210,7 +210,7 @@ namespace NetOffice.AccessApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Selected(Int32 lRow, Int32 value)
 		{
-			Factory.ExecutePropertySet(this, "Selected", lRow, value);
+			Factory.ExecutePropertySet(this, "Selected", value, lRow);
 		}
 
 		/// <summary>

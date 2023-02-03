@@ -141,7 +141,7 @@ namespace NetOffice.ADODBApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Collect(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "Collect", index, value);
+			Factory.ExecutePropertySet(this, "Collect", value, index);
 		}
 
 		/// <summary>

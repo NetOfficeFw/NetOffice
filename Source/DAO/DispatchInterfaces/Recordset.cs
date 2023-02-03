@@ -565,7 +565,7 @@ namespace NetOffice.DAOApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Collect(object item, object value)
 		{
-			Factory.ExecutePropertySet(this, "Collect", item, value);
+			Factory.ExecutePropertySet(this, "Collect", value, item);
 		}
 
 		/// <summary>

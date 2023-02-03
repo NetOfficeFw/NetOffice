@@ -923,7 +923,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Compatibility(NetOffice.WordApi.Enums.WdCompatibility type, bool value)
 		{
-			Factory.ExecutePropertySet(this, "Compatibility", type, value);
+			Factory.ExecutePropertySet(this, "Compatibility", value, type);
 		}
 
 		/// <summary>
@@ -1437,7 +1437,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_ActiveWritingStyle(object languageID, string value)
 		{
-			Factory.ExecutePropertySet(this, "ActiveWritingStyle", languageID, value);
+			Factory.ExecutePropertySet(this, "ActiveWritingStyle", value, languageID);
 		}
 
 		/// <summary>

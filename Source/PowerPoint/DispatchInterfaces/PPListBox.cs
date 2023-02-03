@@ -222,7 +222,7 @@ namespace NetOffice.PowerPointApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_IsSelected(Int32 index, NetOffice.OfficeApi.Enums.MsoTriState value)
 		{
-			Factory.ExecutePropertySet(this, "IsSelected", index, value);
+			Factory.ExecutePropertySet(this, "IsSelected", value, index);
 		}
 
 		/// <summary>

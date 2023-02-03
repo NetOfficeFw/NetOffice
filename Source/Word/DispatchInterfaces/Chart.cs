@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object index2, object value)
 		{
-			Factory.ExecutePropertySet(this, "HasAxis", index1, index2, value);
+			Factory.ExecutePropertySet(this, "HasAxis", value, index1, index2);
 		}
 
 		/// <summary>
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_HasAxis(object index1, object value)
 		{
-			Factory.ExecutePropertySet(this, "HasAxis", index1, value);
+			Factory.ExecutePropertySet(this, "HasAxis", value, index1);
 		}
 
 		/// <summary>

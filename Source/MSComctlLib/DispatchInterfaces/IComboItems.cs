@@ -131,7 +131,7 @@ namespace NetOffice.MSComctlLibApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set__CollectionDefault(object index, NetOffice.MSComctlLibApi.IComboItem value)
 		{
-			Factory.ExecutePropertySet(this, "_CollectionDefault", index, value);
+			Factory.ExecutePropertySet(this, "_CollectionDefault", value, index);
 		}
 
 		/// <summary>

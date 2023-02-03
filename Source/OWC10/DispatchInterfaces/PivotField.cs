@@ -222,7 +222,7 @@ namespace NetOffice.OWC10Api
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_Subtotals(Int32 subtotals, bool value)
 		{
-			Factory.ExecutePropertySet(this, "Subtotals", subtotals, value);
+			Factory.ExecutePropertySet(this, "Subtotals", value, subtotals);
 		}
 
 		/// <summary>

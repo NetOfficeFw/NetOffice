@@ -99,7 +99,7 @@ namespace NetOffice.ExcelApi
 		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
 		public void set_PrintQuality(object index, object value)
 		{
-			Factory.ExecutePropertySet(this, "PrintQuality", index, value);
+			Factory.ExecutePropertySet(this, "PrintQuality", value, index);
 		}
 
 		/// <summary>
