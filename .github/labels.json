@@ -1,0 +1,37 @@
+[
+  { "name": "bug", "color": "#fc2929" },
+  { "name": "enhancement", "color": "#84b6eb" },
+
+  { "name": "duplicate", "color": "#cccccc" },
+  { "name": "help wanted", "color": "#159818" },
+  { "name": "moreinfo", "color": "#7a82d3" },
+
+  { "name": "breaking-change", "color": "#e99695" },
+  { "name": "invalid", "color": "#e6e6e6" },
+  { "name": "needs-code-review", "color": "#d93f0b" },
+
+  { "name": "question", "color": "#cc317c" },
+  { "name": "external", "color": "#fef2c0" },
+  { "name": "support", "color": "#fbca04" },
+
+  { "name": "netoffice-core", "color": "#a2eef9" },
+  { "name": "ms-access", "color": "#b21b18" },
+  { "name": "ms-excel", "color": "#107c10" },
+  { "name": "ms-interop", "color": "#fcd8c7" },
+  { "name": "ms-onenote", "color": "#9198d8" },
+  { "name": "ms-outlook", "color": "#0078d7" },
+  { "name": "ms-powerpoint", "color": "#d83b01" },
+  { "name": "ms-project", "color": "#efb31a" },
+  { "name": "ms-publisher", "color": "#067265" },
+  { "name": "ms-vba", "color": "#f9d0c4" },
+  { "name": "ms-visio", "color": "#c5def5" },
+  { "name": "ms-word", "color": "#004578" },
+  { "name": "office-2016", "color": "#545778", "description": "Microsoft Office 2016" },
+  { "name": "office-2019", "color": "#343754", "description": "Microsoft Office 2019" },
+  { "name": "packages", "color": "#e58647" },
+
+  { "name": "CodePlex", "color": "#d4c5f9" },
+  { "name": "Documentation", "color": "#bcf5db" },
+  { "name": "Samples", "color": "#cc68e8" },
+  { "name": "Toolbox", "color": "#97ef83"}
+]
