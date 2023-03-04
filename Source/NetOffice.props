@@ -1,7 +1,7 @@
 ﻿<Project>
   <!-- Common properties for NetOffice projects -->
   <PropertyGroup>
-    <NetOfficeRelease>1.9.2</NetOfficeRelease>
+    <NetOfficeRelease>1.9.3</NetOfficeRelease>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -27,6 +27,7 @@
     <None Include="../../LICENSE.txt" Pack="true" PackagePath="/" />
     <None Include="../../icon.png" Pack="true" PackagePath="/" />
     <None Include="$(PackageReadmeFile)" Pack="true" PackagePath="/" Condition=" '$(PackageReadmeFile)' != '' " />
+    <None Include="tools/install.ps1" Pack="true" PackagePath="/tools/install.ps1" Condition=" Exists('tools/install.ps1') " />
   </ItemGroup>
 
   <PropertyGroup>

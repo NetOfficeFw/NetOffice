@@ -35,6 +35,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.201'
+
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.1
 

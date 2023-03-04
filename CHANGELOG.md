@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.3
+
+### Fixed
+* Configure EmbedInteropTypes value in classic nuget references [#371](https://github.com/NetOfficeFw/NetOffice/issues/371)
+
+
 ## v1.9.2
 
 ### Fixed
