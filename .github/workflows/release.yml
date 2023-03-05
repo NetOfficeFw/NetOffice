@@ -1,12 +1,7 @@
-name: build
+name: release
 
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - 'main'
-      - 'dev/*'
-      - 'releases/*'
     tags:
       - 'v*.*.*'
 
@@ -14,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  release:
     runs-on: windows-2022
 
     strategy:

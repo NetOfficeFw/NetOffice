@@ -1,0 +1,72 @@
+name: tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+      - 'dev/*'
+      - 'releases/*'
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: windows-2022
+
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
+    env:
+      DOTNET_NOLOGO: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
+      ContinuousIntegrationBuild: true
+      RestoreLockedMode: true
+      RepositoryBranch: '${{ github.ref_name }}'
+      RepositoryCommit: '${{ github.sha }}'
+      Configuration: '${{ matrix.configuration }}'
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '7.0.201'
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Cache packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.nuget/packages
+        key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          NetOffice-nuget-
+
+    - name: Build information
+      id: build
+      run: .\.github\Get-BuildInfo.ps1 -ref '${{ github.ref }}' -event_name '${{ github.event_name }}' -configuration '${{ matrix.configuration }}'
+
+    - name: Build NetOffice
+      run: |
+        dotnet build Source\NetOffice.sln
+      env:
+        VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
+
+    - name: Test NetOffice
+      run: |
+        dotnet test --filter "TestCategory != IntegrationTests" Source\NetOffice.sln
+      env:
+        VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
+
+    - name: Archive NetOffice binaries
+      uses: actions/upload-artifact@v3
+      with:
+        name: NetOffice_binaries_v${{ steps.build.outputs.app_version_full }}_${{ matrix.configuration }}
+        path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
