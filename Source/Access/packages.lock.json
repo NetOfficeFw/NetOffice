@@ -30,7 +30,7 @@
       "NetOfficeFw.ADODBApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )"
+          "NetOfficeFw.Core": "[1.9.3, )"
         }
       },
       "NetOfficeFw.Core": {
@@ -39,44 +39,44 @@
       "NetOfficeFw.DAOApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )"
+          "NetOfficeFw.Core": "[1.9.3, )"
         }
       },
       "NetOfficeFw.MSComctlLibApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )",
+          "NetOfficeFw.Core": "[1.9.3, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.MSDATASRCApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )"
+          "NetOfficeFw.Core": "[1.9.3, )"
         }
       },
       "NetOfficeFw.Office": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )",
+          "NetOfficeFw.Core": "[1.9.3, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.OWC10Api": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.ADODBApi": "[1.9.0-local, )",
-          "NetOfficeFw.Core": "[1.9.0-local, )",
-          "NetOfficeFw.MSComctlLibApi": "[1.9.0-local, )",
-          "NetOfficeFw.MSDATASRCApi": "[1.9.0-local, )",
+          "NetOfficeFw.ADODBApi": "[1.9.3, )",
+          "NetOfficeFw.Core": "[1.9.3, )",
+          "NetOfficeFw.MSComctlLibApi": "[1.9.3, )",
+          "NetOfficeFw.MSDATASRCApi": "[1.9.3, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.VBIDE": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )",
-          "NetOfficeFw.Office": "[1.9.0-local, )"
+          "NetOfficeFw.Core": "[1.9.3, )",
+          "NetOfficeFw.Office": "[1.9.3, )"
         }
       }
     }
