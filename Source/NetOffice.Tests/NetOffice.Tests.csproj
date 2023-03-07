@@ -37,4 +37,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\SampleIcon.ico" />
+    <EmbeddedResource Include="Data\SampleImage.png" />
+    <EmbeddedResource Include="Data\SampleText.txt" />
+  </ItemGroup>
 </Project>
