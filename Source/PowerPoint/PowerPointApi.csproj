@@ -16,9 +16,6 @@
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\VBIDE\VBIDEApi.csproj" />
