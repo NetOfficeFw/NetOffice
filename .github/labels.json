@@ -1,6 +1,7 @@
 [
   { "name": "bug", "color": "#fc2929" },
   { "name": "enhancement", "color": "#84b6eb" },
+  { "name": "unit-tests", "color": "#c3ea94" },
 
   { "name": "duplicate", "color": "#cccccc" },
   { "name": "help wanted", "color": "#159818" },
