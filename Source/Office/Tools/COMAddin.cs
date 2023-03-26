@@ -310,7 +310,7 @@ namespace NetOffice.OfficeApi.Tools
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
 
-                this.Application = Factory.CreateObjectFromComProxy(null, application, true);
+                this.Application = Factory.CreateObjectFromComProxy(null, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
                 RaiseOnConnection(Application, ConnectMode, AddInInst, ref custom);

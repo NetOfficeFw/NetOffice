@@ -8,7 +8,6 @@ namespace NetOffice
     /// <summary>
     /// Core Settings
     /// </summary>
-    [TypeConverter(typeof(Converter.ExpandableSettingsConverter))]
     public class Settings : INotifyPropertyChanged, IEquatable<Settings>
     {
         #region Constants
@@ -30,8 +29,6 @@ namespace NetOffice
         private bool _enableMoreDebugOutput = false;
         private bool _enableEventDebugOutput = false;
         private bool _enableSafeMode = false;
-        private bool _enableDynamicObjects = true;
-        private bool _enableDynamicEventArguments;
         private bool _enableKnownReferenceInspection;
         private bool _enableAutoDisposeEventArguments;
 
@@ -121,27 +118,6 @@ namespace NetOffice
                 }
             }
         }
-
-        /// <summary>
-        /// Wrap proxy into COMDynamicObject if proxy has no wrapper class in current app domain. true by default
-        /// </summary>
-        [Category("Settings"), Description("Convert unknown proxies in dynamic objects if no wrapper is available."), DefaultValue(true)]
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public bool EnableDynamicObjects
-        {
-            get
-            {
-                return _enableDynamicObjects;
-            }
-            set
-            {
-                if (value != _enableDynamicObjects)
-                {
-                    _enableDynamicObjects = value;
-                    OnPropertyChanged("EnableDynamicObjects");
-                }
-            }
-        }
         
         /// <summary>
         /// Analyze also known reference proxies to see proxy is may inherited type, false by default
@@ -179,27 +155,6 @@ namespace NetOffice
                 {
                     _enableAutoDisposeEventArguments = value;
                     OnPropertyChanged("EnableAutoDisposeEventArguments");
-                }
-            }
-        }
-
-        /// <summary>
-        /// Wrap event arguments into COMDynamicObject if proxy has no wrapper class in current app domain. false by default
-        /// </summary>
-        [Category("Settings"), Description("Convert unknown proxies in dynamic objects incl. proxy management."), DefaultValue(false)]
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public bool EnableDynamicEventArguments
-        {
-            get
-            {
-                return _enableDynamicEventArguments;
-            }
-            set
-            {
-                if (value != _enableDynamicEventArguments)
-                {
-                    _enableDynamicEventArguments = value;
-                    OnPropertyChanged("EnableDynamicEventArguments");
                 }
             }
         }
@@ -550,11 +505,10 @@ namespace NetOffice
            
             // todo: handle that better by reflection
 
-            if (PerformanceTrace.Enabled != other.PerformanceTrace.Enabled || EnableProxyManagement != other.EnableProxyManagement ||
-                EnableDynamicObjects != other.EnableDynamicObjects || EnableDynamicEventArguments != other.EnableDynamicEventArguments)
+            if (PerformanceTrace.Enabled != other.PerformanceTrace.Enabled || EnableProxyManagement != other.EnableProxyManagement)
                 return false;
 
-            if ( EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != other.EnableDynamicEventArguments ||
+            if ( EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments ||
                  ExceptionMessageBehavior != other.ExceptionMessageBehavior || ExceptionDefaultMessage != other.ExceptionDefaultMessage)
                 return false;
 
@@ -587,11 +541,9 @@ namespace NetOffice
                 return;
             PerformanceTrace.Enabled = settings.PerformanceTrace.Enabled;
             EnableProxyManagement = settings.EnableProxyManagement;
-            EnableDynamicObjects = settings.EnableDynamicObjects;
             EnableKnownReferenceInspection = settings.EnableKnownReferenceInspection;
 
             EnableAutoDisposeEventArguments = settings.EnableAutoDisposeEventArguments;
-            EnableDynamicEventArguments = settings.EnableDynamicEventArguments;
             ExceptionMessageBehavior = settings.ExceptionMessageBehavior;
             ExceptionDefaultMessage = settings.ExceptionDefaultMessage;
 

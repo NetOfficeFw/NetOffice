@@ -52,11 +52,5 @@ namespace NetOffice
         /// Returns a name array of dependent NetOfficeApi assemblies
         /// </summary>
         string[] Dependencies { get; }
-
-        /// <summary>
-        /// Returns information the factory serves duck interfaces only
-        /// </summary>
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        bool IsDuck { get; }
     }
 }

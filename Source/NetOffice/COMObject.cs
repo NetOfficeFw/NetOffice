@@ -13,7 +13,6 @@ namespace NetOffice
     /// Managed/wrapped COM Proxy and <see cref="ICOMObject"/> default implementation
     /// </summary>
     [DebuggerDisplay("{InstanceFriendlyName}")]
-    [TypeConverter(typeof(Converter.COMObjectExpandableObjectConverter))]
     public class COMObject : ICOMObject, ICOMProxyShareProvider
     {
         #region Fields

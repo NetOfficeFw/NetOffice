@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi
 
         ICOMObject IEnumerableProvider<Single>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsProperty(parent, this);
         }
 
         IEnumerable IEnumerableProvider<Single>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)

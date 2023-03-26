@@ -159,7 +159,7 @@ namespace NetOffice.AccessApi
 
         ICOMObject IEnumerableProvider<Int32>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<Int32>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)

@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using NetOffice.Loader;
-using NetOffice.Duck;
 using NetOffice.Exceptions;
 using System.Diagnostics;
 
@@ -90,7 +89,6 @@ namespace NetOffice
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
 
-        private Dictionary<Type, Type> _duckingCache;
         private static Core _default;
         private bool _initalized;
         private List<ICOMObject> _globalObjectList = new List<ICOMObject>();
@@ -173,29 +171,6 @@ namespace NetOffice
             {
                 ResolveEventArgs args = new ResolveEventArgs(caller, fullClassName, comProxy);
                 Resolve(this, args);
-                return args.Result;
-            }
-            else
-                return null;
-        }
-
-        /// <summary>
-        /// Occurs when a new COMDynamicObject instance should be created
-        /// </summary>
-        public event OnCreateCOMDynamicEventHandler CreateCOMDynamic;
-
-        /// <summary>
-        /// Raise the CreateCOMDynamic event
-        /// </summary>
-        /// <param name="instance">requested instance</param>
-        /// <param name="comProxy">target proxy</param>
-        /// <returns>COMDynamicObject instance or null</returns>
-        private COMDynamicObject RaiseCreateCOMDynamic(ICOMObject instance, object comProxy)
-        {
-            if (null != CreateCOMDynamic)
-            {
-                OnCreateCOMDynamicEventArgs args = new OnCreateCOMDynamicEventArgs(instance, comProxy);
-                CreateCOMDynamic(this, args);
                 return args.Result;
             }
             else
@@ -461,24 +436,6 @@ namespace NetOffice
         /// Cache as Type ID => ParentLibrary ID
         /// </summary>
         internal Dictionary<Guid, Guid> HostCache { get; private set; }
-        
-        /// <summary>
-        /// Duck Type Cache
-        /// T1 is interface
-        /// T2 is its implementation
-        /// </summary>
-        private Dictionary<Type, Type> DuckingCache
-        {
-            get
-            {
-                lock (_thisAssemblyLock)
-                {
-                    if (null == _duckingCache)
-                        _duckingCache = new Dictionary<Type, Type>();
-                }
-                return _duckingCache;
-            }
-        }
 
         /// <summary>
         /// Dependent assemblies analyzed by LoadAPIFactories
@@ -590,7 +547,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Get wrapper class factory info as non duck
+        /// Get wrapper class factory info.
         /// </summary>
         /// <param name="caller">calling instance</param>
         /// <param name="comProxy">new created proxy</param>
@@ -598,19 +555,7 @@ namespace NetOffice
         /// <returns>factory info from corresponding assembly</returns>
         internal IFactoryInfo GetInstanceFactoryInfo(ICOMObject caller, object comProxy, bool throwException = true)
         {
-            return this.GetFactoryInfo(HostCache, caller, comProxy, false, throwException);
-        }
-
-        /// <summary>
-        ///  Get wrapper class factory info as duck
-        /// </summary>
-        /// <param name="caller">calling instance</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="throwException">throw exception if no info found or return null</param>
-        /// <returns>factory info from corresponding assembly</returns>
-        internal IFactoryInfo GetDuckFactoryInfo(ICOMObject caller, object comProxy, bool throwException = true)
-        {
-            return this.GetFactoryInfo(HostCache, caller, comProxy, true, throwException);
+            return this.GetFactoryInfo(HostCache, caller, comProxy, throwException);
         }
 
         /// <summary>
@@ -766,166 +711,6 @@ namespace NetOffice
                 throw new CreateCOMProxyShareException(exception);
             }            
         }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>    
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentException">throws when ComProgIdAttribute is missing</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        /// <exception cref="COMException">throws when its failed to receive progID Type</exception> 
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public T CreateDuckObject<T>() where T : ICOMObject
-        {
-            object[] attributes = typeof(T).GetCustomAttributes(typeof(NetOffice.Attributes.ComProgIdAttribute), false);
-            if (attributes.Length > 0)
-            {
-                NetOffice.Attributes.ComProgIdAttribute attribute = attributes[0] as NetOffice.Attributes.ComProgIdAttribute;
-                return CreateDuckObject<T>(attribute.Value);
-            }
-            else
-                throw new ArgumentException("ComProgIdAttribute is missing.");
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <param name="progId">progId to create</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when progId is null or empty</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        /// <exception cref="COMException">throws when its failed to receive progID Type</exception> 
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public T CreateDuckObject<T>(string progId) where T : ICOMObject
-        {
-            if (String.IsNullOrWhiteSpace(progId))
-                throw new ArgumentNullException("progId");
-            Type type = System.Type.GetTypeFromProgID(progId, false);
-            if (null == type)
-                throw new COMException("Unable to receive progId Type:<" + progId + ">");
-
-            object interopProxy = null;
-
-            try
-            {
-                interopProxy = Activator.CreateInstance(type);
-            }
-            catch (Exception exception)
-            {
-                throw new CreateInstanceException(exception);
-            }
-             
-            return CreateDuckObjectFromComProxy<T>(interopProxy);
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <param name="caller"></param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public T CreateDuckObjectFromComProxy<T>(ICOMObject caller, object comProxy) where T : ICOMObject
-        {
-            return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance by given generic type argument
-        /// </summary>
-        /// <typeparam name="T">interface result type</typeparam>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public T CreateDuckObjectFromComProxy<T>(object comProxy) where T : ICOMObject
-        {
-            return (T)CreateDuckObjectFromComProxy(null, comProxy, typeof(T));
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception> 
-        /// <exception cref="FactoryException">throws when its failed to receive factory info</exception> 
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy)
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException("comProxy");
-
-            CheckInitialize();
-
-            IFactoryInfo factoryInfo = GetDuckFactoryInfo(caller, comProxy, true);
-            string className = TypeDescriptor.GetClassName(comProxy);
-            string fullClassName = factoryInfo.AssemblyNamespace + ".I" + className;
-
-            Type wrapperInterfaceType = factoryInfo.Assembly.GetType(fullClassName, true, true);
-            return CreateDuckObjectFromComProxy(caller, comProxy, wrapperInterfaceType);
-        }
-
-        /// <summary>
-        /// Creates a new duck typing instance which implement the given interfaces.
-        /// </summary>
-        /// <param name="caller">parent there have created comProxy</param>
-        /// <param name="comProxy">new created proxy</param>
-        /// <param name="wrapperInterfaceType">interface which is implemented by the returning instance. the interface must inherit from <see cref="ICOMObject"/></param>
-        /// <returns>new instance</returns>
-        /// <exception cref="ArgumentNullException">throws when comProxy, wrapperInterfaceType is null</exception>
-        /// <exception cref="DuckException">throws when its failed to compile an implementation</exception>
-        /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
-        public ICOMObject CreateDuckObjectFromComProxy(ICOMObject caller, object comProxy, Type wrapperInterfaceType)
-        {
-            if (null == comProxy)
-                throw new ArgumentNullException("comProxy");
-            if (null == wrapperInterfaceType)
-                throw new ArgumentNullException("wrapperInterfaceType");
-
-            Type instanceType = null;
-            lock (_comObjectLock)
-            {
-                if (!DuckingCache.TryGetValue(wrapperInterfaceType, out instanceType))
-                {
-                    try
-                    {
-                        DuckInterface proxyInterface = new DuckInterface(wrapperInterfaceType);
-                        DuckTypeGenerator implementationTypeGenerator = new DuckTypeGenerator(proxyInterface);
-                        instanceType = implementationTypeGenerator.GenerateType();
-                        DuckingCache.Add(wrapperInterfaceType, instanceType);
-                    }
-                    catch (Exception exception)
-                    {
-                        throw new DuckException(exception);
-                    }
-                }
-            }
-
-            try
-            {
-                ICOMObject newInstance = Activator.CreateInstance(instanceType, new object[] { this, caller, comProxy }) as ICOMObject;
-                return newInstance;
-            }
-            catch (Exception exception)
-            {
-                throw new CreateInstanceException(exception);
-            }        
-        }
         
         /// <summary>
         /// Creates a new <see cref="ICOMObject"/> based on wrapperClassType
@@ -953,7 +738,7 @@ namespace NetOffice
         {
             if (caller.Settings.EnableKnownReferenceInspection)
             {
-                return CreateObjectFromComProxy(caller, comProxy, false);
+                return CreateObjectFromComProxy(caller, comProxy);
             }
 
             CheckInitialize();           
@@ -1038,7 +823,7 @@ namespace NetOffice
         }
 
         /// <summary>
-        /// Creates a new <see cref="ICOMObject"/> based on classType of comProxy. The method uses <see cref="Settings.EnableDynamicEventArguments"/> to reflect dynamics
+        /// Creates a new <see cref="ICOMObject"/> based on classType of comProxy.
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
@@ -1046,7 +831,7 @@ namespace NetOffice
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         public ICOMObject CreateEventArgumentObjectFromComProxy(ICOMObject caller, object comProxy)
         {
-            return CreateObjectFromComProxy(caller, comProxy, caller.Settings.EnableDynamicEventArguments);
+            return CreateObjectFromComProxy(caller, comProxy);
         }
 
         /// <summary>
@@ -1054,10 +839,9 @@ namespace NetOffice
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding wrapper class instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, bool allowDynamicObject)
+        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy)
         {
             CheckInitialize();         
             try
@@ -1072,7 +856,7 @@ namespace NetOffice
                     {
                         Type comProxyType2 = null;
                         ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, 
-                                                                            String.Empty, String.Empty, allowDynamicObject);
+                                                                            String.Empty, String.Empty);
                         newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
                         return newInstance2;
                     }
@@ -1088,7 +872,7 @@ namespace NetOffice
                         _proxyTypeCache.Add(fullClassName, comProxyType);
                     }
 
-                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName, allowDynamicObject);
+                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
                     newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
 
                     return newInstance;
@@ -1107,10 +891,9 @@ namespace NetOffice
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxy">new created proxy</param>
         /// <param name="comProxyType">Type of comProxy</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding Wrapper class Instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
-        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType, bool allowDynamicObject)
+        public ICOMObject CreateObjectFromComProxy(ICOMObject caller, object comProxy, Type comProxyType)
         {
             CheckInitialize();           
             try
@@ -1124,7 +907,7 @@ namespace NetOffice
                     if (null == factoryInfo)
                     {
                         Type comProxyType2 = null;
-                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty, allowDynamicObject);
+                        ICOMObject newInstance2 = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType2, String.Empty, String.Empty);
                         newInstance2 = TryReplaceInstance(caller, newInstance2, comProxyType2);
 
                         return newInstance2;
@@ -1134,7 +917,7 @@ namespace NetOffice
                     string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
 
                     // create new classType
-                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName, allowDynamicObject);
+                    ICOMObject newInstance = CreateObjectFromComProxy(factoryInfo, caller, comProxy, comProxyType, className, fullClassName);
                     newInstance = TryReplaceInstance(caller, newInstance, comProxyType);
 
                     return newInstance;
@@ -1156,12 +939,11 @@ namespace NetOffice
         /// <param name="comProxyType">Type of comProxy</param>
         /// <param name="className">name of COMServer proxy class</param>
         /// <param name="fullClassName">full namespace and name of COMServer proxy class</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding Wrapper class Instance or plain <see cref="COMObject"/></returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find corresponding wrapper class type</exception>
         public ICOMObject CreateObjectFromComProxy(IFactoryInfo factoryInfo, ICOMObject caller, object comProxy, 
-            Type comProxyType, string className, string fullClassName, bool allowDynamicObject)
+            Type comProxyType, string className, string fullClassName)
         {
             CheckInitialize();           
             try
@@ -1194,16 +976,7 @@ namespace NetOffice
 
                         if (null == classType)
                         {
-                            if (allowDynamicObject && Settings.EnableDynamicObjects)
-                            {
-                                ICOMObject unknownInstance = RaiseCreateCOMDynamic(caller, comProxy);
-                                if(null == unknownInstance)
-                                    unknownInstance = new COMDynamicObject(caller, comProxy);
-                                unknownInstance = TryReplaceInstance(caller, unknownInstance, comProxyType);
-                                return unknownInstance;
-                            }
-                            else
-                                throw new FactoryException("Class does not exist: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
+                            throw new FactoryException("Class does not exist: " + (true == String.IsNullOrWhiteSpace(fullClassName) ? ComTypes.TypeDescriptor.GetFullComponentClassName(comProxy) : fullClassName));
                         }
 
                         _wrapperTypeCache.Add(fullClassName, classType);
@@ -1234,11 +1007,10 @@ namespace NetOffice
         /// </summary>
         /// <param name="caller">parent there have created comProxy</param>
         /// <param name="comProxyArray">new created proxy array</param>
-        /// <param name="allowDynamicObject">allow to create a <see cref="COMDynamicObject"/> instance if its failed to resolve the wrapper type</param>
         /// <returns>corresponding Wrapper class Instance array or plain <see cref="COMObject"/> array</returns>
         /// <exception cref="CreateInstanceException">throws when its failed to create new instance</exception>
         /// <exception cref="FactoryException">throws when its failed find factory info</exception>
-        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray, bool allowDynamicObject)
+        public ICOMObject[] CreateObjectArrayFromComProxy(ICOMObject caller, object[] comProxyArray)
         {
             CheckInitialize();
             try
@@ -1255,7 +1027,7 @@ namespace NetOffice
                         IFactoryInfo factoryInfo = GetInstanceFactoryInfo(caller, comProxyArray[i]);
                         string className = TypeDescriptor.GetClassName(comProxyArray[i]);
                         string fullClassName = factoryInfo.AssemblyNamespace + "." + className;
-                        newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName, allowDynamicObject);
+                        newVariantArray[i] = CreateObjectFromComProxy(factoryInfo, caller, comProxyArray[i], comVariantType, className, fullClassName);
                     }
                     return newVariantArray;
                 }
@@ -1438,7 +1210,7 @@ namespace NetOffice
         {
             if ((null != value) && (value is MarshalByRefObject))
             {
-                ICOMObject newObject = CreateObjectFromComProxy(null, value, allowDynamicObject);
+                ICOMObject newObject = CreateObjectFromComProxy(null, value);
                 return newObject;
             }
             else

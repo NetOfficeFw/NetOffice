@@ -2041,7 +2041,7 @@ namespace NetOffice.AccessApi
             object returnItem = Invoker.MethodReturn(this, "_Evaluate", paramsArray);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
             {
-                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem, true);
+                ICOMObject newObject = Factory.CreateObjectFromComProxy(this, returnItem);
                 return newObject;
             }
             else
@@ -2068,7 +2068,7 @@ namespace NetOffice.AccessApi
 
         ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
         {
-            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this, false);
+            return NetOffice.Utils.GetComObjectEnumeratorAsMethod(parent, this);
         }
 
         IEnumerable IEnumerableProvider<object>.FetchVariantComObjectEnumerator(ICOMObject parent, ICOMObject enumerator)
@@ -2101,7 +2101,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 9,10,11,12,14,15,16)]
 		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
 		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
+			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
 		}
 
 		#endregion

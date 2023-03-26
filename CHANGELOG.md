@@ -1,5 +1,15 @@
 # Changelog
 
+## v2.0.0-preview
+
+### Breaking Changes
+* Remove "duck tales" and dynamics implementations [#283](https://github.com/NetOfficeFw/NetOffice/issues/283)  
+  Affected types:
+  * removed all types from namespace `NetOffice.DuckTales`
+  * classes `COMDynamicObject`, `DuckException`, `COMDynamicObjectExpandableObjectConverter`, `COMObjectExpandableObjectConverter`, `ExpandableSettingsConverter`
+  * event `OnCreateCOMDynamicEvent`
+
+
 ## v1.9.3
 
 ### Fixed
