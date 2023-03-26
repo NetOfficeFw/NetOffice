@@ -2,6 +2,12 @@
   "version": 1,
   "dependencies": {
     ".NETFramework,Version=v4.6.2": {
+      "Microsoft.CSharp": {
+        "type": "Direct",
+        "requested": "[4.6.0, )",
+        "resolved": "4.6.0",
+        "contentHash": "kxn3M2rnAGy5N5DgcIwcE8QTePWU/XiYcQVzn9HqTls2NKluVzVSmVWRjK7OUPWbljCXuZxHyhEz9kPRIQeXow=="
+      },
       "Microsoft.NET.Test.Sdk": {
         "type": "Direct",
         "requested": "[17.5.0, )",
@@ -64,6 +70,249 @@
         "type": "Transitive",
         "resolved": "7.0.3300",
         "contentHash": "p9WhjNp/gM2z80u+xNA1XXFek57iybUUJaDnQooKfdct3vGIpmDzLdL7Rq4ZmFzZc3LN3SFs5bRIE7j/+gLn5Q=="
+      },
+      "NetOfficeFw.Access": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.ADODBApi": "[2.0.0, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.DAOApi": "[2.0.0, )",
+          "NetOfficeFw.MSComctlLibApi": "[2.0.0, )",
+          "NetOfficeFw.MSDATASRCApi": "[2.0.0, )",
+          "NetOfficeFw.OWC10Api": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "NetOfficeFw.VBIDE": "[2.0.0, )"
+        }
+      },
+      "NetOfficeFw.ADODBApi": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )"
+        }
+      },
+      "NetOfficeFw.Core": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )"
+        }
+      },
+      "NetOfficeFw.DAOApi": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )"
+        }
+      },
+      "NetOfficeFw.Excel": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "NetOfficeFw.VBIDE": "[2.0.0, )"
+        }
+      },
+      "NetOfficeFw.MSComctlLibApi": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "stdole": "[7.0.3300, )"
+        }
+      },
+      "NetOfficeFw.MSDATASRCApi": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )"
+        }
+      },
+      "NetOfficeFw.Office": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "stdole": "[7.0.3300, )"
+        }
+      },
+      "NetOfficeFw.Outlook": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "stdole": "[7.0.3300, )"
+        }
+      },
+      "NetOfficeFw.OWC10Api": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.ADODBApi": "[2.0.0, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.MSComctlLibApi": "[2.0.0, )",
+          "NetOfficeFw.MSDATASRCApi": "[2.0.0, )",
+          "stdole": "[7.0.3300, )"
+        }
+      },
+      "NetOfficeFw.PowerPoint": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "NetOfficeFw.VBIDE": "[2.0.0, )",
+          "stdole": "[7.0.3300, )"
+        }
+      },
+      "NetOfficeFw.VBIDE": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )"
+        }
+      },
+      "noassemblytitle": {
+        "type": "Project",
+        "dependencies": {
+          "NetOfficeFw.Core": "[2.0.0, )"
+        }
+      }
+    },
+    "net6.0-windows7.0": {
+      "Microsoft.CSharp": {
+        "type": "Direct",
+        "requested": "[4.6.0, )",
+        "resolved": "4.6.0",
+        "contentHash": "kxn3M2rnAGy5N5DgcIwcE8QTePWU/XiYcQVzn9HqTls2NKluVzVSmVWRjK7OUPWbljCXuZxHyhEz9kPRIQeXow=="
+      },
+      "Microsoft.NET.Test.Sdk": {
+        "type": "Direct",
+        "requested": "[17.5.0, )",
+        "resolved": "17.5.0",
+        "contentHash": "IJ4eSPcsRbwbAZehh1M9KgejSy0u3d0wAdkJytfCh67zOaCl5U3ltruUEe15MqirdRqGmm/ngbjeaVeGapSZxg==",
+        "dependencies": {
+          "Microsoft.CodeCoverage": "17.5.0",
+          "Microsoft.TestPlatform.TestHost": "17.5.0"
+        }
+      },
+      "Microsoft.SourceLink.GitHub": {
+        "type": "Direct",
+        "requested": "[1.1.1, )",
+        "resolved": "1.1.1",
+        "contentHash": "IaJGnOv/M7UQjRJks7B6p7pbPnOwisYGOIzqCz5ilGFTApZ3ktOR+6zJ12ZRPInulBmdAf1SrGdDG2MU8g6XTw==",
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.1.1",
+          "Microsoft.SourceLink.Common": "1.1.1"
+        }
+      },
+      "Microsoft.Trusted.Signing.Client": {
+        "type": "Direct",
+        "requested": "[1.0.60, )",
+        "resolved": "1.0.60",
+        "contentHash": "FTMmjIfofcvi3KTcyMKzAI1nIo+kvswo8HdsWWpLAomYyy85LixevLutCipU6nNv9E1iLuZWkZE6OoPhbu2QAg=="
+      },
+      "Microsoft.Windows.SDK.BuildTools": {
+        "type": "Direct",
+        "requested": "[10.0.22621.3233, )",
+        "resolved": "10.0.22621.3233",
+        "contentHash": "v67zwCb9JOpfPxdSroZukIKHruU6FUB+KwcmSPcVvUFyYtcyvcUign5y8jPQNi54CVzWvaTg646e62LbanUkxg=="
+      },
+      "NUnit": {
+        "type": "Direct",
+        "requested": "[3.13.3, )",
+        "resolved": "3.13.3",
+        "contentHash": "KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        }
+      },
+      "NUnit3TestAdapter": {
+        "type": "Direct",
+        "requested": "[4.4.2, )",
+        "resolved": "4.4.2",
+        "contentHash": "vA/iHYcR+LYw+pRWQugckC/zW2fXHaqMr2uA82NOBt8v4YK4wMJrQ7QC8XLc7PjetEZ96cPbBTWsDDtmQiRZTA=="
+      },
+      "Microsoft.Build.Tasks.Git": {
+        "type": "Transitive",
+        "resolved": "1.1.1",
+        "contentHash": "AT3HlgTjsqHnWpBHSNeR0KxbLZD7bztlZVj7I8vgeYG9SYqbeFGh0TM/KVtC6fg53nrWHl3VfZFvb5BiQFcY6Q=="
+      },
+      "Microsoft.CodeCoverage": {
+        "type": "Transitive",
+        "resolved": "17.5.0",
+        "contentHash": "6FQo0O6LKDqbCiIgVQhJAf810HSjFlOj7FunWaeOGDKxy8DAbpHzPk4SfBTXz9ytaaceuIIeR6hZgplt09m+ig=="
+      },
+      "Microsoft.NETCore.Platforms": {
+        "type": "Transitive",
+        "resolved": "1.1.0",
+        "contentHash": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A=="
+      },
+      "Microsoft.SourceLink.Common": {
+        "type": "Transitive",
+        "resolved": "1.1.1",
+        "contentHash": "WMcGpWKrmJmzrNeuaEb23bEMnbtR/vLmvZtkAP5qWu7vQsY59GqfRJd65sFpBszbd2k/bQ8cs8eWawQKAabkVg=="
+      },
+      "Microsoft.TestPlatform.ObjectModel": {
+        "type": "Transitive",
+        "resolved": "17.5.0",
+        "contentHash": "QwiBJcC/oEA1kojOaB0uPWOIo4i6BYuTBBYJVhUvmXkyYqZ2Ut/VZfgi+enf8LF8J4sjO98oRRFt39MiRorcIw==",
+        "dependencies": {
+          "NuGet.Frameworks": "5.11.0",
+          "System.Reflection.Metadata": "1.6.0"
+        }
+      },
+      "Microsoft.TestPlatform.TestHost": {
+        "type": "Transitive",
+        "resolved": "17.5.0",
+        "contentHash": "X86aikwp9d4SDcBChwzQYZihTPGEtMdDk+9t64emAl7N0Tq+OmlLAoW+Rs+2FB2k6QdUicSlT4QLO2xABRokaw==",
+        "dependencies": {
+          "Microsoft.TestPlatform.ObjectModel": "17.5.0",
+          "Newtonsoft.Json": "13.0.1"
+        }
+      },
+      "NETStandard.Library": {
+        "type": "Transitive",
+        "resolved": "2.0.0",
+        "contentHash": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "13.0.1",
+        "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+      },
+      "NuGet.Frameworks": {
+        "type": "Transitive",
+        "resolved": "5.11.0",
+        "contentHash": "eaiXkUjC4NPcquGWzAGMXjuxvLwc6XGKMptSyOGQeT0X70BUZObuybJFZLA0OfTdueLd3US23NBPTBb6iF3V1Q=="
+      },
+      "stdole": {
+        "type": "Transitive",
+        "resolved": "7.0.3300",
+        "contentHash": "p9WhjNp/gM2z80u+xNA1XXFek57iybUUJaDnQooKfdct3vGIpmDzLdL7Rq4ZmFzZc3LN3SFs5bRIE7j/+gLn5Q=="
+      },
+      "System.Reflection.Metadata": {
+        "type": "Transitive",
+        "resolved": "1.6.0",
+        "contentHash": "COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ=="
       },
       "NetOfficeFw.Access": {
         "type": "Project",
