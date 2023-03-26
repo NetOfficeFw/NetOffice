@@ -31,7 +31,7 @@
       "NetOfficeFw.ADODBApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )"
+          "NetOfficeFw.Core": "[1.9.3, )"
         }
       },
       "NetOfficeFw.Core": {
@@ -40,14 +40,14 @@
       "NetOfficeFw.MSComctlLibApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )",
+          "NetOfficeFw.Core": "[1.9.3, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.MSDATASRCApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.0-local, )"
+          "NetOfficeFw.Core": "[1.9.3, )"
         }
       }
     }
