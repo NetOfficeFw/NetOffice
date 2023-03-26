@@ -24,9 +24,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DuckTales\EventBinding.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Remove="Factory.cs" />
     <Compile Remove="Tools\ErrorHandlerAttribute.cs" />
     <Compile Remove="Tools\ErrorHandlerFunctionAttribute.cs" />

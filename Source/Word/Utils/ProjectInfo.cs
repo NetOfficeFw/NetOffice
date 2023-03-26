@@ -86,14 +86,6 @@ namespace WordApi.Utils
             }
         }
 
-        public bool IsDuck
-        {
-            get
-            {
-                return false;
-            }
-        }
-
         public bool Contains(Type type)
         {
             if (null == _exportedTypes)
