@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.4
+
+### Added
+* Add Excel Queries and WorkbookQuery [#400](https://github.com/NetOfficeFw/NetOffice/pull/400)
+
+
 ## v1.9.3
 
 ### Fixed

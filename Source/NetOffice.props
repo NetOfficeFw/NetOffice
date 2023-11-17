@@ -1,13 +1,13 @@
 ﻿<Project>
   <!-- Common properties for NetOffice projects -->
   <PropertyGroup>
-    <NetOfficeRelease>1.9.3</NetOfficeRelease>
+    <NetOfficeRelease>1.9.4</NetOfficeRelease>
   </PropertyGroup>
 
   <PropertyGroup>
     <Product>NetOffice</Product>
     <PackageId Condition=" '$(PackageId)' == '' ">NetOfficeFw.$(AssemblyName)</PackageId>
-    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2022 Jozef Izso</Copyright>
+    <Copyright>Copyright © 2011-2018 Sebastian Lange, © 2015-2023 Jozef Izso</Copyright>
     <Company>NetOfficeFw</Company>
     <Authors>Sebastian Lange, Jozef Izso</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
