@@ -1,5 +1,7 @@
 {
-  "MD012": 2,
+  "MD012": {
+    "maximum": 2
+  },
   "MD013": false,
   "MD022": {
     "lines_above": 1,
