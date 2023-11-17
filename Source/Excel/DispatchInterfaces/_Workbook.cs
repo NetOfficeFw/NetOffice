@@ -2342,6 +2342,20 @@ namespace NetOffice.ExcelApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Excel 16
+		/// Get
+		/// </summary>
+		/// <remarks> Docs: <see href="https://learn.microsoft.com/en-us/office/vba/api/Excel.Workbook.Queries"/> </remarks>
+		[SupportByVersion("Excel", 16)]
+		public NetOffice.ExcelApi.Queries Queries
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Queries>(this, "Queries", NetOffice.ExcelApi.Queries.LateBindingApiWrapperType);
+			}
+		}
+
 		#endregion
 
 		#region Methods
