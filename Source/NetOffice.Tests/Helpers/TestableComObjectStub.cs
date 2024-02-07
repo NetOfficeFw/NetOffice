@@ -7,6 +7,12 @@ namespace NetOffice.Tests.Helpers
     internal class TestableComObjectStub : ICOMObject, IEventBinding
     {
         private List<ICOMObject> _children = new List<ICOMObject>();
+        private List<string> _eventRecipients = new List<string>();
+
+        public void AddEventRecipient(string eventName)
+        {
+            this._eventRecipients.Add(eventName);
+        }
 
         public bool EventBridgeInitialized => throw new NotImplementedException();
 
@@ -116,12 +122,12 @@ namespace NetOffice.Tests.Helpers
 
         public bool HasEventRecipients()
         {
-            return true;
+            return this._eventRecipients.Count > 0;
         }
 
         public bool HasEventRecipients(string eventName)
         {
-            return true;
+            return this._eventRecipients.Contains(eventName);
         }
 
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
