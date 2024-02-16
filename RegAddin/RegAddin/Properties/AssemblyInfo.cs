@@ -14,11 +14,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: InternalsVisibleTo("RegAddinTest,PublicKey=" +
-"0024000004800000940000000602000000240000525341310004000001000100a328dd78d7f848" +
-"a4b1c4983a036b491dd79539c44381c4a26eb81ffcbad19c5cd99dd800577ad1fb0903d9f3ecb0" +
-"f68018bf901d0c80419ded9ba929d057e76e7de969e994eec6255a64189253dc0978bb88c6432f" +
-"2884dcac27e80acfd8ded955fa747d859a2cf38fdd9bd48327e95db885dc9d806397faa809f4e0" +
-"629d08dc")]
+    "0024000004800000940000000602000000240000525341310004000001000100298c0fa7dc04d8" +
+    "ce948de923ae689b2fb44d095d6f04e428bd8c56b4821a3bd772b96fb3f5bfbde1f2a48d085343" +
+    "c0a2a00adb0ad29e3999a837ee0ca4487bae0280f48be08451214d20568f717a0fc0c392f589a4" +
+    "bde589e10eebedcec6b013ae09b3879934f0639050558a19b36a68cb74e822dce602fc51918041" +
+    "21ea45ce")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

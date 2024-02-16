@@ -40,7 +40,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>RegAddin.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Source\NetOffice.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -113,8 +113,10 @@
     <Compile Include="WarningPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\NetOffice.snk">
+      <Link>NetOffice.snk</Link>
+    </None>
     <None Include="app.config" />
-    <None Include="RegAddin.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ToDo.txt" />
