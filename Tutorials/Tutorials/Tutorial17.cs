@@ -5,6 +5,7 @@ using Excel = NetOffice.ExcelApi;
 using NetOffice.ExcelApi.Tools;
 using OfficeContribution = NetOffice.OfficeApi.Tools.Contribution;
 using NetOffice.ExcelApi.Tools.Contribution;
+using NetOffice.OfficeApi.Extensions.Dialogs;
 
 namespace TutorialsCS4
 {
@@ -50,8 +51,8 @@ namespace TutorialsCS4
             var userResult = 
                 utils.Dialog.ShowMessageBox(
                     "Hello World from NetOffice tutorial", "NO tutorial", 
-                    OfficeContribution.DialogUtils.Buttons.YesNo,
-                    OfficeContribution.DialogUtils.Result.No);
+                    DialogUtilsEx.Buttons.YesNo,
+                    DialogUtilsEx.Result.No);
             
 
             application.Quit();

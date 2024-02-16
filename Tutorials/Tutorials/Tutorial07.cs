@@ -10,28 +10,7 @@ namespace TutorialsCS4
     {
         public void Run()
         {
-            // NetOffice Core supports a so-called managed C# dynamic
-            // with proxy management services. No need for additional NetOffice Api assemblies.
-
-            // NetOffice want convert a proxy to COMDynamicObject each time if its failed to resolve
-            // a corresponding wrapper type.
-
-            // Note: Reference to Microsoft.CSharp is required.
-          
-            dynamic application = new COMDynamicObject("Excel.Application");
-            application.DisplayAlerts = false;
-            var book = application.Workbooks.Add();
-
-            foreach (var sheet in book.Sheets)
-            {
-                Console.WriteLine(sheet);
-            }
-            
-            // quit and dispose all open proxies
-            application.Quit();
-            application.Dispose();
-
-            HostApplication.ShowFinishDialog();
+            HostApplication.ShowFinishDialog("Support for dynamic COM objects was removed from NetOffice.");
         }
 
         public void Connect(IHost hostApplication)
@@ -57,7 +36,7 @@ namespace TutorialsCS4
 
         public string Description
         {
-            get { return "Managed Dynamics"; }
+            get { return "Managed Dynamics (Obsolete)"; }
         }
 
         public UserControl Panel
