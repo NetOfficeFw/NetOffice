@@ -27,7 +27,7 @@ namespace NetOffice.Loader
         /// <returns>resolved path</returns>
         public static string BuildLocalPathFromAssemblyFileName(Core factory, string assemblyName)
         {
-            string localAssemblyPath = Resolver.UriResolver.ResolveLocalPath(factory.ThisAssembly.CodeBase);
+            string localAssemblyPath = Resolver.UriResolver.ResolveLocalPath(factory.ThisAssembly.Location);
             string directoryName = System.IO.Path.GetDirectoryName(localAssemblyPath);
             string fullFileName = System.IO.Path.Combine(directoryName, assemblyName);
             return fullFileName;
