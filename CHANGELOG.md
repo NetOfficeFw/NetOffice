@@ -10,6 +10,12 @@
   * event `OnCreateCOMDynamicEvent`
 
 
+## v1.9.5
+
+### Fixed
+* Fix bug in `PresentationBeforeClose` code by verifying the correct event name [#153](https://github.com/NetOfficeFw/NetOffice/pull/153)
+
+
 ## v1.9.4
 
 ### Added
