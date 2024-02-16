@@ -575,7 +575,7 @@ namespace NetOffice.PowerPointApi.Events
 
         public void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
         {
-            if (!Validate("SlideShowOnPrevious"))
+            if (!Validate("PresentationBeforeClose"))
             {
                 Invoker.ReleaseParamsArray(pres, cancel);
                 return;
