@@ -28,18 +28,18 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup dotnet
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '7.0.201'
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.1
+      uses: microsoft/setup-msbuild@v2
 
     - name: Cache dotnet tools
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       id: cache-dotnettools
       with:
         path: ~/.dotnet/tools
@@ -54,7 +54,7 @@ jobs:
       run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.2
 
     - name: Cache packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.nuget/packages
         key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
@@ -90,7 +90,7 @@ jobs:
           --verbose
 
     - name: Archive NetOffice binaries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: NetOffice_binaries_v${{ steps.build.outputs.app_version_full }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
@@ -126,7 +126,7 @@ jobs:
 
     - name: Archive NetOffice packages
       if: success() && steps.build.outputs.publish_nuget == 'true'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: NetOffice_packages_v${{ steps.build.outputs.app_version_full }}
         path: '${{ github.workspace }}\dist'
