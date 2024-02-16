@@ -1,8 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <AssemblyTitle>NetOffice</AssemblyTitle>
     <Description>NetOffice core library</Description>
     <RootNamespace>NetOffice</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Core</PackageId>
@@ -12,9 +13,6 @@
 
   <Import Project="..\NetOffice.props" />
 
-  <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Update="Contribution\Controls\InstanceMonitor.cs">
       <SubType>UserControl</SubType>
