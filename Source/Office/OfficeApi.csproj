@@ -1,8 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <AssemblyTitle>Office</AssemblyTitle>
     <Description>Netoffice Office Api</Description>
     <RootNamespace>NetOffice.OfficeApi</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Office</PackageId>
@@ -12,13 +13,8 @@
 
   <Import Project="..\NetOffice.props" />
 
-  <PropertyGroup>
-    <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

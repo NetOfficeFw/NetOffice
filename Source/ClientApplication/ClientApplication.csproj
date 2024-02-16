@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <AssemblyTitle>ClientApplication</AssemblyTitle>
     <Description>Compile Dumy</Description>
     <IsPackable>false</IsPackable>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
@@ -12,10 +13,6 @@
 
   <Import Project="..\NetOffice.props" />
 
-  <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Access\AccessApi.csproj" />
     <ProjectReference Include="..\ADODB\ADODBApi.csproj" />

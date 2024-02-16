@@ -1,8 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <AssemblyTitle>NetOffice.OutlookApi</AssemblyTitle>
     <Description>NetOffice Outlook library</Description>
     <RootNamespace>NetOffice.OutlookApi</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>NetOfficeFw.Outlook</PackageId>
@@ -14,9 +15,6 @@
 
   <ItemGroup>
     <PackageReference Include="stdole" Version="[7.0.3300,)" NoWarn="NU1701" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Office\OfficeApi.csproj" />
