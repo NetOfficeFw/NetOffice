@@ -47,11 +47,11 @@ jobs:
 
     - name: Setup AzureSignTool
       if: steps.cache-dotnettools.outputs.cache-hit != 'true'
-      run: dotnet tool install --verbosity minimal --global azuresigntool --version 3.0.0
+      run: dotnet tool install --verbosity minimal --global azuresigntool --version 4.0.1
 
     - name: Setup NuGetKeyVaultSignTool
       if: steps.cache-dotnettools.outputs.cache-hit != 'true'
-      run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.2
+      run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.3
 
     - name: Cache packages
       uses: actions/cache@v4
