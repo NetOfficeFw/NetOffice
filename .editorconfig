@@ -3,13 +3,20 @@ root = true
 [*.*]
 charset = utf-8
 
-[*.{cs,csproj}]
+[*.cs]
 charset = utf-8-bom
 indent_style = space
 indent_size = 4
 
+[*.{cs,csproj}]
+charset = utf-8-bom
+indent_style = space
+indent_size = 2
+
 [*.sln]
 charset = utf-8-bom
+indent_style = tab
+indent_size = 4
 
 [app.{config,manifest}]
 charset = utf-8-bom
@@ -18,6 +25,10 @@ indent_size = 2
 
 [*.resx]
 charset = utf-8-bom
+indent_style = space
+indent_size = 2
+
+[*.yml]
 indent_style = space
 indent_size = 2
 
