@@ -49,6 +49,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{5997
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddinProjectHelper", "AddinProjectHelper\AddinProjectHelper.csproj", "{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddinRemovalTool", "AddinRemovalTool\AddinRemovalTool.csproj", "{FFE28948-F038-49FC-B407-19AD9C549EDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -185,6 +187,14 @@ Global
 		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|x86.ActiveCfg = Release|x86
 		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2}.Release|x86.Build.0 = Release|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Debug|Any CPU.Build.0 = Debug|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Debug|x86.ActiveCfg = Debug|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Debug|x86.Build.0 = Debug|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Release|Any CPU.ActiveCfg = Release|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Release|Any CPU.Build.0 = Release|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Release|x86.ActiveCfg = Release|x86
+		{FFE28948-F038-49FC-B407-19AD9C549EDF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,6 +215,7 @@ Global
 		{20974B7A-6EA6-479F-BBA5-FD6E4E75DF36} = {99980EF4-7027-4F25-98A1-3746803AB1FF}
 		{02E2257D-3C06-43CA-9CC0-C7E02E1CD0A1} = {55620AA8-130F-432E-B302-1DD46C673EAF}
 		{9BF0A9F0-F7BC-4A98-BEA4-44F29A92C9A2} = {5997766D-01F6-4B76-B5D4-ADB3F606D0F7}
+		{FFE28948-F038-49FC-B407-19AD9C549EDF} = {5997766D-01F6-4B76-B5D4-ADB3F606D0F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDD40CD3-5DE3-4889-A21A-1848C0F5EFF9}
