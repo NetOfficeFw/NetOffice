@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{30C85D67-193F-4E46-BE81-FD6EBE90CBC3}</ProjectGuid>
+    <ProjectGuid>{CBEB2AB3-B446-4762-9500-1F206F6CCC23}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OutlookExamplesCS4</RootNamespace>
@@ -67,20 +67,6 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExampleBase">
-      <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
-    </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
-    <Reference Include="OfficeApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="OutlookApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OutlookApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -166,7 +152,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Overview.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{c34ee361-0d28-471d-b44f-e1b4b286401f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{28ec9afb-801e-4acd-a922-109332f43434}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Outlook\OutlookApi.csproj">
+      <Project>{21cbbfa4-2e9b-46a8-9b41-5736f7cac60e}</Project>
+      <Name>OutlookApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExampleBase\ExampleBase.csproj">
+      <Project>{0d84e472-2f2b-490e-927a-0bdd751d6362}</Project>
+      <Name>ExampleBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
