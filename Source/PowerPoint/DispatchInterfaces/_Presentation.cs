@@ -410,6 +410,23 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// When you open a presentation that was saved as read-only recommended, Microsoft PowerPoint displays a message recommending that you open the presentation as read-only.
+		///
+		/// Use the SaveCopyAs2 method to change this property.
+		///
+		/// SupportByVersion PowerPoint 16
+		/// </summary>
+		/// <remarks> Docs: <see href="https://learn.microsoft.com/en-us/office/vba/api/powerpoint.presentation.readonlyrecommended"/> </remarks>
+		[SupportByVersion("PowerPoint", 16)]
+		public NetOffice.OfficeApi.Enums.MsoTriState ReadOnlyRecommended
+		{
+			get
+			{
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "ReadOnlyRecommended");
+			}
+		}
+
+		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// </summary>
