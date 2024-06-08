@@ -71,6 +71,12 @@ jobs:
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
+    - name: Sign Files Catalog
+      run: |
+        $content = Get-Content obj/signlist.txt
+        $content = $content.Replace('${{ github.workspace }}', '..')
+        $content | Set-Content obj/signlist.txt
+
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
       uses: azure/trusted-signing-action@v0.3.19
