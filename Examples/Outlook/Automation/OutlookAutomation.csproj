@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9BF03806-F1E8-4FAB-A60B-BA981ADDBFC2}</ProjectGuid>
+    <ProjectGuid>{CBEB2AB3-B446-4762-9500-1F206F6CCC23}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AccessExamplesCS4</RootNamespace>
-    <AssemblyName>AccessExamplesCS4</AssemblyName>
+    <RootNamespace>OutlookExamplesCS4</RootNamespace>
+    <AssemblyName>OutlookExamplesCS4</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -40,13 +40,15 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Debug\AccessExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Debug\OutlookExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -54,68 +56,35 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Release\AccessExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Release\OutlookExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AccessApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\AccessApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="ADODBApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\ADODBApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="DAOApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\DAOApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="ExampleBase">
-      <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
-    </Reference>
-    <Reference Include="MSComctlLibApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSComctlLibApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="MSDATASRCApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\MSDATASRCApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
-    <Reference Include="OfficeApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="OWC10Api">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OWC10Api.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Examples\Example01.cs" />
-    <Compile Include="Examples\Example02.cs" />
-    <Compile Include="Examples\Example03.cs" />
-    <Compile Include="Examples\Example04.cs">
+    <Compile Include="Examples\Example06.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Examples\Example04.Designer.cs">
-      <DependentUpon>Example04.cs</DependentUpon>
+    <Compile Include="Examples\Example06.Designer.cs">
+      <DependentUpon>Example06.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Example07.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Examples\Example07.Designer.cs">
+      <DependentUpon>Example07.cs</DependentUpon>
     </Compile>
     <Compile Include="Examples\Example05.cs">
       <SubType>UserControl</SubType>
@@ -123,6 +92,20 @@
     <Compile Include="Examples\Example05.Designer.cs">
       <DependentUpon>Example05.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examples\Example04.cs" />
+    <Compile Include="Examples\Example03.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Examples\Example03.Designer.cs">
+      <DependentUpon>Example03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Example01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Examples\Example01.Designer.cs">
+      <DependentUpon>Example01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Example02.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,11 +114,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Examples\Example04.resx">
-      <DependentUpon>Example04.cs</DependentUpon>
+    <EmbeddedResource Include="Examples\Example06.resx">
+      <DependentUpon>Example06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\Example07.resx">
+      <DependentUpon>Example07.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Examples\Example05.resx">
       <DependentUpon>Example05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\Example01.resx">
+      <DependentUpon>Example01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examples\Example03.resx">
+      <DependentUpon>Example03.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -160,7 +152,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Overview.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{c34ee361-0d28-471d-b44f-e1b4b286401f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{28ec9afb-801e-4acd-a922-109332f43434}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Outlook\OutlookApi.csproj">
+      <Project>{21cbbfa4-2e9b-46a8-9b41-5736f7cac60e}</Project>
+      <Name>OutlookApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExampleBase\ExampleBase.csproj">
+      <Project>{0d84e472-2f2b-490e-927a-0bdd751d6362}</Project>
+      <Name>ExampleBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

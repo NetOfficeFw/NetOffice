@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{30C85D67-193F-4E46-BE81-FD6EBE90CBC3}</ProjectGuid>
+    <ProjectGuid>{9BF03806-F1E8-4FAB-A60B-BA981ADDBFC2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WordExamplesCS4</RootNamespace>
-    <AssemblyName>WordExamplesCS4</AssemblyName>
+    <RootNamespace>AccessExamplesCS4</RootNamespace>
+    <AssemblyName>AccessExamplesCS4</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -40,14 +42,14 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Debug\WordExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Debug\AccessExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
-    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
@@ -55,57 +57,38 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Release\WordExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisLogFile>bin\Release\AccessExamplesCS4.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
     <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
     <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Programme\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ExampleBase">
-      <HintPath>..\..\..\..\ExampleBase.dll</HintPath>
-    </Reference>
-    <Reference Include="NetOffice">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\NetOffice.dll</HintPath>
-    </Reference>
-    <Reference Include="OfficeApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\OfficeApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="VBIDEApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\VBIDEApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="WordApi">
-      <HintPath>..\..\..\..\..\Assemblies\Any CPU\WordApi.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Examples\Example06.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Examples\Example06.Designer.cs">
-      <DependentUpon>Example06.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Examples\Example07.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Examples\Example07.Designer.cs">
-      <DependentUpon>Example07.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Examples\Example01.cs" />
     <Compile Include="Examples\Example02.cs" />
     <Compile Include="Examples\Example03.cs" />
-    <Compile Include="Examples\Example04.cs" />
-    <Compile Include="Examples\Example05.cs" />
-    <Compile Include="Examples\Example01.cs" />
+    <Compile Include="Examples\Example04.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Examples\Example04.Designer.cs">
+      <DependentUpon>Example04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Example05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Examples\Example05.Designer.cs">
+      <DependentUpon>Example05.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +97,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Examples\Example06.resx">
-      <DependentUpon>Example06.cs</DependentUpon>
+    <EmbeddedResource Include="Examples\Example04.resx">
+      <DependentUpon>Example04.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Examples\Example07.resx">
-      <DependentUpon>Example07.cs</DependentUpon>
+    <EmbeddedResource Include="Examples\Example05.resx">
+      <DependentUpon>Example05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +113,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,6 +126,28 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Overview.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Source\Access\AccessApi.csproj">
+      <Project>{e01e3993-d6ff-4cae-a8bd-e6c924988624}</Project>
+      <Name>AccessApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\DAO\DAOApi.csproj">
+      <Project>{e66d74ef-226c-46b9-b008-7af495a1da11}</Project>
+      <Name>DAOApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\NetOffice\NetOffice.csproj">
+      <Project>{c34ee361-0d28-471d-b44f-e1b4b286401f}</Project>
+      <Name>NetOffice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Source\Office\OfficeApi.csproj">
+      <Project>{28ec9afb-801e-4acd-a922-109332f43434}</Project>
+      <Name>OfficeApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExampleBase\ExampleBase.csproj">
+      <Project>{0d84e472-2f2b-490e-927a-0bdd751d6362}</Project>
+      <Name>ExampleBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
