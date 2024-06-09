@@ -71,23 +71,26 @@ jobs:
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
+    - name: Sign Files Catalog
+      run: |
+        $content = Get-Content obj/signlist.txt
+        $content = $content.Replace('${{ github.workspace }}', '..')
+        $content | Set-Content obj/signlist.txt
+
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
-      working-directory: '${{ github.workspace}}'
-      run: |
-          AzureSignTool.exe sign `
-          --file-digest sha256 `
-          --description-url "https://github.com/NetOfficeFw/NetOffice" `
-          --no-page-hashing `
-          --timestamp-rfc3161 http://timestamp.digicert.com `
-          --timestamp-digest sha256 `
-          --azure-key-vault-url https://opensourcesigning.vault.azure.net `
-          --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
-          --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
-          --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
-          --azure-key-vault-certificate "goITSolutions-until-2024-01" `
-          --input-file-list obj/signlist.txt `
-          --verbose
+      uses: azure/trusted-signing-action@v0.3.19
+      with:
+          azure-tenant-id: ${{ secrets.KEYVAULT_TENANT_ID }}
+          azure-client-id: ${{ secrets.KEYVAULT_CLIENT_ID }}
+          azure-client-secret: ${{ secrets.KEYVAULT_CLIENT_SECRET }}
+          endpoint: ${{ vars.KEYVAULT_ENDPOINT }}
+          trusted-signing-account-name: ${{ vars.KEYVAULT_ACCOUNT_NAME }}
+          certificate-profile-name: ${{ secrets.KEYVAULT_CERTIFICATE_PROFILE }}
+          files-catalog: '${{ github.workspace }}/obj/signlist.txt'
+          file-digest: SHA256
+          timestamp-rfc3161: http://timestamp.acs.microsoft.com
+          timestamp-digest: SHA256
 
     - name: Archive NetOffice binaries
       uses: actions/upload-artifact@v3
@@ -102,19 +105,19 @@ jobs:
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
-    - name: Sign NetOffice packages
-      if: success() && steps.build.outputs.publish_nuget == 'true' && steps.build.outputs.sign_binaries == 'true'
-      working-directory: '${{ github.workspace}}\dist'
-      run: |
-          NuGetKeyVaultSignTool.exe sign *.nupkg `
-          --file-digest sha256 `
-          --timestamp-rfc3161 http://timestamp.digicert.com `
-          --timestamp-digest sha256 `
-          --azure-key-vault-url https://opensourcesigning.vault.azure.net `
-          --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
-          --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
-          --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
-          --azure-key-vault-certificate "goITSolutions-until-2024-01"
+    # - name: Sign NetOffice packages
+    #   if: success() && steps.build.outputs.publish_nuget == 'true' && steps.build.outputs.sign_binaries == 'true'
+    #   working-directory: '${{ github.workspace}}\dist'
+    #   run: |
+    #       NuGetKeyVaultSignTool.exe sign *.nupkg `
+    #       --file-digest sha256 `
+    #       --timestamp-rfc3161 http://timestamp.digicert.com `
+    #       --timestamp-digest sha256 `
+    #       --azure-key-vault-url https://opensourcesigning.vault.azure.net `
+    #       --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
+    #       --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
+    #       --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
+    #       --azure-key-vault-certificate "goITSolutions-until-2024-01"
 
     - name: Publish packages
       if: success()  && steps.build.outputs.publish_nuget == 'true'
