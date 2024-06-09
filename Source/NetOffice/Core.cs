@@ -483,7 +483,7 @@ namespace NetOffice
 
                     if (Settings.EnableMoreDebugOutput)
                     {
-                        string localPath = Resolver.UriResolver.ResolveLocalPath(ThisAssembly.CodeBase);
+                        string localPath = ThisAssembly.Location;
                         Console.WriteLine("Local Bind Path:{0}", localPath);
                     }
 
