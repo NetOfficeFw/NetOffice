@@ -10,6 +10,21 @@ namespace NetOffice.Tests.NetOffice.Loader
     public class PathBuilderTests
     {
         [Test]
+        public void BuildLocalPathFromDependentAssembly_SampleDependentAssembly_ResolvesPathToAssemblyFile()
+        {
+            // Arrange
+            var expectedAssemblyName = "NetOffice.Core.dll";
+            var assembly = new DependentAssembly(expectedAssemblyName, typeof(Core).Assembly);
+
+            // Act
+            var path = PathBuilder.BuildLocalPathFromDependentAssembly(assembly);
+
+            // Assert
+            StringAssert.EndsWith(expectedAssemblyName, path);
+            Assert.IsTrue(Path.IsPathRooted(path));
+        }
+
+        [Test]
         [TestCaseSource(nameof(NetOfficeAssemblyNameTestCase))]
         public void BuildLocalPathFromAssemblyFileName_NetOfficeAssemblyName_ResolvesPathToAssemblyFile(string assemblyName)
         {
