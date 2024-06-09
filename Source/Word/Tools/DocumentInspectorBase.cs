@@ -342,7 +342,10 @@ namespace NetOffice.WordApi.Tools
                     bool isSystemComponent = location.IsMachineComponentTarget(scope);
                     Assembly thisAssembly = Assembly.GetAssembly(type);
                     string assemblyVersion = thisAssembly.GetName().Version.ToString();
+#pragma warning disable SYSLIB0012 // Type or member is obsolete
+                    // although `CodeBase` is obsolete, the COM registry value requires it
                     CodebaseAttribute.CreateValue(type.GUID, isSystemComponent, assemblyVersion, thisAssembly.CodeBase);
+#pragma warning restore SYSLIB0012 // Type or member is obsolete
 
                 }
             }
