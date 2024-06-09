@@ -8,7 +8,7 @@ charset = utf-8-bom
 indent_style = space
 indent_size = 4
 
-[*.{cs,csproj}]
+[*.{csproj}]
 charset = utf-8-bom
 indent_style = space
 indent_size = 2
