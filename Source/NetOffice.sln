@@ -47,6 +47,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetOffice.Tests", "NetOffic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeApi.Extensions", "Office.Extensions\OfficeApi.Extensions.csproj", "{A928079E-A92E-4964-A586-EFED61ED665A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F0235130-228E-419C-B21B-7F17E205C90A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoAssemblyTitle", "..\Tests\NoAssemblyTitle\NoAssemblyTitle.csproj", "{5A6FBEE8-DF8A-4A52-8734-CE00289FCBB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -118,9 +122,16 @@ Global
 		{A928079E-A92E-4964-A586-EFED61ED665A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A928079E-A92E-4964-A586-EFED61ED665A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A928079E-A92E-4964-A586-EFED61ED665A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6FBEE8-DF8A-4A52-8734-CE00289FCBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6FBEE8-DF8A-4A52-8734-CE00289FCBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6FBEE8-DF8A-4A52-8734-CE00289FCBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6FBEE8-DF8A-4A52-8734-CE00289FCBB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A6FBEE8-DF8A-4A52-8734-CE00289FCBB1} = {F0235130-228E-419C-B21B-7F17E205C90A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11306061-4126-4B70-AE48-BFAA3965B8A5}
