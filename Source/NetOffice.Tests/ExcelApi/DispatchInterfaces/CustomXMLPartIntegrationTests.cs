@@ -18,48 +18,49 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
         public void SetUp()
         {
             this.ExcelApplication = new Application();
+            this.Workbook = this.ExcelApplication.Workbooks.Add();
         }
 
         [TearDown]
         public void TearDown()
         {
+            this.Workbook.Close(false);
+            this.Workbook.Dispose();
+
             this.ExcelApplication?.Quit();
             this.ExcelApplication?.Dispose();
         }
 
         public Application ExcelApplication { get; set; }
 
+        public Workbook Workbook { get; set; }
+
+
         [Test]
-        public void LoadXML_VadliXmlValue_LoadsIt()
+        public void LoadXML_VadidXmlValue_LoadsIt()
         {
             // Arrange
-            using (var workbook = this.ExcelApplication.Workbooks.Add())
-            {
-                CustomXMLPart cxp1 = workbook.CustomXMLParts.Add();
+            CustomXMLPart cxp1 = Workbook.CustomXMLParts.Add();
 
-                // Act
-                cxp1.LoadXML("<discounts><discount>0.10</discount></discounts>");
+            // Act
+            cxp1.LoadXML("<discounts><discount>0.10</discount></discounts>");
 
-                // Assert
-                Assert.AreEqual("<discounts><discount>0.10</discount></discounts>", cxp1.XML);
-            }
+            // Assert
+            Assert.AreEqual("<discounts><discount>0.10</discount></discounts>", cxp1.XML);
         }
 
         [Test]
         public void Delete_ValidXmlPart_RemovesIt()
         {
             // Arrange
-            using (var workbook = this.ExcelApplication.Workbooks.Add())
-            {
-                CustomXMLPart cxp1 = workbook.CustomXMLParts.Add();
-                cxp1.LoadXML("<discounts><discount>0.10</discount></discounts>");
+            CustomXMLPart cxp1 = Workbook.CustomXMLParts.Add();
+            cxp1.LoadXML("<discounts><discount>0.10</discount></discounts>");
 
-                // Act
-                cxp1.Delete();
+            // Act
+            cxp1.Delete();
 
-                // Assert
-                Assert.Pass();
-            }
+            // Assert
+            Assert.Pass();
         }
 
         /// <summary>
@@ -69,17 +70,14 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
         public void AddNode_NetOfficeCall_ShouldWork()
         {
             // Arrange
-            using (var workbook = this.ExcelApplication.Workbooks.Add())
-            {
-                CustomXMLPart cxp1 = workbook.CustomXMLParts.Add("<invoice />");
-                CustomXMLNode cxn = cxp1.SelectSingleNode("/invoice");
+            CustomXMLPart cxp1 = Workbook.CustomXMLParts.Add("<invoice />");
+            CustomXMLNode cxn = cxp1.SelectSingleNode("/invoice");
 
-                // Act
-                Assert.Throws<MethodCOMException>(() => cxp1.AddNode(cxn, "upcode", "urn:invoice:namespace"));
+            // Act
+            Assert.Throws<MethodCOMException>(() => cxp1.AddNode(cxn, "upcode", "urn:invoice:namespace"));
 
-                // Assert
-                // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
-            }
+            // Assert
+            // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
         }
 
         /// <summary>
@@ -89,17 +87,14 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
         public void AddNode_NullObjects_ShouldWork()
         {
             // Arrange
-            using (var workbook = this.ExcelApplication.Workbooks.Add())
-            {
-                CustomXMLPart cxp1 = workbook.CustomXMLParts.Add("<invoice />");
-                CustomXMLNode cxn = cxp1.SelectSingleNode("/invoice");
+            CustomXMLPart cxp1 = Workbook.CustomXMLParts.Add("<invoice />");
+            CustomXMLNode cxn = cxp1.SelectSingleNode("/invoice");
 
-                // Act
-                Assert.Throws<MethodCOMException>(() => cxp1.AddNode(cxn, null, null, null, null, null));
+            // Act
+            Assert.Throws<MethodCOMException>(() => cxp1.AddNode(cxn, null, null, null, null, null));
 
-                // Assert
-                // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
-            }
+            // Assert
+            // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
         }
 
         /// <summary>
@@ -109,20 +104,17 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
         public void AddNode_DynamicCall_ShouldWork()
         {
             // Arrange
-            using (var workbook = this.ExcelApplication.Workbooks.Add())
-            {
-                var dyn = (dynamic)workbook.UnderlyingObject;
-                dynamic cxp1 = dyn.CustomXMLParts.Add("<invoice />");
-                dynamic cxn = cxp1.SelectSingleNode("/invoice");
-                cxn.GetType();
+            var dyn = (dynamic)Workbook.UnderlyingObject;
+            dynamic cxp1 = dyn.CustomXMLParts.Add("<invoice />");
+            dynamic cxn = cxp1.SelectSingleNode("/invoice");
+            cxn.GetType();
 
-                // Act
-                var ex = Assert.Throws<ArgumentException>(() => cxp1.AddNode(ref cxn, "upcode", "urn:invoice:namespace"));
+            // Act
+            var ex = Assert.Throws<ArgumentException>(() => cxp1.AddNode(ref cxn, "upcode", "urn:invoice:namespace"));
 
-                // Assert
-                // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
-                Assert.AreEqual("Could not convert argument 0 for call to AddNode.", ex.Message);
-            }
+            // Assert
+            // Assert.AreEqual(@"<invoice><upccode xmlns=""urn: invoice:namespace""/></invoice>", cxp1.XML);
+            Assert.AreEqual("Could not convert argument 0 for call to AddNode.", ex.Message);
         }
     }
 }

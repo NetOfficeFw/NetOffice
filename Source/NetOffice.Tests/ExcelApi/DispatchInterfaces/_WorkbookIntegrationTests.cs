@@ -36,6 +36,9 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
 
                 // Assert
                 Assert.IsFalse(actual, "Workbook.AutoSaveOn property should be false.");
+
+                // Cleanup
+                workbook.Close(false);
             }
         }
 
@@ -49,6 +52,9 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
                 var ex = Assert.Throws<PropertySetCOMException>(() => workbook.AutoSaveOn = autoSaveOnValue);
 
                 Assert.AreEqual("Failed to proceed PropertySet on Excel.Workbook=>AutoSaveOn.", ex.Message);
+
+                // Cleanup
+                workbook.Close(false);
             }
         }
     }
