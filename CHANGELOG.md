@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.6
+
+### Added
+* Added `Presentation.ReadOnlyRecommended` property in PowerPoint library [#411](https://github.com/NetOfficeFw/NetOffice/pull/411)
+
+
 ## v1.9.5
 
 ### Fixed
