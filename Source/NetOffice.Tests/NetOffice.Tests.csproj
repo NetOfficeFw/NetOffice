@@ -23,6 +23,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Tests\NoAssemblyTitle\NoAssemblyTitle.csproj" />
     <ProjectReference Include="..\Access\AccessApi.csproj" />
     <ProjectReference Include="..\Excel\ExcelApi.csproj" />
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />

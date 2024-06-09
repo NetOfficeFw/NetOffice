@@ -133,7 +133,7 @@ namespace NetOffice.Loader
                 versionMatch = null == localPath ? ValidateVersion(name) : ValidateVersion(localPath);
                 if (null == localPath)
                 {
-                    string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);
+                    string thisLocalPath = Owner.ThisAssembly.Location;
                     string extension = Path.GetExtension(thisLocalPath);
                     string path = Path.GetDirectoryName(thisLocalPath);
                     localPath = Path.Combine(path, name.Name + extension);
@@ -238,7 +238,7 @@ namespace NetOffice.Loader
                 if (args.Name.ContainsIgnoreCase(".resources"))
                     return null;
 
-                string thisLocalPath = Resolver.UriResolver.ResolveLocalPath(Owner.ThisAssembly.CodeBase);
+                string thisLocalPath = Owner.ThisAssembly.Location;
                 string extension = Path.GetExtension(thisLocalPath);
                 string path = Path.GetDirectoryName(thisLocalPath);
                 string fullFileName = Path.Combine(path, args.Name + extension);

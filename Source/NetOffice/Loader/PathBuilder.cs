@@ -14,9 +14,9 @@ namespace NetOffice.Loader
         /// <returns>resolved path</returns>
         public static string BuildLocalPathFromDependentAssembly(DependentAssembly assembly)
         {
-            string fileName = assembly.ParentAssembly.CodeBase.Substring(0, assembly.ParentAssembly.CodeBase.LastIndexOf("/")) + "/" + assembly.Name;
-            fileName = fileName.Replace("/", "\\").Substring(8);
-            return fileName;
+            string parentAssemblyDirectory = Path.GetDirectoryName(assembly.ParentAssembly.Location);
+            string localFilename = Path.Combine(parentAssemblyDirectory, assembly.Name);
+            return localFilename;
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace NetOffice.Loader
         /// <returns>resolved path</returns>
         public static string BuildLocalPathFromAssemblyFileName(Core factory, string assemblyName)
         {
-            string localAssemblyPath = Resolver.UriResolver.ResolveLocalPath(factory.ThisAssembly.CodeBase);
+            string localAssemblyPath = Resolver.UriResolver.ResolveLocalPath(factory.ThisAssembly.Location);
             string directoryName = System.IO.Path.GetDirectoryName(localAssemblyPath);
             string fullFileName = System.IO.Path.Combine(directoryName, assemblyName);
             return fullFileName;

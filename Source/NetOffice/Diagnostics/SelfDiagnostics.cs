@@ -51,7 +51,7 @@ namespace NetOffice.Diagnostics
                     if (titleAttribute.Title != String.Empty)
                         return titleAttribute.Title;
                 }
-                return System.IO.Path.GetFileNameWithoutExtension(OwnerAssembly.CodeBase);
+                return System.IO.Path.GetFileNameWithoutExtension(OwnerAssembly.Location);
             }
         }
 

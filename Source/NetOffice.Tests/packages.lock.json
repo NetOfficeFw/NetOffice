@@ -56,20 +56,20 @@
       "NetOfficeFw.Access": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.ADODBApi": "[1.9.3, )",
-          "NetOfficeFw.Core": "[1.9.3, )",
-          "NetOfficeFw.DAOApi": "[1.9.3, )",
-          "NetOfficeFw.MSComctlLibApi": "[1.9.3, )",
-          "NetOfficeFw.MSDATASRCApi": "[1.9.3, )",
-          "NetOfficeFw.OWC10Api": "[1.9.3, )",
-          "NetOfficeFw.Office": "[1.9.3, )",
-          "NetOfficeFw.VBIDE": "[1.9.3, )"
+          "NetOfficeFw.ADODBApi": "[2.0.0, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.DAOApi": "[2.0.0, )",
+          "NetOfficeFw.MSComctlLibApi": "[2.0.0, )",
+          "NetOfficeFw.MSDATASRCApi": "[2.0.0, )",
+          "NetOfficeFw.OWC10Api": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "NetOfficeFw.VBIDE": "[2.0.0, )"
         }
       },
       "NetOfficeFw.ADODBApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )"
+          "NetOfficeFw.Core": "[2.0.0, )"
         }
       },
       "NetOfficeFw.Core": {
@@ -78,69 +78,75 @@
       "NetOfficeFw.DAOApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )"
+          "NetOfficeFw.Core": "[2.0.0, )"
         }
       },
       "NetOfficeFw.Excel": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
-          "NetOfficeFw.Office": "[1.9.3, )",
-          "NetOfficeFw.VBIDE": "[1.9.3, )"
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "NetOfficeFw.VBIDE": "[2.0.0, )"
         }
       },
       "NetOfficeFw.MSComctlLibApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.MSDATASRCApi": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )"
+          "NetOfficeFw.Core": "[2.0.0, )"
         }
       },
       "NetOfficeFw.Office": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.Outlook": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
-          "NetOfficeFw.Office": "[1.9.3, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.OWC10Api": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.ADODBApi": "[1.9.3, )",
-          "NetOfficeFw.Core": "[1.9.3, )",
-          "NetOfficeFw.MSComctlLibApi": "[1.9.3, )",
-          "NetOfficeFw.MSDATASRCApi": "[1.9.3, )",
+          "NetOfficeFw.ADODBApi": "[2.0.0, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.MSComctlLibApi": "[2.0.0, )",
+          "NetOfficeFw.MSDATASRCApi": "[2.0.0, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.PowerPoint": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
-          "NetOfficeFw.Office": "[1.9.3, )",
-          "NetOfficeFw.VBIDE": "[1.9.3, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )",
+          "NetOfficeFw.VBIDE": "[2.0.0, )",
           "stdole": "[7.0.3300, )"
         }
       },
       "NetOfficeFw.VBIDE": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
-          "NetOfficeFw.Office": "[1.9.3, )"
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "NetOfficeFw.Office": "[2.0.0, )"
+        }
+      },
+      "noassemblytitle": {
+        "type": "Project",
+        "dependencies": {
+          "NetOfficeFw.Core": "[2.0.0, )"
         }
       }
     }
