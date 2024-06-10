@@ -31,7 +31,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>net462;net6.0-windows</TargetFrameworks>
+    <TargetFrameworks>net462;net6.0-windows;net8.0-windows</TargetFrameworks>
     <Configuration>Debug</Configuration>
   </PropertyGroup>
 
