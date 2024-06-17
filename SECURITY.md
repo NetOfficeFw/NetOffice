@@ -6,13 +6,9 @@ NetOffice releases supported with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.7.8+  | :white_check_mark: |
-| 1.7.4   | :white_check_mark: |
-| 1.7.3   | :white_check_mark: |
-| 1.7.2   | :x:                |
-| 1.6.0   | :x:                |
-| 1.1     | :x:                |
-| 1.0     | :x:                |
+| 1.9.6+  | :white_check_mark: |
+| < 1.9.5 | :x:                |
+| < 1.8   | :x:                |
 | < 1.0   | :x:                |
 
 ## Reporting a Vulnerability
