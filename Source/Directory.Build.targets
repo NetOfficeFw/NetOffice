@@ -1,5 +1,36 @@
 <Project>
+
+  <PropertyGroup>
+    <AfterBuildDependsOn>
+      $(AfterBuildDependsOn);
+      SignOutputTarget;
+    </AfterBuildDependsOn>
+  </PropertyGroup>
+
   <Target Name="AfterBuild" DependsOnTargets="$(AfterBuildDependsOn)">
-    <WriteLinesToFile File="$(SignListPath)" Lines="$(TargetPath)" />
+  </Target>
+
+  <ItemGroup>
+    <TargetToSign Include="$(TargetPath)" Condition=" '$(ConfigurationType)' == 'DynamicLibrary' Or '$(ConfigurationType)' == 'Application' Or '$(OutputType)' == 'Library' Or '$(OutputType)' == 'Exe' ">
+      <SignToolLogFile>$(IntermediateOutputPath)$(ProjectName)_signtool.log</SignToolLogFile>
+    </TargetToSign>
+  </ItemGroup>
+
+  <!--
+    Signs output file $(TargetPath) using authenticode certificate.
+    We use the Azure Trusted Signing service to sign files.
+    Configuration is set in the `trustedsigning.json` file.
+  -->
+  <Target Name="SignOutputTarget"
+          Outputs="@(TargetToSign)"
+          Condition=" '$(SignOutput)' == 'true' And '@(TargetToSign)' != '' ">
+    <Message Text="Signing file %(TargetToSign.FullPath)" Importance="High" />
+
+    <PropertyGroup>
+      <TrustedSigningDlibArg>/dlib "$(TrustedSigningDlibFilePath)"</TrustedSigningDlibArg>
+      <TrustedSigningDlibConfigArg>/dmdf "$(TrustedSigningConfigPath)"</TrustedSigningDlibConfigArg>
+    </PropertyGroup>
+
+    <Exec Command="&quot;$(SignAppxPackageExeFullPath)&quot; sign /v /debug /fd sha256 /td sha256 /tr $(SignTimestampServer) $(TrustedSigningDlibArg) $(TrustedSigningDlibConfigArg) &quot;%(TargetToSign.FullPath)&quot; &gt; &quot;%(TargetToSign.SignToolLogFile)&quot;" />
   </Target>
 </Project>

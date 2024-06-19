@@ -59,7 +59,9 @@
 
   <!-- Authenticode signing -->
   <PropertyGroup>
-    <SignListPath Condition=" '$(SignListPath)' == '' ">$(MSBuildThisFileDirectory)..\obj\signlist.txt</SignListPath>
+    <SignOutput Condition=" '$(SignOutput)' == '' ">false</SignOutput>
+    <SignTimestampServer>http://timestamp.acs.microsoft.com/</SignTimestampServer>
+    <TrustedSigningConfigPath>$(MSBuildThisFileDirectory)trustedsigning.json</TrustedSigningConfigPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -70,5 +72,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.3233" />
+    <PackageReference Include="Microsoft.Trusted.Signing.Client" Version="1.0.60" />
   </ItemGroup>
 </Project>

@@ -12,6 +12,18 @@
           "Microsoft.SourceLink.Common": "1.1.1"
         }
       },
+      "Microsoft.Trusted.Signing.Client": {
+        "type": "Direct",
+        "requested": "[1.0.60, )",
+        "resolved": "1.0.60",
+        "contentHash": "FTMmjIfofcvi3KTcyMKzAI1nIo+kvswo8HdsWWpLAomYyy85LixevLutCipU6nNv9E1iLuZWkZE6OoPhbu2QAg=="
+      },
+      "Microsoft.Windows.SDK.BuildTools": {
+        "type": "Direct",
+        "requested": "[10.0.22621.3233, )",
+        "resolved": "10.0.22621.3233",
+        "contentHash": "v67zwCb9JOpfPxdSroZukIKHruU6FUB+KwcmSPcVvUFyYtcyvcUign5y8jPQNi54CVzWvaTg646e62LbanUkxg=="
+      },
       "System.Resources.Extensions": {
         "type": "Direct",
         "requested": "[6.0.0, )",
@@ -62,12 +74,18 @@
         "contentHash": "3TIsJhD1EiiT0w2CcDMN/iSSwnNnsrnbzeVHSKkaEgV85txMprmuO+Yq2AdSbeVGcg28pdNDTPK87tJhX7VFHw=="
       },
       "NetOfficeFw.Core": {
-        "type": "Project"
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )"
+        }
       },
       "NetOfficeFw.Office": {
         "type": "Project",
         "dependencies": {
-          "NetOfficeFw.Core": "[1.9.3, )",
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
           "stdole": "[7.0.3300, )"
         }
       }
