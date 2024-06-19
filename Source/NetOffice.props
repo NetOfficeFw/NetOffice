@@ -59,6 +59,7 @@
 
   <!-- Authenticode signing -->
   <PropertyGroup>
+    <SignOutput Condition=" '$(SignOutput)' == '' ">false</SignOutput>
     <SignTimestampServer>http://timestamp.acs.microsoft.com/</SignTimestampServer>
     <TrustedSigningConfigPath>$(MSBuildThisFileDirectory)trustedsigning.json</TrustedSigningConfigPath>
   </PropertyGroup>
