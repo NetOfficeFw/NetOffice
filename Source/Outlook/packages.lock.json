@@ -112,6 +112,62 @@
           "stdole": "[7.0.3300, )"
         }
       }
+    },
+    "net8.0-windows7.0": {
+      "Microsoft.SourceLink.GitHub": {
+        "type": "Direct",
+        "requested": "[1.1.1, )",
+        "resolved": "1.1.1",
+        "contentHash": "IaJGnOv/M7UQjRJks7B6p7pbPnOwisYGOIzqCz5ilGFTApZ3ktOR+6zJ12ZRPInulBmdAf1SrGdDG2MU8g6XTw==",
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.1.1",
+          "Microsoft.SourceLink.Common": "1.1.1"
+        }
+      },
+      "Microsoft.Trusted.Signing.Client": {
+        "type": "Direct",
+        "requested": "[1.0.60, )",
+        "resolved": "1.0.60",
+        "contentHash": "FTMmjIfofcvi3KTcyMKzAI1nIo+kvswo8HdsWWpLAomYyy85LixevLutCipU6nNv9E1iLuZWkZE6OoPhbu2QAg=="
+      },
+      "Microsoft.Windows.SDK.BuildTools": {
+        "type": "Direct",
+        "requested": "[10.0.22621.3233, )",
+        "resolved": "10.0.22621.3233",
+        "contentHash": "v67zwCb9JOpfPxdSroZukIKHruU6FUB+KwcmSPcVvUFyYtcyvcUign5y8jPQNi54CVzWvaTg646e62LbanUkxg=="
+      },
+      "stdole": {
+        "type": "Direct",
+        "requested": "[7.0.3300, )",
+        "resolved": "7.0.3300",
+        "contentHash": "p9WhjNp/gM2z80u+xNA1XXFek57iybUUJaDnQooKfdct3vGIpmDzLdL7Rq4ZmFzZc3LN3SFs5bRIE7j/+gLn5Q=="
+      },
+      "Microsoft.Build.Tasks.Git": {
+        "type": "Transitive",
+        "resolved": "1.1.1",
+        "contentHash": "AT3HlgTjsqHnWpBHSNeR0KxbLZD7bztlZVj7I8vgeYG9SYqbeFGh0TM/KVtC6fg53nrWHl3VfZFvb5BiQFcY6Q=="
+      },
+      "Microsoft.SourceLink.Common": {
+        "type": "Transitive",
+        "resolved": "1.1.1",
+        "contentHash": "WMcGpWKrmJmzrNeuaEb23bEMnbtR/vLmvZtkAP5qWu7vQsY59GqfRJd65sFpBszbd2k/bQ8cs8eWawQKAabkVg=="
+      },
+      "NetOfficeFw.Core": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )"
+        }
+      },
+      "NetOfficeFw.Office": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Trusted.Signing.Client": "[1.0.60, )",
+          "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.3233, )",
+          "NetOfficeFw.Core": "[2.0.0, )",
+          "stdole": "[7.0.3300, )"
+        }
+      }
     }
   }
 }
