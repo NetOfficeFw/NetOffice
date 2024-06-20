@@ -43,9 +43,10 @@ if ($configuration -ieq 'release') {
     $publish_nuget = 'true'
   }
 
-  # if ($ref -like 'refs/heads/dev/github_actions') {
-  #  $publish_nuget = 'true'
-  # }
+  if ($ref -like 'refs/heads/dev/dotnet') {
+    $publish_nuget = 'true'
+    $app_version_suffix = "preview${env:GITHUB_RUN_NUMBER}"
+  }
 }
 
 $app_version_full = $app_version
