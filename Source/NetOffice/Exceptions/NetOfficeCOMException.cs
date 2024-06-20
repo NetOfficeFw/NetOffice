@@ -50,16 +50,5 @@ namespace NetOffice.Exceptions
         public NetOfficeCOMException(string message, int errorCode) : base(message, errorCode)
         {
         }
-
-        /// <summary>
-        /// Creates an instance of the class
-        /// </summary>
-        /// <param name="info">the SerializationInfo object that holds the serialized object data</param>
-        /// <param name="context">the StreamingContext object that supplies the contextual information about the source or destination</param>
-        /// <exception cref="ArgumentNullException">info is null</exception>
-        [SecuritySafeCritical]
-        public NetOfficeCOMException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }
