@@ -142,6 +142,13 @@ namespace NetOffice.PowerPointApi.Enums
 		 /// </summary>
 		 /// <remarks>18</remarks>
 		 [SupportByVersion("PowerPoint", 12,14,15,16)]
-		 ppPlaceholderPicture = 18
+		 ppPlaceholderPicture = 18,
+
+		 /// <summary>
+		 /// SupportByVersion PowerPoint 16
+		 /// </summary>
+		 /// <remarks>19</remarks>
+		 [SupportByVersion("PowerPoint", 16)]
+		 ppPlaceholderCameo = 19
 	}
 }
