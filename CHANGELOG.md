@@ -10,6 +10,12 @@
   * event `OnCreateCOMDynamicEvent`
 
 
+## v1.9.7
+
+### Added
+* Added `PpPlaceholderType.ppPlaceholderCameo` enum value in PowerPoint library [#428](https://github.com/NetOfficeFw/NetOffice/pull/428)
+
+
 ## v1.9.6
 
 ### Added
