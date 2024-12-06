@@ -6,6 +6,7 @@
     <Platforms>x86;x64</Platforms>
     <PlatformTarget>x86</PlatformTarget>
     <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -20,6 +21,10 @@
   <ItemGroup>
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="8.0.11" />
   </ItemGroup>
 
   <ItemGroup>
