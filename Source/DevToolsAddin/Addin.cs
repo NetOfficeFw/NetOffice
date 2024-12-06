@@ -41,6 +41,11 @@ public class Addin : COMAddin
         var builder = WebApplication.CreateBuilder(options);
         //builder.WebHost.UseUrls("http://localhost:53080");
         var app = builder.Build();
+        app.Use((context, next) =>
+        {
+            context.Response.Headers.Append("Content-Security-Policy", "frame-ancestors 'none'");
+            return next();
+        });
 
         app.MapGet("/", () => "Hello World!");
 
