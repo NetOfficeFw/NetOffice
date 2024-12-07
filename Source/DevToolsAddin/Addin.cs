@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using NetOffice.DevToolsAddin.Protocol;
 using NetOffice.PowerPointApi;
@@ -80,11 +81,11 @@ public class Addin : COMAddin
             return Results.Ok(metadata);
         });
 
-        app.MapGet("/json/activate/{id}", (string id) =>
+        app.MapGet("/json/activate/{id}", Results<NotFound<string>, Ok> (string id) =>
         {
             if (id != "abcd1234")
             {
-                return Results.NotFound($"No such target id: {id}");
+                return TypedResults.NotFound($"No such target id: {id}");
             }
 
             sync.BeginInvoke(() =>
@@ -95,7 +96,7 @@ public class Addin : COMAddin
                     window.Activate();
                 }
             }, null);
-            return Results.Ok();
+            return TypedResults.Ok();
         });
 
         app.Map("/devtools/browser/{id}", async (HttpContext context) =>
