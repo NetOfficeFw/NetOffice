@@ -41,6 +41,8 @@ public class Addin : COMAddin
     {
         Trace.WriteLine($"Addin startup completed.");
 
+        var powerpointPid = Process.GetCurrentProcess().Id;
+
         var sync = System.Windows.Threading.Dispatcher.CurrentDispatcher;
 
         var builder = WebApplication.CreateBuilder();
@@ -63,7 +65,7 @@ public class Addin : COMAddin
                 UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
                 V8Version = "0.0",
                 WebKitVersion = "0.0",
-                WebSocketDebuggerUrl = "ws://localhost:53080/devtools/browser/abcd1234"
+                WebSocketDebuggerUrl = $"ws://localhost:53080/devtools/browser/powerpoint-pid-{powerpointPid}"
             };
 
             return Results.Ok(metadata);
