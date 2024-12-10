@@ -29,6 +29,12 @@ public class Addin : COMAddin
     private void Addin_OnConnection(object application, NetOffice.Tools.ext_ConnectMode connectMode, object addInInst, ref Array custom)
     {
         Trace.WriteLine($"Addin connected to application. Mode: {connectMode}");
+
+        var remotePort = Environment.GetEnvironmentVariable("PW_REMOTE_PORT");
+        var userDataFolder = Environment.GetEnvironmentVariable("PW_USER_DATA_FOLDER");
+
+        Console.WriteLine($"Playwright remote debugger port {remotePort}");
+        Console.WriteLine($"Playwright user data directory {userDataFolder}");
     }
 
     private void Addin_OnStartupComplete(ref Array custom)
@@ -37,8 +43,7 @@ public class Addin : COMAddin
 
         var sync = System.Windows.Threading.Dispatcher.CurrentDispatcher;
 
-        var options = new WebApplicationOptions();
-        var builder = WebApplication.CreateBuilder(options);
+        var builder = WebApplication.CreateBuilder();
         //builder.WebHost.UseUrls("http://localhost:53080");
         var app = builder.Build();
         app.Use((context, next) =>
@@ -85,8 +90,11 @@ public class Addin : COMAddin
         this.webApplication = app;
         Task.Run(async () =>
         {
-            await app.RunAsync("http://localhost:53080");
+            Console.WriteLine("NetOffice DevTools server running");
+            Console.OpenStandardOutput().Flush();
+            Trace.WriteLine("NetOffice DevTools server running");
             Trace.WriteLine($"Web server started. Visit http://localhost:53080");
+            await app.RunAsync("http://localhost:53080");
         });
     }
 
