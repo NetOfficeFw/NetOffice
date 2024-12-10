@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NetOffice.DevToolsAddin.Protocol;
 using NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Events;
 using NetOffice.PowerPointApi.Tools;
@@ -11,6 +12,8 @@ using System.Diagnostics;
 using System.Net.WebSockets;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Windows.Threading;
 
 [ComVisible(true)]
@@ -101,30 +104,43 @@ public class Addin : COMAddin
                 return Results.BadRequest();
             }
 
+            var jsonOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
+            };
+
             using var ws = await context.WebSockets.AcceptWebSocketAsync();
             while(true)
             {
-                var message = "TEST";
-                var bytes = Encoding.UTF8.GetBytes(message);
-
                 var receiveBuffer = WebSocket.CreateClientBuffer(4096, 4096);
                 while (ws.State == WebSocketState.Open)
                 {
                     var result = await ws.ReceiveAsync(receiveBuffer, CancellationToken.None);
                     if (result.MessageType == WebSocketMessageType.Text)
                     {
-                        var text = Encoding.UTF8.GetString(receiveBuffer);
+                        var text = Encoding.UTF8.GetString(receiveBuffer.AsSpan(0, result.Count));
                         Trace.WriteLine($"Received {result.Count} bytes: {text}");
+
+                        var receivedMessage = JsonSerializer.Deserialize<RequestMessage>(text, jsonOptions);
+
+                        var responseBrowserGetVersion = new BrowserGetVersion
+                        {
+                            ProtocolVersion = "1.3",
+                            Product = "PowerPoint/ 16.0.18330",
+                            Revision = "16.0.18330",
+                            UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
+                            JsVersion = "0.0",
+                        };
+
+                        var responseMessage = ResponseMessage<BrowserGetVersion>.Create(receivedMessage.Id, responseBrowserGetVersion);
+                        var responseBytes = JsonSerializer.SerializeToUtf8Bytes(responseMessage, jsonOptions);
+                        await ws.SendAsync(responseBytes, WebSocketMessageType.Text, true, CancellationToken.None);
                     }
                     else if (result.MessageType == WebSocketMessageType.Close)
                     {
-                        return Results.Ok();
+                        return Results.Empty;
                     }
-                }
-
-                if (ws.State == System.Net.WebSockets.WebSocketState.Open)
-                {
-                    await ws.SendAsync(bytes, System.Net.WebSockets.WebSocketMessageType.Text, true, CancellationToken.None);
                 }
 
                 if (ws.State == System.Net.WebSockets.WebSocketState.Closed || ws.State == System.Net.WebSockets.WebSocketState.Aborted)
@@ -132,7 +148,7 @@ public class Addin : COMAddin
                     break;
                 }
 
-                await Task.Delay(500);
+                await Task.Delay(200);
             }
 
             return Results.Ok();
