@@ -8,7 +8,9 @@ using NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Events;
 using NetOffice.PowerPointApi.Tools;
 using System.Diagnostics;
+using System.Net.WebSockets;
 using System.Runtime.InteropServices;
+using System.Text;
 using System.Windows.Threading;
 
 [ComVisible(true)]
@@ -48,13 +50,16 @@ public class Addin : COMAddin
         var builder = WebApplication.CreateBuilder();
         //builder.WebHost.UseUrls("http://localhost:53080");
         var app = builder.Build();
+
+        app.UseWebSockets();
+
         app.Use((context, next) =>
         {
             context.Response.Headers.Append("Content-Security-Policy", "frame-ancestors 'none'");
             return next();
         });
 
-        app.MapGet("/", () => "Hello World!");
+        // app.MapGet("/", () => "Hello World!");
 
         app.MapGet("/json/version", () =>
         {
@@ -86,6 +91,50 @@ public class Addin : COMAddin
                     window.Activate();
                 }
             }, null);
+            return Results.Ok();
+        });
+
+        app.Map("/devtools/browser/{id}", async (HttpContext context) =>
+        {
+            if (!context.WebSockets.IsWebSocketRequest)
+            {
+                return Results.BadRequest();
+            }
+
+            using var ws = await context.WebSockets.AcceptWebSocketAsync();
+            while(true)
+            {
+                var message = "TEST";
+                var bytes = Encoding.UTF8.GetBytes(message);
+
+                var receiveBuffer = WebSocket.CreateClientBuffer(4096, 4096);
+                while (ws.State == WebSocketState.Open)
+                {
+                    var result = await ws.ReceiveAsync(receiveBuffer, CancellationToken.None);
+                    if (result.MessageType == WebSocketMessageType.Text)
+                    {
+                        var text = Encoding.UTF8.GetString(receiveBuffer);
+                        Trace.WriteLine($"Received {result.Count} bytes: {text}");
+                    }
+                    else if (result.MessageType == WebSocketMessageType.Close)
+                    {
+                        return Results.Ok();
+                    }
+                }
+
+                if (ws.State == System.Net.WebSockets.WebSocketState.Open)
+                {
+                    await ws.SendAsync(bytes, System.Net.WebSockets.WebSocketMessageType.Text, true, CancellationToken.None);
+                }
+
+                if (ws.State == System.Net.WebSockets.WebSocketState.Closed || ws.State == System.Net.WebSockets.WebSocketState.Aborted)
+                {
+                    break;
+                }
+
+                await Task.Delay(500);
+            }
+
             return Results.Ok();
         });
 
