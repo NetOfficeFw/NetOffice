@@ -13,6 +13,7 @@ using System.Net.WebSockets;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Windows.Threading;
 
@@ -124,18 +125,59 @@ public class Addin : COMAddin
 
                         var receivedMessage = JsonSerializer.Deserialize<RequestMessage>(text, jsonOptions);
 
-                        var responseBrowserGetVersion = new BrowserGetVersion
+                        if (receivedMessage.Method == "Browser.getVersion")
                         {
-                            ProtocolVersion = "1.3",
-                            Product = "PowerPoint/ 16.0.18330",
-                            Revision = "16.0.18330",
-                            UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
-                            JsVersion = "0.0",
-                        };
+                            var responseBrowserGetVersion = new BrowserGetVersion
+                            {
+                                ProtocolVersion = "1.3",
+                                Product = "PowerPoint/ 16.0.18330",
+                                Revision = "16.0.18330",
+                                UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
+                                JsVersion = "0.0",
+                            };
 
-                        var responseMessage = ResponseMessage<BrowserGetVersion>.Create(receivedMessage.Id, responseBrowserGetVersion);
-                        var responseBytes = JsonSerializer.SerializeToUtf8Bytes(responseMessage, jsonOptions);
-                        await ws.SendAsync(responseBytes, WebSocketMessageType.Text, true, CancellationToken.None);
+                            var responseMessage1 = ResponseMessage<BrowserGetVersion>.Create(receivedMessage.Id, responseBrowserGetVersion);
+                            var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+                            await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
+                        // HACK
+                        else if (receivedMessage.Method == "Target.getTargetInfo")
+                        {
+                            var requestTarget = new TargetAttachedToTargetEvent
+                            {
+                                TargetInfo = new TargetAttachedToTargetEventParams
+                                {
+                                    SessionId = Guid.NewGuid().ToString(),
+                                    WaitingForDebugger = false,
+                                    TargetInfo = new TargetTargetInfo
+                                    {
+                                        TargetId = "Presentation1",
+                                        Type = "page",
+                                        Title = "Presentation",
+                                        Url = "about:blank",
+                                        Attached = true,
+                                        canAccessOpener = false,
+                                    }
+                                }
+                            };
+
+                            var requestMessage1 = new RequestMessage
+                            {
+                                Id = receivedMessage.Id + 1,
+                                Method = "Target.attachedToTarget",
+                                Params = JsonValue.Create(requestTarget)
+                            };
+
+                            var requestBytes1 = JsonSerializer.SerializeToUtf8Bytes(requestMessage1, jsonOptions);
+                            await ws.SendAsync(requestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
+                        else
+                        {
+                            // default empty response
+                            var responseMessage = ResponseMessage<object>.Create(receivedMessage.Id, new object());
+                            var responseBytes = JsonSerializer.SerializeToUtf8Bytes(responseMessage, jsonOptions);
+                            await ws.SendAsync(responseBytes, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
                     }
                     else if (result.MessageType == WebSocketMessageType.Close)
                     {

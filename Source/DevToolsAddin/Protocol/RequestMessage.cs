@@ -15,5 +15,5 @@ public struct RequestMessage
 
     public required string Method { get; init; }
 
-    public JsonObject? Params { get; init; }
+    public JsonValue? Params { get; init; }
 }
