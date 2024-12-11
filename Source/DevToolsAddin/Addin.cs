@@ -200,6 +200,33 @@ public class Addin : COMAddin
                             var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
                             await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
+                        else if (receivedMessage.Method == "Page.getFrameTree")
+                        {
+                            var frameTree = new PageGetFrameTreeResponse
+                            {
+                                FrameTree = new PageFrameTree
+                                {
+                                    Frame = new PageFrame
+                                    {
+                                        Id = "1",
+                                        LoaderId = "A30896532517FD7DA0BEB492F1B6BB91",
+                                        Url = "file:///User/Presentation.pptx",
+                                        DomainAndRegistry = "slido.com",
+                                        MimeType = "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                        SecurityOrigin = "about:blank",
+                                        SecureContextType = "Secure",
+                                        CrossOriginIsolatedContextType = "NotIsolated",
+                                        GatedAPIFeatures = []
+                                    }
+                                }
+                            };
+
+                            var responseMessage1 = ResponseMessage<PageGetFrameTreeResponse>.Create(receivedMessage.Id, frameTree);
+                            responseMessage1 = responseMessage1 with { SessionId = receivedMessage.SessionId };
+
+                            var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+                            await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
                         else if (
                             receivedMessage.Method == "Page.enable" ||
                             receivedMessage.Method == "Log.enable" ||
