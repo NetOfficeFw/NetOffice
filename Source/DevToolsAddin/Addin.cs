@@ -181,6 +181,10 @@ public class Addin : COMAddin
 
                             var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(pushMessage1, jsonOptions);
                             await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+
+                            var responseMessage2 = ResponseMessage<object>.Create(receivedMessage.Id, new object());
+                            var responseBytes2 = JsonSerializer.SerializeToUtf8Bytes(responseMessage2, jsonOptions);
+                            await ws.SendAsync(responseBytes2, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
                         else if (receivedMessage.Method == "Target.getTargetInfo")
                         {
