@@ -19,6 +19,11 @@ public readonly record struct TargetAttachedToTargetEventParams
 
 }
 
+public readonly record struct TargetGetTargetInfoResponse
+{
+    public required TargetTargetInfo TargetInfo { get; init; }
+}
+
 public readonly record struct TargetTargetInfo
 {
     public required TargetID TargetId { get; init; }
@@ -33,11 +38,11 @@ public readonly record struct TargetTargetInfo
 
     public TargetID? OpenerId { get; init; }
 
-    public required bool canAccessOpener { get; init; }
+    public required bool CanAccessOpener { get; init; }
 
-    public TargetID? openerFrameId { get; init; }
+    public TargetID? OpenerFrameId { get; init; }
 
-    public TargetID? browserContextId { get; init; }
+    public TargetID? BrowserContextId { get; init; }
 
     public string Subtype { get; init; }
 }

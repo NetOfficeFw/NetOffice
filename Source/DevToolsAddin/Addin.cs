@@ -99,7 +99,7 @@ public class Addin : COMAddin
             return TypedResults.Ok();
         });
 
-        app.Map("/devtools/browser/{id}", async (HttpContext context) =>
+        app.Map("/devtools/browser/{id}", async (string id, HttpContext context) =>
         {
             if (!context.WebSockets.IsWebSocketRequest)
             {
@@ -144,32 +144,22 @@ public class Addin : COMAddin
                         // HACK
                         else if (receivedMessage.Method == "Target.getTargetInfo")
                         {
-                            var requestTarget = new TargetAttachedToTargetEvent
+                            var targetInfo = new TargetTargetInfo
                             {
-                                TargetInfo = new TargetAttachedToTargetEventParams
-                                {
-                                    SessionId = Guid.NewGuid().ToString(),
-                                    WaitingForDebugger = false,
-                                    TargetInfo = new TargetTargetInfo
-                                    {
-                                        TargetId = "Presentation1",
-                                        Type = "page",
-                                        Title = "Presentation",
-                                        Url = "about:blank",
-                                        Attached = true,
-                                        canAccessOpener = false,
-                                    }
-                                }
+                                TargetId = "Presentation1",
+                                Type = "page",
+                                Title = "Presentation",
+                                Url = "https://example.org",
+                                Attached = true,
+                                CanAccessOpener = false,
+                                BrowserContextId = id
                             };
 
-                            var requestMessage1 = new RequestMessage
-                            {
-                                Id = receivedMessage.Id + 1,
-                                Method = "Target.attachedToTarget",
-                                Params = JsonValue.Create(requestTarget)
-                            };
+                            var getTargetInfoResponse = new TargetGetTargetInfoResponse { TargetInfo = targetInfo };
 
-                            var requestBytes1 = JsonSerializer.SerializeToUtf8Bytes(requestMessage1, jsonOptions);
+                            var responseMessage1 = ResponseMessage<TargetGetTargetInfoResponse>.Create(receivedMessage.Id, getTargetInfoResponse);
+
+                            var requestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
                             await ws.SendAsync(requestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
                         else
