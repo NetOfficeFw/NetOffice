@@ -23,8 +23,8 @@ using System.Windows.Threading;
 [ProgId("NetOffice.DevToolsAddin")]
 public class Addin : COMAddin
 {
-    private Task webTask;
-    private WebApplication webApplication;
+    private Task? webTask;
+    private WebApplication? webApplication;
 
     public Addin()
     {
