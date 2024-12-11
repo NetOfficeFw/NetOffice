@@ -15,12 +15,22 @@ public struct ResponseMessage<TResult>
 
     public TResult? Result { get; init; }
 
+    public string? SessionId { get; init; }
+
     public JsonRpcError? Error { get; init; }
 
     public static ResponseMessage<TResult> Create(int id, TResult result)
     {
         var response = new ResponseMessage<TResult>
         { Id = id, Result = result, Error = default };
+
+        return response;
+    }
+
+    public static ResponseMessage<object> Create(int id, string sessionId)
+    {
+        var response = new ResponseMessage<object>
+        { Id = id, Result = new object(), SessionId = sessionId, Error = default };
 
         return response;
     }

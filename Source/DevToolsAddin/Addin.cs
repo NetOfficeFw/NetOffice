@@ -112,6 +112,8 @@ public class Addin : COMAddin
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
 
+            var sessionId = Guid.NewGuid().ToString("N").ToUpperInvariant();
+
             using var ws = await context.WebSockets.AcceptWebSocketAsync();
             while(true)
             {
@@ -144,9 +146,17 @@ public class Addin : COMAddin
                         // HACK
                         else if (receivedMessage.Method == "Target.setAutoAttach")
                         {
+                            if (receivedMessage.SessionId != null)
+                            {
+                                var responseMessage1 = ResponseMessage<object>.Create(receivedMessage.Id, receivedMessage.SessionId!);
+                                var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+                                await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                                continue;
+                            }
+
                             var attachedToTarget = new TargetAttachedToTargetEventParams
                             {
-                                SessionId = Guid.NewGuid().ToString(),
+                                SessionId = sessionId,
                                 WaitingForDebugger = false,
                                 TargetInfo = new TargetTargetInfo
                                 {
@@ -170,10 +180,45 @@ public class Addin : COMAddin
                             var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(pushMessage1, jsonOptions);
                             await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
+                        else if (receivedMessage.Method == "Target.getTargetInfo")
+                        {
+                            var attachedToTarget = new TargetGetTargetInfoResponse
+                            {
+                                TargetInfo = new TargetTargetInfo
+                                {
+                                    TargetId = Guid.NewGuid().ToString("D"),
+                                    Type = "browser",
+                                    Title = "",
+                                    Url = "",
+                                    Attached = true,
+                                    CanAccessOpener = false,
+                                }
+                            };
+
+                            var responseMessage1 = ResponseMessage<TargetGetTargetInfoResponse>.Create(receivedMessage.Id, attachedToTarget);
+
+                            var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+                            await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
+                        else if (
+                            receivedMessage.Method == "Page.enable" ||
+                            receivedMessage.Method == "Log.enable" ||
+                            receivedMessage.Method == "Page.setLifecycleEventsEnabled"
+                            )
+                        {
+                            var responseMessage1 = ResponseMessage<object>.Create(receivedMessage.Id, receivedMessage.SessionId!);
+                            var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+                            await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
                         else
                         {
                             // default empty response
                             var responseMessage = ResponseMessage<object>.Create(receivedMessage.Id, new object());
+                            if (receivedMessage.SessionId != null)
+                            {
+                                responseMessage = responseMessage with { SessionId = receivedMessage.SessionId };
+                            }
+
                             var responseBytes = JsonSerializer.SerializeToUtf8Bytes(responseMessage, jsonOptions);
                             await ws.SendAsync(responseBytes, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
