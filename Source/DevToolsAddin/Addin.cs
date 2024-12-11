@@ -109,7 +109,7 @@ public class Addin : COMAddin
             var jsonOptions = new JsonSerializerOptions
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
 
             using var ws = await context.WebSockets.AcceptWebSocketAsync();
@@ -142,25 +142,33 @@ public class Addin : COMAddin
                             await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
                         // HACK
-                        else if (receivedMessage.Method == "Target.getTargetInfo")
+                        else if (receivedMessage.Method == "Target.setAutoAttach")
                         {
-                            var targetInfo = new TargetTargetInfo
+                            var attachedToTarget = new TargetAttachedToTargetEventParams
                             {
-                                TargetId = "Presentation1",
-                                Type = "page",
-                                Title = "Presentation",
-                                Url = "https://example.org",
-                                Attached = true,
-                                CanAccessOpener = false,
-                                BrowserContextId = id
+                                SessionId = Guid.NewGuid().ToString(),
+                                WaitingForDebugger = false,
+                                TargetInfo = new TargetTargetInfo
+                                {
+                                    TargetId = "Presentation1",
+                                    Type = "page",
+                                    Title = "Presentation",
+                                    Url = "about:blank",
+                                    Attached = true,
+                                    CanAccessOpener = false,
+                                    BrowserContextId = id
+                                }
                             };
 
-                            var getTargetInfoResponse = new TargetGetTargetInfoResponse { TargetInfo = targetInfo };
+                            var pushMessage1 = new RequestMessage
+                            {
+                                Id = default,
+                                Method = "Target.attachedToTarget",
+                                Params = JsonValue.Create(attachedToTarget)
+                            };
 
-                            var responseMessage1 = ResponseMessage<TargetGetTargetInfoResponse>.Create(receivedMessage.Id, getTargetInfoResponse);
-
-                            var requestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                            await ws.SendAsync(requestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                            var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(pushMessage1, jsonOptions);
+                            await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
                         else
                         {
