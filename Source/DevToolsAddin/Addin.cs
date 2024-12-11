@@ -10,6 +10,7 @@ using NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Events;
 using NetOffice.PowerPointApi.Tools;
 using System.Diagnostics;
+using System.Globalization;
 using System.Net.WebSockets;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -113,6 +114,7 @@ public class Addin : COMAddin
             };
 
             var sessionId = Guid.NewGuid().ToString("N").ToUpperInvariant();
+            var scriptId = 0;
 
             using var ws = await context.WebSockets.AcceptWebSocketAsync();
             while(true)
@@ -226,6 +228,17 @@ public class Addin : COMAddin
 
                             var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
                             await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
+                        else if (receivedMessage.Method == "Page.addScriptToEvaluateOnNewDocument")
+                        {
+                            scriptId++;
+                            var script = new PageAddScriptToEvaluateOnNewDocumentResponse { Identifier = scriptId.ToString(CultureInfo.InvariantCulture) };
+
+                            var responseMessage1 = ResponseMessage<PageAddScriptToEvaluateOnNewDocumentResponse>.Create(receivedMessage.Id, script);
+                            responseMessage1 = responseMessage1 with { SessionId = receivedMessage.SessionId };
+
+                            var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+                            await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
                         }
                         else if (
                             receivedMessage.Method == "Page.enable" ||

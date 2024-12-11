@@ -38,3 +38,8 @@ public readonly record struct PageFrame
     public required string CrossOriginIsolatedContextType { get; init; }
     public required string[] GatedAPIFeatures { get; init; }
 }
+
+public readonly record struct PageAddScriptToEvaluateOnNewDocumentResponse
+{
+    public string Identifier { get; init; }
+}
