@@ -26,7 +26,6 @@ function Write-GitHubVariable {
 $app_version = $project.Project.PropertyGroup[0].NetOfficeRelease
 
 $sign_binaries = 'false'
-$publish_nuget = 'false'
 $app_version_suffix = "preview${env:GITHUB_RUN_NUMBER}"
 
 if ($configuration -ieq 'release') {
@@ -35,17 +34,8 @@ if ($configuration -ieq 'release') {
   }
 
   if ($ref -like 'refs/tags/v*') {
-    $publish_nuget = 'true'
     $app_version_suffix = ''
   }
-
-  if ($ref -like 'refs/heads/releases/*') {
-    $publish_nuget = 'true'
-  }
-
-  # if ($ref -like 'refs/heads/dev/github_actions') {
-  #  $publish_nuget = 'true'
-  # }
 }
 
 $app_version_full = $app_version
@@ -57,4 +47,3 @@ Write-GitHubVariable "app_version" $app_version
 Write-GitHubVariable "app_version_suffix" $app_version_suffix
 Write-GitHubVariable "app_version_full" $app_version_full
 Write-GitHubVariable "sign_binaries" $sign_binaries
-Write-GitHubVariable "publish_nuget" $publish_nuget

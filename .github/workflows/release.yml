@@ -88,14 +88,13 @@ jobs:
 
     - name: Pack NetOffice
       id: packages
-      if: steps.build.outputs.publish_nuget == 'true'
       run: |
         dotnet pack --no-build --no-restore Source\NetOffice.sln -c ${{ env.Configuration }} -o dist
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
     - name: Sign NetOffice packages
-      if: success() && steps.build.outputs.publish_nuget == 'true' && steps.build.outputs.sign_binaries == 'true'
+      if: success() && steps.build.outputs.sign_binaries == 'true'
       run: |
         $trustedsigning = Get-Content .\Source\trustedsigning.json | ConvertFrom-Json
 
