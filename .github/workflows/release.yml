@@ -44,9 +44,6 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    - name: Setup dotnet sign
-      run: dotnet tool install --tool-path . --prerelease sign
-
     - name: Cache dotnet tools
       uses: actions/cache@v4
       id: cache-dotnettools
@@ -98,7 +95,7 @@ jobs:
       with:
         nupkg-path: '**/*.nupkg'
         trusted-signing-file: '.\Source\trustedsigning.json'
-        working-directory: 'dist'
+        working-directory: '${{ github.workspace }}/dist'
         publisher-name: 'NetOfficeFw'
         description: 'NetOffice Framework'
         description-url: 'https://github.com/NetOfficeFw/NetOffice'
