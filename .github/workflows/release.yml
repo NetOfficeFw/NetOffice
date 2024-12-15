@@ -93,26 +93,16 @@ jobs:
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
-    - name: Sign NetOffice packages
-      if: success() && steps.build.outputs.sign_binaries == 'true'
-      run: |
-        $trustedsigning = Get-Content .\Source\trustedsigning.json | ConvertFrom-Json
-
-        ./sign code trusted-signing `
-        **/*.nupkg `
-        --base-directory "${{ github.workspace }}/dist" `
-        --publisher-name "NetOffice" `
-        --description "NetOffice Framework" `
-        --description-url "https://github.com/NetOfficeFw/NetOffice" `
-        --trusted-signing-endpoint $trustedsigning.Endpoint `
-        --trusted-signing-account $trustedsigning.CodeSigningAccountName `
-        --trusted-signing-certificate-profile $trustedsigning.CertificateProfileName
-
-    - name: Extract certificate
-      run: |
-        dotnet tool install --global Knapcode.CertificateExtractor --version 0.1.1
-        $nupkg = Get-ChildItem -Filter 'dist\*.nupkg' | Select-Object -First 1
-        nuget-cert-extractor --file $nupkg --output certificates --code-signing --author --leaf
+    - name: Sign packages
+      uses: NetOfficeFw/build-actions/.github/workflows/trusted-sign-nuget.yml@main
+      secrets: inherit
+      with:
+        nupkg-path: '**/*.nupkg'
+        trusted-signing-file: '.\Source\trusted-signing.json'
+        working-directory: 'dist'
+        publisher-name: 'NetOfficeFw'
+        description: 'NetOffice Framework'
+        description-url: 'https://github.com/NetOfficeFw/NetOffice'
 
     - name: Archive NetOffice packages
       if: steps.packages.outcome == 'success'
