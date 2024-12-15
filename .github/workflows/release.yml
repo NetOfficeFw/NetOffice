@@ -94,8 +94,7 @@ jobs:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
     - name: Sign packages
-      uses: NetOfficeFw/build-actions/.github/workflows/trusted-sign-nuget.yml@main
-      secrets: inherit
+      uses: NetOfficeFw/build-actions@main
       with:
         nupkg-path: '**/*.nupkg'
         trusted-signing-file: '.\Source\trusted-signing.json'
