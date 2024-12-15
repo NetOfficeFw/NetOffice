@@ -97,7 +97,7 @@ jobs:
       uses: NetOfficeFw/build-actions@main
       with:
         nupkg-path: '**/*.nupkg'
-        trusted-signing-file: '.\Source\trusted-signing.json'
+        trusted-signing-file: '.\Source\trustedsigning.json'
         working-directory: 'dist'
         publisher-name: 'NetOfficeFw'
         description: 'NetOffice Framework'
