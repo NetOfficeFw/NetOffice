@@ -20,3 +20,14 @@ public class BrowserVersionMetadata
     [JsonPropertyName("webSocketDebuggerUrl")]
     public required string WebSocketDebuggerUrl { get; init; }
 }
+
+public class PowerPointAppVersionMetadata
+{
+    public required string AppType { get; init; }
+
+    public required string Version { get; init; }
+
+    public required int ProcessId { get; init; }
+
+    public required string GrpcDebuggerUrl { get; init; }
+}

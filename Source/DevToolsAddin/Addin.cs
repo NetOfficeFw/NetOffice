@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using NetOffice.DevToolsAddin.Protocol;
 using NetOffice.PowerPointApi;
 using NetOffice.PowerPointApi.Events;
@@ -26,6 +27,7 @@ public class Addin : COMAddin
 {
     private Task? webTask;
     private WebApplication? webApplication;
+    private string sessionId = "";
 
     public Addin()
     {
@@ -38,11 +40,11 @@ public class Addin : COMAddin
     {
         Trace.WriteLine($"Addin connected to application. Mode: {connectMode}");
 
-        var remotePort = Environment.GetEnvironmentVariable("PW_REMOTE_PORT");
-        var userDataFolder = Environment.GetEnvironmentVariable("PW_USER_DATA_FOLDER");
+        this.sessionId = Environment.GetEnvironmentVariable("PW_SESSION_ID") ?? "session-empty";
+        var remotePort = Environment.GetEnvironmentVariable("PW_DEBUGGER_PORT");
 
+        Console.WriteLine($"Playwright session identifier is {sessionId}");
         Console.WriteLine($"Playwright remote debugger port {remotePort}");
-        Console.WriteLine($"Playwright user data directory {userDataFolder}");
     }
 
     private void Addin_OnStartupComplete(ref Array custom)
@@ -69,228 +71,256 @@ public class Addin : COMAddin
 
         app.MapGet("/json/version", () =>
         {
-            var metadata = new BrowserVersionMetadata
+            var metadata = new PowerPointAppVersionMetadata
             {
-                Browser = "PowerPoint/ 16.0.18330",
-                ProtocolVersion = "1.3",
-                UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
-                V8Version = "0.0",
-                WebKitVersion = "0.0",
-                WebSocketDebuggerUrl = $"ws://localhost:53080/devtools/browser/powerpoint-pid-{powerpointPid}"
+                AppType = "powerpoint",
+                Version = "16.0.18330",
+                ProcessId = powerpointPid,
+                GrpcDebuggerUrl = app.Urls.First()
             };
 
             return Results.Ok(metadata);
         });
 
-        app.MapGet("/json/activate/{id}", Results<NotFound<string>, Ok> (string id) =>
-        {
-            if (id != "abcd1234")
-            {
-                return TypedResults.NotFound($"No such target id: {id}");
-            }
-
+        app.MapPost("/close", () => {
             sync.BeginInvoke(() =>
             {
-                var window = this.Application.Windows.FirstOrDefault() as DocumentWindow;
-                if (window != null)
+                var presentations = this.Application.Presentations;
+                for (int i = presentations.Count; i > 0; i--)
                 {
-                    window.Activate();
+                    try
+                    {
+                        var pres = presentations[i];
+                        pres.Close();
+                    }
+                    catch(Exception ex)
+                    {
+                        app.Logger.LogError($"Failed to close presentation at index {i}. {ex.Message}");
+                    }
+                }
+
+                try
+                {
+                    this.Application.Quit();
+                }
+                catch (Exception ex)
+                {
+                    app.Logger.LogError($"Failed to close PowerPoint app. {ex.Message}");
                 }
             }, null);
-            return TypedResults.Ok();
+            return TypedResults.Ok(new { status = "Closing PowerPoint app.", session = this.sessionId });
         });
 
-        app.Map("/devtools/browser/{id}", async (string id, HttpContext context) =>
-        {
-            if (!context.WebSockets.IsWebSocketRequest)
-            {
-                return Results.BadRequest();
-            }
+        //app.MapGet("/json/activate/{id}", Results<NotFound<string>, Ok> (string id) =>
+        //{
+        //    if (id != "abcd1234")
+        //    {
+        //        return TypedResults.NotFound($"No such target id: {id}");
+        //    }
 
-            var jsonOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-            };
+        //    sync.BeginInvoke(() =>
+        //    {
+        //        var window = this.Application.Windows.FirstOrDefault() as DocumentWindow;
+        //        if (window != null)
+        //        {
+        //            window.Activate();
+        //        }
+        //    }, null);
+        //    return TypedResults.Ok();
+        //});
 
-            var sessionId = Guid.NewGuid().ToString("N").ToUpperInvariant();
-            var scriptId = 0;
+        //app.Map("/devtools/browser/{id}", async (string id, HttpContext context) =>
+        //{
+        //    if (!context.WebSockets.IsWebSocketRequest)
+        //    {
+        //        return Results.BadRequest();
+        //    }
 
-            using var ws = await context.WebSockets.AcceptWebSocketAsync();
-            while(true)
-            {
-                var receiveBuffer = WebSocket.CreateClientBuffer(4096, 4096);
-                while (ws.State == WebSocketState.Open)
-                {
-                    var result = await ws.ReceiveAsync(receiveBuffer, CancellationToken.None);
-                    if (result.MessageType == WebSocketMessageType.Text)
-                    {
-                        var text = Encoding.UTF8.GetString(receiveBuffer.AsSpan(0, result.Count));
-                        Trace.WriteLine($"Received {result.Count} bytes: {text}");
+        //    var jsonOptions = new JsonSerializerOptions
+        //    {
+        //        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        //        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        //    };
 
-                        var receivedMessage = JsonSerializer.Deserialize<RequestMessage>(text, jsonOptions);
+        //    var sessionId = Guid.NewGuid().ToString("N").ToUpperInvariant();
+        //    var scriptId = 0;
 
-                        if (receivedMessage.Method == "Browser.getVersion")
-                        {
-                            var responseBrowserGetVersion = new BrowserGetVersion
-                            {
-                                ProtocolVersion = "1.3",
-                                Product = "PowerPoint/ 16.0.18330",
-                                Revision = "16.0.18330",
-                                UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
-                                JsVersion = "0.0",
-                            };
+        //    using var ws = await context.WebSockets.AcceptWebSocketAsync();
+        //    while(true)
+        //    {
+        //        var receiveBuffer = WebSocket.CreateClientBuffer(4096, 4096);
+        //        while (ws.State == WebSocketState.Open)
+        //        {
+        //            var result = await ws.ReceiveAsync(receiveBuffer, CancellationToken.None);
+        //            if (result.MessageType == WebSocketMessageType.Text)
+        //            {
+        //                var text = Encoding.UTF8.GetString(receiveBuffer.AsSpan(0, result.Count));
+        //                Trace.WriteLine($"Received {result.Count} bytes: {text}");
 
-                            var responseMessage1 = ResponseMessage<BrowserGetVersion>.Create(receivedMessage.Id, responseBrowserGetVersion);
-                            var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                            await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                        // HACK
-                        else if (receivedMessage.Method == "Target.setAutoAttach")
-                        {
-                            if (receivedMessage.SessionId != null)
-                            {
-                                var responseMessage1 = ResponseMessage<object>.Create(receivedMessage.Id, receivedMessage.SessionId!);
-                                var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                                await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
-                                continue;
-                            }
+        //                var receivedMessage = JsonSerializer.Deserialize<RequestMessage>(text, jsonOptions);
 
-                            var attachedToTarget = new TargetAttachedToTargetEventParams
-                            {
-                                SessionId = sessionId,
-                                WaitingForDebugger = false,
-                                TargetInfo = new TargetTargetInfo
-                                {
-                                    TargetId = "Presentation1",
-                                    Type = "page",
-                                    Title = "Presentation",
-                                    Url = "about:blank",
-                                    Attached = true,
-                                    CanAccessOpener = false,
-                                    BrowserContextId = id
-                                }
-                            };
+        //                if (receivedMessage.Method == "Browser.getVersion")
+        //                {
+        //                    var responseBrowserGetVersion = new BrowserGetVersion
+        //                    {
+        //                        ProtocolVersion = "1.3",
+        //                        Product = "PowerPoint/ 16.0.18330",
+        //                        Revision = "16.0.18330",
+        //                        UserAgent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft PowerPoint 16.0.18330; Pro)",
+        //                        JsVersion = "0.0",
+        //                    };
 
-                            var pushMessage1 = new RequestMessage
-                            {
-                                Id = default,
-                                Method = "Target.attachedToTarget",
-                                Params = JsonValue.Create(attachedToTarget)
-                            };
+        //                    var responseMessage1 = ResponseMessage<BrowserGetVersion>.Create(receivedMessage.Id, responseBrowserGetVersion);
+        //                    var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+        //                    await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //                // HACK
+        //                else if (receivedMessage.Method == "Target.setAutoAttach")
+        //                {
+        //                    if (receivedMessage.SessionId != null)
+        //                    {
+        //                        var responseMessage1 = ResponseMessage<object>.Create(receivedMessage.Id, receivedMessage.SessionId!);
+        //                        var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+        //                        await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                        continue;
+        //                    }
 
-                            var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(pushMessage1, jsonOptions);
-                            await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                    var attachedToTarget = new TargetAttachedToTargetEventParams
+        //                    {
+        //                        SessionId = sessionId,
+        //                        WaitingForDebugger = false,
+        //                        TargetInfo = new TargetTargetInfo
+        //                        {
+        //                            TargetId = "Presentation1",
+        //                            Type = "page",
+        //                            Title = "Presentation",
+        //                            Url = "about:blank",
+        //                            Attached = true,
+        //                            CanAccessOpener = false,
+        //                            BrowserContextId = id
+        //                        }
+        //                    };
 
-                            var responseMessage2 = ResponseMessage<object>.Create(receivedMessage.Id, new object());
-                            var responseBytes2 = JsonSerializer.SerializeToUtf8Bytes(responseMessage2, jsonOptions);
-                            await ws.SendAsync(responseBytes2, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                        else if (receivedMessage.Method == "Target.getTargetInfo")
-                        {
-                            var attachedToTarget = new TargetGetTargetInfoResponse
-                            {
-                                TargetInfo = new TargetTargetInfo
-                                {
-                                    TargetId = Guid.NewGuid().ToString("D"),
-                                    Type = "browser",
-                                    Title = "",
-                                    Url = "",
-                                    Attached = true,
-                                    CanAccessOpener = false,
-                                }
-                            };
+        //                    var pushMessage1 = new RequestMessage
+        //                    {
+        //                        Id = default,
+        //                        Method = "Target.attachedToTarget",
+        //                        Params = JsonValue.Create(attachedToTarget)
+        //                    };
 
-                            var responseMessage1 = ResponseMessage<TargetGetTargetInfoResponse>.Create(receivedMessage.Id, attachedToTarget);
+        //                    var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(pushMessage1, jsonOptions);
+        //                    await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
 
-                            var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                            await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                        else if (receivedMessage.Method == "Page.getFrameTree")
-                        {
-                            var frameTree = new PageGetFrameTreeResponse
-                            {
-                                FrameTree = new PageFrameTree
-                                {
-                                    Frame = new PageFrame
-                                    {
-                                        Id = "1",
-                                        LoaderId = "A30896532517FD7DA0BEB492F1B6BB91",
-                                        Url = "file:///User/Presentation.pptx",
-                                        DomainAndRegistry = "slido.com",
-                                        MimeType = "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                                        SecurityOrigin = "about:blank",
-                                        SecureContextType = "Secure",
-                                        CrossOriginIsolatedContextType = "NotIsolated",
-                                        GatedAPIFeatures = []
-                                    }
-                                }
-                            };
+        //                    var responseMessage2 = ResponseMessage<object>.Create(receivedMessage.Id, new object());
+        //                    var responseBytes2 = JsonSerializer.SerializeToUtf8Bytes(responseMessage2, jsonOptions);
+        //                    await ws.SendAsync(responseBytes2, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //                else if (receivedMessage.Method == "Target.getTargetInfo")
+        //                {
+        //                    var attachedToTarget = new TargetGetTargetInfoResponse
+        //                    {
+        //                        TargetInfo = new TargetTargetInfo
+        //                        {
+        //                            TargetId = Guid.NewGuid().ToString("D"),
+        //                            Type = "browser",
+        //                            Title = "",
+        //                            Url = "",
+        //                            Attached = true,
+        //                            CanAccessOpener = false,
+        //                        }
+        //                    };
 
-                            var responseMessage1 = ResponseMessage<PageGetFrameTreeResponse>.Create(receivedMessage.Id, frameTree);
-                            responseMessage1 = responseMessage1 with { SessionId = receivedMessage.SessionId };
+        //                    var responseMessage1 = ResponseMessage<TargetGetTargetInfoResponse>.Create(receivedMessage.Id, attachedToTarget);
 
-                            var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                            await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                        else if (receivedMessage.Method == "Page.addScriptToEvaluateOnNewDocument")
-                        {
-                            scriptId++;
-                            var script = new PageAddScriptToEvaluateOnNewDocumentResponse { Identifier = scriptId.ToString(CultureInfo.InvariantCulture) };
+        //                    var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+        //                    await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //                else if (receivedMessage.Method == "Page.getFrameTree")
+        //                {
+        //                    var frameTree = new PageGetFrameTreeResponse
+        //                    {
+        //                        FrameTree = new PageFrameTree
+        //                        {
+        //                            Frame = new PageFrame
+        //                            {
+        //                                Id = "1",
+        //                                LoaderId = "A30896532517FD7DA0BEB492F1B6BB91",
+        //                                Url = "file:///User/Presentation.pptx",
+        //                                DomainAndRegistry = "slido.com",
+        //                                MimeType = "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        //                                SecurityOrigin = "about:blank",
+        //                                SecureContextType = "Secure",
+        //                                CrossOriginIsolatedContextType = "NotIsolated",
+        //                                GatedAPIFeatures = []
+        //                            }
+        //                        }
+        //                    };
 
-                            var responseMessage1 = ResponseMessage<PageAddScriptToEvaluateOnNewDocumentResponse>.Create(receivedMessage.Id, script);
-                            responseMessage1 = responseMessage1 with { SessionId = receivedMessage.SessionId };
+        //                    var responseMessage1 = ResponseMessage<PageGetFrameTreeResponse>.Create(receivedMessage.Id, frameTree);
+        //                    responseMessage1 = responseMessage1 with { SessionId = receivedMessage.SessionId };
 
-                            var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                            await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                        else if (
-                            receivedMessage.Method == "Page.enable" ||
-                            receivedMessage.Method == "Log.enable" ||
-                            receivedMessage.Method == "Page.setLifecycleEventsEnabled"
-                            )
-                        {
-                            var responseMessage1 = ResponseMessage<object>.Create(receivedMessage.Id, receivedMessage.SessionId!);
-                            var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
-                            await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                        else
-                        {
-                            // default empty response
-                            var responseMessage = ResponseMessage<object>.Create(receivedMessage.Id, new object());
-                            if (receivedMessage.SessionId != null)
-                            {
-                                responseMessage = responseMessage with { SessionId = receivedMessage.SessionId };
-                            }
+        //                    var pushRequestBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+        //                    await ws.SendAsync(pushRequestBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //                else if (receivedMessage.Method == "Page.addScriptToEvaluateOnNewDocument")
+        //                {
+        //                    scriptId++;
+        //                    var script = new PageAddScriptToEvaluateOnNewDocumentResponse { Identifier = scriptId.ToString(CultureInfo.InvariantCulture) };
 
-                            var responseBytes = JsonSerializer.SerializeToUtf8Bytes(responseMessage, jsonOptions);
-                            await ws.SendAsync(responseBytes, WebSocketMessageType.Text, true, CancellationToken.None);
-                        }
-                    }
-                    else if (result.MessageType == WebSocketMessageType.Close)
-                    {
-                        return Results.Empty;
-                    }
-                }
+        //                    var responseMessage1 = ResponseMessage<PageAddScriptToEvaluateOnNewDocumentResponse>.Create(receivedMessage.Id, script);
+        //                    responseMessage1 = responseMessage1 with { SessionId = receivedMessage.SessionId };
 
-                if (ws.State == System.Net.WebSockets.WebSocketState.Closed || ws.State == System.Net.WebSockets.WebSocketState.Aborted)
-                {
-                    break;
-                }
+        //                    var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+        //                    await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //                else if (
+        //                    receivedMessage.Method == "Page.enable" ||
+        //                    receivedMessage.Method == "Log.enable" ||
+        //                    receivedMessage.Method == "Page.setLifecycleEventsEnabled"
+        //                    )
+        //                {
+        //                    var responseMessage1 = ResponseMessage<object>.Create(receivedMessage.Id, receivedMessage.SessionId!);
+        //                    var responseBytes1 = JsonSerializer.SerializeToUtf8Bytes(responseMessage1, jsonOptions);
+        //                    await ws.SendAsync(responseBytes1, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //                else
+        //                {
+        //                    // default empty response
+        //                    var responseMessage = ResponseMessage<object>.Create(receivedMessage.Id, new object());
+        //                    if (receivedMessage.SessionId != null)
+        //                    {
+        //                        responseMessage = responseMessage with { SessionId = receivedMessage.SessionId };
+        //                    }
 
-                await Task.Delay(200);
-            }
+        //                    var responseBytes = JsonSerializer.SerializeToUtf8Bytes(responseMessage, jsonOptions);
+        //                    await ws.SendAsync(responseBytes, WebSocketMessageType.Text, true, CancellationToken.None);
+        //                }
+        //            }
+        //            else if (result.MessageType == WebSocketMessageType.Close)
+        //            {
+        //                return Results.Empty;
+        //            }
+        //        }
 
-            return Results.Ok();
-        });
+        //        if (ws.State == System.Net.WebSockets.WebSocketState.Closed || ws.State == System.Net.WebSockets.WebSocketState.Aborted)
+        //        {
+        //            break;
+        //        }
+
+        //        await Task.Delay(200);
+        //    }
+
+        //    return Results.Ok();
+        //});
 
         this.webApplication = app;
         Task.Run(async () =>
         {
-            Console.WriteLine("NetOffice DevTools server running");
-            Console.OpenStandardOutput().Flush();
-            Trace.WriteLine("NetOffice DevTools server running");
-            Trace.WriteLine($"Web server started. Visit http://localhost:53080");
+            app.Logger.LogInformation($"NetOffice DevTools server running session {this.sessionId}");
+            //Console.WriteLine("");
+            //Console.OpenStandardOutput().Flush();
+            //Trace.WriteLine("NetOffice DevTools server running");
+            //Trace.WriteLine($"Web server started. Visit http://localhost:53080");
             await app.RunAsync("http://localhost:53080");
         });
     }
