@@ -28,6 +28,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ClearScript.V8" Version="7.4.5" />
+    <PackageReference Include="Microsoft.ClearScript.V8.Native.win-x64" Version="7.4.5" />
+    <PackageReference Include="Microsoft.ClearScript.V8.Native.win-x86" Version="7.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="register.cmd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

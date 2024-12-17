@@ -19,6 +19,8 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Windows.Threading;
+using Microsoft.ClearScript.V8;
+using System.IO;
 
 [ComVisible(true)]
 [Guid("AB6D3A7D-33CF-4197-91D9-9D6B984DDDB1")]
@@ -103,6 +105,42 @@ public class Addin : COMAddin
             });
 
             return Results.Ok(model);
+        });
+
+        app.MapPost("/evaluate", async (HttpContext context) =>
+        {
+            using var stream = new StreamReader(context.Request.Body);
+            var script = await stream.ReadToEndAsync();
+
+            var result = await sync.InvokeAsync(() =>
+            {
+                var wrappedScriptExpression = $"({script})({{ presentation: g_presentation, application: g_application }});";
+
+                var ppApplication = this.Application;
+                var presentation = this.Application.ActivePresentation;
+
+                var engine = new V8ScriptEngine("presentation_1");
+                engine.AddHostObject("g_application", ppApplication);
+                engine.AddHostObject("g_presentation", presentation);
+
+                engine.AddHostTypes([
+                    typeof(NetOffice.PowerPointApi.Enums.PpSlideLayout),
+                    typeof(NetOffice.OfficeApi.Enums.MsoTextOrientation),
+                ]);
+
+                engine.Evaluate(wrappedScriptExpression);
+
+                return true;
+            });
+
+            if (result)
+            {
+                return Results.Ok();
+            }
+            else
+            {
+                return Results.Problem("Failed to execute the script.");
+            }
         });
 
         app.MapPost("/close", () => {
