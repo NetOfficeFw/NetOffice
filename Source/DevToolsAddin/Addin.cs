@@ -47,6 +47,9 @@ public class Addin : COMAddin
         Console.WriteLine($"Playwright remote debugger port {remotePort}");
     }
 
+    [DllImport("user32.dll")]
+    static extern void PostQuitMessage(int nExitCode);
+
     private void Addin_OnStartupComplete(ref Array custom)
     {
         Trace.WriteLine($"Addin startup completed.");
@@ -83,31 +86,45 @@ public class Addin : COMAddin
         });
 
         app.MapPost("/close", () => {
-            sync.BeginInvoke(() =>
+
+            Task.Run(async () =>
             {
-                var presentations = this.Application.Presentations;
-                for (int i = presentations.Count; i > 0; i--)
+                await Task.Delay(200);
+
+                await app.StopAsync();
+                this.webApplication = null;
+
+                await sync.BeginInvoke(() =>
                 {
+                    using (var presentations = this.Application.Presentations)
+                    {
+                        for (int i = presentations.Count; i > 0; i--)
+                        {
+                            try
+                            {
+                                var pres = presentations[i];
+                                pres.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                                app.Logger.LogError($"Failed to close presentation at index {i}. {ex.Message}");
+                            }
+                        }
+                    }
+
                     try
                     {
-                        var pres = presentations[i];
-                        pres.Close();
+                        PostQuitMessage(0);
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
-                        app.Logger.LogError($"Failed to close presentation at index {i}. {ex.Message}");
+                        MessageBox.Show(ex.Message);
+                        // app.Logger.LogError($"Failed to close PowerPoint app. {ex.Message}");
                     }
-                }
+                }, null);
+            });
 
-                try
-                {
-                    this.Application.Quit();
-                }
-                catch (Exception ex)
-                {
-                    app.Logger.LogError($"Failed to close PowerPoint app. {ex.Message}");
-                }
-            }, null);
             return TypedResults.Ok(new { status = "Closing PowerPoint app.", session = this.sessionId });
         });
 
