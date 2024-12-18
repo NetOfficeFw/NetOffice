@@ -49,6 +49,11 @@ public class Addin : COMAddin
         Console.WriteLine($"Playwright remote debugger port {remotePort}");
     }
 
+    public override string GetCustomUI(string RibbonID)
+    {
+        return @"<customUI xmlns=""http://schemas.microsoft.com/office/2006/01/customui"" onLoad=""CustomUI_OnLoad""></customUI>";
+    }
+
     [DllImport("user32.dll")]
     static extern void PostQuitMessage(int nExitCode);
 
@@ -96,7 +101,7 @@ public class Addin : COMAddin
                     var pres = presentations.Add();
                     var model = new PresentationModel()
                     {
-                        Title = "Presentation1.pptx",
+                        Title = pres.Name,
                         FullName = pres.FullName
                     };
 
@@ -140,6 +145,27 @@ public class Addin : COMAddin
             else
             {
                 return Results.Problem("Failed to execute the script.");
+            }
+        });
+
+        app.MapPost("/click/{msoId}", async (string msoId) =>
+        {
+            var result = await sync.InvokeAsync(() =>
+            {
+                // this.RibbonUI.ActivateTab(msoId);
+                // this.RibbonUI.ActivateTabMso(msoId);
+                this.Application.CommandBars.ExecuteMso(msoId);
+
+                return true;
+            });
+
+            if (result)
+            {
+                return Results.Ok();
+            }
+            else
+            {
+                return Results.Problem("Failed to execute Ribbon button.");
             }
         });
 
