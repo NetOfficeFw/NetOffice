@@ -92,13 +92,29 @@ public class Addin : COMAddin
             return Results.Ok(metadata);
         });
 
-        app.MapPost("/newPresentation", async () =>
+        app.MapPost("/newPresentation", async ([FromQuery]string? filename) =>
         {
             var model = await sync.InvokeAsync(() =>
             {
                 using (var presentations = this.Application.Presentations)
                 {
-                    var pres = presentations.Add();
+                    if (filename != null)
+                    {
+                        // var pres1 = presentations.First() as Presentation;
+                        // pres1.Close();
+
+                        var pres2 = presentations.Open(filename);
+                        var model2 = new PresentationModel()
+                        {
+                            Title = pres2.Name,
+                            FullName = pres2.FullName
+                        };
+
+                        return model2;
+                    }
+
+                    //var pres = presentations.Add();
+                    var pres = presentations.First() as Presentation;
                     var model = new PresentationModel()
                     {
                         Title = pres.Name,
