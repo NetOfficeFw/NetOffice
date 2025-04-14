@@ -1272,6 +1272,28 @@ namespace NetOffice.PowerPointApi
 				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Guides>(this, "Guides", NetOffice.PowerPointApi.Guides.LateBindingApiWrapperType);
 			}
 		}
+		
+		/// <summary>
+		/// True if the edits in the Presentation are automatically saved. Read/write Boolean.
+		/// 
+		/// SupportByVersion PowerPoint 16
+		/// Get/Set
+		/// </summary>
+		/// <remarks> Docs: <see href="https://learn.microsoft.com/fr-fr/office/vba/api/powerpoint.presentation.autosaveon"/> </remarks>
+		[SupportByVersion("PowerPoint", 16)]
+		public bool AutoSaveOn
+		{
+			get
+			{
+				return Factory.ExecuteBoolPropertyGet(this, "AutoSaveOn");
+			}
+			set
+			{
+				Factory.ExecuteValuePropertySet(this, "AutoSaveOn", value);
+			}
+		}
+
+
 
 		#endregion
 
