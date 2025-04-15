@@ -1279,7 +1279,7 @@ namespace NetOffice.PowerPointApi
 		/// SupportByVersion PowerPoint 16
 		/// Get/Set
 		/// </summary>
-		/// <remarks> Docs: <see href="https://learn.microsoft.com/fr-fr/office/vba/api/powerpoint.presentation.autosaveon"/> </remarks>
+		/// <remarks> Docs: <see href="https://learn.microsoft.com/en-us/office/vba/api/powerpoint.presentation.autosaveon"/> </remarks>
 		[SupportByVersion("PowerPoint", 16)]
 		public bool AutoSaveOn
 		{
