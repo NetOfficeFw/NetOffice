@@ -106,28 +106,28 @@ jobs:
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
 
     - name: Pack NetOffice
-      if: steps.build.outputs.publish_nuget == 'true'
       run: |
         dotnet pack --no-build --no-restore Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
-    # - name: Sign NetOffice packages
-    #   if: success() && steps.build.outputs.publish_nuget == 'true' && steps.build.outputs.sign_binaries == 'true'
-    #   working-directory: '${{ github.workspace}}\dist'
-    #   run: |
-    #       NuGetKeyVaultSignTool.exe sign *.nupkg `
-    #       --file-digest sha256 `
-    #       --timestamp-rfc3161 http://timestamp.digicert.com `
-    #       --timestamp-digest sha256 `
-    #       --azure-key-vault-url https://opensourcesigning.vault.azure.net `
-    #       --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
-    #       --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
-    #       --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
-    #       --azure-key-vault-certificate "goITSolutions-until-2024-01"
+    - name: Sign NetOffice packages
+      if: success() && steps.build.outputs.sign_binaries == 'true'
+      working-directory: '${{ github.workspace}}\dist'
+      run: |
+        sign code trusted-signing *.nupkg `
+        --publisher-name "NetOffice" `
+        --description "NetOffice" `
+        --description-url "https://github.com/NetOfficeFw/NetOffice" `
+        --trusted-signing-endpoint "${{ secrets.TRUSTED_SIGNING_ENDPOINT }}" `
+        --trusted-signing-account "${{ secrets.TRUSTED_SIGNING_ACCOUNT_NAME }}" `
+        --trusted-signing-certificate-profile "${{ secrets.TRUSTED_SIGNING_CERTIFICATE_PROFILE }}" `
+        --file-digest SHA256 `
+        --timestamp-url http://timestamp.acs.microsoft.com `
+        --timestamp-digest SHA256
 
     - name: Publish packages
-      if: success()  && steps.build.outputs.publish_nuget == 'true'
+      if: success() && steps.build.outputs.publish_nuget == 'true'
       working-directory: '${{ github.workspace}}\dist'
       run: |
         dotnet nuget push *.nupkg --api-key $env:NUGET_TOKEN --source https://api.nuget.org/v3/index.json
@@ -135,7 +135,7 @@ jobs:
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
 
     - name: Archive NetOffice packages
-      if: success() && steps.build.outputs.publish_nuget == 'true'
+      if: success()
       uses: actions/upload-artifact@v5
       with:
         name: NetOffice_packages_v${{ steps.build.outputs.app_version_full }}
