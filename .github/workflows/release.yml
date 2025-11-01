@@ -2,6 +2,8 @@ name: release
 
 on:
   push:
+    branches:
+      - 'dev/build_workflow_**'
     tags:
       - 'v*.*.*'
 
@@ -150,7 +152,7 @@ jobs:
         NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
 
     - name: Archive NetOffice packages
-      if: success()
+      if: success() && matrix.configuration == 'Release'
       uses: actions/upload-artifact@v5
       with:
         name: NetOffice_packages_v${{ steps.build.outputs.app_version_full }}

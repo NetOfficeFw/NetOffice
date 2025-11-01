@@ -43,6 +43,11 @@ if ($configuration -ieq 'release') {
     $publish_nuget = 'true'
   }
 
+  if ($ref -like 'refs/heads/dev/build_workflow_*') {
+    $sign_binaries = 'true'
+    $publish_nuget = 'false'
+  }
+
   # if ($ref -like 'refs/heads/dev/github_actions') {
   #  $publish_nuget = 'true'
   # }
