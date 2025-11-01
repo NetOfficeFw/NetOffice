@@ -6,10 +6,13 @@ on:
       - 'v*.*.*'
 
 permissions:
+  id-token: write
   contents: read
 
 jobs:
   release:
+    environment: production
+
     runs-on: windows-2022
 
     strategy:
@@ -45,13 +48,13 @@ jobs:
         path: ~/.dotnet/tools
         key: dotnettools
 
-    - name: Setup AzureSignTool
+    - name: Setup dotnet sign tool
       if: steps.cache-dotnettools.outputs.cache-hit != 'true'
-      run: dotnet tool install --verbosity minimal --global azuresigntool --version 6.0.1
+      run: dotnet tool install --verbosity minimal --global sign --version 0.9.1-beta.25379.1
 
-    - name: Setup NuGetKeyVaultSignTool
+    - name: Setup Knapcode.CertificateExtractor tool
       if: steps.cache-dotnettools.outputs.cache-hit != 'true'
-      run: dotnet tool install --verbosity minimal --global NuGetKeyVaultSignTool --version 3.2.3
+      run: dotnet tool install --verbosity minimal --global Knapcode.CertificateExtractor --version 0.1.1
 
     - name: Cache packages
       uses: actions/cache@v4
@@ -77,20 +80,24 @@ jobs:
         $content = $content.Replace('${{ github.workspace }}', '..')
         $content | Set-Content obj/signlist.txt
 
+    - name: azure login
+      uses: azure/login@v2
+      with:
+        client-id: ${{ secrets.TRUSTED_SIGNING_CLIENT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
-      uses: azure/trusted-signing-action@v0.3.19
+      uses: azure/trusted-signing-action@v0.5.10
       with:
-          azure-tenant-id: ${{ secrets.KEYVAULT_TENANT_ID }}
-          azure-client-id: ${{ secrets.KEYVAULT_CLIENT_ID }}
-          azure-client-secret: ${{ secrets.KEYVAULT_CLIENT_SECRET }}
-          endpoint: ${{ vars.KEYVAULT_ENDPOINT }}
-          trusted-signing-account-name: ${{ vars.KEYVAULT_ACCOUNT_NAME }}
-          certificate-profile-name: ${{ secrets.KEYVAULT_CERTIFICATE_PROFILE }}
-          files-catalog: '${{ github.workspace }}/obj/signlist.txt'
-          file-digest: SHA256
-          timestamp-rfc3161: http://timestamp.acs.microsoft.com
-          timestamp-digest: SHA256
+        endpoint: ${{ secrets.TRUSTED_SIGNING_ENDPOINT }}
+        trusted-signing-account-name: ${{ secrets.TRUSTED_SIGNING_ACCOUNT_NAME }}
+        certificate-profile-name: ${{ secrets.TRUSTED_SIGNING_CERTIFICATE_PROFILE }}
+        files-catalog: '${{ github.workspace }}/obj/signlist.txt'
+        file-digest: SHA256
+        timestamp-rfc3161: http://timestamp.acs.microsoft.com
+        timestamp-digest: SHA256
 
     - name: Archive NetOffice binaries
       uses: actions/upload-artifact@v5
