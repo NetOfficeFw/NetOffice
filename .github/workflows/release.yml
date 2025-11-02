@@ -29,6 +29,9 @@ jobs:
       RepositoryCommit: '${{ github.sha }}'
       Configuration: '${{ matrix.configuration }}'
 
+    outputs:
+      nuget_packages_artifact_name: ${{ steps.build.outputs.nuget_packages_artifact_name }}
+
     steps:
     - name: Checkout
       uses: actions/checkout@v5
@@ -147,17 +150,52 @@ jobs:
         $nupkg = Get-ChildItem -Path '${{ github.workspace}}\dist' -Filter '*.nupkg' | Select-Object -First 1
         nuget-cert-extractor --file $nupkg --output '${{ github.workspace}}\dist' --code-signing --author --leaf
 
-    - name: Publish packages
-      if: success() && steps.build.outputs.publish_nuget == 'true'
-      working-directory: '${{ github.workspace}}\dist'
-      run: |
-        dotnet nuget push *.nupkg --api-key $env:NUGET_TOKEN --source https://api.nuget.org/v3/index.json
-      env:
-        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
-
     - name: Archive NetOffice packages
       if: success()
       uses: actions/upload-artifact@v5
       with:
-        name: NetOffice_packages_v${{ steps.build.outputs.app_version_full }}
+        name: ${{ steps.build.outputs.nuget_packages_artifact_name }}
         path: '${{ github.workspace }}\dist'
+
+    - name: Archive code signing certificate
+      if: success() && matrix.configuration == 'Release'
+      uses: actions/upload-artifact@v5
+      with:
+        name: certificate
+        path: '${{ github.workspace }}/dist/*.cer'
+
+    - name: Release documentation
+      if: matrix.configuration == 'Release'
+      run: |
+        'To release the NuGet package, upload the signing certificate to NuGet Gallery via Account Settings: <https://www.nuget.org/account>.  ' >> $env:GITHUB_STEP_SUMMARY
+        'See the `certificate` artifact for the signing certificate file.' >> $env:GITHUB_STEP_SUMMARY
+        '' >> $env:GITHUB_STEP_SUMMARY
+        'Approve the `publish` job deployment to the `nuget-gallery` environment when the certificate was added to NuGet Gallery.' >> $env:GITHUB_STEP_SUMMARY
+
+  publish:
+    environment: nuget-gallery
+
+    permissions:
+      id-token: write
+
+    needs: release
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download NetOffice packages
+      uses: actions/download-artifact@v5
+      with:
+        name: ${{ needs.release.outputs.nuget_packages_artifact_name }}
+    
+    - name: Authenticate Nuget Gallery
+      uses: NuGet/login@v1
+      id: nuget
+      with:
+        user: ${{ secrets.NUGET_TRUSTED_PUBLISHING_USER }}
+
+    - name: Publish packages
+      run: |
+        dotnet nuget push "*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json
+      env:
+        NUGET_API_KEY: ${{ steps.nuget.outputs.NUGET_API_KEY }}
