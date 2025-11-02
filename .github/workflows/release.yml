@@ -141,6 +141,12 @@ jobs:
         --timestamp-url http://timestamp.acs.microsoft.com `
         --timestamp-digest SHA256
 
+    - name: Extract trusted signing certificate
+      if: success() && steps.build.outputs.sign_binaries == 'true'
+      run: |
+        $nupkg = Get-ChildItem -Path '${{ github.workspace}}\dist' -Filter '*.nupkg' | Select-Object -First 1
+        nuget-cert-extractor --file $nupkg --output '${{ github.workspace}}\dist' --code-signing --author --leaf
+
     - name: Publish packages
       if: success() && steps.build.outputs.publish_nuget == 'true'
       working-directory: '${{ github.workspace}}\dist'
