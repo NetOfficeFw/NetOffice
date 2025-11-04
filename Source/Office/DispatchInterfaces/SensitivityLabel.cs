@@ -126,6 +126,18 @@ namespace NetOffice.OfficeApi
 		/// SupportByVersion Office 16
 		/// </summary>
 		/// <remarks> 
+		/// Creates a new LabelInfo object that can be passed to SetLabel method.
+		/// <para>Docs: <see href="https://learn.microsoft.com/en-us/office/vba/api/office.sensitivitylabel.createlabelinfo"/> </remarks>
+		[SupportByVersion("Office", 16)]
+		public NetOffice.OfficeApi.LabelInfo CreateLabelInfo()
+		{
+			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.LabelInfo>(this, "CreateLabelInfo", NetOffice.OfficeApi.LabelInfo.LateBindingApiWrapperType);
+		}
+
+		/// <summary>
+		/// SupportByVersion Office 16
+		/// </summary>
+		/// <remarks> 
 		/// Gets the current label information that exists on the document for the user.
 		/// <para>If the SensitivityLabelPolicy.CompleteInitialize was called, it gets the label for the user that was passed with UserId, otherwise gets the label for the user which is authenticated to the document.</para>
 		/// <para>Docs: <see href="https://learn.microsoft.com/en-us/office/vba/api/office.sensitivitylabel.getlabel"/> </remarks>
