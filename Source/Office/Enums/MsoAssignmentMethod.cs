@@ -21,6 +21,13 @@ namespace NetOffice.OfficeApi.Enums
 	public enum MsoAssignmentMethod
 	{
 		/// <summary>
+		/// The assignment method value is not set.
+		/// </summary>
+		/// <remarks>-1</remarks>
+		[SupportByVersion("Office", 16)]
+		NOT_SET = -1,
+
+		/// <summary>
 		/// The label is applied by default.
 		/// </summary>
 		/// <remarks>0</remarks>
