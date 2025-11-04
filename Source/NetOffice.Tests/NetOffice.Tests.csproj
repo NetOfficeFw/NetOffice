@@ -42,4 +42,12 @@
     <EmbeddedResource Include="Data\SampleImage.png" />
     <EmbeddedResource Include="Data\SampleText.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PowerPointApi\Docs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="PowerPointApi\Docs\AutoSaveOn_PresentationSavedLocally_FeatureAutoSaveIsOff.pptx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
