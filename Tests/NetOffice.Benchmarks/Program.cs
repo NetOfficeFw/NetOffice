@@ -33,7 +33,7 @@ namespace NetOffice.Benchmarks
             Console.WriteLine("  D. Memory Allocation    - Memory overhead and GC pressure");
             Console.WriteLine();
             Console.WriteLine("Object counts: 10, 100, 1,000, 10,000");
-            Console.WriteLine("Target frameworks: .NET Framework 4.8, .NET 8.0");
+            Console.WriteLine("Target frameworks: .NET Framework 4.8, .NET 8.0, .NET 10.0");
             Console.WriteLine();
 
             // Configure exporters for comprehensive results
