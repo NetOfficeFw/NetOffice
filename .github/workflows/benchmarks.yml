@@ -1,0 +1,38 @@
+name: benchmarks
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+  push:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: 1
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
+  DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
+  ContinuousIntegrationBuild: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: |
+          8
+          10
+
+    - name: Build benchmarks
+      id: build
+      run: dotnet build ./Tests/NetOffice.Benchmarks/NetOffice.Benchmarks.csproj -c '${{ matrix.configuration }}'
