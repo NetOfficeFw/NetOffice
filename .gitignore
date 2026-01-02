@@ -9,8 +9,8 @@ NetOffice*.rar
 ReferenceIndex*.rar
 Assemblies/
 Any\ CPU/
-Current\ Binaries\
-Persistance\ Cache*\
+Current\ Binaries/
+Persistance\ Cache*/
 Toolbox/Libs/
 ..svnbridge/
 out/
