@@ -279,7 +279,7 @@ namespace NetOffice.WordApi.Events
 
         public void ContentControlBeforeContentUpdate([In, MarshalAs(UnmanagedType.IDispatch)] object contentControl, [In] [Out] ref object content)
         {
-            if (!Validate("ContentControlBeforeStoreUpdate"))
+            if (!Validate("ContentControlBeforeContentUpdate"))
             {
                 Invoker.ReleaseParamsArray(contentControl, content);
                 return;
