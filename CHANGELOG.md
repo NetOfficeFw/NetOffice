@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.8
+
+### Fixed
+* Fix bug in `ContentControlBeforeContentUpdate` code by verifying the correct event name [#454](https://github.com/NetOfficeFw/NetOffice/pull/454)
+
+
 ## v1.9.7
 
 ### Added
