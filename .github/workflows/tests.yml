@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   tests:
-    runs-on: windows-2022
+    runs-on: windows-2025
 
     strategy:
       matrix:
