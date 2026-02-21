@@ -160,6 +160,7 @@ jobs:
 
     - name: Archive code signing certificate
       if: success() && matrix.configuration == 'Release'
+      id: certificate_artifact
       uses: actions/upload-artifact@v6
       with:
         name: certificate
@@ -168,8 +169,11 @@ jobs:
     - name: Release documentation
       if: matrix.configuration == 'Release'
       run: |
+        $certUrl = '${{ steps.certificate_artifact.outputs.artifact-url }}'
         'To release the NuGet package, upload the signing certificate to NuGet Gallery via Account Settings: <https://www.nuget.org/account>.  ' >> $env:GITHUB_STEP_SUMMARY
         'See the `certificate` artifact for the signing certificate file.' >> $env:GITHUB_STEP_SUMMARY
+        '' >> $env:GITHUB_STEP_SUMMARY
+        'Download the [certiticate file]($certUrl).' >> $env:GITHUB_STEP_SUMMARY
         '' >> $env:GITHUB_STEP_SUMMARY
         'Approve the `publish` job deployment to the `nuget-gallery` environment when the certificate was added to NuGet Gallery.' >> $env:GITHUB_STEP_SUMMARY
 
