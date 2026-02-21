@@ -34,7 +34,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
 
     - name: Setup dotnet
       uses: actions/setup-dotnet@v5
@@ -45,7 +45,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Cache dotnet tools
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       id: cache-dotnettools
       with:
         path: ~/.dotnet/tools
@@ -60,7 +60,7 @@ jobs:
       run: dotnet tool install --verbosity minimal --global Knapcode.CertificateExtractor --version 0.1.1
 
     - name: Cache packages
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.nuget/packages
         key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
@@ -118,7 +118,7 @@ jobs:
         timestamp-digest: SHA256
 
     - name: Archive NetOffice binaries
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: NetOffice_binaries_v${{ steps.build.outputs.app_version_full }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
@@ -152,14 +152,14 @@ jobs:
 
     - name: Archive NetOffice packages
       if: success()
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: ${{ steps.build.outputs.nuget_packages_artifact_name }}
         path: '${{ github.workspace }}\dist'
 
     - name: Archive code signing certificate
       if: success() && matrix.configuration == 'Release'
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: certificate
         path: '${{ github.workspace }}/dist/*.cer'
@@ -184,7 +184,7 @@ jobs:
 
     steps:
     - name: Download NetOffice packages
-      uses: actions/download-artifact@v5
+      uses: actions/download-artifact@v7
       with:
         name: ${{ needs.release.outputs.nuget_packages_artifact_name }}
     
