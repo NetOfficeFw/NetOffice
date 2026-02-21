@@ -92,10 +92,10 @@ jobs:
 
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
-      uses: azure/trusted-signing-action@v0.5.10
+      uses: azure/artifact-signing-action@v1
       with:
         endpoint: ${{ secrets.TRUSTED_SIGNING_ENDPOINT }}
-        trusted-signing-account-name: ${{ secrets.TRUSTED_SIGNING_ACCOUNT_NAME }}
+        signing-account-name: ${{ secrets.TRUSTED_SIGNING_ACCOUNT_NAME }}
         certificate-profile-name: ${{ secrets.TRUSTED_SIGNING_CERTIFICATE_PROFILE }}
         files-catalog: '${{ github.workspace }}/obj/signlist.txt'
         files: |
