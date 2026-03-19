@@ -138,6 +138,23 @@ namespace NetOffice.PowerPointApi
 		}
 
 		/// <summary>
+		/// SupportByVersion PowerPoint 16
+		/// </summary>
+		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Decorative"/> </remarks>
+		[SupportByVersion("PowerPoint", 16)]
+		public NetOffice.OfficeApi.Enums.MsoTriState Decorative
+		{
+			get
+			{
+				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Decorative");
+			}
+			set
+			{
+				Factory.ExecuteEnumPropertySet(this, "Decorative", value);
+			}
+		}
+
+		/// <summary>
 		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
 		/// Get
 		/// Unknown COM Proxy
