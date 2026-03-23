@@ -45,19 +45,10 @@ jobs:
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v3
 
-    - name: Cache dotnet tools
-      uses: actions/cache@v5
-      id: cache-dotnettools
-      with:
-        path: ~/.dotnet/tools
-        key: dotnettools
-
     - name: Setup dotnet sign tool
-      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
       run: dotnet tool install --verbosity minimal --global sign --version 0.9.1-beta.26127.1
 
     - name: Setup Knapcode.CertificateExtractor tool
-      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
       run: dotnet tool install --verbosity minimal --global Knapcode.CertificateExtractor --version 0.1.1
 
     - name: Cache packages
