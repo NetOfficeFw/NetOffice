@@ -42,7 +42,7 @@ jobs:
         dotnet-version: 8
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
+      uses: microsoft/setup-msbuild@v3
 
     - name: Cache packages
       uses: actions/cache@v5
@@ -69,7 +69,7 @@ jobs:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
     - name: Archive NetOffice binaries
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: NetOffice_binaries_v${{ steps.build.outputs.app_version_full }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
