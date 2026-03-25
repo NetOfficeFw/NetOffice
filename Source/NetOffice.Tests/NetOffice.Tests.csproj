@@ -29,6 +29,7 @@
     <ProjectReference Include="..\NetOffice\NetOffice.csproj" />
     <ProjectReference Include="..\Outlook\OutlookApi.csproj" />
     <ProjectReference Include="..\PowerPoint\PowerPointApi.csproj" />
+    <ProjectReference Include="..\Word\WordApi.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NetOffice\Tools\data\NativeAddinResiliency.bin">
