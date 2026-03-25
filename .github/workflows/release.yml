@@ -13,44 +13,55 @@ jobs:
   release:
     environment: production
 
-    runs-on: windows-2022
+    runs-on: windows-2025
 
     strategy:
       matrix:
-        configuration: [Release]
+        configuration: [Debug, Release]
 
     env:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
       DOTNET_GENERATE_ASPNET_CERTIFICATE: 0
+      BUILD_SIGN_RELEASE: '${{ vars.BUILD_SIGN_RELEASE }}'
       ContinuousIntegrationBuild: true
       RestoreLockedMode: true
       RepositoryBranch: '${{ github.ref_name }}'
       RepositoryCommit: '${{ github.sha }}'
       Configuration: '${{ matrix.configuration }}'
-      BUILD_SIGN_RELEASE: ${{ vars.BUILD_SIGN_RELEASE }}
+
+    outputs:
+      nuget_packages_artifact_name: ${{ steps.build.outputs.nuget_packages_artifact_name }}
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Setup dotnet
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 8
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v2
+      uses: microsoft/setup-msbuild@v3
 
     - name: Cache dotnet tools
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       id: cache-dotnettools
       with:
         path: ~/.dotnet/tools
         key: dotnettools
 
+    - name: Setup dotnet sign tool
+      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
+      run: dotnet tool install --verbosity minimal --global sign --version 0.9.1-beta.25379.1
+
+    - name: Setup Knapcode.CertificateExtractor tool
+      if: steps.cache-dotnettools.outputs.cache-hit != 'true'
+      run: dotnet tool install --verbosity minimal --global Knapcode.CertificateExtractor --version 0.1.1
+
     - name: Cache packages
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.nuget/packages
         key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
@@ -61,59 +72,135 @@ jobs:
       id: build
       run: .\.github\Get-BuildInfo.ps1 -ref '${{ github.ref }}' -event_name '${{ github.event_name }}' -configuration '${{ matrix.configuration }}'
 
-    - name: Azure Login
-      uses: azure/login@v2
-      with:
-        client-id: ${{ secrets.TRUSTED_SIGNING_CLIENT_ID }}
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
     - name: Build NetOffice
       run: |
         dotnet build Source\NetOffice.sln
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
-        SignOutput: ${{ steps.build.outputs.sign_binaries }}
+
+    - name: Sign Files Catalog
+      run: |
+        $content = Get-Content obj/signlist.txt
+        $content = $content.Replace('${{ github.workspace }}', '..')
+        $content | Set-Content obj/signlist.txt
+
+    - name: azure login
+      uses: azure/login@v3
+      with:
+        client-id: ${{ secrets.TRUSTED_SIGNING_CLIENT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+
+    - name: Sign NetOffice libraries
+      if: success() && steps.build.outputs.sign_binaries == 'true'
+      uses: azure/artifact-signing-action@v1
+      with:
+        endpoint: ${{ secrets.TRUSTED_SIGNING_ENDPOINT }}
+        signing-account-name: ${{ secrets.TRUSTED_SIGNING_ACCOUNT_NAME }}
+        certificate-profile-name: ${{ secrets.TRUSTED_SIGNING_CERTIFICATE_PROFILE }}
+        files-catalog: '${{ github.workspace }}/obj/signlist.txt'
+        files: |
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/AccessApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/ADODBApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/DAOApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/ExcelApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/MSComctlLibApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/MSDATASRCApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/NetOffice.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/OfficeApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/OfficeApi.Extensions.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/OutlookApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/OWC10Api.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/PowerPointApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/VBIDEApi.dll
+          ${{ github.workspace }}/Source/ClientApplication/bin/${{ matrix.configuration }}/WordApi.dll
+        file-digest: SHA256
+        timestamp-rfc3161: http://timestamp.acs.microsoft.com
+        timestamp-digest: SHA256
 
     - name: Archive NetOffice binaries
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: NetOffice_binaries_v${{ steps.build.outputs.app_version_full }}_${{ matrix.configuration }}
         path: '${{ github.workspace }}\Source\ClientApplication\bin\${{ matrix.configuration }}'
 
     - name: Pack NetOffice
-      id: packages
-      if: steps.build.outputs.publish_nuget == 'true'
       run: |
         dotnet pack --no-build --no-restore Source\NetOffice.sln -c ${{ matrix.configuration }} -o dist
       env:
         VersionSuffix: ${{ steps.build.outputs.app_version_suffix }}
 
-    # - name: Sign NetOffice packages
-    #   if: success() && steps.build.outputs.publish_nuget == 'true' && steps.build.outputs.sign_binaries == 'true'
-    #   working-directory: '${{ github.workspace}}\dist'
-    #   run: |
-    #       NuGetKeyVaultSignTool.exe sign *.nupkg `
-    #       --file-digest sha256 `
-    #       --timestamp-rfc3161 http://timestamp.digicert.com `
-    #       --timestamp-digest sha256 `
-    #       --azure-key-vault-url https://opensourcesigning.vault.azure.net `
-    #       --azure-key-vault-tenant-id "${{ secrets.KEYVAULT_TENANT_ID }}" `
-    #       --azure-key-vault-client-id "${{ secrets.KEYVAULT_CLIENT_ID }}" `
-    #       --azure-key-vault-client-secret "${{ secrets.KEYVAULT_CLIENT_SECRET }}" `
-    #       --azure-key-vault-certificate "goITSolutions-until-2024-01"
-
-    - name: Archive NetOffice packages
-      if: steps.packages.outcome == 'success'
-      uses: actions/upload-artifact@v4
-      with:
-        name: NetOffice_packages_v${{ steps.build.outputs.app_version_full }}
-        path: '${{ github.workspace }}\dist'
-
-    - name: Publish packages
-      if: steps.packages.outcome == 'success'
+    - name: Sign NetOffice packages
+      if: success() && steps.build.outputs.sign_binaries == 'true'
       working-directory: '${{ github.workspace}}\dist'
       run: |
-        dotnet nuget push *.nupkg --api-key $env:NUGET_TOKEN --source https://api.nuget.org/v3/index.json
+        sign code trusted-signing *.nupkg `
+        --publisher-name "NetOffice" `
+        --description "NetOffice" `
+        --description-url "https://github.com/NetOfficeFw/NetOffice" `
+        --trusted-signing-endpoint "${{ secrets.TRUSTED_SIGNING_ENDPOINT }}" `
+        --trusted-signing-account "${{ secrets.TRUSTED_SIGNING_ACCOUNT_NAME }}" `
+        --trusted-signing-certificate-profile "${{ secrets.TRUSTED_SIGNING_CERTIFICATE_PROFILE }}" `
+        --file-digest SHA256 `
+        --timestamp-url http://timestamp.acs.microsoft.com `
+        --timestamp-digest SHA256
+
+    - name: Extract trusted signing certificate
+      if: success() && steps.build.outputs.sign_binaries == 'true'
+      run: |
+        $nupkg = Get-ChildItem -Path '${{ github.workspace}}\dist' -Filter '*.nupkg' | Select-Object -First 1
+        nuget-cert-extractor --file $nupkg --output '${{ github.workspace}}\dist' --code-signing --author --leaf
+
+    - name: Archive NetOffice packages
+      if: success()
+      uses: actions/upload-artifact@v7
+      with:
+        name: ${{ steps.build.outputs.nuget_packages_artifact_name }}
+        path: '${{ github.workspace }}\dist'
+
+    - name: Archive code signing certificate
+      if: success() && matrix.configuration == 'Release'
+      id: certificate_artifact
+      uses: actions/upload-artifact@v7
+      with:
+        name: certificate
+        path: '${{ github.workspace }}/dist/*.cer'
+
+    - name: Release documentation
+      if: matrix.configuration == 'Release'
+      run: |
+        $certUrl = '${{ steps.certificate_artifact.outputs.artifact-url }}'
+        'To release the NuGet package, upload the signing certificate to NuGet Gallery via Account Settings: <https://www.nuget.org/account>.  ' >> $env:GITHUB_STEP_SUMMARY
+        'See the `certificate` artifact for the signing certificate file.' >> $env:GITHUB_STEP_SUMMARY
+        '' >> $env:GITHUB_STEP_SUMMARY
+        "Download the [certiticate file]($certUrl)." >> $env:GITHUB_STEP_SUMMARY
+        '' >> $env:GITHUB_STEP_SUMMARY
+        'Approve the `publish` job deployment to the `nuget-gallery` environment when the certificate was added to NuGet Gallery.' >> $env:GITHUB_STEP_SUMMARY
+
+  publish:
+    environment: nuget-gallery
+
+    permissions:
+      id-token: write
+
+    needs: release
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download NetOffice packages
+      uses: actions/download-artifact@v8
+      with:
+        name: ${{ needs.release.outputs.nuget_packages_artifact_name }}
+    
+    - name: Authenticate Nuget Gallery
+      uses: NetOfficeFw/nuget-login@v2
+      id: nuget
+      with:
+        user: ${{ secrets.NUGET_TRUSTED_PUBLISHING_USER }}
+
+    - name: Publish packages
+      run: |
+        dotnet nuget push "*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json
       env:
-        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
+        NUGET_API_KEY: ${{ steps.nuget.outputs.NUGET_API_KEY }}

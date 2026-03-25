@@ -58,3 +58,4 @@ Write-GitHubVariable "app_version_suffix" $app_version_suffix
 Write-GitHubVariable "app_version_full" $app_version_full
 Write-GitHubVariable "sign_binaries" $sign_binaries
 Write-GitHubVariable "publish_nuget" $publish_nuget
+Write-GitHubVariable "nuget_packages_artifact_name" "NetOffice_packages_v$app_version_full"
