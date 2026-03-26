@@ -10,6 +10,12 @@
   * event `OnCreateCOMDynamicEvent`
 
 
+## v1.9.9
+
+### Added
+* Added `Shape.Decorative` property in PowerPoint library [#472](https://github.com/NetOfficeFw/NetOffice/pull/472)
+
+
 ## v1.9.8
 
 ### Fixed
