@@ -19,7 +19,7 @@ public sealed class EventValidateRaiseConsistencyAnalyzer : DiagnosticAnalyzer
     private static readonly DiagnosticDescriptor ValidateVsRaiseRule = new(
         id: ValidateVsRaiseId,
         title: "Validate event name must match RaiseCustomEvent event name",
-        messageFormat: "Validate event name '{0}' does not match RaiseCustomEvent event name '{1}'.",
+        messageFormat: "Validate event name '{0}' does not match RaiseCustomEvent event name '{1}'",
         category: "NetOffice.Events",
         defaultSeverity: DiagnosticSeverity.Warning,
         isEnabledByDefault: true);
@@ -27,7 +27,7 @@ public sealed class EventValidateRaiseConsistencyAnalyzer : DiagnosticAnalyzer
     private static readonly DiagnosticDescriptor RaiseVsMethodRule = new(
         id: RaiseVsMethodId,
         title: "RaiseCustomEvent event name should match method name",
-        messageFormat: "RaiseCustomEvent event name '{0}' does not match containing method name '{1}'.",
+        messageFormat: "RaiseCustomEvent event name '{0}' does not match containing method name '{1}'",
         category: "NetOffice.Events",
         defaultSeverity: DiagnosticSeverity.Info,
         isEnabledByDefault: true);
@@ -35,7 +35,7 @@ public sealed class EventValidateRaiseConsistencyAnalyzer : DiagnosticAnalyzer
     private static readonly DiagnosticDescriptor CannotVerifyRule = new(
         id: CannotVerifyId,
         title: "Unable to verify event name consistency",
-        messageFormat: "Unable to verify event name consistency in '{0}': use string literals for Validate/RaiseCustomEvent and avoid multiple distinct event names per method.",
+        messageFormat: "Unable to verify event name consistency in '{0}'. Use string literals for Validate/RaiseCustomEvent and avoid multiple distinct event names per method.",
         category: "NetOffice.Events",
         defaultSeverity: DiagnosticSeverity.Info,
         isEnabledByDefault: true);
