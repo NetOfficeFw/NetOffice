@@ -7,7 +7,7 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Events
 {
-    #pragma warning disable
+    #pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -1112,5 +1112,5 @@ namespace NetOffice.ExcelApi.Events
 
     #endregion
 
-    #pragma warning restore
+    #pragma warning restore CS1591
 }

@@ -7,8 +7,8 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
 {	
-	#pragma warning disable
-	
+	#pragma warning disable CS1591
+
 	#region SinkPoint Interface
 
 	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
@@ -100,5 +100,5 @@ namespace NetOffice.OutlookApi.Events
 	
 	#endregion
 	
-	#pragma warning restore
+	#pragma warning restore CS1591
 }

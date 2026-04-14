@@ -7,8 +7,8 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi.Events
 {	
-	#pragma warning disable
-	
+	#pragma warning disable CS1591
+
 	#region SinkPoint Interface
 
 	[SupportByVersion("ADODB", 2.1,2.5)]
@@ -350,5 +350,5 @@ namespace NetOffice.ADODBApi.Events
 	
 	#endregion
 	
-	#pragma warning restore
+	#pragma warning restore CS1591
 }

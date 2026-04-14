@@ -7,8 +7,8 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
 {	
-	#pragma warning disable
-	
+	#pragma warning disable CS1591
+
 	#region SinkPoint Interface
 
 	[SupportByVersion("OWC10", 1)]
@@ -603,5 +603,5 @@ namespace NetOffice.OWC10Api.Events
 	
 	#endregion
 	
-	#pragma warning restore
+	#pragma warning restore CS1591
 }

@@ -7,8 +7,8 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi.Events
 {	
-	#pragma warning disable
-	
+	#pragma warning disable CS1591
+
 	#region SinkPoint Interface
 
 	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
@@ -719,5 +719,5 @@ namespace NetOffice.PowerPointApi.Events
 	
 	#endregion
 	
-	#pragma warning restore
+	#pragma warning restore CS1591
 }
