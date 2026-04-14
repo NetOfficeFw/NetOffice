@@ -7,8 +7,8 @@ using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi.Events
 {	
-	#pragma warning disable
-	
+	#pragma warning disable CS1591
+
 	#region SinkPoint Interface
 
 	[SupportByVersion("MSComctlLib", 6)]
@@ -527,5 +527,5 @@ namespace NetOffice.MSComctlLibApi.Events
 
     #endregion
 
-    #pragma warning restore
+    #pragma warning restore CS1591
 }

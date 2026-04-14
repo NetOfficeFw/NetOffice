@@ -7,8 +7,8 @@ using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi.EventInterfaces
 {	
-	#pragma warning disable
-	
+	#pragma warning disable CS1591
+
 	#region SinkPoint Interface
 
 	[SupportByVersion("VBIDE", 12,14,5.3)]
@@ -73,5 +73,5 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 	
 	#endregion
 	
-	#pragma warning restore
+	#pragma warning restore CS1591
 }

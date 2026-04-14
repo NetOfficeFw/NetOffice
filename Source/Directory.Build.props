@@ -1,0 +1,12 @@
+<Project>
+  <!--
+    Pull the custom Roslyn analyzers into every project under Source/ so they run in Visual Studio.
+    Projects can opt-out by setting NetOfficeDisableAnalyzers=true.
+  -->
+  <ItemGroup Condition=" '$(NetOfficeDisableAnalyzers)' != 'true' and '$(MSBuildProjectName)' != 'NetOffice.Analyzers' ">
+    <ProjectReference Include="$(MSBuildThisFileDirectory)Analyzers/NetOffice.Analyzers/NetOffice.Analyzers.csproj"
+                      OutputItemType="Analyzer"
+                      ReferenceOutputAssembly="false" />
+  </ItemGroup>
+</Project>
+
