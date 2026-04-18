@@ -52,7 +52,7 @@ jobs:
       run: dotnet tool install --verbosity minimal --global Knapcode.CertificateExtractor --version 0.1.1
 
     - name: Cache packages
-      uses: actions/cache@v5
+      uses: actions/cache@v5.0.4
       with:
         path: ~/.nuget/packages
         key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
