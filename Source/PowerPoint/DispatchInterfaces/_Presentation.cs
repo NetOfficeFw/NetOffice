@@ -1293,7 +1293,19 @@ namespace NetOffice.PowerPointApi
 			}
 		}
 
-
+		/// <summary>
+		/// SupportByVersion PowerPoint 16
+		/// Get
+		/// </summary>
+		/// <remarks> Returns the Microsoft Office SensitivityLabel object from the Presentation. </remarks>
+		[SupportByVersion("PowerPoint", 16)]
+		public NetOffice.OfficeApi.SensitivityLabel SensitivityLabel
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SensitivityLabel>(this, "SensitivityLabel", NetOffice.OfficeApi.SensitivityLabel.LateBindingApiWrapperType);
+			}
+		}
 
 		#endregion
 
