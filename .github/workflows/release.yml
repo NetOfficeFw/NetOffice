@@ -84,7 +84,7 @@ jobs:
 
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
-      uses: azure/artifact-signing-action@v1
+      uses: azure/artifact-signing-action@v1.2.0
       with:
         endpoint: ${{ secrets.ARTIFACTS_SIGNING_ENDPOINT }}
         signing-account-name: ${{ secrets.ARTIFACTS_SIGNING_ACCOUNT_NAME }}
