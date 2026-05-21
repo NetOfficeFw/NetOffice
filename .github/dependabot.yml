@@ -6,3 +6,21 @@ updates:
       interval: 'weekly'
     cooldown:
       default-days: 14
+    # These actions will be bumped only to next major version
+    ignore:
+      - dependency-name: 'actions/*'
+        update-types:
+          - 'version-update:semver-minor'
+          - 'version-update:semver-patch'
+      - dependency-name: 'azure/*'
+        update-types:
+          - 'version-update:semver-minor'
+          - 'version-update:semver-patch'
+      - dependency-name: 'gilabels/*'
+        update-types:
+          - 'version-update:semver-minor'
+          - 'version-update:semver-patch'
+      - dependency-name: 'microsoft/*'
+        update-types:
+          - 'version-update:semver-minor'
+          - 'version-update:semver-patch'
