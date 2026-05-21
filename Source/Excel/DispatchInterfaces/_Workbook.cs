@@ -2356,6 +2356,20 @@ namespace NetOffice.ExcelApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Excel 16
+		/// Get
+		/// </summary>
+		/// <remarks> Returns the Microsoft Office SensitivityLabel object from the Workbook. </remarks>
+		[SupportByVersion("Excel", 16)]
+		public NetOffice.OfficeApi.SensitivityLabel SensitivityLabel
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SensitivityLabel>(this, "SensitivityLabel", NetOffice.OfficeApi.SensitivityLabel.LateBindingApiWrapperType);
+			}
+		}
+
 		#endregion
 
 		#region Methods

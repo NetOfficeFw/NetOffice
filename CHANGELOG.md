@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.10
+
+### Added
+* Added `SensitivityLabel` and `LabelInfo` object model support in Office, Excel, PowerPoint and Word libraries [#445](https://github.com/NetOfficeFw/NetOffice/pull/445)
+
+
 ## v1.9.9
 
 ### Added
