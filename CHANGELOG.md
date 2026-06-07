@@ -10,6 +10,12 @@
   * event `OnCreateCOMDynamicEvent`
 
 
+## v1.9.10
+
+### Added
+* Added `SensitivityLabel` and `LabelInfo` object model support in Office, Excel, PowerPoint and Word libraries [#445](https://github.com/NetOfficeFw/NetOffice/pull/445)
+
+
 ## v1.9.9
 
 ### Added
@@ -20,6 +26,9 @@
 
 ### Fixed
 * Fix bug in `ContentControlBeforeContentUpdate` code by verifying the correct event name [#454](https://github.com/NetOfficeFw/NetOffice/pull/454)
+
+### Added
+* Added `Presentation.AutoSaveOn` property in PowerPoint library [#438](https://github.com/NetOfficeFw/NetOffice/issues/438)
 
 
 ## v1.9.7

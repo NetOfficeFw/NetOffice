@@ -3520,6 +3520,20 @@ namespace NetOffice.WordApi
 			}
 		}
 
+		/// <summary>
+		/// SupportByVersion Word 16
+		/// Get
+		/// </summary>
+		/// <remarks> Returns the Microsoft Office SensitivityLabel object from the Document. </remarks>
+		[SupportByVersion("Word", 16)]
+		public NetOffice.OfficeApi.SensitivityLabel SensitivityLabel
+		{
+			get
+			{
+				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SensitivityLabel>(this, "SensitivityLabel", NetOffice.OfficeApi.SensitivityLabel.LateBindingApiWrapperType);
+			}
+		}
+
 		#endregion
 
 		#region Methods
