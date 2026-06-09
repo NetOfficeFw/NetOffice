@@ -11,10 +11,6 @@
   </PropertyGroup>
 
   <Import Project="..\NetOffice.props" />
-
-  <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Update="Contribution\Controls\InstanceMonitor.cs">
       <SubType>UserControl</SubType>
