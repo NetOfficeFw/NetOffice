@@ -8,6 +8,7 @@ namespace NetOffice
     /// <summary>
     /// Runtime Entity Description
     /// </summary>
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
     public class DynamicObjectEntity
     {
         /// <summary>

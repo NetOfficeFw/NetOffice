@@ -10,6 +10,7 @@ namespace NetOffice.Dynamics
     /// <summary>
     /// Wrapper around underlying DynamicMetaObject for debugging purposes.
     /// </summary>
+    [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
     public class COMDynamicMetaObject : DynamicMetaObject
     {
         /// <summary>
