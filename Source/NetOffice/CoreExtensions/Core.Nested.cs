@@ -61,6 +61,7 @@ namespace NetOffice
         /// <summary>
         /// Arguments in CreateCOMDynamicEvent event
         /// </summary>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
         public class OnCreateCOMDynamicEventArgs : EventArgs
         {
             /// <summary>
@@ -201,6 +202,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="sender">Core sender instance</param>
         /// <param name="args">args as provided</param>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
         public delegate void OnCreateCOMDynamicEventHandler(Core sender, OnCreateCOMDynamicEventArgs args);
 
         /// <summary>
