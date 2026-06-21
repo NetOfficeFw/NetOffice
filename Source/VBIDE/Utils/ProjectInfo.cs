@@ -19,8 +19,8 @@ namespace VBIDEApi.Utils
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
-		private string[]  _dependents;
-		
+        private string[]  _dependents;
+        
         #endregion
 
         #region Ctor
@@ -80,8 +80,8 @@ namespace VBIDEApi.Utils
         {
             get
             {
-				if(null == _dependents)
-					_dependents = new string[]{"OfficeApi.dll"};
+                if(null == _dependents)
+                    _dependents = new string[]{"OfficeApi.dll"};
                 return _dependents;
             }
         }

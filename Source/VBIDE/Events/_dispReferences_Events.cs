@@ -7,25 +7,25 @@ using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi.EventInterfaces
 {	
-	#pragma warning disable
-	
-	#region SinkPoint Interface
+    #pragma warning disable
+    
+    #region SinkPoint Interface
 
-	[SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12,14,5.3)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("CDDE3804-2064-11CF-867F-00AA005FF34A"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface _dispReferences_Events
-	{
-		[SupportByVersion("VBIDE", 12,14,5.3)]
+    public interface _dispReferences_Events
+    {
+        [SupportByVersion("VBIDE", 12,14,5.3)]
         [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
-		void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
+        void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-		[SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12,14,5.3)]
         [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
-		void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
-	}
+        void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
+    }
 
     #endregion
 
@@ -33,26 +33,26 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class _dispReferences_Events_SinkHelper : SinkHelper, _dispReferences_Events
-	{
-		#region Static
-		
-		public static readonly string Id = "CDDE3804-2064-11CF-867F-00AA005FF34A";
-		
-		#endregion
-		
-		#region Ctor
+    public class _dispReferences_Events_SinkHelper : SinkHelper, _dispReferences_Events
+    {
+        #region Static
+        
+        public static readonly string Id = "CDDE3804-2064-11CF-867F-00AA005FF34A";
+        
+        #endregion
+        
+        #region Ctor
 
-		public _dispReferences_Events_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
-		#region _dispReferences_Events
-		
-		public void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
+        public _dispReferences_Events_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+        
+        #endregion
+        
+        #region _dispReferences_Events
+        
+        public void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
         {
             if (!Validate("ItemAdded"))
             {
@@ -60,13 +60,13 @@ namespace NetOffice.VBIDEApi.EventInterfaces
                 return;
             }
 
-			NetOffice.VBIDEApi.Reference newReference = Factory.CreateKnownObjectFromComProxy<NetOffice.VBIDEApi.Reference>(EventClass, reference, NetOffice.VBIDEApi.Reference.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
-			paramsArray[0] = newReference;
-			EventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
-		}
+            NetOffice.VBIDEApi.Reference newReference = Factory.CreateKnownObjectFromComProxy<NetOffice.VBIDEApi.Reference>(EventClass, reference, NetOffice.VBIDEApi.Reference.LateBindingApiWrapperType);
+            object[] paramsArray = new object[1];
+            paramsArray[0] = newReference;
+            EventBinding.RaiseCustomEvent("ItemAdded", ref paramsArray);
+        }
 
-		public void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
+        public void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
         {
             if (!Validate("ItemRemoved"))
             {
@@ -76,14 +76,14 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 
             NetOffice.VBIDEApi.Reference newReference = Factory.CreateKnownObjectFromComProxy<NetOffice.VBIDEApi.Reference>(EventClass, reference, NetOffice.VBIDEApi.Reference.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
-			paramsArray[0] = newReference;
+            paramsArray[0] = newReference;
             EventBinding.RaiseCustomEvent("ItemRemoved", ref paramsArray);
-		}
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore
+        #endregion
+    }
+    
+    #endregion
+    
+    #pragma warning restore
 }
