@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface WebPageFont 
-	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont"/> </remarks>
-	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class WebPageFont : _IMsoDispObj
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface WebPageFont 
+    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont"/> </remarks>
+    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class WebPageFont : _IMsoDispObj
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,147 +45,147 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public WebPageFont(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public WebPageFont(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public WebPageFont(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public WebPageFont(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WebPageFont(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WebPageFont(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public WebPageFont(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WebPageFont(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WebPageFont(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WebPageFont() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public WebPageFont(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public WebPageFont(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.ProportionalFont"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public string ProportionalFont
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ProportionalFont");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ProportionalFont", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.ProportionalFontSize"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public Single ProportionalFontSize
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "ProportionalFontSize");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ProportionalFontSize", value);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public WebPageFont(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public WebPageFont(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public WebPageFont() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public WebPageFont(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.FixedWidthFont"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public string FixedWidthFont
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FixedWidthFont");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FixedWidthFont", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.ProportionalFont"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public string ProportionalFont
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ProportionalFont");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ProportionalFont", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.FixedWidthFontSize"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public Single FixedWidthFontSize
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "FixedWidthFontSize");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FixedWidthFontSize", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.ProportionalFontSize"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public Single ProportionalFontSize
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "ProportionalFontSize");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ProportionalFontSize", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.FixedWidthFont"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public string FixedWidthFont
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "FixedWidthFont");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "FixedWidthFont", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WebPageFont.FixedWidthFontSize"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public Single FixedWidthFontSize
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "FixedWidthFontSize");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "FixedWidthFontSize", value);
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Methods
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

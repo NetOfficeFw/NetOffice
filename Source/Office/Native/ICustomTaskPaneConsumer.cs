@@ -11,10 +11,10 @@ namespace NetOffice.OfficeApi.Native
     /// NativeInterface ICustomTaskPaneConsumer SupportByVersion Office, 12,14,15,16
     /// </summary>
     [SupportByVersion("Office", 12,14,15,16)]
-	[ComImport, ComVisible(true), Guid("000C033E-0000-0000-C000-000000000046"), TypeLibType((short) 4288)]
-	[EntityType(EntityType.IsNativeInterface)]
-	public interface ICustomTaskPaneConsumer
-	{
+    [ComImport, ComVisible(true), Guid("000C033E-0000-0000-C000-000000000046"), TypeLibType((short) 4288)]
+    [EntityType(EntityType.IsNativeInterface)]
+    public interface ICustomTaskPaneConsumer
+    {
         #region Methods
 
         /// <summary>
@@ -22,10 +22,10 @@ namespace NetOffice.OfficeApi.Native
         /// </summary>
         /// <param name="CTPFactoryInst">The object is used by an add-in to create a task pane.</param>
         [SupportByVersion("Office", 12,14,15,16)]
-		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1)]
-		void CTPFactoryAvailable([In, MarshalAs(UnmanagedType.Interface)] object CTPFactoryInst);
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1)]
+        void CTPFactoryAvailable([In, MarshalAs(UnmanagedType.Interface)] object CTPFactoryInst);
 
-		#endregion
-	}
+        #endregion
+    }
     #pragma warning restore
 }

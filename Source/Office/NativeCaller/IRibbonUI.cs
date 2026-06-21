@@ -52,14 +52,14 @@ namespace NetOffice.OfficeApi
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="proxyShare">proxy share instead of com proxy</param>
         public IRibbonUI(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
+        {
         }
 
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IRibbonUI(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
+        {
 
         }
 
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRibbonUI(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
+        {
         }
 
         ///<param name="factory">current used factory core</param>
@@ -76,7 +76,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRibbonUI(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        {
 
         }
 
@@ -85,13 +85,13 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRibbonUI(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
+        {
         }
 
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRibbonUI(ICOMObject replacedObject) : base(replacedObject)
-		{
+        {
         }
 
         /// <summary>
@@ -99,13 +99,13 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRibbonUI() : base()
-		{
+        {
         }
 
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRibbonUI(string progId) : base(progId)
-		{
+        {
         }
 
         #endregion
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         /// <param name="controlID">Specifies the identifier of the custom Ribbon tab to be activated.</param>
-		[SupportByVersion("Office", 14, 15, 16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public void ActivateTabMso(string controlID)
         {
             if (HasUnderlyingObject)
