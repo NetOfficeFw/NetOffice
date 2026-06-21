@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.MSComctlLibApi
 {
-	/// <summary>
-	/// DispatchInterface IControls 
-	/// SupportByVersion MSComctlLib, 6
-	/// </summary>
-	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class IControls : COMObject, IEnumerableProvider<object>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface IControls 
+    /// SupportByVersion MSComctlLib, 6
+    /// </summary>
+    [SupportByVersion("MSComctlLib", 6)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
+    public class IControls : COMObject, IEnumerableProvider<object>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -47,97 +47,97 @@ namespace NetOffice.MSComctlLibApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public IControls(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public IControls(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public IControls(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public IControls(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public IControls(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public IControls(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public IControls(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion MSComctlLib 6
-		/// Get
-		/// </summary>
-		[SupportByVersion("MSComctlLib", 6)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion MSComctlLib 6
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("MSComctlLib", 6), ProxyResult]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public object this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Item", index);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public IControls(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public IControls(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public IControls() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public IControls(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib 6
+        /// Get
+        /// </summary>
+        [SupportByVersion("MSComctlLib", 6)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion MSComctlLib 6
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("MSComctlLib", 6), ProxyResult]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public object this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Item", index);
+            }
+        }
 
         #endregion
 
@@ -180,13 +180,13 @@ namespace NetOffice.MSComctlLibApi
         /// SupportByVersion MSComctlLib, 6
         /// </summary>
         [SupportByVersion("MSComctlLib", 6)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
-		}
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

@@ -5,27 +5,27 @@ using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	#pragma warning restore
+    #pragma warning disable
+    #pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass Button 
-	/// SupportByVersion MSComctlLib, 6
-	/// </summary>
-	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsCoClass)]
- 	public class Button : IButton
-	{
-		#pragma warning disable
+    /// <summary>
+    /// CoClass Button 
+    /// SupportByVersion MSComctlLib, 6
+    /// </summary>
+    [SupportByVersion("MSComctlLib", 6)]
+    [EntityType(EntityType.IsCoClass)]
+    public class Button : IButton
+    {
+        #pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+        
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
 
         #endregion
@@ -47,7 +47,7 @@ namespace NetOffice.MSComctlLibApi
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -59,78 +59,78 @@ namespace NetOffice.MSComctlLibApi
         }
         
         #endregion
-        		
-		#region Construction
+                
+        #region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Button(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Button(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Button(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public Button(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+            
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Button(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Button(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
+            
+        }
 
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Button(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Button(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Button(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+            
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Button(ICOMObject replacedObject) : base(replacedObject)
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of Button 
         /// </summary>		
-		public Button():base("MSComctlLib.Button")
-		{
-			
-		}
-		
-		/// <summary>
+        public Button():base("MSComctlLib.Button")
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of Button
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public Button(string progId):base(progId)
-		{
-			
-		}
+        public Button(string progId):base(progId)
+        {
+            
+        }
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
-		#endregion
+        #region Static CoClass Methods
+        #endregion
 
-		#region Events
+        #region Events
 
-		#endregion
+        #endregion
        
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
 
