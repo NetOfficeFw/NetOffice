@@ -182,6 +182,7 @@ namespace NetOffice
         /// <summary>
         /// Occurs when a new COMDynamicObject instance should be created
         /// </summary>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
         public event OnCreateCOMDynamicEventHandler CreateCOMDynamic;
 
         /// <summary>
@@ -190,6 +191,7 @@ namespace NetOffice
         /// <param name="instance">requested instance</param>
         /// <param name="comProxy">target proxy</param>
         /// <returns>COMDynamicObject instance or null</returns>
+        [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
         private COMDynamicObject RaiseCreateCOMDynamic(ICOMObject instance, object comProxy)
         {
             if (null != CreateCOMDynamic)
