@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface PictureEffect 
-	/// SupportByVersion Office, 14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect"/> </remarks>
-	[SupportByVersion("Office", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class PictureEffect : _IMsoDispObj
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface PictureEffect 
+    /// SupportByVersion Office, 14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect"/> </remarks>
+    [SupportByVersion("Office", 14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class PictureEffect : _IMsoDispObj
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,149 +45,149 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PictureEffect(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public PictureEffect(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PictureEffect(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public PictureEffect(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureEffect(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureEffect(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public PictureEffect(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureEffect(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureEffect(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureEffect() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PictureEffect(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public PictureEffect(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Type"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoPictureEffectType Type
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureEffectType>(this, "Type");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Position"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public Int32 Position
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Position");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Position", value);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PictureEffect(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PictureEffect(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PictureEffect() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PictureEffect(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.EffectParameters"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public NetOffice.OfficeApi.EffectParameters EffectParameters
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.EffectParameters>(this, "EffectParameters", NetOffice.OfficeApi.EffectParameters.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Type"/> </remarks>
+        [SupportByVersion("Office", 14,15,16)]
+        public NetOffice.OfficeApi.Enums.MsoPictureEffectType Type
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoPictureEffectType>(this, "Type");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Visible"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Visible
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Visible", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Position"/> </remarks>
+        [SupportByVersion("Office", 14,15,16)]
+        public Int32 Position
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Position");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Position", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.EffectParameters"/> </remarks>
+        [SupportByVersion("Office", 14,15,16)]
+        public NetOffice.OfficeApi.EffectParameters EffectParameters
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.EffectParameters>(this, "EffectParameters", NetOffice.OfficeApi.EffectParameters.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Visible"/> </remarks>
+        [SupportByVersion("Office", 14,15,16)]
+        public NetOffice.OfficeApi.Enums.MsoTriState Visible
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Visible");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "Visible", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Delete"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        #endregion
 
-		#endregion
+        #region Methods
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PictureEffect.Delete"/> </remarks>
+        [SupportByVersion("Office", 14,15,16)]
+        public void Delete()
+        {
+            Factory.ExecuteMethod(this, "Delete");
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

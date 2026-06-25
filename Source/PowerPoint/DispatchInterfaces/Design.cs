@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface Design 
-	/// SupportByVersion PowerPoint, 10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design"/> </remarks>
-	[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Design : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Design 
+    /// SupportByVersion PowerPoint, 10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design"/> </remarks>
+    [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class Design : COMObject
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,227 +45,227 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Design(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Design(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Design(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Design(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Design(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Design(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public Design(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Design(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Design(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Design() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Design(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Design(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Application"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Parent"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Design(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Design(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Design() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Design(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.SlideMaster"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.PowerPointApi._Master SlideMaster
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.PowerPointApi._Master>(this, "SlideMaster");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Application"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public NetOffice.PowerPointApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.PowerPointApi._Master TitleMaster
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.PowerPointApi._Master>(this, "TitleMaster");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Parent"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState HasTitleMaster
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "HasTitleMaster");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.SlideMaster"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [BaseResult]
+        public NetOffice.PowerPointApi._Master SlideMaster
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.PowerPointApi._Master>(this, "SlideMaster");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Index"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public Int32 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [BaseResult]
+        public NetOffice.PowerPointApi._Master TitleMaster
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.PowerPointApi._Master>(this, "TitleMaster");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Name"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public NetOffice.OfficeApi.Enums.MsoTriState HasTitleMaster
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "HasTitleMaster");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Preserved"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoTriState Preserved
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Preserved");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Preserved", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Index"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public Int32 Index
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Index");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Name"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Name", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Preserved"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public NetOffice.OfficeApi.Enums.MsoTriState Preserved
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "Preserved");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "Preserved", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// </summary>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.PowerPointApi._Master AddTitleMaster()
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.PowerPointApi._Master>(this, "AddTitleMaster");
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.MoveTo"/> </remarks>
-		/// <param name="toPos">Int32 toPos</param>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public void MoveTo(Int32 toPos)
-		{
-			 Factory.ExecuteMethod(this, "MoveTo", toPos);
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Delete"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// </summary>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [BaseResult]
+        public NetOffice.PowerPointApi._Master AddTitleMaster()
+        {
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.PowerPointApi._Master>(this, "AddTitleMaster");
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.MoveTo"/> </remarks>
+        /// <param name="toPos">Int32 toPos</param>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public void MoveTo(Int32 toPos)
+        {
+            Factory.ExecuteMethod(this, "MoveTo", toPos);
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Design.Delete"/> </remarks>
+        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        public void Delete()
+        {
+            Factory.ExecuteMethod(this, "Delete");
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

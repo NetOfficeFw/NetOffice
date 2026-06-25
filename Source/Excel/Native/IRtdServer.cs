@@ -15,7 +15,7 @@ namespace NetOffice.ExcelApi.Native
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsNativeInterface)]
     public interface IRtdServer
-	{
+    {
         #region Methods
 
         /// <summary>

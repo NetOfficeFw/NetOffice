@@ -5,43 +5,43 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	public delegate void Folder_BeforeFolderMoveEventHandler(NetOffice.OutlookApi.MAPIFolder moveTo, ref bool cancel);
-	public delegate void Folder_BeforeItemMoveEventHandler(ICOMObject item, NetOffice.OutlookApi.MAPIFolder moveTo, ref bool cancel);
-	#pragma warning restore
+    #pragma warning disable
+    public delegate void Folder_BeforeFolderMoveEventHandler(NetOffice.OutlookApi.MAPIFolder moveTo, ref bool cancel);
+    public delegate void Folder_BeforeItemMoveEventHandler(ICOMObject item, NetOffice.OutlookApi.MAPIFolder moveTo, ref bool cancel);
+    #pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass Folder 
-	/// SupportByVersion Outlook, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folder"/> </remarks>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.MAPIFolderEvents_12_SinkHelper))]
+    /// <summary>
+    /// CoClass Folder 
+    /// SupportByVersion Outlook, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folder"/> </remarks>
+    [SupportByVersion("Outlook", 12,14,15,16)]
+    [EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events.MAPIFolderEvents_12_SinkHelper))]
     [ComEventInterface(typeof(Events.MAPIFolderEvents_12))]
     public class Folder : MAPIFolder, IEventBinding
-	{
-		#pragma warning disable
+    {
+        #pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+        
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
         private Events.MAPIFolderEvents_12_SinkHelper _mAPIFolderEvents_12_SinkHelper;
-	
-		#endregion
+    
+        #endregion
 
-		#region Type Information
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -53,7 +53,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -65,145 +65,145 @@ namespace NetOffice.OutlookApi
         }
         
         #endregion
-        		
-		#region Construction
+                
+        #region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Folder(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Folder(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Folder(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public Folder(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+            
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Folder(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Folder(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
+            
+        }
 
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Folder(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Folder(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Folder(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+            
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Folder(ICOMObject replacedObject) : base(replacedObject)
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of Folder 
         /// </summary>		
-		public Folder():base("Outlook.Folder")
-		{
-			
-		}
-		
-		/// <summary>
+        public Folder():base("Outlook.Folder")
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of Folder
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public Folder(string progId):base(progId)
-		{
-			
-		}
+        public Folder(string progId):base(progId)
+        {
+            
+        }
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
-		#endregion
+        #region Static CoClass Methods
+        #endregion
 
-		#region Events
+        #region Events
 
-		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15,16
-		/// </summary>
-		private event Folder_BeforeFolderMoveEventHandler _BeforeFolderMoveEvent;
+        /// <summary>
+        /// SupportByVersion Outlook, 12,14,15,16
+        /// </summary>
+        private event Folder_BeforeFolderMoveEventHandler _BeforeFolderMoveEvent;
 
-		/// <summary>
-		/// SupportByVersion Outlook 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folder.BeforeFolderMove"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public event Folder_BeforeFolderMoveEventHandler BeforeFolderMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeFolderMoveEvent += value;
-			}
-			remove
-			{
-				_BeforeFolderMoveEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folder.BeforeFolderMove"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public event Folder_BeforeFolderMoveEventHandler BeforeFolderMoveEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _BeforeFolderMoveEvent += value;
+            }
+            remove
+            {
+                _BeforeFolderMoveEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook, 12,14,15,16
-		/// </summary>
-		private event Folder_BeforeItemMoveEventHandler _BeforeItemMoveEvent;
+        /// <summary>
+        /// SupportByVersion Outlook, 12,14,15,16
+        /// </summary>
+        private event Folder_BeforeItemMoveEventHandler _BeforeItemMoveEvent;
 
-		/// <summary>
-		/// SupportByVersion Outlook 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folder.BeforeItemMove"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public event Folder_BeforeItemMoveEventHandler BeforeItemMoveEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeItemMoveEvent += value;
-			}
-			remove
-			{
-				_BeforeItemMoveEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folder.BeforeItemMove"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public event Folder_BeforeItemMoveEventHandler BeforeItemMoveEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _BeforeItemMoveEvent += value;
+            }
+            remove
+            {
+                _BeforeItemMoveEvent -= value;
+            }
+        }
 
-		#endregion
+        #endregion
        
-	    #region IEventBinding
+        #region IEventBinding
         
-		/// <summary>
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void CreateEventBridge()
         {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
+            if(false == Factory.Settings.EnableEvents)
+                return;
+    
+            if (null != _connectPoint)
+                return;
+    
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.MAPIFolderEvents_12_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.MAPIFolderEvents_12_SinkHelper.Id);
 
 
-			if(Events.MAPIFolderEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				_mAPIFolderEvents_12_SinkHelper = new Events.MAPIFolderEvents_12_SinkHelper(this, _connectPoint);
-				return;
-			} 
+            if(Events.MAPIFolderEvents_12_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            {
+                _mAPIFolderEvents_12_SinkHelper = new Events.MAPIFolderEvents_12_SinkHelper(this, _connectPoint);
+                return;
+            } 
         }
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
@@ -262,29 +262,29 @@ namespace NetOffice.OutlookApi
         /// <param name="eventName">name of the event without 'Event' at the end</param>
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
+        {
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
+        }
         /// <summary>
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-			if( null != _mAPIFolderEvents_12_SinkHelper)
-			{
-				_mAPIFolderEvents_12_SinkHelper.Dispose();
-				_mAPIFolderEvents_12_SinkHelper = null;
-			}
+            if( null != _mAPIFolderEvents_12_SinkHelper)
+            {
+                _mAPIFolderEvents_12_SinkHelper.Dispose();
+                _mAPIFolderEvents_12_SinkHelper = null;
+            }
 
-			_connectPoint = null;
-		}
+            _connectPoint = null;
+        }
         
         #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
 

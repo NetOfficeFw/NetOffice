@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface ResampleMediaTask 
-	/// SupportByVersion PowerPoint, 14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask"/> </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ResampleMediaTask : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface ResampleMediaTask 
+    /// SupportByVersion PowerPoint, 14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask"/> </remarks>
+    [SupportByVersion("PowerPoint", 14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class ResampleMediaTask : COMObject
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,229 +45,229 @@ namespace NetOffice.PowerPointApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ResampleMediaTask(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ResampleMediaTask(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ResampleMediaTask(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ResampleMediaTask(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTask(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTask(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public ResampleMediaTask(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTask(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTask(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTask() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ResampleMediaTask(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public ResampleMediaTask(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.profile"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpResampleMediaProfile>(this, "profile");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.IsLinked"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool IsLinked
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsLinked");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ResampleMediaTask(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ResampleMediaTask(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ResampleMediaTask() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ResampleMediaTask(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.IsEmbedded"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool IsEmbedded
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsEmbedded");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.profile"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public NetOffice.PowerPointApi.Enums.PpResampleMediaProfile profile
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.PowerPointApi.Enums.PpResampleMediaProfile>(this, "profile");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.AudioSamplingRate"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 AudioSamplingRate
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "AudioSamplingRate");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.IsLinked"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public bool IsLinked
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IsLinked");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.VideoFrameRate"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 VideoFrameRate
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "VideoFrameRate");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.IsEmbedded"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public bool IsEmbedded
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IsEmbedded");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.SampleHeight"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 SampleHeight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SampleHeight");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.AudioSamplingRate"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public Int32 AudioSamplingRate
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "AudioSamplingRate");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.SampleWidth"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 SampleWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SampleWidth");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.VideoFrameRate"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public Int32 VideoFrameRate
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "VideoFrameRate");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.ContainerType"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string ContainerType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ContainerType");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.SampleHeight"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public Int32 SampleHeight
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "SampleHeight");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.VideoCompressionType"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string VideoCompressionType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "VideoCompressionType");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.SampleWidth"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public Int32 SampleWidth
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "SampleWidth");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.AudioCompressionType"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string AudioCompressionType
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "AudioCompressionType");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.ContainerType"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public string ContainerType
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ContainerType");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.Shape"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Shape Shape
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Shape>(this, "Shape", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.VideoCompressionType"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public string VideoCompressionType
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "VideoCompressionType");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.AudioCompressionType"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public string AudioCompressionType
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "AudioCompressionType");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ResampleMediaTask.Shape"/> </remarks>
+        [SupportByVersion("PowerPoint", 14,15,16)]
+        public NetOffice.PowerPointApi.Shape Shape
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Shape>(this, "Shape", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Methods
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

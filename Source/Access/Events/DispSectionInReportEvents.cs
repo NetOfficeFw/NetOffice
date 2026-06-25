@@ -7,68 +7,68 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
 {	
-	#pragma warning disable
-	
-	#region SinkPoint Interface
+    #pragma warning disable
+    
+    #region SinkPoint Interface
 
-	[SupportByVersion("Access", 12,14,15,16)]
+    [SupportByVersion("Access", 12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("2E70527C-92D1-43CC-A57B-ED48BCCC711D"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface DispSectionInReportEvents
-	{
-		[SupportByVersion("Access", 12,14,15,16)]
+    public interface DispSectionInReportEvents
+    {
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [SinkArgument("formatCount", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2079)]
-		void Format([In] [Out] ref object cancel, [In] [Out] ref object formatCount);
+        void Format([In] [Out] ref object cancel, [In] [Out] ref object formatCount);
 
-		[SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [SinkArgument("printCount", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2080)]
-		void Print([In] [Out] ref object cancel, [In] [Out] ref object printCount);
+        void Print([In] [Out] ref object cancel, [In] [Out] ref object printCount);
 
-		[SupportByVersion("Access", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2081)]
-		void Retreat();
+        [SupportByVersion("Access", 12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2081)]
+        void Retreat();
 
-		[SupportByVersion("Access", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
-		void Click();
+        [SupportByVersion("Access", 12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
+        void Click();
 
-		[SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
-		void DblClick([In] [Out] ref object cancel);
+        void DblClick([In] [Out] ref object cancel);
 
-		[SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
-		void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
-		void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
-		void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2486)]
-		void Paint();
-	}
+        [SupportByVersion("Access", 12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2486)]
+        void Paint();
+    }
 
     #endregion
 
@@ -76,69 +76,69 @@ namespace NetOffice.AccessApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class DispSectionInReportEvents_SinkHelper : SinkHelper, DispSectionInReportEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "2E70527C-92D1-43CC-A57B-ED48BCCC711D";
-		
-		#endregion
-		
-		#region Ctor
+    public class DispSectionInReportEvents_SinkHelper : SinkHelper, DispSectionInReportEvents
+    {
+        #region Static
+        
+        public static readonly string Id = "2E70527C-92D1-43CC-A57B-ED48BCCC711D";
+        
+        #endregion
+        
+        #region Ctor
 
-		public DispSectionInReportEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
+        public DispSectionInReportEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+        
+        #endregion
 
-		#region DispSectionInReportEvents
-		
-		public void Format([In] [Out] ref object cancel, [In] [Out] ref object formatCount)
-		{
+        #region DispSectionInReportEvents
+        
+        public void Format([In] [Out] ref object cancel, [In] [Out] ref object formatCount)
+        {
             if (!Validate("Format"))
             {
                 Invoker.ReleaseParamsArray(cancel, formatCount);
                 return;
             }
 
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(cancel, 0);
-			paramsArray.SetValue(formatCount, 1);
-			EventBinding.RaiseCustomEvent("Format", ref paramsArray);
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(cancel, 0);
+            paramsArray.SetValue(formatCount, 1);
+            EventBinding.RaiseCustomEvent("Format", ref paramsArray);
 
-			cancel = ToInt16(paramsArray[0]);
-			formatCount = ToInt16(paramsArray[1]);
+            cancel = ToInt16(paramsArray[0]);
+            formatCount = ToInt16(paramsArray[1]);
         }
 
-		public void Print([In] [Out] ref object cancel, [In] [Out] ref object printCount)
-		{
+        public void Print([In] [Out] ref object cancel, [In] [Out] ref object printCount)
+        {
             if (!Validate("Print"))
             {
                 Invoker.ReleaseParamsArray(cancel, printCount);
                 return;
             }
 
-			object[] paramsArray = new object[2];
-			paramsArray.SetValue(cancel, 0);
-			paramsArray.SetValue(printCount, 1);
-			EventBinding.RaiseCustomEvent("Print", ref paramsArray);
+            object[] paramsArray = new object[2];
+            paramsArray.SetValue(cancel, 0);
+            paramsArray.SetValue(printCount, 1);
+            EventBinding.RaiseCustomEvent("Print", ref paramsArray);
 
-			cancel = ToInt16(paramsArray[0]);
+            cancel = ToInt16(paramsArray[0]);
             printCount = ToInt16(paramsArray[1]);
         }
 
-		public void Retreat()
-		{
+        public void Retreat()
+        {
             if (!Validate("Retreat"))
             {
                 return;
             }
             
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("Retreat", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("Retreat", ref paramsArray);
+        }
 
         public void Click()
         {
@@ -230,20 +230,20 @@ namespace NetOffice.AccessApi.Events
         }
 
         public void Paint()
-		{
+        {
             if (!Validate("Paint"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("Paint", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("Paint", ref paramsArray);
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore
+        #endregion
+    }
+    
+    #endregion
+    
+    #pragma warning restore
 }

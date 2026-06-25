@@ -5,23 +5,23 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-	/// <summary>
-	/// DispatchInterface Sort 
-	/// SupportByVersion Excel, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort"/> </remarks>
-	[SupportByVersion("Excel", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Sort : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Sort 
+    /// SupportByVersion Excel, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort"/> </remarks>
+    [SupportByVersion("Excel", 12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class Sort : COMObject
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -32,7 +32,7 @@ namespace NetOffice.ExcelApi
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,239 +45,239 @@ namespace NetOffice.ExcelApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Sort(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Sort(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Sort(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Sort(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sort(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sort(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public Sort(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sort(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sort(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sort() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sort(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Sort(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Application"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Creator"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sort(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sort(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sort() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sort(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Parent"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Application"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Rng"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range Rng
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Rng", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Creator"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Header"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlYesNoGuess Header
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlYesNoGuess>(this, "Header");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Header", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Parent"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.MatchCase"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public bool MatchCase
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "MatchCase");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MatchCase", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Rng"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Range Rng
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Rng", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Orientation"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortOrientation Orientation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortOrientation>(this, "Orientation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Orientation", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Header"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Enums.XlYesNoGuess Header
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlYesNoGuess>(this, "Header");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "Header", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.SortMethod"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlSortMethod SortMethod
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortMethod>(this, "SortMethod");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "SortMethod", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.MatchCase"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public bool MatchCase
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "MatchCase");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "MatchCase", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.SortFields"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.SortFields SortFields
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SortFields>(this, "SortFields", NetOffice.ExcelApi.SortFields.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Orientation"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Enums.XlSortOrientation Orientation
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortOrientation>(this, "Orientation");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "Orientation", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.SortMethod"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Enums.XlSortMethod SortMethod
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlSortMethod>(this, "SortMethod");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "SortMethod", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.SortFields"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.SortFields SortFields
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.SortFields>(this, "SortFields", NetOffice.ExcelApi.SortFields.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.SetRange"/> </remarks>
-		/// <param name="rng">NetOffice.ExcelApi.Range rng</param>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public void SetRange(NetOffice.ExcelApi.Range rng)
-		{
-			 Factory.ExecuteMethod(this, "SetRange", rng);
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Apply"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public void Apply()
-		{
-			 Factory.ExecuteMethod(this, "Apply");
-		}
+        #region Methods
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.SetRange"/> </remarks>
+        /// <param name="rng">NetOffice.ExcelApi.Range rng</param>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public void SetRange(NetOffice.ExcelApi.Range rng)
+        {
+            Factory.ExecuteMethod(this, "SetRange", rng);
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Sort.Apply"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public void Apply()
+        {
+            Factory.ExecuteMethod(this, "Apply");
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

@@ -45,13 +45,13 @@ namespace NetOffice.WordApi.Tools
         protected abstract string Description { get; }
        
         /// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector.Inspect"/> </remarks>
-		/// <param name="doc">object doc</param>
-		/// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
-		/// <param name="result">string result</param>
-		/// <param name="action">string action</param>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector.Inspect"/> </remarks>
+        /// <param name="doc">object doc</param>
+        /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
+        /// <param name="result">string result</param>
+        /// <param name="action">string action</param>
         protected abstract void Inspect(Word.Document doc, out MsoDocInspectorStatus status, out string result, out string action);
 
         /// <summary>

@@ -1,0 +1,37 @@
+# Formatting-only indentation changes from `dev/490-use_spaces_indentation` branch
+
+# Convert indentation from tabs to spaces in project `ADODBApi.csproj`
+6af363289506c23d1f8906ef248a2bebd26d3494
+
+# Convert indentation from tabs to spaces in project `DAOApi.csproj`
+5981cb8ce71464a2182f0a98390e503349791530
+
+# Convert indentation from tabs to spaces in project `MSComctlLibApi.csproj`
+6bb1f1e184d8c7a6586f532282c8fe6f18a10888
+
+# Convert indentation from tabs to spaces in project `MSDATASRCApi.csproj`
+87d32ea3691e520ddce3c9ae9b2cd7b4818759c1
+
+# Convert indentation from tabs to spaces in project `OfficeApi.csproj`
+cf74c5f86a74bca96ee3b357f9df4cf0bfb7f535
+
+# Convert indentation from tabs to spaces in project `VBIDEApi.csproj`
+7eb5c5985c90c0e07e0f96eb64f681444d886b25
+
+# Convert indentation from tabs to spaces in project `OWC10Api.csproj`
+2545f440c601666e71e4f3c679dedd2ea6bcb35a
+
+# Convert indentation from tabs to spaces in project `OutlookApi.csproj`
+17f9d48b1fee7ee631beaca9ed605a1f2de16299
+
+# Convert indentation from tabs to spaces in project `ExcelApi.csproj`
+20f8c00f203691f488af825c7df89f59d7bd03e3
+
+# Convert indentation from tabs to spaces in project `PowerPointApi.csproj`
+90df9b93c4de2135bfa81fa4c0b34ffcd79b2932
+
+# Convert indentation from tabs to spaces in project `WordApi.csproj`
+26ca7198f20d3c03c2afe93fe8074638bbf1d156
+
+# Convert indentation from tabs to spaces in project `AccessApi.csproj`
+6db208ae5adf919613652870680e6dc1ac5c0854

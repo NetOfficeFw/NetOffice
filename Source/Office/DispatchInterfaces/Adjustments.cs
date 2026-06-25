@@ -8,34 +8,34 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface Adjustments 
-	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
+    /// <summary>
+    /// DispatchInterface Adjustments 
+    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Value, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Property, "Item")]
     [Duplicate("NetOffice.ExcelApi.Adjustments")]
     public class Adjustments : _IMsoDispObj, IEnumerableProvider<Single>
-	{
-		#pragma warning disable
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -48,114 +48,114 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Adjustments(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Adjustments(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Adjustments(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Adjustments(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Adjustments(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Adjustments(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public Adjustments(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Adjustments(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Adjustments(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Adjustments() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Adjustments(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Adjustments(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Adjustments(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Adjustments(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Adjustments() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Adjustments(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public Single this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Item", index);
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Item", value, index);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public Single this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Item", index);
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Item", value, index);
+            }
+        }
 
         #endregion
 

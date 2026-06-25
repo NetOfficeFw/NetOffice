@@ -7,64 +7,64 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
 {	
-	#pragma warning disable
-	
-	#region SinkPoint Interface
+    #pragma warning disable
+    
+    #region SinkPoint Interface
 
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("BC9E435F-F037-11CD-8701-00AA003F0F07"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface _ToggleButtonInOptionEvents
-	{
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2073)]
-		void GotFocus();
+    public interface _ToggleButtonInOptionEvents
+    {
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2073)]
+        void GotFocus();
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2074)]
-		void LostFocus();
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2074)]
+        void LostFocus();
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
-		void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
-		void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
-		void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("keyCode", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
-		void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift);
+        void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift);
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("keyAscii", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
-		void KeyPress([In] [Out] ref object keyAscii);
+        void KeyPress([In] [Out] ref object keyAscii);
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("keyCode", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
-		void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift);
-	}
+        void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift);
+    }
 
     #endregion
 
@@ -72,46 +72,46 @@ namespace NetOffice.AccessApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class _ToggleButtonInOptionEvents_SinkHelper : SinkHelper, _ToggleButtonInOptionEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "BC9E435F-F037-11CD-8701-00AA003F0F07";
-		
-		#endregion
-		
-		#region Ctor
+    public class _ToggleButtonInOptionEvents_SinkHelper : SinkHelper, _ToggleButtonInOptionEvents
+    {
+        #region Static
+        
+        public static readonly string Id = "BC9E435F-F037-11CD-8701-00AA003F0F07";
+        
+        #endregion
+        
+        #region Ctor
 
-		public _ToggleButtonInOptionEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
+        public _ToggleButtonInOptionEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+        
+        #endregion
 
-		#region _ToggleButtonInOptionEvents
-		
-		public void GotFocus()
-		{
+        #region _ToggleButtonInOptionEvents
+        
+        public void GotFocus()
+        {
             if (!Validate("GotFocus"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
+        }
 
-		public void LostFocus()
-		{
+        public void LostFocus()
+        {
             if (!Validate("LostFocus"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
+        }
 
         public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
         {
@@ -227,8 +227,8 @@ namespace NetOffice.AccessApi.Events
 
         #endregion
     }
-	
-	#endregion
-	
-	#pragma warning restore
+    
+    #endregion
+    
+    #pragma warning restore
 }

@@ -5,41 +5,41 @@ using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	public delegate void CommandBarEvents_ClickEventHandler(ICOMObject commandBarControl, ref bool handled, ref bool cancelDefault);
-	#pragma warning restore
+    #pragma warning disable
+    public delegate void CommandBarEvents_ClickEventHandler(ICOMObject commandBarControl, ref bool handled, ref bool cancelDefault);
+    #pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass CommandBarEvents 
-	/// SupportByVersion VBIDE, 12,14,5.3
-	/// </summary>
-	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsCoClass)]
+    /// <summary>
+    /// CoClass CommandBarEvents 
+    /// SupportByVersion VBIDE, 12,14,5.3
+    /// </summary>
+    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(EventInterfaces._dispCommandBarControlEvents_SinkHelper))]
     [ComEventInterface(typeof(EventInterfaces._dispCommandBarControlEvents))]
     public class CommandBarEvents : _CommandBarControlEvents, IEventBinding
-	{
-		#pragma warning disable
+    {
+        #pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+        
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
         private EventInterfaces._dispCommandBarControlEvents_SinkHelper __dispCommandBarControlEvents_SinkHelper;
-	
-		#endregion
+    
+        #endregion
 
-		#region Type Information
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -51,7 +51,7 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -63,121 +63,121 @@ namespace NetOffice.VBIDEApi
         }
         
         #endregion
-        		
-		#region Construction
+                
+        #region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CommandBarEvents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public CommandBarEvents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CommandBarEvents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public CommandBarEvents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+            
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CommandBarEvents(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CommandBarEvents(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
+            
+        }
 
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CommandBarEvents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CommandBarEvents(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CommandBarEvents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+            
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CommandBarEvents(ICOMObject replacedObject) : base(replacedObject)
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of CommandBarEvents 
         /// </summary>		
-		public CommandBarEvents():base("VBIDE.CommandBarEvents")
-		{
-			
-		}
-		
-		/// <summary>
+        public CommandBarEvents():base("VBIDE.CommandBarEvents")
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of CommandBarEvents
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public CommandBarEvents(string progId):base(progId)
-		{
-			
-		}
+        public CommandBarEvents(string progId):base(progId)
+        {
+            
+        }
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
-		#endregion
+        #region Static CoClass Methods
+        #endregion
 
-		#region Events
+        #region Events
 
-		/// <summary>
-		/// SupportByVersion VBIDE, 12,14,5.3
-		/// </summary>
-		private event CommandBarEvents_ClickEventHandler _ClickEvent;
+        /// <summary>
+        /// SupportByVersion VBIDE, 12,14,5.3
+        /// </summary>
+        private event CommandBarEvents_ClickEventHandler _ClickEvent;
 
-		/// <summary>
-		/// SupportByVersion VBIDE 12 14 5.3
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		public event CommandBarEvents_ClickEventHandler ClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ClickEvent += value;
-			}
-			remove
-			{
-				_ClickEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion VBIDE 12 14 5.3
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
+        public event CommandBarEvents_ClickEventHandler ClickEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _ClickEvent += value;
+            }
+            remove
+            {
+                _ClickEvent -= value;
+            }
+        }
 
-		#endregion
+        #endregion
        
-	    #region IEventBinding
+        #region IEventBinding
         
-		/// <summary>
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void CreateEventBridge()
         {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
+            if(false == Factory.Settings.EnableEvents)
+                return;
+    
+            if (null != _connectPoint)
+                return;
+    
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id);
 
 
-			if(EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				__dispCommandBarControlEvents_SinkHelper = new EventInterfaces._dispCommandBarControlEvents_SinkHelper(this, _connectPoint);
-				return;
-			} 
+            if(EventInterfaces._dispCommandBarControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            {
+                __dispCommandBarControlEvents_SinkHelper = new EventInterfaces._dispCommandBarControlEvents_SinkHelper(this, _connectPoint);
+                return;
+            } 
         }
 
         /// <summary>
@@ -224,7 +224,7 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
@@ -236,29 +236,29 @@ namespace NetOffice.VBIDEApi
         /// <param name="eventName">name of the event without 'Event' at the end</param>
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
+        {
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
+        }
         /// <summary>
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-			if( null != __dispCommandBarControlEvents_SinkHelper)
-			{
-				__dispCommandBarControlEvents_SinkHelper.Dispose();
-				__dispCommandBarControlEvents_SinkHelper = null;
-			}
+            if( null != __dispCommandBarControlEvents_SinkHelper)
+            {
+                __dispCommandBarControlEvents_SinkHelper.Dispose();
+                __dispCommandBarControlEvents_SinkHelper = null;
+            }
 
-			_connectPoint = null;
-		}
+            _connectPoint = null;
+        }
         
         #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
 

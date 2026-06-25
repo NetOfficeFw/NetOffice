@@ -8,34 +8,34 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
-	/// <summary>
-	/// DispatchInterface XMLNodes 
-	/// SupportByVersion Word, 11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes"/> </remarks>
-	[SupportByVersion("Word", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class XMLNodes : COMObject, IEnumerableProvider<NetOffice.WordApi.XMLNode>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface XMLNodes 
+    /// SupportByVersion Word, 11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes"/> </remarks>
+    [SupportByVersion("Word", 11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class XMLNodes : COMObject, IEnumerableProvider<NetOffice.WordApi.XMLNode>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -48,167 +48,167 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public XMLNodes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public XMLNodes(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public XMLNodes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public XMLNodes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLNodes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLNodes(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public XMLNodes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLNodes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLNodes(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLNodes() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLNodes(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public XMLNodes(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Count"/> </remarks>
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Application"/> </remarks>
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLNodes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLNodes(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLNodes() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLNodes(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Creator"/> </remarks>
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Count"/> </remarks>
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Parent"/> </remarks>
-		[SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Application"/> </remarks>
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        public NetOffice.WordApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Creator"/> </remarks>
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        public Int32 Creator
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNodes.Parent"/> </remarks>
+        [SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.WordApi.XMLNode this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNode>(this, "Item", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType, index);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="name">string name</param>
-		/// <param name="_namespace">string namespace</param>
-		/// <param name="range">optional object range</param>
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		public NetOffice.WordApi.XMLNode Add(string name, string _namespace, object range)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNode>(this, "Add", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType, name, _namespace, range);
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion Word 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="name">string name</param>
-		/// <param name="_namespace">string namespace</param>
-		[CustomMethod]
-		[SupportByVersion("Word", 11,12,14,15,16)]
-		public NetOffice.WordApi.XMLNode Add(string name, string _namespace)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNode>(this, "Add", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType, name, _namespace);
-		}
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.WordApi.XMLNode this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNode>(this, "Item", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType, index);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="name">string name</param>
+        /// <param name="_namespace">string namespace</param>
+        /// <param name="range">optional object range</param>
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        public NetOffice.WordApi.XMLNode Add(string name, string _namespace, object range)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNode>(this, "Add", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType, name, _namespace, range);
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="name">string name</param>
+        /// <param name="_namespace">string namespace</param>
+        [CustomMethod]
+        [SupportByVersion("Word", 11,12,14,15,16)]
+        public NetOffice.WordApi.XMLNode Add(string name, string _namespace)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNode>(this, "Add", NetOffice.WordApi.XMLNode.LateBindingApiWrapperType, name, _namespace);
+        }
 
         #endregion
 
@@ -247,13 +247,13 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word, 11,12,14,15,16
         /// </summary>
         [SupportByVersion("Word", 11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
-		}
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

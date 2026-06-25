@@ -11,10 +11,10 @@ namespace NetOffice.OfficeApi.Native
     /// The interface through which the Ribbon user interface (UI) communicates with a COM add-in to customize the UI.
     /// </summary>
     [SupportByVersion("Office", 12,14,15,16)]
-	[ComImport, ComVisible(true), Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]
-	[EntityType(EntityType.IsNativeInterface)]
-	public interface IRibbonExtensibility
-	{
+    [ComImport, ComVisible(true), Guid("000C0396-0000-0000-C000-000000000046"), TypeLibType((short) 4160)]
+    [EntityType(EntityType.IsNativeInterface)]
+    public interface IRibbonExtensibility
+    {
         #region Methods
 
         /// <summary>
@@ -24,12 +24,12 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="RibbonID">The ID for the RibbonX UI</param>
         /// <returns>System.String</returns>
         [SupportByVersion("Office", 12,14,15,16)]
-		[return: MarshalAs(UnmanagedType.BStr)]
-		[MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1)]
-		string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)]string RibbonID);
+        [return: MarshalAs(UnmanagedType.BStr)]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(1)]
+        string GetCustomUI([In, MarshalAs(UnmanagedType.BStr)]string RibbonID);
 
-		#endregion
-	}
+        #endregion
+    }
     #pragma warning restore
 }
 

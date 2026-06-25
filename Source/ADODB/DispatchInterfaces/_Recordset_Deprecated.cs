@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi
 {
-	/// <summary>
-	/// DispatchInterface _Recordset_Deprecated 
-	/// SupportByVersion ADODB, 2.5
-	/// </summary>
-	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class _Recordset_Deprecated : Recordset21_Deprecated
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _Recordset_Deprecated 
+    /// SupportByVersion ADODB, 2.5
+    /// </summary>
+    [SupportByVersion("ADODB", 2.5)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class _Recordset_Deprecated : Recordset21_Deprecated
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -44,120 +44,120 @@ namespace NetOffice.ADODBApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Recordset_Deprecated(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _Recordset_Deprecated(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Recordset_Deprecated(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _Recordset_Deprecated(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Recordset_Deprecated(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Recordset_Deprecated(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public _Recordset_Deprecated(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Recordset_Deprecated(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Recordset_Deprecated(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Recordset_Deprecated() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Recordset_Deprecated(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _Recordset_Deprecated(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// Get
-		/// </summary>
-		[SupportByVersion("ADODB", 2.5)]
-		public NetOffice.ADODBApi.Properties Properties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Properties>(this, "Properties", NetOffice.ADODBApi.Properties.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		#endregion
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Recordset_Deprecated(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Recordset_Deprecated(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Recordset_Deprecated() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Recordset_Deprecated(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// Get
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
+        public NetOffice.ADODBApi.Properties Properties
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ADODBApi.Properties>(this, "Properties", NetOffice.ADODBApi.Properties.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="destination">optional object destination</param>
-		/// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
-		[SupportByVersion("ADODB", 2.5)]
-		public void Save(object destination, object persistFormat)
-		{
-			 Factory.ExecuteMethod(this, "Save", destination, persistFormat);
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		[CustomMethod]
-		[SupportByVersion("ADODB", 2.5)]
-		public void Save()
-		{
-			 Factory.ExecuteMethod(this, "Save");
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="destination">optional object destination</param>
-		[CustomMethod]
-		[SupportByVersion("ADODB", 2.5)]
-		public void Save(object destination)
-		{
-			 Factory.ExecuteMethod(this, "Save", destination);
-		}
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        /// <param name="destination">optional object destination</param>
+        /// <param name="persistFormat">optional NetOffice.ADODBApi.Enums.PersistFormatEnum PersistFormat = 0</param>
+        [SupportByVersion("ADODB", 2.5)]
+        public void Save(object destination, object persistFormat)
+        {
+            Factory.ExecuteMethod(this, "Save", destination, persistFormat);
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        [CustomMethod]
+        [SupportByVersion("ADODB", 2.5)]
+        public void Save()
+        {
+            Factory.ExecuteMethod(this, "Save");
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        /// <param name="destination">optional object destination</param>
+        [CustomMethod]
+        [SupportByVersion("ADODB", 2.5)]
+        public void Save(object destination)
+        {
+            Factory.ExecuteMethod(this, "Save", destination);
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

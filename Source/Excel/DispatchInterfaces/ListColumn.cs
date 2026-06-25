@@ -5,23 +5,23 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi
 {
-	/// <summary>
-	/// DispatchInterface ListColumn 
-	/// SupportByVersion Excel, 11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn"/> </remarks>
-	[SupportByVersion("Excel", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ListColumn : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface ListColumn 
+    /// SupportByVersion Excel, 11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn"/> </remarks>
+    [SupportByVersion("Excel", 11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class ListColumn : COMObject
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -32,7 +32,7 @@ namespace NetOffice.ExcelApi
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,273 +45,273 @@ namespace NetOffice.ExcelApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ListColumn(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ListColumn(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ListColumn(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ListColumn(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ListColumn(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ListColumn(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public ListColumn(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ListColumn(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ListColumn(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ListColumn() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ListColumn(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public ListColumn(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Application"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Creator"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlCreator Creator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ListColumn(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ListColumn(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ListColumn() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ListColumn(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Parent"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Application"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public NetOffice.ExcelApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Application>(this, "Application", NetOffice.ExcelApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string _Default
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "_Default");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Creator"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public NetOffice.ExcelApi.Enums.XlCreator Creator
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlCreator>(this, "Creator");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.ListDataFormat ListDataFormat
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListDataFormat>(this, "ListDataFormat", NetOffice.ExcelApi.ListDataFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Parent"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Index"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public Int32 Index
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Index");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public string _Default
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "_Default");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Name"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public NetOffice.ExcelApi.ListDataFormat ListDataFormat
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.ListDataFormat>(this, "ListDataFormat", NetOffice.ExcelApi.ListDataFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Range"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Range Range
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Index"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public Int32 Index
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Index");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.TotalsCalculation"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.Enums.XlTotalsCalculation TotalsCalculation
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTotalsCalculation>(this, "TotalsCalculation");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "TotalsCalculation", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Name"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Name", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.XPath"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public NetOffice.ExcelApi.XPath XPath
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XPath>(this, "XPath", NetOffice.ExcelApi.XPath.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Range"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public NetOffice.ExcelApi.Range Range
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Range", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public string SharePointFormula
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "SharePointFormula");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.TotalsCalculation"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public NetOffice.ExcelApi.Enums.XlTotalsCalculation TotalsCalculation
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ExcelApi.Enums.XlTotalsCalculation>(this, "TotalsCalculation");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "TotalsCalculation", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.DataBodyRange"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range DataBodyRange
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "DataBodyRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.XPath"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public NetOffice.ExcelApi.XPath XPath
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.XPath>(this, "XPath", NetOffice.ExcelApi.XPath.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Total"/> </remarks>
-		[SupportByVersion("Excel", 12,14,15,16)]
-		public NetOffice.ExcelApi.Range Total
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Total", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public string SharePointFormula
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "SharePointFormula");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.DataBodyRange"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Range DataBodyRange
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "DataBodyRange", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Excel 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Total"/> </remarks>
+        [SupportByVersion("Excel", 12,14,15,16)]
+        public NetOffice.ExcelApi.Range Total
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.ExcelApi.Range>(this, "Total", NetOffice.ExcelApi.Range.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Delete"/> </remarks>
-		[SupportByVersion("Excel", 11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        #endregion
 
-		#endregion
+        #region Methods
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Excel 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListColumn.Delete"/> </remarks>
+        [SupportByVersion("Excel", 11,12,14,15,16)]
+        public void Delete()
+        {
+            Factory.ExecuteMethod(this, "Delete");
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

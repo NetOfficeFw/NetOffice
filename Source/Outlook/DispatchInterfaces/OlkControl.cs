@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-	/// <summary>
-	/// DispatchInterface OlkControl 
-	/// SupportByVersion Outlook, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.olkcontrol"/> </remarks>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class OlkControl : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface OlkControl 
+    /// SupportByVersion Outlook, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.olkcontrol"/> </remarks>
+    [SupportByVersion("Outlook", 12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class OlkControl : COMObject
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,237 +45,237 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public OlkControl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public OlkControl(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public OlkControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public OlkControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OlkControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OlkControl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public OlkControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OlkControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OlkControl(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OlkControl() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public OlkControl(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public OlkControl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.ItemProperty"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string ItemProperty
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ItemProperty");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ItemProperty", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.ControlProperty"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string ControlProperty
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlProperty");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlProperty", value);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public OlkControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public OlkControl(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public OlkControl() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public OlkControl(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.PossibleValues"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string PossibleValues
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "PossibleValues");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "PossibleValues", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.ItemProperty"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public string ItemProperty
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ItemProperty");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ItemProperty", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.Format"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 Format
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Format");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Format", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.ControlProperty"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public string ControlProperty
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ControlProperty");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ControlProperty", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.EnableAutoLayout"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool EnableAutoLayout
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "EnableAutoLayout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "EnableAutoLayout", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.PossibleValues"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public string PossibleValues
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "PossibleValues");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "PossibleValues", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.MinimumWidth"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 MinimumWidth
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MinimumWidth");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MinimumWidth", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.Format"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public Int32 Format
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Format");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Format", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.MinimumHeight"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 MinimumHeight
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "MinimumHeight");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "MinimumHeight", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.EnableAutoLayout"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public bool EnableAutoLayout
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "EnableAutoLayout");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "EnableAutoLayout", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.HorizontalLayout"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlHorizontalLayout HorizontalLayout
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlHorizontalLayout>(this, "HorizontalLayout");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "HorizontalLayout", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.MinimumWidth"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public Int32 MinimumWidth
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "MinimumWidth");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "MinimumWidth", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.VerticalLayout"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlVerticalLayout VerticalLayout
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlVerticalLayout>(this, "VerticalLayout");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "VerticalLayout", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.MinimumHeight"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public Int32 MinimumHeight
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "MinimumHeight");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "MinimumHeight", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.HorizontalLayout"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public NetOffice.OutlookApi.Enums.OlHorizontalLayout HorizontalLayout
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlHorizontalLayout>(this, "HorizontalLayout");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "HorizontalLayout", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkControl.VerticalLayout"/> </remarks>
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        public NetOffice.OutlookApi.Enums.OlVerticalLayout VerticalLayout
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlVerticalLayout>(this, "VerticalLayout");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "VerticalLayout", value);
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Methods
+
+        #endregion
+
+        #pragma warning restore
+    }
 }
