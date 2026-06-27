@@ -9,11 +9,11 @@ namespace NetOffice.DAOApi
     /// DispatchInterface Recordset 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class Recordset : _DAO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Recordset(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.DAOApi
         public Recordset(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.DAOApi
         public Recordset(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool BOF
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public byte[] Bookmark
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool Bookmarkable
         {
             get
@@ -157,7 +157,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public object DateCreated
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool EOF
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Filter
         {
             get
@@ -200,7 +200,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Index
         {
             get
@@ -217,7 +217,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public byte[] LastModified
         {
             get
@@ -232,7 +232,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public object LastUpdated
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool LockEdits
         {
             get
@@ -262,7 +262,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Name
         {
             get
@@ -275,7 +275,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool NoMatch
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Sort
         {
             get
@@ -305,7 +305,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool Transactions
         {
             get
@@ -318,7 +318,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int16 Type
         {
             get
@@ -331,7 +331,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 RecordCount
         {
             get
@@ -344,7 +344,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool Updatable
         {
             get
@@ -357,7 +357,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool Restartable
         {
             get
@@ -370,7 +370,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string ValidationText
         {
             get
@@ -383,7 +383,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string ValidationRule
         {
             get
@@ -396,7 +396,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public byte[] CacheStart
         {
             get
@@ -416,7 +416,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 CacheSize
         {
             get
@@ -433,7 +433,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Single PercentPosition
         {
             get
@@ -450,7 +450,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 AbsolutePosition
         {
             get
@@ -467,7 +467,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int16 EditMode
         {
             get
@@ -480,7 +480,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 ODBCFetchCount
         {
@@ -494,7 +494,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 ODBCFetchDelay
         {
@@ -508,7 +508,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.DAOApi.Database Parent
         {
@@ -522,7 +522,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Fields Fields
         {
             get
@@ -535,7 +535,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Indexes Indexes
         {
             get
@@ -549,7 +549,7 @@ namespace NetOffice.DAOApi
         /// Get/Set
         /// </summary>
         /// <param name="item">object item</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object get_Collect(object item)
         {
@@ -561,7 +561,7 @@ namespace NetOffice.DAOApi
         /// Get/Set
         /// </summary>
         /// <param name="item">object item</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_Collect(object item, object value)
         {
@@ -573,7 +573,7 @@ namespace NetOffice.DAOApi
         /// Alias for get_Collect
         /// </summary>
         /// <param name="item">object item</param>
-        [SupportByVersion("DAO", 3.6,12.0), Redirect("get_Collect")]
+        [SupportByVersion("DAO", 3.6, 12.0), Redirect("get_Collect")]
         public object Collect(object item)
         {
             return get_Collect(item);
@@ -583,7 +583,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 hStmt
         {
@@ -597,7 +597,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool StillExecuting
         {
             get
@@ -610,7 +610,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 BatchSize
         {
             get
@@ -627,7 +627,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 BatchCollisionCount
         {
             get
@@ -640,7 +640,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public object BatchCollisions
         {
             get
@@ -653,7 +653,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Connection Connection
         {
             get
@@ -670,7 +670,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int16 RecordStatus
         {
             get
@@ -683,7 +683,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 UpdateOptions
         {
             get
@@ -703,7 +703,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void _30_CancelUpdate()
         {
             Factory.ExecuteMethod(this, "_30_CancelUpdate");
@@ -712,7 +712,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void AddNew()
         {
             Factory.ExecuteMethod(this, "AddNew");
@@ -721,7 +721,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -732,7 +732,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="type">optional object type</param>
         /// <param name="options">optional object options</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [BaseResult]
         public NetOffice.DAOApi.Recordset OpenRecordset(object type, object options)
         {
@@ -744,7 +744,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Recordset OpenRecordset()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset");
@@ -756,7 +756,7 @@ namespace NetOffice.DAOApi
         /// <param name="type">optional object type</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Recordset OpenRecordset(object type)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "OpenRecordset", type);
@@ -765,7 +765,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -774,7 +774,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Edit()
         {
             Factory.ExecuteMethod(this, "Edit");
@@ -784,7 +784,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="criteria">string criteria</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FindFirst(string criteria)
         {
             Factory.ExecuteMethod(this, "FindFirst", criteria);
@@ -794,7 +794,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="criteria">string criteria</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FindLast(string criteria)
         {
             Factory.ExecuteMethod(this, "FindLast", criteria);
@@ -804,7 +804,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="criteria">string criteria</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FindNext(string criteria)
         {
             Factory.ExecuteMethod(this, "FindNext", criteria);
@@ -814,7 +814,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="criteria">string criteria</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FindPrevious(string criteria)
         {
             Factory.ExecuteMethod(this, "FindPrevious", criteria);
@@ -823,7 +823,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void MoveFirst()
         {
             Factory.ExecuteMethod(this, "MoveFirst");
@@ -832,7 +832,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void _30_MoveLast()
         {
             Factory.ExecuteMethod(this, "_30_MoveLast");
@@ -841,7 +841,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void MoveNext()
         {
             Factory.ExecuteMethod(this, "MoveNext");
@@ -850,7 +850,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void MovePrevious()
         {
             Factory.ExecuteMethod(this, "MovePrevious");
@@ -873,10 +873,10 @@ namespace NetOffice.DAOApi
         /// <param name="key11">optional object key11</param>
         /// <param name="key12">optional object key12</param>
         /// <param name="key13">optional object key13</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12, object key13)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12, key13 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12, key13 });
         }
 
         /// <summary>
@@ -885,7 +885,7 @@ namespace NetOffice.DAOApi
         /// <param name="comparison">string comparison</param>
         /// <param name="key1">object key1</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1)
         {
             Factory.ExecuteMethod(this, "Seek", comparison, key1);
@@ -898,7 +898,7 @@ namespace NetOffice.DAOApi
         /// <param name="key1">object key1</param>
         /// <param name="key2">optional object key2</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2)
         {
             Factory.ExecuteMethod(this, "Seek", comparison, key1, key2);
@@ -912,7 +912,7 @@ namespace NetOffice.DAOApi
         /// <param name="key2">optional object key2</param>
         /// <param name="key3">optional object key3</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3)
         {
             Factory.ExecuteMethod(this, "Seek", comparison, key1, key2, key3);
@@ -927,10 +927,10 @@ namespace NetOffice.DAOApi
         /// <param name="key3">optional object key3</param>
         /// <param name="key4">optional object key4</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4 });
         }
 
         /// <summary>
@@ -943,10 +943,10 @@ namespace NetOffice.DAOApi
         /// <param name="key4">optional object key4</param>
         /// <param name="key5">optional object key5</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5 });
         }
 
         /// <summary>
@@ -960,10 +960,10 @@ namespace NetOffice.DAOApi
         /// <param name="key5">optional object key5</param>
         /// <param name="key6">optional object key6</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6 });
         }
 
         /// <summary>
@@ -978,10 +978,10 @@ namespace NetOffice.DAOApi
         /// <param name="key6">optional object key6</param>
         /// <param name="key7">optional object key7</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7 });
         }
 
         /// <summary>
@@ -997,10 +997,10 @@ namespace NetOffice.DAOApi
         /// <param name="key7">optional object key7</param>
         /// <param name="key8">optional object key8</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7, key8 });
         }
 
         /// <summary>
@@ -1017,10 +1017,10 @@ namespace NetOffice.DAOApi
         /// <param name="key8">optional object key8</param>
         /// <param name="key9">optional object key9</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9 });
         }
 
         /// <summary>
@@ -1038,10 +1038,10 @@ namespace NetOffice.DAOApi
         /// <param name="key9">optional object key9</param>
         /// <param name="key10">optional object key10</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10 });
         }
 
         /// <summary>
@@ -1060,10 +1060,10 @@ namespace NetOffice.DAOApi
         /// <param name="key10">optional object key10</param>
         /// <param name="key11">optional object key11</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11 });
         }
 
         /// <summary>
@@ -1083,16 +1083,16 @@ namespace NetOffice.DAOApi
         /// <param name="key11">optional object key11</param>
         /// <param name="key12">optional object key12</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Seek(string comparison, object key1, object key2, object key3, object key4, object key5, object key6, object key7, object key8, object key9, object key10, object key11, object key12)
         {
-            Factory.ExecuteMethod(this, "Seek", new object[]{ comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12 });
+            Factory.ExecuteMethod(this, "Seek", new object[] { comparison, key1, key2, key3, key4, key5, key6, key7, key8, key9, key10, key11, key12 });
         }
 
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void _30_Update()
         {
             Factory.ExecuteMethod(this, "_30_Update");
@@ -1101,7 +1101,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [BaseResult]
         public NetOffice.DAOApi.Recordset Clone()
         {
@@ -1112,7 +1112,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="newQueryDef">optional object newQueryDef</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Requery(object newQueryDef)
         {
             Factory.ExecuteMethod(this, "Requery", newQueryDef);
@@ -1122,7 +1122,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Requery()
         {
             Factory.ExecuteMethod(this, "Requery");
@@ -1133,7 +1133,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="rows">Int32 rows</param>
         /// <param name="startBookmark">optional object startBookmark</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Move(Int32 rows, object startBookmark)
         {
             Factory.ExecuteMethod(this, "Move", rows, startBookmark);
@@ -1144,7 +1144,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="rows">Int32 rows</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Move(Int32 rows)
         {
             Factory.ExecuteMethod(this, "Move", rows);
@@ -1155,7 +1155,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="rows">optional object rows</param>
         /// <param name="startBookmark">optional object startBookmark</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FillCache(object rows, object startBookmark)
         {
             Factory.ExecuteMethod(this, "FillCache", rows, startBookmark);
@@ -1165,7 +1165,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FillCache()
         {
             Factory.ExecuteMethod(this, "FillCache");
@@ -1176,7 +1176,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="rows">optional object rows</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void FillCache(object rows)
         {
             Factory.ExecuteMethod(this, "FillCache", rows);
@@ -1187,7 +1187,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="options">optional object options</param>
         /// <param name="inconsistent">optional object inconsistent</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [BaseResult]
         public NetOffice.DAOApi.Recordset CreateDynaset(object options, object inconsistent)
         {
@@ -1199,7 +1199,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Recordset CreateDynaset()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset");
@@ -1211,7 +1211,7 @@ namespace NetOffice.DAOApi
         /// <param name="options">optional object options</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Recordset CreateDynaset(object options)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateDynaset", options);
@@ -1221,7 +1221,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="options">optional object options</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [BaseResult]
         public NetOffice.DAOApi.Recordset CreateSnapshot(object options)
         {
@@ -1233,7 +1233,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Recordset CreateSnapshot()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.DAOApi.Recordset>(this, "CreateSnapshot");
@@ -1242,7 +1242,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.QueryDef CopyQueryDef()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.QueryDef>(this, "CopyQueryDef", NetOffice.DAOApi.QueryDef.LateBindingApiWrapperType);
@@ -1251,7 +1251,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [BaseResult]
         public NetOffice.DAOApi.Recordset ListFields()
         {
@@ -1261,7 +1261,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [BaseResult]
         public NetOffice.DAOApi.Recordset ListIndexes()
         {
@@ -1272,7 +1272,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="numRows">optional object numRows</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public object GetRows(object numRows)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetRows", numRows);
@@ -1282,7 +1282,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public object GetRows()
         {
             return Factory.ExecuteVariantMethodGet(this, "GetRows");
@@ -1291,7 +1291,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Cancel()
         {
             Factory.ExecuteMethod(this, "Cancel");
@@ -1300,7 +1300,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool NextRecordset()
         {
             return Factory.ExecuteBoolMethodGet(this, "NextRecordset");
@@ -1310,7 +1310,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="updateType">optional Int32 UpdateType = 1</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void CancelUpdate(object updateType)
         {
             Factory.ExecuteMethod(this, "CancelUpdate", updateType);
@@ -1320,7 +1320,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void CancelUpdate()
         {
             Factory.ExecuteMethod(this, "CancelUpdate");
@@ -1331,7 +1331,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="updateType">optional Int32 UpdateType = 1</param>
         /// <param name="force">optional bool Force = false</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Update(object updateType, object force)
         {
             Factory.ExecuteMethod(this, "Update", updateType, force);
@@ -1341,7 +1341,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Update()
         {
             Factory.ExecuteMethod(this, "Update");
@@ -1352,7 +1352,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="updateType">optional Int32 UpdateType = 1</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Update(object updateType)
         {
             Factory.ExecuteMethod(this, "Update", updateType);
@@ -1362,7 +1362,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="options">optional Int32 Options = 0</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void MoveLast(object options)
         {
             Factory.ExecuteMethod(this, "MoveLast", options);
@@ -1372,7 +1372,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void MoveLast()
         {
             Factory.ExecuteMethod(this, "MoveLast");
@@ -1380,6 +1380,6 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

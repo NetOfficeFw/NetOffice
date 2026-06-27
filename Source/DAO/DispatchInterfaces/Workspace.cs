@@ -9,11 +9,11 @@ namespace NetOffice.DAOApi
     /// DispatchInterface Workspace 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Workspace : _DAO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Workspace(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.DAOApi
         public Workspace(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.DAOApi
         public Workspace(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workspace(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workspace() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workspace(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Name
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string UserName
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string _30_UserName
         {
             get
@@ -158,7 +158,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string _30_Password
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int16 IsolateODBCTrans
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Databases Databases
         {
             get
@@ -205,7 +205,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Users Users
         {
             get
@@ -218,7 +218,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Groups Groups
         {
             get
@@ -231,7 +231,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 LoginTimeout
         {
             get
@@ -248,7 +248,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 DefaultCursorDriver
         {
             get
@@ -265,7 +265,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 hEnv
         {
@@ -279,7 +279,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 Type
         {
             get
@@ -292,7 +292,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Connections Connections
         {
             get
@@ -308,7 +308,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void BeginTrans()
         {
             Factory.ExecuteMethod(this, "BeginTrans");
@@ -318,7 +318,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="options">optional Int32 Options = 0</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void CommitTrans(object options)
         {
             Factory.ExecuteMethod(this, "CommitTrans", options);
@@ -328,7 +328,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void CommitTrans()
         {
             Factory.ExecuteMethod(this, "CommitTrans");
@@ -337,7 +337,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -346,7 +346,7 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public void Rollback()
         {
             Factory.ExecuteMethod(this, "Rollback");
@@ -359,7 +359,7 @@ namespace NetOffice.DAOApi
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         /// <param name="connect">optional object connect</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(this, "OpenDatabase", NetOffice.DAOApi.Database.LateBindingApiWrapperType, name, options, readOnly, connect);
@@ -370,7 +370,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Database OpenDatabase(string name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(this, "OpenDatabase", NetOffice.DAOApi.Database.LateBindingApiWrapperType, name);
@@ -382,7 +382,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">string name</param>
         /// <param name="options">optional object options</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Database OpenDatabase(string name, object options)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(this, "OpenDatabase", NetOffice.DAOApi.Database.LateBindingApiWrapperType, name, options);
@@ -395,7 +395,7 @@ namespace NetOffice.DAOApi
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(this, "OpenDatabase", NetOffice.DAOApi.Database.LateBindingApiWrapperType, name, options, readOnly);
@@ -407,7 +407,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">string name</param>
         /// <param name="connect">string connect</param>
         /// <param name="option">optional object option</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Database CreateDatabase(string name, string connect, object option)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(this, "CreateDatabase", NetOffice.DAOApi.Database.LateBindingApiWrapperType, name, connect, option);
@@ -419,7 +419,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">string name</param>
         /// <param name="connect">string connect</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Database CreateDatabase(string name, string connect)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Database>(this, "CreateDatabase", NetOffice.DAOApi.Database.LateBindingApiWrapperType, name, connect);
@@ -431,7 +431,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">optional object name</param>
         /// <param name="pID">optional object pID</param>
         /// <param name="password">optional object password</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType, name, pID, password);
@@ -441,7 +441,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType);
@@ -452,7 +452,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType, name);
@@ -464,7 +464,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">optional object name</param>
         /// <param name="pID">optional object pID</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser(object name, object pID)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType, name, pID);
@@ -475,7 +475,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">optional object name</param>
         /// <param name="pID">optional object pID</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Group CreateGroup(object name, object pID)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Group>(this, "CreateGroup", NetOffice.DAOApi.Group.LateBindingApiWrapperType, name, pID);
@@ -485,7 +485,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Group CreateGroup()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Group>(this, "CreateGroup", NetOffice.DAOApi.Group.LateBindingApiWrapperType);
@@ -496,7 +496,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Group CreateGroup(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Group>(this, "CreateGroup", NetOffice.DAOApi.Group.LateBindingApiWrapperType, name);
@@ -509,7 +509,7 @@ namespace NetOffice.DAOApi
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         /// <param name="connect">optional object connect</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Connection>(this, "OpenConnection", NetOffice.DAOApi.Connection.LateBindingApiWrapperType, name, options, readOnly, connect);
@@ -520,7 +520,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Connection OpenConnection(string name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Connection>(this, "OpenConnection", NetOffice.DAOApi.Connection.LateBindingApiWrapperType, name);
@@ -532,7 +532,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">string name</param>
         /// <param name="options">optional object options</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Connection OpenConnection(string name, object options)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Connection>(this, "OpenConnection", NetOffice.DAOApi.Connection.LateBindingApiWrapperType, name, options);
@@ -545,7 +545,7 @@ namespace NetOffice.DAOApi
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Connection>(this, "OpenConnection", NetOffice.DAOApi.Connection.LateBindingApiWrapperType, name, options, readOnly);
@@ -553,6 +553,6 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

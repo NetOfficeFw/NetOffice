@@ -7,8 +7,8 @@ namespace NetOffice.DAOApi
 {
     #region Delegates
 
-    #pragma warning disable
-    #pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
     #endregion
 
@@ -16,14 +16,14 @@ namespace NetOffice.DAOApi
     /// CoClass PrivDBEngine 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsCoClass)]
     public class PrivDBEngine : _DBEngine
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
@@ -43,7 +43,7 @@ namespace NetOffice.DAOApi
                 return LateBindingApiWrapperType;
             }
         }
-       
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -57,9 +57,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -67,14 +67,14 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PrivDBEngine(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PrivDBEngine(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -84,7 +84,7 @@ namespace NetOffice.DAOApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PrivDBEngine(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -93,31 +93,31 @@ namespace NetOffice.DAOApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PrivDBEngine(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PrivDBEngine(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of PrivDBEngine 
         /// </summary>		
-        public PrivDBEngine():base("DAO.PrivDBEngine")
+        public PrivDBEngine() : base("DAO.PrivDBEngine")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of PrivDBEngine
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public PrivDBEngine(string progId):base(progId)
+        public PrivDBEngine(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -128,9 +128,9 @@ namespace NetOffice.DAOApi
         #region Events
 
         #endregion
-       
 
-        #pragma warning restore
+
+#pragma warning restore
     }
 }
 
