@@ -11,11 +11,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing"/> </remarks>
-    [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Timing : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Timing(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.PowerPointApi
         public Timing(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.PowerPointApi
         public Timing(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Timing(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Timing() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Timing(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -129,7 +129,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.timing.duration"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Single Duration
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.TriggerType"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.MsoAnimTriggerType TriggerType
         {
             get
@@ -182,7 +182,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.TriggerDelayTime"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Single TriggerDelayTime
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.TriggerShape"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Shape TriggerShape
         {
             get
@@ -220,7 +220,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.RepeatCount"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Int32 RepeatCount
         {
             get
@@ -242,7 +242,7 @@ namespace NetOffice.PowerPointApi
         /// An animation will stop at the end of its time sequence or the value of the RepeatDuration property, whichever is shorter.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.RepeatDuration"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Single RepeatDuration
         {
             get
@@ -260,7 +260,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.Speed"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Single Speed
         {
             get
@@ -283,7 +283,7 @@ namespace NetOffice.PowerPointApi
         /// To slow down an animation at the end, use the Decelerate property.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.Accelerate"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Single Accelerate
         {
             get
@@ -305,7 +305,7 @@ namespace NetOffice.PowerPointApi
         /// For example, a value of 0.9 means that an deceleration should start at the default speed, and then start to slow down after the first ten percent of the animation.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.Decelerate"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Single Decelerate
         {
             get
@@ -329,7 +329,7 @@ namespace NetOffice.PowerPointApi
         /// msoTrue	- The effect plays forward and then in reverse.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.AutoReverse"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState AutoReverse
         {
             get
@@ -353,7 +353,7 @@ namespace NetOffice.PowerPointApi
         /// msoTrue - The animation accelerates when it starts.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.SmoothStart"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState SmoothStart
         {
             get
@@ -377,7 +377,7 @@ namespace NetOffice.PowerPointApi
         /// msoTrue - An animation decelerates when it ends.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.SmoothEnd"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState SmoothEnd
         {
             get
@@ -401,7 +401,7 @@ namespace NetOffice.PowerPointApi
         /// msoTrue - The object returns to its beginning position after an animation has ended.
         /// Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.RewindAtEnd"/>
         /// </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState RewindAtEnd
         {
             get
@@ -420,7 +420,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.Restart"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.MsoAnimEffectRestart Restart
         {
             get
@@ -438,7 +438,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.BounceEnd"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState BounceEnd
         {
             get
@@ -456,7 +456,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.BounceEndIntensity"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single BounceEndIntensity
         {
             get
@@ -474,7 +474,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Timing.triggerBookmark"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string TriggerBookmark
         {
             get
@@ -493,6 +493,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

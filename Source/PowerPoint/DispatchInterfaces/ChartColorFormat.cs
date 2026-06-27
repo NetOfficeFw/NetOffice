@@ -9,11 +9,11 @@ namespace NetOffice.PowerPointApi
     /// DispatchInterface ChartColorFormat 
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
-    [SupportByVersion("PowerPoint", 14,15,16)]
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ChartColorFormat : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChartColorFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.PowerPointApi
         public ChartColorFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.PowerPointApi
         public ChartColorFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartColorFormat(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartColorFormat() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartColorFormat(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -125,7 +125,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 SchemeColor
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 _Default
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 Type
         {
             get
@@ -168,7 +168,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -181,7 +181,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 RGB
         {
             get
@@ -209,6 +209,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

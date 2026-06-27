@@ -9,11 +9,11 @@ namespace NetOffice.PowerPointApi
     /// DispatchInterface ChartFillFormat 
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
-    [SupportByVersion("PowerPoint", 14,15,16)]
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ChartFillFormat : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChartFillFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.PowerPointApi
         public ChartFillFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.PowerPointApi
         public ChartFillFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartFillFormat(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartFillFormat() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartFillFormat(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.ChartColorFormat BackColor
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.ChartColorFormat ForeColor
         {
             get
@@ -137,7 +137,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single GradientDegree
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string TextureName
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -177,7 +177,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -190,7 +190,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -203,7 +203,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 GradientVariant
         {
             get
@@ -242,7 +242,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
         {
             get
@@ -255,7 +255,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
         {
             get
@@ -268,7 +268,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
         {
             get
@@ -281,7 +281,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTextureType TextureType
         {
             get
@@ -294,7 +294,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFillType Type
         {
             get
@@ -307,7 +307,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -327,7 +327,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void Solid()
         {
             Factory.ExecuteMethod(this, "Solid");
@@ -337,7 +337,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <param name="textureFile">string textureFile</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UserTextured(string textureFile)
         {
             Factory.ExecuteMethod(this, "UserTextured", textureFile);
@@ -349,7 +349,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
         /// <param name="degree">Single degree</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
         {
             Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
@@ -359,7 +359,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <param name="pattern">NetOffice.OfficeApi.Enums.MsoPatternType pattern</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
         {
             Factory.ExecuteMethod(this, "Patterned", pattern);
@@ -371,7 +371,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
         /// <param name="presetGradientType">NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
         {
             Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
@@ -381,7 +381,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <param name="presetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
         {
             Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
@@ -392,7 +392,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
         {
             Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
@@ -405,7 +405,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="pictureFormat">optional object pictureFormat</param>
         /// <param name="pictureStackUnit">optional object pictureStackUnit</param>
         /// <param name="picturePlacement">optional object picturePlacement</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
@@ -415,7 +415,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UserPicture()
         {
             Factory.ExecuteMethod(this, "UserPicture");
@@ -426,7 +426,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="pictureFile">optional object pictureFile</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UserPicture(object pictureFile)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile);
@@ -438,7 +438,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="pictureFile">optional object pictureFile</param>
         /// <param name="pictureFormat">optional object pictureFormat</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UserPicture(object pictureFile, object pictureFormat)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat);
@@ -451,7 +451,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="pictureFormat">optional object pictureFormat</param>
         /// <param name="pictureStackUnit">optional object pictureStackUnit</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit);
@@ -459,6 +459,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

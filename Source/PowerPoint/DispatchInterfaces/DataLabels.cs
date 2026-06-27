@@ -13,11 +13,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels"/> </remarks>
-    [SupportByVersion("PowerPoint", 14,15,16)]
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class DataLabels : COMObject, IEnumerableProvider<NetOffice.PowerPointApi.DataLabel>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DataLabels(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.PowerPointApi
         public DataLabels(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.PowerPointApi
         public DataLabels(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataLabels(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataLabels() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataLabels(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Name"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string Name
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.ChartBorder Border
         {
@@ -158,7 +158,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.Interior Interior
         {
@@ -172,7 +172,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.ChartFillFormat Fill
         {
@@ -186,7 +186,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.ChartFont Font
         {
@@ -201,7 +201,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.HorizontalAlignment"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object HorizontalAlignment
         {
             get
@@ -219,7 +219,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Orientation"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object Orientation
         {
             get
@@ -237,7 +237,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Shadow"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool Shadow
         {
             get
@@ -255,7 +255,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.VerticalAlignment"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object VerticalAlignment
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ReadingOrder"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 ReadingOrder
         {
             get
@@ -290,7 +290,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object AutoScaleFont
         {
@@ -309,7 +309,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.AutoText"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool AutoText
         {
             get
@@ -327,7 +327,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.NumberFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string NumberFormat
         {
             get
@@ -345,7 +345,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.NumberFormatLinked"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool NumberFormatLinked
         {
             get
@@ -363,7 +363,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.NumberFormatLocal"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object NumberFormatLocal
         {
             get
@@ -381,7 +381,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ShowLegendKey"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool ShowLegendKey
         {
             get
@@ -398,7 +398,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object Type
         {
@@ -417,7 +417,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.datalabels.position"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.XlDataLabelPosition Position
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ShowSeriesName"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool ShowSeriesName
         {
             get
@@ -453,7 +453,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ShowCategoryName"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool ShowCategoryName
         {
             get
@@ -471,7 +471,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ShowValue"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool ShowValue
         {
             get
@@ -489,7 +489,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ShowPercentage"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool ShowPercentage
         {
             get
@@ -507,7 +507,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.ShowBubbleSize"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool ShowBubbleSize
         {
             get
@@ -525,7 +525,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Separator"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object Separator
         {
             get
@@ -543,7 +543,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Count"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -557,7 +557,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Format"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.ChartFormat Format
         {
             get
@@ -571,7 +571,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Creator"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -585,7 +585,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -620,7 +620,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Select"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -630,7 +630,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.DataLabels.Delete"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -640,7 +640,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.PowerPointApi.DataLabel this[object index]
         {
@@ -697,7 +697,7 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// SupportByVersion PowerPoint, 14,15,16
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
@@ -705,6 +705,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

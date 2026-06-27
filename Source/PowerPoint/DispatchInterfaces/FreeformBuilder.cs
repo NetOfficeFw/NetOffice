@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FreeformBuilder"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class FreeformBuilder : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public FreeformBuilder(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public FreeformBuilder(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public FreeformBuilder(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FreeformBuilder(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FreeformBuilder() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FreeformBuilder(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FreeformBuilder.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FreeformBuilder.Creator"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -143,7 +143,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FreeformBuilder.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -168,10 +168,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="y2">optional Single Y2 = 0</param>
         /// <param name="x3">optional Single X3 = 0</param>
         /// <param name="y3">optional Single Y3 = 0</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
         {
-            Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2, y2, x3, y3 });
+            Factory.ExecuteMethod(this, "AddNodes", new object[] { segmentType, editingType, x1, y1, x2, y2, x3, y3 });
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="x1">Single x1</param>
         /// <param name="y1">Single y1</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
         {
             Factory.ExecuteMethod(this, "AddNodes", segmentType, editingType, x1, y1);
@@ -199,10 +199,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="y1">Single y1</param>
         /// <param name="x2">optional Single X2 = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
         {
-            Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2 });
+            Factory.ExecuteMethod(this, "AddNodes", new object[] { segmentType, editingType, x1, y1, x2 });
         }
 
         /// <summary>
@@ -216,10 +216,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="x2">optional Single X2 = 0</param>
         /// <param name="y2">optional Single Y2 = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
         {
-            Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2, y2 });
+            Factory.ExecuteMethod(this, "AddNodes", new object[] { segmentType, editingType, x1, y1, x2, y2 });
         }
 
         /// <summary>
@@ -234,17 +234,17 @@ namespace NetOffice.PowerPointApi
         /// <param name="y2">optional Single Y2 = 0</param>
         /// <param name="x3">optional Single X3 = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void AddNodes(NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
         {
-            Factory.ExecuteMethod(this, "AddNodes", new object[]{ segmentType, editingType, x1, y1, x2, y2, x3 });
+            Factory.ExecuteMethod(this, "AddNodes", new object[] { segmentType, editingType, x1, y1, x2, y2, x3 });
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FreeformBuilder.ConvertToShape"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Shape ConvertToShape()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Shape>(this, "ConvertToShape", NetOffice.PowerPointApi.Shape.LateBindingApiWrapperType);
@@ -252,6 +252,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverters"/> </remarks>
-    [SupportByVersion("PowerPoint", 14,15,16)]
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class FileConverters : Collection
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public FileConverters(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public FileConverters(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public FileConverters(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FileConverters(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FileConverters() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FileConverters(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -116,7 +116,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.PowerPointApi.FileConverter this[object index]
         {
@@ -128,6 +128,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

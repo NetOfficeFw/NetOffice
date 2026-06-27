@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow"/> </remarks>
-    [SupportByVersion("PowerPoint", 14,15,16)]
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ProtectedViewWindow : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ProtectedViewWindow(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public ProtectedViewWindow(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public ProtectedViewWindow(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ProtectedViewWindow(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ProtectedViewWindow() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ProtectedViewWindow(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Presentation"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Presentation
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Active"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Active
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.WindowState"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Caption"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string Caption
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.SourcePath"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string SourcePath
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.SourceName"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string SourceName
         {
             get
@@ -230,7 +230,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Left"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single Left
         {
             get
@@ -248,7 +248,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Top"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single Top
         {
             get
@@ -266,7 +266,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Width"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single Width
         {
             get
@@ -284,7 +284,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Height"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single Height
         {
             get
@@ -301,7 +301,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 HWND
         {
             get
@@ -318,7 +318,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Activate"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void Activate()
         {
             Factory.ExecuteMethod(this, "Activate");
@@ -328,7 +328,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Close"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -339,7 +339,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Edit"/> </remarks>
         /// <param name="modifyPassword">optional string ModifyPassword = </param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Edit(object modifyPassword)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Edit", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, modifyPassword);
@@ -350,7 +350,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ProtectedViewWindow.Edit"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Edit()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Edit", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
@@ -358,6 +358,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

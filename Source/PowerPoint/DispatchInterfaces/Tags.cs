@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Tags : Collection
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Tags(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public Tags(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public Tags(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Tags(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Tags() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Tags(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="name">string name</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public string this[string name]
         {
@@ -161,7 +161,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags.Add"/> </remarks>
         /// <param name="name">string name</param>
         /// <param name="value">string value</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Add(string name, string value)
         {
             Factory.ExecuteMethod(this, "Add", name, value);
@@ -172,7 +172,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags.Delete"/> </remarks>
         /// <param name="name">string name</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete(string name)
         {
             Factory.ExecuteMethod(this, "Delete", name);
@@ -184,7 +184,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="name">string name</param>
         /// <param name="filePath">string filePath</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void AddBinary(string name, string filePath)
         {
             Factory.ExecuteMethod(this, "AddBinary", name, filePath);
@@ -195,7 +195,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="name">string name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 BinaryValue(string name)
         {
             return Factory.ExecuteInt32MethodGet(this, "BinaryValue", name);
@@ -206,7 +206,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags.Name"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Name(Int32 index)
         {
             return Factory.ExecuteStringMethodGet(this, "Name", index);
@@ -217,7 +217,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Tags.Value"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Value(Int32 index)
         {
             return Factory.ExecuteStringMethodGet(this, "Value", index);
@@ -225,6 +225,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

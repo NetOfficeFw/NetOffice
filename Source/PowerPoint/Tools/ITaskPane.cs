@@ -7,7 +7,7 @@ namespace NetOffice.PowerPointApi.Tools
     /// Custom task pane UserControl instance may implement this interface to be notified about the lifetime of the custom task pane.
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<PowerPoint.Application>
-    {      
+    {
         /// <summary>
         /// Called when Microsoft Office application is shuting down. This method is not called in case of unexpected termination of the process.
         /// </summary>

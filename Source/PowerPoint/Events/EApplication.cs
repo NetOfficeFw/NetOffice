@@ -6,178 +6,178 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("914934C2-5A91-11CF-8700-00AA0060263B"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface EApplication
     {
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sel", typeof(PowerPointApi.Selection))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2001)]
         void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sel", typeof(PowerPointApi.Selection))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2002)]
-        void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
+        void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sel", typeof(PowerPointApi.Selection))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2003)]
-        void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
+        void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2004)]
         void PresentationClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2005)]
         void PresentationSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2006)]
         void PresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2007)]
         void NewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sld", typeof(PowerPointApi.Slide))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2008)]
         void PresentationNewSlide([In, MarshalAs(UnmanagedType.IDispatch)] object sld);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [SinkArgument("wn", typeof(PowerPointApi.DocumentWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2009)]
         void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [SinkArgument("wn", typeof(PowerPointApi.DocumentWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2010)]
         void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2011)]
         void SlideShowBegin([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2012)]
         void SlideShowNextBuild([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2013)]
         void SlideShowNextSlide([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2014)]
         void SlideShowEnd([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2015)]
         void PresentationPrint([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sldRange", typeof(PowerPointApi.SlideRange))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2016)]
         void SlideSelectionChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange);
 
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sldRange", typeof(PowerPointApi.SlideRange))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2017)]
         void ColorSchemeChanged([In, MarshalAs(UnmanagedType.IDispatch)] object sldRange);
 
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2018)]
-        void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel);
+        void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In][Out] ref object cancel);
 
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [SinkArgument("nEffect", typeof(PowerPointApi.Effect))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
         void SlideShowNextClick([In, MarshalAs(UnmanagedType.IDispatch)] object wn, [In, MarshalAs(UnmanagedType.IDispatch)] object nEffect);
 
-        [SupportByVersion("PowerPoint", 11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2020)]
         void AfterNewPresentation([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2021)]
         void AfterPresentationOpen([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
 
-        [SupportByVersion("PowerPoint", 11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 11, 12, 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [SinkArgument("syncEventType", SinkArgumentType.Enum, typeof(OfficeApi.Enums.MsoSyncEventType))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2022)]
         void PresentationSync([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] object syncEventType);
 
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2023)]
         void SlideShowOnNext([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         [SinkArgument("wn", typeof(PowerPointApi.SlideShowWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2024)]
         void SlideShowOnPrevious([In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2025)]
-        void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel);
+        void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In][Out] ref object cancel);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("protViewWindow", typeof(PowerPointApi.ProtectedViewWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2026)]
         void ProtectedViewWindowOpen([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("protViewWindow", typeof(PowerPointApi.ProtectedViewWindow))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2027)]
-        void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] [Out] ref object cancel);
+        void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In][Out] ref object cancel);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("protViewWindow", typeof(PowerPointApi.ProtectedViewWindow))]
-        [SinkArgument("protectedViewCloseReason", SinkArgumentType.Enum , typeof(PowerPointApi.Enums.PpProtectedViewCloseReason))]
+        [SinkArgument("protectedViewCloseReason", SinkArgumentType.Enum, typeof(PowerPointApi.Enums.PpProtectedViewCloseReason))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2028)]
-        void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In] [Out] ref object cancel);
+        void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In][Out] ref object cancel);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("protViewWindow", typeof(PowerPointApi.ProtectedViewWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2029)]
         void ProtectedViewWindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("protViewWindow", typeof(PowerPointApi.ProtectedViewWindow))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2030)]
         void ProtectedViewWindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow);
 
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [SinkArgument("pres", typeof(PowerPointApi.Presentation))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2031)]
         void PresentationCloseFinal([In, MarshalAs(UnmanagedType.IDispatch)] object pres);
@@ -185,7 +185,7 @@ namespace NetOffice.PowerPointApi.Events
         [SupportByVersion("PowerPoint", 15, 16)]
         [SinkArgument("sld", typeof(PowerPointApi.Slide))]
         [SinkArgument("x", SinkArgumentType.Single)]
-        [SinkArgument("y", SinkArgumentType.Single)]    
+        [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2032)]
         void AfterDragDropOnSlide([In, MarshalAs(UnmanagedType.IDispatch)] object sld, [In] object x, [In] object y);
 
@@ -194,32 +194,32 @@ namespace NetOffice.PowerPointApi.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2033)]
         void AfterShapeSizeChange([In, MarshalAs(UnmanagedType.IDispatch)] object shp);
     }
-    
+
     #endregion
-    
+
     #region SinkHelper
-    
+
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
     public class EApplication_SinkHelper : SinkHelper, EApplication
     {
         #region Static
-        
+
         public static readonly string Id = "914934C2-5A91-11CF-8700-00AA0060263B";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public EApplication_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public EApplication_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region EApplication
-        
+
         public void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel)
         {
             if (!Validate("WindowSelectionChange"))
@@ -234,7 +234,7 @@ namespace NetOffice.PowerPointApi.Events
             EventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
         }
 
-        public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
+        public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel)
         {
             if (!Validate("WindowBeforeRightClick"))
             {
@@ -251,7 +251,7 @@ namespace NetOffice.PowerPointApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
+        public void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel)
         {
             if (!Validate("WindowBeforeDoubleClick"))
             {
@@ -468,7 +468,7 @@ namespace NetOffice.PowerPointApi.Events
             EventBinding.RaiseCustomEvent("ColorSchemeChanged", ref paramsArray);
         }
 
-        public void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
+        public void PresentationBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In][Out] ref object cancel)
         {
             if (!Validate("PresentationBeforeSave"))
             {
@@ -573,7 +573,7 @@ namespace NetOffice.PowerPointApi.Events
             EventBinding.RaiseCustomEvent("SlideShowOnPrevious", ref paramsArray);
         }
 
-        public void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In] [Out] ref object cancel)
+        public void PresentationBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object pres, [In][Out] ref object cancel)
         {
             if (!Validate("PresentationBeforeClose"))
             {
@@ -603,8 +603,8 @@ namespace NetOffice.PowerPointApi.Events
             paramsArray[0] = newProtViewWindow;
             EventBinding.RaiseCustomEvent("ProtectedViewWindowOpen", ref paramsArray);
         }
-        
-        public void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] [Out] ref object cancel)
+
+        public void ProtectedViewWindowBeforeEdit([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In][Out] ref object cancel)
         {
             if (!Validate("ProtectedViewWindowBeforeEdit"))
             {
@@ -621,7 +621,7 @@ namespace NetOffice.PowerPointApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In] [Out] ref object cancel)
+        public void ProtectedViewWindowBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object protViewWindow, [In] object protectedViewCloseReason, [In][Out] ref object cancel)
         {
             if (!Validate("ProtectedViewWindowBeforeClose"))
             {
@@ -716,8 +716,8 @@ namespace NetOffice.PowerPointApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

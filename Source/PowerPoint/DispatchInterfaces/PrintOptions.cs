@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class PrintOptions : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PrintOptions(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public PrintOptions(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public PrintOptions(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PrintOptions(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PrintOptions() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PrintOptions(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.PrintColorType"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpPrintColorType PrintColorType
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.Collate"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Collate
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.FitToPage"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState FitToPage
         {
             get
@@ -181,7 +181,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.FrameSlides"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState FrameSlides
         {
             get
@@ -199,7 +199,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.NumberOfCopies"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 NumberOfCopies
         {
             get
@@ -217,7 +217,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.OutputType"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpPrintOutputType OutputType
         {
             get
@@ -236,7 +236,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -250,7 +250,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.PrintHiddenSlides"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState PrintHiddenSlides
         {
             get
@@ -268,7 +268,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.PrintInBackground"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState PrintInBackground
         {
             get
@@ -286,7 +286,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.RangeType"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpPrintRangeType RangeType
         {
             get
@@ -304,7 +304,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.Ranges"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.PrintRanges Ranges
         {
             get
@@ -318,7 +318,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.PrintFontsAsGraphics"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState PrintFontsAsGraphics
         {
             get
@@ -336,7 +336,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.SlideShowName"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string SlideShowName
         {
             get
@@ -354,7 +354,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.ActivePrinter"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string ActivePrinter
         {
             get
@@ -372,7 +372,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.HandoutOrder"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpPrintHandoutOrder HandoutOrder
         {
             get
@@ -390,7 +390,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.PrintComments"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState PrintComments
         {
             get
@@ -408,7 +408,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.sectionIndex"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Int32 sectionIndex
         {
             get
@@ -426,7 +426,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.PrintOptions.HighQuality"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HighQuality
         {
             get
@@ -445,6 +445,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

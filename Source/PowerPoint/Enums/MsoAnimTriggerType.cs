@@ -8,7 +8,7 @@ namespace NetOffice.PowerPointApi.Enums
     /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
     /// </summary>
     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.MsoAnimTriggerType"/> </remarks>
-    [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum MsoAnimTriggerType
     {
@@ -17,7 +17,7 @@ namespace NetOffice.PowerPointApi.Enums
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>-1</remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         msoAnimTriggerMixed = -1,
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace NetOffice.PowerPointApi.Enums
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>0</remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         msoAnimTriggerNone = 0,
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace NetOffice.PowerPointApi.Enums
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>1</remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         msoAnimTriggerOnPageClick = 1,
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace NetOffice.PowerPointApi.Enums
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>2</remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         msoAnimTriggerWithPrevious = 2,
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace NetOffice.PowerPointApi.Enums
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>3</remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         msoAnimTriggerAfterPrevious = 3,
 
         /// <summary>
@@ -57,14 +57,14 @@ namespace NetOffice.PowerPointApi.Enums
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>4</remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         msoAnimTriggerOnShapeClick = 4,
 
         /// <summary>
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks>5</remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         msoAnimTriggerOnMediaBookmark = 5
     }
 }

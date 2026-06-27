@@ -4,16 +4,16 @@ using System.ComponentModel;
 using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
-{  
+{
     /// <summary>
     /// DispatchInterface _Application 
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Application : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.PowerPointApi
         public _Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.PowerPointApi
         public _Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Application(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Application() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Application(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Presentations"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentations Presentations
         {
             get
@@ -126,7 +126,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Windows"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.DocumentWindows Windows
         {
             get
@@ -139,7 +139,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.PPDialogs Dialogs
         {
@@ -154,7 +154,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ActiveWindow"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.DocumentWindow ActiveWindow
         {
             get
@@ -168,7 +168,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ActivePresentation"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation ActivePresentation
         {
             get
@@ -182,7 +182,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.SlideShowWindows"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.SlideShowWindows SlideShowWindows
         {
             get
@@ -196,7 +196,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.CommandBars"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBars CommandBars
         {
             get
@@ -210,7 +210,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Path"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Path
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Name"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -238,7 +238,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Caption"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Caption
         {
             get
@@ -255,7 +255,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Assistant Assistant
         {
             get
@@ -268,7 +268,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.FileSearch FileSearch
         {
             get
@@ -281,7 +281,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IFind FileFind
         {
             get
@@ -295,7 +295,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Build"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Build
         {
             get
@@ -309,7 +309,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Version"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Version
         {
             get
@@ -323,7 +323,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.OperatingSystem"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string OperatingSystem
         {
             get
@@ -337,7 +337,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ActivePrinter"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string ActivePrinter
         {
             get
@@ -351,7 +351,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Creator"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -365,7 +365,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.AddIns"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.AddIns AddIns
         {
             get
@@ -379,7 +379,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.VBE"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.VBIDEApi.VBE VBE
         {
             get
@@ -393,7 +393,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Left"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Left
         {
             get
@@ -411,7 +411,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Top"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Top
         {
             get
@@ -429,7 +429,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Width"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Width
         {
             get
@@ -447,7 +447,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Height"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Height
         {
             get
@@ -465,7 +465,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.WindowState"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
         {
             get
@@ -483,7 +483,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Visible"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -516,7 +516,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Active"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Active
         {
             get
@@ -529,7 +529,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.AnswerWizard AnswerWizard
         {
             get
@@ -543,7 +543,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.COMAddIns"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.COMAddIns COMAddIns
         {
             get
@@ -557,7 +557,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ProductCode"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string ProductCode
         {
             get
@@ -570,7 +570,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.DefaultWebOptions DefaultWebOptions
         {
             get
@@ -584,7 +584,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.LanguageSettings"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.LanguageSettings LanguageSettings
         {
             get
@@ -597,7 +597,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.OfficeApi.MsoDebugOptions MsoDebugOptions
         {
@@ -612,7 +612,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ShowWindowsInTaskbar"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState ShowWindowsInTaskbar
         {
             get
@@ -629,7 +629,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.Marker Marker
         {
@@ -644,7 +644,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.FeatureInstall"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
         {
             get
@@ -663,7 +663,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.FileDialog"/> </remarks>
         /// <param name="type">NetOffice.OfficeApi.Enums.MsoFileDialogType type</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType type)
         {
@@ -676,7 +676,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.FileDialog"/> </remarks>
         /// <param name="type">NetOffice.OfficeApi.Enums.MsoFileDialogType type</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16), Redirect("get_FileDialog")]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16), Redirect("get_FileDialog")]
         public NetOffice.OfficeApi.FileDialog FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType type)
         {
             return get_FileDialog(type);
@@ -687,7 +687,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.DisplayGridLines"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState DisplayGridLines
         {
             get
@@ -705,7 +705,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.AutomationSecurity"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoAutomationSecurity AutomationSecurity
         {
             get
@@ -723,7 +723,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.NewPresentation(property)"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.NewFile NewPresentation
         {
             get
@@ -737,7 +737,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.DisplayAlerts"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpAlertLevel DisplayAlerts
         {
             get
@@ -755,7 +755,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ShowStartupDialog"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState ShowStartupDialog
         {
             get
@@ -773,7 +773,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.AutoCorrect"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.AutoCorrect AutoCorrect
         {
             get
@@ -787,7 +787,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Options"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Options Options
         {
             get
@@ -801,7 +801,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.DisplayDocumentInformationPanel"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool DisplayDocumentInformationPanel
         {
             get
@@ -819,7 +819,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Assistance"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IAssistance Assistance
         {
             get
@@ -833,7 +833,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ActiveEncryptionSession"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public Int32 ActiveEncryptionSession
         {
             get
@@ -847,7 +847,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.FileConverters"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.FileConverters FileConverters
         {
             get
@@ -861,7 +861,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.SmartArtLayouts"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.SmartArtLayouts SmartArtLayouts
         {
             get
@@ -875,7 +875,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.SmartArtQuickStyles"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.SmartArtQuickStyles SmartArtQuickStyles
         {
             get
@@ -889,7 +889,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.SmartArtColors"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.SmartArtColors SmartArtColors
         {
             get
@@ -903,7 +903,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ProtectedViewWindows"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.ProtectedViewWindows ProtectedViewWindows
         {
             get
@@ -917,7 +917,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.ActiveProtectedViewWindow"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.ProtectedViewWindow ActiveProtectedViewWindow
         {
             get
@@ -931,7 +931,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.IsSandboxed"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool IsSandboxed
         {
             get
@@ -944,7 +944,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.ResampleMediaTasks ResampleMediaTasks
         {
@@ -959,7 +959,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.FileValidation"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFileValidationMode FileValidation
         {
             get
@@ -1018,7 +1018,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Help"/> </remarks>
         /// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
         /// <param name="contextID">optional Int32 ContextID = 0</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Help(object helpFile, object contextID)
         {
             Factory.ExecuteMethod(this, "Help", helpFile, contextID);
@@ -1029,7 +1029,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Help"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Help()
         {
             Factory.ExecuteMethod(this, "Help");
@@ -1041,7 +1041,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Help"/> </remarks>
         /// <param name="helpFile">optional string HelpFile = vbappt9.chm</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Help(object helpFile)
         {
             Factory.ExecuteMethod(this, "Help", helpFile);
@@ -1051,7 +1051,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Quit"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Quit()
         {
             Factory.ExecuteMethod(this, "Quit");
@@ -1063,7 +1063,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Run"/> </remarks>
         /// <param name="macroName">string macroName</param>
         /// <param name="safeArrayOfParams">optional object[] safeArrayOfParams</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public object Run(string macroName, object[] safeArrayOfParams)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", macroName, safeArrayOfParams);
@@ -1075,7 +1075,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Run"/> </remarks>
         /// <param name="macroName">string macroName</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public object Run(string macroName)
         {
             return Factory.ExecuteVariantMethodGet(this, "Run", macroName);
@@ -1096,7 +1096,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="pWindow">NetOffice.PowerPointApi.DocumentWindow pWindow</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void LaunchSpelling(NetOffice.PowerPointApi.DocumentWindow pWindow)
         {
             Factory.ExecuteMethod(this, "LaunchSpelling", pWindow);
@@ -1106,7 +1106,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.Activate"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Activate()
         {
             Factory.ExecuteMethod(this, "Activate");
@@ -1118,7 +1118,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="option">Int32 option</param>
         /// <param name="persist">optional bool Persist = false</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public bool GetOptionFlag(Int32 option, object persist)
         {
             return Factory.ExecuteBoolMethodGet(this, "GetOptionFlag", option, persist);
@@ -1130,7 +1130,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="option">Int32 option</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public bool GetOptionFlag(Int32 option)
         {
             return Factory.ExecuteBoolMethodGet(this, "GetOptionFlag", option);
@@ -1143,7 +1143,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="state">bool state</param>
         /// <param name="persist">optional bool Persist = false</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SetOptionFlag(Int32 option, bool state, object persist)
         {
             Factory.ExecuteMethod(this, "SetOptionFlag", option, state, persist);
@@ -1156,7 +1156,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="state">bool state</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SetOptionFlag(Int32 option, bool state)
         {
             Factory.ExecuteMethod(this, "SetOptionFlag", option, state);
@@ -1167,7 +1167,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="type">NetOffice.PowerPointApi.Enums.PpFileDialogType type</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public object PPFileDialog(NetOffice.PowerPointApi.Enums.PpFileDialogType type)
         {
             return Factory.ExecuteVariantMethodGet(this, "PPFileDialog", type);
@@ -1178,7 +1178,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="marker">Int32 marker</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void SetPerfMarker(Int32 marker)
         {
             Factory.ExecuteMethod(this, "SetPerfMarker", marker);
@@ -1188,7 +1188,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 12, 14, 15, 16
         /// </summary>
         /// <param name="slideLibraryUrl">string slideLibraryUrl</param>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public void LaunchPublishSlidesDialog(string slideLibraryUrl)
         {
             Factory.ExecuteMethod(this, "LaunchPublishSlidesDialog", slideLibraryUrl);
@@ -1198,7 +1198,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 12, 14, 15, 16
         /// </summary>
         /// <param name="slideUrls">object slideUrls</param>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public void LaunchSendToPPTDialog(object slideUrls)
         {
             Factory.ExecuteMethod(this, "LaunchSendToPPTDialog", slideUrls);
@@ -1208,7 +1208,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Application.StartNewUndoEntry"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void StartNewUndoEntry()
         {
             Factory.ExecuteMethod(this, "StartNewUndoEntry");
@@ -1227,6 +1227,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

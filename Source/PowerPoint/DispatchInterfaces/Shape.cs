@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Shape : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Shape(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public Shape(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public Shape(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Shape(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Shape() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Shape(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Creator"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -160,7 +160,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Adjustments"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Adjustments Adjustments
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.AutoShapeType"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.BlackWhiteMode"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBlackWhiteMode BlackWhiteMode
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Callout"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.CalloutFormat Callout
         {
             get
@@ -238,7 +238,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ConnectionSiteCount"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ConnectionSiteCount
         {
             get
@@ -252,7 +252,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Connector"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Connector
         {
             get
@@ -266,7 +266,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ConnectorFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ConnectorFormat ConnectorFormat
         {
             get
@@ -280,7 +280,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Fill"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.FillFormat Fill
         {
             get
@@ -294,7 +294,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.GroupItems"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.GroupShapes GroupItems
         {
             get
@@ -308,7 +308,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Height"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Height
         {
             get
@@ -326,7 +326,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.HorizontalFlip"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HorizontalFlip
         {
             get
@@ -340,7 +340,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Left"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Left
         {
             get
@@ -358,7 +358,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Line"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.LineFormat Line
         {
             get
@@ -372,7 +372,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.LockAspectRatio"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState LockAspectRatio
         {
             get
@@ -390,7 +390,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Name"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -408,7 +408,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Nodes"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ShapeNodes Nodes
         {
             get
@@ -422,7 +422,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Rotation"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Rotation
         {
             get
@@ -440,7 +440,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.PictureFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.PictureFormat PictureFormat
         {
             get
@@ -454,7 +454,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Shadow"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ShadowFormat Shadow
         {
             get
@@ -468,7 +468,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.TextEffect"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.TextEffectFormat TextEffect
         {
             get
@@ -482,7 +482,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.TextFrame"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.TextFrame TextFrame
         {
             get
@@ -496,7 +496,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ThreeD"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ThreeDFormat ThreeD
         {
             get
@@ -510,7 +510,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Top"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Top
         {
             get
@@ -528,7 +528,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Type"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoShapeType Type
         {
             get
@@ -542,7 +542,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.VerticalFlip"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState VerticalFlip
         {
             get
@@ -556,7 +556,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Vertices"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public object Vertices
         {
             get
@@ -570,7 +570,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Visible"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -588,7 +588,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Width"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Width
         {
             get
@@ -606,7 +606,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ZOrderPosition"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ZOrderPosition
         {
             get
@@ -620,7 +620,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.OLEFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.OLEFormat OLEFormat
         {
             get
@@ -634,7 +634,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.LinkFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.LinkFormat LinkFormat
         {
             get
@@ -648,7 +648,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.PlaceholderFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.PlaceholderFormat PlaceholderFormat
         {
             get
@@ -662,7 +662,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.AnimationSettings"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.AnimationSettings AnimationSettings
         {
             get
@@ -676,7 +676,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ActionSettings"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ActionSettings ActionSettings
         {
             get
@@ -690,7 +690,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Tags"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Tags Tags
         {
             get
@@ -704,7 +704,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.MediaType"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpMediaType MediaType
         {
             get
@@ -718,7 +718,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.HasTextFrame"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasTextFrame
         {
             get
@@ -731,7 +731,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.SoundFormat SoundFormat
         {
@@ -745,7 +745,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Script Script
         {
             get
@@ -759,7 +759,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.AlternativeText"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string AlternativeText
         {
             get
@@ -777,7 +777,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.HasTable"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasTable
         {
             get
@@ -791,7 +791,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Table"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Table Table
         {
             get
@@ -804,7 +804,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasDiagram
         {
             get
@@ -817,7 +817,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Diagram Diagram
         {
             get
@@ -830,7 +830,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasDiagramNode
         {
             get
@@ -843,7 +843,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.DiagramNode DiagramNode
         {
             get
@@ -857,7 +857,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Child"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Child
         {
             get
@@ -871,7 +871,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ParentGroup"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Shape ParentGroup
         {
             get
@@ -884,7 +884,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.PowerPointApi.CanvasShapes CanvasItems
         {
@@ -899,7 +899,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Id"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public Int32 Id
         {
             get
@@ -930,7 +930,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string RTF
         {
@@ -949,7 +949,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.CustomerData"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.CustomerData CustomerData
         {
             get
@@ -963,7 +963,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.TextFrame2"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.TextFrame2 TextFrame2
         {
             get
@@ -977,7 +977,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.HasChart"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasChart
         {
             get
@@ -991,7 +991,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ShapeStyle"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoShapeStyleIndex ShapeStyle
         {
             get
@@ -1009,7 +1009,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.BackgroundStyle"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex BackgroundStyle
         {
             get
@@ -1027,7 +1027,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.SoftEdge"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
         {
             get
@@ -1041,7 +1041,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Glow"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.GlowFormat Glow
         {
             get
@@ -1055,7 +1055,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Reflection"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ReflectionFormat Reflection
         {
             get
@@ -1069,7 +1069,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Chart"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Chart Chart
         {
             get
@@ -1083,7 +1083,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.HasSmartArt"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasSmartArt
         {
             get
@@ -1097,7 +1097,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.SmartArt"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.SmartArt SmartArt
         {
             get
@@ -1111,7 +1111,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Title"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string Title
         {
             get
@@ -1129,7 +1129,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.MediaFormat"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.MediaFormat MediaFormat
         {
             get
@@ -1146,7 +1146,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Apply"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Apply()
         {
             Factory.ExecuteMethod(this, "Apply");
@@ -1156,7 +1156,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Delete"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -1167,7 +1167,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Flip"/> </remarks>
         /// <param name="flipCmd">NetOffice.OfficeApi.Enums.MsoFlipCmd flipCmd</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Flip(NetOffice.OfficeApi.Enums.MsoFlipCmd flipCmd)
         {
             Factory.ExecuteMethod(this, "Flip", flipCmd);
@@ -1178,7 +1178,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.IncrementLeft"/> </remarks>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void IncrementLeft(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementLeft", increment);
@@ -1189,7 +1189,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.IncrementRotation"/> </remarks>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void IncrementRotation(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotation", increment);
@@ -1200,7 +1200,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.IncrementTop"/> </remarks>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void IncrementTop(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementTop", increment);
@@ -1210,7 +1210,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.PickUp"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void PickUp()
         {
             Factory.ExecuteMethod(this, "PickUp");
@@ -1220,7 +1220,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.RerouteConnections"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void RerouteConnections()
         {
             Factory.ExecuteMethod(this, "RerouteConnections");
@@ -1233,7 +1233,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         /// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
         {
             Factory.ExecuteMethod(this, "ScaleHeight", factor, relativeToOriginalSize, fScale);
@@ -1246,7 +1246,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize)
         {
             Factory.ExecuteMethod(this, "ScaleHeight", factor, relativeToOriginalSize);
@@ -1259,7 +1259,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         /// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
         {
             Factory.ExecuteMethod(this, "ScaleWidth", factor, relativeToOriginalSize, fScale);
@@ -1272,7 +1272,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize)
         {
             Factory.ExecuteMethod(this, "ScaleWidth", factor, relativeToOriginalSize);
@@ -1282,7 +1282,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.SetShapesDefaultProperties"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SetShapesDefaultProperties()
         {
             Factory.ExecuteMethod(this, "SetShapesDefaultProperties");
@@ -1292,7 +1292,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Ungroup"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ShapeRange Ungroup()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.ShapeRange>(this, "Ungroup", NetOffice.PowerPointApi.ShapeRange.LateBindingApiWrapperType);
@@ -1303,7 +1303,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ZOrder"/> </remarks>
         /// <param name="zOrderCmd">NetOffice.OfficeApi.Enums.MsoZOrderCmd zOrderCmd</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ZOrder(NetOffice.OfficeApi.Enums.MsoZOrderCmd zOrderCmd)
         {
             Factory.ExecuteMethod(this, "ZOrder", zOrderCmd);
@@ -1313,7 +1313,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Cut"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Cut()
         {
             Factory.ExecuteMethod(this, "Cut");
@@ -1323,7 +1323,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Copy"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Copy()
         {
             Factory.ExecuteMethod(this, "Copy");
@@ -1334,7 +1334,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Select"/> </remarks>
         /// <param name="replace">optional NetOffice.OfficeApi.Enums.MsoTriState Replace = -1</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Select(object replace)
         {
             Factory.ExecuteMethod(this, "Select", replace);
@@ -1345,7 +1345,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Select"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Select()
         {
             Factory.ExecuteMethod(this, "Select");
@@ -1355,7 +1355,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.Duplicate"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.ShapeRange Duplicate()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.ShapeRange>(this, "Duplicate", NetOffice.PowerPointApi.ShapeRange.LateBindingApiWrapperType);
@@ -1370,10 +1370,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="scaleHeight">optional Int32 ScaleHeight = 0</param>
         /// <param name="exportMode">optional NetOffice.PowerPointApi.Enums.PpExportMode ExportMode = 1</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, object scaleWidth, object scaleHeight, object exportMode)
         {
-            Factory.ExecuteMethod(this, "Export", new object[]{ pathName, filter, scaleWidth, scaleHeight, exportMode });
+            Factory.ExecuteMethod(this, "Export", new object[] { pathName, filter, scaleWidth, scaleHeight, exportMode });
         }
 
         /// <summary>
@@ -1383,7 +1383,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="filter">NetOffice.PowerPointApi.Enums.PpShapeFormat filter</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter)
         {
             Factory.ExecuteMethod(this, "Export", pathName, filter);
@@ -1397,7 +1397,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="scaleWidth">optional Int32 ScaleWidth = 0</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, object scaleWidth)
         {
             Factory.ExecuteMethod(this, "Export", pathName, filter, scaleWidth);
@@ -1412,7 +1412,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="scaleHeight">optional Int32 ScaleHeight = 0</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Export(string pathName, NetOffice.PowerPointApi.Enums.PpShapeFormat filter, object scaleWidth, object scaleHeight)
         {
             Factory.ExecuteMethod(this, "Export", pathName, filter, scaleWidth, scaleHeight);
@@ -1423,7 +1423,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropLeft(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropLeft", increment);
@@ -1434,7 +1434,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropTop(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropTop", increment);
@@ -1445,7 +1445,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropRight(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropRight", increment);
@@ -1456,7 +1456,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropBottom(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropBottom", increment);
@@ -1467,7 +1467,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ConvertTextToSmartArt"/> </remarks>
         /// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void ConvertTextToSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
         {
             Factory.ExecuteMethod(this, "ConvertTextToSmartArt", layout);
@@ -1477,7 +1477,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.PickupAnimation"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void PickupAnimation()
         {
             Factory.ExecuteMethod(this, "PickupAnimation");
@@ -1487,7 +1487,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.ApplyAnimation"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void ApplyAnimation()
         {
             Factory.ExecuteMethod(this, "ApplyAnimation");
@@ -1497,7 +1497,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Shape.UpgradeMedia"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void UpgradeMedia()
         {
             Factory.ExecuteMethod(this, "UpgradeMedia");
@@ -1505,6 +1505,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
