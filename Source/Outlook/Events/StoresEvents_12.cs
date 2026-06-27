@@ -6,23 +6,23 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000630F8-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface StoresEvents_12
     {
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [SinkArgument("store", typeof(NetOffice.OutlookApi._Store))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64433)]
-        void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In] [Out] ref object cancel);
+        void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In][Out] ref object cancel);
 
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [SinkArgument("store", typeof(NetOffice.OutlookApi._Store))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
         void StoreAdd([In, MarshalAs(UnmanagedType.IDispatch)] object store);
@@ -37,23 +37,23 @@ namespace NetOffice.OutlookApi.Events
     public class StoresEvents_12_SinkHelper : SinkHelper, StoresEvents_12
     {
         #region Static
-        
+
         public static readonly string Id = "000630F8-0000-0000-C000-000000000046";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public StoresEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public StoresEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region StoresEvents_12
-        
-        public void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In] [Out] ref object cancel)
+
+        public void BeforeStoreRemove([In, MarshalAs(UnmanagedType.IDispatch)] object store, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeStoreRemove"))
             {
@@ -86,8 +86,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

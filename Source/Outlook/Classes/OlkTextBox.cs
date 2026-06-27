@@ -7,7 +7,7 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void OlkTextBox_ClickEventHandler();
     public delegate void OlkTextBox_DoubleClickEventHandler();
     public delegate void OlkTextBox_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
@@ -21,7 +21,7 @@ namespace NetOffice.OutlookApi
     public delegate void OlkTextBox_ChangeEventHandler();
     public delegate void OlkTextBox_AfterUpdateEventHandler();
     public delegate void OlkTextBox_BeforeUpdateEventHandler(ref bool cancel);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -30,21 +30,21 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox"/> </remarks>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.OlkTextBoxEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.OlkTextBoxEvents))]
     public class OlkTextBox : _OlkTextBox, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.OlkTextBoxEvents_SinkHelper _olkTextBoxEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -74,9 +74,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -84,14 +84,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OlkTextBox(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OlkTextBox(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -101,7 +101,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkTextBox(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -110,31 +110,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkTextBox(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkTextBox(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of OlkTextBox 
         /// </summary>		
-        public OlkTextBox():base("Outlook.OlkTextBox")
+        public OlkTextBox() : base("Outlook.OlkTextBox")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of OlkTextBox
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public OlkTextBox(string progId):base(progId)
+        public OlkTextBox(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -153,7 +153,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.Click"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_ClickEventHandler ClickEvent
         {
             add
@@ -176,7 +176,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.DoubleClick"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_DoubleClickEventHandler DoubleClickEvent
         {
             add
@@ -199,7 +199,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.MouseDown"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -222,7 +222,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.MouseMove"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -245,7 +245,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.MouseUp"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -268,7 +268,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.Enter"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_EnterEventHandler EnterEvent
         {
             add
@@ -291,7 +291,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.Exit"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_ExitEventHandler ExitEvent
         {
             add
@@ -314,7 +314,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.KeyDown"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_KeyDownEventHandler KeyDownEvent
         {
             add
@@ -337,7 +337,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.KeyPress"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_KeyPressEventHandler KeyPressEvent
         {
             add
@@ -360,7 +360,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.KeyUp"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_KeyUpEventHandler KeyUpEvent
         {
             add
@@ -383,7 +383,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.Change"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_ChangeEventHandler ChangeEvent
         {
             add
@@ -406,7 +406,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.AfterUpdate"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_AfterUpdateEventHandler AfterUpdateEvent
         {
             add
@@ -429,7 +429,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkTextBox.BeforeUpdate"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkTextBox_BeforeUpdateEventHandler BeforeUpdateEvent
         {
             add
@@ -444,30 +444,30 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkTextBoxEvents_SinkHelper.Id);
 
 
-            if(Events.OlkTextBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.OlkTextBoxEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _olkTextBoxEvents_SinkHelper = new Events.OlkTextBoxEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -476,7 +476,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -486,9 +486,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -510,16 +510,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -537,7 +537,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _olkTextBoxEvents_SinkHelper)
+            if (null != _olkTextBoxEvents_SinkHelper)
             {
                 _olkTextBoxEvents_SinkHelper.Dispose();
                 _olkTextBoxEvents_SinkHelper = null;
@@ -545,10 +545,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

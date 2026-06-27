@@ -7,7 +7,7 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void MeetingItem_OpenEventHandler(ref bool cancel);
     public delegate void MeetingItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
     public delegate void MeetingItem_CustomPropertyChangeEventHandler(string name);
@@ -34,7 +34,7 @@ namespace NetOffice.OutlookApi
     public delegate void MeetingItem_BeforeReadEventHandler();
     public delegate void MeetingItem_AfterWriteEventHandler();
     public delegate void MeetingItem_ReadCompleteEventHandler(ref bool cancel);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -43,22 +43,22 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem"/> </remarks>
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.ItemEvents_SinkHelper), typeof(Events.ItemEvents_10_SinkHelper))]
     [ComEventInterface(typeof(Events.ItemEvents), typeof(Events.ItemEvents_10))]
     public class MeetingItem : _MeetingItem, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ItemEvents_SinkHelper _itemEvents_SinkHelper;
         private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -88,9 +88,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -98,14 +98,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public MeetingItem(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public MeetingItem(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -115,7 +115,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MeetingItem(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -124,31 +124,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MeetingItem(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MeetingItem(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of MeetingItem 
         /// </summary>		
-        public MeetingItem():base("Outlook.MeetingItem")
+        public MeetingItem() : base("Outlook.MeetingItem")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of MeetingItem
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public MeetingItem(string progId):base(progId)
+        public MeetingItem(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -167,7 +167,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Open"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_OpenEventHandler OpenEvent
         {
             add
@@ -190,7 +190,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.CustomAction"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_CustomActionEventHandler CustomActionEvent
         {
             add
@@ -213,7 +213,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.CustomPropertyChange"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
         {
             add
@@ -236,7 +236,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Forward(even)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_ForwardEventHandler ForwardEvent
         {
             add
@@ -259,7 +259,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Close(even)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_CloseEventHandler CloseEvent
         {
             add
@@ -282,7 +282,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.PropertyChange"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_PropertyChangeEventHandler PropertyChangeEvent
         {
             add
@@ -305,7 +305,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Read"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_ReadEventHandler ReadEvent
         {
             add
@@ -328,7 +328,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Reply(even)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_ReplyEventHandler ReplyEvent
         {
             add
@@ -351,7 +351,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.ReplyAll(even)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_ReplyAllEventHandler ReplyAllEvent
         {
             add
@@ -374,7 +374,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Send(even)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_SendEventHandler SendEvent
         {
             add
@@ -397,7 +397,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Write"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_WriteEventHandler WriteEvent
         {
             add
@@ -420,7 +420,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeCheckNames"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
         {
             add
@@ -443,7 +443,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.AttachmentAdd"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_AttachmentAddEventHandler AttachmentAddEvent
         {
             add
@@ -466,7 +466,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.AttachmentRead"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_AttachmentReadEventHandler AttachmentReadEvent
         {
             add
@@ -489,7 +489,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeAttachmentSave"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
         {
             add
@@ -512,7 +512,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeDelete"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event MeetingItem_BeforeDeleteEventHandler BeforeDeleteEvent
         {
             add
@@ -535,7 +535,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.AttachmentRemove"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
         {
             add
@@ -558,7 +558,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeAttachmentAdd"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
         {
             add
@@ -581,7 +581,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeAttachmentPreview"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
         {
             add
@@ -604,7 +604,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeAttachmentRead"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
         {
             add
@@ -627,7 +627,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeAttachmentWriteToTempFile"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
         {
             add
@@ -650,7 +650,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.Unload"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_UnloadEventHandler UnloadEvent
         {
             add
@@ -673,7 +673,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeAutoSave"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event MeetingItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
         {
             add
@@ -696,7 +696,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.BeforeRead"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public event MeetingItem_BeforeReadEventHandler BeforeReadEvent
         {
             add
@@ -719,7 +719,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.MeetingItem.AfterWrite"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public event MeetingItem_AfterWriteEventHandler AfterWriteEvent
         {
             add
@@ -757,36 +757,36 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_SinkHelper.Id, Events.ItemEvents_10_SinkHelper.Id);
 
 
-            if(Events.ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ItemEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _itemEvents_SinkHelper = new Events.ItemEvents_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -795,7 +795,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -805,9 +805,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -829,16 +829,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -856,12 +856,12 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _itemEvents_SinkHelper)
+            if (null != _itemEvents_SinkHelper)
             {
                 _itemEvents_SinkHelper.Dispose();
                 _itemEvents_SinkHelper = null;
             }
-            if( null != _itemEvents_10_SinkHelper)
+            if (null != _itemEvents_10_SinkHelper)
             {
                 _itemEvents_10_SinkHelper.Dispose();
                 _itemEvents_10_SinkHelper = null;
@@ -869,10 +869,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

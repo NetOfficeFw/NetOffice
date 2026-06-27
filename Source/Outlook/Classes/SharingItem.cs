@@ -7,7 +7,7 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void SharingItem_OpenEventHandler(ref bool cancel);
     public delegate void SharingItem_CustomActionEventHandler(ICOMObject action, ICOMObject response, ref bool cancel);
     public delegate void SharingItem_CustomPropertyChangeEventHandler(string Name);
@@ -34,7 +34,7 @@ namespace NetOffice.OutlookApi
     public delegate void SharingItem_BeforeReadEventHandler();
     public delegate void SharingItem_AfterWriteEventHandler();
     public delegate void SharingItem_ReadCompleteEventHandler(ref bool cancel);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -43,21 +43,21 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem"/> </remarks>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.ItemEvents_10_SinkHelper))]
     [ComEventInterface(typeof(Events.ItemEvents_10))]
     public class SharingItem : _SharingItem, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ItemEvents_10_SinkHelper _itemEvents_10_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -87,9 +87,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -97,14 +97,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SharingItem(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SharingItem(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -114,7 +114,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharingItem(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -123,31 +123,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharingItem(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharingItem(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of SharingItem 
         /// </summary>		
-        public SharingItem():base("Outlook.SharingItem")
+        public SharingItem() : base("Outlook.SharingItem")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of SharingItem
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public SharingItem(string progId):base(progId)
+        public SharingItem(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -166,7 +166,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Open"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_OpenEventHandler OpenEvent
         {
             add
@@ -189,7 +189,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.CustomAction"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_CustomActionEventHandler CustomActionEvent
         {
             add
@@ -212,7 +212,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.CustomPropertyChange"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_CustomPropertyChangeEventHandler CustomPropertyChangeEvent
         {
             add
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Forward(even)"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_ForwardEventHandler ForwardEvent
         {
             add
@@ -258,7 +258,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Close(even)"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_CloseEventHandler CloseEvent
         {
             add
@@ -281,7 +281,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.PropertyChange"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_PropertyChangeEventHandler PropertyChangeEvent
         {
             add
@@ -304,7 +304,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Read"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_ReadEventHandler ReadEvent
         {
             add
@@ -327,7 +327,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Reply(even)"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_ReplyEventHandler ReplyEvent
         {
             add
@@ -350,7 +350,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.ReplyAll(even)"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_ReplyAllEventHandler ReplyAllEvent
         {
             add
@@ -373,7 +373,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Send(even)"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_SendEventHandler SendEvent
         {
             add
@@ -396,7 +396,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Write"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_WriteEventHandler WriteEvent
         {
             add
@@ -419,7 +419,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeCheckNames"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_BeforeCheckNamesEventHandler BeforeCheckNamesEvent
         {
             add
@@ -442,7 +442,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.AttachmentAdd"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_AttachmentAddEventHandler AttachmentAddEvent
         {
             add
@@ -465,7 +465,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.AttachmentRead"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_AttachmentReadEventHandler AttachmentReadEvent
         {
             add
@@ -488,7 +488,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeAttachmentSave"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_BeforeAttachmentSaveEventHandler BeforeAttachmentSaveEvent
         {
             add
@@ -511,7 +511,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeDelete"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event SharingItem_BeforeDeleteEventHandler BeforeDeleteEvent
         {
             add
@@ -534,7 +534,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.AttachmentRemove"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_AttachmentRemoveEventHandler AttachmentRemoveEvent
         {
             add
@@ -557,7 +557,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeAttachmentAdd"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_BeforeAttachmentAddEventHandler BeforeAttachmentAddEvent
         {
             add
@@ -580,7 +580,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeAttachmentPreview"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_BeforeAttachmentPreviewEventHandler BeforeAttachmentPreviewEvent
         {
             add
@@ -603,7 +603,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeAttachmentRead"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_BeforeAttachmentReadEventHandler BeforeAttachmentReadEvent
         {
             add
@@ -626,7 +626,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeAttachmentWriteToTempFile"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_BeforeAttachmentWriteToTempFileEventHandler BeforeAttachmentWriteToTempFileEvent
         {
             add
@@ -649,7 +649,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.Unload"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_UnloadEventHandler UnloadEvent
         {
             add
@@ -672,7 +672,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeAutoSave"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event SharingItem_BeforeAutoSaveEventHandler BeforeAutoSaveEvent
         {
             add
@@ -695,7 +695,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.BeforeRead"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public event SharingItem_BeforeReadEventHandler BeforeReadEvent
         {
             add
@@ -718,7 +718,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SharingItem.AfterWrite"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public event SharingItem_AfterWriteEventHandler AfterWriteEvent
         {
             add
@@ -756,30 +756,30 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ItemEvents_10_SinkHelper.Id);
 
 
-            if(Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ItemEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _itemEvents_10_SinkHelper = new Events.ItemEvents_10_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -788,7 +788,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -798,9 +798,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -822,16 +822,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -849,7 +849,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _itemEvents_10_SinkHelper)
+            if (null != _itemEvents_10_SinkHelper)
             {
                 _itemEvents_10_SinkHelper.Dispose();
                 _itemEvents_10_SinkHelper = null;
@@ -857,10 +857,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

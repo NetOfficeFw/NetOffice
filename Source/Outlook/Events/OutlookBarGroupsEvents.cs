@@ -6,31 +6,31 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0006307B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface OutlookBarGroupsEvents
     {
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("newGroup", typeof(OutlookApi.OutlookBarGroup))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
         void GroupAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newGroup);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
-        void BeforeGroupAdd([In] [Out] ref object cancel);
+        void BeforeGroupAdd([In][Out] ref object cancel);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("newGroup", typeof(OutlookApi.OutlookBarGroup))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
-        void BeforeGroupRemove([In, MarshalAs(UnmanagedType.IDispatch)] object group, [In] [Out] ref object cancel);
+        void BeforeGroupRemove([In, MarshalAs(UnmanagedType.IDispatch)] object group, [In][Out] ref object cancel);
     }
 
     #endregion
@@ -42,22 +42,22 @@ namespace NetOffice.OutlookApi.Events
     public class OutlookBarGroupsEvents_SinkHelper : SinkHelper, OutlookBarGroupsEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0006307B-0000-0000-C000-000000000046";
-        
+
         #endregion
 
         #region Ctor
 
-        public OutlookBarGroupsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public OutlookBarGroupsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region OutlookBarGroupsEvents
-        
+
         public void GroupAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newGroup)
         {
             if (!Validate("GroupAdd"))
@@ -72,7 +72,7 @@ namespace NetOffice.OutlookApi.Events
             EventBinding.RaiseCustomEvent("GroupAdd", ref paramsArray);
         }
 
-        public void BeforeGroupAdd([In] [Out] ref object cancel)
+        public void BeforeGroupAdd([In][Out] ref object cancel)
         {
             if (!Validate("BeforeGroupAdd"))
             {
@@ -87,7 +87,7 @@ namespace NetOffice.OutlookApi.Events
             cancel = ToBoolean(paramsArray[0]);
         }
 
-        public void BeforeGroupRemove([In, MarshalAs(UnmanagedType.IDispatch)] object group, [In] [Out] ref object cancel)
+        public void BeforeGroupRemove([In, MarshalAs(UnmanagedType.IDispatch)] object group, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeGroupRemove"))
             {
@@ -106,8 +106,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }
