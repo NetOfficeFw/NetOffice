@@ -61,7 +61,7 @@ namespace NetOffice.Tests.PowerPointApi
 
         public class Documents
         {
-            public string AutoSaveOn_PresentationSavedLocally_FeatureAutoSaveIsOff {  get; set; }
+            public string AutoSaveOn_PresentationSavedLocally_FeatureAutoSaveIsOff { get; set; }
             public string AutoSaveOn_PresentationSavedInOneDrive_FeatureAutoSaveIsOn { get; set; }
 
             public Documents(TestContext context)

@@ -261,7 +261,7 @@ namespace NetOffice.Tests.NetOffice.Events
 
             stub.Custom2Event += OnCustom1EventHandler;
             stub.Custom2Event += OnCustom1EventHandler;
-            
+
             stub.Custom3Event += OnCustom1EventHandler;
             stub.Custom3Event += OnCustom1EventHandler;
             stub.Custom3Event += OnCustom1EventHandler;
