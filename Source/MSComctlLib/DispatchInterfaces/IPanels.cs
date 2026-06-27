@@ -16,7 +16,7 @@ namespace NetOffice.MSComctlLibApi
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class IPanels : COMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.IPanel>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.MSComctlLibApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.MSComctlLibApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IPanels(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.MSComctlLibApi
         public IPanels(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.MSComctlLibApi
         public IPanels(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPanels(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPanels() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPanels(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -198,7 +198,7 @@ namespace NetOffice.MSComctlLibApi
         [BaseResult]
         public NetOffice.MSComctlLibApi.IPanel Add(object index, object key, object text, object style, object picture)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IPanel>(this, "Add", new object[]{ index, key, text, style, picture });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IPanel>(this, "Add", new object[] { index, key, text, style, picture });
         }
 
         /// <summary>
@@ -329,6 +329,6 @@ namespace NetOffice.MSComctlLibApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
