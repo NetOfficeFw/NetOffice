@@ -7,7 +7,7 @@ namespace NetOffice.ADODBApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void Recordset_WillChangeFieldEventHandler(Int32 cFields, object Fields, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
     public delegate void Recordset_FieldChangeCompleteEventHandler(Int32 cFields, object fields, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
     public delegate void Recordset_WillChangeRecordEventHandler(NetOffice.ADODBApi.Enums.EventReasonEnum adReason, Int32 cRecords, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
@@ -19,7 +19,7 @@ namespace NetOffice.ADODBApi
     public delegate void Recordset_EndOfRecordsetEventHandler(ref bool fMoreData, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
     public delegate void Recordset_FetchProgressEventHandler(Int32 progress, Int32 maxProgress, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
     public delegate void Recordset_FetchCompleteEventHandler(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Recordset pRecordset);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -27,21 +27,21 @@ namespace NetOffice.ADODBApi
     /// CoClass Recordset 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.RecordsetEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.RecordsetEvents))]
     public class Recordset : _Recordset, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.RecordsetEvents_SinkHelper _recordsetEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
             }
         }
 
-       
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -72,9 +72,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -82,14 +82,14 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Recordset(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Recordset(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -99,7 +99,7 @@ namespace NetOffice.ADODBApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -108,31 +108,31 @@ namespace NetOffice.ADODBApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Recordset 
         /// </summary>		
-        public Recordset():base("ADODB.Recordset")
+        public Recordset() : base("ADODB.Recordset")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Recordset
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Recordset(string progId):base(progId)
+        public Recordset(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -150,7 +150,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_WillChangeFieldEventHandler WillChangeFieldEvent
         {
             add
@@ -172,7 +172,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_FieldChangeCompleteEventHandler FieldChangeCompleteEvent
         {
             add
@@ -194,7 +194,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_WillChangeRecordEventHandler WillChangeRecordEvent
         {
             add
@@ -216,7 +216,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_RecordChangeCompleteEventHandler RecordChangeCompleteEvent
         {
             add
@@ -238,7 +238,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_WillChangeRecordsetEventHandler WillChangeRecordsetEvent
         {
             add
@@ -260,7 +260,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_RecordsetChangeCompleteEventHandler RecordsetChangeCompleteEvent
         {
             add
@@ -282,7 +282,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_WillMoveEventHandler WillMoveEvent
         {
             add
@@ -304,7 +304,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_MoveCompleteEventHandler MoveCompleteEvent
         {
             add
@@ -326,7 +326,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_EndOfRecordsetEventHandler EndOfRecordsetEvent
         {
             add
@@ -348,7 +348,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_FetchProgressEventHandler FetchProgressEvent
         {
             add
@@ -370,7 +370,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public event Recordset_FetchCompleteEventHandler FetchCompleteEvent
         {
             add
@@ -385,30 +385,30 @@ namespace NetOffice.ADODBApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.RecordsetEvents_SinkHelper.Id);
 
 
-            if(Events.RecordsetEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.RecordsetEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _recordsetEvents_SinkHelper = new Events.RecordsetEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -417,7 +417,7 @@ namespace NetOffice.ADODBApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -427,9 +427,9 @@ namespace NetOffice.ADODBApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -451,16 +451,16 @@ namespace NetOffice.ADODBApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -478,7 +478,7 @@ namespace NetOffice.ADODBApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _recordsetEvents_SinkHelper)
+            if (null != _recordsetEvents_SinkHelper)
             {
                 _recordsetEvents_SinkHelper.Dispose();
                 _recordsetEvents_SinkHelper = null;
@@ -486,10 +486,10 @@ namespace NetOffice.ADODBApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

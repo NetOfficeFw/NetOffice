@@ -6,7 +6,7 @@ namespace NetOffice.ADODBApi.Enums
     /// <summary>
     /// SupportByVersion ADODB 2.1, 2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsEnum)]
     public enum ErrorValueEnum
     {
@@ -14,147 +14,147 @@ namespace NetOffice.ADODBApi.Enums
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3001</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrInvalidArgument = 3001,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3021</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrNoCurrentRecord = 3021,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3219</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrIllegalOperation = 3219,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3246</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrInTransaction = 3246,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3251</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrFeatureNotAvailable = 3251,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3265</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrItemNotFound = 3265,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3367</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrObjectInCollection = 3367,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3420</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrObjectNotSet = 3420,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3421</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrDataConversion = 3421,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3704</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrObjectClosed = 3704,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3705</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrObjectOpen = 3705,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3706</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrProviderNotFound = 3706,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3707</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrBoundToCommand = 3707,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3708</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrInvalidParamInfo = 3708,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3709</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrInvalidConnection = 3709,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3710</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrNotReentrant = 3710,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3711</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrStillExecuting = 3711,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3712</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrOperationCancelled = 3712,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3713</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrStillConnecting = 3713,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3715</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrNotExecuting = 3715,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>3716</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adErrUnsafeOperation = 3716,
 
         /// <summary>

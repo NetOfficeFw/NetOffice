@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class _Record_Deprecated : _ADO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Record_Deprecated(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public _Record_Deprecated(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ADODBApi
         public _Record_Deprecated(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Record_Deprecated(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Record_Deprecated() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Record_Deprecated(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public string MoveRecord(object source, object destination, object userName, object password, object options, object async)
         {
-            return Factory.ExecuteStringMethodGet(this, "MoveRecord", new object[]{ source, destination, userName, password, options, async });
+            return Factory.ExecuteStringMethodGet(this, "MoveRecord", new object[] { source, destination, userName, password, options, async });
         }
 
         /// <summary>
@@ -301,7 +301,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public string MoveRecord(object source, object destination, object userName, object password, object options)
         {
-            return Factory.ExecuteStringMethodGet(this, "MoveRecord", new object[]{ source, destination, userName, password, options });
+            return Factory.ExecuteStringMethodGet(this, "MoveRecord", new object[] { source, destination, userName, password, options });
         }
 
         /// <summary>
@@ -316,7 +316,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public string CopyRecord(object source, object destination, object userName, object password, object options, object async)
         {
-            return Factory.ExecuteStringMethodGet(this, "CopyRecord", new object[]{ source, destination, userName, password, options, async });
+            return Factory.ExecuteStringMethodGet(this, "CopyRecord", new object[] { source, destination, userName, password, options, async });
         }
 
         /// <summary>
@@ -391,7 +391,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public string CopyRecord(object source, object destination, object userName, object password, object options)
         {
-            return Factory.ExecuteStringMethodGet(this, "CopyRecord", new object[]{ source, destination, userName, password, options });
+            return Factory.ExecuteStringMethodGet(this, "CopyRecord", new object[] { source, destination, userName, password, options });
         }
 
         /// <summary>
@@ -439,7 +439,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object activeConnection, object mode, object createOptions, object options, object userName, object password)
         {
-            Factory.ExecuteMethod(this, "Open", new object[]{ source, activeConnection, mode, createOptions, options, userName, password });
+            Factory.ExecuteMethod(this, "Open", new object[] { source, activeConnection, mode, createOptions, options, userName, password });
         }
 
         /// <summary>
@@ -514,7 +514,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object activeConnection, object mode, object createOptions, object options)
         {
-            Factory.ExecuteMethod(this, "Open", new object[]{ source, activeConnection, mode, createOptions, options });
+            Factory.ExecuteMethod(this, "Open", new object[] { source, activeConnection, mode, createOptions, options });
         }
 
         /// <summary>
@@ -530,7 +530,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object activeConnection, object mode, object createOptions, object options, object userName)
         {
-            Factory.ExecuteMethod(this, "Open", new object[]{ source, activeConnection, mode, createOptions, options, userName });
+            Factory.ExecuteMethod(this, "Open", new object[] { source, activeConnection, mode, createOptions, options, userName });
         }
 
         /// <summary>
@@ -562,6 +562,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

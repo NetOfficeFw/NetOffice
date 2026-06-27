@@ -12,11 +12,11 @@ namespace NetOffice.ADODBApi
     /// DispatchInterface _Collection 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class _Collection : COMObject, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Collection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.ADODBApi
         public _Collection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.ADODBApi
         public _Collection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Collection(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Collection() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Collection(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 Count
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public void Refresh()
         {
             Factory.ExecuteMethod(this, "Refresh");
@@ -172,7 +172,7 @@ namespace NetOffice.ADODBApi
         /// <summary>
         /// SupportByVersion ADODB, 2.1,2.5
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
@@ -180,6 +180,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

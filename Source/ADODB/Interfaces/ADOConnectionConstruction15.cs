@@ -9,11 +9,11 @@ namespace NetOffice.ADODBApi
     /// Interface ADOConnectionConstruction15 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsInterface), BaseType]
     public class ADOConnectionConstruction15 : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ADOConnectionConstruction15(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public ADOConnectionConstruction15(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ADODBApi
         public ADOConnectionConstruction15(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ADOConnectionConstruction15(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ADOConnectionConstruction15() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ADOConnectionConstruction15(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.ADODBApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5), ProxyResult]
+        [SupportByVersion("ADODB", 2.1, 2.5), ProxyResult]
         public object DSO
         {
             get
@@ -126,7 +126,7 @@ namespace NetOffice.ADODBApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5), ProxyResult]
+        [SupportByVersion("ADODB", 2.1, 2.5), ProxyResult]
         public object Session
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.ADODBApi
         /// </summary>
         /// <param name="pDSO">object pDSO</param>
         /// <param name="pSession">object pSession</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 WrapDSOandSession(object pDSO, object pSession)
         {
             return Factory.ExecuteInt32MethodGet(this, "WrapDSOandSession", pDSO, pSession);
@@ -152,6 +152,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
