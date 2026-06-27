@@ -35,7 +35,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="ShowPictureUI">Indicates whether Microsoft Word's picture user interface needs to be displayed.</param>
         [DispId(2)]
         [MethodImpl(4096)]
-        void SetupBlogAccount([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [In] bool NewAccount, out bool ShowPictureUI);
+        void SetupBlogAccount([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [In] bool NewAccount, out bool ShowPictureUI);
 
         /// <summary>
         /// Returns the list and details of user blogs associated with the specified account.
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="BlogURLs">Contains all blog URLs under the current account.</param>
         [DispId(3)]
         [MethodImpl(4096)]
-        void GetUserBlogs([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array BlogNames, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array BlogIDs, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array BlogURLs);
+        void GetUserBlogs([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array BlogNames, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array BlogIDs, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array BlogURLs);
 
         /// <summary>
         /// Returns the list of the user's last fifteen blog posts that Microsoft Word then displays in the Open Existing Post dialog. This method does not actually return the blog post contents.
@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="PostIDs">Contains the IDs of the last fifteen posts.</param>
         [DispId(4)]
         [MethodImpl(4096)]
-        void GetRecentPosts([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array PostTitles, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array PostDates, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array PostIDs);
+        void GetRecentPosts([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array PostTitles, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array PostDates, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array PostIDs);
 
         /// <summary>
         /// Opens the blog specified by the blog ID. It is called by the Open Existing Post dialog based on the item selected by the user.
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="Categories">A list of categories supported by the provider.</param>
         [DispId(5)]
         [MethodImpl(4096)]
-        void Open([MarshalAs(19)] [In] string Account, [MarshalAs(19)] [In] string PostID, [In] int ParentWindow, [MarshalAs(19)] out string xHTML, [MarshalAs(19)] out string Title, [MarshalAs(19)] out string DatePosted, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array Categories);
+        void Open([MarshalAs(19)][In] string Account, [MarshalAs(19)][In] string PostID, [In] int ParentWindow, [MarshalAs(19)] out string xHTML, [MarshalAs(19)] out string Title, [MarshalAs(19)] out string DatePosted, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array Categories);
 
         /// <summary>
         /// Hands off the current post so it can be published by the provider.
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="PublishMessage">Specifies what is displayed in the publish bar.</param>
         [DispId(6)]
         [MethodImpl(4096)]
-        void PublishPost([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [MarshalAs(19)] [In] string xHTML, [MarshalAs(19)] [In] string Title, [MarshalAs(19)] [In] string DateTime, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] [In] Array Categories, [In] bool Draft, [MarshalAs(19)] out string PostID, [MarshalAs(19)] out string PublishMessage);
+        void PublishPost([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [MarshalAs(19)][In] string xHTML, [MarshalAs(19)][In] string Title, [MarshalAs(19)][In] string DateTime, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)][In] Array Categories, [In] bool Draft, [MarshalAs(19)] out string PostID, [MarshalAs(19)] out string PublishMessage);
 
         /// <summary>
         /// Hands off the current post so it can be republished by the provider.
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="PublishMessage">Specifies what is displayed in the publish bar.</param>
         [DispId(7)]
         [MethodImpl(4096)]
-        void RepublishPost([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [MarshalAs(19)] [In] string PostID, [MarshalAs(19)] [In] string xHTML, [MarshalAs(19)] [In] string Title, [MarshalAs(19)] [In] string DateTime, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] [In] Array Categories, [In] bool Draft, [MarshalAs(19)] out string PublishMessage);
+        void RepublishPost([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [MarshalAs(19)][In] string PostID, [MarshalAs(19)][In] string xHTML, [MarshalAs(19)][In] string Title, [MarshalAs(19)][In] string DateTime, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)][In] Array Categories, [In] bool Draft, [MarshalAs(19)] out string PublishMessage);
 
         /// <summary>
         /// This method returns the list of blog categories for an account so Microsoft Word can populate the categories dropdown list.
@@ -126,6 +126,6 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="Categories">A list of categories supported by the provider.</param>
         [DispId(8)]
         [MethodImpl(4096)]
-        void GetCategories([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array Categories);
+        void GetCategories([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [MarshalAs(29, SafeArraySubType = VarEnum.VT_BSTR)] out Array Categories);
     }
 }

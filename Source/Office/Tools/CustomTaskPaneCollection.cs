@@ -7,7 +7,7 @@ using Office = NetOffice.OfficeApi;
 using NetOffice.OfficeApi.Enums;
 
 namespace NetOffice.OfficeApi.Tools
-{    
+{
     /// <summary>
     /// Wrapper class for CustomTaskPane instance, also used as creation definition if its create before CTPFactoryAvailable is called from MS-Office host application. (Best use in .ctor for creation definition)
     /// </summary>
@@ -35,7 +35,7 @@ namespace NetOffice.OfficeApi.Tools
         /// Occurs when task visibility is changed
         /// </summary>
         public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChange
-        { 
+        {
             add
             {
                 _visibleStateChange += value;
@@ -117,13 +117,13 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// properties was set from the client before the instance was created. The COMAddin class perfom latebind property set calls during this dictionary
         /// </summary>
-        [Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public Dictionary<string, object> ChangedProperties { get; private set; }
 
         /// <summary>
         /// info about the inner taskpane instance is already created
         /// </summary>
-        [Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public bool IsLoaded { get; set; }
 
         /// <summary>
@@ -131,15 +131,15 @@ namespace NetOffice.OfficeApi.Tools
         /// Get/Set
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
-        public bool Visible 
-        { 
+        public bool Visible
+        {
             get
             {
                 if (IsLoaded)
                     return Pane.Visible;
 
                 object outValue;
-                if(ChangedProperties.TryGetValue("Visible", out outValue))
+                if (ChangedProperties.TryGetValue("Visible", out outValue))
                     return Convert.ToBoolean(outValue);
                 else
                     return false;
@@ -149,11 +149,11 @@ namespace NetOffice.OfficeApi.Tools
                 if (IsLoaded)
                     Pane.Visible = value;
 
-                 object outValue;
-                 if(ChangedProperties.TryGetValue("Visible", out outValue))
+                object outValue;
+                if (ChangedProperties.TryGetValue("Visible", out outValue))
                     ChangedProperties["Visible"] = value;
-                 else
-                     ChangedProperties.Add("Visible", value);
+                else
+                    ChangedProperties.Add("Visible", value);
             }
         }
 
@@ -163,14 +163,14 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public int Width
-        { 
+        {
             get
             {
                 if (IsLoaded)
                     return Pane.Width;
 
                 object outValue;
-                if(ChangedProperties.TryGetValue("Width", out outValue))
+                if (ChangedProperties.TryGetValue("Width", out outValue))
                     return Convert.ToInt32(outValue);
                 else
                     return 0;
@@ -180,11 +180,11 @@ namespace NetOffice.OfficeApi.Tools
                 if (IsLoaded)
                     Pane.Width = value;
 
-                 object outValue;
-                 if(ChangedProperties.TryGetValue("Width", out outValue))
+                object outValue;
+                if (ChangedProperties.TryGetValue("Width", out outValue))
                     ChangedProperties["Width"] = value;
-                 else
-                     ChangedProperties.Add("Width", value);
+                else
+                    ChangedProperties.Add("Width", value);
             }
         }
 
@@ -194,14 +194,14 @@ namespace NetOffice.OfficeApi.Tools
         /// </summary>
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public int Height
-        { 
+        {
             get
             {
                 if (IsLoaded)
                     return Pane.Height;
 
                 object outValue;
-                if(ChangedProperties.TryGetValue("Height", out outValue))
+                if (ChangedProperties.TryGetValue("Height", out outValue))
                     return Convert.ToInt32(outValue);
                 else
                     return 0;
@@ -209,13 +209,13 @@ namespace NetOffice.OfficeApi.Tools
             set
             {
                 if (IsLoaded)
-                   Pane.Height = value;
+                    Pane.Height = value;
 
-                 object outValue;
-                 if(ChangedProperties.TryGetValue("Height", out outValue))
+                object outValue;
+                if (ChangedProperties.TryGetValue("Height", out outValue))
                     ChangedProperties["Height"] = value;
-                 else
-                     ChangedProperties.Add("Height", value);
+                else
+                    ChangedProperties.Add("Height", value);
             }
         }
 
@@ -322,7 +322,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// Additional Arguments for OnConnection. The UserControl must implement ITaskPane to use it
         /// </summary>
-        public object[] Arguments{ get; set; }
+        public object[] Arguments { get; set; }
 
         #endregion
 
@@ -363,7 +363,7 @@ namespace NetOffice.OfficeApi.Tools
             {
                 DebugConsole.Default.WriteException(exception);
             }
-            
+
         }
 
         #endregion

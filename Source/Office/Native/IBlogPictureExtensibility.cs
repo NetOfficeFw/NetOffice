@@ -31,7 +31,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="Document">The current document.</param>
         [DispId(2)]
         [MethodImpl(4096)]
-        void CreatePictureAccount([MarshalAs(19)] [In] string Account, [MarshalAs(19)] [In] string BlogProvider, [In] int ParentWindow, [MarshalAs(26)] [In] object Document);
+        void CreatePictureAccount([MarshalAs(19)][In] string Account, [MarshalAs(19)][In] string BlogProvider, [In] int ParentWindow, [MarshalAs(26)][In] object Document);
 
         /// <summary>
         /// Used to post a picture object to its final destination in a blog.
@@ -45,6 +45,6 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="ImageType">no description available</param>
         [DispId(3)]
         [MethodImpl(4096)]
-        void PublishPicture([MarshalAs(19)] [In] string Account, [In] int ParentWindow, [MarshalAs(26)] [In] object Document, [MarshalAs(25)] [In] object Image, [MarshalAs(19)] out string PictureURI, [In] int ImageType);
+        void PublishPicture([MarshalAs(19)][In] string Account, [In] int ParentWindow, [MarshalAs(26)][In] object Document, [MarshalAs(25)][In] object Image, [MarshalAs(19)] out string PictureURI, [In] int ImageType);
     }
 }

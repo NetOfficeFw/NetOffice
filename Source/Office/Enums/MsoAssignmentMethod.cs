@@ -1,4 +1,4 @@
-// Copyright 2025 Cisco Systems, Inc. All rights reserved.
+﻿// Copyright 2025 Cisco Systems, Inc. All rights reserved.
 // Licensed under MIT-style license (see LICENSE.txt file).
 //
 // Generated code file by Claude Haiku 4.5

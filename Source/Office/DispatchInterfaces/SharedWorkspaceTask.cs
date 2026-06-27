@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask"/> </remarks>
-    [SupportByVersion("Office", 11,12,14,15,16)]
+    [SupportByVersion("Office", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class SharedWorkspaceTask : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SharedWorkspaceTask(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public SharedWorkspaceTask(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public SharedWorkspaceTask(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceTask(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceTask() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceTask(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Title"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string Title
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.AssignedTo"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string AssignedTo
         {
             get
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Status"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskStatus Status
         {
             get
@@ -167,7 +167,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Priority"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoSharedWorkspaceTaskPriority Priority
         {
             get
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Description"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string Description
         {
             get
@@ -203,7 +203,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.DueDate"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public object DueDate
         {
             get
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.CreatedBy"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string CreatedBy
         {
             get
@@ -235,7 +235,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.CreatedDate"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public object CreatedDate
         {
             get
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.ModifiedBy"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string ModifiedBy
         {
             get
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.ModifiedDate"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public object ModifiedDate
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Parent"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Save"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public void Save()
         {
             Factory.ExecuteMethod(this, "Save");
@@ -305,7 +305,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTask.Delete"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -313,6 +313,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

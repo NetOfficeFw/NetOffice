@@ -92,7 +92,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         {
             if (null == image)
                 throw new ArgumentNullException("image");
-            
+
             return ToPicture(ToMask(image));
         }
 

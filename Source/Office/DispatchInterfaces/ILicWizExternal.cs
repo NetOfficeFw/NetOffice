@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface ILicWizExternal 
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ILicWizExternal : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ILicWizExternal(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public ILicWizExternal(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.OfficeApi
         public ILicWizExternal(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ILicWizExternal(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ILicWizExternal() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ILicWizExternal(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 Context
         {
             get
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Validator
         {
             get
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object LicAgent
         {
             get
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string CountryInfo
         {
             get
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 WizardVisible
         {
             get
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string WizardTitle
         {
             get
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 AnimationEnabled
         {
             get
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 CurrentHelpId
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string OfficeOnTheWebUrl
         {
             get
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="punkHtmlDoc">object punkHtmlDoc</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void PrintHtmlDocument(object punkHtmlDoc)
         {
             Factory.ExecuteMethod(this, "PrintHtmlDocument", punkHtmlDoc);
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void InvokeDateTimeApplet()
         {
             Factory.ExecuteMethod(this, "InvokeDateTimeApplet");
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="date">DateTime date</param>
         /// <param name="pFormat">optional string pFormat = </param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string FormatDate(DateTime date, object pFormat)
         {
             return Factory.ExecuteStringMethodGet(this, "FormatDate", date, pFormat);
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="date">DateTime date</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string FormatDate(DateTime date)
         {
             return Factory.ExecuteStringMethodGet(this, "FormatDate", date);
@@ -287,7 +287,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="pvarId">optional object pvarId</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void ShowHelp(object pvarId)
         {
             Factory.ExecuteMethod(this, "ShowHelp", pvarId);
@@ -297,7 +297,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void ShowHelp()
         {
             Factory.ExecuteMethod(this, "ShowHelp");
@@ -306,7 +306,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Terminate()
         {
             Factory.ExecuteMethod(this, "Terminate");
@@ -316,7 +316,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bPC">Int32 bPC</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void DisableVORWReminder(Int32 bPC)
         {
             Factory.ExecuteMethod(this, "DisableVORWReminder", bPC);
@@ -326,7 +326,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrReceipt">string bstrReceipt</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string SaveReceipt(string bstrReceipt)
         {
             return Factory.ExecuteStringMethodGet(this, "SaveReceipt", bstrReceipt);
@@ -336,7 +336,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrUrl">string bstrUrl</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void OpenInDefaultBrowser(string bstrUrl)
         {
             Factory.ExecuteMethod(this, "OpenInDefaultBrowser", bstrUrl);
@@ -348,7 +348,7 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrText">string bstrText</param>
         /// <param name="bstrButtons">string bstrButtons</param>
         /// <param name="bstrIcon">string bstrIcon</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 MsoAlert(string bstrText, string bstrButtons, string bstrIcon)
         {
             return Factory.ExecuteInt32MethodGet(this, "MsoAlert", bstrText, bstrButtons, bstrIcon);
@@ -359,7 +359,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="bstrKey">string bstrKey</param>
         /// <param name="fMORW">Int32 fMORW</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 DepositPidKey(string bstrKey, Int32 fMORW)
         {
             return Factory.ExecuteInt32MethodGet(this, "DepositPidKey", bstrKey, fMORW);
@@ -369,7 +369,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrMessage">string bstrMessage</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void WriteLog(string bstrMessage)
         {
             Factory.ExecuteMethod(this, "WriteLog", bstrMessage);
@@ -379,7 +379,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrProductCode">string bstrProductCode</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void ResignDpc(string bstrProductCode)
         {
             Factory.ExecuteMethod(this, "ResignDpc", bstrProductCode);
@@ -388,7 +388,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void ResetPID()
         {
             Factory.ExecuteMethod(this, "ResetPID");
@@ -399,7 +399,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="dx">Int32 dx</param>
         /// <param name="dy">Int32 dy</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetDialogSize(Int32 dx, Int32 dy)
         {
             Factory.ExecuteMethod(this, "SetDialogSize", dx, dy);
@@ -409,7 +409,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="lMode">Int32 lMode</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 VerifyClock(Int32 lMode)
         {
             return Factory.ExecuteInt32MethodGet(this, "VerifyClock", lMode);
@@ -419,7 +419,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="pdispSelect">object pdispSelect</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SortSelectOptions(object pdispSelect)
         {
             Factory.ExecuteMethod(this, "SortSelectOptions", pdispSelect);
@@ -428,7 +428,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void InternetDisconnect()
         {
             Factory.ExecuteMethod(this, "InternetDisconnect");
@@ -437,7 +437,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 GetConnectedState()
         {
             return Factory.ExecuteInt32MethodGet(this, "GetConnectedState");
@@ -445,6 +445,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

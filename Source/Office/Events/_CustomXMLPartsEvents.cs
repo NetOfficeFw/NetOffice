@@ -6,27 +6,27 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000CDB0B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _CustomXMLPartsEvents
     {
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("newPart", typeof(OfficeApi.CustomXMLPart))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
         void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart);
 
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("oldPart", typeof(OfficeApi.CustomXMLPart))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
         void PartBeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldPart);
 
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("part", typeof(OfficeApi.CustomXMLPart))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
         void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part);
@@ -41,20 +41,20 @@ namespace NetOffice.OfficeApi.Events
     public class _CustomXMLPartsEvents_SinkHelper : SinkHelper, _CustomXMLPartsEvents
     {
         #region Static
-        
+
         public static readonly string Id = "000CDB0B-0000-0000-C000-000000000046";
-        
+
         #endregion
-        
+
         #region Ctor
 
-        public _CustomXMLPartsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _CustomXMLPartsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-        
+
         #region _CustomXMLPartsEvents
 
         public void PartAfterAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newPart)
@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Events
                 Invoker.ReleaseParamsArray(newPart);
                 return;
             }
-            
+
             NetOffice.OfficeApi.CustomXMLPart newNewPart = Factory.CreateKnownObjectFromComProxy<NetOffice.OfficeApi.CustomXMLPart>(EventClass, newPart, NetOffice.OfficeApi.CustomXMLPart.LateBindingApiWrapperType);
             object[] paramsArray = new object[1];
             paramsArray[0] = newNewPart;
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Events
             paramsArray[0] = newOldPart;
             EventBinding.RaiseCustomEvent("PartBeforeDelete", ref paramsArray);
         }
-        
+
         public void PartAfterLoad([In, MarshalAs(UnmanagedType.IDispatch)] object part)
         {
             if (!Validate("PartAfterLoad"))
@@ -101,8 +101,8 @@ namespace NetOffice.OfficeApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

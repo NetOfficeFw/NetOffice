@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         }
 
         #endregion
-          
+
         #region Properties
 
         /// <summary>
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                             _applicationIs2007OrHigher = true;
                         else
                             _applicationIs2007OrHigher = false;
-                    }                    
+                    }
                 }
                 return (bool)_applicationIs2007OrHigher;
             }
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                         bool result = principal.IsInRole(WindowsBuiltInRole.Administrator);
                         identity.Dispose();
                         _adminPermissions = result;
-                    }   
+                    }
                 }
                 return (bool)_adminPermissions;
             }
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                         _resourceUtils = OnCreateResourceUtils();
                 }
                 return _resourceUtils;
-             }
+            }
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _imageUtils)
-                        _imageUtils = OnCreateImageUtils();                    
+                        _imageUtils = OnCreateImageUtils();
                 }
                 return _imageUtils;
             }
@@ -279,7 +279,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _colorUtils)
-                        _colorUtils = OnCreateColorUtils();                    
+                        _colorUtils = OnCreateColorUtils();
                 }
                 return _colorUtils;
             }
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 lock (_lock)
                 {
                     if (null == _infos)
-                        _infos = new Infos(this);                    
+                        _infos = new Infos(this);
                 }
                 return _infos;
             }
@@ -458,7 +458,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
         /// <returns>instance of ImageUtils</returns>
         protected internal virtual ImageUtils OnCreateImageUtils()
         {
-            return new ImageUtils(this);        
+            return new ImageUtils(this);
         }
 
         /// <summary>
@@ -517,7 +517,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
                 if (_ownerApplication.EntityIsAvailable("Version"))
                 {
                     object result = _ownerApplication.Invoker.PropertyGet(_ownerApplication, "Version");
-                    string[] version = Convert.ToString(result).Split(new string[] {"."}, StringSplitOptions.RemoveEmptyEntries);
+                    string[] version = Convert.ToString(result).Split(new string[] { "." }, StringSplitOptions.RemoveEmptyEntries);
                     if (version.Length > 1)
                     {
                         return Convert.ToDouble(version[0] + "." + version[1], CultureInfo.InvariantCulture);
@@ -534,7 +534,7 @@ namespace NetOffice.OfficeApi.Tools.Contribution
             }
             catch
             {
-                return null; 
+                return null;
             }
         }
 

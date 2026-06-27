@@ -11,11 +11,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterUICallback"/> </remarks>
-    [SupportByVersion("Office", 14,15,16)]
+    [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IConverterUICallback : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IConverterUICallback(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
         public IConverterUICallback(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.OfficeApi
         public IConverterUICallback(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IConverterUICallback(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IConverterUICallback() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IConverterUICallback(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverterUICallback.HrReportProgress"/> </remarks>
         /// <param name="uPercentComplete">UIntPtr uPercentComplete</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrReportProgress(UIntPtr uPercentComplete)
         {
             return Factory.ExecuteInt32MethodGet(this, "HrReportProgress", uPercentComplete);
@@ -132,10 +132,10 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrCaption">string bstrCaption</param>
         /// <param name="uType">UIntPtr uType</param>
         /// <param name="pidResult">Int32 pidResult</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrMessageBox(string bstrText, string bstrCaption, UIntPtr uType, out Int32 pidResult)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             pidResult = 0;
             object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, uType, pidResult);
             object returnItem = Invoker.MethodReturn(this, "HrMessageBox", paramsArray, modifiers);
@@ -151,10 +151,10 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrCaption">string bstrCaption</param>
         /// <param name="pbstrInput">string pbstrInput</param>
         /// <param name="fPassword">Int32 fPassword</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrInputBox(string bstrText, string bstrCaption, out string pbstrInput, Int32 fPassword)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, false);
             pbstrInput = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(bstrText, bstrCaption, pbstrInput, fPassword);
             object returnItem = Invoker.MethodReturn(this, "HrInputBox", paramsArray, modifiers);
@@ -164,6 +164,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
