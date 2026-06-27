@@ -7,7 +7,7 @@ namespace NetOffice.Duck
 {
     [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
     internal class DuckTypeIssueClassGenerator : IDisposable
-    {     
+    {
         internal DuckTypeIssueClassGenerator(StringBuilder classBuilder, DuckInterface proxyInterface, string implementationName)
         {
             Builder = classBuilder;
@@ -27,7 +27,7 @@ namespace NetOffice.Duck
 
             Builder.AppendLine("\tpublic class " + ImplementationName + " : COMObject");
             Builder.AppendLine("\t{");
-            
+
 
             Builder.AppendLine("\t\t#region Ctor");
             Builder.AppendLine("");

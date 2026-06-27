@@ -252,7 +252,7 @@ namespace NetOffice
         /// </summary>
         /// <param name="sender">sender instance</param>
         public delegate void ProxyClearHandler(Core sender);
-        
+
         #endregion
     }
 }

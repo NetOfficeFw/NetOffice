@@ -107,12 +107,12 @@ namespace NetOffice
         #endregion
 
         #region Fields
-       
+
         /// <summary>
         /// The well know IUnknown Interface ID
         /// </summary>
         private static Guid IID_IUnknown = new Guid("00000000-0000-0000-C000-000000000046");
-        
+
         /// <summary>
         /// returns parent instance
         /// </summary>
@@ -142,7 +142,7 @@ namespace NetOffice
         /// Runtime self description
         /// </summary>
         protected internal DynamicObjectEntity[] _entities;
-        
+
         /// <summary>
         /// List of runtime supported entities
         /// </summary>
@@ -187,7 +187,7 @@ namespace NetOffice
         /// Indicates the instance offers an enumerator
         /// </summary>
         private EnumeratorSupport _enumerator;
-     
+
         /// <summary>
         /// Indicates the instance offers an default property
         /// </summary>
@@ -293,7 +293,7 @@ namespace NetOffice
                 _proxyShare = shareProvider.GetProxyShare();
             else
                 _proxyShare = Factory.CreateNewProxyShare(this, comObject.UnderlyingObject);
-            
+
             UnderlyingType = comObject.UnderlyingType;
 
             Factory.AddObjectToList(this);
@@ -321,7 +321,7 @@ namespace NetOffice
 
             ParentObject = parentObject;
             _proxyShare = Factory.CreateNewProxyShare(this, comProxy);
-            
+
             UnderlyingType = comProxy.GetType();
 
             if (Settings.Default.EnableProxyManagement && !Object.ReferenceEquals(parentObject, null))
@@ -342,7 +342,7 @@ namespace NetOffice
         {
             if (null == comProxy)
                 throw new ArgumentNullException("comProxy");
-            
+
             if (null == factory)
                 factory = Core.Default;
             Factory = factory;
@@ -360,7 +360,7 @@ namespace NetOffice
             _listChildObjects = new List<ICOMObject>();
             Factory.CheckInitialize();
         }
-        
+
         /// <summary>
         /// Create new instance from given ProgId
         /// </summary>
@@ -377,7 +377,7 @@ namespace NetOffice
 
             SyncRoot = new object();
 
-            Factory = null != factory ? factory : Core.Default;        
+            Factory = null != factory ? factory : Core.Default;
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
@@ -401,7 +401,7 @@ namespace NetOffice
             UnderlyingType = System.Type.GetTypeFromProgID(progId, true);
             object underlyingObject = Activator.CreateInstance(UnderlyingType);
             _proxyShare = Factory.CreateNewProxyShare(this, underlyingObject);
-            
+
             Factory.AddObjectToList(this);
             _listChildObjects = new List<ICOMObject>();
 
@@ -413,7 +413,7 @@ namespace NetOffice
         #endregion
 
         #region Properties
-       
+
         /// <summary>
         /// Return Value in TryConvert if no conversion is available.
         /// False may cause an exception from the current language service,
@@ -459,7 +459,7 @@ namespace NetOffice
 
             return new COMDynamicObject(comObject.UnderlyingObject);
         }
-       
+
         /// <summary>
         /// Release com proxy
         /// </summary>
@@ -470,7 +470,7 @@ namespace NetOffice
             {
                 _proxyShare.Release();
                 Factory.RemoveObjectFromList(this, ownerPath);
-            }        
+            }
         }
 
         /// <summary>
@@ -507,7 +507,7 @@ namespace NetOffice
                     _entities = GetEntities();
             }
         }
-        
+
         /// <summary>
         /// Receive self description from UnderlyingObject through IDispatch
         /// </summary>
@@ -625,9 +625,9 @@ namespace NetOffice
                         _defaultItem = DefaultItemSupport.PropertyItem;
                         break;
                 }
-            }          
+            }
         }
-        
+
         /// <summary>
         /// Find item in collection. (Wrapper to bypass missing Linq in older .NET runtimes)
         /// </summary>
@@ -642,7 +642,7 @@ namespace NetOffice
                 if (item.Name == name && item.Kind == kind)
                     return item;
             }
-            return null;        
+            return null;
         }
 
         /// <summary>
@@ -683,7 +683,7 @@ namespace NetOffice
                     return null;
             }
         }
-        
+
         /// <summary>
         /// Invoke a proxy method
         /// </summary>
@@ -716,7 +716,7 @@ namespace NetOffice
         {
             if (IsSelfDynamicMemberName(name))
                 return InstanceType.InvokeMember(name, System.Reflection.BindingFlags.InvokeMethod, null, this, args);
-           
+
             args = Invoker.ValidateParamsArray(args);
             object returnItem = Invoker.MethodReturn(this, name, args);
             if ((null != returnItem) && (returnItem is MarshalByRefObject))
@@ -809,7 +809,7 @@ namespace NetOffice
         private void InvokePropertySet(string name, object[] args)
         {
             args = Invoker.ValidateParamsArray(args);
-            Invoker.PropertySet(this, name, args );
+            Invoker.PropertySet(this, name, args);
         }
 
         /// <summary>
@@ -867,7 +867,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObject
-       
+
         /// <summary>
         /// Monitor Lock
         /// </summary>
@@ -1050,12 +1050,12 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectDisposable
-        
+
         /// <summary>
         /// These event was called from Dispose and you can skip the dipose operation here if you want. the event can be helpful for troubleshooting if you dont know why your objects beeing disposed
         /// </summary>
         public event OnDisposeEventHandler OnDispose;
-       
+
         /// <summary>
         /// Returns instance is already diposed
         /// </summary>
@@ -1138,7 +1138,7 @@ namespace NetOffice
                         ParentObject.RemoveChildObject(this);
                         ParentObject = null;
                     }
-                    
+
                     if (true == removeFromParent)
                     {
                         // call quit automatically if wanted
@@ -1168,7 +1168,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectTable
-        
+
         /// <summary>
         /// Returns parent proxy object
         /// </summary>
@@ -1262,7 +1262,7 @@ namespace NetOffice
                 lock (_disposeChildLock)
                 {
                     foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                    {                      
+                    {
                         itemObject.Dispose(disposeEventBinding);
                     }
                     _listChildObjects.Clear();
@@ -1765,7 +1765,7 @@ namespace NetOffice
             else
                 return false;
         }
-        
+
         /// <summary>
         /// Determines whether two COMObject instances are equal.
         /// </summary>

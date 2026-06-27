@@ -91,7 +91,7 @@ namespace NetOffice.Dynamics
         {
             return Underlying.BindGetIndex(binder, indexes);
         }
-       
+
         /// <summary>
         /// Performs the binding of the dynamic get member operation.
         /// </summary>
@@ -112,7 +112,7 @@ namespace NetOffice.Dynamics
         {
             return Underlying.BindInvoke(binder, args);
         }
-     
+
         /// <summary>
         /// Performs the binding of the dynamic invoke member operation.
         /// </summary>

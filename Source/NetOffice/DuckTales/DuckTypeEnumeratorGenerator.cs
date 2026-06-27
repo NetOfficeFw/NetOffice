@@ -32,14 +32,14 @@ namespace NetOffice.Duck
         private StringBuilder Builder { get; set; }
 
         private bool HasMethods { get; set; }
-        
+
         private EnumeratorAttribute Info { get; set; }
 
         private void BuildCustomEnumeratorMethods(MethodInfo method)
-        {         
+        {
             Builder.AppendLine("\t\tIEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()");
             Builder.AppendLine("\t\t{");
-           
+
             Builder.AppendLine("\t\t\tint count = Count;");
             Builder.AppendLine("\t\t\tobject[] enumeratorObjects = new object[count];");
             Builder.AppendLine("\t\t\tfor (int i = 0; i < count; i++)");
@@ -59,7 +59,7 @@ namespace NetOffice.Duck
 
             Builder.AppendLine("\t\t}" + Environment.NewLine);
         }
-        
+
         private void BuildEnumeratorMethods(MethodInfo method)
         {
             bool asMethod = Info.Invoke == EnumeratorInvoke.Method;
@@ -82,7 +82,7 @@ namespace NetOffice.Duck
 
             Builder.AppendLine("\t\t}" + Environment.NewLine);
         }
-        
+
         private static bool IsObjectType(Type type)
         {
             return type.FullName == "System.Object";

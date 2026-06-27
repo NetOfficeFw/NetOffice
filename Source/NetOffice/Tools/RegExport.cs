@@ -36,7 +36,7 @@ namespace NetOffice.Tools
             var list = new List<RegExportValue>();
             foreach (RegExportValue item in values)
                 list.Add(item);
-            base.Add(key, list);           
+            base.Add(key, list);
             return list;
         }
     }
@@ -53,7 +53,7 @@ namespace NetOffice.Tools
         public RegExportValue()
         {
         }
-         
+
         /// <summary>
         /// Creates a new instance of the class
         /// </summary>
@@ -76,7 +76,7 @@ namespace NetOffice.Tools
             Kind = RegistryValueKind.String;
             Value = value;
         }
-        
+
         /// <summary>
         /// Creates a new instance of the class
         /// </summary>

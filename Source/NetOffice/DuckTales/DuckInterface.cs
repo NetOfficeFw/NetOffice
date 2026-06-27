@@ -39,13 +39,13 @@ namespace NetOffice.Duck
         {
             if (null == interfaceType)
                 throw new ArgumentNullException("interfaceType");
-            if(!interfaceType.IsInterface)
+            if (!interfaceType.IsInterface)
                 throw new ArgumentException("Given type isn't an interface.");
 
             InterfaceType = interfaceType;
 
             List<Type> interfaces = interfaceType.GetInterfaces().ToList();
-        
+
             if (!interfaces.Any(e => e == typeof(ICOMObject)))
                 throw new ArgumentException("Interface must inherit from ICOMObject.");
 
@@ -63,10 +63,10 @@ namespace NetOffice.Duck
 
             Interfaces = interfaces.ToArray();
 
-            Types = new Type[Interfaces.Length +1];
+            Types = new Type[Interfaces.Length + 1];
             Types[0] = InterfaceType;
             for (int i = 0; i < Interfaces.Length; i++)
-                Types[i+1] = Interfaces[i];
+                Types[i + 1] = Interfaces[i];
         }
 
         #endregion
@@ -102,7 +102,7 @@ namespace NetOffice.Duck
                 }
 
                 return _isValidEventClass.Value;
-            }           
+            }
         }
 
         public KeyValuePair<string, Type>[] EventSinks
@@ -142,7 +142,7 @@ namespace NetOffice.Duck
             {
                 if (null == _events)
                 {
-                    List<EventInfo> result = new List<EventInfo>();         
+                    List<EventInfo> result = new List<EventInfo>();
                     foreach (Type type in Types)
                     {
                         if (IsNetOfficeCoreAssembly(type.Assembly))
@@ -159,7 +159,7 @@ namespace NetOffice.Duck
                 }
 
                 return _events;
-            }        
+            }
         }
 
         private static bool IsIndexerProperty(PropertyInfo property)
@@ -319,7 +319,7 @@ namespace NetOffice.Duck
                     _methodsWithSyntaxIssue = result.ToArray();
                 }
                 return _methodsWithSyntaxIssue;
-            }            
+            }
         }
 
         public string AssemblyName
@@ -377,11 +377,11 @@ namespace NetOffice.Duck
         #region Methods
 
         private static bool MethodIsEnumerator(MethodInfo method)
-        {          
+        {
             return method.ReturnType.FullName.StartsWith("System.Collections.Generic.IEnumerator") ||
                 method.ReturnType.FullName.StartsWith("System.Collections.IEnumerator");
         }
-        
+
         private static bool MethodIsSyntaxIssue(MethodInfo method)
         {
             return HasSyntaxInterfaceAttribute(method.DeclaringType);
@@ -467,7 +467,7 @@ namespace NetOffice.Duck
                 if (argA.ParameterType != argB.ParameterType)
                     return false;
             }
-            
+
             return true;
         }
 
@@ -485,7 +485,7 @@ namespace NetOffice.Duck
         {
             if (methodA.Name != methodB.Name)
                 return false;
-          
+
             return true;
         }
 
@@ -499,7 +499,7 @@ namespace NetOffice.Duck
             }
             return false;
         }
-       
+
         #endregion
     }
 }

@@ -238,21 +238,21 @@ namespace NetOffice
         public virtual bool Release()
         {
             try
-            { 
+            {
                 lock (_thisLock)
                 {
                     _count--;
                     if (0 == _count)
                     {
-                        ReleaseComObject();                    
+                        ReleaseComObject();
                         _released = true;
                         return true;
                     }
                     else
                         return false;
-                }                
+                }
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 if (!SuppressReleaseExceptions)
@@ -268,7 +268,7 @@ namespace NetOffice
 
         private void ReleaseComObject()
         {
-            if(_isEnumerator)
+            if (_isEnumerator)
             {
                 ICustomAdapter adapter = TryConvertToCustomAdapter();
                 if (null != adapter)
@@ -294,7 +294,7 @@ namespace NetOffice
             {
                 DebugConsole.Default.WriteException(exception);
                 throw;
-            }          
+            }
         }
 
         private static void MarshalReleaseComObject(object proxy)
@@ -335,20 +335,20 @@ namespace NetOffice
             catch
             {
                 ;
-            }           
+            }
         }
 
         #endregion
 
         #region Overrides
-       
+
         /// <summary>
         /// Returns a System.String that represents the instance
         /// </summary>
         /// <returns>System.String</returns>
         public override string ToString()
         {
-            if(_isEnumerator)
+            if (_isEnumerator)
                 return String.Format("COMProxyShare:{0} (Enumerator)", _count);
             else
                 return String.Format("COMProxyShare:{0}", _count);

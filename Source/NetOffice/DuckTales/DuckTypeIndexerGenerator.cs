@@ -9,7 +9,7 @@ namespace NetOffice.Duck
 {
     [Obsolete("Support for dynamic objects will be removed in NetOffice 2.0")]
     internal class DuckTypeIndexerGenerator : IDisposable
-    {       
+    {
         internal DuckTypeIndexerGenerator(StringBuilder builder, PropertyInfo[] properties, HasIndexPropertyAttribute info)
         {
             HasProperties = null != properties && properties.Length > 0;
@@ -18,7 +18,7 @@ namespace NetOffice.Duck
 
             Builder = builder;
             Info = info;
-            Builder.AppendLine(Environment.NewLine + "\t\t#region Indexer" +  Environment.NewLine);
+            Builder.AppendLine(Environment.NewLine + "\t\t#region Indexer" + Environment.NewLine);
 
             foreach (PropertyInfo item in properties)
             {
@@ -50,14 +50,14 @@ namespace NetOffice.Duck
 
         private bool HasProperties { get; set; }
 
-        private HasIndexPropertyAttribute Info{ get; set; }
+        private HasIndexPropertyAttribute Info { get; set; }
 
         private string InternalName(PropertyInfo property)
         {
             if (null != Info)
                 return Info.InvokeName;
             else
-            { 
+            {
                 object[] attributes = property.GetCustomAttributes(typeof(InternalNameAttribute), false);
                 if (attributes.Length > 0)
                     return (attributes[0] as InternalNameAttribute).InternalName;
@@ -84,7 +84,7 @@ namespace NetOffice.Duck
 
         private bool IsNetOfficeReferenceTypeProperty(PropertyInfo property)
         {
-            if (property.GetIndexParameters().Length ==  0)
+            if (property.GetIndexParameters().Length == 0)
                 throw new NotSupportedException("Index property must have arguments");
 
             return property.PropertyType.IsValueType == false && property.PropertyType.FullName.StartsWith("NetOffice");
@@ -230,7 +230,7 @@ namespace NetOffice.Duck
                 else
                     Builder.AppendLine("\t\t\tobject[] paramsArray = null;");
 
-                Builder.AppendLine("\t\t\t\tInvoker." + (asMethod ? "Method" : "PropertySet") +"(this, \"" + internalName + "\", paramsArray, value);");
+                Builder.AppendLine("\t\t\t\tInvoker." + (asMethod ? "Method" : "PropertySet") + "(this, \"" + internalName + "\", paramsArray, value);");
 
                 Builder.AppendLine("\t\t\t}");
             }
@@ -309,7 +309,7 @@ namespace NetOffice.Duck
                 }
                 else
                     Builder.AppendLine("\t\t\tobject[] paramsArray = null;");
-                Builder.AppendLine("\t\t\t\tInvoker." + (asMethod ? "Method" : "PropertySet") +"(this, \"" + internalName + "\", paramsArray, value);");
+                Builder.AppendLine("\t\t\t\tInvoker." + (asMethod ? "Method" : "PropertySet") + "(this, \"" + internalName + "\", paramsArray, value);");
 
                 Builder.AppendLine("\t\t\t}");
             }
