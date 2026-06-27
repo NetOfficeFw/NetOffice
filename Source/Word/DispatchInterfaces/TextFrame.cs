@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class TextFrame : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TextFrame(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public TextFrame(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public TextFrame(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TextFrame(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TextFrame() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TextFrame(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Shape Parent
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.MarginBottom"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single MarginBottom
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.MarginLeft"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single MarginLeft
         {
             get
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.MarginRight"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single MarginRight
         {
             get
@@ -209,7 +209,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.MarginTop"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single MarginTop
         {
             get
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Orientation"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTextOrientation Orientation
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.TextRange"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range TextRange
         {
             get
@@ -259,7 +259,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.ContainingRange"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range ContainingRange
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Next"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TextFrame Next
         {
             get
@@ -291,7 +291,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Previous"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TextFrame Previous
         {
             get
@@ -309,7 +309,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Overflowing"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Overflowing
         {
             get
@@ -323,7 +323,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.HasText"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HasText
         {
             get
@@ -337,7 +337,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.AutoSize"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public Int32 AutoSize
         {
             get
@@ -355,7 +355,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.WordWrap"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public Int32 WordWrap
         {
             get
@@ -373,7 +373,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.VerticalAnchor"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoVerticalAnchor VerticalAnchor
         {
             get
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.HorizontalAnchor"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoHorizontalAnchor HorizontalAnchor
         {
             get
@@ -409,7 +409,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.PathFormat"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPathFormat PathFormat
         {
             get
@@ -427,7 +427,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.WarpFormat"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoWarpFormat WarpFormat
         {
             get
@@ -445,7 +445,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.Column"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.TextColumn2 Column
         {
             get
@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.ThreeD"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.ThreeDFormat ThreeD
         {
             get
@@ -473,7 +473,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.NoTextRotation"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState NoTextRotation
         {
             get
@@ -494,7 +494,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.BreakForwardLink"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void BreakForwardLink()
         {
             Factory.ExecuteMethod(this, "BreakForwardLink");
@@ -505,7 +505,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.ValidLinkTarget"/> </remarks>
         /// <param name="targetTextFrame">NetOffice.WordApi.TextFrame targetTextFrame</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ValidLinkTarget(NetOffice.WordApi.TextFrame targetTextFrame)
         {
             return Factory.ExecuteBoolMethodGet(this, "ValidLinkTarget", targetTextFrame);
@@ -515,7 +515,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextFrame.DeleteText"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void DeleteText()
         {
             Factory.ExecuteMethod(this, "DeleteText");
@@ -523,6 +523,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

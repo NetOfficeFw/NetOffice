@@ -17,7 +17,7 @@ namespace NetOffice.WordApi
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class FullSeriesCollection : COMObject, IEnumerableProvider<NetOffice.WordApi.Series>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public FullSeriesCollection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public FullSeriesCollection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public FullSeriesCollection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FullSeriesCollection(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FullSeriesCollection() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FullSeriesCollection(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -232,6 +232,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

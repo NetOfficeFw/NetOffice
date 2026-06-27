@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction"/> </remarks>
-    [SupportByVersion("Word", 12,14,15,16)]
+    [SupportByVersion("Word", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class OMathFunction : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OMathFunction(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public OMathFunction(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public OMathFunction(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OMathFunction(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OMathFunction() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OMathFunction(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Type"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdOMathFunctionType Type
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Application"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Creator"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Parent"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Range"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Range
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Args"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathArgs Args
         {
             get
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Acc"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathAcc Acc
         {
             get
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Bar"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathBar Bar
         {
             get
@@ -226,7 +226,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Box"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathBox Box
         {
             get
@@ -240,7 +240,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.BorderBox"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathBorderBox BorderBox
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Delim"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathDelim Delim
         {
             get
@@ -268,7 +268,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.EqArray"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathEqArray EqArray
         {
             get
@@ -282,7 +282,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Frac"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathFrac Frac
         {
             get
@@ -296,7 +296,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Func"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathFunc Func
         {
             get
@@ -310,7 +310,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.GroupChar"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathGroupChar GroupChar
         {
             get
@@ -324,7 +324,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.LimLow"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathLimLow LimLow
         {
             get
@@ -338,7 +338,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.LimUpp"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathLimUpp LimUpp
         {
             get
@@ -352,7 +352,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Mat"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathMat Mat
         {
             get
@@ -366,7 +366,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Nary"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathNary Nary
         {
             get
@@ -380,7 +380,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Phantom"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathPhantom Phantom
         {
             get
@@ -394,7 +394,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.ScrPre"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathScrPre ScrPre
         {
             get
@@ -408,7 +408,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Rad"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathRad Rad
         {
             get
@@ -422,7 +422,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.ScrSub"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathScrSub ScrSub
         {
             get
@@ -436,7 +436,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.ScrSubSup"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathScrSubSup ScrSubSup
         {
             get
@@ -450,7 +450,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.ScrSup"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathScrSup ScrSup
         {
             get
@@ -464,7 +464,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.OMath"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMath OMath
         {
             get
@@ -481,7 +481,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.OMathFunction.Remove"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMathFunction Remove()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.OMathFunction>(this, "Remove", NetOffice.WordApi.OMathFunction.LateBindingApiWrapperType);
@@ -489,6 +489,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Paragraph : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Paragraph(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public Paragraph(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public Paragraph(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Paragraph(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Paragraph() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Paragraph(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Range"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Range
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Format"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ParagraphFormat Format
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.TabStops"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TabStops TabStops
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Borders"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Borders Borders
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.DropCap"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.DropCap DropCap
         {
             get
@@ -238,7 +238,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Style"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public object Style
         {
             get
@@ -256,7 +256,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Alignment"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdParagraphAlignment Alignment
         {
             get
@@ -274,7 +274,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.KeepTogether"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 KeepTogether
         {
             get
@@ -292,7 +292,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.KeepWithNext"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 KeepWithNext
         {
             get
@@ -310,7 +310,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.PageBreakBefore"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PageBreakBefore
         {
             get
@@ -328,7 +328,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.NoLineNumber"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 NoLineNumber
         {
             get
@@ -346,7 +346,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.RightIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single RightIndent
         {
             get
@@ -364,7 +364,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.LeftIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single LeftIndent
         {
             get
@@ -382,7 +382,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.FirstLineIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single FirstLineIndent
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.LineSpacing"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single LineSpacing
         {
             get
@@ -418,7 +418,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.LineSpacingRule"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLineSpacing LineSpacingRule
         {
             get
@@ -436,7 +436,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.SpaceBefore"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single SpaceBefore
         {
             get
@@ -454,7 +454,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.SpaceAfter"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single SpaceAfter
         {
             get
@@ -472,7 +472,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Hyphenation"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Hyphenation
         {
             get
@@ -490,7 +490,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.WidowControl"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 WidowControl
         {
             get
@@ -508,7 +508,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Shading"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Shading Shading
         {
             get
@@ -522,7 +522,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.FarEastLineBreakControl"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 FarEastLineBreakControl
         {
             get
@@ -540,7 +540,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.WordWrap"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 WordWrap
         {
             get
@@ -558,7 +558,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.HangingPunctuation"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HangingPunctuation
         {
             get
@@ -576,7 +576,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.HalfWidthPunctuationOnTopOfLine"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HalfWidthPunctuationOnTopOfLine
         {
             get
@@ -594,7 +594,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.AddSpaceBetweenFarEastAndAlpha"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 AddSpaceBetweenFarEastAndAlpha
         {
             get
@@ -612,7 +612,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.AddSpaceBetweenFarEastAndDigit"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 AddSpaceBetweenFarEastAndDigit
         {
             get
@@ -630,7 +630,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.BaseLineAlignment"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdBaselineAlignment BaseLineAlignment
         {
             get
@@ -648,7 +648,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.AutoAdjustRightIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 AutoAdjustRightIndent
         {
             get
@@ -666,7 +666,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.DisableLineHeightGrid"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 DisableLineHeightGrid
         {
             get
@@ -684,7 +684,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.OutlineLevel"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdOutlineLevel OutlineLevel
         {
             get
@@ -702,7 +702,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.CharacterUnitRightIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single CharacterUnitRightIndent
         {
             get
@@ -720,7 +720,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.CharacterUnitLeftIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single CharacterUnitLeftIndent
         {
             get
@@ -738,7 +738,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.CharacterUnitFirstLineIndent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single CharacterUnitFirstLineIndent
         {
             get
@@ -756,7 +756,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.LineUnitBefore"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single LineUnitBefore
         {
             get
@@ -774,7 +774,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.LineUnitAfter"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single LineUnitAfter
         {
             get
@@ -792,7 +792,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ReadingOrder"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdReadingOrder ReadingOrder
         {
             get
@@ -810,7 +810,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ID"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string ID
         {
             get
@@ -828,7 +828,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.SpaceBeforeAuto"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SpaceBeforeAuto
         {
             get
@@ -846,7 +846,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.SpaceAfterAuto"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SpaceAfterAuto
         {
             get
@@ -864,7 +864,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.IsStyleSeparator"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public bool IsStyleSeparator
         {
             get
@@ -878,7 +878,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.MirrorIndents"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public Int32 MirrorIndents
         {
             get
@@ -896,7 +896,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.TextboxTightWrap"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdTextboxTightWrap TextboxTightWrap
         {
             get
@@ -915,7 +915,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ListNumberOriginal"/> </remarks>
         /// <param name="level">Int16 level</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int16 get_ListNumberOriginal(Int16 level)
         {
@@ -928,7 +928,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ListNumberOriginal"/> </remarks>
         /// <param name="level">Int16 level</param>
-        [SupportByVersion("Word", 12,14,15,16), Redirect("get_ListNumberOriginal")]
+        [SupportByVersion("Word", 12, 14, 15, 16), Redirect("get_ListNumberOriginal")]
         public Int16 ListNumberOriginal(Int16 level)
         {
             return get_ListNumberOriginal(level);
@@ -938,7 +938,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 ParaID
         {
@@ -952,7 +952,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 TextID
         {
@@ -1006,7 +1006,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.CloseUp"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CloseUp()
         {
             Factory.ExecuteMethod(this, "CloseUp");
@@ -1016,7 +1016,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.OpenUp"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenUp()
         {
             Factory.ExecuteMethod(this, "OpenUp");
@@ -1026,7 +1026,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.OpenOrCloseUp"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenOrCloseUp()
         {
             Factory.ExecuteMethod(this, "OpenOrCloseUp");
@@ -1037,7 +1037,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.TabHangingIndent"/> </remarks>
         /// <param name="count">Int16 count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TabHangingIndent(Int16 count)
         {
             Factory.ExecuteMethod(this, "TabHangingIndent", count);
@@ -1048,7 +1048,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.TabIndent"/> </remarks>
         /// <param name="count">Int16 count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TabIndent(Int16 count)
         {
             Factory.ExecuteMethod(this, "TabIndent", count);
@@ -1058,7 +1058,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Reset"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Reset()
         {
             Factory.ExecuteMethod(this, "Reset");
@@ -1068,7 +1068,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Space1"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Space1()
         {
             Factory.ExecuteMethod(this, "Space1");
@@ -1078,7 +1078,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Space15"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Space15()
         {
             Factory.ExecuteMethod(this, "Space15");
@@ -1088,7 +1088,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Space2"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Space2()
         {
             Factory.ExecuteMethod(this, "Space2");
@@ -1099,7 +1099,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.IndentCharWidth"/> </remarks>
         /// <param name="count">Int16 count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void IndentCharWidth(Int16 count)
         {
             Factory.ExecuteMethod(this, "IndentCharWidth", count);
@@ -1110,7 +1110,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.IndentFirstLineCharWidth"/> </remarks>
         /// <param name="count">Int16 count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void IndentFirstLineCharWidth(Int16 count)
         {
             Factory.ExecuteMethod(this, "IndentFirstLineCharWidth", count);
@@ -1121,7 +1121,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Next"/> </remarks>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Paragraph Next(object count)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Paragraph>(this, "Next", NetOffice.WordApi.Paragraph.LateBindingApiWrapperType, count);
@@ -1132,7 +1132,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Next"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Paragraph Next()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Paragraph>(this, "Next", NetOffice.WordApi.Paragraph.LateBindingApiWrapperType);
@@ -1143,7 +1143,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Previous"/> </remarks>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Paragraph Previous(object count)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Paragraph>(this, "Previous", NetOffice.WordApi.Paragraph.LateBindingApiWrapperType, count);
@@ -1154,7 +1154,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Previous"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Paragraph Previous()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Paragraph>(this, "Previous", NetOffice.WordApi.Paragraph.LateBindingApiWrapperType);
@@ -1164,7 +1164,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.OutlinePromote"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OutlinePromote()
         {
             Factory.ExecuteMethod(this, "OutlinePromote");
@@ -1174,7 +1174,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.OutlineDemote"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OutlineDemote()
         {
             Factory.ExecuteMethod(this, "OutlineDemote");
@@ -1184,7 +1184,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.OutlineDemoteToBody"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OutlineDemoteToBody()
         {
             Factory.ExecuteMethod(this, "OutlineDemoteToBody");
@@ -1194,7 +1194,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Indent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Indent()
         {
             Factory.ExecuteMethod(this, "Indent");
@@ -1204,7 +1204,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.Outdent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Outdent()
         {
             Factory.ExecuteMethod(this, "Outdent");
@@ -1214,7 +1214,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.SelectNumber"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void SelectNumber()
         {
             Factory.ExecuteMethod(this, "SelectNumber");
@@ -1233,10 +1233,10 @@ namespace NetOffice.WordApi
         /// <param name="level7">optional Int16 Level7 = 0</param>
         /// <param name="level8">optional Int16 Level8 = 0</param>
         /// <param name="level9">optional Int16 Level9 = 0</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6, object level7, object level8, object level9)
         {
-            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[]{ level1, level2, level3, level4, level5, level6, level7, level8, level9 });
+            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[] { level1, level2, level3, level4, level5, level6, level7, level8, level9 });
         }
 
         /// <summary>
@@ -1244,7 +1244,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ListAdvanceTo"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo()
         {
             Factory.ExecuteMethod(this, "ListAdvanceTo");
@@ -1256,7 +1256,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ListAdvanceTo"/> </remarks>
         /// <param name="level1">optional Int16 Level1 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1)
         {
             Factory.ExecuteMethod(this, "ListAdvanceTo", level1);
@@ -1269,7 +1269,7 @@ namespace NetOffice.WordApi
         /// <param name="level1">optional Int16 Level1 = 0</param>
         /// <param name="level2">optional Int16 Level2 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2)
         {
             Factory.ExecuteMethod(this, "ListAdvanceTo", level1, level2);
@@ -1283,7 +1283,7 @@ namespace NetOffice.WordApi
         /// <param name="level2">optional Int16 Level2 = 0</param>
         /// <param name="level3">optional Int16 Level3 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3)
         {
             Factory.ExecuteMethod(this, "ListAdvanceTo", level1, level2, level3);
@@ -1298,7 +1298,7 @@ namespace NetOffice.WordApi
         /// <param name="level3">optional Int16 Level3 = 0</param>
         /// <param name="level4">optional Int16 Level4 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3, object level4)
         {
             Factory.ExecuteMethod(this, "ListAdvanceTo", level1, level2, level3, level4);
@@ -1314,10 +1314,10 @@ namespace NetOffice.WordApi
         /// <param name="level4">optional Int16 Level4 = 0</param>
         /// <param name="level5">optional Int16 Level5 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5)
         {
-            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[]{ level1, level2, level3, level4, level5 });
+            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[] { level1, level2, level3, level4, level5 });
         }
 
         /// <summary>
@@ -1331,10 +1331,10 @@ namespace NetOffice.WordApi
         /// <param name="level5">optional Int16 Level5 = 0</param>
         /// <param name="level6">optional Int16 Level6 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6)
         {
-            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[]{ level1, level2, level3, level4, level5, level6 });
+            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[] { level1, level2, level3, level4, level5, level6 });
         }
 
         /// <summary>
@@ -1349,10 +1349,10 @@ namespace NetOffice.WordApi
         /// <param name="level6">optional Int16 Level6 = 0</param>
         /// <param name="level7">optional Int16 Level7 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6, object level7)
         {
-            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[]{ level1, level2, level3, level4, level5, level6, level7 });
+            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[] { level1, level2, level3, level4, level5, level6, level7 });
         }
 
         /// <summary>
@@ -1368,17 +1368,17 @@ namespace NetOffice.WordApi
         /// <param name="level7">optional Int16 Level7 = 0</param>
         /// <param name="level8">optional Int16 Level8 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ListAdvanceTo(object level1, object level2, object level3, object level4, object level5, object level6, object level7, object level8)
         {
-            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[]{ level1, level2, level3, level4, level5, level6, level7, level8 });
+            Factory.ExecuteMethod(this, "ListAdvanceTo", new object[] { level1, level2, level3, level4, level5, level6, level7, level8 });
         }
 
         /// <summary>
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.ResetAdvanceTo"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ResetAdvanceTo()
         {
             Factory.ExecuteMethod(this, "ResetAdvanceTo");
@@ -1388,7 +1388,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.SeparateList"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void SeparateList()
         {
             Factory.ExecuteMethod(this, "SeparateList");
@@ -1398,7 +1398,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Paragraph.JoinList"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void JoinList()
         {
             Factory.ExecuteMethod(this, "JoinList");
@@ -1406,6 +1406,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

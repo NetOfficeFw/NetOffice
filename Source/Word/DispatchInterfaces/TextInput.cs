@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class TextInput : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TextInput(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public TextInput(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public TextInput(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TextInput(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TextInput() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TextInput(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Valid"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Valid
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Default"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string Default
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Type"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdTextFormFieldType Type
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Format"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string Format
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Width"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Width
         {
             get
@@ -237,7 +237,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.Clear"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Clear()
         {
             Factory.ExecuteMethod(this, "Clear");
@@ -251,7 +251,7 @@ namespace NetOffice.WordApi
         /// <param name="_default">optional object default</param>
         /// <param name="format">optional object format</param>
         /// <param name="enabled">optional object enabled</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type, object _default, object format, object enabled)
         {
             Factory.ExecuteMethod(this, "EditType", type, _default, format, enabled);
@@ -263,7 +263,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TextInput.EditType"/> </remarks>
         /// <param name="type">NetOffice.WordApi.Enums.WdTextFormFieldType type</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type)
         {
             Factory.ExecuteMethod(this, "EditType", type);
@@ -276,7 +276,7 @@ namespace NetOffice.WordApi
         /// <param name="type">NetOffice.WordApi.Enums.WdTextFormFieldType type</param>
         /// <param name="_default">optional object default</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type, object _default)
         {
             Factory.ExecuteMethod(this, "EditType", type, _default);
@@ -290,7 +290,7 @@ namespace NetOffice.WordApi
         /// <param name="_default">optional object default</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditType(NetOffice.WordApi.Enums.WdTextFormFieldType type, object _default, object format)
         {
             Factory.ExecuteMethod(this, "EditType", type, _default, format);
@@ -298,6 +298,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

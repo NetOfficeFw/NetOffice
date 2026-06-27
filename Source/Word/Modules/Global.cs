@@ -9,7 +9,7 @@ namespace NetOffice.WordApi.GlobalHelperModules
     /// Module GlobalModule
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     ///</summary>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsModule), ModuleBaseType(typeof(WordApi.Application))]
     public static class GlobalModule
     {
@@ -38,10 +38,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Factory;
-            else
-                return Core.Default;
+                else
+                    return Core.Default;
             }
         }
 
@@ -49,10 +49,10 @@ namespace NetOffice.WordApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Invoker;
-            else
-                return Invoker.Default;
+                else
+                    return Invoker.Default;
             }
         }
 

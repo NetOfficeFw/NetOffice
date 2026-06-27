@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class FillFormat : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public FillFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public FillFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public FillFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FillFormat(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FillFormat() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FillFormat(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.BackColor"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ColorFormat BackColor
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.ForeColor"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ColorFormat ForeColor
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.GradientColorType"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoGradientColorType GradientColorType
         {
             get
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.GradientDegree"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single GradientDegree
         {
             get
@@ -212,7 +212,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.GradientStyle"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoGradientStyle GradientStyle
         {
             get
@@ -226,7 +226,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.GradientVariant"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 GradientVariant
         {
             get
@@ -240,7 +240,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Pattern"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPatternType Pattern
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.PresetGradientType"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPresetGradientType PresetGradientType
         {
             get
@@ -268,7 +268,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.PresetTexture"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoPresetTexture PresetTexture
         {
             get
@@ -282,7 +282,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureName"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string TextureName
         {
             get
@@ -296,7 +296,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureType"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTextureType TextureType
         {
             get
@@ -310,7 +310,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Transparency"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single Transparency
         {
             get
@@ -328,7 +328,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Type"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFillType Type
         {
             get
@@ -342,7 +342,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Visible"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -360,7 +360,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.GradientStops"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.GradientStops GradientStops
         {
             get
@@ -374,7 +374,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureOffsetX"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Single TextureOffsetX
         {
             get
@@ -392,7 +392,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureOffsetY"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Single TextureOffsetY
         {
             get
@@ -410,7 +410,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureAlignment"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTextureAlignment TextureAlignment
         {
             get
@@ -428,7 +428,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureHorizontalScale"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Single TextureHorizontalScale
         {
             get
@@ -446,7 +446,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureVerticalScale"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Single TextureVerticalScale
         {
             get
@@ -464,7 +464,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TextureTile"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState TextureTile
         {
             get
@@ -482,7 +482,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.RotateWithObject"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState RotateWithObject
         {
             get
@@ -500,7 +500,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.PictureEffects"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.PictureEffects PictureEffects
         {
             get
@@ -514,7 +514,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.GradientAngle"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Single GradientAngle
         {
             get
@@ -535,7 +535,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Background()
         {
             Factory.ExecuteMethod(this, "Background");
@@ -548,7 +548,7 @@ namespace NetOffice.WordApi
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
         /// <param name="degree">Single degree</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OneColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, Single degree)
         {
             Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
@@ -559,7 +559,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Patterned"/> </remarks>
         /// <param name="pattern">NetOffice.OfficeApi.Enums.MsoPatternType pattern</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Patterned(NetOffice.OfficeApi.Enums.MsoPatternType pattern)
         {
             Factory.ExecuteMethod(this, "Patterned", pattern);
@@ -572,7 +572,7 @@ namespace NetOffice.WordApi
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
         /// <param name="presetGradientType">NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PresetGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant, NetOffice.OfficeApi.Enums.MsoPresetGradientType presetGradientType)
         {
             Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
@@ -583,7 +583,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.PresetTextured"/> </remarks>
         /// <param name="presetTexture">NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PresetTextured(NetOffice.OfficeApi.Enums.MsoPresetTexture presetTexture)
         {
             Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
@@ -593,7 +593,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.Solid"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Solid()
         {
             Factory.ExecuteMethod(this, "Solid");
@@ -605,7 +605,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.TwoColorGradient"/> </remarks>
         /// <param name="style">NetOffice.OfficeApi.Enums.MsoGradientStyle style</param>
         /// <param name="variant">Int32 variant</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TwoColorGradient(NetOffice.OfficeApi.Enums.MsoGradientStyle style, Int32 variant)
         {
             Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
@@ -616,7 +616,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.UserPicture"/> </remarks>
         /// <param name="pictureFile">string pictureFile</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void UserPicture(string pictureFile)
         {
             Factory.ExecuteMethod(this, "UserPicture", pictureFile);
@@ -627,7 +627,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.FillFormat.UserTextured"/> </remarks>
         /// <param name="textureFile">string textureFile</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void UserTextured(string textureFile)
         {
             Factory.ExecuteMethod(this, "UserTextured", textureFile);
@@ -635,6 +635,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

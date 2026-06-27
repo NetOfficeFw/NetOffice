@@ -25,7 +25,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Range_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -34,7 +34,7 @@ namespace NetOffice.WordApi
         public Range_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -52,7 +52,7 @@ namespace NetOffice.WordApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Range_(ICOMObject replacedObject) : base(replacedObject)
@@ -66,13 +66,13 @@ namespace NetOffice.WordApi
         public Range_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Range_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -83,7 +83,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="dataOnly">optional bool dataOnly</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.XML"/>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string get_XML(object dataOnly)
         {
@@ -96,7 +96,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.XML"/> </remarks>
         /// <param name="dataOnly">optional bool dataOnly</param>
-        [SupportByVersion("Word", 11,12,14,15,16), Redirect("get_XML")]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), Redirect("get_XML")]
         public string XML(object dataOnly)
         {
             return get_XML(dataOnly);
@@ -114,11 +114,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Range : Range_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -146,9 +146,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Range(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -172,7 +172,7 @@ namespace NetOffice.WordApi
         public Range(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -190,26 +190,26 @@ namespace NetOffice.WordApi
         public Range(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Range(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Range() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Range(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Text"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -235,7 +235,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.FormattedText"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range FormattedText
         {
             get
@@ -253,7 +253,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Start"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Start
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.End"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 End
         {
             get
@@ -289,7 +289,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Font"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Font Font
         {
             get
@@ -307,7 +307,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Duplicate"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Duplicate
         {
             get
@@ -321,7 +321,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.StoryType"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdStoryType StoryType
         {
             get
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Tables"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Tables Tables
         {
             get
@@ -349,7 +349,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Words"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Words Words
         {
             get
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Sentences"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Sentences Sentences
         {
             get
@@ -377,7 +377,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Characters"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Characters Characters
         {
             get
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Footnotes"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Footnotes Footnotes
         {
             get
@@ -405,7 +405,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Endnotes"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Endnotes Endnotes
         {
             get
@@ -419,7 +419,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Comments"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Comments Comments
         {
             get
@@ -433,7 +433,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Cells"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Cells Cells
         {
             get
@@ -447,7 +447,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Sections"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Sections Sections
         {
             get
@@ -461,7 +461,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Paragraphs"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Paragraphs Paragraphs
         {
             get
@@ -475,7 +475,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Borders"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Borders Borders
         {
             get
@@ -493,7 +493,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Shading"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Shading Shading
         {
             get
@@ -507,7 +507,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.TextRetrievalMode"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TextRetrievalMode TextRetrievalMode
         {
             get
@@ -525,7 +525,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Fields"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Fields Fields
         {
             get
@@ -539,7 +539,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.FormFields"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.FormFields FormFields
         {
             get
@@ -553,7 +553,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Frames"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Frames Frames
         {
             get
@@ -567,7 +567,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ParagraphFormat"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ParagraphFormat ParagraphFormat
         {
             get
@@ -585,7 +585,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ListFormat"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ListFormat ListFormat
         {
             get
@@ -599,7 +599,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Bookmarks"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Bookmarks Bookmarks
         {
             get
@@ -613,7 +613,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -627,7 +627,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -642,7 +642,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -656,7 +656,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Bold"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Bold
         {
             get
@@ -674,7 +674,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Italic"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Italic
         {
             get
@@ -692,7 +692,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Underline"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdUnderline Underline
         {
             get
@@ -710,7 +710,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.EmphasisMark"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdEmphasisMark EmphasisMark
         {
             get
@@ -728,7 +728,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.DisableCharacterSpaceGrid"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisableCharacterSpaceGrid
         {
             get
@@ -746,7 +746,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Revisions"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Revisions Revisions
         {
             get
@@ -760,7 +760,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Style"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public object Style
         {
             get
@@ -778,7 +778,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.StoryLength"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 StoryLength
         {
             get
@@ -792,7 +792,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.LanguageID"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLanguageID LanguageID
         {
             get
@@ -810,7 +810,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SynonymInfo"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SynonymInfo SynonymInfo
         {
             get
@@ -824,7 +824,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Hyperlinks"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Hyperlinks Hyperlinks
         {
             get
@@ -838,7 +838,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ListParagraphs"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ListParagraphs ListParagraphs
         {
             get
@@ -852,7 +852,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Subdocuments"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Subdocuments Subdocuments
         {
             get
@@ -866,7 +866,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GrammarChecked"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool GrammarChecked
         {
             get
@@ -884,7 +884,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SpellingChecked"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool SpellingChecked
         {
             get
@@ -902,7 +902,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.HighlightColorIndex"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdColorIndex HighlightColorIndex
         {
             get
@@ -920,7 +920,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Columns"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Columns Columns
         {
             get
@@ -934,7 +934,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Rows"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Rows Rows
         {
             get
@@ -947,7 +947,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 CanEdit
         {
@@ -961,7 +961,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 CanPaste
         {
@@ -976,7 +976,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.IsEndOfRowMark"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool IsEndOfRowMark
         {
             get
@@ -990,7 +990,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.BookmarkID"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 BookmarkID
         {
             get
@@ -1004,7 +1004,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PreviousBookmarkID"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PreviousBookmarkID
         {
             get
@@ -1018,7 +1018,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Find"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Find Find
         {
             get
@@ -1032,7 +1032,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PageSetup"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.PageSetup PageSetup
         {
             get
@@ -1050,7 +1050,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ShapeRange"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ShapeRange ShapeRange
         {
             get
@@ -1064,7 +1064,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Case"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdCharacterCase Case
         {
             get
@@ -1083,7 +1083,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Information"/> </remarks>
         /// <param name="type">NetOffice.WordApi.Enums.WdInformation type</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object get_Information(NetOffice.WordApi.Enums.WdInformation type)
         {
@@ -1096,7 +1096,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Information"/> </remarks>
         /// <param name="type">NetOffice.WordApi.Enums.WdInformation type</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), Redirect("get_Information")]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Information")]
         public object Information(NetOffice.WordApi.Enums.WdInformation type)
         {
             return get_Information(type);
@@ -1107,7 +1107,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ReadabilityStatistics"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ReadabilityStatistics ReadabilityStatistics
         {
             get
@@ -1121,7 +1121,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GrammaticalErrors"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ProofreadingErrors GrammaticalErrors
         {
             get
@@ -1135,7 +1135,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SpellingErrors"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ProofreadingErrors SpellingErrors
         {
             get
@@ -1149,7 +1149,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Orientation"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdTextOrientation Orientation
         {
             get
@@ -1167,7 +1167,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InlineShapes"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShapes InlineShapes
         {
             get
@@ -1181,7 +1181,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.NextStoryRange"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range NextStoryRange
         {
             get
@@ -1195,7 +1195,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.LanguageIDFarEast"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
         {
             get
@@ -1213,7 +1213,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.LanguageIDOther"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLanguageID LanguageIDOther
         {
             get
@@ -1231,7 +1231,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.LanguageDetected"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool LanguageDetected
         {
             get
@@ -1249,7 +1249,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.FitTextWidth"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single FitTextWidth
         {
             get
@@ -1267,7 +1267,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.HorizontalInVertical"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdHorizontalInVerticalType HorizontalInVertical
         {
             get
@@ -1285,7 +1285,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.TwoLinesInOne"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdTwoLinesInOneType TwoLinesInOne
         {
             get
@@ -1303,7 +1303,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CombineCharacters"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool CombineCharacters
         {
             get
@@ -1321,7 +1321,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.NoProofing"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 NoProofing
         {
             get
@@ -1339,7 +1339,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.TopLevelTables"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Tables TopLevelTables
         {
             get
@@ -1353,7 +1353,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Scripts"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Scripts Scripts
         {
             get
@@ -1367,7 +1367,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CharacterWidth"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdCharacterWidth CharacterWidth
         {
             get
@@ -1385,7 +1385,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Kana"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdKana Kana
         {
             get
@@ -1403,7 +1403,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.BoldBi"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 BoldBi
         {
             get
@@ -1421,7 +1421,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ItalicBi"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ItalicBi
         {
             get
@@ -1439,7 +1439,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ID"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string ID
         {
             get
@@ -1457,7 +1457,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.HTMLDivisions"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.HTMLDivisions HTMLDivisions
         {
             get
@@ -1470,7 +1470,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SmartTags SmartTags
         {
             get
@@ -1484,7 +1484,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ShowAll"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public bool ShowAll
         {
             get
@@ -1502,7 +1502,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Document"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document Document
         {
             get
@@ -1516,7 +1516,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.FootnoteOptions"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.FootnoteOptions FootnoteOptions
         {
             get
@@ -1530,7 +1530,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.EndnoteOptions"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.EndnoteOptions EndnoteOptions
         {
             get
@@ -1543,7 +1543,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNodes XMLNodes
         {
             get
@@ -1556,7 +1556,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNode XMLParentNode
         {
             get
@@ -1570,7 +1570,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Editors"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Editors Editors
         {
             get
@@ -1584,7 +1584,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.XML"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public string XML
         {
             get
@@ -1598,7 +1598,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.EnhMetaFileBits"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public object EnhMetaFileBits
         {
             get
@@ -1612,7 +1612,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.OMaths"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.OMaths OMaths
         {
             get
@@ -1626,7 +1626,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CharacterStyle"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object CharacterStyle
         {
             get
@@ -1640,7 +1640,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ParagraphStyle"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object ParagraphStyle
         {
             get
@@ -1654,7 +1654,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ListStyle"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object ListStyle
         {
             get
@@ -1668,7 +1668,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.TableStyle"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object TableStyle
         {
             get
@@ -1682,7 +1682,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ContentControls"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.ContentControls ContentControls
         {
             get
@@ -1696,7 +1696,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.WordOpenXML"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public string WordOpenXML
         {
             get
@@ -1710,7 +1710,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ParentContentControl"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.ContentControl ParentContentControl
         {
             get
@@ -1724,7 +1724,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Locks"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.CoAuthLocks Locks
         {
             get
@@ -1738,7 +1738,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Updates"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.CoAuthUpdates Updates
         {
             get
@@ -1752,7 +1752,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Conflicts"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Conflicts Conflicts
         {
             get
@@ -1783,7 +1783,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Select"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Select()
         {
             Factory.ExecuteMethod(this, "Select");
@@ -1795,7 +1795,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SetRange"/> </remarks>
         /// <param name="start">Int32 start</param>
         /// <param name="end">Int32 end</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SetRange(Int32 start, Int32 end)
         {
             Factory.ExecuteMethod(this, "SetRange", start, end);
@@ -1806,7 +1806,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Collapse"/> </remarks>
         /// <param name="direction">optional object direction</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Collapse(object direction)
         {
             Factory.ExecuteMethod(this, "Collapse", direction);
@@ -1817,7 +1817,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Collapse"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Collapse()
         {
             Factory.ExecuteMethod(this, "Collapse");
@@ -1828,7 +1828,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertBefore"/> </remarks>
         /// <param name="text">string text</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertBefore(string text)
         {
             Factory.ExecuteMethod(this, "InsertBefore", text);
@@ -1839,7 +1839,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertAfter"/> </remarks>
         /// <param name="text">string text</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertAfter(string text)
         {
             Factory.ExecuteMethod(this, "InsertAfter", text);
@@ -1851,7 +1851,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Next"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Next(object unit, object count)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Next", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit, count);
@@ -1862,7 +1862,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Next"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Next()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Next", NetOffice.WordApi.Range.LateBindingApiWrapperType);
@@ -1874,7 +1874,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Next"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Next(object unit)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Next", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit);
@@ -1886,7 +1886,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Previous"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Previous(object unit, object count)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Previous", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit, count);
@@ -1897,7 +1897,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Previous"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Previous()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Previous", NetOffice.WordApi.Range.LateBindingApiWrapperType);
@@ -1909,7 +1909,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Previous"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Previous(object unit)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "Previous", NetOffice.WordApi.Range.LateBindingApiWrapperType, unit);
@@ -1921,7 +1921,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.StartOf"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="extend">optional object extend</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 StartOf(object unit, object extend)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartOf", unit, extend);
@@ -1932,7 +1932,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.StartOf"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 StartOf()
         {
             return Factory.ExecuteInt32MethodGet(this, "StartOf");
@@ -1944,7 +1944,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.StartOf"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 StartOf(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "StartOf", unit);
@@ -1956,7 +1956,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.EndOf"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="extend">optional object extend</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 EndOf(object unit, object extend)
         {
             return Factory.ExecuteInt32MethodGet(this, "EndOf", unit, extend);
@@ -1967,7 +1967,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.EndOf"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 EndOf()
         {
             return Factory.ExecuteInt32MethodGet(this, "EndOf");
@@ -1979,7 +1979,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.EndOf"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 EndOf(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "EndOf", unit);
@@ -1991,7 +1991,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Move"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Move(object unit, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", unit, count);
@@ -2002,7 +2002,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Move"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Move()
         {
             return Factory.ExecuteInt32MethodGet(this, "Move");
@@ -2014,7 +2014,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Move"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Move(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", unit);
@@ -2026,7 +2026,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStart"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStart(object unit, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStart", unit, count);
@@ -2037,7 +2037,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStart"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStart()
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStart");
@@ -2049,7 +2049,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStart"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStart(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStart", unit);
@@ -2061,7 +2061,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEnd"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEnd(object unit, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEnd", unit, count);
@@ -2072,7 +2072,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEnd"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEnd()
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEnd");
@@ -2084,7 +2084,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEnd"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEnd(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEnd", unit);
@@ -2096,7 +2096,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveWhile"/> </remarks>
         /// <param name="cset">object cset</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveWhile(object cset, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveWhile", cset, count);
@@ -2108,7 +2108,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveWhile"/> </remarks>
         /// <param name="cset">object cset</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveWhile(object cset)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveWhile", cset);
@@ -2120,7 +2120,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStartWhile"/> </remarks>
         /// <param name="cset">object cset</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStartWhile(object cset, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStartWhile", cset, count);
@@ -2132,7 +2132,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStartWhile"/> </remarks>
         /// <param name="cset">object cset</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStartWhile(object cset)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStartWhile", cset);
@@ -2144,7 +2144,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEndWhile"/> </remarks>
         /// <param name="cset">object cset</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEndWhile(object cset, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEndWhile", cset, count);
@@ -2156,7 +2156,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEndWhile"/> </remarks>
         /// <param name="cset">object cset</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEndWhile(object cset)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEndWhile", cset);
@@ -2168,7 +2168,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveUntil"/> </remarks>
         /// <param name="cset">object cset</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveUntil(object cset, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveUntil", cset, count);
@@ -2180,7 +2180,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveUntil"/> </remarks>
         /// <param name="cset">object cset</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveUntil(object cset)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveUntil", cset);
@@ -2192,7 +2192,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStartUntil"/> </remarks>
         /// <param name="cset">object cset</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStartUntil(object cset, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStartUntil", cset, count);
@@ -2204,7 +2204,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveStartUntil"/> </remarks>
         /// <param name="cset">object cset</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveStartUntil(object cset)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveStartUntil", cset);
@@ -2216,7 +2216,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEndUntil"/> </remarks>
         /// <param name="cset">object cset</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEndUntil(object cset, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEndUntil", cset, count);
@@ -2228,7 +2228,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.MoveEndUntil"/> </remarks>
         /// <param name="cset">object cset</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MoveEndUntil(object cset)
         {
             return Factory.ExecuteInt32MethodGet(this, "MoveEndUntil", cset);
@@ -2238,7 +2238,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Cut"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Cut()
         {
             Factory.ExecuteMethod(this, "Cut");
@@ -2248,7 +2248,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Copy"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Copy()
         {
             Factory.ExecuteMethod(this, "Copy");
@@ -2258,7 +2258,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Paste"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Paste()
         {
             Factory.ExecuteMethod(this, "Paste");
@@ -2269,7 +2269,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertBreak"/> </remarks>
         /// <param name="type">optional object type</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertBreak(object type)
         {
             Factory.ExecuteMethod(this, "InsertBreak", type);
@@ -2280,7 +2280,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertBreak"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertBreak()
         {
             Factory.ExecuteMethod(this, "InsertBreak");
@@ -2295,10 +2295,10 @@ namespace NetOffice.WordApi
         /// <param name="confirmConversions">optional object confirmConversions</param>
         /// <param name="link">optional object link</param>
         /// <param name="attachment">optional object attachment</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertFile(string fileName, object range, object confirmConversions, object link, object attachment)
         {
-            Factory.ExecuteMethod(this, "InsertFile", new object[]{ fileName, range, confirmConversions, link, attachment });
+            Factory.ExecuteMethod(this, "InsertFile", new object[] { fileName, range, confirmConversions, link, attachment });
         }
 
         /// <summary>
@@ -2307,7 +2307,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertFile"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertFile(string fileName)
         {
             Factory.ExecuteMethod(this, "InsertFile", fileName);
@@ -2320,7 +2320,7 @@ namespace NetOffice.WordApi
         /// <param name="fileName">string fileName</param>
         /// <param name="range">optional object range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertFile(string fileName, object range)
         {
             Factory.ExecuteMethod(this, "InsertFile", fileName, range);
@@ -2334,7 +2334,7 @@ namespace NetOffice.WordApi
         /// <param name="range">optional object range</param>
         /// <param name="confirmConversions">optional object confirmConversions</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertFile(string fileName, object range, object confirmConversions)
         {
             Factory.ExecuteMethod(this, "InsertFile", fileName, range, confirmConversions);
@@ -2349,7 +2349,7 @@ namespace NetOffice.WordApi
         /// <param name="confirmConversions">optional object confirmConversions</param>
         /// <param name="link">optional object link</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertFile(string fileName, object range, object confirmConversions, object link)
         {
             Factory.ExecuteMethod(this, "InsertFile", fileName, range, confirmConversions, link);
@@ -2360,7 +2360,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InStory"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool InStory(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteBoolMethodGet(this, "InStory", range);
@@ -2371,7 +2371,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InRange"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool InRange(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteBoolMethodGet(this, "InRange", range);
@@ -2383,7 +2383,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Delete"/> </remarks>
         /// <param name="unit">optional object unit</param>
         /// <param name="count">optional object count</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Delete(object unit, object count)
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete", unit, count);
@@ -2394,7 +2394,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Delete"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
@@ -2406,7 +2406,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Delete"/> </remarks>
         /// <param name="unit">optional object unit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Delete(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete", unit);
@@ -2416,7 +2416,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.WholeStory"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void WholeStory()
         {
             Factory.ExecuteMethod(this, "WholeStory");
@@ -2427,7 +2427,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Expand"/> </remarks>
         /// <param name="unit">optional object unit</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Expand(object unit)
         {
             return Factory.ExecuteInt32MethodGet(this, "Expand", unit);
@@ -2438,7 +2438,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Expand"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Expand()
         {
             return Factory.ExecuteInt32MethodGet(this, "Expand");
@@ -2448,7 +2448,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertParagraph"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertParagraph()
         {
             Factory.ExecuteMethod(this, "InsertParagraph");
@@ -2458,7 +2458,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertParagraphAfter"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertParagraphAfter()
         {
             Factory.ExecuteMethod(this, "InsertParagraphAfter");
@@ -2482,10 +2482,10 @@ namespace NetOffice.WordApi
         /// <param name="applyLastColumn">optional object applyLastColumn</param>
         /// <param name="autoFit">optional object autoFit</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit });
         }
 
         /// <summary>
@@ -2493,7 +2493,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType);
@@ -2505,7 +2505,7 @@ namespace NetOffice.WordApi
         /// <param name="separator">optional object separator</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator);
@@ -2518,7 +2518,7 @@ namespace NetOffice.WordApi
         /// <param name="numRows">optional object numRows</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows);
@@ -2532,7 +2532,7 @@ namespace NetOffice.WordApi
         /// <param name="numColumns">optional object numColumns</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns);
@@ -2547,7 +2547,7 @@ namespace NetOffice.WordApi
         /// <param name="initialColumnWidth">optional object initialColumnWidth</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns, initialColumnWidth);
@@ -2563,10 +2563,10 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format });
         }
 
         /// <summary>
@@ -2580,10 +2580,10 @@ namespace NetOffice.WordApi
         /// <param name="applyBorders">optional object applyBorders</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders });
         }
 
         /// <summary>
@@ -2598,10 +2598,10 @@ namespace NetOffice.WordApi
         /// <param name="applyShading">optional object applyShading</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading });
         }
 
         /// <summary>
@@ -2617,10 +2617,10 @@ namespace NetOffice.WordApi
         /// <param name="applyFont">optional object applyFont</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont });
         }
 
         /// <summary>
@@ -2637,10 +2637,10 @@ namespace NetOffice.WordApi
         /// <param name="applyColor">optional object applyColor</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor });
         }
 
         /// <summary>
@@ -2658,10 +2658,10 @@ namespace NetOffice.WordApi
         /// <param name="applyHeadingRows">optional object applyHeadingRows</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows });
         }
 
         /// <summary>
@@ -2680,10 +2680,10 @@ namespace NetOffice.WordApi
         /// <param name="applyLastRow">optional object applyLastRow</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow });
         }
 
         /// <summary>
@@ -2703,10 +2703,10 @@ namespace NetOffice.WordApi
         /// <param name="applyFirstColumn">optional object applyFirstColumn</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn });
         }
 
         /// <summary>
@@ -2727,10 +2727,10 @@ namespace NetOffice.WordApi
         /// <param name="applyLastColumn">optional object applyLastColumn</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTableOld(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTableOld", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn });
         }
 
         /// <summary>
@@ -2740,7 +2740,7 @@ namespace NetOffice.WordApi
         /// <param name="insertAsField">optional object insertAsField</param>
         /// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTimeOld(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
         {
             Factory.ExecuteMethod(this, "InsertDateTimeOld", dateTimeFormat, insertAsField, insertAsFullWidth);
@@ -2751,7 +2751,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTimeOld()
         {
             Factory.ExecuteMethod(this, "InsertDateTimeOld");
@@ -2763,7 +2763,7 @@ namespace NetOffice.WordApi
         /// <param name="dateTimeFormat">optional object dateTimeFormat</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTimeOld(object dateTimeFormat)
         {
             Factory.ExecuteMethod(this, "InsertDateTimeOld", dateTimeFormat);
@@ -2776,7 +2776,7 @@ namespace NetOffice.WordApi
         /// <param name="insertAsField">optional object insertAsField</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTimeOld(object dateTimeFormat, object insertAsField)
         {
             Factory.ExecuteMethod(this, "InsertDateTimeOld", dateTimeFormat, insertAsField);
@@ -2790,7 +2790,7 @@ namespace NetOffice.WordApi
         /// <param name="font">optional object font</param>
         /// <param name="unicode">optional object unicode</param>
         /// <param name="bias">optional object bias</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertSymbol(Int32 characterNumber, object font, object unicode, object bias)
         {
             Factory.ExecuteMethod(this, "InsertSymbol", characterNumber, font, unicode, bias);
@@ -2802,7 +2802,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertSymbol"/> </remarks>
         /// <param name="characterNumber">Int32 characterNumber</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertSymbol(Int32 characterNumber)
         {
             Factory.ExecuteMethod(this, "InsertSymbol", characterNumber);
@@ -2815,7 +2815,7 @@ namespace NetOffice.WordApi
         /// <param name="characterNumber">Int32 characterNumber</param>
         /// <param name="font">optional object font</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertSymbol(Int32 characterNumber, object font)
         {
             Factory.ExecuteMethod(this, "InsertSymbol", characterNumber, font);
@@ -2829,7 +2829,7 @@ namespace NetOffice.WordApi
         /// <param name="font">optional object font</param>
         /// <param name="unicode">optional object unicode</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertSymbol(Int32 characterNumber, object font, object unicode)
         {
             Factory.ExecuteMethod(this, "InsertSymbol", characterNumber, font, unicode);
@@ -2844,10 +2844,10 @@ namespace NetOffice.WordApi
         /// <param name="referenceItem">object referenceItem</param>
         /// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
         /// <param name="includePosition">optional object includePosition</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
         {
-            Factory.ExecuteMethod(this, "InsertCrossReference", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition });
+            Factory.ExecuteMethod(this, "InsertCrossReference", new object[] { referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition });
         }
 
         /// <summary>
@@ -2861,10 +2861,10 @@ namespace NetOffice.WordApi
         /// <param name="includePosition">optional object includePosition</param>
         /// <param name="separateNumbers">optional object separateNumbers</param>
         /// <param name="separatorString">optional object separatorString</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers, object separatorString)
         {
-            Factory.ExecuteMethod(this, "InsertCrossReference", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers, separatorString });
+            Factory.ExecuteMethod(this, "InsertCrossReference", new object[] { referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers, separatorString });
         }
 
         /// <summary>
@@ -2875,7 +2875,7 @@ namespace NetOffice.WordApi
         /// <param name="referenceKind">NetOffice.WordApi.Enums.WdReferenceKind referenceKind</param>
         /// <param name="referenceItem">object referenceItem</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem)
         {
             Factory.ExecuteMethod(this, "InsertCrossReference", referenceType, referenceKind, referenceItem);
@@ -2890,7 +2890,7 @@ namespace NetOffice.WordApi
         /// <param name="referenceItem">object referenceItem</param>
         /// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink)
         {
             Factory.ExecuteMethod(this, "InsertCrossReference", referenceType, referenceKind, referenceItem, insertAsHyperlink);
@@ -2907,10 +2907,10 @@ namespace NetOffice.WordApi
         /// <param name="includePosition">optional object includePosition</param>
         /// <param name="separateNumbers">optional object separateNumbers</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCrossReference(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition, object separateNumbers)
         {
-            Factory.ExecuteMethod(this, "InsertCrossReference", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers });
+            Factory.ExecuteMethod(this, "InsertCrossReference", new object[] { referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition, separateNumbers });
         }
 
         /// <summary>
@@ -2921,7 +2921,7 @@ namespace NetOffice.WordApi
         /// <param name="title">optional object title</param>
         /// <param name="titleAutoText">optional object titleAutoText</param>
         /// <param name="position">optional object position</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCaption(object label, object title, object titleAutoText, object position)
         {
             Factory.ExecuteMethod(this, "InsertCaption", label, title, titleAutoText, position);
@@ -2936,10 +2936,10 @@ namespace NetOffice.WordApi
         /// <param name="titleAutoText">optional object titleAutoText</param>
         /// <param name="position">optional object position</param>
         /// <param name="excludeLabel">optional object excludeLabel</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCaption(object label, object title, object titleAutoText, object position, object excludeLabel)
         {
-            Factory.ExecuteMethod(this, "InsertCaption", new object[]{ label, title, titleAutoText, position, excludeLabel });
+            Factory.ExecuteMethod(this, "InsertCaption", new object[] { label, title, titleAutoText, position, excludeLabel });
         }
 
         /// <summary>
@@ -2948,7 +2948,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertCaption"/> </remarks>
         /// <param name="label">object label</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCaption(object label)
         {
             Factory.ExecuteMethod(this, "InsertCaption", label);
@@ -2961,7 +2961,7 @@ namespace NetOffice.WordApi
         /// <param name="label">object label</param>
         /// <param name="title">optional object title</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCaption(object label, object title)
         {
             Factory.ExecuteMethod(this, "InsertCaption", label, title);
@@ -2975,7 +2975,7 @@ namespace NetOffice.WordApi
         /// <param name="title">optional object title</param>
         /// <param name="titleAutoText">optional object titleAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertCaption(object label, object title, object titleAutoText)
         {
             Factory.ExecuteMethod(this, "InsertCaption", label, title, titleAutoText);
@@ -2985,7 +2985,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CopyAsPicture"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CopyAsPicture()
         {
             Factory.ExecuteMethod(this, "CopyAsPicture");
@@ -3009,10 +3009,10 @@ namespace NetOffice.WordApi
         /// <param name="caseSensitive">optional object caseSensitive</param>
         /// <param name="languageID">optional object languageID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object languageID)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, languageID });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, languageID });
         }
 
         /// <summary>
@@ -3020,7 +3020,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld()
         {
             Factory.ExecuteMethod(this, "SortOld");
@@ -3032,7 +3032,7 @@ namespace NetOffice.WordApi
         /// <param name="excludeHeader">optional object excludeHeader</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader)
         {
             Factory.ExecuteMethod(this, "SortOld", excludeHeader);
@@ -3045,7 +3045,7 @@ namespace NetOffice.WordApi
         /// <param name="fieldNumber">optional object fieldNumber</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber)
         {
             Factory.ExecuteMethod(this, "SortOld", excludeHeader, fieldNumber);
@@ -3059,7 +3059,7 @@ namespace NetOffice.WordApi
         /// <param name="sortFieldType">optional object sortFieldType</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType)
         {
             Factory.ExecuteMethod(this, "SortOld", excludeHeader, fieldNumber, sortFieldType);
@@ -3074,7 +3074,7 @@ namespace NetOffice.WordApi
         /// <param name="sortOrder">optional object sortOrder</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder)
         {
             Factory.ExecuteMethod(this, "SortOld", excludeHeader, fieldNumber, sortFieldType, sortOrder);
@@ -3090,10 +3090,10 @@ namespace NetOffice.WordApi
         /// <param name="fieldNumber2">optional object fieldNumber2</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2 });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2 });
         }
 
         /// <summary>
@@ -3107,10 +3107,10 @@ namespace NetOffice.WordApi
         /// <param name="sortFieldType2">optional object sortFieldType2</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2 });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2 });
         }
 
         /// <summary>
@@ -3125,10 +3125,10 @@ namespace NetOffice.WordApi
         /// <param name="sortOrder2">optional object sortOrder2</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2 });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2 });
         }
 
         /// <summary>
@@ -3144,10 +3144,10 @@ namespace NetOffice.WordApi
         /// <param name="fieldNumber3">optional object fieldNumber3</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3 });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3 });
         }
 
         /// <summary>
@@ -3164,10 +3164,10 @@ namespace NetOffice.WordApi
         /// <param name="sortFieldType3">optional object sortFieldType3</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3 });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3 });
         }
 
         /// <summary>
@@ -3185,10 +3185,10 @@ namespace NetOffice.WordApi
         /// <param name="sortOrder3">optional object sortOrder3</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3 });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3 });
         }
 
         /// <summary>
@@ -3207,10 +3207,10 @@ namespace NetOffice.WordApi
         /// <param name="sortColumn">optional object sortColumn</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn });
         }
 
         /// <summary>
@@ -3230,10 +3230,10 @@ namespace NetOffice.WordApi
         /// <param name="separator">optional object separator</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator });
         }
 
         /// <summary>
@@ -3254,17 +3254,17 @@ namespace NetOffice.WordApi
         /// <param name="caseSensitive">optional object caseSensitive</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortOld(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive)
         {
-            Factory.ExecuteMethod(this, "SortOld", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive });
+            Factory.ExecuteMethod(this, "SortOld", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive });
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SortAscending"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortAscending()
         {
             Factory.ExecuteMethod(this, "SortAscending");
@@ -3274,7 +3274,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SortDescending"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SortDescending()
         {
             Factory.ExecuteMethod(this, "SortDescending");
@@ -3285,7 +3285,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.IsEqual"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool IsEqual(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsEqual", range);
@@ -3295,7 +3295,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Calculate"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single Calculate()
         {
             return Factory.ExecuteSingleMethodGet(this, "Calculate");
@@ -3309,7 +3309,7 @@ namespace NetOffice.WordApi
         /// <param name="which">optional object which</param>
         /// <param name="count">optional object count</param>
         /// <param name="name">optional object name</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoTo(object what, object which, object count, object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what, which, count, name);
@@ -3320,7 +3320,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GoTo"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoTo()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType);
@@ -3332,7 +3332,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GoTo"/> </remarks>
         /// <param name="what">optional object what</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoTo(object what)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what);
@@ -3345,7 +3345,7 @@ namespace NetOffice.WordApi
         /// <param name="what">optional object what</param>
         /// <param name="which">optional object which</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoTo(object what, object which)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what, which);
@@ -3359,7 +3359,7 @@ namespace NetOffice.WordApi
         /// <param name="which">optional object which</param>
         /// <param name="count">optional object count</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoTo(object what, object which, object count)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoTo", NetOffice.WordApi.Range.LateBindingApiWrapperType, what, which, count);
@@ -3370,7 +3370,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GoToNext"/> </remarks>
         /// <param name="what">NetOffice.WordApi.Enums.WdGoToItem what</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoToNext(NetOffice.WordApi.Enums.WdGoToItem what)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToNext", NetOffice.WordApi.Range.LateBindingApiWrapperType, what);
@@ -3381,7 +3381,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GoToPrevious"/> </remarks>
         /// <param name="what">NetOffice.WordApi.Enums.WdGoToItem what</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoToPrevious(NetOffice.WordApi.Enums.WdGoToItem what)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToPrevious", NetOffice.WordApi.Range.LateBindingApiWrapperType, what);
@@ -3398,10 +3398,10 @@ namespace NetOffice.WordApi
         /// <param name="dataType">optional object dataType</param>
         /// <param name="iconFileName">optional object iconFileName</param>
         /// <param name="iconLabel">optional object iconLabel</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName, object iconLabel)
         {
-            Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ iconIndex, link, placement, displayAsIcon, dataType, iconFileName, iconLabel });
+            Factory.ExecuteMethod(this, "PasteSpecial", new object[] { iconIndex, link, placement, displayAsIcon, dataType, iconFileName, iconLabel });
         }
 
         /// <summary>
@@ -3409,7 +3409,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PasteSpecial"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial()
         {
             Factory.ExecuteMethod(this, "PasteSpecial");
@@ -3421,7 +3421,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PasteSpecial"/> </remarks>
         /// <param name="iconIndex">optional object iconIndex</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", iconIndex);
@@ -3434,7 +3434,7 @@ namespace NetOffice.WordApi
         /// <param name="iconIndex">optional object iconIndex</param>
         /// <param name="link">optional object link</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex, object link)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", iconIndex, link);
@@ -3448,7 +3448,7 @@ namespace NetOffice.WordApi
         /// <param name="link">optional object link</param>
         /// <param name="placement">optional object placement</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex, object link, object placement)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", iconIndex, link, placement);
@@ -3463,7 +3463,7 @@ namespace NetOffice.WordApi
         /// <param name="placement">optional object placement</param>
         /// <param name="displayAsIcon">optional object displayAsIcon</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", iconIndex, link, placement, displayAsIcon);
@@ -3479,10 +3479,10 @@ namespace NetOffice.WordApi
         /// <param name="displayAsIcon">optional object displayAsIcon</param>
         /// <param name="dataType">optional object dataType</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType)
         {
-            Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ iconIndex, link, placement, displayAsIcon, dataType });
+            Factory.ExecuteMethod(this, "PasteSpecial", new object[] { iconIndex, link, placement, displayAsIcon, dataType });
         }
 
         /// <summary>
@@ -3496,17 +3496,17 @@ namespace NetOffice.WordApi
         /// <param name="dataType">optional object dataType</param>
         /// <param name="iconFileName">optional object iconFileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object iconIndex, object link, object placement, object displayAsIcon, object dataType, object iconFileName)
         {
-            Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ iconIndex, link, placement, displayAsIcon, dataType, iconFileName });
+            Factory.ExecuteMethod(this, "PasteSpecial", new object[] { iconIndex, link, placement, displayAsIcon, dataType, iconFileName });
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.LookupNameProperties"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void LookupNameProperties()
         {
             Factory.ExecuteMethod(this, "LookupNameProperties");
@@ -3517,7 +3517,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ComputeStatistics"/> </remarks>
         /// <param name="statistic">NetOffice.WordApi.Enums.WdStatistic statistic</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ComputeStatistics(NetOffice.WordApi.Enums.WdStatistic statistic)
         {
             return Factory.ExecuteInt32MethodGet(this, "ComputeStatistics", statistic);
@@ -3528,7 +3528,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Relocate"/> </remarks>
         /// <param name="direction">Int32 direction</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Relocate(Int32 direction)
         {
             Factory.ExecuteMethod(this, "Relocate", direction);
@@ -3538,7 +3538,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CheckSynonyms"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSynonyms()
         {
             Factory.ExecuteMethod(this, "CheckSynonyms");
@@ -3549,7 +3549,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="edition">string edition</param>
         /// <param name="format">optional object format</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SubscribeTo(string edition, object format)
         {
             Factory.ExecuteMethod(this, "SubscribeTo", edition, format);
@@ -3560,7 +3560,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="edition">string edition</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SubscribeTo(string edition)
         {
             Factory.ExecuteMethod(this, "SubscribeTo", edition);
@@ -3573,7 +3573,7 @@ namespace NetOffice.WordApi
         /// <param name="containsPICT">optional object containsPICT</param>
         /// <param name="containsRTF">optional object containsRTF</param>
         /// <param name="containsText">optional object containsText</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreatePublisher(object edition, object containsPICT, object containsRTF, object containsText)
         {
             Factory.ExecuteMethod(this, "CreatePublisher", edition, containsPICT, containsRTF, containsText);
@@ -3583,7 +3583,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreatePublisher()
         {
             Factory.ExecuteMethod(this, "CreatePublisher");
@@ -3594,7 +3594,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="edition">optional object edition</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreatePublisher(object edition)
         {
             Factory.ExecuteMethod(this, "CreatePublisher", edition);
@@ -3606,7 +3606,7 @@ namespace NetOffice.WordApi
         /// <param name="edition">optional object edition</param>
         /// <param name="containsPICT">optional object containsPICT</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreatePublisher(object edition, object containsPICT)
         {
             Factory.ExecuteMethod(this, "CreatePublisher", edition, containsPICT);
@@ -3619,7 +3619,7 @@ namespace NetOffice.WordApi
         /// <param name="containsPICT">optional object containsPICT</param>
         /// <param name="containsRTF">optional object containsRTF</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreatePublisher(object edition, object containsPICT, object containsRTF)
         {
             Factory.ExecuteMethod(this, "CreatePublisher", edition, containsPICT, containsRTF);
@@ -3629,7 +3629,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertAutoText"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertAutoText()
         {
             Factory.ExecuteMethod(this, "InsertAutoText");
@@ -3653,10 +3653,10 @@ namespace NetOffice.WordApi
         /// <param name="from">optional object from</param>
         /// <param name="to">optional object to</param>
         /// <param name="includeFields">optional object includeFields</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from, object to, object includeFields)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to, includeFields });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to, includeFields });
         }
 
         /// <summary>
@@ -3664,7 +3664,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertDatabase"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase()
         {
             Factory.ExecuteMethod(this, "InsertDatabase");
@@ -3676,7 +3676,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertDatabase"/> </remarks>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format)
         {
             Factory.ExecuteMethod(this, "InsertDatabase", format);
@@ -3689,7 +3689,7 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="style">optional object style</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style)
         {
             Factory.ExecuteMethod(this, "InsertDatabase", format, style);
@@ -3703,7 +3703,7 @@ namespace NetOffice.WordApi
         /// <param name="style">optional object style</param>
         /// <param name="linkToSource">optional object linkToSource</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource)
         {
             Factory.ExecuteMethod(this, "InsertDatabase", format, style, linkToSource);
@@ -3718,7 +3718,7 @@ namespace NetOffice.WordApi
         /// <param name="linkToSource">optional object linkToSource</param>
         /// <param name="connection">optional object connection</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection)
         {
             Factory.ExecuteMethod(this, "InsertDatabase", format, style, linkToSource, connection);
@@ -3734,10 +3734,10 @@ namespace NetOffice.WordApi
         /// <param name="connection">optional object connection</param>
         /// <param name="sQLStatement">optional object sQLStatement</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement });
         }
 
         /// <summary>
@@ -3751,10 +3751,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement">optional object sQLStatement</param>
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1 });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1 });
         }
 
         /// <summary>
@@ -3769,10 +3769,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument });
         }
 
         /// <summary>
@@ -3788,10 +3788,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate });
         }
 
         /// <summary>
@@ -3808,10 +3808,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument });
         }
 
         /// <summary>
@@ -3829,10 +3829,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate });
         }
 
         /// <summary>
@@ -3851,10 +3851,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         /// <param name="dataSource">optional object dataSource</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource });
         }
 
         /// <summary>
@@ -3874,10 +3874,10 @@ namespace NetOffice.WordApi
         /// <param name="dataSource">optional object dataSource</param>
         /// <param name="from">optional object from</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from });
         }
 
         /// <summary>
@@ -3898,17 +3898,17 @@ namespace NetOffice.WordApi
         /// <param name="from">optional object from</param>
         /// <param name="to">optional object to</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDatabase(object format, object style, object linkToSource, object connection, object sQLStatement, object sQLStatement1, object passwordDocument, object passwordTemplate, object writePasswordDocument, object writePasswordTemplate, object dataSource, object from, object to)
         {
-            Factory.ExecuteMethod(this, "InsertDatabase", new object[]{ format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to });
+            Factory.ExecuteMethod(this, "InsertDatabase", new object[] { format, style, linkToSource, connection, sQLStatement, sQLStatement1, passwordDocument, passwordTemplate, writePasswordDocument, writePasswordTemplate, dataSource, from, to });
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.AutoFormat"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void AutoFormat()
         {
             Factory.ExecuteMethod(this, "AutoFormat");
@@ -3918,7 +3918,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CheckGrammar"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckGrammar()
         {
             Factory.ExecuteMethod(this, "CheckGrammar");
@@ -3940,10 +3940,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary8">optional object customDictionary8</param>
         /// <param name="customDictionary9">optional object customDictionary9</param>
         /// <param name="customDictionary10">optional object customDictionary10</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
         }
 
         /// <summary>
@@ -3951,7 +3951,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CheckSpelling"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling()
         {
             Factory.ExecuteMethod(this, "CheckSpelling");
@@ -3963,7 +3963,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.CheckSpelling"/> </remarks>
         /// <param name="customDictionary">optional object customDictionary</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary)
         {
             Factory.ExecuteMethod(this, "CheckSpelling", customDictionary);
@@ -3976,7 +3976,7 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary">optional object customDictionary</param>
         /// <param name="ignoreUppercase">optional object ignoreUppercase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase)
         {
             Factory.ExecuteMethod(this, "CheckSpelling", customDictionary, ignoreUppercase);
@@ -3990,7 +3990,7 @@ namespace NetOffice.WordApi
         /// <param name="ignoreUppercase">optional object ignoreUppercase</param>
         /// <param name="alwaysSuggest">optional object alwaysSuggest</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest)
         {
             Factory.ExecuteMethod(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest);
@@ -4005,7 +4005,7 @@ namespace NetOffice.WordApi
         /// <param name="alwaysSuggest">optional object alwaysSuggest</param>
         /// <param name="customDictionary2">optional object customDictionary2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2)
         {
             Factory.ExecuteMethod(this, "CheckSpelling", customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2);
@@ -4021,10 +4021,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary2">optional object customDictionary2</param>
         /// <param name="customDictionary3">optional object customDictionary3</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3 });
         }
 
         /// <summary>
@@ -4038,10 +4038,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary3">optional object customDictionary3</param>
         /// <param name="customDictionary4">optional object customDictionary4</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4 });
         }
 
         /// <summary>
@@ -4056,10 +4056,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary4">optional object customDictionary4</param>
         /// <param name="customDictionary5">optional object customDictionary5</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
         }
 
         /// <summary>
@@ -4075,10 +4075,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary5">optional object customDictionary5</param>
         /// <param name="customDictionary6">optional object customDictionary6</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
         }
 
         /// <summary>
@@ -4095,10 +4095,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary6">optional object customDictionary6</param>
         /// <param name="customDictionary7">optional object customDictionary7</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
         }
 
         /// <summary>
@@ -4116,10 +4116,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary7">optional object customDictionary7</param>
         /// <param name="customDictionary8">optional object customDictionary8</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
         }
 
         /// <summary>
@@ -4138,10 +4138,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary8">optional object customDictionary8</param>
         /// <param name="customDictionary9">optional object customDictionary9</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CheckSpelling(object customDictionary, object ignoreUppercase, object alwaysSuggest, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
         {
-            Factory.ExecuteMethod(this, "CheckSpelling", new object[]{ customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
+            Factory.ExecuteMethod(this, "CheckSpelling", new object[] { customDictionary, ignoreUppercase, alwaysSuggest, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
         }
 
         /// <summary>
@@ -4161,10 +4161,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary8">optional object customDictionary8</param>
         /// <param name="customDictionary9">optional object customDictionary9</param>
         /// <param name="customDictionary10">optional object customDictionary10</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9, object customDictionary10)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9, customDictionary10 });
         }
 
         /// <summary>
@@ -4172,7 +4172,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GetSpellingSuggestions"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType);
@@ -4184,7 +4184,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GetSpellingSuggestions"/> </remarks>
         /// <param name="customDictionary">optional object customDictionary</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary);
@@ -4197,7 +4197,7 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary">optional object customDictionary</param>
         /// <param name="ignoreUppercase">optional object ignoreUppercase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary, ignoreUppercase);
@@ -4211,7 +4211,7 @@ namespace NetOffice.WordApi
         /// <param name="ignoreUppercase">optional object ignoreUppercase</param>
         /// <param name="mainDictionary">optional object mainDictionary</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary, ignoreUppercase, mainDictionary);
@@ -4226,7 +4226,7 @@ namespace NetOffice.WordApi
         /// <param name="mainDictionary">optional object mainDictionary</param>
         /// <param name="suggestionMode">optional object suggestionMode</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, customDictionary, ignoreUppercase, mainDictionary, suggestionMode);
@@ -4242,10 +4242,10 @@ namespace NetOffice.WordApi
         /// <param name="suggestionMode">optional object suggestionMode</param>
         /// <param name="customDictionary2">optional object customDictionary2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2 });
         }
 
         /// <summary>
@@ -4259,10 +4259,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary2">optional object customDictionary2</param>
         /// <param name="customDictionary3">optional object customDictionary3</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3 });
         }
 
         /// <summary>
@@ -4277,10 +4277,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary3">optional object customDictionary3</param>
         /// <param name="customDictionary4">optional object customDictionary4</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4 });
         }
 
         /// <summary>
@@ -4296,10 +4296,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary4">optional object customDictionary4</param>
         /// <param name="customDictionary5">optional object customDictionary5</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5 });
         }
 
         /// <summary>
@@ -4316,10 +4316,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary5">optional object customDictionary5</param>
         /// <param name="customDictionary6">optional object customDictionary6</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6 });
         }
 
         /// <summary>
@@ -4337,10 +4337,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary6">optional object customDictionary6</param>
         /// <param name="customDictionary7">optional object customDictionary7</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7 });
         }
 
         /// <summary>
@@ -4359,10 +4359,10 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary7">optional object customDictionary7</param>
         /// <param name="customDictionary8">optional object customDictionary8</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8 });
         }
 
         /// <summary>
@@ -4382,17 +4382,17 @@ namespace NetOffice.WordApi
         /// <param name="customDictionary8">optional object customDictionary8</param>
         /// <param name="customDictionary9">optional object customDictionary9</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SpellingSuggestions GetSpellingSuggestions(object customDictionary, object ignoreUppercase, object mainDictionary, object suggestionMode, object customDictionary2, object customDictionary3, object customDictionary4, object customDictionary5, object customDictionary6, object customDictionary7, object customDictionary8, object customDictionary9)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[]{ customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.SpellingSuggestions>(this, "GetSpellingSuggestions", NetOffice.WordApi.SpellingSuggestions.LateBindingApiWrapperType, new object[] { customDictionary, ignoreUppercase, mainDictionary, suggestionMode, customDictionary2, customDictionary3, customDictionary4, customDictionary5, customDictionary6, customDictionary7, customDictionary8, customDictionary9 });
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertParagraphBefore"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertParagraphBefore()
         {
             Factory.ExecuteMethod(this, "InsertParagraphBefore");
@@ -4402,7 +4402,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.NextSubdocument"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void NextSubdocument()
         {
             Factory.ExecuteMethod(this, "NextSubdocument");
@@ -4412,7 +4412,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PreviousSubdocument"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PreviousSubdocument()
         {
             Factory.ExecuteMethod(this, "PreviousSubdocument");
@@ -4427,10 +4427,10 @@ namespace NetOffice.WordApi
         /// <param name="checkHangulEnding">optional object checkHangulEnding</param>
         /// <param name="enableRecentOrdering">optional object enableRecentOrdering</param>
         /// <param name="customDictionary">optional object customDictionary</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding, object enableRecentOrdering, object customDictionary)
         {
-            Factory.ExecuteMethod(this, "ConvertHangulAndHanja", new object[]{ conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering, customDictionary });
+            Factory.ExecuteMethod(this, "ConvertHangulAndHanja", new object[] { conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering, customDictionary });
         }
 
         /// <summary>
@@ -4438,7 +4438,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ConvertHangulAndHanja"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertHangulAndHanja()
         {
             Factory.ExecuteMethod(this, "ConvertHangulAndHanja");
@@ -4450,7 +4450,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ConvertHangulAndHanja"/> </remarks>
         /// <param name="conversionsMode">optional object conversionsMode</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertHangulAndHanja(object conversionsMode)
         {
             Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode);
@@ -4463,7 +4463,7 @@ namespace NetOffice.WordApi
         /// <param name="conversionsMode">optional object conversionsMode</param>
         /// <param name="fastConversion">optional object fastConversion</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertHangulAndHanja(object conversionsMode, object fastConversion)
         {
             Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode, fastConversion);
@@ -4477,7 +4477,7 @@ namespace NetOffice.WordApi
         /// <param name="fastConversion">optional object fastConversion</param>
         /// <param name="checkHangulEnding">optional object checkHangulEnding</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding)
         {
             Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode, fastConversion, checkHangulEnding);
@@ -4492,7 +4492,7 @@ namespace NetOffice.WordApi
         /// <param name="checkHangulEnding">optional object checkHangulEnding</param>
         /// <param name="enableRecentOrdering">optional object enableRecentOrdering</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertHangulAndHanja(object conversionsMode, object fastConversion, object checkHangulEnding, object enableRecentOrdering)
         {
             Factory.ExecuteMethod(this, "ConvertHangulAndHanja", conversionsMode, fastConversion, checkHangulEnding, enableRecentOrdering);
@@ -4502,7 +4502,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PasteAsNestedTable"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PasteAsNestedTable()
         {
             Factory.ExecuteMethod(this, "PasteAsNestedTable");
@@ -4515,7 +4515,7 @@ namespace NetOffice.WordApi
         /// <param name="style">object style</param>
         /// <param name="symbol">optional object symbol</param>
         /// <param name="enclosedText">optional object enclosedText</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ModifyEnclosure(object style, object symbol, object enclosedText)
         {
             Factory.ExecuteMethod(this, "ModifyEnclosure", style, symbol, enclosedText);
@@ -4527,7 +4527,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ModifyEnclosure"/> </remarks>
         /// <param name="style">object style</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ModifyEnclosure(object style)
         {
             Factory.ExecuteMethod(this, "ModifyEnclosure", style);
@@ -4540,7 +4540,7 @@ namespace NetOffice.WordApi
         /// <param name="style">object style</param>
         /// <param name="symbol">optional object symbol</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ModifyEnclosure(object style, object symbol)
         {
             Factory.ExecuteMethod(this, "ModifyEnclosure", style, symbol);
@@ -4555,10 +4555,10 @@ namespace NetOffice.WordApi
         /// <param name="raise">optional Int32 Raise = 0</param>
         /// <param name="fontSize">optional Int32 FontSize = 0</param>
         /// <param name="fontName">optional string FontName = </param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PhoneticGuide(string text, object alignment, object raise, object fontSize, object fontName)
         {
-            Factory.ExecuteMethod(this, "PhoneticGuide", new object[]{ text, alignment, raise, fontSize, fontName });
+            Factory.ExecuteMethod(this, "PhoneticGuide", new object[] { text, alignment, raise, fontSize, fontName });
         }
 
         /// <summary>
@@ -4567,7 +4567,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PhoneticGuide"/> </remarks>
         /// <param name="text">string text</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PhoneticGuide(string text)
         {
             Factory.ExecuteMethod(this, "PhoneticGuide", text);
@@ -4580,7 +4580,7 @@ namespace NetOffice.WordApi
         /// <param name="text">string text</param>
         /// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PhoneticGuide(string text, object alignment)
         {
             Factory.ExecuteMethod(this, "PhoneticGuide", text, alignment);
@@ -4594,7 +4594,7 @@ namespace NetOffice.WordApi
         /// <param name="alignment">optional NetOffice.WordApi.Enums.WdPhoneticGuideAlignmentType Alignment = -1</param>
         /// <param name="raise">optional Int32 Raise = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PhoneticGuide(string text, object alignment, object raise)
         {
             Factory.ExecuteMethod(this, "PhoneticGuide", text, alignment, raise);
@@ -4609,7 +4609,7 @@ namespace NetOffice.WordApi
         /// <param name="raise">optional Int32 Raise = 0</param>
         /// <param name="fontSize">optional Int32 FontSize = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PhoneticGuide(string text, object alignment, object raise, object fontSize)
         {
             Factory.ExecuteMethod(this, "PhoneticGuide", text, alignment, raise, fontSize);
@@ -4624,10 +4624,10 @@ namespace NetOffice.WordApi
         /// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
         /// <param name="dateLanguage">optional object dateLanguage</param>
         /// <param name="calendarType">optional object calendarType</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage, object calendarType)
         {
-            Factory.ExecuteMethod(this, "InsertDateTime", new object[]{ dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage, calendarType });
+            Factory.ExecuteMethod(this, "InsertDateTime", new object[] { dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage, calendarType });
         }
 
         /// <summary>
@@ -4635,7 +4635,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertDateTime"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTime()
         {
             Factory.ExecuteMethod(this, "InsertDateTime");
@@ -4647,7 +4647,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertDateTime"/> </remarks>
         /// <param name="dateTimeFormat">optional object dateTimeFormat</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTime(object dateTimeFormat)
         {
             Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat);
@@ -4660,7 +4660,7 @@ namespace NetOffice.WordApi
         /// <param name="dateTimeFormat">optional object dateTimeFormat</param>
         /// <param name="insertAsField">optional object insertAsField</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTime(object dateTimeFormat, object insertAsField)
         {
             Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat, insertAsField);
@@ -4674,7 +4674,7 @@ namespace NetOffice.WordApi
         /// <param name="insertAsField">optional object insertAsField</param>
         /// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth)
         {
             Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat, insertAsField, insertAsFullWidth);
@@ -4689,7 +4689,7 @@ namespace NetOffice.WordApi
         /// <param name="insertAsFullWidth">optional object insertAsFullWidth</param>
         /// <param name="dateLanguage">optional object dateLanguage</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void InsertDateTime(object dateTimeFormat, object insertAsField, object insertAsFullWidth, object dateLanguage)
         {
             Factory.ExecuteMethod(this, "InsertDateTime", dateTimeFormat, insertAsField, insertAsFullWidth, dateLanguage);
@@ -4718,10 +4718,10 @@ namespace NetOffice.WordApi
         /// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
         /// <param name="ignoreHe">optional object ignoreHe</param>
         /// <param name="languageID">optional object languageID</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
         }
 
         /// <summary>
@@ -4729,7 +4729,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Sort"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort()
         {
             Factory.ExecuteMethod(this, "Sort");
@@ -4741,7 +4741,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.Sort"/> </remarks>
         /// <param name="excludeHeader">optional object excludeHeader</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader)
         {
             Factory.ExecuteMethod(this, "Sort", excludeHeader);
@@ -4754,7 +4754,7 @@ namespace NetOffice.WordApi
         /// <param name="excludeHeader">optional object excludeHeader</param>
         /// <param name="fieldNumber">optional object fieldNumber</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber)
         {
             Factory.ExecuteMethod(this, "Sort", excludeHeader, fieldNumber);
@@ -4768,7 +4768,7 @@ namespace NetOffice.WordApi
         /// <param name="fieldNumber">optional object fieldNumber</param>
         /// <param name="sortFieldType">optional object sortFieldType</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType)
         {
             Factory.ExecuteMethod(this, "Sort", excludeHeader, fieldNumber, sortFieldType);
@@ -4783,7 +4783,7 @@ namespace NetOffice.WordApi
         /// <param name="sortFieldType">optional object sortFieldType</param>
         /// <param name="sortOrder">optional object sortOrder</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder)
         {
             Factory.ExecuteMethod(this, "Sort", excludeHeader, fieldNumber, sortFieldType, sortOrder);
@@ -4799,10 +4799,10 @@ namespace NetOffice.WordApi
         /// <param name="sortOrder">optional object sortOrder</param>
         /// <param name="fieldNumber2">optional object fieldNumber2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2 });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2 });
         }
 
         /// <summary>
@@ -4816,10 +4816,10 @@ namespace NetOffice.WordApi
         /// <param name="fieldNumber2">optional object fieldNumber2</param>
         /// <param name="sortFieldType2">optional object sortFieldType2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2 });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2 });
         }
 
         /// <summary>
@@ -4834,10 +4834,10 @@ namespace NetOffice.WordApi
         /// <param name="sortFieldType2">optional object sortFieldType2</param>
         /// <param name="sortOrder2">optional object sortOrder2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2 });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2 });
         }
 
         /// <summary>
@@ -4853,10 +4853,10 @@ namespace NetOffice.WordApi
         /// <param name="sortOrder2">optional object sortOrder2</param>
         /// <param name="fieldNumber3">optional object fieldNumber3</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3 });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3 });
         }
 
         /// <summary>
@@ -4873,10 +4873,10 @@ namespace NetOffice.WordApi
         /// <param name="fieldNumber3">optional object fieldNumber3</param>
         /// <param name="sortFieldType3">optional object sortFieldType3</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3 });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3 });
         }
 
         /// <summary>
@@ -4894,10 +4894,10 @@ namespace NetOffice.WordApi
         /// <param name="sortFieldType3">optional object sortFieldType3</param>
         /// <param name="sortOrder3">optional object sortOrder3</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3 });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3 });
         }
 
         /// <summary>
@@ -4916,10 +4916,10 @@ namespace NetOffice.WordApi
         /// <param name="sortOrder3">optional object sortOrder3</param>
         /// <param name="sortColumn">optional object sortColumn</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn });
         }
 
         /// <summary>
@@ -4939,10 +4939,10 @@ namespace NetOffice.WordApi
         /// <param name="sortColumn">optional object sortColumn</param>
         /// <param name="separator">optional object separator</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator });
         }
 
         /// <summary>
@@ -4963,10 +4963,10 @@ namespace NetOffice.WordApi
         /// <param name="separator">optional object separator</param>
         /// <param name="caseSensitive">optional object caseSensitive</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive });
         }
 
         /// <summary>
@@ -4988,10 +4988,10 @@ namespace NetOffice.WordApi
         /// <param name="caseSensitive">optional object caseSensitive</param>
         /// <param name="bidiSort">optional object bidiSort</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort });
         }
 
         /// <summary>
@@ -5014,10 +5014,10 @@ namespace NetOffice.WordApi
         /// <param name="bidiSort">optional object bidiSort</param>
         /// <param name="ignoreThe">optional object ignoreThe</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe });
         }
 
         /// <summary>
@@ -5041,10 +5041,10 @@ namespace NetOffice.WordApi
         /// <param name="ignoreThe">optional object ignoreThe</param>
         /// <param name="ignoreKashida">optional object ignoreKashida</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
         }
 
         /// <summary>
@@ -5069,10 +5069,10 @@ namespace NetOffice.WordApi
         /// <param name="ignoreKashida">optional object ignoreKashida</param>
         /// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
         }
 
         /// <summary>
@@ -5098,17 +5098,17 @@ namespace NetOffice.WordApi
         /// <param name="ignoreDiacritics">optional object ignoreDiacritics</param>
         /// <param name="ignoreHe">optional object ignoreHe</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Sort(object excludeHeader, object fieldNumber, object sortFieldType, object sortOrder, object fieldNumber2, object sortFieldType2, object sortOrder2, object fieldNumber3, object sortFieldType3, object sortOrder3, object sortColumn, object separator, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
         {
-            Factory.ExecuteMethod(this, "Sort", new object[]{ excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
+            Factory.ExecuteMethod(this, "Sort", new object[] { excludeHeader, fieldNumber, sortFieldType, sortOrder, fieldNumber2, sortFieldType2, sortOrder2, fieldNumber3, sortFieldType3, sortOrder3, sortColumn, separator, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.DetectLanguage"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void DetectLanguage()
         {
             Factory.ExecuteMethod(this, "DetectLanguage");
@@ -5134,10 +5134,10 @@ namespace NetOffice.WordApi
         /// <param name="autoFit">optional object autoFit</param>
         /// <param name="autoFitBehavior">optional object autoFitBehavior</param>
         /// <param name="defaultTableBehavior">optional object defaultTableBehavior</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior, object defaultTableBehavior)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior, defaultTableBehavior });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior, defaultTableBehavior });
         }
 
         /// <summary>
@@ -5145,7 +5145,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ConvertToTable"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType);
@@ -5157,7 +5157,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ConvertToTable"/> </remarks>
         /// <param name="separator">optional object separator</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator);
@@ -5170,7 +5170,7 @@ namespace NetOffice.WordApi
         /// <param name="separator">optional object separator</param>
         /// <param name="numRows">optional object numRows</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows);
@@ -5184,7 +5184,7 @@ namespace NetOffice.WordApi
         /// <param name="numRows">optional object numRows</param>
         /// <param name="numColumns">optional object numColumns</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns);
@@ -5199,7 +5199,7 @@ namespace NetOffice.WordApi
         /// <param name="numColumns">optional object numColumns</param>
         /// <param name="initialColumnWidth">optional object initialColumnWidth</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, separator, numRows, numColumns, initialColumnWidth);
@@ -5215,10 +5215,10 @@ namespace NetOffice.WordApi
         /// <param name="initialColumnWidth">optional object initialColumnWidth</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format });
         }
 
         /// <summary>
@@ -5232,10 +5232,10 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="applyBorders">optional object applyBorders</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders });
         }
 
         /// <summary>
@@ -5250,10 +5250,10 @@ namespace NetOffice.WordApi
         /// <param name="applyBorders">optional object applyBorders</param>
         /// <param name="applyShading">optional object applyShading</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading });
         }
 
         /// <summary>
@@ -5269,10 +5269,10 @@ namespace NetOffice.WordApi
         /// <param name="applyShading">optional object applyShading</param>
         /// <param name="applyFont">optional object applyFont</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont });
         }
 
         /// <summary>
@@ -5289,10 +5289,10 @@ namespace NetOffice.WordApi
         /// <param name="applyFont">optional object applyFont</param>
         /// <param name="applyColor">optional object applyColor</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor });
         }
 
         /// <summary>
@@ -5310,10 +5310,10 @@ namespace NetOffice.WordApi
         /// <param name="applyColor">optional object applyColor</param>
         /// <param name="applyHeadingRows">optional object applyHeadingRows</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows });
         }
 
         /// <summary>
@@ -5332,10 +5332,10 @@ namespace NetOffice.WordApi
         /// <param name="applyHeadingRows">optional object applyHeadingRows</param>
         /// <param name="applyLastRow">optional object applyLastRow</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow });
         }
 
         /// <summary>
@@ -5355,10 +5355,10 @@ namespace NetOffice.WordApi
         /// <param name="applyLastRow">optional object applyLastRow</param>
         /// <param name="applyFirstColumn">optional object applyFirstColumn</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn });
         }
 
         /// <summary>
@@ -5379,10 +5379,10 @@ namespace NetOffice.WordApi
         /// <param name="applyFirstColumn">optional object applyFirstColumn</param>
         /// <param name="applyLastColumn">optional object applyLastColumn</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn });
         }
 
         /// <summary>
@@ -5404,10 +5404,10 @@ namespace NetOffice.WordApi
         /// <param name="applyLastColumn">optional object applyLastColumn</param>
         /// <param name="autoFit">optional object autoFit</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit });
         }
 
         /// <summary>
@@ -5430,10 +5430,10 @@ namespace NetOffice.WordApi
         /// <param name="autoFit">optional object autoFit</param>
         /// <param name="autoFitBehavior">optional object autoFitBehavior</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Table ConvertToTable(object separator, object numRows, object numColumns, object initialColumnWidth, object format, object applyBorders, object applyShading, object applyFont, object applyColor, object applyHeadingRows, object applyLastRow, object applyFirstColumn, object applyLastColumn, object autoFit, object autoFitBehavior)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[]{ separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Table>(this, "ConvertToTable", NetOffice.WordApi.Table.LateBindingApiWrapperType, new object[] { separator, numRows, numColumns, initialColumnWidth, format, applyBorders, applyShading, applyFont, applyColor, applyHeadingRows, applyLastRow, applyFirstColumn, applyLastColumn, autoFit, autoFitBehavior });
         }
 
         /// <summary>
@@ -5443,7 +5443,7 @@ namespace NetOffice.WordApi
         /// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
         /// <param name="commonTerms">optional bool CommonTerms = false</param>
         /// <param name="useVariants">optional bool UseVariants = false</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TCSCConverter(object wdTCSCConverterDirection, object commonTerms, object useVariants)
         {
             Factory.ExecuteMethod(this, "TCSCConverter", wdTCSCConverterDirection, commonTerms, useVariants);
@@ -5454,7 +5454,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.TCSCConverter"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TCSCConverter()
         {
             Factory.ExecuteMethod(this, "TCSCConverter");
@@ -5466,7 +5466,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.TCSCConverter"/> </remarks>
         /// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TCSCConverter(object wdTCSCConverterDirection)
         {
             Factory.ExecuteMethod(this, "TCSCConverter", wdTCSCConverterDirection);
@@ -5479,7 +5479,7 @@ namespace NetOffice.WordApi
         /// <param name="wdTCSCConverterDirection">optional NetOffice.WordApi.Enums.WdTCSCConverterDirection WdTCSCConverterDirection = 2</param>
         /// <param name="commonTerms">optional bool CommonTerms = false</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void TCSCConverter(object wdTCSCConverterDirection, object commonTerms)
         {
             Factory.ExecuteMethod(this, "TCSCConverter", wdTCSCConverterDirection, commonTerms);
@@ -5490,7 +5490,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PasteAndFormat"/> </remarks>
         /// <param name="type">NetOffice.WordApi.Enums.WdRecoveryType type</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PasteAndFormat(NetOffice.WordApi.Enums.WdRecoveryType type)
         {
             Factory.ExecuteMethod(this, "PasteAndFormat", type);
@@ -5503,7 +5503,7 @@ namespace NetOffice.WordApi
         /// <param name="linkedToExcel">bool linkedToExcel</param>
         /// <param name="wordFormatting">bool wordFormatting</param>
         /// <param name="rTF">bool rTF</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PasteExcelTable(bool linkedToExcel, bool wordFormatting, bool rTF)
         {
             Factory.ExecuteMethod(this, "PasteExcelTable", linkedToExcel, wordFormatting, rTF);
@@ -5513,7 +5513,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.PasteAppendTable"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PasteAppendTable()
         {
             Factory.ExecuteMethod(this, "PasteAppendTable");
@@ -5528,10 +5528,10 @@ namespace NetOffice.WordApi
         /// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
         /// <param name="includePosition">optional object includePosition</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink, object includePosition)
         {
-            Factory.ExecuteMethod(this, "InsertCrossReference_2002", new object[]{ referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition });
+            Factory.ExecuteMethod(this, "InsertCrossReference_2002", new object[] { referenceType, referenceKind, referenceItem, insertAsHyperlink, includePosition });
         }
 
         /// <summary>
@@ -5542,7 +5542,7 @@ namespace NetOffice.WordApi
         /// <param name="referenceItem">object referenceItem</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem)
         {
             Factory.ExecuteMethod(this, "InsertCrossReference_2002", referenceType, referenceKind, referenceItem);
@@ -5557,7 +5557,7 @@ namespace NetOffice.WordApi
         /// <param name="insertAsHyperlink">optional object insertAsHyperlink</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCrossReference_2002(object referenceType, NetOffice.WordApi.Enums.WdReferenceKind referenceKind, object referenceItem, object insertAsHyperlink)
         {
             Factory.ExecuteMethod(this, "InsertCrossReference_2002", referenceType, referenceKind, referenceItem, insertAsHyperlink);
@@ -5571,7 +5571,7 @@ namespace NetOffice.WordApi
         /// <param name="titleAutoText">optional object titleAutoText</param>
         /// <param name="position">optional object position</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCaptionXP(object label, object title, object titleAutoText, object position)
         {
             Factory.ExecuteMethod(this, "InsertCaptionXP", label, title, titleAutoText, position);
@@ -5583,7 +5583,7 @@ namespace NetOffice.WordApi
         /// <param name="label">object label</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCaptionXP(object label)
         {
             Factory.ExecuteMethod(this, "InsertCaptionXP", label);
@@ -5596,7 +5596,7 @@ namespace NetOffice.WordApi
         /// <param name="title">optional object title</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCaptionXP(object label, object title)
         {
             Factory.ExecuteMethod(this, "InsertCaptionXP", label, title);
@@ -5610,7 +5610,7 @@ namespace NetOffice.WordApi
         /// <param name="titleAutoText">optional object titleAutoText</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertCaptionXP(object label, object title, object titleAutoText)
         {
             Factory.ExecuteMethod(this, "InsertCaptionXP", label, title, titleAutoText);
@@ -5621,7 +5621,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GoToEditableRange"/> </remarks>
         /// <param name="editorID">optional object editorID</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoToEditableRange(object editorID)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToEditableRange", NetOffice.WordApi.Range.LateBindingApiWrapperType, editorID);
@@ -5632,7 +5632,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.GoToEditableRange"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range GoToEditableRange()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Range>(this, "GoToEditableRange", NetOffice.WordApi.Range.LateBindingApiWrapperType);
@@ -5644,7 +5644,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertXML"/> </remarks>
         /// <param name="xML">string xML</param>
         /// <param name="transform">optional object transform</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertXML(string xML, object transform)
         {
             Factory.ExecuteMethod(this, "InsertXML", xML, transform);
@@ -5656,7 +5656,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertXML"/> </remarks>
         /// <param name="xML">string xML</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InsertXML(string xML)
         {
             Factory.ExecuteMethod(this, "InsertXML", xML);
@@ -5668,7 +5668,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ExportFragment"/> </remarks>
         /// <param name="fileName">string fileName</param>
         /// <param name="format">NetOffice.WordApi.Enums.WdSaveFormat format</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportFragment(string fileName, NetOffice.WordApi.Enums.WdSaveFormat format)
         {
             Factory.ExecuteMethod(this, "ExportFragment", fileName, format);
@@ -5679,7 +5679,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.SetListLevel"/> </remarks>
         /// <param name="level">Int16 level</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void SetListLevel(Int16 level)
         {
             Factory.ExecuteMethod(this, "SetListLevel", level);
@@ -5691,7 +5691,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertAlignmentTab"/> </remarks>
         /// <param name="alignment">Int32 alignment</param>
         /// <param name="relativeTo">optional Int32 RelativeTo = 0</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void InsertAlignmentTab(Int32 alignment, object relativeTo)
         {
             Factory.ExecuteMethod(this, "InsertAlignmentTab", alignment, relativeTo);
@@ -5703,7 +5703,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.InsertAlignmentTab"/> </remarks>
         /// <param name="alignment">Int32 alignment</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void InsertAlignmentTab(Int32 alignment)
         {
             Factory.ExecuteMethod(this, "InsertAlignmentTab", alignment);
@@ -5715,7 +5715,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ImportFragment"/> </remarks>
         /// <param name="fileName">string fileName</param>
         /// <param name="matchDestination">optional bool MatchDestination = false</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ImportFragment(string fileName, object matchDestination)
         {
             Factory.ExecuteMethod(this, "ImportFragment", fileName, matchDestination);
@@ -5727,7 +5727,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Range.ImportFragment"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ImportFragment(string fileName)
         {
             Factory.ExecuteMethod(this, "ImportFragment", fileName);
@@ -5750,10 +5750,10 @@ namespace NetOffice.WordApi
         /// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
         /// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
         /// <param name="fixedFormatExtClassPtr">optional object fixedFormatExtClassPtr</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts, object useISO19005_1, object fixedFormatExtClassPtr)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1, fixedFormatExtClassPtr });
         }
 
         /// <summary>
@@ -5763,7 +5763,7 @@ namespace NetOffice.WordApi
         /// <param name="outputFileName">string outputFileName</param>
         /// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat)
         {
             Factory.ExecuteMethod(this, "ExportAsFixedFormat", outputFileName, exportFormat);
@@ -5777,7 +5777,7 @@ namespace NetOffice.WordApi
         /// <param name="exportFormat">NetOffice.WordApi.Enums.WdExportFormat exportFormat</param>
         /// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport)
         {
             Factory.ExecuteMethod(this, "ExportAsFixedFormat", outputFileName, exportFormat, openAfterExport);
@@ -5792,7 +5792,7 @@ namespace NetOffice.WordApi
         /// <param name="openAfterExport">optional bool OpenAfterExport = false</param>
         /// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor)
         {
             Factory.ExecuteMethod(this, "ExportAsFixedFormat", outputFileName, exportFormat, openAfterExport, optimizeFor);
@@ -5808,10 +5808,10 @@ namespace NetOffice.WordApi
         /// <param name="optimizeFor">optional NetOffice.WordApi.Enums.WdExportOptimizeFor OptimizeFor = 0</param>
         /// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage });
         }
 
         /// <summary>
@@ -5825,10 +5825,10 @@ namespace NetOffice.WordApi
         /// <param name="exportCurrentPage">optional bool ExportCurrentPage = false</param>
         /// <param name="item">optional NetOffice.WordApi.Enums.WdExportItem Item = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item });
         }
 
         /// <summary>
@@ -5843,10 +5843,10 @@ namespace NetOffice.WordApi
         /// <param name="item">optional NetOffice.WordApi.Enums.WdExportItem Item = 0</param>
         /// <param name="includeDocProps">optional bool IncludeDocProps = false</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps });
         }
 
         /// <summary>
@@ -5862,10 +5862,10 @@ namespace NetOffice.WordApi
         /// <param name="includeDocProps">optional bool IncludeDocProps = false</param>
         /// <param name="keepIRM">optional bool KeepIRM = true</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM });
         }
 
         /// <summary>
@@ -5882,10 +5882,10 @@ namespace NetOffice.WordApi
         /// <param name="keepIRM">optional bool KeepIRM = true</param>
         /// <param name="createBookmarks">optional NetOffice.WordApi.Enums.WdExportCreateBookmarks CreateBookmarks = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks });
         }
 
         /// <summary>
@@ -5903,10 +5903,10 @@ namespace NetOffice.WordApi
         /// <param name="createBookmarks">optional NetOffice.WordApi.Enums.WdExportCreateBookmarks CreateBookmarks = 0</param>
         /// <param name="docStructureTags">optional bool DocStructureTags = true</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags });
         }
 
         /// <summary>
@@ -5925,10 +5925,10 @@ namespace NetOffice.WordApi
         /// <param name="docStructureTags">optional bool DocStructureTags = true</param>
         /// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts });
         }
 
         /// <summary>
@@ -5948,10 +5948,10 @@ namespace NetOffice.WordApi
         /// <param name="bitmapMissingFonts">optional bool BitmapMissingFonts = true</param>
         /// <param name="useISO19005_1">optional bool UseISO19005_1 = false</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ExportAsFixedFormat(string outputFileName, NetOffice.WordApi.Enums.WdExportFormat exportFormat, object openAfterExport, object optimizeFor, object exportCurrentPage, object item, object includeDocProps, object keepIRM, object createBookmarks, object docStructureTags, object bitmapMissingFonts, object useISO19005_1)
         {
-            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[]{ outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1 });
+            Factory.ExecuteMethod(this, "ExportAsFixedFormat", new object[] { outputFileName, exportFormat, openAfterExport, optimizeFor, exportCurrentPage, item, includeDocProps, keepIRM, createBookmarks, docStructureTags, bitmapMissingFonts, useISO19005_1 });
         }
 
         /// <summary>
@@ -5970,7 +5970,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe, object languageID)
         {
-            Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
+            Factory.ExecuteMethod(this, "SortByHeadings", new object[] { sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe, languageID });
         }
 
         /// <summary>
@@ -6051,7 +6051,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe)
         {
-            Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe });
+            Factory.ExecuteMethod(this, "SortByHeadings", new object[] { sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe });
         }
 
         /// <summary>
@@ -6068,7 +6068,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida)
         {
-            Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
+            Factory.ExecuteMethod(this, "SortByHeadings", new object[] { sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida });
         }
 
         /// <summary>
@@ -6086,7 +6086,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics)
         {
-            Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
+            Factory.ExecuteMethod(this, "SortByHeadings", new object[] { sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics });
         }
 
         /// <summary>
@@ -6105,11 +6105,11 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void SortByHeadings(object sortFieldType, object sortOrder, object caseSensitive, object bidiSort, object ignoreThe, object ignoreKashida, object ignoreDiacritics, object ignoreHe)
         {
-            Factory.ExecuteMethod(this, "SortByHeadings", new object[]{ sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
+            Factory.ExecuteMethod(this, "SortByHeadings", new object[] { sortFieldType, sortOrder, caseSensitive, bidiSort, ignoreThe, ignoreKashida, ignoreDiacritics, ignoreHe });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

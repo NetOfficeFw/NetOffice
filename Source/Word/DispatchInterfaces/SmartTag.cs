@@ -9,11 +9,11 @@ namespace NetOffice.WordApi
     /// DispatchInterface SmartTag 
     /// SupportByVersion Word, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Word", 10,11,12,14,15,16)]
+    [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class SmartTag : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SmartTag(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.WordApi
         public SmartTag(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.WordApi
         public SmartTag(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SmartTag(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SmartTag() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SmartTag(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public string XML
         {
             get
@@ -137,7 +137,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Range
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public string DownloadURL
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.CustomProperties Properties
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.SmartTagActions SmartTagActions
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNode XMLNode
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void Select()
         {
             Factory.ExecuteMethod(this, "Select");
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -262,6 +262,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

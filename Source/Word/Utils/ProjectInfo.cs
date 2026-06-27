@@ -5,7 +5,7 @@ using NetOffice.Attributes;
 
 namespace WordApi.Utils
 {
-    #pragma warning disable
+#pragma warning disable
     /// <summary>
     /// Necessary factory info, used from NetOffice.Core while Initialize()
     /// </summary>
@@ -13,14 +13,14 @@ namespace WordApi.Utils
     {
         #region Fields
 
-        private string    _name;
-        private string    _namespace     = "NetOffice.WordApi";
-        private Guid[]    _componentGuid = new Guid[]{new Guid("00020905-0000-0000-C000-000000000046")};
-        private Assembly  _assembly;
+        private string _name;
+        private string _namespace = "NetOffice.WordApi";
+        private Guid[] _componentGuid = new Guid[] { new Guid("00020905-0000-0000-C000-000000000046") };
+        private Assembly _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
-        private Type[]	  _exportedTypes;
-        private string[]  _dependents;
-        
+        private Type[] _exportedTypes;
+        private string[] _dependents;
+
         #endregion
 
         #region Ctor
@@ -80,8 +80,8 @@ namespace WordApi.Utils
         {
             get
             {
-                if(null == _dependents)
-                    _dependents = new string[]{"OfficeApi.dll","VBIDEApi.dll"};
+                if (null == _dependents)
+                    _dependents = new string[] { "OfficeApi.dll", "VBIDEApi.dll" };
                 return _dependents;
             }
         }
@@ -124,5 +124,5 @@ namespace WordApi.Utils
 
         #endregion
     }
-    #pragma warning restore
+#pragma warning restore
 }

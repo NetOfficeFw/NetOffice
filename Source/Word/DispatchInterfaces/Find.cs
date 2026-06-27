@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Find : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Find(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public Find(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public Find(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Find(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Find() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Find(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Forward"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Forward
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Font"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Font Font
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Found"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Found
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchAllWordForms"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchAllWordForms
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchCase"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchCase
         {
             get
@@ -242,7 +242,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchWildcards"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchWildcards
         {
             get
@@ -260,7 +260,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchSoundsLike"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchSoundsLike
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchWholeWord"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchWholeWord
         {
             get
@@ -296,7 +296,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchFuzzy"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchFuzzy
         {
             get
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchByte"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchByte
         {
             get
@@ -332,7 +332,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.ParagraphFormat"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ParagraphFormat ParagraphFormat
         {
             get
@@ -350,7 +350,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Style"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public object Style
         {
             get
@@ -368,7 +368,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Text"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -386,7 +386,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.LanguageID"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLanguageID LanguageID
         {
             get
@@ -404,7 +404,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Highlight"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Highlight
         {
             get
@@ -422,7 +422,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Replacement"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Replacement Replacement
         {
             get
@@ -436,7 +436,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Frame"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Frame Frame
         {
             get
@@ -450,7 +450,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Wrap"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdFindWrap Wrap
         {
             get
@@ -468,7 +468,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Format"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Format
         {
             get
@@ -486,7 +486,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.LanguageIDFarEast"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLanguageID LanguageIDFarEast
         {
             get
@@ -504,7 +504,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.LanguageIDOther"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdLanguageID LanguageIDOther
         {
             get
@@ -522,7 +522,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.CorrectHangulEndings"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool CorrectHangulEndings
         {
             get
@@ -540,7 +540,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.NoProofing"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 NoProofing
         {
             get
@@ -558,7 +558,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchKashida"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchKashida
         {
             get
@@ -576,7 +576,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchDiacritics"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchDiacritics
         {
             get
@@ -594,7 +594,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchAlefHamza"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchAlefHamza
         {
             get
@@ -612,7 +612,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchControl"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchControl
         {
             get
@@ -630,7 +630,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchPhrase"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool MatchPhrase
         {
             get
@@ -648,7 +648,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchPrefix"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool MatchPrefix
         {
             get
@@ -666,7 +666,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.MatchSuffix"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool MatchSuffix
         {
             get
@@ -684,7 +684,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.IgnoreSpace"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool IgnoreSpace
         {
             get
@@ -702,7 +702,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.IgnorePunct"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool IgnorePunct
         {
             get
@@ -720,7 +720,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.HanjaPhoneticHangul"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HanjaPhoneticHangul
         {
             get
@@ -752,10 +752,10 @@ namespace NetOffice.WordApi
         /// <param name="replaceWith">optional object replaceWith</param>
         /// <param name="replace">optional object replace</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace });
         }
 
         /// <summary>
@@ -763,7 +763,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld()
         {
             return Factory.ExecuteBoolMethodGet(this, "ExecuteOld");
@@ -775,7 +775,7 @@ namespace NetOffice.WordApi
         /// <param name="findText">optional object findText</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText)
         {
             return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", findText);
@@ -788,7 +788,7 @@ namespace NetOffice.WordApi
         /// <param name="matchCase">optional object matchCase</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase)
         {
             return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", findText, matchCase);
@@ -802,7 +802,7 @@ namespace NetOffice.WordApi
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord)
         {
             return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", findText, matchCase, matchWholeWord);
@@ -817,7 +817,7 @@ namespace NetOffice.WordApi
         /// <param name="matchWildcards">optional object matchWildcards</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards)
         {
             return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", findText, matchCase, matchWholeWord, matchWildcards);
@@ -833,10 +833,10 @@ namespace NetOffice.WordApi
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike });
         }
 
         /// <summary>
@@ -850,10 +850,10 @@ namespace NetOffice.WordApi
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms });
         }
 
         /// <summary>
@@ -868,10 +868,10 @@ namespace NetOffice.WordApi
         /// <param name="forward">optional object forward</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward });
         }
 
         /// <summary>
@@ -887,10 +887,10 @@ namespace NetOffice.WordApi
         /// <param name="wrap">optional object wrap</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap });
         }
 
         /// <summary>
@@ -907,10 +907,10 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format });
         }
 
         /// <summary>
@@ -928,17 +928,17 @@ namespace NetOffice.WordApi
         /// <param name="replaceWith">optional object replaceWith</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool ExecuteOld(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith)
         {
-            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith });
+            return Factory.ExecuteBoolMethodGet(this, "ExecuteOld", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith });
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.ClearFormatting"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ClearFormatting()
         {
             Factory.ExecuteMethod(this, "ClearFormatting");
@@ -948,7 +948,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.SetAllFuzzyOptions"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SetAllFuzzyOptions()
         {
             Factory.ExecuteMethod(this, "SetAllFuzzyOptions");
@@ -958,7 +958,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.ClearAllFuzzyOptions"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ClearAllFuzzyOptions()
         {
             Factory.ExecuteMethod(this, "ClearAllFuzzyOptions");
@@ -983,10 +983,10 @@ namespace NetOffice.WordApi
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         /// <param name="matchAlefHamza">optional object matchAlefHamza</param>
         /// <param name="matchControl">optional object matchControl</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl });
         }
 
         /// <summary>
@@ -994,7 +994,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Execute"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute()
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute");
@@ -1006,7 +1006,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Execute"/> </remarks>
         /// <param name="findText">optional object findText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute", findText);
@@ -1019,7 +1019,7 @@ namespace NetOffice.WordApi
         /// <param name="findText">optional object findText</param>
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute", findText, matchCase);
@@ -1033,7 +1033,7 @@ namespace NetOffice.WordApi
         /// <param name="matchCase">optional object matchCase</param>
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute", findText, matchCase, matchWholeWord);
@@ -1048,7 +1048,7 @@ namespace NetOffice.WordApi
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         /// <param name="matchWildcards">optional object matchWildcards</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute", findText, matchCase, matchWholeWord, matchWildcards);
@@ -1064,10 +1064,10 @@ namespace NetOffice.WordApi
         /// <param name="matchWildcards">optional object matchWildcards</param>
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike });
         }
 
         /// <summary>
@@ -1081,10 +1081,10 @@ namespace NetOffice.WordApi
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms });
         }
 
         /// <summary>
@@ -1099,10 +1099,10 @@ namespace NetOffice.WordApi
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         /// <param name="forward">optional object forward</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward });
         }
 
         /// <summary>
@@ -1118,10 +1118,10 @@ namespace NetOffice.WordApi
         /// <param name="forward">optional object forward</param>
         /// <param name="wrap">optional object wrap</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap });
         }
 
         /// <summary>
@@ -1138,10 +1138,10 @@ namespace NetOffice.WordApi
         /// <param name="wrap">optional object wrap</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format });
         }
 
         /// <summary>
@@ -1159,10 +1159,10 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="replaceWith">optional object replaceWith</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith });
         }
 
         /// <summary>
@@ -1181,10 +1181,10 @@ namespace NetOffice.WordApi
         /// <param name="replaceWith">optional object replaceWith</param>
         /// <param name="replace">optional object replace</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace });
         }
 
         /// <summary>
@@ -1204,10 +1204,10 @@ namespace NetOffice.WordApi
         /// <param name="replace">optional object replace</param>
         /// <param name="matchKashida">optional object matchKashida</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida });
         }
 
         /// <summary>
@@ -1228,10 +1228,10 @@ namespace NetOffice.WordApi
         /// <param name="matchKashida">optional object matchKashida</param>
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics });
         }
 
         /// <summary>
@@ -1253,10 +1253,10 @@ namespace NetOffice.WordApi
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         /// <param name="matchAlefHamza">optional object matchAlefHamza</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Execute(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza });
+            return Factory.ExecuteBoolMethodGet(this, "Execute", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza });
         }
 
         /// <summary>
@@ -1283,10 +1283,10 @@ namespace NetOffice.WordApi
         /// <param name="ignoreSpace">optional object ignoreSpace</param>
         /// <param name="ignorePunct">optional object ignorePunct</param>
         /// <param name="hanjaPhoneticHangul">optional object hanjaPhoneticHangul</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace, object ignorePunct, object hanjaPhoneticHangul)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct, hanjaPhoneticHangul });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct, hanjaPhoneticHangul });
         }
 
         /// <summary>
@@ -1295,7 +1295,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.HitHighlight"/> </remarks>
         /// <param name="findText">object findText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText)
         {
             return Factory.ExecuteBoolMethodGet(this, "HitHighlight", findText);
@@ -1308,7 +1308,7 @@ namespace NetOffice.WordApi
         /// <param name="findText">object findText</param>
         /// <param name="highlightColor">optional object highlightColor</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor)
         {
             return Factory.ExecuteBoolMethodGet(this, "HitHighlight", findText, highlightColor);
@@ -1322,7 +1322,7 @@ namespace NetOffice.WordApi
         /// <param name="highlightColor">optional object highlightColor</param>
         /// <param name="textColor">optional object textColor</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor)
         {
             return Factory.ExecuteBoolMethodGet(this, "HitHighlight", findText, highlightColor, textColor);
@@ -1337,7 +1337,7 @@ namespace NetOffice.WordApi
         /// <param name="textColor">optional object textColor</param>
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase)
         {
             return Factory.ExecuteBoolMethodGet(this, "HitHighlight", findText, highlightColor, textColor, matchCase);
@@ -1353,10 +1353,10 @@ namespace NetOffice.WordApi
         /// <param name="matchCase">optional object matchCase</param>
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord });
         }
 
         /// <summary>
@@ -1370,10 +1370,10 @@ namespace NetOffice.WordApi
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         /// <param name="matchPrefix">optional object matchPrefix</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix });
         }
 
         /// <summary>
@@ -1388,10 +1388,10 @@ namespace NetOffice.WordApi
         /// <param name="matchPrefix">optional object matchPrefix</param>
         /// <param name="matchSuffix">optional object matchSuffix</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix });
         }
 
         /// <summary>
@@ -1407,10 +1407,10 @@ namespace NetOffice.WordApi
         /// <param name="matchSuffix">optional object matchSuffix</param>
         /// <param name="matchPhrase">optional object matchPhrase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase });
         }
 
         /// <summary>
@@ -1427,10 +1427,10 @@ namespace NetOffice.WordApi
         /// <param name="matchPhrase">optional object matchPhrase</param>
         /// <param name="matchWildcards">optional object matchWildcards</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards });
         }
 
         /// <summary>
@@ -1448,10 +1448,10 @@ namespace NetOffice.WordApi
         /// <param name="matchWildcards">optional object matchWildcards</param>
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike });
         }
 
         /// <summary>
@@ -1470,10 +1470,10 @@ namespace NetOffice.WordApi
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms });
         }
 
         /// <summary>
@@ -1493,10 +1493,10 @@ namespace NetOffice.WordApi
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         /// <param name="matchByte">optional object matchByte</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte });
         }
 
         /// <summary>
@@ -1517,10 +1517,10 @@ namespace NetOffice.WordApi
         /// <param name="matchByte">optional object matchByte</param>
         /// <param name="matchFuzzy">optional object matchFuzzy</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy });
         }
 
         /// <summary>
@@ -1542,10 +1542,10 @@ namespace NetOffice.WordApi
         /// <param name="matchFuzzy">optional object matchFuzzy</param>
         /// <param name="matchKashida">optional object matchKashida</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida });
         }
 
         /// <summary>
@@ -1568,10 +1568,10 @@ namespace NetOffice.WordApi
         /// <param name="matchKashida">optional object matchKashida</param>
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics });
         }
 
         /// <summary>
@@ -1595,10 +1595,10 @@ namespace NetOffice.WordApi
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         /// <param name="matchAlefHamza">optional object matchAlefHamza</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza });
         }
 
         /// <summary>
@@ -1623,10 +1623,10 @@ namespace NetOffice.WordApi
         /// <param name="matchAlefHamza">optional object matchAlefHamza</param>
         /// <param name="matchControl">optional object matchControl</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl });
         }
 
         /// <summary>
@@ -1652,10 +1652,10 @@ namespace NetOffice.WordApi
         /// <param name="matchControl">optional object matchControl</param>
         /// <param name="ignoreSpace">optional object ignoreSpace</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace });
         }
 
         /// <summary>
@@ -1682,17 +1682,17 @@ namespace NetOffice.WordApi
         /// <param name="ignoreSpace">optional object ignoreSpace</param>
         /// <param name="ignorePunct">optional object ignorePunct</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool HitHighlight(object findText, object highlightColor, object textColor, object matchCase, object matchWholeWord, object matchPrefix, object matchSuffix, object matchPhrase, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object matchByte, object matchFuzzy, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object ignoreSpace, object ignorePunct)
         {
-            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[]{ findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct });
+            return Factory.ExecuteBoolMethodGet(this, "HitHighlight", new object[] { findText, highlightColor, textColor, matchCase, matchWholeWord, matchPrefix, matchSuffix, matchPhrase, matchWildcards, matchSoundsLike, matchAllWordForms, matchByte, matchFuzzy, matchKashida, matchDiacritics, matchAlefHamza, matchControl, ignoreSpace, ignorePunct });
         }
 
         /// <summary>
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.ClearHitHighlight"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool ClearHitHighlight()
         {
             return Factory.ExecuteBoolMethodGet(this, "ClearHitHighlight");
@@ -1722,10 +1722,10 @@ namespace NetOffice.WordApi
         /// <param name="matchPhrase">optional object matchPhrase</param>
         /// <param name="ignoreSpace">optional object ignoreSpace</param>
         /// <param name="ignorePunct">optional object ignorePunct</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase, object ignoreSpace, object ignorePunct)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace, ignorePunct });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace, ignorePunct });
         }
 
         /// <summary>
@@ -1733,7 +1733,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Execute2007"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007()
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute2007");
@@ -1745,7 +1745,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Find.Execute2007"/> </remarks>
         /// <param name="findText">optional object findText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute2007", findText);
@@ -1758,7 +1758,7 @@ namespace NetOffice.WordApi
         /// <param name="findText">optional object findText</param>
         /// <param name="matchCase">optional object matchCase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute2007", findText, matchCase);
@@ -1772,7 +1772,7 @@ namespace NetOffice.WordApi
         /// <param name="matchCase">optional object matchCase</param>
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute2007", findText, matchCase, matchWholeWord);
@@ -1787,7 +1787,7 @@ namespace NetOffice.WordApi
         /// <param name="matchWholeWord">optional object matchWholeWord</param>
         /// <param name="matchWildcards">optional object matchWildcards</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards)
         {
             return Factory.ExecuteBoolMethodGet(this, "Execute2007", findText, matchCase, matchWholeWord, matchWildcards);
@@ -1803,10 +1803,10 @@ namespace NetOffice.WordApi
         /// <param name="matchWildcards">optional object matchWildcards</param>
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike });
         }
 
         /// <summary>
@@ -1820,10 +1820,10 @@ namespace NetOffice.WordApi
         /// <param name="matchSoundsLike">optional object matchSoundsLike</param>
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms });
         }
 
         /// <summary>
@@ -1838,10 +1838,10 @@ namespace NetOffice.WordApi
         /// <param name="matchAllWordForms">optional object matchAllWordForms</param>
         /// <param name="forward">optional object forward</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward });
         }
 
         /// <summary>
@@ -1857,10 +1857,10 @@ namespace NetOffice.WordApi
         /// <param name="forward">optional object forward</param>
         /// <param name="wrap">optional object wrap</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap });
         }
 
         /// <summary>
@@ -1877,10 +1877,10 @@ namespace NetOffice.WordApi
         /// <param name="wrap">optional object wrap</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format });
         }
 
         /// <summary>
@@ -1898,10 +1898,10 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="replaceWith">optional object replaceWith</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith });
         }
 
         /// <summary>
@@ -1920,10 +1920,10 @@ namespace NetOffice.WordApi
         /// <param name="replaceWith">optional object replaceWith</param>
         /// <param name="replace">optional object replace</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace });
         }
 
         /// <summary>
@@ -1943,10 +1943,10 @@ namespace NetOffice.WordApi
         /// <param name="replace">optional object replace</param>
         /// <param name="matchKashida">optional object matchKashida</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida });
         }
 
         /// <summary>
@@ -1967,10 +1967,10 @@ namespace NetOffice.WordApi
         /// <param name="matchKashida">optional object matchKashida</param>
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics });
         }
 
         /// <summary>
@@ -1992,10 +1992,10 @@ namespace NetOffice.WordApi
         /// <param name="matchDiacritics">optional object matchDiacritics</param>
         /// <param name="matchAlefHamza">optional object matchAlefHamza</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza });
         }
 
         /// <summary>
@@ -2018,10 +2018,10 @@ namespace NetOffice.WordApi
         /// <param name="matchAlefHamza">optional object matchAlefHamza</param>
         /// <param name="matchControl">optional object matchControl</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl });
         }
 
         /// <summary>
@@ -2045,10 +2045,10 @@ namespace NetOffice.WordApi
         /// <param name="matchControl">optional object matchControl</param>
         /// <param name="matchPrefix">optional object matchPrefix</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix });
         }
 
         /// <summary>
@@ -2073,10 +2073,10 @@ namespace NetOffice.WordApi
         /// <param name="matchPrefix">optional object matchPrefix</param>
         /// <param name="matchSuffix">optional object matchSuffix</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix });
         }
 
         /// <summary>
@@ -2102,10 +2102,10 @@ namespace NetOffice.WordApi
         /// <param name="matchSuffix">optional object matchSuffix</param>
         /// <param name="matchPhrase">optional object matchPhrase</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase });
         }
 
         /// <summary>
@@ -2132,14 +2132,14 @@ namespace NetOffice.WordApi
         /// <param name="matchPhrase">optional object matchPhrase</param>
         /// <param name="ignoreSpace">optional object ignoreSpace</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool Execute2007(object findText, object matchCase, object matchWholeWord, object matchWildcards, object matchSoundsLike, object matchAllWordForms, object forward, object wrap, object format, object replaceWith, object replace, object matchKashida, object matchDiacritics, object matchAlefHamza, object matchControl, object matchPrefix, object matchSuffix, object matchPhrase, object ignoreSpace)
         {
-            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[]{ findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace });
+            return Factory.ExecuteBoolMethodGet(this, "Execute2007", new object[] { findText, matchCase, matchWholeWord, matchWildcards, matchSoundsLike, matchAllWordForms, forward, wrap, format, replaceWith, replace, matchKashida, matchDiacritics, matchAlefHamza, matchControl, matchPrefix, matchSuffix, matchPhrase, ignoreSpace });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

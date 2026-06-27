@@ -9,11 +9,11 @@ namespace NetOffice.WordApi
     /// DispatchInterface _OLEControl 
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _OLEControl : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _OLEControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.WordApi
         public _OLEControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.WordApi
         public _OLEControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OLEControl(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OLEControl() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OLEControl(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single Left
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single Top
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single Height
         {
             get
@@ -162,7 +162,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single Width
         {
             get
@@ -179,7 +179,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -197,7 +197,7 @@ namespace NetOffice.WordApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Automation
         {
             get
@@ -210,7 +210,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string AltHTML
         {
@@ -231,7 +231,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Select()
         {
             Factory.ExecuteMethod(this, "Select");
@@ -240,7 +240,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Copy()
         {
             Factory.ExecuteMethod(this, "Copy");
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Cut()
         {
             Factory.ExecuteMethod(this, "Cut");
@@ -258,7 +258,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -267,7 +267,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Activate()
         {
             Factory.ExecuteMethod(this, "Activate");
@@ -275,6 +275,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

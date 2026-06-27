@@ -7,7 +7,7 @@ namespace NetOffice.WordApi.Enums
     /// SupportByVersion Word 12, 14, 15, 16
     /// </summary>
     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.WdFrenchSpeller"/> </remarks>
-    [SupportByVersion("Word", 12,14,15,16)]
+    [SupportByVersion("Word", 12, 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum WdFrenchSpeller
     {
@@ -15,21 +15,21 @@ namespace NetOffice.WordApi.Enums
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks>0</remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         wdFrenchBoth = 0,
 
         /// <summary>
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks>1</remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         wdFrenchPreReform = 1,
 
         /// <summary>
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks>2</remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         wdFrenchPostReform = 2
     }
 }

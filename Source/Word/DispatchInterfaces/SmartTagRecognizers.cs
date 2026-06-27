@@ -12,11 +12,11 @@ namespace NetOffice.WordApi
     /// DispatchInterface SmartTagRecognizers 
     /// SupportByVersion Word, 11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Word", 11,12,14,15,16)]
+    [SupportByVersion("Word", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class SmartTagRecognizers : COMObject, IEnumerableProvider<NetOffice.WordApi.SmartTagRecognizer>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SmartTagRecognizers(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.WordApi
         public SmartTagRecognizers(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.WordApi
         public SmartTagRecognizers(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SmartTagRecognizers(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SmartTagRecognizers() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SmartTagRecognizers(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.WordApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.SmartTagRecognizer this[object index]
         {
@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void ReloadRecognizers()
         {
             Factory.ExecuteMethod(this, "ReloadRecognizers");
@@ -227,7 +227,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -235,6 +235,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

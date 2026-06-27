@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels"/> </remarks>
-    [SupportByVersion("Word", 14,15,16)]
+    [SupportByVersion("Word", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class TickLabels : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TickLabels(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public TickLabels(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public TickLabels(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TickLabels(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TickLabels() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TickLabels(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Parent"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Font"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.ChartFont Font
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Name"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public string Name
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.NumberFormat"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public string NumberFormat
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.NumberFormatLinked"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool NumberFormatLinked
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.NumberFormatLocal"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object NumberFormatLocal
         {
             get
@@ -210,7 +210,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Orientation"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Enums.XlTickLabelOrientation Orientation
         {
             get
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.ReadingOrder"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 ReadingOrder
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object AutoScaleFont
         {
@@ -264,7 +264,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Depth"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Depth
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Offset"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Offset
         {
             get
@@ -296,7 +296,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Alignment"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Alignment
         {
             get
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.MultiLevel"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool MultiLevel
         {
             get
@@ -332,7 +332,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Format"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.ChartFormat Format
         {
             get
@@ -347,7 +347,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Application"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -361,7 +361,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Creator"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -378,7 +378,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Delete"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -388,7 +388,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TickLabels.Select"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -396,6 +396,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

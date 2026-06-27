@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow"/> </remarks>
-    [SupportByVersion("Word", 14,15,16)]
+    [SupportByVersion("Word", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ProtectedViewWindow : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ProtectedViewWindow(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public ProtectedViewWindow(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public ProtectedViewWindow(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ProtectedViewWindow(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ProtectedViewWindow() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ProtectedViewWindow(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Application"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Creator"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Parent"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Caption"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public string Caption
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Document"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Document Document
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Left"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Left
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Top"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Top
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Width"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Width
         {
             get
@@ -242,7 +242,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Height"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Height
         {
             get
@@ -260,7 +260,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.WindowState"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdWindowState WindowState
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Active"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool Active
         {
             get
@@ -292,7 +292,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Index"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Index
         {
             get
@@ -306,7 +306,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Visible"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool Visible
         {
             get
@@ -324,7 +324,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.SourceName"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public string SourceName
         {
             get
@@ -338,7 +338,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.SourcePath"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public string SourcePath
         {
             get
@@ -355,7 +355,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Activate"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Activate()
         {
             Factory.ExecuteMethod(this, "Activate");
@@ -368,7 +368,7 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Document Edit(object passwordTemplate, object writePasswordDocument, object writePasswordTemplate)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "Edit", NetOffice.WordApi.Document.LateBindingApiWrapperType, passwordTemplate, writePasswordDocument, writePasswordTemplate);
@@ -379,7 +379,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Edit"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Document Edit()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "Edit", NetOffice.WordApi.Document.LateBindingApiWrapperType);
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Edit"/> </remarks>
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Document Edit(object passwordTemplate)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "Edit", NetOffice.WordApi.Document.LateBindingApiWrapperType, passwordTemplate);
@@ -404,7 +404,7 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Document Edit(object passwordTemplate, object writePasswordDocument)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "Edit", NetOffice.WordApi.Document.LateBindingApiWrapperType, passwordTemplate, writePasswordDocument);
@@ -414,7 +414,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.Close"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -424,7 +424,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ProtectedViewWindow.ToggleRibbon"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ToggleRibbon()
         {
             Factory.ExecuteMethod(this, "ToggleRibbon");
@@ -432,6 +432,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

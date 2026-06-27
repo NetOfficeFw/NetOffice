@@ -7,7 +7,7 @@ namespace NetOffice.WordApi.Enums
     /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.WdSaveOptions"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum WdSaveOptions
     {
@@ -15,21 +15,21 @@ namespace NetOffice.WordApi.Enums
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>0</remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         wdDoNotSaveChanges = 0,
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>-1</remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         wdSaveChanges = -1,
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks>-2</remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         wdPromptToSaveChanges = -2
     }
 }

@@ -6,89 +6,89 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.WordApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000209FE-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface ApplicationEvents2
     {
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
         void Startup();
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
         void Quit();
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
         void DocumentChange();
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(4)]
         void DocumentOpen([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6)]
-        void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
+        void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In][Out] ref object cancel);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(7)]
-        void DocumentBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel);
+        void DocumentBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In][Out] ref object cancel);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [SinkArgument("saveAsUI", SinkArgumentType.Bool)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8)]
-        void DocumentBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object saveAsUI, [In] [Out] ref object cancel);
+        void DocumentBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In][Out] ref object saveAsUI, [In][Out] ref object cancel);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(9)]
         void NewDocument([In, MarshalAs(UnmanagedType.IDispatch)] object doc);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [SinkArgument("wn", typeof(WordApi.Window))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(10)]
         void WindowActivate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("doc", typeof(WordApi.Document))]
         [SinkArgument("wn", typeof(WordApi.Window))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(11)]
         void WindowDeactivate([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In, MarshalAs(UnmanagedType.IDispatch)] object wn);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sel", typeof(WordApi.Selection))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(12)]
         void WindowSelectionChange([In, MarshalAs(UnmanagedType.IDispatch)] object sel);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sel", typeof(WordApi.Selection))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(13)]
-        void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
+        void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel);
 
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("sel", typeof(WordApi.Selection))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(14)]
-        void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel);
+        void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel);
     }
-    
+
     #endregion
-    
+
     #region SinkHelper
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
@@ -96,22 +96,22 @@ namespace NetOffice.WordApi.Events
     public class ApplicationEvents2_SinkHelper : SinkHelper, ApplicationEvents2
     {
         #region Static
-        
+
         public static readonly string Id = "000209FE-0000-0000-C000-000000000046";
-        
+
         #endregion
 
         #region Ctor
 
-        public ApplicationEvents2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public ApplicationEvents2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region ApplicationEvents2
-        
+
         public void Startup()
         {
             if (!Validate("Startup"))
@@ -158,7 +158,7 @@ namespace NetOffice.WordApi.Events
             EventBinding.RaiseCustomEvent("DocumentOpen", ref paramsArray);
         }
 
-        public void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
+        public void DocumentBeforeClose([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In][Out] ref object cancel)
         {
             if (!Validate("DocumentBeforeClose"))
             {
@@ -175,7 +175,7 @@ namespace NetOffice.WordApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void DocumentBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object cancel)
+        public void DocumentBeforePrint([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In][Out] ref object cancel)
         {
             if (!Validate("DocumentBeforePrint"))
             {
@@ -192,7 +192,7 @@ namespace NetOffice.WordApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void DocumentBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In] [Out] ref object saveAsUI, [In] [Out] ref object cancel)
+        public void DocumentBeforeSave([In, MarshalAs(UnmanagedType.IDispatch)] object doc, [In][Out] ref object saveAsUI, [In][Out] ref object cancel)
         {
             if (!Validate("DocumentBeforeSave"))
             {
@@ -271,7 +271,7 @@ namespace NetOffice.WordApi.Events
             EventBinding.RaiseCustomEvent("WindowSelectionChange", ref paramsArray);
         }
 
-        public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
+        public void WindowBeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel)
         {
             if (!Validate("WindowBeforeRightClick"))
             {
@@ -288,7 +288,7 @@ namespace NetOffice.WordApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In] [Out] ref object cancel)
+        public void WindowBeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object sel, [In][Out] ref object cancel)
         {
             if (!Validate("WindowBeforeDoubleClick"))
             {
@@ -307,8 +307,8 @@ namespace NetOffice.WordApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

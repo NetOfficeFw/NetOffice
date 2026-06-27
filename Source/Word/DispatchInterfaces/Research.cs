@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research"/> </remarks>
-    [SupportByVersion("Word", 12,14,15,16)]
+    [SupportByVersion("Word", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Research : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Research(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public Research(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public Research(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Research(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Research() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Research(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.Application"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.Creator"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.Parent"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.FavoriteService"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public string FavoriteService
         {
             get
@@ -182,10 +182,10 @@ namespace NetOffice.WordApi
         /// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
         /// <param name="useSelection">optional bool UseSelection = false</param>
         /// <param name="launchQuery">optional bool LaunchQuery = true</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object Query(string serviceID, object queryString, object queryLanguage, object useSelection, object launchQuery)
         {
-            return Factory.ExecuteVariantMethodGet(this, "Query", new object[]{ serviceID, queryString, queryLanguage, useSelection, launchQuery });
+            return Factory.ExecuteVariantMethodGet(this, "Query", new object[] { serviceID, queryString, queryLanguage, useSelection, launchQuery });
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.Query"/> </remarks>
         /// <param name="serviceID">string serviceID</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object Query(string serviceID)
         {
             return Factory.ExecuteVariantMethodGet(this, "Query", serviceID);
@@ -207,7 +207,7 @@ namespace NetOffice.WordApi
         /// <param name="serviceID">string serviceID</param>
         /// <param name="queryString">optional string QueryString = </param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object Query(string serviceID, object queryString)
         {
             return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString);
@@ -221,7 +221,7 @@ namespace NetOffice.WordApi
         /// <param name="queryString">optional string QueryString = </param>
         /// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object Query(string serviceID, object queryString, object queryLanguage)
         {
             return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage);
@@ -236,7 +236,7 @@ namespace NetOffice.WordApi
         /// <param name="queryLanguage">optional NetOffice.WordApi.Enums.WdLanguageID QueryLanguage = 0</param>
         /// <param name="useSelection">optional bool UseSelection = false</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object Query(string serviceID, object queryString, object queryLanguage, object useSelection)
         {
             return Factory.ExecuteVariantMethodGet(this, "Query", serviceID, queryString, queryLanguage, useSelection);
@@ -248,7 +248,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.SetLanguagePair"/> </remarks>
         /// <param name="languageFrom">NetOffice.WordApi.Enums.WdLanguageID languageFrom</param>
         /// <param name="languageTo">NetOffice.WordApi.Enums.WdLanguageID languageTo</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public object SetLanguagePair(NetOffice.WordApi.Enums.WdLanguageID languageFrom, NetOffice.WordApi.Enums.WdLanguageID languageTo)
         {
             return Factory.ExecuteVariantMethodGet(this, "SetLanguagePair", languageFrom, languageTo);
@@ -259,7 +259,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Research.IsResearchService"/> </remarks>
         /// <param name="serviceID">string serviceID</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public bool IsResearchService(string serviceID)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsResearchService", serviceID);
@@ -267,6 +267,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
