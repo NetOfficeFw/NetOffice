@@ -6,22 +6,22 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi.EventInterfaces
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0002E118-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _dispReferencesEvents
     {
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
         void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [SinkArgument("reference", typeof(NetOffice.VBIDEApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
         void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
@@ -36,22 +36,22 @@ namespace NetOffice.VBIDEApi.EventInterfaces
     public class _dispReferencesEvents_SinkHelper : SinkHelper, _dispReferencesEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0002E118-0000-0000-C000-000000000046";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public _dispReferencesEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _dispReferencesEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-        
+
         #region _dispReferencesEvents
-        
+
         public void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
         {
             if (!Validate("ItemAdded"))
@@ -82,8 +82,8 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }
