@@ -25,7 +25,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Name_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -34,7 +34,7 @@ namespace NetOffice.ExcelApi
         public Name_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -52,7 +52,7 @@ namespace NetOffice.ExcelApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Name_(ICOMObject replacedObject) : base(replacedObject)
@@ -66,13 +66,13 @@ namespace NetOffice.ExcelApi
         public Name_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Name_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -82,7 +82,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Name"/>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -107,11 +107,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name"/> </remarks>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Name : Name_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -139,9 +139,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Name(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi
         public Name(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -183,26 +183,26 @@ namespace NetOffice.ExcelApi
         public Name(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Name(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Name() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Name(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Application"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Creator"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Parent"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string _Default
         {
             get
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Index"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Index
         {
             get
@@ -280,7 +280,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Category"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Category
         {
             get
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.CategoryLocal"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string CategoryLocal
         {
             get
@@ -316,7 +316,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.MacroType"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXLMMacroType MacroType
         {
             get
@@ -334,7 +334,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.RefersTo"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object RefersTo
         {
             get
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.ShortcutKey"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string ShortcutKey
         {
             get
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Value"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Value
         {
             get
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Visible"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool Visible
         {
             get
@@ -406,7 +406,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.NameLocal"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string NameLocal
         {
             get
@@ -424,7 +424,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.RefersToLocal"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object RefersToLocal
         {
             get
@@ -442,7 +442,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.RefersToR1C1"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object RefersToR1C1
         {
             get
@@ -460,7 +460,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.RefersToR1C1Local"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object RefersToR1C1Local
         {
             get
@@ -478,7 +478,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.RefersToRange"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Range RefersToRange
         {
             get
@@ -492,7 +492,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Comment"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public string Comment
         {
             get
@@ -510,7 +510,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.WorkbookParameter"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool WorkbookParameter
         {
             get
@@ -528,7 +528,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.ValidWorkbookParameter"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool ValidWorkbookParameter
         {
             get
@@ -545,7 +545,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Name.Delete"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -553,6 +553,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

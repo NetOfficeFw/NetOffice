@@ -10,11 +10,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea(object)"/> </remarks>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class PlotArea : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PlotArea(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public PlotArea(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public PlotArea(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PlotArea(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PlotArea() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PlotArea(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Application"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Creator"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Parent"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Name"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Border Border
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Height"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Height
         {
             get
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Interior Interior
         {
             get
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFillFormat Fill
         {
             get
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Left"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Left
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Top"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Top
         {
             get
@@ -263,7 +263,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Width"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Width
         {
             get
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.InsideLeft"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double InsideLeft
         {
             get
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.InsideTop"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double InsideTop
         {
             get
@@ -317,7 +317,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.InsideWidth"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double InsideWidth
         {
             get
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.InsideHeight"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double InsideHeight
         {
             get
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Double _InsideLeft
         {
@@ -366,7 +366,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Double _InsideTop
         {
@@ -380,7 +380,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Double _InsideWidth
         {
@@ -394,7 +394,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Double _InsideHeight
         {
@@ -409,7 +409,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Position"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlChartElementPosition Position
         {
             get
@@ -427,7 +427,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Format"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFormat Format
         {
             get
@@ -444,7 +444,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.Select"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -454,7 +454,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.PlotArea.ClearFormats"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object ClearFormats()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
@@ -462,6 +462,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

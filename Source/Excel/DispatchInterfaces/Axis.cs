@@ -10,11 +10,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis(object)"/> </remarks>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Axis : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Axis(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public Axis(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public Axis(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Axis(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Axis() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Axis(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Application"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Creator"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Parent"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.AxisBetweenCategories"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool AxisBetweenCategories
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.AxisGroup"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlAxisGroup AxisGroup
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.AxisTitle"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.AxisTitle AxisTitle
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Border"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Border Border
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.CategoryNames"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object CategoryNames
         {
             get
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Crosses"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlAxisCrosses Crosses
         {
             get
@@ -252,7 +252,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.CrossesAt"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double CrossesAt
         {
             get
@@ -270,7 +270,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.HasMajorGridlines"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool HasMajorGridlines
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.HasMinorGridlines"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool HasMinorGridlines
         {
             get
@@ -306,7 +306,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.HasTitle"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool HasTitle
         {
             get
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MajorGridlines"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Gridlines MajorGridlines
         {
             get
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MajorTickMark"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlTickMark MajorTickMark
         {
             get
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MajorUnit"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double MajorUnit
         {
             get
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MajorUnitIsAuto"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool MajorUnitIsAuto
         {
             get
@@ -392,7 +392,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MaximumScale"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double MaximumScale
         {
             get
@@ -410,7 +410,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MaximumScaleIsAuto"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool MaximumScaleIsAuto
         {
             get
@@ -428,7 +428,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinimumScale"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double MinimumScale
         {
             get
@@ -446,7 +446,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinimumScaleIsAuto"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool MinimumScaleIsAuto
         {
             get
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinorGridlines"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Gridlines MinorGridlines
         {
             get
@@ -478,7 +478,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinorTickMark"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlTickMark MinorTickMark
         {
             get
@@ -496,7 +496,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinorUnit"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double MinorUnit
         {
             get
@@ -514,7 +514,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinorUnitIsAuto"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool MinorUnitIsAuto
         {
             get
@@ -532,7 +532,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.ReversePlotOrder"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool ReversePlotOrder
         {
             get
@@ -550,7 +550,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.ScaleType"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlScaleType ScaleType
         {
             get
@@ -568,7 +568,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.TickLabelPosition"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlTickLabelPosition TickLabelPosition
         {
             get
@@ -586,7 +586,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.TickLabels"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.TickLabels TickLabels
         {
             get
@@ -600,7 +600,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.TickLabelSpacing"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 TickLabelSpacing
         {
             get
@@ -618,7 +618,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.TickMarkSpacing"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 TickMarkSpacing
         {
             get
@@ -636,7 +636,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Type"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlAxisType Type
         {
             get
@@ -654,7 +654,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.BaseUnit"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlTimeUnit BaseUnit
         {
             get
@@ -672,7 +672,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.BaseUnitIsAuto"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool BaseUnitIsAuto
         {
             get
@@ -690,7 +690,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MajorUnitScale"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlTimeUnit MajorUnitScale
         {
             get
@@ -708,7 +708,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.MinorUnitScale"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlTimeUnit MinorUnitScale
         {
             get
@@ -726,7 +726,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.CategoryType"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCategoryType CategoryType
         {
             get
@@ -744,7 +744,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Left"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Left
         {
             get
@@ -758,7 +758,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Top"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Top
         {
             get
@@ -772,7 +772,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Width"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Width
         {
             get
@@ -786,7 +786,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Height"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Height
         {
             get
@@ -800,7 +800,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.DisplayUnit"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlDisplayUnit DisplayUnit
         {
             get
@@ -818,7 +818,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.DisplayUnitCustom"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double DisplayUnitCustom
         {
             get
@@ -836,7 +836,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.HasDisplayUnitLabel"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool HasDisplayUnitLabel
         {
             get
@@ -854,7 +854,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.DisplayUnitLabel"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DisplayUnitLabel DisplayUnitLabel
         {
             get
@@ -868,7 +868,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.LogBase"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Double LogBase
         {
             get
@@ -886,7 +886,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.TickLabelSpacingIsAuto"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool TickLabelSpacingIsAuto
         {
             get
@@ -904,7 +904,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Format"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFormat Format
         {
             get
@@ -921,7 +921,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Delete"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -931,7 +931,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Axis.Select"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -939,6 +939,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

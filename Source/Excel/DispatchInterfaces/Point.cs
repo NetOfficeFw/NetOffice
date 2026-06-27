@@ -10,11 +10,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point(object)"/> </remarks>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Point : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Point(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public Point(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public Point(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Point(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Point() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Point(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Application"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Creator"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Parent"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Border Border
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.DataLabel"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DataLabel DataLabel
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Explosion"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Explosion
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.HasDataLabel"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool HasDataLabel
         {
             get
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Interior Interior
         {
             get
@@ -232,7 +232,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.InvertIfNegative"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool InvertIfNegative
         {
             get
@@ -250,7 +250,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.MarkerBackgroundColor"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MarkerBackgroundColor
         {
             get
@@ -268,7 +268,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.MarkerBackgroundColorIndex"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlColorIndex MarkerBackgroundColorIndex
         {
             get
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.MarkerForegroundColor"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MarkerForegroundColor
         {
             get
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.MarkerForegroundColorIndex"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlColorIndex MarkerForegroundColorIndex
         {
             get
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.MarkerSize"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MarkerSize
         {
             get
@@ -340,7 +340,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.MarkerStyle"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlMarkerStyle MarkerStyle
         {
             get
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.PictureType"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlChartPictureType PictureType
         {
             get
@@ -375,7 +375,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PictureUnit
         {
             get
@@ -393,7 +393,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.ApplyPictToSides"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool ApplyPictToSides
         {
             get
@@ -411,7 +411,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.ApplyPictToFront"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool ApplyPictToFront
         {
             get
@@ -429,7 +429,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.ApplyPictToEnd"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool ApplyPictToEnd
         {
             get
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Shadow"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool Shadow
         {
             get
@@ -465,7 +465,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.SecondaryPlot"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool SecondaryPlot
         {
             get
@@ -482,7 +482,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFillFormat Fill
         {
             get
@@ -496,7 +496,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Has3DEffect"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool Has3DEffect
         {
             get
@@ -514,7 +514,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.PictureUnit2"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Double PictureUnit2
         {
             get
@@ -532,7 +532,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Format"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFormat Format
         {
             get
@@ -546,7 +546,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Height"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Height
         {
             get
@@ -560,7 +560,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Width"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Width
         {
             get
@@ -574,7 +574,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Top"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Top
         {
             get
@@ -588,7 +588,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Left"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Left
         {
             get
@@ -602,7 +602,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Name"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string Name
         {
             get
@@ -622,7 +622,7 @@ namespace NetOffice.ExcelApi
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataLabelsType Type = 2</param>
         /// <param name="legendKey">optional object legendKey</param>
         /// <param name="autoText">optional object autoText</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, legendKey, autoText);
@@ -642,10 +642,10 @@ namespace NetOffice.ExcelApi
         /// <param name="showPercentage">optional object showPercentage</param>
         /// <param name="showBubbleSize">optional object showBubbleSize</param>
         /// <param name="separator">optional object separator</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
         {
-            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
+            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
         }
 
         /// <summary>
@@ -653,7 +653,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.ApplyDataLabels"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels()
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels");
@@ -665,7 +665,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.ApplyDataLabels"/> </remarks>
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataLabelsType Type = 2</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type);
@@ -678,7 +678,7 @@ namespace NetOffice.ExcelApi
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataLabelsType Type = 2</param>
         /// <param name="legendKey">optional object legendKey</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, legendKey);
@@ -693,7 +693,7 @@ namespace NetOffice.ExcelApi
         /// <param name="autoText">optional object autoText</param>
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
         {
             return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
@@ -709,10 +709,10 @@ namespace NetOffice.ExcelApi
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         /// <param name="showSeriesName">optional object showSeriesName</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
         {
-            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName });
+            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName });
         }
 
         /// <summary>
@@ -726,10 +726,10 @@ namespace NetOffice.ExcelApi
         /// <param name="showSeriesName">optional object showSeriesName</param>
         /// <param name="showCategoryName">optional object showCategoryName</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
         {
-            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
+            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
         }
 
         /// <summary>
@@ -744,10 +744,10 @@ namespace NetOffice.ExcelApi
         /// <param name="showCategoryName">optional object showCategoryName</param>
         /// <param name="showValue">optional object showValue</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
         {
-            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
+            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
         }
 
         /// <summary>
@@ -763,10 +763,10 @@ namespace NetOffice.ExcelApi
         /// <param name="showValue">optional object showValue</param>
         /// <param name="showPercentage">optional object showPercentage</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
         {
-            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
+            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
         }
 
         /// <summary>
@@ -783,17 +783,17 @@ namespace NetOffice.ExcelApi
         /// <param name="showPercentage">optional object showPercentage</param>
         /// <param name="showBubbleSize">optional object showBubbleSize</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public object ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
         {
-            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
+            return Factory.ExecuteVariantMethodGet(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
         }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.ClearFormats"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object ClearFormats()
         {
             return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
@@ -803,7 +803,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Copy"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Copy()
         {
             return Factory.ExecuteVariantMethodGet(this, "Copy");
@@ -813,7 +813,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Delete"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -823,7 +823,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Paste"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Paste()
         {
             return Factory.ExecuteVariantMethodGet(this, "Paste");
@@ -833,7 +833,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.Select"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -847,7 +847,7 @@ namespace NetOffice.ExcelApi
         /// <param name="autoText">optional object autoText</param>
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public object _ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
@@ -858,7 +858,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public object _ApplyDataLabels()
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels");
@@ -870,7 +870,7 @@ namespace NetOffice.ExcelApi
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlDataLabelsType Type = 2</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public object _ApplyDataLabels(object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type);
@@ -883,7 +883,7 @@ namespace NetOffice.ExcelApi
         /// <param name="legendKey">optional object legendKey</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public object _ApplyDataLabels(object type, object legendKey)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, legendKey);
@@ -897,7 +897,7 @@ namespace NetOffice.ExcelApi
         /// <param name="autoText">optional object autoText</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public object _ApplyDataLabels(object type, object legendKey, object autoText)
         {
             return Factory.ExecuteVariantMethodGet(this, "_ApplyDataLabels", type, legendKey, autoText);
@@ -909,7 +909,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.PieSliceLocation"/> </remarks>
         /// <param name="loc">NetOffice.ExcelApi.Enums.XlPieSliceLocation loc</param>
         /// <param name="index">optional NetOffice.ExcelApi.Enums.XlPieSliceIndex Index = 2</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double PieSliceLocation(NetOffice.ExcelApi.Enums.XlPieSliceLocation loc, object index)
         {
             return Factory.ExecuteDoubleMethodGet(this, "PieSliceLocation", loc, index);
@@ -921,7 +921,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Point.PieSliceLocation"/> </remarks>
         /// <param name="loc">NetOffice.ExcelApi.Enums.XlPieSliceLocation loc</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double PieSliceLocation(NetOffice.ExcelApi.Enums.XlPieSliceLocation loc)
         {
             return Factory.ExecuteDoubleMethodGet(this, "PieSliceLocation", loc);
@@ -929,6 +929,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

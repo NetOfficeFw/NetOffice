@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface IStyle 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IStyle : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IStyle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public IStyle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ExcelApi
         public IStyle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IStyle(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IStyle() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IStyle(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool AddIndent
         {
             get
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool BuiltIn
         {
             get
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Borders Borders
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Font Font
         {
             get
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool FormulaHidden
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlHAlign HorizontalAlignment
         {
             get
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool IncludeAlignment
         {
             get
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool IncludeBorder
         {
             get
@@ -275,7 +275,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool IncludeFont
         {
             get
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool IncludeNumber
         {
             get
@@ -309,7 +309,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool IncludePatterns
         {
             get
@@ -326,7 +326,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool IncludeProtection
         {
             get
@@ -343,7 +343,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 IndentLevel
         {
             get
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Interior Interior
         {
             get
@@ -373,7 +373,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool Locked
         {
             get
@@ -390,7 +390,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object MergeCells
         {
             get
@@ -407,7 +407,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -420,7 +420,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string NameLocal
         {
             get
@@ -433,7 +433,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string NumberFormat
         {
             get
@@ -450,7 +450,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string NumberFormatLocal
         {
             get
@@ -467,7 +467,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlOrientation Orientation
         {
             get
@@ -484,7 +484,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool ShrinkToFit
         {
             get
@@ -501,7 +501,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Value
         {
             get
@@ -514,7 +514,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlVAlign VerticalAlignment
         {
             get
@@ -531,7 +531,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool WrapText
         {
             get
@@ -548,7 +548,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string _Default
         {
             get
@@ -561,7 +561,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ReadingOrder
         {
             get
@@ -581,7 +581,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -589,6 +589,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -12,11 +12,11 @@ namespace NetOffice.ExcelApi
     /// Interface IShapeRange 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class IShapeRange : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Shape>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IShapeRange(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi
         public IShapeRange(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.ExcelApi
         public IShapeRange(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IShapeRange(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IShapeRange() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IShapeRange(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Adjustments Adjustments
         {
             get
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.TextFrame TextFrame
         {
             get
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
         {
             get
@@ -210,7 +210,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.CalloutFormat Callout
         {
             get
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ConnectionSiteCount
         {
             get
@@ -236,7 +236,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Connector
         {
             get
@@ -249,7 +249,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ConnectorFormat ConnectorFormat
         {
             get
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.FillFormat Fill
         {
             get
@@ -275,7 +275,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.GroupShapes GroupItems
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Single Height
         {
             get
@@ -305,7 +305,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HorizontalFlip
         {
             get
@@ -318,7 +318,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Single Left
         {
             get
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.LineFormat Line
         {
             get
@@ -348,7 +348,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState LockAspectRatio
         {
             get
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -382,7 +382,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ShapeNodes Nodes
         {
             get
@@ -395,7 +395,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Single Rotation
         {
             get
@@ -412,7 +412,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.PictureFormat PictureFormat
         {
             get
@@ -425,7 +425,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ShadowFormat Shadow
         {
             get
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.TextEffectFormat TextEffect
         {
             get
@@ -451,7 +451,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ThreeDFormat ThreeD
         {
             get
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Single Top
         {
             get
@@ -481,7 +481,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoShapeType Type
         {
             get
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState VerticalFlip
         {
             get
@@ -507,7 +507,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Vertices
         {
             get
@@ -520,7 +520,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -537,7 +537,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Single Width
         {
             get
@@ -554,7 +554,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ZOrderPosition
         {
             get
@@ -567,7 +567,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBlackWhiteMode BlackWhiteMode
         {
             get
@@ -584,7 +584,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string AlternativeText
         {
             get
@@ -601,7 +601,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode DiagramNode
         {
             get
@@ -614,7 +614,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasDiagramNode
         {
             get
@@ -627,7 +627,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Diagram Diagram
         {
             get
@@ -640,7 +640,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasDiagram
         {
             get
@@ -653,7 +653,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Child
         {
             get
@@ -666,7 +666,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Shape ParentGroup
         {
             get
@@ -679,7 +679,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.OfficeApi.CanvasShapes CanvasItems
         {
@@ -693,7 +693,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 ID
         {
             get
@@ -706,7 +706,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Chart Chart
         {
             get
@@ -719,7 +719,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasChart
         {
             get
@@ -732,7 +732,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.TextFrame2 TextFrame2
         {
             get
@@ -745,7 +745,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoShapeStyleIndex ShapeStyle
         {
             get
@@ -762,7 +762,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex BackgroundStyle
         {
             get
@@ -779,7 +779,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
         {
             get
@@ -792,7 +792,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.GlowFormat Glow
         {
             get
@@ -805,7 +805,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ReflectionFormat Reflection
         {
             get
@@ -818,7 +818,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string Title
         {
             get
@@ -839,7 +839,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.ExcelApi.Shape this[object index]
         {
@@ -854,7 +854,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="alignCmd">NetOffice.OfficeApi.Enums.MsoAlignCmd alignCmd</param>
         /// <param name="relativeTo">NetOffice.OfficeApi.Enums.MsoTriState relativeTo</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Align(NetOffice.OfficeApi.Enums.MsoAlignCmd alignCmd, NetOffice.OfficeApi.Enums.MsoTriState relativeTo)
         {
             return Factory.ExecuteInt32MethodGet(this, "Align", alignCmd, relativeTo);
@@ -863,7 +863,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Apply()
         {
             return Factory.ExecuteInt32MethodGet(this, "Apply");
@@ -872,7 +872,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
@@ -883,7 +883,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="distributeCmd">NetOffice.OfficeApi.Enums.MsoDistributeCmd distributeCmd</param>
         /// <param name="relativeTo">NetOffice.OfficeApi.Enums.MsoTriState relativeTo</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Distribute(NetOffice.OfficeApi.Enums.MsoDistributeCmd distributeCmd, NetOffice.OfficeApi.Enums.MsoTriState relativeTo)
         {
             return Factory.ExecuteInt32MethodGet(this, "Distribute", distributeCmd, relativeTo);
@@ -892,7 +892,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ShapeRange Duplicate()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ShapeRange>(this, "Duplicate", NetOffice.ExcelApi.ShapeRange.LateBindingApiWrapperType);
@@ -902,7 +902,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="flipCmd">NetOffice.OfficeApi.Enums.MsoFlipCmd flipCmd</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Flip(NetOffice.OfficeApi.Enums.MsoFlipCmd flipCmd)
         {
             return Factory.ExecuteInt32MethodGet(this, "Flip", flipCmd);
@@ -912,7 +912,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 IncrementLeft(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "IncrementLeft", increment);
@@ -922,7 +922,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 IncrementRotation(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "IncrementRotation", increment);
@@ -932,7 +932,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 IncrementTop(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "IncrementTop", increment);
@@ -941,7 +941,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Shape Group()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "Group", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType);
@@ -950,7 +950,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PickUp()
         {
             return Factory.ExecuteInt32MethodGet(this, "PickUp");
@@ -959,7 +959,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 RerouteConnections()
         {
             return Factory.ExecuteInt32MethodGet(this, "RerouteConnections");
@@ -968,7 +968,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Shape Regroup()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "Regroup", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType);
@@ -980,7 +980,7 @@ namespace NetOffice.ExcelApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         /// <param name="scale">optional object scale</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
         {
             return Factory.ExecuteInt32MethodGet(this, "ScaleHeight", factor, relativeToOriginalSize, scale);
@@ -992,7 +992,7 @@ namespace NetOffice.ExcelApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize)
         {
             return Factory.ExecuteInt32MethodGet(this, "ScaleHeight", factor, relativeToOriginalSize);
@@ -1004,7 +1004,7 @@ namespace NetOffice.ExcelApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         /// <param name="scale">optional object scale</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object scale)
         {
             return Factory.ExecuteInt32MethodGet(this, "ScaleWidth", factor, relativeToOriginalSize, scale);
@@ -1016,7 +1016,7 @@ namespace NetOffice.ExcelApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize)
         {
             return Factory.ExecuteInt32MethodGet(this, "ScaleWidth", factor, relativeToOriginalSize);
@@ -1026,7 +1026,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="replace">optional object replace</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Select(object replace)
         {
             return Factory.ExecuteInt32MethodGet(this, "Select", replace);
@@ -1036,7 +1036,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Select()
         {
             return Factory.ExecuteInt32MethodGet(this, "Select");
@@ -1045,7 +1045,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SetShapesDefaultProperties()
         {
             return Factory.ExecuteInt32MethodGet(this, "SetShapesDefaultProperties");
@@ -1054,7 +1054,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ShapeRange Ungroup()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ShapeRange>(this, "Ungroup", NetOffice.ExcelApi.ShapeRange.LateBindingApiWrapperType);
@@ -1064,7 +1064,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="zOrderCmd">NetOffice.OfficeApi.Enums.MsoZOrderCmd zOrderCmd</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ZOrder(NetOffice.OfficeApi.Enums.MsoZOrderCmd zOrderCmd)
         {
             return Factory.ExecuteInt32MethodGet(this, "ZOrder", zOrderCmd);
@@ -1075,7 +1075,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 CanvasCropLeft(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "CanvasCropLeft", increment);
@@ -1086,7 +1086,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 CanvasCropTop(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "CanvasCropTop", increment);
@@ -1097,7 +1097,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 CanvasCropRight(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "CanvasCropRight", increment);
@@ -1108,7 +1108,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 CanvasCropBottom(Single increment)
         {
             return Factory.ExecuteInt32MethodGet(this, "CanvasCropBottom", increment);
@@ -1150,7 +1150,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -1158,6 +1158,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -10,11 +10,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue"/> </remarks>
-    [SupportByVersion("Excel", 12,14,15,16)]
+    [SupportByVersion("Excel", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ConditionValue : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ConditionValue(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public ConditionValue(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public ConditionValue(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ConditionValue(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ConditionValue() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ConditionValue(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Application"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Creator"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Parent"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Type"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlConditionValueTypes Type
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Value"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public object Value
         {
             get
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Modify"/> </remarks>
         /// <param name="newtype">NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype</param>
         /// <param name="newvalue">optional object newvalue</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype, object newvalue)
         {
             Factory.ExecuteMethod(this, "Modify", newtype, newvalue);
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ConditionValue.Modify"/> </remarks>
         /// <param name="newtype">NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void Modify(NetOffice.ExcelApi.Enums.XlConditionValueTypes newtype)
         {
             Factory.ExecuteMethod(this, "Modify", newtype);
@@ -209,6 +209,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

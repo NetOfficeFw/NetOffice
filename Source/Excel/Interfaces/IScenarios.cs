@@ -12,11 +12,11 @@ namespace NetOffice.ExcelApi
     /// Interface IScenarios 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class IScenarios : COMObject, IEnumerableProvider<NetOffice.ExcelApi.Scenario>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IScenarios(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi
         public IScenarios(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.ExcelApi
         public IScenarios(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IScenarios(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IScenarios() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IScenarios(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -176,10 +176,10 @@ namespace NetOffice.ExcelApi
         /// <param name="comment">optional object comment</param>
         /// <param name="locked">optional object locked</param>
         /// <param name="hidden">optional object hidden</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment, object locked, object hidden)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, new object[]{ name, changingCells, values, comment, locked, hidden });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, new object[] { name, changingCells, values, comment, locked, hidden });
         }
 
         /// <summary>
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
         /// <param name="name">string name</param>
         /// <param name="changingCells">object changingCells</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Scenario Add(string name, object changingCells)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, name, changingCells);
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi
         /// <param name="changingCells">object changingCells</param>
         /// <param name="values">optional object values</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, name, changingCells, values);
@@ -215,7 +215,7 @@ namespace NetOffice.ExcelApi
         /// <param name="values">optional object values</param>
         /// <param name="comment">optional object comment</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, name, changingCells, values, comment);
@@ -230,10 +230,10 @@ namespace NetOffice.ExcelApi
         /// <param name="comment">optional object comment</param>
         /// <param name="locked">optional object locked</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Scenario Add(string name, object changingCells, object values, object comment, object locked)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, new object[]{ name, changingCells, values, comment, locked });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Scenario>(this, "Add", NetOffice.ExcelApi.Scenario.LateBindingApiWrapperType, new object[] { name, changingCells, values, comment, locked });
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="reportType">optional NetOffice.ExcelApi.Enums.XlSummaryReportType ReportType = 1</param>
         /// <param name="resultCells">optional object resultCells</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object CreateSummary(object reportType, object resultCells)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateSummary", reportType, resultCells);
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object CreateSummary()
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateSummary");
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="reportType">optional NetOffice.ExcelApi.Enums.XlSummaryReportType ReportType = 1</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object CreateSummary(object reportType)
         {
             return Factory.ExecuteVariantMethodGet(this, "CreateSummary", reportType);
@@ -272,7 +272,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.ExcelApi.Scenario this[object index]
         {
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="source">object source</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Merge(object source)
         {
             return Factory.ExecuteVariantMethodGet(this, "Merge", source);
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
@@ -336,6 +336,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

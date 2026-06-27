@@ -13,11 +13,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Connections"/> </remarks>
-    [SupportByVersion("Excel", 12,14,15,16)]
+    [SupportByVersion("Excel", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class Connections : COMObject, IEnumerableProvider<NetOffice.ExcelApi.WorkbookConnection>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Connections(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.ExcelApi
         public Connections(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.ExcelApi
         public Connections(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Connections(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Connections() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Connections(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Connections.Application"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Connections.Creator"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Connections.Parent"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Connections.Count"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.ExcelApi.WorkbookConnection this[object index]
         {
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Connections.AddFromFile"/> </remarks>
         /// <param name="filename">string filename</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection AddFromFile(string filename)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "AddFromFile", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, filename);
@@ -232,10 +232,10 @@ namespace NetOffice.ExcelApi
         /// <param name="connectionString">object connectionString</param>
         /// <param name="commandText">object commandText</param>
         /// <param name="lCmdtype">optional object lCmdtype</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[]{ name, description, connectionString, commandText, lCmdtype });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[] { name, description, connectionString, commandText, lCmdtype });
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype, object createModelConnection, object importRelationships)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[]{ name, description, connectionString, commandText, lCmdtype, createModelConnection, importRelationships });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[] { name, description, connectionString, commandText, lCmdtype, createModelConnection, importRelationships });
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi
         /// <param name="connectionString">object connectionString</param>
         /// <param name="commandText">object commandText</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, name, description, connectionString, commandText);
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection Add(string name, string description, object connectionString, object commandText, object lCmdtype, object createModelConnection)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[]{ name, description, connectionString, commandText, lCmdtype, createModelConnection });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[] { name, description, connectionString, commandText, lCmdtype, createModelConnection });
         }
 
         /// <summary>
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection _Add(string name, string description, object connectionString, object commandText, object lCmdtype)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[]{ name, description, connectionString, commandText, lCmdtype });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.WorkbookConnection>(this, "_Add", NetOffice.ExcelApi.WorkbookConnection.LateBindingApiWrapperType, new object[] { name, description, connectionString, commandText, lCmdtype });
         }
 
         /// <summary>
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -369,6 +369,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

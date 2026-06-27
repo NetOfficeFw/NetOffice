@@ -10,11 +10,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection"/> </remarks>
-    [SupportByVersion("Excel", 12,14,15,16)]
+    [SupportByVersion("Excel", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class OLEDBConnection : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OLEDBConnection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public OLEDBConnection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public OLEDBConnection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OLEDBConnection(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OLEDBConnection() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OLEDBConnection(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Application"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Creator"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Parent"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ADOConnection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 12, 14, 15, 16), ProxyResult]
         public object ADOConnection
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.BackgroundQuery"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool BackgroundQuery
         {
             get
@@ -189,7 +189,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.CommandText"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public object CommandText
         {
             get
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.CommandType"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCmdType CommandType
         {
             get
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Connection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public object Connection
         {
             get
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.EnableRefresh"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool EnableRefresh
         {
             get
@@ -261,7 +261,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.LocalConnection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public object LocalConnection
         {
             get
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.MaintainConnection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool MaintainConnection
         {
             get
@@ -297,7 +297,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.RefreshDate"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public DateTime RefreshDate
         {
             get
@@ -311,7 +311,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Refreshing"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool Refreshing
         {
             get
@@ -325,7 +325,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.RefreshOnFileOpen"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool RefreshOnFileOpen
         {
             get
@@ -343,7 +343,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.RefreshPeriod"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 RefreshPeriod
         {
             get
@@ -361,7 +361,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.RobustConnect"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
         {
             get
@@ -379,7 +379,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.SavePassword"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool SavePassword
         {
             get
@@ -397,7 +397,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.SourceConnectionFile"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public string SourceConnectionFile
         {
             get
@@ -415,7 +415,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.SourceDataFile"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public string SourceDataFile
         {
             get
@@ -433,7 +433,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.OLAP"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool OLAP
         {
             get
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.UseLocalConnection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool UseLocalConnection
         {
             get
@@ -465,7 +465,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.MaxDrillthroughRecords"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 MaxDrillthroughRecords
         {
             get
@@ -483,7 +483,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.IsConnected"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool IsConnected
         {
             get
@@ -497,7 +497,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ServerCredentialsMethod"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCredentialsMethod ServerCredentialsMethod
         {
             get
@@ -515,7 +515,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ServerSSOApplicationID"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public string ServerSSOApplicationID
         {
             get
@@ -533,7 +533,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.AlwaysUseConnectionFile"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool AlwaysUseConnectionFile
         {
             get
@@ -551,7 +551,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ServerFillColor"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool ServerFillColor
         {
             get
@@ -569,7 +569,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ServerFontStyle"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool ServerFontStyle
         {
             get
@@ -587,7 +587,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ServerNumberFormat"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool ServerNumberFormat
         {
             get
@@ -605,7 +605,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.ServerTextColor"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool ServerTextColor
         {
             get
@@ -623,7 +623,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.RetrieveInOfficeUILang"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool RetrieveInOfficeUILang
         {
             get
@@ -641,7 +641,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.CalculatedMembers"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMembers CalculatedMembers
         {
             get
@@ -655,7 +655,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.LocaleID"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 LocaleID
         {
             get
@@ -676,7 +676,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.CancelRefresh"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void CancelRefresh()
         {
             Factory.ExecuteMethod(this, "CancelRefresh");
@@ -686,7 +686,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.MakeConnection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void MakeConnection()
         {
             Factory.ExecuteMethod(this, "MakeConnection");
@@ -696,7 +696,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Refresh"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void Refresh()
         {
             Factory.ExecuteMethod(this, "Refresh");
@@ -709,7 +709,7 @@ namespace NetOffice.ExcelApi
         /// <param name="oDCFileName">string oDCFileName</param>
         /// <param name="description">optional object description</param>
         /// <param name="keywords">optional object keywords</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void SaveAsODC(string oDCFileName, object description, object keywords)
         {
             Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
@@ -721,7 +721,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.SaveAsODC"/> </remarks>
         /// <param name="oDCFileName">string oDCFileName</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void SaveAsODC(string oDCFileName)
         {
             Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
@@ -734,7 +734,7 @@ namespace NetOffice.ExcelApi
         /// <param name="oDCFileName">string oDCFileName</param>
         /// <param name="description">optional object description</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public void SaveAsODC(string oDCFileName, object description)
         {
             Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
@@ -744,7 +744,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.OLEDBConnection.Reconnect"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public void Reconnect()
         {
             Factory.ExecuteMethod(this, "Reconnect");
@@ -752,6 +752,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

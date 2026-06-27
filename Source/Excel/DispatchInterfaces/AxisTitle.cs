@@ -25,7 +25,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public AxisTitle_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -34,7 +34,7 @@ namespace NetOffice.ExcelApi
         public AxisTitle_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -52,7 +52,7 @@ namespace NetOffice.ExcelApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AxisTitle_(ICOMObject replacedObject) : base(replacedObject)
@@ -66,13 +66,13 @@ namespace NetOffice.ExcelApi
         public AxisTitle_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AxisTitle_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Characters"/>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
         {
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Characters"/> </remarks>
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), Redirect("get_Characters")]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Characters")]
         public NetOffice.ExcelApi.Characters Characters(object start, object length)
         {
             return get_Characters(start, length);
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="start">optional object start</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Characters"/>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.ExcelApi.Characters get_Characters(object start)
         {
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Characters"/> </remarks>
         /// <param name="start">optional object start</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), Redirect("get_Characters")]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Characters")]
         public NetOffice.ExcelApi.Characters Characters(object start)
         {
             return get_Characters(start);
@@ -142,14 +142,14 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle(object)"/> </remarks>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class AxisTitle : AxisTitle_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
-        
+
         /// <summary>
         /// Instance Type
         /// </summary>
@@ -161,7 +161,7 @@ namespace NetOffice.ExcelApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         private static Type _type;
 
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
@@ -174,9 +174,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public AxisTitle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi
         public AxisTitle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -218,26 +218,26 @@ namespace NetOffice.ExcelApi
         public AxisTitle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AxisTitle(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AxisTitle() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AxisTitle(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Application"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Creator"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Parent"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Name"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Border Border
         {
             get
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Interior Interior
         {
             get
@@ -327,7 +327,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFillFormat Fill
         {
             get
@@ -341,7 +341,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Caption"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Caption
         {
             get
@@ -359,7 +359,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Characters"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Characters Characters
         {
             get
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Font Font
         {
             get
@@ -386,7 +386,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.HorizontalAlignment"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object HorizontalAlignment
         {
             get
@@ -404,7 +404,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Left"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Left
         {
             get
@@ -422,7 +422,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Orientation"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Orientation
         {
             get
@@ -440,7 +440,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Shadow"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool Shadow
         {
             get
@@ -458,7 +458,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Text"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -476,7 +476,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Top"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Double Top
         {
             get
@@ -494,7 +494,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.VerticalAlignment"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object VerticalAlignment
         {
             get
@@ -512,7 +512,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.ReadingOrder"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ReadingOrder
         {
             get
@@ -529,7 +529,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object AutoScaleFont
         {
             get
@@ -547,7 +547,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.IncludeInLayout"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool IncludeInLayout
         {
             get
@@ -565,7 +565,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Position"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlChartElementPosition Position
         {
             get
@@ -583,7 +583,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Format"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ChartFormat Format
         {
             get
@@ -597,7 +597,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Height"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Height
         {
             get
@@ -611,7 +611,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Width"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Width
         {
             get
@@ -625,7 +625,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Formula"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string Formula
         {
             get
@@ -643,7 +643,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.FormulaR1C1"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string FormulaR1C1
         {
             get
@@ -661,7 +661,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.FormulaLocal"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string FormulaLocal
         {
             get
@@ -679,7 +679,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.FormulaR1C1Local"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string FormulaR1C1Local
         {
             get
@@ -700,7 +700,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Select"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -710,7 +710,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.AxisTitle.Delete"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -718,6 +718,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

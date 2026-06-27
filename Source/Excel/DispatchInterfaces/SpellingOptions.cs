@@ -10,11 +10,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions"/> </remarks>
-    [SupportByVersion("Excel", 10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class SpellingOptions : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SpellingOptions(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public SpellingOptions(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public SpellingOptions(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SpellingOptions(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SpellingOptions() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SpellingOptions(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.DictLang"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 DictLang
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.UserDict"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public string UserDict
         {
             get
@@ -149,7 +149,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.IgnoreCaps"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool IgnoreCaps
         {
             get
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.SuggestMainOnly"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool SuggestMainOnly
         {
             get
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.IgnoreMixedDigits"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool IgnoreMixedDigits
         {
             get
@@ -203,7 +203,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.IgnoreFileNames"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool IgnoreFileNames
         {
             get
@@ -221,7 +221,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.GermanPostReform"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool GermanPostReform
         {
             get
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.KoreanCombineAux"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool KoreanCombineAux
         {
             get
@@ -257,7 +257,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.KoreanUseAutoChangeList"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool KoreanUseAutoChangeList
         {
             get
@@ -275,7 +275,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.KoreanProcessCompound"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool KoreanProcessCompound
         {
             get
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.HebrewModes"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlHebrewModes HebrewModes
         {
             get
@@ -311,7 +311,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.ArabicModes"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlArabicModes ArabicModes
         {
             get
@@ -329,7 +329,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.ArabicStrictAlefHamza"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool ArabicStrictAlefHamza
         {
             get
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.ArabicStrictFinalYaa"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool ArabicStrictFinalYaa
         {
             get
@@ -365,7 +365,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.ArabicStrictTaaMarboota"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool ArabicStrictTaaMarboota
         {
             get
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.RussianStrictE"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool RussianStrictE
         {
             get
@@ -401,7 +401,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.SpanishModes"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlSpanishModes SpanishModes
         {
             get
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.PortugalReform"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlPortugueseReform PortugalReform
         {
             get
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.SpellingOptions.BrazilReform"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlPortugueseReform BrazilReform
         {
             get
@@ -456,6 +456,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

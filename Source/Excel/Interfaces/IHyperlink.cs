@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface IHyperlink 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IHyperlink : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IHyperlink(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public IHyperlink(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ExcelApi
         public IHyperlink(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IHyperlink(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IHyperlink() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IHyperlink(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Range Range
         {
             get
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Shape Shape
         {
             get
@@ -190,7 +190,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string SubAddress
         {
             get
@@ -207,7 +207,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string Address
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Type
         {
             get
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string EmailSubject
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string ScreenTip
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string TextToDisplay
         {
             get
@@ -291,7 +291,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 AddToFavorites()
         {
             return Factory.ExecuteInt32MethodGet(this, "AddToFavorites");
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
@@ -314,17 +314,17 @@ namespace NetOffice.ExcelApi
         /// <param name="extraInfo">optional object extraInfo</param>
         /// <param name="method">optional object method</param>
         /// <param name="headerInfo">optional object headerInfo</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
         {
-            return Factory.ExecuteInt32MethodGet(this, "Follow", new object[]{ newWindow, addHistory, extraInfo, method, headerInfo });
+            return Factory.ExecuteInt32MethodGet(this, "Follow", new object[] { newWindow, addHistory, extraInfo, method, headerInfo });
         }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Follow()
         {
             return Factory.ExecuteInt32MethodGet(this, "Follow");
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="newWindow">optional object newWindow</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Follow(object newWindow)
         {
             return Factory.ExecuteInt32MethodGet(this, "Follow", newWindow);
@@ -347,7 +347,7 @@ namespace NetOffice.ExcelApi
         /// <param name="newWindow">optional object newWindow</param>
         /// <param name="addHistory">optional object addHistory</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Follow(object newWindow, object addHistory)
         {
             return Factory.ExecuteInt32MethodGet(this, "Follow", newWindow, addHistory);
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi
         /// <param name="addHistory">optional object addHistory</param>
         /// <param name="extraInfo">optional object extraInfo</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Follow(object newWindow, object addHistory, object extraInfo)
         {
             return Factory.ExecuteInt32MethodGet(this, "Follow", newWindow, addHistory, extraInfo);
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi
         /// <param name="extraInfo">optional object extraInfo</param>
         /// <param name="method">optional object method</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Follow(object newWindow, object addHistory, object extraInfo, object method)
         {
             return Factory.ExecuteInt32MethodGet(this, "Follow", newWindow, addHistory, extraInfo, method);
@@ -386,7 +386,7 @@ namespace NetOffice.ExcelApi
         /// <param name="filename">string filename</param>
         /// <param name="editNow">bool editNow</param>
         /// <param name="overwrite">bool overwrite</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 CreateNewDocument(string filename, bool editNow, bool overwrite)
         {
             return Factory.ExecuteInt32MethodGet(this, "CreateNewDocument", filename, editNow, overwrite);
@@ -394,6 +394,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

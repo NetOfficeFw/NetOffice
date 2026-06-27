@@ -13,11 +13,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.CalculatedMembers"/> </remarks>
-    [SupportByVersion("Excel", 10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class CalculatedMembers : COMObject, IEnumerableProvider<NetOffice.ExcelApi.CalculatedMember>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public CalculatedMembers(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.ExcelApi
         public CalculatedMembers(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.ExcelApi
         public CalculatedMembers(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CalculatedMembers(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CalculatedMembers() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CalculatedMembers(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.CalculatedMembers.Application"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.CalculatedMembers.Creator"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.CalculatedMembers.Parent"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.CalculatedMembers.Count"/> </remarks>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.ExcelApi.CalculatedMember this[object index]
         {
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi
         /// <param name="formula">string formula</param>
         /// <param name="solveOrder">optional object solveOrder</param>
         /// <param name="type">optional object type</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, name, formula, solveOrder, type);
@@ -212,10 +212,10 @@ namespace NetOffice.ExcelApi
         /// <param name="dynamic">optional object dynamic</param>
         /// <param name="displayFolder">optional object displayFolder</param>
         /// <param name="hierarchizeDistinct">optional object hierarchizeDistinct</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder, object hierarchizeDistinct)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, dynamic, displayFolder, hierarchizeDistinct });
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace NetOffice.ExcelApi
         /// <param name="name">string name</param>
         /// <param name="formula">string formula</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, name, formula);
@@ -239,7 +239,7 @@ namespace NetOffice.ExcelApi
         /// <param name="formula">string formula</param>
         /// <param name="solveOrder">optional object solveOrder</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember Add(string name, string formula, object solveOrder)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, name, formula, solveOrder);
@@ -255,10 +255,10 @@ namespace NetOffice.ExcelApi
         /// <param name="type">optional object type</param>
         /// <param name="dynamic">optional object dynamic</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, dynamic });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, dynamic });
         }
 
         /// <summary>
@@ -272,10 +272,10 @@ namespace NetOffice.ExcelApi
         /// <param name="dynamic">optional object dynamic</param>
         /// <param name="displayFolder">optional object displayFolder</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember Add(string name, object formula, object solveOrder, object type, object dynamic, object displayFolder)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, dynamic, displayFolder });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, dynamic, displayFolder });
         }
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         /// <param name="solveOrder">optional object solveOrder</param>
         /// <param name="type">optional object type</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, name, formula, solveOrder, type);
@@ -299,7 +299,7 @@ namespace NetOffice.ExcelApi
         /// <param name="formula">string formula</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, name, formula);
@@ -313,7 +313,7 @@ namespace NetOffice.ExcelApi
         /// <param name="solveOrder">optional object solveOrder</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember _Add(string name, string formula, object solveOrder)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "_Add", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, name, formula, solveOrder);
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember, object numberFormat)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember, numberFormat });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember, numberFormat });
         }
 
         /// <summary>
@@ -393,7 +393,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, displayFolder });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, displayFolder });
         }
 
         /// <summary>
@@ -410,7 +410,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, displayFolder, measureGroup });
         }
 
         /// <summary>
@@ -428,7 +428,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy });
         }
 
         /// <summary>
@@ -447,7 +447,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.CalculatedMember AddCalculatedMember(string name, object formula, object solveOrder, object type, object displayFolder, object measureGroup, object parentHierarchy, object parentMember)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[]{ name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.CalculatedMember>(this, "AddCalculatedMember", NetOffice.ExcelApi.CalculatedMember.LateBindingApiWrapperType, new object[] { name, formula, solveOrder, type, displayFolder, measureGroup, parentHierarchy, parentMember });
         }
 
         #endregion
@@ -486,7 +486,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -494,6 +494,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

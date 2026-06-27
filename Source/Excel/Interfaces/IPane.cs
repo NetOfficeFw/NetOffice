@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface IPane 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IPane : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IPane(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public IPane(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ExcelApi
         public IPane(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPane(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPane() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPane(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Index
         {
             get
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScrollColumn
         {
             get
@@ -181,7 +181,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScrollRow
         {
             get
@@ -198,7 +198,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Range VisibleRange
         {
             get
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool Activate()
         {
             return Factory.ExecuteBoolMethodGet(this, "Activate");
@@ -227,7 +227,7 @@ namespace NetOffice.ExcelApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         /// <param name="toLeft">optional object toLeft</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object LargeScroll(object down, object up, object toRight, object toLeft)
         {
             return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight, toLeft);
@@ -237,7 +237,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object LargeScroll()
         {
             return Factory.ExecuteVariantMethodGet(this, "LargeScroll");
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="down">optional object down</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object LargeScroll(object down)
         {
             return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down);
@@ -260,7 +260,7 @@ namespace NetOffice.ExcelApi
         /// <param name="down">optional object down</param>
         /// <param name="up">optional object up</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object LargeScroll(object down, object up)
         {
             return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up);
@@ -273,7 +273,7 @@ namespace NetOffice.ExcelApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object LargeScroll(object down, object up, object toRight)
         {
             return Factory.ExecuteVariantMethodGet(this, "LargeScroll", down, up, toRight);
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         /// <param name="toLeft">optional object toLeft</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object SmallScroll(object down, object up, object toRight, object toLeft)
         {
             return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight, toLeft);
@@ -296,7 +296,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object SmallScroll()
         {
             return Factory.ExecuteVariantMethodGet(this, "SmallScroll");
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="down">optional object down</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object SmallScroll(object down)
         {
             return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down);
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi
         /// <param name="down">optional object down</param>
         /// <param name="up">optional object up</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object SmallScroll(object down, object up)
         {
             return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up);
@@ -332,7 +332,7 @@ namespace NetOffice.ExcelApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object SmallScroll(object down, object up, object toRight)
         {
             return Factory.ExecuteVariantMethodGet(this, "SmallScroll", down, up, toRight);
@@ -346,10 +346,10 @@ namespace NetOffice.ExcelApi
         /// <param name="width">Int32 width</param>
         /// <param name="height">Int32 height</param>
         /// <param name="start">optional object start</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
         {
-            return Factory.ExecuteInt32MethodGet(this, "ScrollIntoView", new object[]{ left, top, width, height, start });
+            return Factory.ExecuteInt32MethodGet(this, "ScrollIntoView", new object[] { left, top, width, height, start });
         }
 
         /// <summary>
@@ -360,7 +360,7 @@ namespace NetOffice.ExcelApi
         /// <param name="width">Int32 width</param>
         /// <param name="height">Int32 height</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
         {
             return Factory.ExecuteInt32MethodGet(this, "ScrollIntoView", left, top, width, height);
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <param name="points">Int32 points</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 PointsToScreenPixelsX(Int32 points)
         {
             return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsX", points);
@@ -380,7 +380,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <param name="points">Int32 points</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 PointsToScreenPixelsY(Int32 points)
         {
             return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsY", points);
@@ -388,6 +388,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

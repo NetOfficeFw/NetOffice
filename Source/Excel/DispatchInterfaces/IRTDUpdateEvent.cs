@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class IRTDUpdateEvent : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -145,6 +145,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

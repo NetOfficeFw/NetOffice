@@ -10,18 +10,18 @@ namespace NetOffice.ExcelApi.Events
 #pragma warning disable
 
     #region SinkPoint Interface
-   
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0002441B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface RefreshEvents
     {
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1596)]
-        void BeforeRefresh([In] [Out] ref object cancel);
+        void BeforeRefresh([In][Out] ref object cancel);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("success", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1597)]
         void AfterRefresh([In] object success);
@@ -36,23 +36,23 @@ namespace NetOffice.ExcelApi.Events
     public class RefreshEvents_SinkHelper : SinkHelper, RefreshEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0002441B-0000-0000-C000-000000000046";
-        
+
         #endregion
-            
+
         #region Ctor
 
-        public RefreshEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public RefreshEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region RefreshEvents
-        
-        public void BeforeRefresh([In] [Out] ref object cancel)
+
+        public void BeforeRefresh([In][Out] ref object cancel)
         {
             if (!Validate("BeforeRefresh"))
             {
@@ -83,8 +83,8 @@ namespace NetOffice.ExcelApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

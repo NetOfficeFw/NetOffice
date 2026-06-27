@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface IPivotCache 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IPivotCache : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IPivotCache(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public IPivotCache(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ExcelApi
         public IPivotCache(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPivotCache(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPivotCache() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPivotCache(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -138,7 +138,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -151,7 +151,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool BackgroundQuery
         {
             get
@@ -168,7 +168,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Connection
         {
             get
@@ -185,7 +185,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool EnableRefresh
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Index
         {
             get
@@ -215,7 +215,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 MemoryUsed
         {
             get
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool OptimizeCache
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 RecordCount
         {
             get
@@ -258,7 +258,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public DateTime RefreshDate
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public string RefreshName
         {
             get
@@ -284,7 +284,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool RefreshOnFileOpen
         {
             get
@@ -301,7 +301,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object Sql
         {
@@ -319,7 +319,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool SavePassword
         {
             get
@@ -336,7 +336,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object SourceData
         {
             get
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object CommandText
         {
             get
@@ -370,7 +370,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCmdType CommandType
         {
             get
@@ -387,7 +387,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.xlQueryType QueryType
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool MaintainConnection
         {
             get
@@ -417,7 +417,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 RefreshPeriod
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Recordset
         {
             get
@@ -452,7 +452,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object LocalConnection
         {
             get
@@ -469,7 +469,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public bool UseLocalConnection
         {
             get
@@ -487,7 +487,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object ADOConnection
         {
             get
@@ -500,7 +500,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool IsConnected
         {
             get
@@ -513,7 +513,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool OLAP
         {
             get
@@ -526,7 +526,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlPivotTableSourceType SourceType
         {
             get
@@ -539,7 +539,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlPivotTableMissingItems MissingItemsLimit
         {
             get
@@ -556,7 +556,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public string SourceConnectionFile
         {
             get
@@ -573,7 +573,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public string SourceDataFile
         {
             get
@@ -586,7 +586,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlRobustConnect RobustConnect
         {
             get
@@ -603,7 +603,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
         {
             get
@@ -616,7 +616,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlPivotTableVersionList Version
         {
             get
@@ -629,7 +629,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public bool UpgradeOnRefresh
         {
             get
@@ -649,7 +649,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Refresh()
         {
             return Factory.ExecuteInt32MethodGet(this, "Refresh");
@@ -658,7 +658,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ResetTimer()
         {
             return Factory.ExecuteInt32MethodGet(this, "ResetTimer");
@@ -670,7 +670,7 @@ namespace NetOffice.ExcelApi
         /// <param name="tableDestination">object tableDestination</param>
         /// <param name="tableName">optional object tableName</param>
         /// <param name="readData">optional object readData</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType, tableDestination, tableName, readData);
@@ -683,7 +683,7 @@ namespace NetOffice.ExcelApi
         /// <param name="tableName">optional object tableName</param>
         /// <param name="readData">optional object readData</param>
         /// <param name="defaultVersion">optional object defaultVersion</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName, object readData, object defaultVersion)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType, tableDestination, tableName, readData, defaultVersion);
@@ -694,7 +694,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="tableDestination">object tableDestination</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType, tableDestination);
@@ -706,7 +706,7 @@ namespace NetOffice.ExcelApi
         /// <param name="tableDestination">object tableDestination</param>
         /// <param name="tableName">optional object tableName</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.PivotTable CreatePivotTable(object tableDestination, object tableName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.PivotTable>(this, "CreatePivotTable", NetOffice.ExcelApi.PivotTable.LateBindingApiWrapperType, tableDestination, tableName);
@@ -715,7 +715,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 MakeConnection()
         {
             return Factory.ExecuteInt32MethodGet(this, "MakeConnection");
@@ -727,7 +727,7 @@ namespace NetOffice.ExcelApi
         /// <param name="oDCFileName">string oDCFileName</param>
         /// <param name="description">optional object description</param>
         /// <param name="keywords">optional object keywords</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 SaveAsODC(string oDCFileName, object description, object keywords)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName, description, keywords);
@@ -738,7 +738,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="oDCFileName">string oDCFileName</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 SaveAsODC(string oDCFileName)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName);
@@ -750,7 +750,7 @@ namespace NetOffice.ExcelApi
         /// <param name="oDCFileName">string oDCFileName</param>
         /// <param name="description">optional object description</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 SaveAsODC(string oDCFileName, object description)
         {
             return Factory.ExecuteInt32MethodGet(this, "SaveAsODC", oDCFileName, description);
@@ -768,7 +768,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width, object height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType, new object[]{ chartDestination, xlChartType, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType, new object[] { chartDestination, xlChartType, left, top, width, height });
         }
 
         /// <summary>
@@ -833,11 +833,11 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public NetOffice.ExcelApi.Shape CreatePivotChart(object chartDestination, object xlChartType, object left, object top, object width)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType, new object[]{ chartDestination, xlChartType, left, top, width });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Shape>(this, "CreatePivotChart", NetOffice.ExcelApi.Shape.LateBindingApiWrapperType, new object[] { chartDestination, xlChartType, left, top, width });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

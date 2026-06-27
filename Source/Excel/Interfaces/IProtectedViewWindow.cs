@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface IProtectedViewWindow 
     /// SupportByVersion Excel, 14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 14,15,16)]
+    [SupportByVersion("Excel", 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IProtectedViewWindow : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IProtectedViewWindow(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public IProtectedViewWindow(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ExcelApi
         public IProtectedViewWindow(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IProtectedViewWindow(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IProtectedViewWindow() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IProtectedViewWindow(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string _Default
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string Caption
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool EnableResize
         {
             get
@@ -158,7 +158,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Height
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Left
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Top
         {
             get
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Double Width
         {
             get
@@ -226,7 +226,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool Visible
         {
             get
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string SourceName
         {
             get
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public string SourcePath
         {
             get
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlProtectedViewWindowState WindowState
         {
             get
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Workbook Workbook
         {
             get
@@ -302,7 +302,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 Activate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Activate");
@@ -311,7 +311,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public bool Close()
         {
             return Factory.ExecuteBoolMethodGet(this, "Close");
@@ -322,7 +322,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="writeResPassword">optional object writeResPassword</param>
         /// <param name="updateLinks">optional object updateLinks</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Workbook Edit(object writeResPassword, object updateLinks)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, writeResPassword, updateLinks);
@@ -332,7 +332,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Workbook Edit()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType);
@@ -343,7 +343,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="writeResPassword">optional object writeResPassword</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Workbook Edit(object writeResPassword)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Workbook>(this, "Edit", NetOffice.ExcelApi.Workbook.LateBindingApiWrapperType, writeResPassword);
@@ -351,6 +351,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

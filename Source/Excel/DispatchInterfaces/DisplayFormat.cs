@@ -25,7 +25,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DisplayFormat_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -34,7 +34,7 @@ namespace NetOffice.ExcelApi
         public DisplayFormat_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -52,7 +52,7 @@ namespace NetOffice.ExcelApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DisplayFormat_(ICOMObject replacedObject) : base(replacedObject)
@@ -66,13 +66,13 @@ namespace NetOffice.ExcelApi
         public DisplayFormat_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DisplayFormat_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -84,7 +84,7 @@ namespace NetOffice.ExcelApi
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Characters"/>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.ExcelApi.Characters get_Characters(object start, object length)
         {
@@ -98,7 +98,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Characters"/> </remarks>
         /// <param name="start">optional object start</param>
         /// <param name="length">optional object length</param>
-        [SupportByVersion("Excel", 14,15,16), Redirect("get_Characters")]
+        [SupportByVersion("Excel", 14, 15, 16), Redirect("get_Characters")]
         public NetOffice.ExcelApi.Characters Characters(object start, object length)
         {
             return get_Characters(start, length);
@@ -110,7 +110,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="start">optional object start</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Characters"/>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.ExcelApi.Characters get_Characters(object start)
         {
@@ -123,7 +123,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Characters"/> </remarks>
         /// <param name="start">optional object start</param>
-        [SupportByVersion("Excel", 14,15,16), Redirect("get_Characters")]
+        [SupportByVersion("Excel", 14, 15, 16), Redirect("get_Characters")]
         public NetOffice.ExcelApi.Characters Characters(object start)
         {
             return get_Characters(start);
@@ -142,11 +142,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat"/> </remarks>
-    [SupportByVersion("Excel", 14,15,16)]
+    [SupportByVersion("Excel", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class DisplayFormat : DisplayFormat_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -174,9 +174,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -191,7 +191,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DisplayFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi
         public DisplayFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -218,26 +218,26 @@ namespace NetOffice.ExcelApi
         public DisplayFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DisplayFormat(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DisplayFormat() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DisplayFormat(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Application"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -259,7 +259,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Creator"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Parent"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Borders"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Borders Borders
         {
             get
@@ -302,7 +302,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Characters"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Characters Characters
         {
             get
@@ -316,7 +316,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Font"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Font Font
         {
             get
@@ -330,7 +330,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Style"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object Style
         {
             get
@@ -344,7 +344,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.AddIndent"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object AddIndent
         {
             get
@@ -358,7 +358,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.FormulaHidden"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object FormulaHidden
         {
             get
@@ -372,7 +372,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.HorizontalAlignment"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object HorizontalAlignment
         {
             get
@@ -386,7 +386,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.IndentLevel"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object IndentLevel
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Interior"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public NetOffice.ExcelApi.Interior Interior
         {
             get
@@ -414,7 +414,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Locked"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object Locked
         {
             get
@@ -428,7 +428,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.MergeCells"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object MergeCells
         {
             get
@@ -442,7 +442,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.NumberFormat"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object NumberFormat
         {
             get
@@ -456,7 +456,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.NumberFormatLocal"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object NumberFormatLocal
         {
             get
@@ -470,7 +470,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.Orientation"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object Orientation
         {
             get
@@ -484,7 +484,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.ReadingOrder"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 ReadingOrder
         {
             get
@@ -498,7 +498,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.ShrinkToFit"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object ShrinkToFit
         {
             get
@@ -512,7 +512,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.VerticalAlignment"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object VerticalAlignment
         {
             get
@@ -526,7 +526,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.DisplayFormat.WrapText"/> </remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public object WrapText
         {
             get
@@ -541,6 +541,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface ISpeech 
     /// SupportByVersion Excel, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class ISpeech : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ISpeech(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public ISpeech(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ExcelApi
         public ISpeech(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ISpeech(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ISpeech() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ISpeech(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlSpeakDirection Direction
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public bool SpeakCellOnEnter
         {
             get
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
         /// <param name="speakAsync">optional object speakAsync</param>
         /// <param name="speakXML">optional object speakXML</param>
         /// <param name="purge">optional object purge</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 Speak(string text, object speakAsync, object speakXML, object purge)
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML, purge);
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="text">string text</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 Speak(string text)
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak", text);
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi
         /// <param name="text">string text</param>
         /// <param name="speakAsync">optional object speakAsync</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 Speak(string text, object speakAsync)
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync);
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
         /// <param name="speakAsync">optional object speakAsync</param>
         /// <param name="speakXML">optional object speakXML</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 Speak(string text, object speakAsync, object speakXML)
         {
             return Factory.ExecuteInt32MethodGet(this, "Speak", text, speakAsync, speakXML);
@@ -196,6 +196,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

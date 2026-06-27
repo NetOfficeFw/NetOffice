@@ -11,11 +11,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap"/> </remarks>
-    [SupportByVersion("Excel", 11,12,14,15,16)]
+    [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class XmlMap : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public XmlMap(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi
         public XmlMap(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.ExcelApi
         public XmlMap(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XmlMap(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XmlMap() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XmlMap(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Application"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Creator"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Parent"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public string _Default
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Name"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.IsExportable"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool IsExportable
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.ShowImportExportValidationErrors"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool ShowImportExportValidationErrors
         {
             get
@@ -220,7 +220,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.SaveDataSourceDefinition"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool SaveDataSourceDefinition
         {
             get
@@ -238,7 +238,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.AdjustColumnWidth"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool AdjustColumnWidth
         {
             get
@@ -256,7 +256,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.PreserveColumnFilter"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool PreserveColumnFilter
         {
             get
@@ -274,7 +274,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.PreserveNumberFormatting"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool PreserveNumberFormatting
         {
             get
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.AppendOnImport"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public bool AppendOnImport
         {
             get
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.RootElementName"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public string RootElementName
         {
             get
@@ -324,7 +324,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.RootElementNamespace"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.XmlNamespace RootElementNamespace
         {
             get
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Schemas"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.XmlSchemas Schemas
         {
             get
@@ -352,7 +352,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.DataBinding"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.XmlDataBinding DataBinding
         {
             get
@@ -366,7 +366,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.WorkbookConnection"/> </remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.WorkbookConnection WorkbookConnection
         {
             get
@@ -383,7 +383,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Delete"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -395,7 +395,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Import"/> </remarks>
         /// <param name="url">string url</param>
         /// <param name="overwrite">optional object overwrite</param>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url, object overwrite)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url, overwrite);
@@ -407,7 +407,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Import"/> </remarks>
         /// <param name="url">string url</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlImportResult Import(string url)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "Import", url);
@@ -419,7 +419,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.ImportXml"/> </remarks>
         /// <param name="xmlData">string xmlData</param>
         /// <param name="overwrite">optional object overwrite</param>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData, object overwrite)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData, overwrite);
@@ -431,7 +431,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.ImportXml"/> </remarks>
         /// <param name="xmlData">string xmlData</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlImportResult ImportXml(string xmlData)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlImportResult>(this, "ImportXml", xmlData);
@@ -443,7 +443,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Export"/> </remarks>
         /// <param name="url">string url</param>
         /// <param name="overwrite">optional object overwrite</param>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url, object overwrite)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url, overwrite);
@@ -455,7 +455,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.Export"/> </remarks>
         /// <param name="url">string url</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlExportResult Export(string url)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.ExcelApi.Enums.XlXmlExportResult>(this, "Export", url);
@@ -466,7 +466,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XmlMap.ExportXml"/> </remarks>
         /// <param name="data">string data</param>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlXmlExportResult ExportXml(out string data)
         {
             ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true);
@@ -480,6 +480,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
