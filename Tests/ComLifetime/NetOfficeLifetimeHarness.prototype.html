@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetOffice Lifetime Harness — Throwaway Prototype</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #152238;
+      --muted: #607089;
+      --line: #d9e0e8;
+      --panel: #ffffff;
+      --canvas: #f4f7fa;
+      --accent: #1769aa;
+      --accent-soft: #e7f1fa;
+      --good: #167447;
+      --good-soft: #e5f5ec;
+      --bad: #b3261e;
+      --bad-soft: #fce8e6;
+      --warn: #8a5a00;
+      --warn-soft: #fff4d6;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+    }
+    main { max-width: 1220px; margin: 0 auto; padding: 32px 24px 56px; }
+    h1, h2, h3 { margin-top: 0; line-height: 1.2; }
+    h1 { margin-bottom: 8px; font-size: 30px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 16px; }
+    p { margin: 8px 0; }
+    code { font-family: Consolas, monospace; font-size: 0.92em; }
+
+    .notice {
+      margin: 20px 0 24px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+    }
+    .notice strong { display: block; margin-bottom: 3px; }
+
+    .grid { display: grid; gap: 16px; }
+    .state-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .two-column { grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.8fr); }
+    @media (max-width: 860px) { .two-column { grid-template-columns: 1fr; } }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+    .metric { min-height: 105px; }
+    .metric .label { color: var(--muted); font-size: 13px; }
+    .metric .value { margin-top: 4px; font-size: 22px; font-weight: 650; }
+    .metric .detail { color: var(--muted); font-size: 12px; }
+
+    .status {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 650;
+    }
+    .status.good { color: var(--good); background: var(--good-soft); }
+    .status.bad { color: var(--bad); background: var(--bad-soft); }
+    .status.warn { color: var(--warn); background: var(--warn-soft); }
+    .status.neutral { color: var(--muted); background: #edf1f5; }
+
+    button {
+      border: 1px solid #b9c5d2;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      padding: 8px 11px;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+    button.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+    button.danger { border-color: #d7aaa6; color: var(--bad); }
+    button:disabled { opacity: 0.42; cursor: default; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .button-group { margin-bottom: 16px; }
+    .button-group h3 { margin-bottom: 8px; }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: 12px; font-weight: 650; text-transform: uppercase; letter-spacing: 0.04em; }
+    tr:last-child td { border-bottom: 0; }
+    .empty { padding: 20px 0; color: var(--muted); text-align: center; }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .tab { border: 0; border-radius: 5px 5px 0 0; background: transparent; color: var(--muted); }
+    .tab.active { background: var(--accent-soft); color: var(--accent); font-weight: 650; }
+    .walkthrough-step {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .walkthrough-step:last-child { border-bottom: 0; }
+    .step-number {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #edf1f5;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .walkthrough-step.done .step-number { background: var(--good-soft); color: var(--good); }
+    .walkthrough-step.current .step-number { background: var(--accent); color: #fff; }
+
+    .invariant { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .invariant:last-child { border-bottom: 0; }
+    .invariant .mark { font-weight: 700; }
+    .invariant.good .mark { color: var(--good); }
+    .invariant.bad .mark { color: var(--bad); }
+
+    .trace {
+      max-height: 420px;
+      overflow: auto;
+      background: #0f1b2d;
+      color: #dbe8f5;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font: 12px/1.55 Consolas, monospace;
+    }
+    .trace-row { display: grid; grid-template-columns: 34px 94px minmax(0, 1fr); gap: 8px; }
+    .trace-seq { color: #7ea3c7; }
+    .trace-actor { color: #7ed6a8; }
+    .trace-error .trace-actor, .trace-error .trace-detail { color: #ffaaa3; }
+    .last-change { color: var(--muted); margin-top: -8px; margin-bottom: 18px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>NetOffice lifetime harness model</h1>
+    <p>Drive wrapper, RCW alias, call, callback, and event teardown transitions before building the native integration harness.</p>
+
+    <div class="notice">
+      <strong>Throwaway logic prototype — not an integration test</strong>
+      Assumption: the question is whether the proposed identity-entry, lease, in-flight activity, and teardown state model produces the expected observable outcomes. This file simulates those rules in memory; it does not activate COM or predict the CLR's exact <code>AddRef</code>/<code>Release</code> sequence.
+    </div>
+
+    <section aria-labelledby="current-state-heading">
+      <h2 id="current-state-heading">Current state</h2>
+      <p id="last-change" class="last-change"></p>
+      <div id="state-metrics" class="grid state-grid"></div>
+    </section>
+
+    <div class="grid two-column">
+      <div>
+        <section class="panel" aria-labelledby="wrappers-heading">
+          <h2 id="wrappers-heading">Managed views</h2>
+          <div id="views"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="free-play-heading">
+          <h2 id="free-play-heading">Free play</h2>
+          <p>Actions stay available so invalid orders are visible as rejected transitions in the trace.</p>
+          <div id="free-play"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="walkthrough-heading">
+          <h2 id="walkthrough-heading">Guided walkthroughs</h2>
+          <div id="tabs" class="tabs"></div>
+          <div id="walkthrough"></div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="panel" aria-labelledby="invariants-heading">
+          <h2 id="invariants-heading">Harness oracles</h2>
+          <div id="invariants"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="trace-heading">
+          <h2 id="trace-heading">Observable trace</h2>
+          <div id="trace" class="trace"></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    // Pure prototype module. No DOM access: this reducer and its invariants are the decision-rich part.
+    const LifetimeModel = (() => {
+      const initialState = () => ({
+        nextWrapperId: 1,
+        native: { alive: false, destructionCount: 0 },
+        registry: {
+          holdsRcw: false,
+          removalPending: false,
+          escaped: false,
+          activeCalls: 0,
+          activeCallbacks: 0,
+          activeConnections: 0,
+          pendingUnadvise: false
+        },
+        dispatcher: "running",
+        wrappers: [],
+        aliases: { earlyBound: 0, raw: 0 },
+        callbackWrapperId: null,
+        trace: [],
+        lastChange: "Fresh scenario. No COM identity has entered managed code."
+      });
+
+      const activeLeases = state => state.wrappers.filter(wrapper => wrapper.lease === "active").length;
+      const externalAliases = state => state.aliases.earlyBound + state.aliases.raw;
+      const append = (state, actor, event, detail, error = false) => ({
+        ...state,
+        trace: [...state.trace, { seq: state.trace.length + 1, actor, event, detail, error }],
+        lastChange: detail
+      });
+
+      const ensureIdentity = state => {
+        if (state.native.alive) return state;
+        return append({
+          ...state,
+          native: { alive: true, destructionCount: state.native.destructionCount },
+          registry: { ...state.registry, holdsRcw: true }
+        }, "Native", "Construct", "Root identity constructed; CLR and registry now hold a managed path to it.");
+      };
+
+      const requestRemovalIfIdle = state => {
+        const idle = activeLeases(state) === 0 &&
+          state.registry.activeCalls === 0 &&
+          state.registry.activeCallbacks === 0 &&
+          state.registry.activeConnections === 0;
+        if (!idle || !state.registry.holdsRcw) return state;
+        return append({
+          ...state,
+          registry: { ...state.registry, removalPending: true }
+        }, "Registry", "RemovalPending", "No NetOffice leases or in-flight activity remain; registry removal may commit at quiescence.");
+      };
+
+      const addWrapper = (state, origin) => {
+        let next = ensureIdentity(state);
+        const wrapper = {
+          id: next.nextWrapperId,
+          name: `Wrapper ${next.nextWrapperId}`,
+          origin,
+          lease: "active",
+          retainedFromCallback: false
+        };
+        next = {
+          ...next,
+          nextWrapperId: next.nextWrapperId + 1,
+          wrappers: [...next.wrappers, wrapper],
+          registry: { ...next.registry, holdsRcw: true, removalPending: false }
+        };
+        return append(next, "NetOffice", "LeaseAttached", `${wrapper.name} attached through ${origin}; all wrappers share Root's canonical identity.`);
+      };
+
+      const disposeWrapper = (state, wrapperId) => {
+        const wrapper = state.wrappers.find(item => item.id === wrapperId);
+        if (!wrapper) return append(state, "Host", "Rejected", `Wrapper ${wrapperId} does not exist.`, true);
+        if (wrapper.lease === "released") return append(state, "NetOffice", "DisposeNoOp", `${wrapper.name} was already disposed; no second lease transition occurred.`);
+        let next = {
+          ...state,
+          wrappers: state.wrappers.map(item => item.id === wrapperId ? { ...item, lease: "released" } : item),
+          callbackWrapperId: state.callbackWrapperId === wrapperId ? null : state.callbackWrapperId
+        };
+        next = append(next, "NetOffice", "LeaseReleased", `${wrapper.name} released its lease. Other wrappers and external aliases are unchanged.`);
+        return requestRemovalIfIdle(next);
+      };
+
+      const callWrapper = (state, wrapperId) => {
+        const wrapper = state.wrappers.find(item => item.id === wrapperId);
+        if (!wrapper || wrapper.lease !== "active") {
+          return append(state, "NetOffice", "CallRejected", `Wrapper ${wrapperId} is disposed or missing; ObjectDisposedException occurs before native entry.`, true);
+        }
+        if (!state.native.alive) return append(state, "Native", "InvariantFailure", "A live wrapper attempted to call a destroyed object.", true);
+        return append(state, "Native", "CallCompleted", `${wrapper.name} called Root successfully and observed the stable native object ID.`);
+      };
+
+      const reduce = (state, action) => {
+        switch (action.type) {
+          case "RESET": return initialState();
+          case "ACTIVATE": return addWrapper(state, "NetOffice activation");
+          case "ADD_WRAPPER": return addWrapper(state, "repeated property ingress");
+          case "DISPOSE_FIRST_ACTIVE": {
+            const wrapper = state.wrappers.find(item => item.lease === "active");
+            return wrapper ? disposeWrapper(state, wrapper.id) : append(state, "Host", "Rejected", "No active wrapper is available to dispose.", true);
+          }
+          case "DISPOSE_WRAPPER": return disposeWrapper(state, action.wrapperId);
+          case "DISPOSE_CALLBACK": return state.callbackWrapperId === null
+            ? append(state, "Host", "Rejected", "No retained callback wrapper is available.", true)
+            : disposeWrapper(state, state.callbackWrapperId);
+          case "CALL_FIRST_ACTIVE": {
+            const wrapper = state.wrappers.find(item => item.lease === "active");
+            return wrapper ? callWrapper(state, wrapper.id) : append(state, "Host", "Rejected", "No active wrapper is available to call.", true);
+          }
+          case "CALL_WRAPPER": return callWrapper(state, action.wrapperId);
+          case "CALL_DISPOSED": {
+            const wrapper = state.wrappers.find(item => item.lease === "released");
+            return wrapper ? callWrapper(state, wrapper.id) : append(state, "Host", "Rejected", "No disposed wrapper exists yet.", true);
+          }
+          case "ADD_EARLY_ALIAS": {
+            let next = ensureIdentity(state);
+            next = { ...next, aliases: { ...next.aliases, earlyBound: next.aliases.earlyBound + 1 } };
+            return append(next, "C# interop", "AliasHeld", "An early-bound [ComImport] alias now shares Root's RCW outside NetOffice lease accounting.");
+          }
+          case "RELEASE_EARLY_ALIAS": {
+            if (state.aliases.earlyBound === 0) return append(state, "Host", "Rejected", "No early-bound alias is held.", true);
+            const next = { ...state, aliases: { ...state.aliases, earlyBound: state.aliases.earlyBound - 1 } };
+            return append(next, "C# interop", "AliasDropped", "One early-bound alias became unreachable; CLR cleanup remains eventual.");
+          }
+          case "ESCAPE_RAW": {
+            if (!state.native.alive) return append(state, "Host", "Rejected", "Activate Root before exposing its raw RCW.", true);
+            return append({
+              ...state,
+              aliases: { ...state.aliases, raw: state.aliases.raw + 1 },
+              registry: { ...state.registry, escaped: true }
+            }, "NetOffice", "RcwEscaped", "UnderlyingObject returned a raw alias and marked the identity escaped before return.");
+          }
+          case "RELEASE_RAW": {
+            if (state.aliases.raw === 0) return append(state, "Host", "Rejected", "No raw alias is held.", true);
+            const next = { ...state, aliases: { ...state.aliases, raw: state.aliases.raw - 1 } };
+            return append(next, "C# interop", "AliasDropped", "One raw RCW alias became unreachable; NetOffice performs no manual release.");
+          }
+          case "CALL_EXTERNAL": {
+            if (externalAliases(state) === 0) return append(state, "Host", "Rejected", "No external C# alias is available.", true);
+            if (!state.native.alive) return append(state, "Native", "InvariantFailure", "An external alias observed a destroyed native identity.", true);
+            return append(state, "Native", "ExternalCallCompleted", "The early-bound/raw alias remained callable independently of NetOffice wrapper disposal.");
+          }
+          case "START_CALL": {
+            const wrapper = state.wrappers.find(item => item.lease === "active");
+            if (!wrapper) return append(state, "Host", "Rejected", "A live wrapper is required to enter a native call.", true);
+            return append({
+              ...state,
+              registry: { ...state.registry, activeCalls: state.registry.activeCalls + 1 }
+            }, "Native", "CallEntered", `${wrapper.name} entered LongCall and is held at the native barrier.`);
+          }
+          case "END_CALL": {
+            if (state.registry.activeCalls === 0) return append(state, "Host", "Rejected", "No native call is in flight.", true);
+            let next = {
+              ...state,
+              registry: { ...state.registry, activeCalls: state.registry.activeCalls - 1 }
+            };
+            next = append(next, "Native", "CallExited", "LongCall crossed its exit barrier before registry removal or native destruction.");
+            return requestRemovalIfIdle(next);
+          }
+          case "SUBSCRIBE": {
+            if (!state.native.alive) return append(state, "Host", "Rejected", "Activate Root before subscribing.", true);
+            return append({
+              ...state,
+              registry: { ...state.registry, activeConnections: state.registry.activeConnections + 1, removalPending: false }
+            }, "Native", "Advise", "Connection point retained one event-sink CCW for a new cookie on the owner STA.");
+          }
+          case "UNSUBSCRIBE": {
+            if (state.registry.activeConnections === 0) return append(state, "NetOffice", "UnadviseNoOp", "No live event cookie exists; duplicate unsubscribe releases nothing.");
+            if (state.registry.activeCallbacks > 0) {
+              return append({
+                ...state,
+                registry: { ...state.registry, pendingUnadvise: true }
+              }, "NetOffice", "UnadviseDeferred", "Callback delivery is active; Unadvise is scheduled after callback exit.");
+            }
+            let next = {
+              ...state,
+              registry: { ...state.registry, activeConnections: state.registry.activeConnections - 1, pendingUnadvise: false }
+            };
+            next = append(next, "Native", "Unadvise", "Owner STA removed one cookie and released the server-held sink CCW reference exactly once.");
+            return requestRemovalIfIdle(next);
+          }
+          case "START_CALLBACK": {
+            if (state.registry.activeConnections === 0) return append(state, "Host", "Rejected", "A live subscription is required for callback delivery.", true);
+            let next = addWrapper(state, "borrowed callback argument");
+            const callbackWrapperId = next.nextWrapperId - 1;
+            next = {
+              ...next,
+              callbackWrapperId,
+              registry: { ...next.registry, activeCallbacks: next.registry.activeCallbacks + 1 }
+            };
+            return append(next, "Native", "CallbackEntered", `Callback is active with Wrapper ${callbackWrapperId}; argument lifetime is protected through callback exit.`);
+          }
+          case "RETAIN_CALLBACK": {
+            if (state.callbackWrapperId === null || state.registry.activeCallbacks === 0) {
+              return append(state, "Host", "Rejected", "No active callback wrapper can be retained.", true);
+            }
+            return append({
+              ...state,
+              wrappers: state.wrappers.map(item => item.id === state.callbackWrapperId ? { ...item, retainedFromCallback: true } : item)
+            }, "Consumer", "CallbackRetained", `Wrapper ${state.callbackWrapperId} will keep its independent lease after callback exit.`);
+          }
+          case "END_CALLBACK": {
+            if (state.registry.activeCallbacks === 0 || state.callbackWrapperId === null) {
+              return append(state, "Host", "Rejected", "No callback is active.", true);
+            }
+            const callbackWrapper = state.wrappers.find(item => item.id === state.callbackWrapperId);
+            let next = {
+              ...state,
+              registry: { ...state.registry, activeCallbacks: state.registry.activeCallbacks - 1 }
+            };
+            next = append(next, "Native", "CallbackExited", "Callback delivery completed before any deferred connection teardown.");
+            if (!callbackWrapper.retainedFromCallback) next = disposeWrapper(next, callbackWrapper.id);
+            if (next.registry.pendingUnadvise) next = reduce(next, { type: "UNSUBSCRIBE" });
+            return requestRemovalIfIdle(next);
+          }
+          case "FIRE_NO_HANDLER": {
+            if (!state.native.alive) return append(state, "Host", "Rejected", "Activate Root before simulating a borrowed callback argument.", true);
+            return append(state, "NetOffice", "NoRecipientCallback", "Generated sink returned without releasing or disposing the borrowed raw callback argument.");
+          }
+          case "STOP_DISPATCHER": return append({ ...state, dispatcher: "stopped" }, "Dispatcher", "Stopped", "Owner STA dispatcher stopped; pending COM teardown must be reported, never moved to the finalizer thread.");
+          case "QUIESCE": {
+            let next = requestRemovalIfIdle(state);
+            if (next.registry.removalPending && next.registry.holdsRcw) {
+              next = append({
+                ...next,
+                registry: { ...next.registry, holdsRcw: false, removalPending: false }
+              }, "Registry", "ReferenceDropped", "At quiescence the registry dropped its strong RCW reference; CLR cleanup remains responsible for native Release.");
+            }
+            if (next.native.alive && !next.registry.holdsRcw && externalAliases(next) === 0 && next.registry.activeConnections === 0) {
+              next = append({
+                ...next,
+                native: { alive: false, destructionCount: next.native.destructionCount + 1 }
+              }, "Native", "DestroyObserved", "After all proven holds disappeared, the fixture published one destruction tombstone.");
+            } else if (next.native.alive) {
+              next = append(next, "Controller", "Quiescent", "Native identity remains alive because a documented managed, external, connection, or in-flight hold still exists.");
+            }
+            return next;
+          }
+          default: return append(state, "Host", "Rejected", `Unknown action ${action.type}.`, true);
+        }
+      };
+
+      const invariants = state => {
+        const liveWrappers = state.wrappers.filter(item => item.lease === "active");
+        return [
+          {
+            ok: state.native.destructionCount <= 1,
+            label: "Native identity is destroyed at most once",
+            detail: `${state.native.destructionCount} destruction tombstone(s)`
+          },
+          {
+            ok: state.native.alive || (liveWrappers.length === 0 && externalAliases(state) === 0),
+            label: "No live managed view points at a destroyed identity",
+            detail: `${liveWrappers.length} live wrapper(s), ${externalAliases(state)} external alias(es)`
+          },
+          {
+            ok: !state.registry.removalPending || (
+              activeLeases(state) === 0 &&
+              state.registry.activeCalls === 0 &&
+              state.registry.activeCallbacks === 0 &&
+              state.registry.activeConnections === 0
+            ),
+            label: "Registry removal is pending only at zero activity",
+            detail: `${activeLeases(state)} lease(s), ${state.registry.activeCalls} call(s), ${state.registry.activeCallbacks} callback(s), ${state.registry.activeConnections} connection(s)`
+          },
+          {
+            ok: !(state.registry.pendingUnadvise && state.registry.activeCallbacks === 0),
+            label: "Deferred Unadvise drains immediately after callback exit",
+            detail: state.registry.pendingUnadvise ? "waiting for active callback" : "no deferred teardown"
+          },
+          {
+            ok: state.wrappers.every(item => item.lease === "active" || item.lease === "released"),
+            label: "Every wrapper lease has one explicit state",
+            detail: "active or released; repeated Dispose is a no-op"
+          }
+        ];
+      };
+
+      return { initialState, reduce, invariants, activeLeases, externalAliases };
+    })();
+
+    const walkthroughs = [
+      {
+        id: "single",
+        title: "Single wrapper",
+        description: "A wrapper works, disposes once, rejects later calls before native entry, and eventually allows CLR-managed destruction.",
+        steps: [
+          ["Activate Root", { type: "ACTIVATE" }],
+          ["Call through the wrapper", { type: "CALL_FIRST_ACTIVE" }],
+          ["Dispose the wrapper", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Try the disposed wrapper", { type: "CALL_DISPOSED" }],
+          ["Reach quiescence", { type: "QUIESCE" }]
+        ]
+      },
+      {
+        id: "shared",
+        title: "Shared identity",
+        description: "Two independent wrappers share one canonical identity. Disposing one must not disconnect the other.",
+        steps: [
+          ["Activate the first wrapper", { type: "ACTIVATE" }],
+          ["Return Root through a property", { type: "ADD_WRAPPER" }],
+          ["Dispose the first wrapper", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Call the remaining wrapper", { type: "CALL_FIRST_ACTIVE" }],
+          ["Dispose the remaining wrapper", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Reach quiescence", { type: "QUIESCE" }]
+        ]
+      },
+      {
+        id: "callback",
+        title: "Retained callback",
+        description: "A borrowed callback argument gains an independent wrapper lease when retained and remains callable after callback return.",
+        steps: [
+          ["Activate the event source", { type: "ACTIVATE" }],
+          ["Subscribe the event sink", { type: "SUBSCRIBE" }],
+          ["Enter callback with Root", { type: "START_CALLBACK" }],
+          ["Retain the callback wrapper", { type: "RETAIN_CALLBACK" }],
+          ["Exit callback", { type: "END_CALLBACK" }],
+          ["Call the retained wrapper", { type: "CALL_FIRST_ACTIVE" }],
+          ["Unsubscribe", { type: "UNSUBSCRIBE" }],
+          ["Dispose both wrappers", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Dispose retained wrapper", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Reach quiescence", { type: "QUIESCE" }]
+        ]
+      },
+      {
+        id: "interop",
+        title: "C# interop alias",
+        description: "An early-bound C# alias lives outside NetOffice. NetOffice disposal cannot disconnect it or claim exclusive RCW ownership.",
+        steps: [
+          ["Create early-bound alias", { type: "ADD_EARLY_ALIAS" }],
+          ["Wrap Root in NetOffice", { type: "ACTIVATE" }],
+          ["Dispose NetOffice wrapper", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Call early-bound alias", { type: "CALL_EXTERNAL" }],
+          ["Drop early-bound alias", { type: "RELEASE_EARLY_ALIAS" }],
+          ["Reach quiescence", { type: "QUIESCE" }]
+        ]
+      },
+      {
+        id: "race",
+        title: "Dispose during call",
+        description: "Disposal rejects new calls but cannot remove the identity while a native call is in flight.",
+        steps: [
+          ["Activate Root", { type: "ACTIVATE" }],
+          ["Enter blocked LongCall", { type: "START_CALL" }],
+          ["Dispose the calling wrapper", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Try quiescence while blocked", { type: "QUIESCE" }],
+          ["Release LongCall barrier", { type: "END_CALL" }],
+          ["Reach quiescence again", { type: "QUIESCE" }]
+        ]
+      },
+      {
+        id: "reentrant",
+        title: "Unsubscribe in callback",
+        description: "Event teardown requested during delivery is deferred until callback exit, then runs exactly once.",
+        steps: [
+          ["Activate event source", { type: "ACTIVATE" }],
+          ["Subscribe", { type: "SUBSCRIBE" }],
+          ["Enter callback", { type: "START_CALLBACK" }],
+          ["Request unsubscribe", { type: "UNSUBSCRIBE" }],
+          ["Exit callback", { type: "END_CALLBACK" }],
+          ["Dispose source", { type: "DISPOSE_FIRST_ACTIVE" }],
+          ["Reach quiescence", { type: "QUIESCE" }]
+        ]
+      }
+    ];
+
+    let state = LifetimeModel.initialState();
+    let activeWalkthrough = 0;
+    let walkthroughStep = 0;
+
+    const dispatch = action => {
+      state = LifetimeModel.reduce(state, action);
+      render();
+    };
+
+    const metric = (label, value, detail, tone = "neutral") => `
+      <div class="panel metric">
+        <div class="label">${label}</div>
+        <div class="value"><span class="status ${tone}">${value}</span></div>
+        <div class="detail">${detail}</div>
+      </div>`;
+
+    const renderMetrics = () => {
+      const liveLeases = LifetimeModel.activeLeases(state);
+      document.querySelector("#state-metrics").innerHTML = [
+        metric("Native Root", state.native.alive ? "Alive" : (state.native.destructionCount ? "Destroyed" : "Not created"), `${state.native.destructionCount} tombstone(s)`, state.native.alive ? "good" : "neutral"),
+        metric("Registry RCW reference", state.registry.holdsRcw ? "Held" : "Dropped", state.registry.removalPending ? "removal pending" : "no pending removal", state.registry.removalPending ? "warn" : "neutral"),
+        metric("Wrapper leases", String(liveLeases), `${state.wrappers.length - liveLeases} released`, liveLeases ? "good" : "neutral"),
+        metric("In-flight activity", `${state.registry.activeCalls} / ${state.registry.activeCallbacks}`, "calls / callbacks", (state.registry.activeCalls + state.registry.activeCallbacks) ? "warn" : "neutral"),
+        metric("Event connections", String(state.registry.activeConnections), state.registry.pendingUnadvise ? "Unadvise deferred" : "no deferred teardown", state.registry.pendingUnadvise ? "warn" : "neutral"),
+        metric("External C# aliases", String(LifetimeModel.externalAliases(state)), `${state.aliases.earlyBound} early-bound, ${state.aliases.raw} raw`, LifetimeModel.externalAliases(state) ? "good" : "neutral"),
+        metric("Raw RCW escape", state.registry.escaped ? "Recorded" : "None", "diagnostic only; never release authority", state.registry.escaped ? "warn" : "neutral"),
+        metric("Owner dispatcher", state.dispatcher === "running" ? "Running" : "Stopped", "COM teardown stays apartment-bound", state.dispatcher === "running" ? "good" : "bad")
+      ].join("");
+      document.querySelector("#last-change").textContent = state.lastChange;
+    };
+
+    const renderViews = () => {
+      const rows = state.wrappers.map(wrapper => `
+        <tr>
+          <td>${wrapper.name}</td>
+          <td>${wrapper.origin}${wrapper.retainedFromCallback ? " · retained" : ""}</td>
+          <td><span class="status ${wrapper.lease === "active" ? "good" : "neutral"}">${wrapper.lease}</span></td>
+          <td>
+            <button data-action="call" data-wrapper="${wrapper.id}">Call</button>
+            <button class="danger" data-action="dispose" data-wrapper="${wrapper.id}">Dispose</button>
+          </td>
+        </tr>`).join("");
+      document.querySelector("#views").innerHTML = `
+        <table>
+          <thead><tr><th>View</th><th>Ingress</th><th>Lease</th><th>Actions</th></tr></thead>
+          <tbody>${rows || `<tr><td colspan="4" class="empty">No NetOffice wrappers yet.</td></tr>`}</tbody>
+        </table>
+        <p><strong>Early-bound aliases:</strong> ${state.aliases.earlyBound} &nbsp; <strong>Raw aliases:</strong> ${state.aliases.raw}</p>`;
+      document.querySelectorAll("[data-action='call']").forEach(button => button.onclick = () => dispatch({ type: "CALL_WRAPPER", wrapperId: Number(button.dataset.wrapper) }));
+      document.querySelectorAll("[data-action='dispose']").forEach(button => button.onclick = () => dispatch({ type: "DISPOSE_WRAPPER", wrapperId: Number(button.dataset.wrapper) }));
+    };
+
+    const freePlayGroups = [
+      ["Wrappers and aliases", [
+        ["Activate Root", "ACTIVATE", "primary"], ["Add same-identity wrapper", "ADD_WRAPPER"],
+        ["Add early-bound alias", "ADD_EARLY_ALIAS"], ["Drop early-bound alias", "RELEASE_EARLY_ALIAS"],
+        ["Escape raw RCW", "ESCAPE_RAW"], ["Drop raw alias", "RELEASE_RAW"], ["Call external alias", "CALL_EXTERNAL"]
+      ]],
+      ["Calls and events", [
+        ["Start blocked call", "START_CALL"], ["Finish blocked call", "END_CALL"],
+        ["Subscribe", "SUBSCRIBE"], ["Unsubscribe", "UNSUBSCRIBE"],
+        ["Enter callback", "START_CALLBACK"], ["Retain callback wrapper", "RETAIN_CALLBACK"], ["Exit callback", "END_CALLBACK"],
+        ["Fire with no handler", "FIRE_NO_HANDLER"]
+      ]],
+      ["Cleanup and failure edges", [
+        ["Dispose first live wrapper", "DISPOSE_FIRST_ACTIVE", "danger"], ["Call disposed wrapper", "CALL_DISPOSED"],
+        ["Reach quiescence", "QUIESCE", "primary"], ["Stop dispatcher", "STOP_DISPATCHER", "danger"], ["Reset", "RESET"]
+      ]]
+    ];
+
+    const renderFreePlay = () => {
+      document.querySelector("#free-play").innerHTML = freePlayGroups.map(([title, actions]) => `
+        <div class="button-group">
+          <h3>${title}</h3>
+          <div class="button-row">${actions.map(([label, type, style = ""]) => `<button class="${style}" data-free-action="${type}">${label}</button>`).join("")}</div>
+        </div>`).join("");
+      document.querySelectorAll("[data-free-action]").forEach(button => button.onclick = () => dispatch({ type: button.dataset.freeAction }));
+    };
+
+    const renderWalkthrough = () => {
+      document.querySelector("#tabs").innerHTML = walkthroughs.map((walkthrough, index) => `
+        <button class="tab ${index === activeWalkthrough ? "active" : ""}" data-tab="${index}">${walkthrough.title}</button>`).join("");
+      document.querySelectorAll("[data-tab]").forEach(button => button.onclick = () => {
+        activeWalkthrough = Number(button.dataset.tab);
+        walkthroughStep = 0;
+        state = LifetimeModel.initialState();
+        render();
+      });
+
+      const walkthrough = walkthroughs[activeWalkthrough];
+      document.querySelector("#walkthrough").innerHTML = `
+        <p>${walkthrough.description}</p>
+        ${walkthrough.steps.map(([label], index) => `
+          <div class="walkthrough-step ${index < walkthroughStep ? "done" : index === walkthroughStep ? "current" : ""}">
+            <span class="step-number">${index + 1}</span>
+            <span>${label}</span>
+            <button data-step="${index}" ${index !== walkthroughStep ? "disabled" : ""}>Run step</button>
+          </div>`).join("")}
+        <div class="button-row" style="margin-top: 12px"><button data-restart>Restart walkthrough</button></div>`;
+      document.querySelectorAll("[data-step]").forEach(button => button.onclick = () => {
+        const index = Number(button.dataset.step);
+        dispatch(walkthrough.steps[index][1]);
+        walkthroughStep += 1;
+        renderWalkthrough();
+      });
+      document.querySelector("[data-restart]").onclick = () => {
+        walkthroughStep = 0;
+        state = LifetimeModel.initialState();
+        render();
+      };
+    };
+
+    const renderInvariants = () => {
+      document.querySelector("#invariants").innerHTML = LifetimeModel.invariants(state).map(invariant => `
+        <div class="invariant ${invariant.ok ? "good" : "bad"}">
+          <span class="mark">${invariant.ok ? "PASS" : "FAIL"}</span>
+          <div><strong>${invariant.label}</strong><br><small>${invariant.detail}</small></div>
+        </div>`).join("");
+    };
+
+    const renderTrace = () => {
+      document.querySelector("#trace").innerHTML = state.trace.length
+        ? state.trace.map(item => `<div class="trace-row ${item.error ? "trace-error" : ""}"><span class="trace-seq">#${item.seq}</span><span class="trace-actor">${item.actor}</span><span class="trace-detail">${item.event}: ${item.detail}</span></div>`).join("")
+        : `<div class="trace-row"><span class="trace-seq">#0</span><span class="trace-actor">Controller</span><span class="trace-detail">Ready for a scenario.</span></div>`;
+      document.querySelector("#trace").scrollTop = document.querySelector("#trace").scrollHeight;
+    };
+
+    const render = () => {
+      renderMetrics();
+      renderViews();
+      renderFreePlay();
+      renderWalkthrough();
+      renderInvariants();
+      renderTrace();
+    };
+
+    render();
+  </script>
+</body>
+</html>
