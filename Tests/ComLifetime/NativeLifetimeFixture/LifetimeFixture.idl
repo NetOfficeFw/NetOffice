@@ -1,0 +1,33 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    uuid(6D9939F7-8F06-49F3-A39C-59A704BF1A16),
+    version(1.0)
+]
+library NetOfficeComLifetimePrototype
+{
+    importlib("stdole2.tlb");
+
+    [
+        object,
+        dual,
+        oleautomation,
+        uuid(67F6B6BE-757D-49AC-9D9F-AF827641CC41),
+        pointer_default(unique)
+    ]
+    interface IProbeObject : IDispatch
+    {
+        [id(1), propget] HRESULT Identity([out, retval] LONG* value);
+        [id(2)] HRESULT Ping([out, retval] BSTR* value);
+        [id(3), propget] HRESULT Self([out, retval] IProbeObject** value);
+    };
+
+    [
+        uuid(32D43B6B-6198-4E98-9386-49D6B576580A)
+    ]
+    coclass ProbeObject
+    {
+        [default] interface IProbeObject;
+    };
+};

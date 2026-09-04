@@ -1,0 +1,4 @@
+LIBRARY NativeLifetimeFixture
+EXPORTS
+    DllCanUnloadNow PRIVATE
+    DllGetClassObject PRIVATE
