@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.inlineshapes"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class InlineShapes : COMObject, IEnumerableProvider<NetOffice.WordApi.InlineShape>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public InlineShapes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public InlineShapes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public InlineShapes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public InlineShapes(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public InlineShapes() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public InlineShapes(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.Count"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.InlineShape this[Int32 index]
         {
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// <param name="linkToFile">optional object linkToFile</param>
         /// <param name="saveWithDocument">optional object saveWithDocument</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile, object saveWithDocument, object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddPicture", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName, linkToFile, saveWithDocument, range);
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddPicture"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddPicture(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddPicture", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName);
@@ -219,7 +219,7 @@ namespace NetOffice.WordApi
         /// <param name="fileName">string fileName</param>
         /// <param name="linkToFile">optional object linkToFile</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddPicture", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName, linkToFile);
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
         /// <param name="linkToFile">optional object linkToFile</param>
         /// <param name="saveWithDocument">optional object saveWithDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddPicture(string fileName, object linkToFile, object saveWithDocument)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddPicture", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName, linkToFile, saveWithDocument);
@@ -251,10 +251,10 @@ namespace NetOffice.WordApi
         /// <param name="iconIndex">optional object iconIndex</param>
         /// <param name="iconLabel">optional object iconLabel</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object range)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, range });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[] { classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel, range });
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddOLEObject"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType);
@@ -274,7 +274,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddOLEObject"/> </remarks>
         /// <param name="classType">optional object classType</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, classType);
@@ -287,7 +287,7 @@ namespace NetOffice.WordApi
         /// <param name="classType">optional object classType</param>
         /// <param name="fileName">optional object fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, classType, fileName);
@@ -301,7 +301,7 @@ namespace NetOffice.WordApi
         /// <param name="fileName">optional object fileName</param>
         /// <param name="linkToFile">optional object linkToFile</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, classType, fileName, linkToFile);
@@ -316,7 +316,7 @@ namespace NetOffice.WordApi
         /// <param name="linkToFile">optional object linkToFile</param>
         /// <param name="displayAsIcon">optional object displayAsIcon</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, classType, fileName, linkToFile, displayAsIcon);
@@ -332,10 +332,10 @@ namespace NetOffice.WordApi
         /// <param name="displayAsIcon">optional object displayAsIcon</param>
         /// <param name="iconFileName">optional object iconFileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[] { classType, fileName, linkToFile, displayAsIcon, iconFileName });
         }
 
         /// <summary>
@@ -349,10 +349,10 @@ namespace NetOffice.WordApi
         /// <param name="iconFileName">optional object iconFileName</param>
         /// <param name="iconIndex">optional object iconIndex</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[] { classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex });
         }
 
         /// <summary>
@@ -367,10 +367,10 @@ namespace NetOffice.WordApi
         /// <param name="iconIndex">optional object iconIndex</param>
         /// <param name="iconLabel">optional object iconLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEObject(object classType, object fileName, object linkToFile, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[]{ classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEObject", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[] { classType, fileName, linkToFile, displayAsIcon, iconFileName, iconIndex, iconLabel });
         }
 
         /// <summary>
@@ -379,7 +379,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddOLEControl"/> </remarks>
         /// <param name="classType">optional object classType</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEControl(object classType, object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEControl", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, classType, range);
@@ -390,7 +390,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddOLEControl"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEControl()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEControl", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType);
@@ -402,7 +402,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddOLEControl"/> </remarks>
         /// <param name="classType">optional object classType</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddOLEControl(object classType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddOLEControl", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, classType);
@@ -413,7 +413,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.New"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape New(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "New", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, range);
@@ -425,7 +425,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddHorizontalLine"/> </remarks>
         /// <param name="fileName">string fileName</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName, object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddHorizontalLine", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName, range);
@@ -437,7 +437,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddHorizontalLine"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddHorizontalLine(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddHorizontalLine", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName);
@@ -448,7 +448,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddHorizontalLineStandard"/> </remarks>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddHorizontalLineStandard(object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddHorizontalLineStandard", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, range);
@@ -459,7 +459,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddHorizontalLineStandard"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddHorizontalLineStandard()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddHorizontalLineStandard", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType);
@@ -471,7 +471,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddPictureBullet"/> </remarks>
         /// <param name="fileName">string fileName</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName, object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddPictureBullet", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName, range);
@@ -483,7 +483,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddPictureBullet"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddPictureBullet(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddPictureBullet", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, fileName);
@@ -494,7 +494,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddChart(object type, object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddChart", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, type, range);
@@ -504,7 +504,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddChart()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddChart", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType);
@@ -515,7 +515,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="type">optional NetOffice.OfficeApi.Enums.XlChartType Type = -1</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddChart(object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddChart", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, type);
@@ -527,7 +527,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddSmartArt"/> </remarks>
         /// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
         /// <param name="range">optional object range</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout, object range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddSmartArt", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, layout, range);
@@ -539,7 +539,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.InlineShapes.AddSmartArt"/> </remarks>
         /// <param name="layout">NetOffice.OfficeApi.SmartArtLayout layout</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.InlineShape AddSmartArt(NetOffice.OfficeApi.SmartArtLayout layout)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddSmartArt", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, layout);
@@ -558,7 +558,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public NetOffice.WordApi.InlineShape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url, object range)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddWebVideo", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url, range });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddWebVideo", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[] { embedCode, videoWidth, videoHeight, posterFrameImage, url, range });
         }
 
         /// <summary>
@@ -603,7 +603,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public NetOffice.WordApi.InlineShape AddWebVideo(string embedCode, object videoWidth, object videoHeight, object posterFrameImage, object url)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddWebVideo", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[]{ embedCode, videoWidth, videoHeight, posterFrameImage, url });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.InlineShape>(this, "AddWebVideo", NetOffice.WordApi.InlineShape.LateBindingApiWrapperType, new object[] { embedCode, videoWidth, videoHeight, posterFrameImage, url });
         }
 
         /// <summary>
@@ -706,7 +706,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -714,6 +714,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

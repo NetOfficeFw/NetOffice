@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class MailingLabel : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public MailingLabel(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public MailingLabel(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public MailingLabel(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MailingLabel(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MailingLabel() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MailingLabel(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DefaultPrintBarCode
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.DefaultLaserTray"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdPaperTray DefaultLaserTray
         {
             get
@@ -191,7 +191,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.CustomLabels"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.CustomLabels CustomLabels
         {
             get
@@ -205,7 +205,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.DefaultLabelName"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string DefaultLabelName
         {
             get
@@ -223,7 +223,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.Vertical"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public bool Vertical
         {
             get
@@ -249,10 +249,10 @@ namespace NetOffice.WordApi
         /// <param name="autoText">optional object autoText</param>
         /// <param name="extractAddress">optional object extractAddress</param>
         /// <param name="laserTray">optional object laserTray</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { name, address, autoText, extractAddress, laserTray });
         }
 
         /// <summary>
@@ -266,10 +266,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         /// <param name="vertical">optional object vertical</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { name, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical });
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.CreateNewDocument"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType);
@@ -289,7 +289,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.CreateNewDocument"/> </remarks>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name);
@@ -302,7 +302,7 @@ namespace NetOffice.WordApi
         /// <param name="name">optional object name</param>
         /// <param name="address">optional object address</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name, object address)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address);
@@ -316,7 +316,7 @@ namespace NetOffice.WordApi
         /// <param name="address">optional object address</param>
         /// <param name="autoText">optional object autoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText);
@@ -331,7 +331,7 @@ namespace NetOffice.WordApi
         /// <param name="autoText">optional object autoText</param>
         /// <param name="extractAddress">optional object extractAddress</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText, extractAddress);
@@ -348,10 +348,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument(object name, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray, printEPostageLabel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { name, address, autoText, extractAddress, laserTray, printEPostageLabel });
         }
 
         /// <summary>
@@ -365,10 +365,10 @@ namespace NetOffice.WordApi
         /// <param name="singleLabel">optional object singleLabel</param>
         /// <param name="row">optional object row</param>
         /// <param name="column">optional object column</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { name, address, extractAddress, laserTray, singleLabel, row, column });
         }
 
         /// <summary>
@@ -384,10 +384,10 @@ namespace NetOffice.WordApi
         /// <param name="column">optional object column</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         /// <param name="vertical">optional object vertical</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical });
         }
 
         /// <summary>
@@ -395,10 +395,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.PrintOut"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut()
         {
-             Factory.ExecuteMethod(this, "PrintOut");
+            Factory.ExecuteMethod(this, "PrintOut");
         }
 
         /// <summary>
@@ -407,10 +407,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.PrintOut"/> </remarks>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name)
         {
-             Factory.ExecuteMethod(this, "PrintOut", name);
+            Factory.ExecuteMethod(this, "PrintOut", name);
         }
 
         /// <summary>
@@ -420,10 +420,10 @@ namespace NetOffice.WordApi
         /// <param name="name">optional object name</param>
         /// <param name="address">optional object address</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address)
         {
-             Factory.ExecuteMethod(this, "PrintOut", name, address);
+            Factory.ExecuteMethod(this, "PrintOut", name, address);
         }
 
         /// <summary>
@@ -434,10 +434,10 @@ namespace NetOffice.WordApi
         /// <param name="address">optional object address</param>
         /// <param name="extractAddress">optional object extractAddress</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress)
         {
-             Factory.ExecuteMethod(this, "PrintOut", name, address, extractAddress);
+            Factory.ExecuteMethod(this, "PrintOut", name, address, extractAddress);
         }
 
         /// <summary>
@@ -449,10 +449,10 @@ namespace NetOffice.WordApi
         /// <param name="extractAddress">optional object extractAddress</param>
         /// <param name="laserTray">optional object laserTray</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress, object laserTray)
         {
-             Factory.ExecuteMethod(this, "PrintOut", name, address, extractAddress, laserTray);
+            Factory.ExecuteMethod(this, "PrintOut", name, address, extractAddress, laserTray);
         }
 
         /// <summary>
@@ -465,10 +465,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         /// <param name="singleLabel">optional object singleLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { name, address, extractAddress, laserTray, singleLabel });
         }
 
         /// <summary>
@@ -482,10 +482,10 @@ namespace NetOffice.WordApi
         /// <param name="singleLabel">optional object singleLabel</param>
         /// <param name="row">optional object row</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { name, address, extractAddress, laserTray, singleLabel, row });
         }
 
         /// <summary>
@@ -501,10 +501,10 @@ namespace NetOffice.WordApi
         /// <param name="column">optional object column</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { name, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel });
         }
 
         /// <summary>
@@ -516,10 +516,10 @@ namespace NetOffice.WordApi
         /// <param name="extractAddress">optional object extractAddress</param>
         /// <param name="laserTray">optional object laserTray</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress, object laserTray)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ name, address, autoText, extractAddress, laserTray });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { name, address, autoText, extractAddress, laserTray });
         }
 
         /// <summary>
@@ -527,7 +527,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument2000()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType);
@@ -539,7 +539,7 @@ namespace NetOffice.WordApi
         /// <param name="name">optional object name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument2000(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name);
@@ -552,7 +552,7 @@ namespace NetOffice.WordApi
         /// <param name="address">optional object address</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address);
@@ -566,7 +566,7 @@ namespace NetOffice.WordApi
         /// <param name="autoText">optional object autoText</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText);
@@ -581,7 +581,7 @@ namespace NetOffice.WordApi
         /// <param name="extractAddress">optional object extractAddress</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocument2000(object name, object address, object autoText, object extractAddress)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocument2000", NetOffice.WordApi.Document.LateBindingApiWrapperType, name, address, autoText, extractAddress);
@@ -598,10 +598,10 @@ namespace NetOffice.WordApi
         /// <param name="row">optional object row</param>
         /// <param name="column">optional object column</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ name, address, extractAddress, laserTray, singleLabel, row, column });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { name, address, extractAddress, laserTray, singleLabel, row, column });
         }
 
         /// <summary>
@@ -609,10 +609,10 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000()
         {
-             Factory.ExecuteMethod(this, "PrintOut2000");
+            Factory.ExecuteMethod(this, "PrintOut2000");
         }
 
         /// <summary>
@@ -621,10 +621,10 @@ namespace NetOffice.WordApi
         /// <param name="name">optional object name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", name);
+            Factory.ExecuteMethod(this, "PrintOut2000", name);
         }
 
         /// <summary>
@@ -634,10 +634,10 @@ namespace NetOffice.WordApi
         /// <param name="address">optional object address</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name, object address)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", name, address);
+            Factory.ExecuteMethod(this, "PrintOut2000", name, address);
         }
 
         /// <summary>
@@ -648,10 +648,10 @@ namespace NetOffice.WordApi
         /// <param name="extractAddress">optional object extractAddress</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name, object address, object extractAddress)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", name, address, extractAddress);
+            Factory.ExecuteMethod(this, "PrintOut2000", name, address, extractAddress);
         }
 
         /// <summary>
@@ -663,10 +663,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name, object address, object extractAddress, object laserTray)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", name, address, extractAddress, laserTray);
+            Factory.ExecuteMethod(this, "PrintOut2000", name, address, extractAddress, laserTray);
         }
 
         /// <summary>
@@ -679,10 +679,10 @@ namespace NetOffice.WordApi
         /// <param name="singleLabel">optional object singleLabel</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ name, address, extractAddress, laserTray, singleLabel });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { name, address, extractAddress, laserTray, singleLabel });
         }
 
         /// <summary>
@@ -696,20 +696,20 @@ namespace NetOffice.WordApi
         /// <param name="row">optional object row</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object name, object address, object extractAddress, object laserTray, object singleLabel, object row)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ name, address, extractAddress, laserTray, singleLabel, row });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { name, address, extractAddress, laserTray, singleLabel, row });
         }
 
         /// <summary>
         /// SupportByVersion Word 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.LabelOptions"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void LabelOptions()
         {
-             Factory.ExecuteMethod(this, "LabelOptions");
+            Factory.ExecuteMethod(this, "LabelOptions");
         }
 
         /// <summary>
@@ -723,10 +723,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         /// <param name="vertical">optional object vertical</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel, object vertical)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { labelID, address, autoText, extractAddress, laserTray, printEPostageLabel, vertical });
         }
 
         /// <summary>
@@ -734,7 +734,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.CreateNewDocumentByID"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType);
@@ -746,7 +746,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.CreateNewDocumentByID"/> </remarks>
         /// <param name="labelID">optional object labelID</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID);
@@ -759,7 +759,7 @@ namespace NetOffice.WordApi
         /// <param name="labelID">optional object labelID</param>
         /// <param name="address">optional object address</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID, address);
@@ -773,7 +773,7 @@ namespace NetOffice.WordApi
         /// <param name="address">optional object address</param>
         /// <param name="autoText">optional object autoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID, address, autoText);
@@ -788,7 +788,7 @@ namespace NetOffice.WordApi
         /// <param name="autoText">optional object autoText</param>
         /// <param name="extractAddress">optional object extractAddress</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, labelID, address, autoText, extractAddress);
@@ -804,10 +804,10 @@ namespace NetOffice.WordApi
         /// <param name="extractAddress">optional object extractAddress</param>
         /// <param name="laserTray">optional object laserTray</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ labelID, address, autoText, extractAddress, laserTray });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { labelID, address, autoText, extractAddress, laserTray });
         }
 
         /// <summary>
@@ -821,10 +821,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Document CreateNewDocumentByID(object labelID, object address, object autoText, object extractAddress, object laserTray, object printEPostageLabel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[]{ labelID, address, autoText, extractAddress, laserTray, printEPostageLabel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Document>(this, "CreateNewDocumentByID", NetOffice.WordApi.Document.LateBindingApiWrapperType, new object[] { labelID, address, autoText, extractAddress, laserTray, printEPostageLabel });
         }
 
         /// <summary>
@@ -840,10 +840,10 @@ namespace NetOffice.WordApi
         /// <param name="column">optional object column</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         /// <param name="vertical">optional object vertical</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel, object vertical)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical });
+            Factory.ExecuteMethod(this, "PrintOutByID", new object[] { labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel, vertical });
         }
 
         /// <summary>
@@ -851,10 +851,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.PrintOutByID"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID()
         {
-             Factory.ExecuteMethod(this, "PrintOutByID");
+            Factory.ExecuteMethod(this, "PrintOutByID");
         }
 
         /// <summary>
@@ -863,10 +863,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailingLabel.PrintOutByID"/> </remarks>
         /// <param name="labelID">optional object labelID</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", labelID);
+            Factory.ExecuteMethod(this, "PrintOutByID", labelID);
         }
 
         /// <summary>
@@ -876,10 +876,10 @@ namespace NetOffice.WordApi
         /// <param name="labelID">optional object labelID</param>
         /// <param name="address">optional object address</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", labelID, address);
+            Factory.ExecuteMethod(this, "PrintOutByID", labelID, address);
         }
 
         /// <summary>
@@ -890,10 +890,10 @@ namespace NetOffice.WordApi
         /// <param name="address">optional object address</param>
         /// <param name="extractAddress">optional object extractAddress</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", labelID, address, extractAddress);
+            Factory.ExecuteMethod(this, "PrintOutByID", labelID, address, extractAddress);
         }
 
         /// <summary>
@@ -905,10 +905,10 @@ namespace NetOffice.WordApi
         /// <param name="extractAddress">optional object extractAddress</param>
         /// <param name="laserTray">optional object laserTray</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", labelID, address, extractAddress, laserTray);
+            Factory.ExecuteMethod(this, "PrintOutByID", labelID, address, extractAddress, laserTray);
         }
 
         /// <summary>
@@ -921,10 +921,10 @@ namespace NetOffice.WordApi
         /// <param name="laserTray">optional object laserTray</param>
         /// <param name="singleLabel">optional object singleLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel });
+            Factory.ExecuteMethod(this, "PrintOutByID", new object[] { labelID, address, extractAddress, laserTray, singleLabel });
         }
 
         /// <summary>
@@ -938,10 +938,10 @@ namespace NetOffice.WordApi
         /// <param name="singleLabel">optional object singleLabel</param>
         /// <param name="row">optional object row</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row });
+            Factory.ExecuteMethod(this, "PrintOutByID", new object[] { labelID, address, extractAddress, laserTray, singleLabel, row });
         }
 
         /// <summary>
@@ -956,10 +956,10 @@ namespace NetOffice.WordApi
         /// <param name="row">optional object row</param>
         /// <param name="column">optional object column</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row, column });
+            Factory.ExecuteMethod(this, "PrintOutByID", new object[] { labelID, address, extractAddress, laserTray, singleLabel, row, column });
         }
 
         /// <summary>
@@ -975,14 +975,14 @@ namespace NetOffice.WordApi
         /// <param name="column">optional object column</param>
         /// <param name="printEPostageLabel">optional object printEPostageLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void PrintOutByID(object labelID, object address, object extractAddress, object laserTray, object singleLabel, object row, object column, object printEPostageLabel)
         {
-             Factory.ExecuteMethod(this, "PrintOutByID", new object[]{ labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel });
+            Factory.ExecuteMethod(this, "PrintOutByID", new object[] { labelID, address, extractAddress, laserTray, singleLabel, row, column, printEPostageLabel });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

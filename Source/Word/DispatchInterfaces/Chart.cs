@@ -26,7 +26,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Chart_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -35,7 +35,7 @@ namespace NetOffice.WordApi
         public Chart_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -53,7 +53,7 @@ namespace NetOffice.WordApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart_(ICOMObject replacedObject) : base(replacedObject)
@@ -67,13 +67,13 @@ namespace NetOffice.WordApi
         public Chart_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -85,7 +85,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartGroups"/>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object get_ChartGroups(object index)
         {
@@ -99,7 +99,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <param name="index">optional object index</param>
-        [SupportByVersion("Word", 14,15,16), ProxyResult, Redirect("get_ChartGroups")]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult, Redirect("get_ChartGroups")]
         public object ChartGroups(object index)
         {
             return get_ChartGroups(index);
@@ -112,7 +112,7 @@ namespace NetOffice.WordApi
         /// <param name="index1">optional object index1</param>
         /// <param name="index2">optional object index2</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasAxis"/>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object get_HasAxis(object index1, object index2)
         {
@@ -126,7 +126,7 @@ namespace NetOffice.WordApi
         /// <param name="index1">optional object index1</param>
         /// <param name="index2">optional object index2</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_HasAxis(object index1, object index2, object value)
         {
@@ -140,7 +140,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasAxis"/> </remarks>
         /// <param name="index1">optional object index1</param>
         /// <param name="index2">optional object index2</param>
-        [SupportByVersion("Word", 14,15,16), Redirect("get_HasAxis")]
+        [SupportByVersion("Word", 14, 15, 16), Redirect("get_HasAxis")]
         public object HasAxis(object index1, object index2)
         {
             return get_HasAxis(index1, index2);
@@ -152,7 +152,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index1">optional object index1</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasAxis"/>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object get_HasAxis(object index1)
         {
@@ -165,7 +165,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index1">optional object index1</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_HasAxis(object index1, object value)
         {
@@ -178,7 +178,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasAxis"/> </remarks>
         /// <param name="index1">optional object index1</param>
-        [SupportByVersion("Word", 14,15,16), Redirect("get_HasAxis")]
+        [SupportByVersion("Word", 14, 15, 16), Redirect("get_HasAxis")]
         public object HasAxis(object index1)
         {
             return get_HasAxis(index1);
@@ -196,11 +196,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart"/> </remarks>
-    [SupportByVersion("Word", 14,15,16)]
+    [SupportByVersion("Word", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Chart : Chart_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -228,9 +228,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -245,7 +245,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Chart(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -254,7 +254,7 @@ namespace NetOffice.WordApi
         public Chart(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -272,26 +272,26 @@ namespace NetOffice.WordApi
         public Chart(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -300,7 +300,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Parent"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -314,7 +314,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasTitle"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool HasTitle
         {
             get
@@ -332,7 +332,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartTitle"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.ChartTitle ChartTitle
         {
             get
@@ -346,7 +346,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.DepthPercent"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 DepthPercent
         {
             get
@@ -364,7 +364,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Elevation"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Elevation
         {
             get
@@ -382,7 +382,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.GapDepth"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 GapDepth
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HeightPercent"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 HeightPercent
         {
             get
@@ -418,7 +418,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Perspective"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Perspective
         {
             get
@@ -436,7 +436,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.RightAngleAxes"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object RightAngleAxes
         {
             get
@@ -454,7 +454,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Rotation"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Rotation
         {
             get
@@ -472,7 +472,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.DisplayBlanksAs"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Enums.XlDisplayBlanksAs DisplayBlanksAs
         {
             get
@@ -491,7 +491,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartGroups"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object ChartGroups
         {
             get
@@ -504,7 +504,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 SubType
         {
@@ -522,7 +522,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 Type
         {
@@ -540,7 +540,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.Corners Corners
         {
@@ -555,7 +555,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartType"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.XlChartType ChartType
         {
             get
@@ -573,7 +573,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasDataTable"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool HasDataTable
         {
             get
@@ -591,7 +591,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.PlotBy"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Enums.XlRowCol PlotBy
         {
             get
@@ -609,7 +609,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasLegend"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool HasLegend
         {
             get
@@ -627,7 +627,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Legend"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Legend Legend
         {
             get
@@ -641,7 +641,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.HasAxis"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object HasAxis
         {
             get
@@ -659,7 +659,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Walls"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Walls Walls
         {
             get
@@ -673,7 +673,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Floor"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Floor Floor
         {
             get
@@ -687,7 +687,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.PlotArea"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.PlotArea PlotArea
         {
             get
@@ -701,7 +701,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.PlotVisibleOnly"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool PlotVisibleOnly
         {
             get
@@ -719,7 +719,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartArea"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.ChartArea ChartArea
         {
             get
@@ -733,7 +733,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.AutoScaling"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool AutoScaling
         {
             get
@@ -751,7 +751,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.DataTable"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.DataTable DataTable
         {
             get
@@ -765,7 +765,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.BarShape"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Enums.XlBarShape BarShape
         {
             get
@@ -783,7 +783,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SideWall"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Walls SideWall
         {
             get
@@ -797,7 +797,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.BackWall"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Walls BackWall
         {
             get
@@ -811,7 +811,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartStyle"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object ChartStyle
         {
             get
@@ -830,7 +830,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.PivotLayout"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object PivotLayout
         {
             get
@@ -843,7 +843,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool HasPivotFields
         {
@@ -862,7 +862,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ShowDataLabelsOverMaximum"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool ShowDataLabelsOverMaximum
         {
             get
@@ -880,7 +880,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartData"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.ChartData ChartData
         {
             get
@@ -895,7 +895,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Shapes"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Shapes
         {
             get
@@ -910,7 +910,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Application"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -924,7 +924,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Creator"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -937,7 +937,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.ChartGroup Area3DGroup
         {
@@ -951,7 +951,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.ChartGroup Bar3DGroup
         {
@@ -965,7 +965,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.ChartGroup Column3DGroup
         {
@@ -979,7 +979,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.ChartGroup Line3DGroup
         {
@@ -993,7 +993,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.ChartGroup Pie3DGroup
         {
@@ -1007,7 +1007,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.ChartGroup SurfaceGroup
         {
@@ -1022,7 +1022,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ShowReportFilterFieldButtons"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool ShowReportFilterFieldButtons
         {
             get
@@ -1040,7 +1040,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ShowLegendFieldButtons"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool ShowLegendFieldButtons
         {
             get
@@ -1058,7 +1058,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ShowAxisFieldButtons"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool ShowAxisFieldButtons
         {
             get
@@ -1076,7 +1076,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ShowValueFieldButtons"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool ShowValueFieldButtons
         {
             get
@@ -1094,7 +1094,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ShowAllFieldButtons"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool ShowAllFieldButtons
         {
             get
@@ -1184,7 +1184,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SeriesCollection"/> </remarks>
         /// <param name="index">optional object index</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object SeriesCollection(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "SeriesCollection", index);
@@ -1195,7 +1195,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SeriesCollection"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object SeriesCollection()
         {
             return Factory.ExecuteVariantMethodGet(this, "SeriesCollection");
@@ -1215,10 +1215,10 @@ namespace NetOffice.WordApi
         /// <param name="showPercentage">optional object showPercentage</param>
         /// <param name="showBubbleSize">optional object showBubbleSize</param>
         /// <param name="separator">optional object separator</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize, object separator)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
+            Factory.ExecuteMethod(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize, separator });
         }
 
         /// <summary>
@@ -1226,10 +1226,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ApplyDataLabels"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels()
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels");
+            Factory.ExecuteMethod(this, "ApplyDataLabels");
         }
 
         /// <summary>
@@ -1238,10 +1238,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ApplyDataLabels"/> </remarks>
         /// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", type);
+            Factory.ExecuteMethod(this, "ApplyDataLabels", type);
         }
 
         /// <summary>
@@ -1251,10 +1251,10 @@ namespace NetOffice.WordApi
         /// <param name="type">optional NetOffice.WordApi.Enums.XlDataLabelsType Type = 2</param>
         /// <param name="legendKey">optional object legendKey</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey);
+            Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey);
         }
 
         /// <summary>
@@ -1265,10 +1265,10 @@ namespace NetOffice.WordApi
         /// <param name="legendKey">optional object legendKey</param>
         /// <param name="autoText">optional object autoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey, autoText);
+            Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey, autoText);
         }
 
         /// <summary>
@@ -1280,10 +1280,10 @@ namespace NetOffice.WordApi
         /// <param name="autoText">optional object autoText</param>
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
+            Factory.ExecuteMethod(this, "ApplyDataLabels", type, legendKey, autoText, hasLeaderLines);
         }
 
         /// <summary>
@@ -1296,10 +1296,10 @@ namespace NetOffice.WordApi
         /// <param name="hasLeaderLines">optional object hasLeaderLines</param>
         /// <param name="showSeriesName">optional object showSeriesName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName });
+            Factory.ExecuteMethod(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName });
         }
 
         /// <summary>
@@ -1313,10 +1313,10 @@ namespace NetOffice.WordApi
         /// <param name="showSeriesName">optional object showSeriesName</param>
         /// <param name="showCategoryName">optional object showCategoryName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
+            Factory.ExecuteMethod(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName });
         }
 
         /// <summary>
@@ -1331,10 +1331,10 @@ namespace NetOffice.WordApi
         /// <param name="showCategoryName">optional object showCategoryName</param>
         /// <param name="showValue">optional object showValue</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
+            Factory.ExecuteMethod(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue });
         }
 
         /// <summary>
@@ -1350,10 +1350,10 @@ namespace NetOffice.WordApi
         /// <param name="showValue">optional object showValue</param>
         /// <param name="showPercentage">optional object showPercentage</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
+            Factory.ExecuteMethod(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage });
         }
 
         /// <summary>
@@ -1370,10 +1370,10 @@ namespace NetOffice.WordApi
         /// <param name="showPercentage">optional object showPercentage</param>
         /// <param name="showBubbleSize">optional object showBubbleSize</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyDataLabels(object type, object legendKey, object autoText, object hasLeaderLines, object showSeriesName, object showCategoryName, object showValue, object showPercentage, object showBubbleSize)
         {
-             Factory.ExecuteMethod(this, "ApplyDataLabels", new object[]{ type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
+            Factory.ExecuteMethod(this, "ApplyDataLabels", new object[] { type, legendKey, autoText, hasLeaderLines, showSeriesName, showCategoryName, showValue, showPercentage, showBubbleSize });
         }
 
         /// <summary>
@@ -1382,10 +1382,10 @@ namespace NetOffice.WordApi
         /// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType chartType</param>
         /// <param name="typeName">optional object typeName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType, object typeName)
         {
-             Factory.ExecuteMethod(this, "ApplyCustomType", chartType, typeName);
+            Factory.ExecuteMethod(this, "ApplyCustomType", chartType, typeName);
         }
 
         /// <summary>
@@ -1394,10 +1394,10 @@ namespace NetOffice.WordApi
         /// <param name="chartType">NetOffice.OfficeApi.Enums.XlChartType chartType</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyCustomType(NetOffice.OfficeApi.Enums.XlChartType chartType)
         {
-             Factory.ExecuteMethod(this, "ApplyCustomType", chartType);
+            Factory.ExecuteMethod(this, "ApplyCustomType", chartType);
         }
 
         /// <summary>
@@ -1409,10 +1409,10 @@ namespace NetOffice.WordApi
         /// <param name="elementID">Int32 elementID</param>
         /// <param name="arg1">Int32 arg1</param>
         /// <param name="arg2">Int32 arg2</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void GetChartElement(Int32 x, Int32 y, out Int32 elementID, out Int32 arg1, out Int32 arg2)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, true, true);
             elementID = 0;
             arg1 = 0;
             arg2 = 0;
@@ -1429,10 +1429,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SetSourceData"/> </remarks>
         /// <param name="source">string source</param>
         /// <param name="plotBy">optional object plotBy</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void SetSourceData(string source, object plotBy)
         {
-             Factory.ExecuteMethod(this, "SetSourceData", source, plotBy);
+            Factory.ExecuteMethod(this, "SetSourceData", source, plotBy);
         }
 
         /// <summary>
@@ -1441,10 +1441,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SetSourceData"/> </remarks>
         /// <param name="source">string source</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void SetSourceData(string source)
         {
-             Factory.ExecuteMethod(this, "SetSourceData", source);
+            Factory.ExecuteMethod(this, "SetSourceData", source);
         }
 
         /// <summary>
@@ -1453,7 +1453,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Axes"/> </remarks>
         /// <param name="type">optional object type</param>
         /// <param name="axisGroup">optional NetOffice.WordApi.Enums.XlAxisGroup AxisGroup = 1</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Axes(object type, object axisGroup)
         {
             return Factory.ExecuteVariantMethodGet(this, "Axes", type, axisGroup);
@@ -1464,7 +1464,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Axes"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Axes()
         {
             return Factory.ExecuteVariantMethodGet(this, "Axes");
@@ -1476,7 +1476,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Axes"/> </remarks>
         /// <param name="type">optional object type</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Axes(object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "Axes", type);
@@ -1488,10 +1488,10 @@ namespace NetOffice.WordApi
         /// <param name="gallery">Int32 gallery</param>
         /// <param name="format">optional object format</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void AutoFormat(Int32 gallery, object format)
         {
-             Factory.ExecuteMethod(this, "AutoFormat", gallery, format);
+            Factory.ExecuteMethod(this, "AutoFormat", gallery, format);
         }
 
         /// <summary>
@@ -1500,10 +1500,10 @@ namespace NetOffice.WordApi
         /// <param name="gallery">Int32 gallery</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void AutoFormat(Int32 gallery)
         {
-             Factory.ExecuteMethod(this, "AutoFormat", gallery);
+            Factory.ExecuteMethod(this, "AutoFormat", gallery);
         }
 
         /// <summary>
@@ -1511,10 +1511,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SetBackgroundPicture"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void SetBackgroundPicture(string fileName)
         {
-             Factory.ExecuteMethod(this, "SetBackgroundPicture", fileName);
+            Factory.ExecuteMethod(this, "SetBackgroundPicture", fileName);
         }
 
         /// <summary>
@@ -1532,10 +1532,10 @@ namespace NetOffice.WordApi
         /// <param name="categoryTitle">optional object categoryTitle</param>
         /// <param name="valueTitle">optional object valueTitle</param>
         /// <param name="extraTitle">optional object extraTitle</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle, object extraTitle)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle, extraTitle });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle, extraTitle });
         }
 
         /// <summary>
@@ -1543,10 +1543,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartWizard"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard()
         {
-             Factory.ExecuteMethod(this, "ChartWizard");
+            Factory.ExecuteMethod(this, "ChartWizard");
         }
 
         /// <summary>
@@ -1555,10 +1555,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ChartWizard"/> </remarks>
         /// <param name="source">optional object source</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", source);
+            Factory.ExecuteMethod(this, "ChartWizard", source);
         }
 
         /// <summary>
@@ -1568,10 +1568,10 @@ namespace NetOffice.WordApi
         /// <param name="source">optional object source</param>
         /// <param name="gallery">optional object gallery</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", source, gallery);
+            Factory.ExecuteMethod(this, "ChartWizard", source, gallery);
         }
 
         /// <summary>
@@ -1582,10 +1582,10 @@ namespace NetOffice.WordApi
         /// <param name="gallery">optional object gallery</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", source, gallery, format);
+            Factory.ExecuteMethod(this, "ChartWizard", source, gallery, format);
         }
 
         /// <summary>
@@ -1597,10 +1597,10 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="plotBy">optional object plotBy</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", source, gallery, format, plotBy);
+            Factory.ExecuteMethod(this, "ChartWizard", source, gallery, format, plotBy);
         }
 
         /// <summary>
@@ -1613,10 +1613,10 @@ namespace NetOffice.WordApi
         /// <param name="plotBy">optional object plotBy</param>
         /// <param name="categoryLabels">optional object categoryLabels</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels });
         }
 
         /// <summary>
@@ -1630,10 +1630,10 @@ namespace NetOffice.WordApi
         /// <param name="categoryLabels">optional object categoryLabels</param>
         /// <param name="seriesLabels">optional object seriesLabels</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels, seriesLabels });
         }
 
         /// <summary>
@@ -1648,10 +1648,10 @@ namespace NetOffice.WordApi
         /// <param name="seriesLabels">optional object seriesLabels</param>
         /// <param name="hasLegend">optional object hasLegend</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend });
         }
 
         /// <summary>
@@ -1667,10 +1667,10 @@ namespace NetOffice.WordApi
         /// <param name="hasLegend">optional object hasLegend</param>
         /// <param name="title">optional object title</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title });
         }
 
         /// <summary>
@@ -1687,10 +1687,10 @@ namespace NetOffice.WordApi
         /// <param name="title">optional object title</param>
         /// <param name="categoryTitle">optional object categoryTitle</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle });
         }
 
         /// <summary>
@@ -1708,10 +1708,10 @@ namespace NetOffice.WordApi
         /// <param name="categoryTitle">optional object categoryTitle</param>
         /// <param name="valueTitle">optional object valueTitle</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ChartWizard(object source, object gallery, object format, object plotBy, object categoryLabels, object seriesLabels, object hasLegend, object title, object categoryTitle, object valueTitle)
         {
-             Factory.ExecuteMethod(this, "ChartWizard", new object[]{ source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle });
+            Factory.ExecuteMethod(this, "ChartWizard", new object[] { source, gallery, format, plotBy, categoryLabels, seriesLabels, hasLegend, title, categoryTitle, valueTitle });
         }
 
         /// <summary>
@@ -1721,10 +1721,10 @@ namespace NetOffice.WordApi
         /// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
         /// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
         /// <param name="size">optional NetOffice.WordApi.Enums.XlPictureAppearance Size = 2</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void CopyPicture(object appearance, object format, object size)
         {
-             Factory.ExecuteMethod(this, "CopyPicture", appearance, format, size);
+            Factory.ExecuteMethod(this, "CopyPicture", appearance, format, size);
         }
 
         /// <summary>
@@ -1732,10 +1732,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.CopyPicture"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void CopyPicture()
         {
-             Factory.ExecuteMethod(this, "CopyPicture");
+            Factory.ExecuteMethod(this, "CopyPicture");
         }
 
         /// <summary>
@@ -1744,10 +1744,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.CopyPicture"/> </remarks>
         /// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void CopyPicture(object appearance)
         {
-             Factory.ExecuteMethod(this, "CopyPicture", appearance);
+            Factory.ExecuteMethod(this, "CopyPicture", appearance);
         }
 
         /// <summary>
@@ -1757,10 +1757,10 @@ namespace NetOffice.WordApi
         /// <param name="appearance">optional NetOffice.WordApi.Enums.XlPictureAppearance Appearance = 1</param>
         /// <param name="format">optional NetOffice.WordApi.Enums.XlCopyPictureFormat Format = -4147</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void CopyPicture(object appearance, object format)
         {
-             Factory.ExecuteMethod(this, "CopyPicture", appearance, format);
+            Factory.ExecuteMethod(this, "CopyPicture", appearance, format);
         }
 
         /// <summary>
@@ -1768,10 +1768,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Paste"/> </remarks>
         /// <param name="type">optional object type</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Paste(object type)
         {
-             Factory.ExecuteMethod(this, "Paste", type);
+            Factory.ExecuteMethod(this, "Paste", type);
         }
 
         /// <summary>
@@ -1779,10 +1779,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Paste"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Paste()
         {
-             Factory.ExecuteMethod(this, "Paste");
+            Factory.ExecuteMethod(this, "Paste");
         }
 
         /// <summary>
@@ -1792,7 +1792,7 @@ namespace NetOffice.WordApi
         /// <param name="fileName">string fileName</param>
         /// <param name="filterName">optional object filterName</param>
         /// <param name="interactive">optional object interactive</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool Export(string fileName, object filterName, object interactive)
         {
             return Factory.ExecuteBoolMethodGet(this, "Export", fileName, filterName, interactive);
@@ -1804,7 +1804,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Export"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool Export(string fileName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Export", fileName);
@@ -1817,7 +1817,7 @@ namespace NetOffice.WordApi
         /// <param name="fileName">string fileName</param>
         /// <param name="filterName">optional object filterName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public bool Export(string fileName, object filterName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Export", fileName, filterName);
@@ -1828,10 +1828,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SetDefaultChart"/> </remarks>
         /// <param name="name">object name</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void SetDefaultChart(object name)
         {
-             Factory.ExecuteMethod(this, "SetDefaultChart", name);
+            Factory.ExecuteMethod(this, "SetDefaultChart", name);
         }
 
         /// <summary>
@@ -1839,10 +1839,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ApplyChartTemplate"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyChartTemplate(string fileName)
         {
-             Factory.ExecuteMethod(this, "ApplyChartTemplate", fileName);
+            Factory.ExecuteMethod(this, "ApplyChartTemplate", fileName);
         }
 
         /// <summary>
@@ -1850,20 +1850,20 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SaveChartTemplate"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void SaveChartTemplate(string fileName)
         {
-             Factory.ExecuteMethod(this, "SaveChartTemplate", fileName);
+            Factory.ExecuteMethod(this, "SaveChartTemplate", fileName);
         }
 
         /// <summary>
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ClearToMatchStyle"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ClearToMatchStyle()
         {
-             Factory.ExecuteMethod(this, "ClearToMatchStyle");
+            Factory.ExecuteMethod(this, "ClearToMatchStyle");
         }
 
         /// <summary>
@@ -1872,10 +1872,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ApplyLayout"/> </remarks>
         /// <param name="layout">Int32 layout</param>
         /// <param name="chartType">optional object chartType</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyLayout(Int32 layout, object chartType)
         {
-             Factory.ExecuteMethod(this, "ApplyLayout", layout, chartType);
+            Factory.ExecuteMethod(this, "ApplyLayout", layout, chartType);
         }
 
         /// <summary>
@@ -1884,20 +1884,20 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.ApplyLayout"/> </remarks>
         /// <param name="layout">Int32 layout</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void ApplyLayout(Int32 layout)
         {
-             Factory.ExecuteMethod(this, "ApplyLayout", layout);
+            Factory.ExecuteMethod(this, "ApplyLayout", layout);
         }
 
         /// <summary>
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Refresh"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -1905,10 +1905,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.SetElement"/> </remarks>
         /// <param name="element">NetOffice.OfficeApi.Enums.MsoChartElementType element</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void SetElement(NetOffice.OfficeApi.Enums.MsoChartElementType element)
         {
-             Factory.ExecuteMethod(this, "SetElement", element);
+            Factory.ExecuteMethod(this, "SetElement", element);
         }
 
         /// <summary>
@@ -1916,7 +1916,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object AreaGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "AreaGroups", index);
@@ -1927,7 +1927,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object AreaGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "AreaGroups");
@@ -1938,7 +1938,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object BarGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "BarGroups", index);
@@ -1949,7 +1949,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object BarGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "BarGroups");
@@ -1960,7 +1960,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object ColumnGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "ColumnGroups", index);
@@ -1971,7 +1971,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object ColumnGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "ColumnGroups");
@@ -1982,7 +1982,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object LineGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "LineGroups", index);
@@ -1993,7 +1993,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object LineGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "LineGroups");
@@ -2004,7 +2004,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object PieGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "PieGroups", index);
@@ -2015,7 +2015,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object PieGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "PieGroups");
@@ -2026,7 +2026,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object DoughnutGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "DoughnutGroups", index);
@@ -2037,7 +2037,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object DoughnutGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "DoughnutGroups");
@@ -2048,7 +2048,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object RadarGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "RadarGroups", index);
@@ -2059,7 +2059,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object RadarGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "RadarGroups");
@@ -2070,7 +2070,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">optional object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object XYGroups(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "XYGroups", index);
@@ -2081,7 +2081,7 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object XYGroups()
         {
             return Factory.ExecuteVariantMethodGet(this, "XYGroups");
@@ -2091,7 +2091,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Delete"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Delete()
         {
             return Factory.ExecuteVariantMethodGet(this, "Delete");
@@ -2103,10 +2103,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Copy"/> </remarks>
         /// <param name="before">optional object before</param>
         /// <param name="after">optional object after</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Copy(object before, object after)
         {
-             Factory.ExecuteMethod(this, "Copy", before, after);
+            Factory.ExecuteMethod(this, "Copy", before, after);
         }
 
         /// <summary>
@@ -2114,10 +2114,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Copy"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Copy()
         {
-             Factory.ExecuteMethod(this, "Copy");
+            Factory.ExecuteMethod(this, "Copy");
         }
 
         /// <summary>
@@ -2126,10 +2126,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Copy"/> </remarks>
         /// <param name="before">optional object before</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public void Copy(object before)
         {
-             Factory.ExecuteMethod(this, "Copy", before);
+            Factory.ExecuteMethod(this, "Copy", before);
         }
 
         /// <summary>
@@ -2137,7 +2137,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Select"/> </remarks>
         /// <param name="replace">optional object replace</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Select(object replace)
         {
             return Factory.ExecuteVariantMethodGet(this, "Select", replace);
@@ -2148,7 +2148,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Chart.Select"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Select()
         {
             return Factory.ExecuteVariantMethodGet(this, "Select");
@@ -2183,7 +2183,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void DeleteHiddenContent()
         {
-             Factory.ExecuteMethod(this, "DeleteHiddenContent");
+            Factory.ExecuteMethod(this, "DeleteHiddenContent");
         }
 
         /// <summary>
@@ -2193,11 +2193,11 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void ClearToMatchColorStyle()
         {
-             Factory.ExecuteMethod(this, "ClearToMatchColorStyle");
+            Factory.ExecuteMethod(this, "ClearToMatchColorStyle");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

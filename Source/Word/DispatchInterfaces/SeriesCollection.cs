@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection"/> </remarks>
-    [SupportByVersion("Word", 14,15,16)]
+    [SupportByVersion("Word", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "_Default")]
     public class SeriesCollection : COMObject, IEnumerableProvider<NetOffice.WordApi.Series>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SeriesCollection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public SeriesCollection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public SeriesCollection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SeriesCollection(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SeriesCollection() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SeriesCollection(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.Parent"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.Count"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -146,7 +146,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.Application"/> </remarks>
-        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -160,7 +160,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.Creator"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -182,10 +182,10 @@ namespace NetOffice.WordApi
         /// <param name="seriesLabels">optional object seriesLabels</param>
         /// <param name="categoryLabels">optional object categoryLabels</param>
         /// <param name="replace">optional object replace</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels, object replace)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, new object[]{ source, rowcol, seriesLabels, categoryLabels, replace });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, new object[] { source, rowcol, seriesLabels, categoryLabels, replace });
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.Add"/> </remarks>
         /// <param name="source">object source</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Series Add(object source)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source);
@@ -207,7 +207,7 @@ namespace NetOffice.WordApi
         /// <param name="source">object source</param>
         /// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Series Add(object source, object rowcol)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source, rowcol);
@@ -221,7 +221,7 @@ namespace NetOffice.WordApi
         /// <param name="rowcol">optional NetOffice.WordApi.Enums.XlRowCol Rowcol = 2</param>
         /// <param name="seriesLabels">optional object seriesLabels</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source, rowcol, seriesLabels);
@@ -236,7 +236,7 @@ namespace NetOffice.WordApi
         /// <param name="seriesLabels">optional object seriesLabels</param>
         /// <param name="categoryLabels">optional object categoryLabels</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Series Add(object source, object rowcol, object seriesLabels, object categoryLabels)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "Add", NetOffice.WordApi.Series.LateBindingApiWrapperType, source, rowcol, seriesLabels, categoryLabels);
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
         /// <param name="source">object source</param>
         /// <param name="rowcol">optional object rowcol</param>
         /// <param name="categoryLabels">optional object categoryLabels</param>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Extend(object source, object rowcol, object categoryLabels)
         {
             return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol, categoryLabels);
@@ -261,7 +261,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.Extend"/> </remarks>
         /// <param name="source">object source</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Extend(object source)
         {
             return Factory.ExecuteVariantMethodGet(this, "Extend", source);
@@ -274,7 +274,7 @@ namespace NetOffice.WordApi
         /// <param name="source">object source</param>
         /// <param name="rowcol">optional object rowcol</param>
         [CustomMethod]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public object Extend(object source, object rowcol)
         {
             return Factory.ExecuteVariantMethodGet(this, "Extend", source, rowcol);
@@ -284,7 +284,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.SeriesCollection.NewSeries"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public NetOffice.WordApi.Series NewSeries()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Series>(this, "NewSeries", NetOffice.WordApi.Series.LateBindingApiWrapperType);
@@ -295,7 +295,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="index">object index</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.Series this[object index]
         {
@@ -341,7 +341,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 14,15,16
         /// </summary>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -349,6 +349,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

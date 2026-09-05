@@ -11,11 +11,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Window : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Window(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.WordApi
         public Window(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.WordApi
         public Window(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -143,7 +143,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -157,7 +157,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.ActivePane"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Pane ActivePane
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Document"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Document Document
         {
             get
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Panes"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Panes Panes
         {
             get
@@ -199,7 +199,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Selection"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Selection Selection
         {
             get
@@ -213,7 +213,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Left"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Left
         {
             get
@@ -231,7 +231,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Top"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Top
         {
             get
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Width"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Width
         {
             get
@@ -267,7 +267,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Height"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Height
         {
             get
@@ -285,7 +285,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Split"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Split
         {
             get
@@ -303,7 +303,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.SplitVertical"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SplitVertical
         {
             get
@@ -321,7 +321,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Caption"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string Caption
         {
             get
@@ -339,7 +339,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.WindowState"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdWindowState WindowState
         {
             get
@@ -357,7 +357,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayRulers"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayRulers
         {
             get
@@ -375,7 +375,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayVerticalRuler"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayVerticalRuler
         {
             get
@@ -393,7 +393,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.View"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.View View
         {
             get
@@ -407,7 +407,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Type"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdWindowType Type
         {
             get
@@ -421,7 +421,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Next"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Window Next
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Previous"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Window Previous
         {
             get
@@ -449,7 +449,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.WindowNumber"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 WindowNumber
         {
             get
@@ -463,7 +463,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayVerticalScrollBar"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayVerticalScrollBar
         {
             get
@@ -481,7 +481,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayHorizontalScrollBar"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayHorizontalScrollBar
         {
             get
@@ -499,7 +499,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.StyleAreaWidth"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Single StyleAreaWidth
         {
             get
@@ -517,7 +517,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayScreenTips"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayScreenTips
         {
             get
@@ -535,7 +535,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.HorizontalPercentScrolled"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HorizontalPercentScrolled
         {
             get
@@ -553,7 +553,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.VerticalPercentScrolled"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 VerticalPercentScrolled
         {
             get
@@ -571,7 +571,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DocumentMap"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DocumentMap
         {
             get
@@ -589,7 +589,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Active"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Active
         {
             get
@@ -602,7 +602,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 DocumentMapPercentWidth
         {
             get
@@ -620,7 +620,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Index"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Index
         {
             get
@@ -634,7 +634,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.IMEMode"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdIMEMode IMEMode
         {
             get
@@ -652,7 +652,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.UsableWidth"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 UsableWidth
         {
             get
@@ -666,7 +666,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.UsableHeight"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 UsableHeight
         {
             get
@@ -680,7 +680,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.EnvelopeVisible"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool EnvelopeVisible
         {
             get
@@ -698,7 +698,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayRightRuler"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayRightRuler
         {
             get
@@ -716,7 +716,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.DisplayLeftScrollBar"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayLeftScrollBar
         {
             get
@@ -734,7 +734,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Visible"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool Visible
         {
             get
@@ -752,7 +752,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Thumbnails"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public bool Thumbnails
         {
             get
@@ -770,7 +770,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.ShowSourceDocuments"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdShowSourceDocuments ShowSourceDocuments
         {
             get
@@ -805,10 +805,10 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Activate"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Activate()
         {
-             Factory.ExecuteMethod(this, "Activate");
+            Factory.ExecuteMethod(this, "Activate");
         }
 
         /// <summary>
@@ -817,10 +817,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Close"/> </remarks>
         /// <param name="saveChanges">optional object saveChanges</param>
         /// <param name="routeDocument">optional object routeDocument</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Close(object saveChanges, object routeDocument)
         {
-             Factory.ExecuteMethod(this, "Close", saveChanges, routeDocument);
+            Factory.ExecuteMethod(this, "Close", saveChanges, routeDocument);
         }
 
         /// <summary>
@@ -828,10 +828,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Close"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Close()
         {
-             Factory.ExecuteMethod(this, "Close");
+            Factory.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
@@ -840,10 +840,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.Close"/> </remarks>
         /// <param name="saveChanges">optional object saveChanges</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Close(object saveChanges)
         {
-             Factory.ExecuteMethod(this, "Close", saveChanges);
+            Factory.ExecuteMethod(this, "Close", saveChanges);
         }
 
         /// <summary>
@@ -854,10 +854,10 @@ namespace NetOffice.WordApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         /// <param name="toLeft">optional object toLeft</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down, object up, object toRight, object toLeft)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
         }
 
         /// <summary>
@@ -865,10 +865,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.LargeScroll"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll()
         {
-             Factory.ExecuteMethod(this, "LargeScroll");
+            Factory.ExecuteMethod(this, "LargeScroll");
         }
 
         /// <summary>
@@ -877,10 +877,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.LargeScroll"/> </remarks>
         /// <param name="down">optional object down</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down);
+            Factory.ExecuteMethod(this, "LargeScroll", down);
         }
 
         /// <summary>
@@ -890,10 +890,10 @@ namespace NetOffice.WordApi
         /// <param name="down">optional object down</param>
         /// <param name="up">optional object up</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up);
         }
 
         /// <summary>
@@ -904,10 +904,10 @@ namespace NetOffice.WordApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down, object up, object toRight)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
         }
 
         /// <summary>
@@ -918,10 +918,10 @@ namespace NetOffice.WordApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         /// <param name="toLeft">optional object toLeft</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down, object up, object toRight, object toLeft)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
         }
 
         /// <summary>
@@ -929,10 +929,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.SmallScroll"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll()
         {
-             Factory.ExecuteMethod(this, "SmallScroll");
+            Factory.ExecuteMethod(this, "SmallScroll");
         }
 
         /// <summary>
@@ -941,10 +941,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.SmallScroll"/> </remarks>
         /// <param name="down">optional object down</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down);
+            Factory.ExecuteMethod(this, "SmallScroll", down);
         }
 
         /// <summary>
@@ -954,10 +954,10 @@ namespace NetOffice.WordApi
         /// <param name="down">optional object down</param>
         /// <param name="up">optional object up</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up);
         }
 
         /// <summary>
@@ -968,17 +968,17 @@ namespace NetOffice.WordApi
         /// <param name="up">optional object up</param>
         /// <param name="toRight">optional object toRight</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down, object up, object toRight)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.NewWindow"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Window NewWindow()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Window>(this, "NewWindow", NetOffice.WordApi.Window.LateBindingApiWrapperType);
@@ -1002,10 +1002,10 @@ namespace NetOffice.WordApi
         /// <param name="activePrinterMacGX">optional object activePrinterMacGX</param>
         /// <param name="manualDuplexPrint">optional object manualDuplexPrint</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint });
         }
 
         /// <summary>
@@ -1013,10 +1013,10 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld()
         {
-             Factory.ExecuteMethod(this, "PrintOutOld");
+            Factory.ExecuteMethod(this, "PrintOutOld");
         }
 
         /// <summary>
@@ -1025,10 +1025,10 @@ namespace NetOffice.WordApi
         /// <param name="background">optional object background</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", background);
+            Factory.ExecuteMethod(this, "PrintOutOld", background);
         }
 
         /// <summary>
@@ -1038,10 +1038,10 @@ namespace NetOffice.WordApi
         /// <param name="append">optional object append</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", background, append);
+            Factory.ExecuteMethod(this, "PrintOutOld", background, append);
         }
 
         /// <summary>
@@ -1052,10 +1052,10 @@ namespace NetOffice.WordApi
         /// <param name="range">optional object range</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", background, append, range);
+            Factory.ExecuteMethod(this, "PrintOutOld", background, append, range);
         }
 
         /// <summary>
@@ -1067,10 +1067,10 @@ namespace NetOffice.WordApi
         /// <param name="outputFileName">optional object outputFileName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", background, append, range, outputFileName);
+            Factory.ExecuteMethod(this, "PrintOutOld", background, append, range, outputFileName);
         }
 
         /// <summary>
@@ -1083,10 +1083,10 @@ namespace NetOffice.WordApi
         /// <param name="from">optional object from</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from });
         }
 
         /// <summary>
@@ -1100,10 +1100,10 @@ namespace NetOffice.WordApi
         /// <param name="to">optional object to</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to });
         }
 
         /// <summary>
@@ -1118,10 +1118,10 @@ namespace NetOffice.WordApi
         /// <param name="item">optional object item</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item });
         }
 
         /// <summary>
@@ -1137,10 +1137,10 @@ namespace NetOffice.WordApi
         /// <param name="copies">optional object copies</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies });
         }
 
         /// <summary>
@@ -1157,10 +1157,10 @@ namespace NetOffice.WordApi
         /// <param name="pages">optional object pages</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies, pages });
         }
 
         /// <summary>
@@ -1178,10 +1178,10 @@ namespace NetOffice.WordApi
         /// <param name="pageType">optional object pageType</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType });
         }
 
         /// <summary>
@@ -1200,10 +1200,10 @@ namespace NetOffice.WordApi
         /// <param name="printToFile">optional object printToFile</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile });
         }
 
         /// <summary>
@@ -1223,10 +1223,10 @@ namespace NetOffice.WordApi
         /// <param name="collate">optional object collate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate });
         }
 
         /// <summary>
@@ -1247,10 +1247,10 @@ namespace NetOffice.WordApi
         /// <param name="activePrinterMacGX">optional object activePrinterMacGX</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOutOld(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
         {
-             Factory.ExecuteMethod(this, "PrintOutOld", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX });
+            Factory.ExecuteMethod(this, "PrintOutOld", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX });
         }
 
         /// <summary>
@@ -1259,10 +1259,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.PageScroll"/> </remarks>
         /// <param name="down">optional object down</param>
         /// <param name="up">optional object up</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PageScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "PageScroll", down, up);
+            Factory.ExecuteMethod(this, "PageScroll", down, up);
         }
 
         /// <summary>
@@ -1270,10 +1270,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.PageScroll"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PageScroll()
         {
-             Factory.ExecuteMethod(this, "PageScroll");
+            Factory.ExecuteMethod(this, "PageScroll");
         }
 
         /// <summary>
@@ -1282,20 +1282,20 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.PageScroll"/> </remarks>
         /// <param name="down">optional object down</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PageScroll(object down)
         {
-             Factory.ExecuteMethod(this, "PageScroll", down);
+            Factory.ExecuteMethod(this, "PageScroll", down);
         }
 
         /// <summary>
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.SetFocus"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void SetFocus()
         {
-             Factory.ExecuteMethod(this, "SetFocus");
+            Factory.ExecuteMethod(this, "SetFocus");
         }
 
         /// <summary>
@@ -1304,7 +1304,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.RangeFromPoint"/> </remarks>
         /// <param name="x">Int32 x</param>
         /// <param name="y">Int32 y</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public object RangeFromPoint(Int32 x, Int32 y)
         {
             return Factory.ExecuteVariantMethodGet(this, "RangeFromPoint", x, y);
@@ -1316,10 +1316,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.ScrollIntoView"/> </remarks>
         /// <param name="obj">object obj</param>
         /// <param name="start">optional object start</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ScrollIntoView(object obj, object start)
         {
-             Factory.ExecuteMethod(this, "ScrollIntoView", obj, start);
+            Factory.ExecuteMethod(this, "ScrollIntoView", obj, start);
         }
 
         /// <summary>
@@ -1328,10 +1328,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.ScrollIntoView"/> </remarks>
         /// <param name="obj">object obj</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ScrollIntoView(object obj)
         {
-             Factory.ExecuteMethod(this, "ScrollIntoView", obj);
+            Factory.ExecuteMethod(this, "ScrollIntoView", obj);
         }
 
         /// <summary>
@@ -1343,10 +1343,10 @@ namespace NetOffice.WordApi
         /// <param name="screenPixelsWidth">Int32 screenPixelsWidth</param>
         /// <param name="screenPixelsHeight">Int32 screenPixelsHeight</param>
         /// <param name="obj">object obj</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void GetPoint(out Int32 screenPixelsLeft, out Int32 screenPixelsTop, out Int32 screenPixelsWidth, out Int32 screenPixelsHeight, object obj)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true, false);
             screenPixelsLeft = 0;
             screenPixelsTop = 0;
             screenPixelsWidth = 0;
@@ -1381,10 +1381,10 @@ namespace NetOffice.WordApi
         /// <param name="printZoomRow">optional object printZoomRow</param>
         /// <param name="printZoomPaperWidth">optional object printZoomPaperWidth</param>
         /// <param name="printZoomPaperHeight">optional object printZoomPaperHeight</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight });
         }
 
         /// <summary>
@@ -1392,10 +1392,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.PrintOut"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut()
         {
-             Factory.ExecuteMethod(this, "PrintOut");
+            Factory.ExecuteMethod(this, "PrintOut");
         }
 
         /// <summary>
@@ -1404,10 +1404,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.PrintOut"/> </remarks>
         /// <param name="background">optional object background</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background)
         {
-             Factory.ExecuteMethod(this, "PrintOut", background);
+            Factory.ExecuteMethod(this, "PrintOut", background);
         }
 
         /// <summary>
@@ -1417,10 +1417,10 @@ namespace NetOffice.WordApi
         /// <param name="background">optional object background</param>
         /// <param name="append">optional object append</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append)
         {
-             Factory.ExecuteMethod(this, "PrintOut", background, append);
+            Factory.ExecuteMethod(this, "PrintOut", background, append);
         }
 
         /// <summary>
@@ -1431,10 +1431,10 @@ namespace NetOffice.WordApi
         /// <param name="append">optional object append</param>
         /// <param name="range">optional object range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range)
         {
-             Factory.ExecuteMethod(this, "PrintOut", background, append, range);
+            Factory.ExecuteMethod(this, "PrintOut", background, append, range);
         }
 
         /// <summary>
@@ -1446,10 +1446,10 @@ namespace NetOffice.WordApi
         /// <param name="range">optional object range</param>
         /// <param name="outputFileName">optional object outputFileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName)
         {
-             Factory.ExecuteMethod(this, "PrintOut", background, append, range, outputFileName);
+            Factory.ExecuteMethod(this, "PrintOut", background, append, range, outputFileName);
         }
 
         /// <summary>
@@ -1462,10 +1462,10 @@ namespace NetOffice.WordApi
         /// <param name="outputFileName">optional object outputFileName</param>
         /// <param name="from">optional object from</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from });
         }
 
         /// <summary>
@@ -1479,10 +1479,10 @@ namespace NetOffice.WordApi
         /// <param name="from">optional object from</param>
         /// <param name="to">optional object to</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to });
         }
 
         /// <summary>
@@ -1497,10 +1497,10 @@ namespace NetOffice.WordApi
         /// <param name="to">optional object to</param>
         /// <param name="item">optional object item</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item });
         }
 
         /// <summary>
@@ -1516,10 +1516,10 @@ namespace NetOffice.WordApi
         /// <param name="item">optional object item</param>
         /// <param name="copies">optional object copies</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies });
         }
 
         /// <summary>
@@ -1536,10 +1536,10 @@ namespace NetOffice.WordApi
         /// <param name="copies">optional object copies</param>
         /// <param name="pages">optional object pages</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages });
         }
 
         /// <summary>
@@ -1557,10 +1557,10 @@ namespace NetOffice.WordApi
         /// <param name="pages">optional object pages</param>
         /// <param name="pageType">optional object pageType</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType });
         }
 
         /// <summary>
@@ -1579,10 +1579,10 @@ namespace NetOffice.WordApi
         /// <param name="pageType">optional object pageType</param>
         /// <param name="printToFile">optional object printToFile</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile });
         }
 
         /// <summary>
@@ -1602,10 +1602,10 @@ namespace NetOffice.WordApi
         /// <param name="printToFile">optional object printToFile</param>
         /// <param name="collate">optional object collate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate });
         }
 
         /// <summary>
@@ -1626,10 +1626,10 @@ namespace NetOffice.WordApi
         /// <param name="collate">optional object collate</param>
         /// <param name="activePrinterMacGX">optional object activePrinterMacGX</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX });
         }
 
         /// <summary>
@@ -1651,10 +1651,10 @@ namespace NetOffice.WordApi
         /// <param name="activePrinterMacGX">optional object activePrinterMacGX</param>
         /// <param name="manualDuplexPrint">optional object manualDuplexPrint</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint });
         }
 
         /// <summary>
@@ -1677,10 +1677,10 @@ namespace NetOffice.WordApi
         /// <param name="manualDuplexPrint">optional object manualDuplexPrint</param>
         /// <param name="printZoomColumn">optional object printZoomColumn</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn });
         }
 
         /// <summary>
@@ -1704,10 +1704,10 @@ namespace NetOffice.WordApi
         /// <param name="printZoomColumn">optional object printZoomColumn</param>
         /// <param name="printZoomRow">optional object printZoomRow</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow });
         }
 
         /// <summary>
@@ -1732,10 +1732,10 @@ namespace NetOffice.WordApi
         /// <param name="printZoomRow">optional object printZoomRow</param>
         /// <param name="printZoomPaperWidth">optional object printZoomPaperWidth</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth)
         {
-             Factory.ExecuteMethod(this, "PrintOut", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth });
         }
 
         /// <summary>
@@ -1760,10 +1760,10 @@ namespace NetOffice.WordApi
         /// <param name="printZoomPaperWidth">optional object printZoomPaperWidth</param>
         /// <param name="printZoomPaperHeight">optional object printZoomPaperHeight</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth, object printZoomPaperHeight)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth, printZoomPaperHeight });
         }
 
         /// <summary>
@@ -1771,10 +1771,10 @@ namespace NetOffice.WordApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000()
         {
-             Factory.ExecuteMethod(this, "PrintOut2000");
+            Factory.ExecuteMethod(this, "PrintOut2000");
         }
 
         /// <summary>
@@ -1783,10 +1783,10 @@ namespace NetOffice.WordApi
         /// <param name="background">optional object background</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", background);
+            Factory.ExecuteMethod(this, "PrintOut2000", background);
         }
 
         /// <summary>
@@ -1796,10 +1796,10 @@ namespace NetOffice.WordApi
         /// <param name="append">optional object append</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", background, append);
+            Factory.ExecuteMethod(this, "PrintOut2000", background, append);
         }
 
         /// <summary>
@@ -1810,10 +1810,10 @@ namespace NetOffice.WordApi
         /// <param name="range">optional object range</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", background, append, range);
+            Factory.ExecuteMethod(this, "PrintOut2000", background, append, range);
         }
 
         /// <summary>
@@ -1825,10 +1825,10 @@ namespace NetOffice.WordApi
         /// <param name="outputFileName">optional object outputFileName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", background, append, range, outputFileName);
+            Factory.ExecuteMethod(this, "PrintOut2000", background, append, range, outputFileName);
         }
 
         /// <summary>
@@ -1841,10 +1841,10 @@ namespace NetOffice.WordApi
         /// <param name="from">optional object from</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from });
         }
 
         /// <summary>
@@ -1858,10 +1858,10 @@ namespace NetOffice.WordApi
         /// <param name="to">optional object to</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to });
         }
 
         /// <summary>
@@ -1876,10 +1876,10 @@ namespace NetOffice.WordApi
         /// <param name="item">optional object item</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item });
         }
 
         /// <summary>
@@ -1895,10 +1895,10 @@ namespace NetOffice.WordApi
         /// <param name="copies">optional object copies</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies });
         }
 
         /// <summary>
@@ -1915,10 +1915,10 @@ namespace NetOffice.WordApi
         /// <param name="pages">optional object pages</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages });
         }
 
         /// <summary>
@@ -1936,10 +1936,10 @@ namespace NetOffice.WordApi
         /// <param name="pageType">optional object pageType</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType });
         }
 
         /// <summary>
@@ -1958,10 +1958,10 @@ namespace NetOffice.WordApi
         /// <param name="printToFile">optional object printToFile</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile });
         }
 
         /// <summary>
@@ -1981,10 +1981,10 @@ namespace NetOffice.WordApi
         /// <param name="collate">optional object collate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate });
         }
 
         /// <summary>
@@ -2005,10 +2005,10 @@ namespace NetOffice.WordApi
         /// <param name="activePrinterMacGX">optional object activePrinterMacGX</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX });
         }
 
         /// <summary>
@@ -2030,10 +2030,10 @@ namespace NetOffice.WordApi
         /// <param name="manualDuplexPrint">optional object manualDuplexPrint</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint });
         }
 
         /// <summary>
@@ -2056,10 +2056,10 @@ namespace NetOffice.WordApi
         /// <param name="printZoomColumn">optional object printZoomColumn</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn });
         }
 
         /// <summary>
@@ -2083,10 +2083,10 @@ namespace NetOffice.WordApi
         /// <param name="printZoomRow">optional object printZoomRow</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow });
         }
 
         /// <summary>
@@ -2111,33 +2111,33 @@ namespace NetOffice.WordApi
         /// <param name="printZoomPaperWidth">optional object printZoomPaperWidth</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void PrintOut2000(object background, object append, object range, object outputFileName, object from, object to, object item, object copies, object pages, object pageType, object printToFile, object collate, object activePrinterMacGX, object manualDuplexPrint, object printZoomColumn, object printZoomRow, object printZoomPaperWidth)
         {
-             Factory.ExecuteMethod(this, "PrintOut2000", new object[]{ background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth });
+            Factory.ExecuteMethod(this, "PrintOut2000", new object[] { background, append, range, outputFileName, from, to, item, copies, pages, pageType, printToFile, collate, activePrinterMacGX, manualDuplexPrint, printZoomColumn, printZoomRow, printZoomPaperWidth });
         }
 
         /// <summary>
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void ToggleShowAllReviewers()
         {
-             Factory.ExecuteMethod(this, "ToggleShowAllReviewers");
+            Factory.ExecuteMethod(this, "ToggleShowAllReviewers");
         }
 
         /// <summary>
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Window.ToggleRibbon"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ToggleRibbon()
         {
-             Factory.ExecuteMethod(this, "ToggleRibbon");
+            Factory.ExecuteMethod(this, "ToggleRibbon");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

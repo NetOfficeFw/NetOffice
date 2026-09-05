@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class List : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public List(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public List(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public List(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public List(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public List() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public List(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.Range"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Range Range
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.ListParagraphs"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.ListParagraphs ListParagraphs
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.SingleListTemplate"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool SingleListTemplate
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -198,7 +198,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.StyleName"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public string StyleName
         {
             get
@@ -216,10 +216,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.ConvertNumbersToText"/> </remarks>
         /// <param name="numberType">optional object numberType</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertNumbersToText(object numberType)
         {
-             Factory.ExecuteMethod(this, "ConvertNumbersToText", numberType);
+            Factory.ExecuteMethod(this, "ConvertNumbersToText", numberType);
         }
 
         /// <summary>
@@ -227,10 +227,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.ConvertNumbersToText"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ConvertNumbersToText()
         {
-             Factory.ExecuteMethod(this, "ConvertNumbersToText");
+            Factory.ExecuteMethod(this, "ConvertNumbersToText");
         }
 
         /// <summary>
@@ -238,10 +238,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.RemoveNumbers"/> </remarks>
         /// <param name="numberType">optional object numberType</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void RemoveNumbers(object numberType)
         {
-             Factory.ExecuteMethod(this, "RemoveNumbers", numberType);
+            Factory.ExecuteMethod(this, "RemoveNumbers", numberType);
         }
 
         /// <summary>
@@ -249,10 +249,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.RemoveNumbers"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void RemoveNumbers()
         {
-             Factory.ExecuteMethod(this, "RemoveNumbers");
+            Factory.ExecuteMethod(this, "RemoveNumbers");
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.CountNumberedItems"/> </remarks>
         /// <param name="numberType">optional object numberType</param>
         /// <param name="level">optional object level</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 CountNumberedItems(object numberType, object level)
         {
             return Factory.ExecuteInt32MethodGet(this, "CountNumberedItems", numberType, level);
@@ -272,7 +272,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.CountNumberedItems"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 CountNumberedItems()
         {
             return Factory.ExecuteInt32MethodGet(this, "CountNumberedItems");
@@ -284,7 +284,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.CountNumberedItems"/> </remarks>
         /// <param name="numberType">optional object numberType</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 CountNumberedItems(object numberType)
         {
             return Factory.ExecuteInt32MethodGet(this, "CountNumberedItems", numberType);
@@ -296,10 +296,10 @@ namespace NetOffice.WordApi
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         /// <param name="continuePreviousList">optional object continuePreviousList</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate, continuePreviousList);
+            Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate, continuePreviousList);
         }
 
         /// <summary>
@@ -308,10 +308,10 @@ namespace NetOffice.WordApi
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ApplyListTemplateOld(NetOffice.WordApi.ListTemplate listTemplate)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate);
+            Factory.ExecuteMethod(this, "ApplyListTemplateOld", listTemplate);
         }
 
         /// <summary>
@@ -319,7 +319,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.CanContinuePreviousList"/> </remarks>
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdContinue CanContinuePreviousList(NetOffice.WordApi.ListTemplate listTemplate)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.WordApi.Enums.WdContinue>(this, "CanContinuePreviousList", listTemplate);
@@ -332,10 +332,10 @@ namespace NetOffice.WordApi
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         /// <param name="continuePreviousList">optional object continuePreviousList</param>
         /// <param name="defaultListBehavior">optional object defaultListBehavior</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object defaultListBehavior)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList, defaultListBehavior);
+            Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList, defaultListBehavior);
         }
 
         /// <summary>
@@ -344,10 +344,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.ApplyListTemplate"/> </remarks>
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate);
+            Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate);
         }
 
         /// <summary>
@@ -357,10 +357,10 @@ namespace NetOffice.WordApi
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         /// <param name="continuePreviousList">optional object continuePreviousList</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void ApplyListTemplate(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList);
+            Factory.ExecuteMethod(this, "ApplyListTemplate", listTemplate, continuePreviousList);
         }
 
         /// <summary>
@@ -371,10 +371,10 @@ namespace NetOffice.WordApi
         /// <param name="continuePreviousList">optional object continuePreviousList</param>
         /// <param name="defaultListBehavior">optional object defaultListBehavior</param>
         /// <param name="applyLevel">optional object applyLevel</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object defaultListBehavior, object applyLevel)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList, defaultListBehavior, applyLevel);
+            Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList, defaultListBehavior, applyLevel);
         }
 
         /// <summary>
@@ -383,10 +383,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.List.ApplyListTemplateWithLevel"/> </remarks>
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate);
+            Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate);
         }
 
         /// <summary>
@@ -396,10 +396,10 @@ namespace NetOffice.WordApi
         /// <param name="listTemplate">NetOffice.WordApi.ListTemplate listTemplate</param>
         /// <param name="continuePreviousList">optional object continuePreviousList</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList);
+            Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList);
         }
 
         /// <summary>
@@ -410,14 +410,14 @@ namespace NetOffice.WordApi
         /// <param name="continuePreviousList">optional object continuePreviousList</param>
         /// <param name="defaultListBehavior">optional object defaultListBehavior</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void ApplyListTemplateWithLevel(NetOffice.WordApi.ListTemplate listTemplate, object continuePreviousList, object defaultListBehavior)
         {
-             Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList, defaultListBehavior);
+            Factory.ExecuteMethod(this, "ApplyListTemplateWithLevel", listTemplate, continuePreviousList, defaultListBehavior);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

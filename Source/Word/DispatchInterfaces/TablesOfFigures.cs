@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.tablesoffigures"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-    public class TablesOfFigures : COMObject , IEnumerableProvider<NetOffice.WordApi.TableOfFigures>
+    public class TablesOfFigures : COMObject, IEnumerableProvider<NetOffice.WordApi.TableOfFigures>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TablesOfFigures(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public TablesOfFigures(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public TablesOfFigures(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TablesOfFigures(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TablesOfFigures() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TablesOfFigures(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.Count"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.Format"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdTofFormat Format
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.TableOfFigures this[Int32 index]
         {
@@ -219,10 +219,10 @@ namespace NetOffice.WordApi
         /// <param name="includePageNumbers">optional object includePageNumbers</param>
         /// <param name="addedStyles">optional object addedStyles</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles });
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range);
@@ -244,7 +244,7 @@ namespace NetOffice.WordApi
         /// <param name="caption">optional object caption</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range, caption);
@@ -258,7 +258,7 @@ namespace NetOffice.WordApi
         /// <param name="includeLabel">optional object includeLabel</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range, caption, includeLabel);
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
         /// <param name="useHeadingStyles">optional object useHeadingStyles</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range, caption, includeLabel, useHeadingStyles);
@@ -289,10 +289,10 @@ namespace NetOffice.WordApi
         /// <param name="upperHeadingLevel">optional object upperHeadingLevel</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel });
         }
 
         /// <summary>
@@ -306,10 +306,10 @@ namespace NetOffice.WordApi
         /// <param name="lowerHeadingLevel">optional object lowerHeadingLevel</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel });
         }
 
         /// <summary>
@@ -324,10 +324,10 @@ namespace NetOffice.WordApi
         /// <param name="useFields">optional object useFields</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields });
         }
 
         /// <summary>
@@ -343,10 +343,10 @@ namespace NetOffice.WordApi
         /// <param name="tableID">optional object tableID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID });
         }
 
         /// <summary>
@@ -363,10 +363,10 @@ namespace NetOffice.WordApi
         /// <param name="rightAlignPageNumbers">optional object rightAlignPageNumbers</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers });
         }
 
         /// <summary>
@@ -384,10 +384,10 @@ namespace NetOffice.WordApi
         /// <param name="includePageNumbers">optional object includePageNumbers</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures AddOld(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "AddOld", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers });
         }
 
         /// <summary>
@@ -399,10 +399,10 @@ namespace NetOffice.WordApi
         /// <param name="entryAutoText">optional object entryAutoText</param>
         /// <param name="tableID">optional object tableID</param>
         /// <param name="level">optional object level</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object tableID, object level)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, entry, entryAutoText, tableID, level });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, entry, entryAutoText, tableID, level });
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.MarkEntry"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range);
@@ -424,7 +424,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="entry">optional object entry</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, entry);
@@ -438,7 +438,7 @@ namespace NetOffice.WordApi
         /// <param name="entry">optional object entry</param>
         /// <param name="entryAutoText">optional object entryAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, entry, entryAutoText);
@@ -453,7 +453,7 @@ namespace NetOffice.WordApi
         /// <param name="entryAutoText">optional object entryAutoText</param>
         /// <param name="tableID">optional object tableID</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object tableID)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, entry, entryAutoText, tableID);
@@ -476,10 +476,10 @@ namespace NetOffice.WordApi
         /// <param name="addedStyles">optional object addedStyles</param>
         /// <param name="useHyperlinks">optional object useHyperlinks</param>
         /// <param name="hidePageNumbersInWeb">optional object hidePageNumbersInWeb</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles, object useHyperlinks, object hidePageNumbersInWeb)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks, hidePageNumbersInWeb });
         }
 
         /// <summary>
@@ -488,7 +488,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfFigures.Add"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range);
@@ -501,7 +501,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="caption">optional object caption</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range, caption);
@@ -515,7 +515,7 @@ namespace NetOffice.WordApi
         /// <param name="caption">optional object caption</param>
         /// <param name="includeLabel">optional object includeLabel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range, caption, includeLabel);
@@ -530,7 +530,7 @@ namespace NetOffice.WordApi
         /// <param name="includeLabel">optional object includeLabel</param>
         /// <param name="useHeadingStyles">optional object useHeadingStyles</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, range, caption, includeLabel, useHeadingStyles);
@@ -546,10 +546,10 @@ namespace NetOffice.WordApi
         /// <param name="useHeadingStyles">optional object useHeadingStyles</param>
         /// <param name="upperHeadingLevel">optional object upperHeadingLevel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel });
         }
 
         /// <summary>
@@ -563,10 +563,10 @@ namespace NetOffice.WordApi
         /// <param name="upperHeadingLevel">optional object upperHeadingLevel</param>
         /// <param name="lowerHeadingLevel">optional object lowerHeadingLevel</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel });
         }
 
         /// <summary>
@@ -581,10 +581,10 @@ namespace NetOffice.WordApi
         /// <param name="lowerHeadingLevel">optional object lowerHeadingLevel</param>
         /// <param name="useFields">optional object useFields</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields });
         }
 
         /// <summary>
@@ -600,10 +600,10 @@ namespace NetOffice.WordApi
         /// <param name="useFields">optional object useFields</param>
         /// <param name="tableID">optional object tableID</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID });
         }
 
         /// <summary>
@@ -620,10 +620,10 @@ namespace NetOffice.WordApi
         /// <param name="tableID">optional object tableID</param>
         /// <param name="rightAlignPageNumbers">optional object rightAlignPageNumbers</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers });
         }
 
         /// <summary>
@@ -641,10 +641,10 @@ namespace NetOffice.WordApi
         /// <param name="rightAlignPageNumbers">optional object rightAlignPageNumbers</param>
         /// <param name="includePageNumbers">optional object includePageNumbers</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers });
         }
 
         /// <summary>
@@ -663,10 +663,10 @@ namespace NetOffice.WordApi
         /// <param name="includePageNumbers">optional object includePageNumbers</param>
         /// <param name="addedStyles">optional object addedStyles</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles });
         }
 
         /// <summary>
@@ -686,10 +686,10 @@ namespace NetOffice.WordApi
         /// <param name="addedStyles">optional object addedStyles</param>
         /// <param name="useHyperlinks">optional object useHyperlinks</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfFigures Add(NetOffice.WordApi.Range range, object caption, object includeLabel, object useHeadingStyles, object upperHeadingLevel, object lowerHeadingLevel, object useFields, object tableID, object rightAlignPageNumbers, object includePageNumbers, object addedStyles, object useHyperlinks)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[]{ range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfFigures>(this, "Add", NetOffice.WordApi.TableOfFigures.LateBindingApiWrapperType, new object[] { range, caption, includeLabel, useHeadingStyles, upperHeadingLevel, lowerHeadingLevel, useFields, tableID, rightAlignPageNumbers, includePageNumbers, addedStyles, useHyperlinks });
         }
 
         #endregion
@@ -728,7 +728,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -736,6 +736,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

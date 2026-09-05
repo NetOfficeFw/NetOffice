@@ -14,7 +14,7 @@ namespace NetOffice.WordApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class Broadcast : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Broadcast(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public Broadcast(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public Broadcast(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Broadcast(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Broadcast() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Broadcast(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void Start(string serverUrl)
         {
-             Factory.ExecuteMethod(this, "Start", serverUrl);
+            Factory.ExecuteMethod(this, "Start", serverUrl);
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void Pause()
         {
-             Factory.ExecuteMethod(this, "Pause");
+            Factory.ExecuteMethod(this, "Pause");
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void Resume()
         {
-             Factory.ExecuteMethod(this, "Resume");
+            Factory.ExecuteMethod(this, "Resume");
         }
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void End()
         {
-             Factory.ExecuteMethod(this, "End");
+            Factory.ExecuteMethod(this, "End");
         }
 
         /// <summary>
@@ -261,11 +261,11 @@ namespace NetOffice.WordApi
         [SupportByVersion("Word", 15, 16)]
         public void AddMeetingNotes(string notesUrl, string notesWacUrl)
         {
-             Factory.ExecuteMethod(this, "AddMeetingNotes", notesUrl, notesWacUrl);
+            Factory.ExecuteMethod(this, "AddMeetingNotes", notesUrl, notesWacUrl);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

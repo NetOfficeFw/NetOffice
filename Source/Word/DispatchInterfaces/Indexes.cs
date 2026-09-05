@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.indexes"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Indexes : COMObject, IEnumerableProvider<NetOffice.WordApi.Index>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Indexes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public Indexes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public Indexes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Indexes(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Indexes() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Indexes(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.Count"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.Format"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdIndexFormat Format
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.Index this[Int32 index]
         {
@@ -214,10 +214,10 @@ namespace NetOffice.WordApi
         /// <param name="numberOfColumns">optional object numberOfColumns</param>
         /// <param name="accentedLetters">optional object accentedLetters</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[]{ range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[] { range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters });
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, range);
@@ -239,7 +239,7 @@ namespace NetOffice.WordApi
         /// <param name="headingSeparator">optional object headingSeparator</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, range, headingSeparator);
@@ -253,7 +253,7 @@ namespace NetOffice.WordApi
         /// <param name="rightAlignPageNumbers">optional object rightAlignPageNumbers</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, range, headingSeparator, rightAlignPageNumbers);
@@ -268,7 +268,7 @@ namespace NetOffice.WordApi
         /// <param name="type">optional object type</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, range, headingSeparator, rightAlignPageNumbers, type);
@@ -284,10 +284,10 @@ namespace NetOffice.WordApi
         /// <param name="numberOfColumns">optional object numberOfColumns</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index AddOld(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[]{ range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "AddOld", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[] { range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns });
         }
 
         /// <summary>
@@ -303,10 +303,10 @@ namespace NetOffice.WordApi
         /// <param name="bold">optional object bold</param>
         /// <param name="italic">optional object italic</param>
         /// <param name="reading">optional object reading</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic, object reading)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic, reading });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic, reading });
         }
 
         /// <summary>
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.MarkEntry"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range);
@@ -328,7 +328,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="entry">optional object entry</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, entry);
@@ -342,7 +342,7 @@ namespace NetOffice.WordApi
         /// <param name="entry">optional object entry</param>
         /// <param name="entryAutoText">optional object entryAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, entry, entryAutoText);
@@ -357,7 +357,7 @@ namespace NetOffice.WordApi
         /// <param name="entryAutoText">optional object entryAutoText</param>
         /// <param name="crossReference">optional object crossReference</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, entry, entryAutoText, crossReference);
@@ -373,10 +373,10 @@ namespace NetOffice.WordApi
         /// <param name="crossReference">optional object crossReference</param>
         /// <param name="crossReferenceAutoText">optional object crossReferenceAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText });
         }
 
         /// <summary>
@@ -390,10 +390,10 @@ namespace NetOffice.WordApi
         /// <param name="crossReferenceAutoText">optional object crossReferenceAutoText</param>
         /// <param name="bookmarkName">optional object bookmarkName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName });
         }
 
         /// <summary>
@@ -408,10 +408,10 @@ namespace NetOffice.WordApi
         /// <param name="bookmarkName">optional object bookmarkName</param>
         /// <param name="bold">optional object bold</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold });
         }
 
         /// <summary>
@@ -427,10 +427,10 @@ namespace NetOffice.WordApi
         /// <param name="bold">optional object bold</param>
         /// <param name="italic">optional object italic</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkEntry(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkEntry", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic });
         }
 
         /// <summary>
@@ -445,10 +445,10 @@ namespace NetOffice.WordApi
         /// <param name="bookmarkName">optional object bookmarkName</param>
         /// <param name="bold">optional object bold</param>
         /// <param name="italic">optional object italic</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold, object italic)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic });
+            Factory.ExecuteMethod(this, "MarkAllEntries", new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold, italic });
         }
 
         /// <summary>
@@ -457,10 +457,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.MarkAllEntries"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", range);
+            Factory.ExecuteMethod(this, "MarkAllEntries", range);
         }
 
         /// <summary>
@@ -470,10 +470,10 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="entry">optional object entry</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", range, entry);
+            Factory.ExecuteMethod(this, "MarkAllEntries", range, entry);
         }
 
         /// <summary>
@@ -484,10 +484,10 @@ namespace NetOffice.WordApi
         /// <param name="entry">optional object entry</param>
         /// <param name="entryAutoText">optional object entryAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", range, entry, entryAutoText);
+            Factory.ExecuteMethod(this, "MarkAllEntries", range, entry, entryAutoText);
         }
 
         /// <summary>
@@ -499,10 +499,10 @@ namespace NetOffice.WordApi
         /// <param name="entryAutoText">optional object entryAutoText</param>
         /// <param name="crossReference">optional object crossReference</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", range, entry, entryAutoText, crossReference);
+            Factory.ExecuteMethod(this, "MarkAllEntries", range, entry, entryAutoText, crossReference);
         }
 
         /// <summary>
@@ -515,10 +515,10 @@ namespace NetOffice.WordApi
         /// <param name="crossReference">optional object crossReference</param>
         /// <param name="crossReferenceAutoText">optional object crossReferenceAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText });
+            Factory.ExecuteMethod(this, "MarkAllEntries", new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText });
         }
 
         /// <summary>
@@ -532,10 +532,10 @@ namespace NetOffice.WordApi
         /// <param name="crossReferenceAutoText">optional object crossReferenceAutoText</param>
         /// <param name="bookmarkName">optional object bookmarkName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName });
+            Factory.ExecuteMethod(this, "MarkAllEntries", new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName });
         }
 
         /// <summary>
@@ -550,10 +550,10 @@ namespace NetOffice.WordApi
         /// <param name="bookmarkName">optional object bookmarkName</param>
         /// <param name="bold">optional object bold</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllEntries(NetOffice.WordApi.Range range, object entry, object entryAutoText, object crossReference, object crossReferenceAutoText, object bookmarkName, object bold)
         {
-             Factory.ExecuteMethod(this, "MarkAllEntries", new object[]{ range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold });
+            Factory.ExecuteMethod(this, "MarkAllEntries", new object[] { range, entry, entryAutoText, crossReference, crossReferenceAutoText, bookmarkName, bold });
         }
 
         /// <summary>
@@ -561,10 +561,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.AutoMarkEntries"/> </remarks>
         /// <param name="concordanceFileName">string concordanceFileName</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void AutoMarkEntries(string concordanceFileName)
         {
-             Factory.ExecuteMethod(this, "AutoMarkEntries", concordanceFileName);
+            Factory.ExecuteMethod(this, "AutoMarkEntries", concordanceFileName);
         }
 
         /// <summary>
@@ -579,10 +579,10 @@ namespace NetOffice.WordApi
         /// <param name="accentedLetters">optional object accentedLetters</param>
         /// <param name="sortBy">optional object sortBy</param>
         /// <param name="indexLanguage">optional object indexLanguage</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy, object indexLanguage)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[]{ range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy, indexLanguage });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[] { range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy, indexLanguage });
         }
 
         /// <summary>
@@ -591,7 +591,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Indexes.Add"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, range);
@@ -604,7 +604,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="headingSeparator">optional object headingSeparator</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, range, headingSeparator);
@@ -618,7 +618,7 @@ namespace NetOffice.WordApi
         /// <param name="headingSeparator">optional object headingSeparator</param>
         /// <param name="rightAlignPageNumbers">optional object rightAlignPageNumbers</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, range, headingSeparator, rightAlignPageNumbers);
@@ -633,7 +633,7 @@ namespace NetOffice.WordApi
         /// <param name="rightAlignPageNumbers">optional object rightAlignPageNumbers</param>
         /// <param name="type">optional object type</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, range, headingSeparator, rightAlignPageNumbers, type);
@@ -649,10 +649,10 @@ namespace NetOffice.WordApi
         /// <param name="type">optional object type</param>
         /// <param name="numberOfColumns">optional object numberOfColumns</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[]{ range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[] { range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns });
         }
 
         /// <summary>
@@ -666,10 +666,10 @@ namespace NetOffice.WordApi
         /// <param name="numberOfColumns">optional object numberOfColumns</param>
         /// <param name="accentedLetters">optional object accentedLetters</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[]{ range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[] { range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters });
         }
 
         /// <summary>
@@ -684,10 +684,10 @@ namespace NetOffice.WordApi
         /// <param name="accentedLetters">optional object accentedLetters</param>
         /// <param name="sortBy">optional object sortBy</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Index Add(NetOffice.WordApi.Range range, object headingSeparator, object rightAlignPageNumbers, object type, object numberOfColumns, object accentedLetters, object sortBy)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[]{ range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Index>(this, "Add", NetOffice.WordApi.Index.LateBindingApiWrapperType, new object[] { range, headingSeparator, rightAlignPageNumbers, type, numberOfColumns, accentedLetters, sortBy });
         }
 
         #endregion
@@ -726,7 +726,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -734,6 +734,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

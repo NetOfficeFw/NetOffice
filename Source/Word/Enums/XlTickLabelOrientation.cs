@@ -3,47 +3,47 @@ using NetOffice;
 using NetOffice.Attributes;
 namespace NetOffice.WordApi.Enums
 {
-     /// <summary>
-     /// SupportByVersion Word 14, 15, 16
-     /// </summary>
-     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xlticklabelorientation"/> </remarks>
-    [SupportByVersion("Word", 14,15,16)]
+    /// <summary>
+    /// SupportByVersion Word 14, 15, 16
+    /// </summary>
+    ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xlticklabelorientation"/> </remarks>
+    [SupportByVersion("Word", 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum XlTickLabelOrientation
     {
-         /// <summary>
-         /// SupportByVersion Word 14, 15, 16
-         /// </summary>
-         /// <remarks>-4105</remarks>
-         [SupportByVersion("Word", 14,15,16)]
-         xlTickLabelOrientationAutomatic = -4105,
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks>-4105</remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        xlTickLabelOrientationAutomatic = -4105,
 
-         /// <summary>
-         /// SupportByVersion Word 14, 15, 16
-         /// </summary>
-         /// <remarks>-4170</remarks>
-         [SupportByVersion("Word", 14,15,16)]
-         xlTickLabelOrientationDownward = -4170,
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks>-4170</remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        xlTickLabelOrientationDownward = -4170,
 
-         /// <summary>
-         /// SupportByVersion Word 14, 15, 16
-         /// </summary>
-         /// <remarks>-4128</remarks>
-         [SupportByVersion("Word", 14,15,16)]
-         xlTickLabelOrientationHorizontal = -4128,
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks>-4128</remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        xlTickLabelOrientationHorizontal = -4128,
 
-         /// <summary>
-         /// SupportByVersion Word 14, 15, 16
-         /// </summary>
-         /// <remarks>-4171</remarks>
-         [SupportByVersion("Word", 14,15,16)]
-         xlTickLabelOrientationUpward = -4171,
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks>-4171</remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        xlTickLabelOrientationUpward = -4171,
 
-         /// <summary>
-         /// SupportByVersion Word 14, 15, 16
-         /// </summary>
-         /// <remarks>-4166</remarks>
-         [SupportByVersion("Word", 14,15,16)]
-         xlTickLabelOrientationVertical = -4166
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks>-4166</remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        xlTickLabelOrientationVertical = -4166
     }
 }

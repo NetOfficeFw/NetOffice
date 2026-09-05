@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/previous-versions/office/ff840328(v=office.15)?redirectedfrom=MSDN"/> </remarks>
-    [SupportByVersion("Word", 11,12,14,15,16)]
+    [SupportByVersion("Word", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class XMLNamespaces : COMObject, IEnumerableProvider<NetOffice.WordApi.XMLNamespace>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public XMLNamespaces(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public XMLNamespaces(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public XMLNamespaces(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespaces(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespaces() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespaces(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.count"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.application"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.creator"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.parent"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.XMLNamespace this[object index]
         {
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// <param name="namespaceURI">optional object namespaceURI</param>
         /// <param name="alias">optional object alias</param>
         /// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI, object alias, object installForAllUsers)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNamespace>(this, "Add", NetOffice.WordApi.XMLNamespace.LateBindingApiWrapperType, path, namespaceURI, alias, installForAllUsers);
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.add"/> </remarks>
         /// <param name="path">string path</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNamespace Add(string path)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNamespace>(this, "Add", NetOffice.WordApi.XMLNamespace.LateBindingApiWrapperType, path);
@@ -219,7 +219,7 @@ namespace NetOffice.WordApi
         /// <param name="path">string path</param>
         /// <param name="namespaceURI">optional object namespaceURI</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNamespace>(this, "Add", NetOffice.WordApi.XMLNamespace.LateBindingApiWrapperType, path, namespaceURI);
@@ -233,7 +233,7 @@ namespace NetOffice.WordApi
         /// <param name="namespaceURI">optional object namespaceURI</param>
         /// <param name="alias">optional object alias</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLNamespace Add(string path, object namespaceURI, object alias)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLNamespace>(this, "Add", NetOffice.WordApi.XMLNamespace.LateBindingApiWrapperType, path, namespaceURI, alias);
@@ -245,10 +245,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.installmanifest"/> </remarks>
         /// <param name="path">string path</param>
         /// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InstallManifest(string path, object installForAllUsers)
         {
-             Factory.ExecuteMethod(this, "InstallManifest", path, installForAllUsers);
+            Factory.ExecuteMethod(this, "InstallManifest", path, installForAllUsers);
         }
 
         /// <summary>
@@ -257,10 +257,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.xmlnamespaces.installmanifest"/> </remarks>
         /// <param name="path">string path</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void InstallManifest(string path)
         {
-             Factory.ExecuteMethod(this, "InstallManifest", path);
+            Factory.ExecuteMethod(this, "InstallManifest", path);
         }
 
         #endregion
@@ -299,7 +299,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -307,6 +307,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

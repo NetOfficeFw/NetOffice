@@ -43,7 +43,7 @@ namespace NetOffice.WordApi.Tools
         /// Display Description
         /// </summary>
         protected abstract string Description { get; }
-       
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
@@ -63,7 +63,7 @@ namespace NetOffice.WordApi.Tools
         /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
         /// <param name="result">string result</param>
         protected abstract void Fix(Word.Document doc, Int32 hwnd, out MsoDocInspectorStatus status, out string result);
-       
+
         /// <summary>
         /// Factory Core
         /// </summary>
@@ -138,7 +138,7 @@ namespace NetOffice.WordApi.Tools
                 desc = null;
                 if (!OnBaseError(exception))
                     throw;
-            }            
+            }
         }
 
         void Office.Native.IDocumentInspector.Inspect(object Doc, out MsoDocInspectorStatus Status, out string Result, out string Action)
@@ -200,7 +200,7 @@ namespace NetOffice.WordApi.Tools
                     throw;
             }
         }
-        
+
         #endregion
 
         #region Register/Unregister
@@ -238,7 +238,7 @@ namespace NetOffice.WordApi.Tools
             UnregisterHandleProgrammable(type, InstallScope.System);
             UnregisterHandleCodebase(type, InstallScope.System);
         }
-        
+
         private static void RegisterHandleDocumentInspector(Type type)
         {
             try

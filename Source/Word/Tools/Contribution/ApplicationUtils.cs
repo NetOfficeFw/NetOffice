@@ -9,14 +9,14 @@ using System.Text;
 using System.Reflection;
 
 namespace NetOffice.WordApi.Tools.Contribution
-{    
+{
     /// <summary>
     /// Application related utils
     /// </summary>
     public class ApplicationUtils
     {
         #region Imports
-        
+
         [DllImport("User32")]
         private static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
 
@@ -24,7 +24,7 @@ namespace NetOffice.WordApi.Tools.Contribution
         private static extern bool EnumChildWindows(IntPtr hWndParent, EnumChildCallback lpEnumFunc, ref int lParam);
 
         [DllImport("Oleacc.dll")]
-        private static extern int AccessibleObjectFromWindow(int hwnd, uint dwObjectID, byte[] riid, [MarshalAs(UnmanagedType.IDispatch)]ref object ptr);
+        private static extern int AccessibleObjectFromWindow(int hwnd, uint dwObjectID, byte[] riid, [MarshalAs(UnmanagedType.IDispatch)] ref object ptr);
 
         private delegate bool EnumChildCallback(IntPtr hwnd, ref int lParam);
 
@@ -73,7 +73,7 @@ namespace NetOffice.WordApi.Tools.Contribution
                 if (throwExceptionIfFailed)
                     throw new NetRuntimeSystem.ComponentModel.Win32Exception();
                 else
-                    return false;                
+                    return false;
             }
 
             Running.ChildWindowEnumerator childEnumerator = new Running.ChildWindowEnumerator(new IntPtr(handle), "Ribbon");
@@ -88,7 +88,7 @@ namespace NetOffice.WordApi.Tools.Contribution
                 if (throwExceptionIfFailed)
                     throw new NetRuntimeSystem.Runtime.InteropServices.ExternalException();
                 else
-                    return false;                
+                    return false;
             }
         }
 
@@ -118,7 +118,7 @@ namespace NetOffice.WordApi.Tools.Contribution
                 int result = 0;
                 Running.WindowEnumerator enumerator = new Running.WindowEnumerator("OpusApp");
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
-             
+
                 foreach (IntPtr item in handles)
                 {
                     object proxyDocument = GetAccessibleObject(item);
@@ -186,7 +186,7 @@ namespace NetOffice.WordApi.Tools.Contribution
                 return false;
             }
             else
-            { 
+            {
                 return true;
             }
         }

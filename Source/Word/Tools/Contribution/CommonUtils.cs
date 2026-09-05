@@ -22,7 +22,7 @@ namespace NetOffice.WordApi.Tools.Contribution
         /// Creates an instance of the application
         /// </summary>
         /// <param name="application">owner application</param>
-        public CommonUtils(WordApi.Application application): base(application)
+        public CommonUtils(WordApi.Application application) : base(application)
         {
             _ownerApplication = application;
         }
@@ -95,7 +95,7 @@ namespace NetOffice.WordApi.Tools.Contribution
         /// </summary>
         public ApplicationUtils Application
         {
-            get 
+            get
             {
                 if (null == _applicationUtils)
                     _applicationUtils = OnCreateApplicationUtils();

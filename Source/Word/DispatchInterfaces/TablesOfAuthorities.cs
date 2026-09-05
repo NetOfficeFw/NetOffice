@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.tablesofauthorities"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class TablesOfAuthorities : COMObject, IEnumerableProvider<NetOffice.WordApi.TableOfAuthorities>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TablesOfAuthorities(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public TablesOfAuthorities(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public TablesOfAuthorities(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TablesOfAuthorities(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TablesOfAuthorities() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TablesOfAuthorities(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.Count"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.Format"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdToaFormat Format
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.TableOfAuthorities this[Int32 index]
         {
@@ -219,10 +219,10 @@ namespace NetOffice.WordApi
         /// <param name="pageRangeSeparator">optional object pageRangeSeparator</param>
         /// <param name="includeCategoryHeader">optional object includeCategoryHeader</param>
         /// <param name="pageNumberSeparator">optional object pageNumberSeparator</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator, object includeCategoryHeader, object pageNumberSeparator)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader, pageNumberSeparator });
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.Add"/> </remarks>
         /// <param name="range">NetOffice.WordApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range);
@@ -244,7 +244,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="category">optional object category</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range, category);
@@ -258,7 +258,7 @@ namespace NetOffice.WordApi
         /// <param name="category">optional object category</param>
         /// <param name="bookmark">optional object bookmark</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range, category, bookmark);
@@ -273,7 +273,7 @@ namespace NetOffice.WordApi
         /// <param name="bookmark">optional object bookmark</param>
         /// <param name="passim">optional object passim</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, range, category, bookmark, passim);
@@ -289,10 +289,10 @@ namespace NetOffice.WordApi
         /// <param name="passim">optional object passim</param>
         /// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting });
         }
 
         /// <summary>
@@ -306,10 +306,10 @@ namespace NetOffice.WordApi
         /// <param name="keepEntryFormatting">optional object keepEntryFormatting</param>
         /// <param name="separator">optional object separator</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting, separator });
         }
 
         /// <summary>
@@ -324,10 +324,10 @@ namespace NetOffice.WordApi
         /// <param name="separator">optional object separator</param>
         /// <param name="includeSequenceName">optional object includeSequenceName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName });
         }
 
         /// <summary>
@@ -343,10 +343,10 @@ namespace NetOffice.WordApi
         /// <param name="includeSequenceName">optional object includeSequenceName</param>
         /// <param name="entrySeparator">optional object entrySeparator</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator });
         }
 
         /// <summary>
@@ -363,10 +363,10 @@ namespace NetOffice.WordApi
         /// <param name="entrySeparator">optional object entrySeparator</param>
         /// <param name="pageRangeSeparator">optional object pageRangeSeparator</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator });
         }
 
         /// <summary>
@@ -384,10 +384,10 @@ namespace NetOffice.WordApi
         /// <param name="pageRangeSeparator">optional object pageRangeSeparator</param>
         /// <param name="includeCategoryHeader">optional object includeCategoryHeader</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.TableOfAuthorities Add(NetOffice.WordApi.Range range, object category, object bookmark, object passim, object keepEntryFormatting, object separator, object includeSequenceName, object entrySeparator, object pageRangeSeparator, object includeCategoryHeader)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[]{ range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.TableOfAuthorities>(this, "Add", NetOffice.WordApi.TableOfAuthorities.LateBindingApiWrapperType, new object[] { range, category, bookmark, passim, keepEntryFormatting, separator, includeSequenceName, entrySeparator, pageRangeSeparator, includeCategoryHeader });
         }
 
         /// <summary>
@@ -395,10 +395,10 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.NextCitation"/> </remarks>
         /// <param name="shortCitation">string shortCitation</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void NextCitation(string shortCitation)
         {
-             Factory.ExecuteMethod(this, "NextCitation", shortCitation);
+            Factory.ExecuteMethod(this, "NextCitation", shortCitation);
         }
 
         /// <summary>
@@ -410,10 +410,10 @@ namespace NetOffice.WordApi
         /// <param name="longCitation">optional object longCitation</param>
         /// <param name="longCitationAutoText">optional object longCitationAutoText</param>
         /// <param name="category">optional object category</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation, object longCitationAutoText, object category)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[]{ range, shortCitation, longCitation, longCitationAutoText, category });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, new object[] { range, shortCitation, longCitation, longCitationAutoText, category });
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace NetOffice.WordApi
         /// <param name="range">NetOffice.WordApi.Range range</param>
         /// <param name="shortCitation">string shortCitation</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, shortCitation);
@@ -437,7 +437,7 @@ namespace NetOffice.WordApi
         /// <param name="shortCitation">string shortCitation</param>
         /// <param name="longCitation">optional object longCitation</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, shortCitation, longCitation);
@@ -452,7 +452,7 @@ namespace NetOffice.WordApi
         /// <param name="longCitation">optional object longCitation</param>
         /// <param name="longCitationAutoText">optional object longCitationAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Field MarkCitation(NetOffice.WordApi.Range range, string shortCitation, object longCitation, object longCitationAutoText)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.Field>(this, "MarkCitation", NetOffice.WordApi.Field.LateBindingApiWrapperType, range, shortCitation, longCitation, longCitationAutoText);
@@ -466,10 +466,10 @@ namespace NetOffice.WordApi
         /// <param name="longCitation">optional object longCitation</param>
         /// <param name="longCitationAutoText">optional object longCitationAutoText</param>
         /// <param name="category">optional object category</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllCitations(string shortCitation, object longCitation, object longCitationAutoText, object category)
         {
-             Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation, longCitationAutoText, category);
+            Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation, longCitationAutoText, category);
         }
 
         /// <summary>
@@ -478,10 +478,10 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.TablesOfAuthorities.MarkAllCitations"/> </remarks>
         /// <param name="shortCitation">string shortCitation</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllCitations(string shortCitation)
         {
-             Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation);
+            Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation);
         }
 
         /// <summary>
@@ -491,10 +491,10 @@ namespace NetOffice.WordApi
         /// <param name="shortCitation">string shortCitation</param>
         /// <param name="longCitation">optional object longCitation</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllCitations(string shortCitation, object longCitation)
         {
-             Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation);
+            Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation);
         }
 
         /// <summary>
@@ -505,10 +505,10 @@ namespace NetOffice.WordApi
         /// <param name="longCitation">optional object longCitation</param>
         /// <param name="longCitationAutoText">optional object longCitationAutoText</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void MarkAllCitations(string shortCitation, object longCitation, object longCitationAutoText)
         {
-             Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation, longCitationAutoText);
+            Factory.ExecuteMethod(this, "MarkAllCitations", shortCitation, longCitation, longCitationAutoText);
         }
 
         #endregion
@@ -547,7 +547,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -555,6 +555,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
