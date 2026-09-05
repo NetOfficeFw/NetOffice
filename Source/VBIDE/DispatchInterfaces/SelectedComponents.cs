@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.VBIDEApi
 {
-	/// <summary>
-	/// DispatchInterface SelectedComponents 
-	/// SupportByVersion VBIDE, 12,14,5.3
-	/// </summary>
-	[SupportByVersion("VBIDE", 12,14,5.3)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class SelectedComponents : COMObject, IEnumerableProvider<NetOffice.VBIDEApi.Component>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface SelectedComponents 
+    /// SupportByVersion VBIDE, 12,14,5.3
+    /// </summary>
+    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class SelectedComponents : COMObject, IEnumerableProvider<NetOffice.VBIDEApi.Component>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -47,126 +47,126 @@ namespace NetOffice.VBIDEApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public SelectedComponents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public SelectedComponents(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public SelectedComponents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public SelectedComponents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SelectedComponents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SelectedComponents(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public SelectedComponents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SelectedComponents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SelectedComponents(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SelectedComponents() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SelectedComponents(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public SelectedComponents(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// Get
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		[BaseResult]
-		public NetOffice.VBIDEApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// Get
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		public NetOffice.VBIDEApi.VBProject Parent
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "Parent", NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SelectedComponents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SelectedComponents(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SelectedComponents() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SelectedComponents(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// Get
-		/// </summary>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion VBIDE 12, 14, 5.3
+        /// Get
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [BaseResult]
+        public NetOffice.VBIDEApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.VBIDEApi.Application>(this, "Application");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion VBIDE 12, 14, 5.3
+        /// Get
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
+        public NetOffice.VBIDEApi.VBProject Parent
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.VBIDEApi.VBProject>(this, "Parent", NetOffice.VBIDEApi.VBProject.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion VBIDE 12, 14, 5.3
+        /// Get
+        /// </summary>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion VBIDE 12, 14, 5.3
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("VBIDE", 12,14,5.3)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.VBIDEApi.Component this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Item", NetOffice.VBIDEApi.Component.LateBindingApiWrapperType, index);
-			}
-		}
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion VBIDE 12, 14, 5.3
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.VBIDEApi.Component this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Component>(this, "Item", NetOffice.VBIDEApi.Component.LateBindingApiWrapperType, index);
+            }
+        }
 
         #endregion
 
@@ -205,13 +205,13 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE, 12,14,5.3
         /// </summary>
         [SupportByVersion("VBIDE", 12,14,5.3)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
-		}
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
