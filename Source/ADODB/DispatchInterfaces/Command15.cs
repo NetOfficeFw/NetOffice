@@ -9,11 +9,11 @@ namespace NetOffice.ADODBApi
     /// DispatchInterface Command15 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class Command15 : _ADO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Command15(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public Command15(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ADODBApi
         public Command15(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Command15(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Command15() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Command15(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         [BaseResult]
         public NetOffice.ADODBApi._Connection ActiveConnection
         {
@@ -129,7 +129,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public string CommandText
         {
             get
@@ -146,7 +146,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 CommandTimeout
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public bool Prepared
         {
             get
@@ -180,7 +180,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi.Parameters Parameters
         {
             get
@@ -193,7 +193,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi.Enums.CommandTypeEnum CommandType
         {
             get
@@ -210,7 +210,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public string Name
         {
             get
@@ -233,7 +233,7 @@ namespace NetOffice.ADODBApi
         /// <param name="recordsAffected">object recordsAffected</param>
         /// <param name="parameters">optional object parameters</param>
         /// <param name="options">optional Int32 Options = -1</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         [BaseResult]
         public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters, object options)
         {
@@ -246,7 +246,7 @@ namespace NetOffice.ADODBApi
         /// <param name="recordsAffected">object recordsAffected</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Recordset Execute(object recordsAffected)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", recordsAffected);
@@ -259,7 +259,7 @@ namespace NetOffice.ADODBApi
         /// <param name="parameters">optional object parameters</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Recordset Execute(object recordsAffected, object parameters)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Recordset>(this, "Execute", recordsAffected, parameters);
@@ -273,11 +273,11 @@ namespace NetOffice.ADODBApi
         /// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
         /// <param name="size">optional Int32 Size = 0</param>
         /// <param name="value">optional object value</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         [BaseResult]
         public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction, object size, object value)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", new object[]{ name, type, direction, size, value });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", new object[] { name, type, direction, size, value });
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace NetOffice.ADODBApi
         /// </summary>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Parameter CreateParameter()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter");
@@ -297,7 +297,7 @@ namespace NetOffice.ADODBApi
         /// <param name="name">optional string Name = </param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Parameter CreateParameter(object name)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name);
@@ -310,7 +310,7 @@ namespace NetOffice.ADODBApi
         /// <param name="type">optional NetOffice.ADODBApi.Enums.DataTypeEnum Type = 0</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name, type);
@@ -324,7 +324,7 @@ namespace NetOffice.ADODBApi
         /// <param name="direction">optional NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction = 1</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name, type, direction);
@@ -339,7 +339,7 @@ namespace NetOffice.ADODBApi
         /// <param name="size">optional Int32 Size = 0</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi._Parameter CreateParameter(object name, object type, object direction, object size)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.ADODBApi._Parameter>(this, "CreateParameter", name, type, direction, size);
@@ -347,6 +347,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

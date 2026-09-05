@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class Recordset21_Deprecated : Recordset20_Deprecated
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Recordset21_Deprecated(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public Recordset21_Deprecated(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ADODBApi
         public Recordset21_Deprecated(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset21_Deprecated(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset21_Deprecated() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Recordset21_Deprecated(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Seek(object keyValues, object seekOption)
         {
-             Factory.ExecuteMethod(this, "Seek", keyValues, seekOption);
+            Factory.ExecuteMethod(this, "Seek", keyValues, seekOption);
         }
 
         /// <summary>
@@ -195,11 +195,11 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Seek(object keyValues)
         {
-             Factory.ExecuteMethod(this, "Seek", keyValues);
+            Factory.ExecuteMethod(this, "Seek", keyValues);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

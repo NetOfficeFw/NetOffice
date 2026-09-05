@@ -9,11 +9,11 @@ namespace NetOffice.ADODBApi
     /// Interface ConnectionEventsVt 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsInterface)]
     public class ConnectionEventsVt : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ConnectionEventsVt(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public ConnectionEventsVt(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ADODBApi
         public ConnectionEventsVt(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ConnectionEventsVt(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ConnectionEventsVt() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ConnectionEventsVt(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -117,7 +117,7 @@ namespace NetOffice.ADODBApi
         /// <param name="pError">NetOffice.ADODBApi.Error pError</param>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 InfoMessage(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
             return Factory.ExecuteInt32MethodGet(this, "InfoMessage", pError, adStatus, pConnection);
@@ -130,7 +130,7 @@ namespace NetOffice.ADODBApi
         /// <param name="pError">NetOffice.ADODBApi.Error pError</param>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 BeginTransComplete(Int32 transactionLevel, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
             return Factory.ExecuteInt32MethodGet(this, "BeginTransComplete", transactionLevel, pError, adStatus, pConnection);
@@ -142,7 +142,7 @@ namespace NetOffice.ADODBApi
         /// <param name="pError">NetOffice.ADODBApi.Error pError</param>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 CommitTransComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
             return Factory.ExecuteInt32MethodGet(this, "CommitTransComplete", pError, adStatus, pConnection);
@@ -154,7 +154,7 @@ namespace NetOffice.ADODBApi
         /// <param name="pError">NetOffice.ADODBApi.Error pError</param>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 RollbackTransComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
             return Factory.ExecuteInt32MethodGet(this, "RollbackTransComplete", pError, adStatus, pConnection);
@@ -171,10 +171,10 @@ namespace NetOffice.ADODBApi
         /// <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
         /// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 WillExecute(string source, NetOffice.ADODBApi.Enums.CursorTypeEnum cursorType, NetOffice.ADODBApi.Enums.LockTypeEnum lockType, Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection)
         {
-            return Factory.ExecuteInt32MethodGet(this, "WillExecute", new object[]{ source, cursorType, lockType, options, adStatus, pCommand, pRecordset, pConnection });
+            return Factory.ExecuteInt32MethodGet(this, "WillExecute", new object[] { source, cursorType, lockType, options, adStatus, pCommand, pRecordset, pConnection });
         }
 
         /// <summary>
@@ -186,10 +186,10 @@ namespace NetOffice.ADODBApi
         /// <param name="pCommand">NetOffice.ADODBApi._Command pCommand</param>
         /// <param name="pRecordset">NetOffice.ADODBApi._Recordset pRecordset</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 ExecuteComplete(Int32 recordsAffected, NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Command pCommand, NetOffice.ADODBApi._Recordset pRecordset, NetOffice.ADODBApi._Connection pConnection)
         {
-            return Factory.ExecuteInt32MethodGet(this, "ExecuteComplete", new object[]{ recordsAffected, pError, adStatus, pCommand, pRecordset, pConnection });
+            return Factory.ExecuteInt32MethodGet(this, "ExecuteComplete", new object[] { recordsAffected, pError, adStatus, pCommand, pRecordset, pConnection });
         }
 
         /// <summary>
@@ -201,10 +201,10 @@ namespace NetOffice.ADODBApi
         /// <param name="options">Int32 options</param>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 WillConnect(string connectionString, string userID, string password, Int32 options, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
-            return Factory.ExecuteInt32MethodGet(this, "WillConnect", new object[]{ connectionString, userID, password, options, adStatus, pConnection });
+            return Factory.ExecuteInt32MethodGet(this, "WillConnect", new object[] { connectionString, userID, password, options, adStatus, pConnection });
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace NetOffice.ADODBApi
         /// <param name="pError">NetOffice.ADODBApi.Error pError</param>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 ConnectComplete(NetOffice.ADODBApi.Error pError, NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
             return Factory.ExecuteInt32MethodGet(this, "ConnectComplete", pError, adStatus, pConnection);
@@ -224,7 +224,7 @@ namespace NetOffice.ADODBApi
         /// </summary>
         /// <param name="adStatus">NetOffice.ADODBApi.Enums.EventStatusEnum adStatus</param>
         /// <param name="pConnection">NetOffice.ADODBApi._Connection pConnection</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 Disconnect(NetOffice.ADODBApi.Enums.EventStatusEnum adStatus, NetOffice.ADODBApi._Connection pConnection)
         {
             return Factory.ExecuteInt32MethodGet(this, "Disconnect", adStatus, pConnection);
@@ -232,6 +232,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -13,7 +13,7 @@ namespace NetOffice.ADODBApi
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Stream : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Stream(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public _Stream(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ADODBApi
         public _Stream(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Stream(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Stream() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Stream(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -266,7 +266,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object mode, object options, object userName, object password)
         {
-             Factory.ExecuteMethod(this, "Open", new object[]{ source, mode, options, userName, password });
+            Factory.ExecuteMethod(this, "Open", new object[] { source, mode, options, userName, password });
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open()
         {
-             Factory.ExecuteMethod(this, "Open");
+            Factory.ExecuteMethod(this, "Open");
         }
 
         /// <summary>
@@ -287,7 +287,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source)
         {
-             Factory.ExecuteMethod(this, "Open", source);
+            Factory.ExecuteMethod(this, "Open", source);
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object mode)
         {
-             Factory.ExecuteMethod(this, "Open", source, mode);
+            Factory.ExecuteMethod(this, "Open", source, mode);
         }
 
         /// <summary>
@@ -312,7 +312,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object mode, object options)
         {
-             Factory.ExecuteMethod(this, "Open", source, mode, options);
+            Factory.ExecuteMethod(this, "Open", source, mode, options);
         }
 
         /// <summary>
@@ -326,7 +326,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Open(object source, object mode, object options, object userName)
         {
-             Factory.ExecuteMethod(this, "Open", source, mode, options, userName);
+            Factory.ExecuteMethod(this, "Open", source, mode, options, userName);
         }
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Close()
         {
-             Factory.ExecuteMethod(this, "Close");
+            Factory.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
@@ -344,7 +344,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void SkipLine()
         {
-             Factory.ExecuteMethod(this, "SkipLine");
+            Factory.ExecuteMethod(this, "SkipLine");
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Write(object buffer)
         {
-             Factory.ExecuteMethod(this, "Write", buffer);
+            Factory.ExecuteMethod(this, "Write", buffer);
         }
 
         /// <summary>
@@ -363,7 +363,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void SetEOS()
         {
-             Factory.ExecuteMethod(this, "SetEOS");
+            Factory.ExecuteMethod(this, "SetEOS");
         }
 
         /// <summary>
@@ -374,7 +374,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void CopyTo(NetOffice.ADODBApi._Stream destStream, object charNumber)
         {
-             Factory.ExecuteMethod(this, "CopyTo", destStream, charNumber);
+            Factory.ExecuteMethod(this, "CopyTo", destStream, charNumber);
         }
 
         /// <summary>
@@ -385,7 +385,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void CopyTo(NetOffice.ADODBApi._Stream destStream)
         {
-             Factory.ExecuteMethod(this, "CopyTo", destStream);
+            Factory.ExecuteMethod(this, "CopyTo", destStream);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Flush()
         {
-             Factory.ExecuteMethod(this, "Flush");
+            Factory.ExecuteMethod(this, "Flush");
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void SaveToFile(string fileName, object options)
         {
-             Factory.ExecuteMethod(this, "SaveToFile", fileName, options);
+            Factory.ExecuteMethod(this, "SaveToFile", fileName, options);
         }
 
         /// <summary>
@@ -416,7 +416,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void SaveToFile(string fileName)
         {
-             Factory.ExecuteMethod(this, "SaveToFile", fileName);
+            Factory.ExecuteMethod(this, "SaveToFile", fileName);
         }
 
         /// <summary>
@@ -426,7 +426,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void LoadFromFile(string fileName)
         {
-             Factory.ExecuteMethod(this, "LoadFromFile", fileName);
+            Factory.ExecuteMethod(this, "LoadFromFile", fileName);
         }
 
         /// <summary>
@@ -457,7 +457,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void WriteText(string data, object options)
         {
-             Factory.ExecuteMethod(this, "WriteText", data, options);
+            Factory.ExecuteMethod(this, "WriteText", data, options);
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void WriteText(string data)
         {
-             Factory.ExecuteMethod(this, "WriteText", data);
+            Factory.ExecuteMethod(this, "WriteText", data);
         }
 
         /// <summary>
@@ -477,11 +477,11 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Cancel()
         {
-             Factory.ExecuteMethod(this, "Cancel");
+            Factory.ExecuteMethod(this, "Cancel");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -16,7 +16,7 @@ namespace NetOffice.ADODBApi
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class Fields_Deprecated : Fields20_Deprecated, IEnumerableProvider<NetOffice.ADODBApi.Field_Deprecated>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Fields_Deprecated(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.ADODBApi
         public Fields_Deprecated(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.ADODBApi
         public Fields_Deprecated(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Fields_Deprecated(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Fields_Deprecated() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Fields_Deprecated(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib, object fieldValue)
         {
-             Factory.ExecuteMethod(this, "Append", new object[]{ name, type, definedSize, attrib, fieldValue });
+            Factory.ExecuteMethod(this, "Append", new object[] { name, type, definedSize, attrib, fieldValue });
         }
 
         /// <summary>
@@ -174,7 +174,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
         {
-             Factory.ExecuteMethod(this, "Append", name, type);
+            Factory.ExecuteMethod(this, "Append", name, type);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
         {
-             Factory.ExecuteMethod(this, "Append", name, type, definedSize);
+            Factory.ExecuteMethod(this, "Append", name, type, definedSize);
         }
 
         /// <summary>
@@ -201,7 +201,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
         {
-             Factory.ExecuteMethod(this, "Append", name, type, definedSize, attrib);
+            Factory.ExecuteMethod(this, "Append", name, type, definedSize, attrib);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Update()
         {
-             Factory.ExecuteMethod(this, "Update");
+            Factory.ExecuteMethod(this, "Update");
         }
 
         /// <summary>
@@ -220,7 +220,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Resync(object resyncValues)
         {
-             Factory.ExecuteMethod(this, "Resync", resyncValues);
+            Factory.ExecuteMethod(this, "Resync", resyncValues);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void Resync()
         {
-             Factory.ExecuteMethod(this, "Resync");
+            Factory.ExecuteMethod(this, "Resync");
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace NetOffice.ADODBApi
         [SupportByVersion("ADODB", 2.5)]
         public void CancelUpdate()
         {
-             Factory.ExecuteMethod(this, "CancelUpdate");
+            Factory.ExecuteMethod(this, "CancelUpdate");
         }
 
         #endregion
@@ -286,6 +286,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
