@@ -28,7 +28,7 @@ namespace NetOffice
                 lock (_lockUtils)
                 {
                     if (null == _default)
-                        _default = new Utils();                  
+                        _default = new Utils();
                 }
                 return _default;
             }
@@ -135,7 +135,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Returns an enumerator with com proxies
         /// </summary>
@@ -169,7 +169,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Returns an enumerator with com proxies
         /// </summary>
@@ -203,7 +203,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Returns an enumerator with variant items - that means item(s) can be proxy or scalar
         /// </summary>
@@ -228,7 +228,7 @@ namespace NetOffice
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
-                    { 
+                    {
                         ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy, allowDynamicObject);
                         yield return returnClass;
                     }
@@ -275,7 +275,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Returns an enumerator with com proxies
         /// </summary>

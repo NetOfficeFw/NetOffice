@@ -12,12 +12,12 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface DiagramNodeChildren 
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.ExcelApi.DiagramNodeChildren")]
     public class DiagramNodeChildren : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.DiagramNode>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DiagramNodeChildren(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public DiagramNodeChildren(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public DiagramNodeChildren(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNodeChildren(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNodeChildren() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNodeChildren(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode FirstChild
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode LastChild
         {
             get
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.DiagramNode this[object index]
         {
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="index">optional object Index = -1</param>
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode AddNode(object index, object nodeType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType, index, nodeType);
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode AddNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType);
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="index">optional object Index = -1</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode AddNode(object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType, index);
@@ -217,7 +217,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SelectAll()
         {
             Factory.ExecuteMethod(this, "SelectAll");
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -267,6 +267,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

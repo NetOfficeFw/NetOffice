@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTasks"/> </remarks>
-    [SupportByVersion("Office", 11,12,14,15,16)]
+    [SupportByVersion("Office", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class SharedWorkspaceTasks : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SharedWorkspaceTask>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SharedWorkspaceTasks(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public SharedWorkspaceTasks(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public SharedWorkspaceTasks(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceTasks(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceTasks() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceTasks(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.SharedWorkspaceTask this[Int32 index]
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTasks.Count"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTasks.Parent"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTasks.ItemCountExceeded"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public bool ItemCountExceeded
         {
             get
@@ -183,10 +183,10 @@ namespace NetOffice.OfficeApi
         /// <param name="assignee">optional object assignee</param>
         /// <param name="description">optional object description</param>
         /// <param name="dueDate">optional object dueDate</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description, object dueDate)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, new object[]{ title, status, priority, assignee, description, dueDate });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, new object[] { title, status, priority, assignee, description, dueDate });
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceTasks.Add"/> </remarks>
         /// <param name="title">string title</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, title);
@@ -208,7 +208,7 @@ namespace NetOffice.OfficeApi
         /// <param name="title">string title</param>
         /// <param name="status">optional object status</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, title, status);
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi
         /// <param name="status">optional object status</param>
         /// <param name="priority">optional object priority</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, title, status, priority);
@@ -237,7 +237,7 @@ namespace NetOffice.OfficeApi
         /// <param name="priority">optional object priority</param>
         /// <param name="assignee">optional object assignee</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, title, status, priority, assignee);
@@ -253,10 +253,10 @@ namespace NetOffice.OfficeApi
         /// <param name="assignee">optional object assignee</param>
         /// <param name="description">optional object description</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceTask Add(string title, object status, object priority, object assignee, object description)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, new object[]{ title, status, priority, assignee, description });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceTask>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceTask.LateBindingApiWrapperType, new object[] { title, status, priority, assignee, description });
         }
 
         #endregion
@@ -295,7 +295,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -303,6 +303,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

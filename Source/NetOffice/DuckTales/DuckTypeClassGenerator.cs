@@ -79,7 +79,7 @@ namespace NetOffice.Duck
             Builder.AppendLine("\t\t\tget");
             Builder.AppendLine("\t\t\t{");
             Builder.AppendLine("\t\t\t\tif (null == _thisType)");
-            Builder.AppendLine("\t\t\t\t\t_thisType = typeof("+ implementationName + ");");
+            Builder.AppendLine("\t\t\t\t\t_thisType = typeof(" + implementationName + ");");
             Builder.AppendLine("\t\t\t\t return _thisType;");
             Builder.AppendLine("\t\t\t}");
             Builder.AppendLine("\t\t}" + Environment.NewLine);
@@ -102,7 +102,7 @@ namespace NetOffice.Duck
         public string ImplementationName { get; private set; }
 
         public string ProxyInterfaceFullName { get; private set; }
-        
+
         public void Dispose()
         {
             Builder.AppendLine("\t}");

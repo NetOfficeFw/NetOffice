@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class WorkflowTemplate : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public WorkflowTemplate(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public WorkflowTemplate(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public WorkflowTemplate(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public WorkflowTemplate(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public WorkflowTemplate() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public WorkflowTemplate(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate.Id"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string Id
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate.Name"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate.Description"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string Description
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate.DocumentLibraryName"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string DocumentLibraryName
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate.DocumentLibraryURL"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string DocumentLibraryURL
         {
             get
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.WorkflowTemplate.Show"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Show()
         {
             return Factory.ExecuteInt32MethodGet(this, "Show");
@@ -194,6 +194,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

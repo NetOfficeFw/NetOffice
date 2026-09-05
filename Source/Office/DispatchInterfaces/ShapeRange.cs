@@ -12,11 +12,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface ShapeRange 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class ShapeRange : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.Shape>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ShapeRange(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi
         public ShapeRange(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.OfficeApi
         public ShapeRange(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ShapeRange(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ShapeRange() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ShapeRange(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Adjustments Adjustments
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBlackWhiteMode BlackWhiteMode
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CalloutFormat Callout
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ConnectionSiteCount
         {
             get
@@ -214,7 +214,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Connector
         {
             get
@@ -227,7 +227,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ConnectorFormat ConnectorFormat
         {
             get
@@ -240,7 +240,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.FillFormat Fill
         {
             get
@@ -253,7 +253,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.GroupShapes GroupItems
         {
             get
@@ -266,7 +266,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Single Height
         {
             get
@@ -283,7 +283,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HorizontalFlip
         {
             get
@@ -296,7 +296,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Single Left
         {
             get
@@ -313,7 +313,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.LineFormat Line
         {
             get
@@ -326,7 +326,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState LockAspectRatio
         {
             get
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -360,7 +360,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ShapeNodes Nodes
         {
             get
@@ -373,7 +373,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Single Rotation
         {
             get
@@ -390,7 +390,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.PictureFormat PictureFormat
         {
             get
@@ -403,7 +403,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ShadowFormat Shadow
         {
             get
@@ -416,7 +416,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.TextEffectFormat TextEffect
         {
             get
@@ -429,7 +429,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.TextFrame TextFrame
         {
             get
@@ -442,7 +442,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ThreeDFormat ThreeD
         {
             get
@@ -455,7 +455,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Single Top
         {
             get
@@ -472,7 +472,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoShapeType Type
         {
             get
@@ -485,7 +485,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState VerticalFlip
         {
             get
@@ -498,7 +498,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object Vertices
         {
             get
@@ -511,7 +511,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -528,7 +528,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Single Width
         {
             get
@@ -545,7 +545,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ZOrderPosition
         {
             get
@@ -558,7 +558,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Script Script
         {
             get
@@ -571,7 +571,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string AlternativeText
         {
             get
@@ -588,7 +588,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasDiagram
         {
             get
@@ -601,7 +601,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoDiagram Diagram
         {
             get
@@ -614,7 +614,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasDiagramNode
         {
             get
@@ -627,7 +627,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode DiagramNode
         {
             get
@@ -640,7 +640,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Child
         {
             get
@@ -653,7 +653,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Shape ParentGroup
         {
             get
@@ -666,7 +666,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.OfficeApi.CanvasShapes CanvasItems
         {
@@ -680,7 +680,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 Id
         {
             get
@@ -693,7 +693,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string RTF
         {
@@ -711,7 +711,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.TextFrame2 TextFrame2
         {
             get
@@ -724,7 +724,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState HasChart
         {
             get
@@ -737,7 +737,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoChart Chart
         {
             get
@@ -750,7 +750,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoShapeStyleIndex ShapeStyle
         {
             get
@@ -767,7 +767,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex BackgroundStyle
         {
             get
@@ -784,7 +784,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
         {
             get
@@ -797,7 +797,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.GlowFormat Glow
         {
             get
@@ -810,7 +810,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ReflectionFormat Reflection
         {
             get
@@ -823,7 +823,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public string Title
         {
             get
@@ -844,7 +844,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.Shape this[object index]
         {
@@ -859,7 +859,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="alignCmd">NetOffice.OfficeApi.Enums.MsoAlignCmd alignCmd</param>
         /// <param name="relativeTo">NetOffice.OfficeApi.Enums.MsoTriState relativeTo</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Align(NetOffice.OfficeApi.Enums.MsoAlignCmd alignCmd, NetOffice.OfficeApi.Enums.MsoTriState relativeTo)
         {
             Factory.ExecuteMethod(this, "Align", alignCmd, relativeTo);
@@ -868,7 +868,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Apply()
         {
             Factory.ExecuteMethod(this, "Apply");
@@ -877,7 +877,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -888,7 +888,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="distributeCmd">NetOffice.OfficeApi.Enums.MsoDistributeCmd distributeCmd</param>
         /// <param name="relativeTo">NetOffice.OfficeApi.Enums.MsoTriState relativeTo</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Distribute(NetOffice.OfficeApi.Enums.MsoDistributeCmd distributeCmd, NetOffice.OfficeApi.Enums.MsoTriState relativeTo)
         {
             Factory.ExecuteMethod(this, "Distribute", distributeCmd, relativeTo);
@@ -897,7 +897,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ShapeRange Duplicate()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeRange>(this, "Duplicate", NetOffice.OfficeApi.ShapeRange.LateBindingApiWrapperType);
@@ -907,7 +907,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="flipCmd">NetOffice.OfficeApi.Enums.MsoFlipCmd flipCmd</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Flip(NetOffice.OfficeApi.Enums.MsoFlipCmd flipCmd)
         {
             Factory.ExecuteMethod(this, "Flip", flipCmd);
@@ -917,7 +917,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void IncrementLeft(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementLeft", increment);
@@ -927,7 +927,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void IncrementRotation(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementRotation", increment);
@@ -937,7 +937,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="increment">Single increment</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void IncrementTop(Single increment)
         {
             Factory.ExecuteMethod(this, "IncrementTop", increment);
@@ -946,7 +946,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Shape Group()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "Group", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType);
@@ -955,7 +955,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void PickUp()
         {
             Factory.ExecuteMethod(this, "PickUp");
@@ -964,7 +964,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Shape Regroup()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.Shape>(this, "Regroup", NetOffice.OfficeApi.Shape.LateBindingApiWrapperType);
@@ -973,7 +973,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void RerouteConnections()
         {
             Factory.ExecuteMethod(this, "RerouteConnections");
@@ -985,7 +985,7 @@ namespace NetOffice.OfficeApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         /// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
         {
             Factory.ExecuteMethod(this, "ScaleHeight", factor, relativeToOriginalSize, fScale);
@@ -997,7 +997,7 @@ namespace NetOffice.OfficeApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleHeight(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize)
         {
             Factory.ExecuteMethod(this, "ScaleHeight", factor, relativeToOriginalSize);
@@ -1009,7 +1009,7 @@ namespace NetOffice.OfficeApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         /// <param name="fScale">optional NetOffice.OfficeApi.Enums.MsoScaleFrom fScale = 0</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize, object fScale)
         {
             Factory.ExecuteMethod(this, "ScaleWidth", factor, relativeToOriginalSize, fScale);
@@ -1021,7 +1021,7 @@ namespace NetOffice.OfficeApi
         /// <param name="factor">Single factor</param>
         /// <param name="relativeToOriginalSize">NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void ScaleWidth(Single factor, NetOffice.OfficeApi.Enums.MsoTriState relativeToOriginalSize)
         {
             Factory.ExecuteMethod(this, "ScaleWidth", factor, relativeToOriginalSize);
@@ -1031,7 +1031,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="replace">optional object replace</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Select(object replace)
         {
             Factory.ExecuteMethod(this, "Select", replace);
@@ -1041,7 +1041,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Select()
         {
             Factory.ExecuteMethod(this, "Select");
@@ -1050,7 +1050,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void SetShapesDefaultProperties()
         {
             Factory.ExecuteMethod(this, "SetShapesDefaultProperties");
@@ -1059,7 +1059,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ShapeRange Ungroup()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ShapeRange>(this, "Ungroup", NetOffice.OfficeApi.ShapeRange.LateBindingApiWrapperType);
@@ -1069,7 +1069,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="zOrderCmd">NetOffice.OfficeApi.Enums.MsoZOrderCmd zOrderCmd</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void ZOrder(NetOffice.OfficeApi.Enums.MsoZOrderCmd zOrderCmd)
         {
             Factory.ExecuteMethod(this, "ZOrder", zOrderCmd);
@@ -1080,7 +1080,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropLeft(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropLeft", increment);
@@ -1091,7 +1091,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropTop(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropTop", increment);
@@ -1102,7 +1102,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropRight(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropRight", increment);
@@ -1113,7 +1113,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="increment">Single increment</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void CanvasCropBottom(Single increment)
         {
             Factory.ExecuteMethod(this, "CanvasCropBottom", increment);
@@ -1122,7 +1122,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Cut()
         {
             Factory.ExecuteMethod(this, "Cut");
@@ -1131,7 +1131,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Copy()
         {
             Factory.ExecuteMethod(this, "Copy");
@@ -1195,7 +1195,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -1203,6 +1203,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

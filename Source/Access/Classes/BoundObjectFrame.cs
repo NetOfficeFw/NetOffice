@@ -7,7 +7,7 @@ namespace NetOffice.AccessApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void BoundObjectFrame_UpdatedEventHandler(ref Int16 code);
     public delegate void BoundObjectFrame_BeforeUpdateEventHandler(ref Int16 cancel);
     public delegate void BoundObjectFrame_AfterUpdateEventHandler();
@@ -23,7 +23,7 @@ namespace NetOffice.AccessApi
     public delegate void BoundObjectFrame_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
     public delegate void BoundObjectFrame_KeyPressEventHandler(ref Int16 keyAscii);
     public delegate void BoundObjectFrame_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -32,22 +32,22 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame"/> </remarks>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._BoundObjectFrameEvents_SinkHelper), typeof(Events.DispBoundObjectFrameEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._BoundObjectFrameEvents), typeof(Events.DispBoundObjectFrameEvents))]
     public class BoundObjectFrame : _BoundObjectFrame, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events._BoundObjectFrameEvents_SinkHelper __BoundObjectFrameEvents_SinkHelper;
         private Events.DispBoundObjectFrameEvents_SinkHelper _dispBoundObjectFrameEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -77,9 +77,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -87,14 +87,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public BoundObjectFrame(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public BoundObjectFrame(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -104,7 +104,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public BoundObjectFrame(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -113,31 +113,31 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public BoundObjectFrame(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public BoundObjectFrame(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of BoundObjectFrame 
         /// </summary>		
-        public BoundObjectFrame():base("Access.BoundObjectFrame")
+        public BoundObjectFrame() : base("Access.BoundObjectFrame")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of BoundObjectFrame
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public BoundObjectFrame(string progId):base(progId)
+        public BoundObjectFrame(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -156,7 +156,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.Updated"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_UpdatedEventHandler UpdatedEvent
         {
             add
@@ -179,7 +179,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/access.boundobjectframe.beforeupdate-event"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_BeforeUpdateEventHandler BeforeUpdateEvent
         {
             add
@@ -202,7 +202,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/access.boundobjectframe.afterupdate-event"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_AfterUpdateEventHandler AfterUpdateEvent
         {
             add
@@ -225,7 +225,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.Enter"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_EnterEventHandler EnterEvent
         {
             add
@@ -248,7 +248,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.Exit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_ExitEventHandler ExitEvent
         {
             add
@@ -271,7 +271,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.GotFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_GotFocusEventHandler GotFocusEvent
         {
             add
@@ -294,7 +294,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.LostFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_LostFocusEventHandler LostFocusEvent
         {
             add
@@ -317,7 +317,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.Click"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_ClickEventHandler ClickEvent
         {
             add
@@ -340,7 +340,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.DblClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_DblClickEventHandler DblClickEvent
         {
             add
@@ -363,7 +363,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.MouseDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -386,7 +386,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.MouseMove"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -409,7 +409,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.MouseUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -432,7 +432,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.KeyDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_KeyDownEventHandler KeyDownEvent
         {
             add
@@ -455,7 +455,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.KeyPress"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_KeyPressEventHandler KeyPressEvent
         {
             add
@@ -478,7 +478,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.BoundObjectFrame.KeyUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event BoundObjectFrame_KeyUpEventHandler KeyUpEvent
         {
             add
@@ -493,36 +493,36 @@ namespace NetOffice.AccessApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._BoundObjectFrameEvents_SinkHelper.Id, Events.DispBoundObjectFrameEvents_SinkHelper.Id);
 
 
-            if(Events._BoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events._BoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 __BoundObjectFrameEvents_SinkHelper = new Events._BoundObjectFrameEvents_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.DispBoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.DispBoundObjectFrameEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dispBoundObjectFrameEvents_SinkHelper = new Events.DispBoundObjectFrameEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -531,7 +531,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -541,9 +541,9 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -565,16 +565,16 @@ namespace NetOffice.AccessApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -592,12 +592,12 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != __BoundObjectFrameEvents_SinkHelper)
+            if (null != __BoundObjectFrameEvents_SinkHelper)
             {
                 __BoundObjectFrameEvents_SinkHelper.Dispose();
                 __BoundObjectFrameEvents_SinkHelper = null;
             }
-            if( null != _dispBoundObjectFrameEvents_SinkHelper)
+            if (null != _dispBoundObjectFrameEvents_SinkHelper)
             {
                 _dispBoundObjectFrameEvents_SinkHelper.Dispose();
                 _dispBoundObjectFrameEvents_SinkHelper = null;
@@ -605,10 +605,10 @@ namespace NetOffice.AccessApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

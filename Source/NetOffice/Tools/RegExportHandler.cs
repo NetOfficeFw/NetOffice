@@ -30,7 +30,7 @@ namespace NetOffice.Tools
         /// <param name="scope">the current installation scope</param>
         /// <param name="keyState">the office registry key need to create</param>
         public static RegExport Proceed(Type type, string[] addinOfficeRegistryKey, InstallScope scope, OfficeRegisterKeyState keyState)
-        {            
+        {
             try
             {
                 object result = null;
@@ -50,7 +50,7 @@ namespace NetOffice.Tools
                             result = exportMethod.Invoke(null, new object[] { scope });
                             break;
                         case 2:
-                            result = exportMethod.Invoke(null, new object[] { scope, keyState});
+                            result = exportMethod.Invoke(null, new object[] { scope, keyState });
                             break;
                         case 3:
                             exportMethod.Invoke(null, new object[] { type, scope, keyState });

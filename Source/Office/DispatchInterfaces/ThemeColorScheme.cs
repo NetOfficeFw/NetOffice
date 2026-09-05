@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property)]
     public class ThemeColorScheme : _IMsoDispObj, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ThemeColorScheme(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public ThemeColorScheme(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public ThemeColorScheme(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ThemeColorScheme(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ThemeColorScheme() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ThemeColorScheme(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme.Parent"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme.Count"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme.Colors"/> </remarks>
         /// <param name="index">NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ThemeColor Colors(NetOffice.OfficeApi.Enums.MsoThemeColorSchemeIndex index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.ThemeColor>(this, "Colors", NetOffice.OfficeApi.ThemeColor.LateBindingApiWrapperType, index);
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme.Load"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Load(string fileName)
         {
             Factory.ExecuteMethod(this, "Load", fileName);
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme.Save"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Save(string fileName)
         {
             Factory.ExecuteMethod(this, "Save", fileName);
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ThemeColorScheme.GetCustomColor"/> </remarks>
         /// <param name="name">string name</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 GetCustomColor(string name)
         {
             return Factory.ExecuteInt32MethodGet(this, "GetCustomColor", name);
@@ -224,7 +224,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
@@ -232,6 +232,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

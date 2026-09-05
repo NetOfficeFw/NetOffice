@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class View : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public View(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public View(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public View(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public View(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public View() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public View(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Type"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpViewType Type
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Zoom"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Zoom
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Slide"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Slide
         {
             get
@@ -193,7 +193,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.DisplaySlideMiniature"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState DisplaySlideMiniature
         {
             get
@@ -211,7 +211,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.ZoomToFit"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState ZoomToFit
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.PrintOptions"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.PrintOptions PrintOptions
         {
             get
@@ -243,7 +243,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.MediaControlsVisible"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState MediaControlsVisible
         {
             get
@@ -257,7 +257,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.MediaControlsLeft"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single MediaControlsLeft
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.MediaControlsTop"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single MediaControlsTop
         {
             get
@@ -285,7 +285,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.MediaControlsWidth"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single MediaControlsWidth
         {
             get
@@ -299,7 +299,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.MediaControlsHeight"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public Single MediaControlsHeight
         {
             get
@@ -316,7 +316,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Paste"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Paste()
         {
             Factory.ExecuteMethod(this, "Paste");
@@ -327,7 +327,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.GotoSlide"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void GotoSlide(Int32 index)
         {
             Factory.ExecuteMethod(this, "GotoSlide", index);
@@ -343,10 +343,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="iconIndex">optional Int32 IconIndex = 0</param>
         /// <param name="iconLabel">optional string IconLabel = </param>
         /// <param name="link">optional NetOffice.OfficeApi.Enums.MsoTriState Link = 0</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel, object link)
         {
-            Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link });
+            Factory.ExecuteMethod(this, "PasteSpecial", new object[] { dataType, displayAsIcon, iconFileName, iconIndex, iconLabel, link });
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.PasteSpecial"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial()
         {
             Factory.ExecuteMethod(this, "PasteSpecial");
@@ -366,7 +366,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.PasteSpecial"/> </remarks>
         /// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object dataType)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", dataType);
@@ -379,7 +379,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="dataType">optional NetOffice.PowerPointApi.Enums.PpPasteDataType DataType = 0</param>
         /// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object dataType, object displayAsIcon)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", dataType, displayAsIcon);
@@ -393,7 +393,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="displayAsIcon">optional NetOffice.OfficeApi.Enums.MsoTriState DisplayAsIcon = 0</param>
         /// <param name="iconFileName">optional string IconFileName = </param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", dataType, displayAsIcon, iconFileName);
@@ -408,7 +408,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="iconFileName">optional string IconFileName = </param>
         /// <param name="iconIndex">optional Int32 IconIndex = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex)
         {
             Factory.ExecuteMethod(this, "PasteSpecial", dataType, displayAsIcon, iconFileName, iconIndex);
@@ -424,10 +424,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="iconIndex">optional Int32 IconIndex = 0</param>
         /// <param name="iconLabel">optional string IconLabel = </param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PasteSpecial(object dataType, object displayAsIcon, object iconFileName, object iconIndex, object iconLabel)
         {
-            Factory.ExecuteMethod(this, "PasteSpecial", new object[]{ dataType, displayAsIcon, iconFileName, iconIndex, iconLabel });
+            Factory.ExecuteMethod(this, "PasteSpecial", new object[] { dataType, displayAsIcon, iconFileName, iconIndex, iconLabel });
         }
 
         /// <summary>
@@ -439,10 +439,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="printToFile">optional string PrintToFile = </param>
         /// <param name="copies">optional Int32 Copies = 0</param>
         /// <param name="collate">optional NetOffice.OfficeApi.Enums.MsoTriState Collate = -99</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object from, object to, object printToFile, object copies, object collate)
         {
-            Factory.ExecuteMethod(this, "PrintOut", new object[]{ from, to, printToFile, copies, collate });
+            Factory.ExecuteMethod(this, "PrintOut", new object[] { from, to, printToFile, copies, collate });
         }
 
         /// <summary>
@@ -450,7 +450,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.PrintOut"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PrintOut()
         {
             Factory.ExecuteMethod(this, "PrintOut");
@@ -462,7 +462,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.PrintOut"/> </remarks>
         /// <param name="from">optional Int32 From = -1</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object from)
         {
             Factory.ExecuteMethod(this, "PrintOut", from);
@@ -475,7 +475,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="from">optional Int32 From = -1</param>
         /// <param name="to">optional Int32 To = -1</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object from, object to)
         {
             Factory.ExecuteMethod(this, "PrintOut", from, to);
@@ -489,7 +489,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="to">optional Int32 To = -1</param>
         /// <param name="printToFile">optional string PrintToFile = </param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object from, object to, object printToFile)
         {
             Factory.ExecuteMethod(this, "PrintOut", from, to, printToFile);
@@ -504,7 +504,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="printToFile">optional string PrintToFile = </param>
         /// <param name="copies">optional Int32 Copies = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void PrintOut(object from, object to, object printToFile, object copies)
         {
             Factory.ExecuteMethod(this, "PrintOut", from, to, printToFile, copies);
@@ -515,7 +515,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.View.Player"/> </remarks>
         /// <param name="shapeId">object shapeId</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Player Player(object shapeId)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Player>(this, "Player", NetOffice.PowerPointApi.Player.LateBindingApiWrapperType, shapeId);
@@ -523,6 +523,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

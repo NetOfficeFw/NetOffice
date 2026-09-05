@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface Balloon 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Balloon : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Balloon(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public Balloon(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OfficeApi
         public Balloon(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Balloon(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Balloon() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Balloon(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Checkboxes
         {
             get
@@ -140,7 +140,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Labels
         {
             get
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBalloonType BalloonType
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoIconType Icon
         {
             get
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Heading
         {
             get
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -221,7 +221,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoModeType Mode
         {
             get
@@ -238,7 +238,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoAnimationType Animation
         {
             get
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoButtonSetType Button
         {
             get
@@ -272,7 +272,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Callback
         {
             get
@@ -289,7 +289,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Private
         {
             get
@@ -306,7 +306,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -326,7 +326,7 @@ namespace NetOffice.OfficeApi
         /// <param name="top">Int32 top</param>
         /// <param name="right">Int32 right</param>
         /// <param name="bottom">Int32 bottom</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void SetAvoidRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
         {
             Factory.ExecuteMethod(this, "SetAvoidRectangle", left, top, right, bottom);
@@ -335,7 +335,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBalloonButtonType Show()
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.OfficeApi.Enums.MsoBalloonButtonType>(this, "Show");
@@ -344,7 +344,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -352,6 +352,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -7,8 +7,8 @@ namespace NetOffice.DAOApi
 {
     #region Delegates
 
-    #pragma warning disable
-    #pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
     #endregion
 
@@ -16,14 +16,14 @@ namespace NetOffice.DAOApi
     /// CoClass DBEngine 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsCoClass)]
     public class DBEngine : _DBEngine
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
@@ -44,7 +44,7 @@ namespace NetOffice.DAOApi
             }
         }
 
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -58,9 +58,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -68,14 +68,14 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DBEngine(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DBEngine(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -85,7 +85,7 @@ namespace NetOffice.DAOApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DBEngine(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -94,31 +94,31 @@ namespace NetOffice.DAOApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DBEngine(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DBEngine(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of DBEngine 
         /// </summary>		
-        public DBEngine():base("DAO.DBEngine")
+        public DBEngine() : base("DAO.DBEngine")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of DBEngine
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public DBEngine(string progId):base(progId)
+        public DBEngine(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -129,9 +129,9 @@ namespace NetOffice.DAOApi
         #region Events
 
         #endregion
-       
 
-        #pragma warning restore
+
+#pragma warning restore
     }
 }
 

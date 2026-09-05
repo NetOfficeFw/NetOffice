@@ -6,27 +6,27 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0006307A-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface OutlookBarPaneEvents
     {
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("shortcut", typeof(OutlookApi.OutlookBarShortcut))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
-        void BeforeNavigate([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel);
+        void BeforeNavigate([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In][Out] ref object cancel);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("toGroup", typeof(OutlookApi.OutlookBarGroup))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
-        void BeforeGroupSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object toGroup, [In] [Out] ref object cancel);
+        void BeforeGroupSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object toGroup, [In][Out] ref object cancel);
     }
 
     #endregion
@@ -38,23 +38,23 @@ namespace NetOffice.OutlookApi.Events
     public class OutlookBarPaneEvents_SinkHelper : SinkHelper, OutlookBarPaneEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0006307A-0000-0000-C000-000000000046";
-        
+
         #endregion
-    
+
         #region Construction
 
-        public OutlookBarPaneEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public OutlookBarPaneEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region OutlookBarPaneEvents
-        
-        public void BeforeNavigate([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel)
+
+        public void BeforeNavigate([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeNavigate"))
             {
@@ -71,7 +71,7 @@ namespace NetOffice.OutlookApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void BeforeGroupSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object toGroup, [In] [Out] ref object cancel)
+        public void BeforeGroupSwitch([In, MarshalAs(UnmanagedType.IDispatch)] object toGroup, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeGroupSwitch"))
             {
@@ -90,8 +90,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

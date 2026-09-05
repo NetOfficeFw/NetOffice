@@ -7,7 +7,7 @@ namespace NetOffice.AccessApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void WebBrowserControl_UpdatedEventHandler(ref Int16 code);
     public delegate void WebBrowserControl_BeforeUpdateEventHandler(ref Int16 cancel);
     public delegate void WebBrowserControl_AfterUpdateEventHandler();
@@ -29,7 +29,7 @@ namespace NetOffice.AccessApi
     public delegate void WebBrowserControl_DocumentCompleteEventHandler(ICOMObject pDisp, ref object url);
     public delegate void WebBrowserControl_ProgressChangeEventHandler(Int32 progress, Int32 progressMax);
     public delegate void WebBrowserControl_NavigateErrorEventHandler(ICOMObject pDisp, ref object url, ref object targetFrameName, ref object satusCode, ref bool cancel);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -38,21 +38,21 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl"/> </remarks>
-    [SupportByVersion("Access", 14,15,16)]
+    [SupportByVersion("Access", 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.DispWebBrowserControlEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.DispWebBrowserControlEvents))]
     public class WebBrowserControl : _WebBrowserControl, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.DispWebBrowserControlEvents_SinkHelper _dispWebBrowserControlEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -82,9 +82,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -92,14 +92,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public WebBrowserControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public WebBrowserControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -109,7 +109,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public WebBrowserControl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -118,31 +118,31 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public WebBrowserControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public WebBrowserControl(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of WebBrowserControl 
         /// </summary>		
-        public WebBrowserControl():base("Access.WebBrowserControl")
+        public WebBrowserControl() : base("Access.WebBrowserControl")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of WebBrowserControl
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public WebBrowserControl(string progId):base(progId)
+        public WebBrowserControl(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -161,7 +161,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Updated"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_UpdatedEventHandler UpdatedEvent
         {
             add
@@ -184,7 +184,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BeforeUpdate"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_BeforeUpdateEventHandler BeforeUpdateEvent
         {
             add
@@ -207,7 +207,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.AfterUpdate"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_AfterUpdateEventHandler AfterUpdateEvent
         {
             add
@@ -230,7 +230,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Enter"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_EnterEventHandler EnterEvent
         {
             add
@@ -253,7 +253,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Exit"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_ExitEventHandler ExitEvent
         {
             add
@@ -276,7 +276,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Dirty"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_DirtyEventHandler DirtyEvent
         {
             add
@@ -299,7 +299,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Change"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_ChangeEventHandler ChangeEvent
         {
             add
@@ -322,7 +322,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GotFocus"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_GotFocusEventHandler GotFocusEvent
         {
             add
@@ -345,7 +345,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.LostFocus"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_LostFocusEventHandler LostFocusEvent
         {
             add
@@ -368,7 +368,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Click"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_ClickEventHandler ClickEvent
         {
             add
@@ -391,7 +391,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.DblClick"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_DblClickEventHandler DblClickEvent
         {
             add
@@ -414,7 +414,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.MouseDown"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -437,7 +437,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.MouseMove"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -460,7 +460,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.MouseUp"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -483,7 +483,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.KeyDown"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_KeyDownEventHandler KeyDownEvent
         {
             add
@@ -506,7 +506,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.KeyPress"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_KeyPressEventHandler KeyPressEvent
         {
             add
@@ -529,7 +529,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.KeyUp"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_KeyUpEventHandler KeyUpEvent
         {
             add
@@ -552,7 +552,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BeforeNavigate2"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_BeforeNavigate2EventHandler BeforeNavigate2Event
         {
             add
@@ -575,7 +575,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.DocumentComplete"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_DocumentCompleteEventHandler DocumentCompleteEvent
         {
             add
@@ -598,7 +598,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ProgressChange"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_ProgressChangeEventHandler ProgressChangeEvent
         {
             add
@@ -621,7 +621,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.NavigateError"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public event WebBrowserControl_NavigateErrorEventHandler NavigateErrorEvent
         {
             add
@@ -636,30 +636,30 @@ namespace NetOffice.AccessApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DispWebBrowserControlEvents_SinkHelper.Id);
 
 
-            if(Events.DispWebBrowserControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.DispWebBrowserControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dispWebBrowserControlEvents_SinkHelper = new Events.DispWebBrowserControlEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -668,7 +668,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -678,9 +678,9 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -702,16 +702,16 @@ namespace NetOffice.AccessApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -729,7 +729,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _dispWebBrowserControlEvents_SinkHelper)
+            if (null != _dispWebBrowserControlEvents_SinkHelper)
             {
                 _dispWebBrowserControlEvents_SinkHelper.Dispose();
                 _dispWebBrowserControlEvents_SinkHelper = null;
@@ -737,10 +737,10 @@ namespace NetOffice.AccessApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

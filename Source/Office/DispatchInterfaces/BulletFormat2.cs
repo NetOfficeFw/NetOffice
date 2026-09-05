@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class BulletFormat2 : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public BulletFormat2(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public BulletFormat2(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public BulletFormat2(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public BulletFormat2(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public BulletFormat2() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public BulletFormat2(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Parent"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Character"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Character
         {
             get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Font"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Font2 Font
         {
             get
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Number"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Number
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.RelativeSize"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Single RelativeSize
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.StartValue"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 StartValue
         {
             get
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Style"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoNumberedBulletStyle Style
         {
             get
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Type"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoBulletType Type
         {
             get
@@ -246,7 +246,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.UseTextColor"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState UseTextColor
         {
             get
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.UseTextFont"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState UseTextFont
         {
             get
@@ -282,7 +282,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Visible"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Visible
         {
             get
@@ -304,7 +304,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.BulletFormat2.Picture"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Picture(string fileName)
         {
             Factory.ExecuteMethod(this, "Picture", fileName);
@@ -312,6 +312,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

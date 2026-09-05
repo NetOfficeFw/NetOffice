@@ -27,7 +27,7 @@ namespace NetOffice.ExcelApi.Tools.Attributes
         /// </summary>
         public COMRtdServerAttribute() : this(String.Empty)
         {
-            
+
         }
 
         /// <summary>

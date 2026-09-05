@@ -7,7 +7,7 @@ namespace NetOffice.MSComctlLibApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void TabStrip_ClickEventHandler();
     public delegate void TabStrip_KeyDownEventHandler(ref Int16 keyCode, Int16 shift);
     public delegate void TabStrip_KeyPressEventHandler(ref Int16 keyAscii);
@@ -22,7 +22,7 @@ namespace NetOffice.MSComctlLibApi
     public delegate void TabStrip_OLECompleteDragEventHandler(ref Int32 effect);
     public delegate void TabStrip_OLEDragOverEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y, ref Int16 state);
     public delegate void TabStrip_OLEDragDropEventHandler(ref NetOffice.MSComctlLibApi.DataObject data, ref Int32 effect, ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -36,15 +36,15 @@ namespace NetOffice.MSComctlLibApi
     [ComEventInterface(typeof(Events.ITabStripEvents))]
     public class TabStrip : ITabStrip, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ITabStripEvents_SinkHelper _iTabStripEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -60,7 +60,7 @@ namespace NetOffice.MSComctlLibApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -74,9 +74,9 @@ namespace NetOffice.MSComctlLibApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -84,14 +84,14 @@ namespace NetOffice.MSComctlLibApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TabStrip(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public TabStrip(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -101,7 +101,7 @@ namespace NetOffice.MSComctlLibApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TabStrip(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -110,31 +110,31 @@ namespace NetOffice.MSComctlLibApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TabStrip(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public TabStrip(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of TabStrip 
         /// </summary>		
-        public TabStrip():base("MSComctlLib.TabStrip")
+        public TabStrip() : base("MSComctlLib.TabStrip")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of TabStrip
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public TabStrip(string progId):base(progId)
+        public TabStrip(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -453,30 +453,30 @@ namespace NetOffice.MSComctlLibApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ITabStripEvents_SinkHelper.Id);
 
 
-            if(Events.ITabStripEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ITabStripEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _iTabStripEvents_SinkHelper = new Events.ITabStripEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -485,7 +485,7 @@ namespace NetOffice.MSComctlLibApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -495,9 +495,9 @@ namespace NetOffice.MSComctlLibApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -519,16 +519,16 @@ namespace NetOffice.MSComctlLibApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -546,7 +546,7 @@ namespace NetOffice.MSComctlLibApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _iTabStripEvents_SinkHelper)
+            if (null != _iTabStripEvents_SinkHelper)
             {
                 _iTabStripEvents_SinkHelper.Dispose();
                 _iTabStripEvents_SinkHelper = null;
@@ -554,10 +554,10 @@ namespace NetOffice.MSComctlLibApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

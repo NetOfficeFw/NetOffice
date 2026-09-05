@@ -6,27 +6,27 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("00063076-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface FoldersEvents
     {
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("folder", typeof(NetOffice.OutlookApi.MAPIFolder))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
         void FolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("folder", typeof(NetOffice.OutlookApi.MAPIFolder))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
         void FolderChange([In, MarshalAs(UnmanagedType.IDispatch)] object folder);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
         void FolderRemove();
     }
@@ -40,22 +40,22 @@ namespace NetOffice.OutlookApi.Events
     public class FoldersEvents_SinkHelper : SinkHelper, FoldersEvents
     {
         #region Static
-        
+
         public static readonly string Id = "00063076-0000-0000-C000-000000000046";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public FoldersEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public FoldersEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-        
+
         #region FoldersEvents
-        
+
         public void FolderAdd([In, MarshalAs(UnmanagedType.IDispatch)] object folder)
         {
             if (!Validate("FolderAdd"))
@@ -97,8 +97,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

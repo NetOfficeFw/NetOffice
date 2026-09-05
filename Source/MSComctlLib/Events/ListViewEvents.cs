@@ -6,9 +6,9 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
     [SupportByVersion("MSComctlLib", 6)]
@@ -19,16 +19,16 @@ namespace NetOffice.MSComctlLibApi.Events
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
-        void BeforeLabelEdit([In] [Out] ref object cancel);
+        void BeforeLabelEdit([In][Out] ref object cancel);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [SinkArgument("newString", SinkArgumentType.String)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
-        void AfterLabelEdit([In] [Out] ref object cancel, [In] [Out] ref object newString);
+        void AfterLabelEdit([In][Out] ref object cancel, [In][Out] ref object newString);
 
         [SupportByVersion("MSComctlLib", 6)]
-        [SinkArgument("columnHeader", typeof(MSComctlLibApi.ColumnHeader))]        
+        [SinkArgument("columnHeader", typeof(MSComctlLibApi.ColumnHeader))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(3)]
         void ColumnClick([In, MarshalAs(UnmanagedType.IDispatch)] object columnHeader);
 
@@ -41,18 +41,18 @@ namespace NetOffice.MSComctlLibApi.Events
         [SinkArgument("keyCode", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
-        void KeyDown([In] [Out] ref object keyCode, [In] object shift);
+        void KeyDown([In][Out] ref object keyCode, [In] object shift);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("keyCode", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
-        void KeyUp([In] [Out] ref object keyCode, [In] object shift);
+        void KeyUp([In][Out] ref object keyCode, [In] object shift);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("keyAscii", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
-        void KeyPress([In] [Out] ref object keyAscii);
+        void KeyPress([In][Out] ref object keyAscii);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("button", SinkArgumentType.Int32)]
@@ -90,24 +90,24 @@ namespace NetOffice.MSComctlLibApi.Events
         [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
         [SinkArgument("allowedEffects", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1550)]
-        void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects);
+        void OLEStartDrag([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object allowedEffects);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("effect", SinkArgumentType.Int32)]
         [SinkArgument("defaultCursors", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1551)]
-        void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors);
+        void OLEGiveFeedback([In][Out] ref object effect, [In][Out] ref object defaultCursors);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
         [SinkArgument("dataFormat", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1552)]
-        void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat);
+        void OLESetData([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object dataFormat);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("effect", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1553)]
-        void OLECompleteDrag([In] [Out] ref object effect);
+        void OLECompleteDrag([In][Out] ref object effect);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
@@ -118,7 +118,7 @@ namespace NetOffice.MSComctlLibApi.Events
         [SinkArgument("y", SinkArgumentType.Single)]
         [SinkArgument("state", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1554)]
-        void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state);
+        void OLEDragOver([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object effect, [In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y, [In][Out] ref object state);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("data", typeof(MSComctlLibApi.DataObject))]
@@ -128,7 +128,7 @@ namespace NetOffice.MSComctlLibApi.Events
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1555)]
-        void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void OLEDragDrop([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object effect, [In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y);
 
         [SupportByVersion("MSComctlLib", 6)]
         [SinkArgument("columnHeader", typeof(MSComctlLibApi.ListItem))]
@@ -145,23 +145,23 @@ namespace NetOffice.MSComctlLibApi.Events
     public class ListViewEvents_SinkHelper : SinkHelper, ListViewEvents
     {
         #region Static
-        
+
         public static readonly string Id = "BDD1F04A-858B-11D1-B16A-00C0F0283628";
-        
+
         #endregion
 
         #region Ctor
 
-        public ListViewEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public ListViewEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
-        #endregion		
+
+        #endregion
 
         #region ListViewEvents
-        
-        public void BeforeLabelEdit([In] [Out] ref object cancel)
+
+        public void BeforeLabelEdit([In][Out] ref object cancel)
         {
             if (!Validate("BeforeLabelEdit"))
             {
@@ -176,7 +176,7 @@ namespace NetOffice.MSComctlLibApi.Events
             cancel = ToInt16(paramsArray[0]);
         }
 
-        public void AfterLabelEdit([In] [Out] ref object cancel, [In] [Out] ref object newString)
+        public void AfterLabelEdit([In][Out] ref object cancel, [In][Out] ref object newString)
         {
             if (!Validate("AfterLabelEdit"))
             {
@@ -192,7 +192,7 @@ namespace NetOffice.MSComctlLibApi.Events
             cancel = ToInt16(paramsArray[0]);
             newString = ToString(paramsArray[1]);
         }
-       
+
         public void ColumnClick([In, MarshalAs(UnmanagedType.IDispatch)] object columnHeader)
         {
             if (!Validate("ColumnClick"))
@@ -206,7 +206,7 @@ namespace NetOffice.MSComctlLibApi.Events
             paramsArray[0] = newColumnHeader;
             EventBinding.RaiseCustomEvent("ColumnClick", ref paramsArray);
         }
-        
+
         public void ItemClick([In, MarshalAs(UnmanagedType.IDispatch)] object item)
         {
             if (!Validate("ItemClick"))
@@ -221,7 +221,7 @@ namespace NetOffice.MSComctlLibApi.Events
             EventBinding.RaiseCustomEvent("ItemClick", ref paramsArray);
         }
 
-        public void KeyDown([In] [Out] ref object keyCode, [In] object shift)
+        public void KeyDown([In][Out] ref object keyCode, [In] object shift)
         {
             if (!Validate("KeyDown"))
             {
@@ -238,7 +238,7 @@ namespace NetOffice.MSComctlLibApi.Events
             keyCode = ToInt16(paramsArray[0]);
         }
 
-        public void KeyUp([In] [Out] ref object keyCode, [In] object shift)
+        public void KeyUp([In][Out] ref object keyCode, [In] object shift)
         {
             if (!Validate("KeyUp"))
             {
@@ -255,7 +255,7 @@ namespace NetOffice.MSComctlLibApi.Events
             keyCode = ToInt16(paramsArray[0]);
         }
 
-        public void KeyPress([In] [Out] ref object keyAscii)
+        public void KeyPress([In][Out] ref object keyAscii)
         {
             if (!Validate("KeyPress"))
             {
@@ -352,7 +352,7 @@ namespace NetOffice.MSComctlLibApi.Events
             EventBinding.RaiseCustomEvent("DblClick", ref paramsArray);
         }
 
-        public void OLEStartDrag([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object allowedEffects)
+        public void OLEStartDrag([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object allowedEffects)
         {
             if (!Validate("OLEStartDrag"))
             {
@@ -374,7 +374,7 @@ namespace NetOffice.MSComctlLibApi.Events
             (newData as ICOMProxyShareProvider).GetProxyShare().Release();
         }
 
-        public void OLEGiveFeedback([In] [Out] ref object effect, [In] [Out] ref object defaultCursors)
+        public void OLEGiveFeedback([In][Out] ref object effect, [In][Out] ref object defaultCursors)
         {
             if (!Validate("OLEGiveFeedback"))
             {
@@ -391,7 +391,7 @@ namespace NetOffice.MSComctlLibApi.Events
             defaultCursors = ToBoolean(paramsArray[1]);
         }
 
-        public void OLESetData([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object dataFormat)
+        public void OLESetData([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object dataFormat)
         {
             if (!Validate("OLEGiveFeedback"))
             {
@@ -413,7 +413,7 @@ namespace NetOffice.MSComctlLibApi.Events
             (newData as ICOMProxyShareProvider).GetProxyShare().Release();
         }
 
-        public void OLECompleteDrag([In] [Out] ref object effect)
+        public void OLECompleteDrag([In][Out] ref object effect)
         {
             if (!Validate("OLECompleteDrag"))
             {
@@ -428,7 +428,7 @@ namespace NetOffice.MSComctlLibApi.Events
             effect = ToInt32(paramsArray[0]);
         }
 
-        public void OLEDragOver([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y, [In] [Out] ref object state)
+        public void OLEDragOver([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object effect, [In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y, [In][Out] ref object state)
         {
             if (!Validate("OLEDragOver"))
             {
@@ -460,7 +460,7 @@ namespace NetOffice.MSComctlLibApi.Events
             (newData as ICOMProxyShareProvider).GetProxyShare().Release();
         }
 
-        public void OLEDragDrop([In] [Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In] [Out] ref object effect, [In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        public void OLEDragDrop([In][Out, MarshalAs(UnmanagedType.IDispatch)] object data, [In][Out] ref object effect, [In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y)
         {
             if (!Validate("OLEDragDrop"))
             {
@@ -506,8 +506,8 @@ namespace NetOffice.MSComctlLibApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

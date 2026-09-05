@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface _CommandBarComboBox 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _CommandBarComboBox : CommandBarControl
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _CommandBarComboBox(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public _CommandBarComboBox(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public _CommandBarComboBox(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CommandBarComboBox(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CommandBarComboBox() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CommandBarComboBox(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.DropDownLines"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 DropDownLines
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.DropDownWidth"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 DropDownWidth
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.List"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string get_List(Int32 index)
         {
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_List(Int32 index, string value)
         {
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.List"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), Redirect("get_List")]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_List")]
         public string List(Int32 index)
         {
             return get_List(index);
@@ -186,7 +186,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.ListCount"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ListCount
         {
             get
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.ListHeaderCount"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ListHeaderCount
         {
             get
@@ -218,7 +218,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.ListIndex"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ListIndex
         {
             get
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Style"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoComboStyle Style
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Text"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object InstanceIdPtr
         {
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi
         /// <param name="flagsSelect">Int32 flagsSelect</param>
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void accSelect(Int32 flagsSelect, object varChild)
         {
             Factory.ExecuteMethod(this, "accSelect", flagsSelect, varChild);
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi
         /// <param name="flagsSelect">Int32 flagsSelect</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void accSelect(Int32 flagsSelect)
         {
             Factory.ExecuteMethod(this, "accSelect", flagsSelect);
@@ -318,10 +318,10 @@ namespace NetOffice.OfficeApi
         /// <param name="pcyHeight">Int32 pcyHeight</param>
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight, object varChild)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true, false);
             pxLeft = 0;
             pyTop = 0;
             pcxWidth = 0;
@@ -343,10 +343,10 @@ namespace NetOffice.OfficeApi
         /// <param name="pcyHeight">Int32 pcyHeight</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void accLocation(out Int32 pxLeft, out Int32 pyTop, out Int32 pcxWidth, out Int32 pcyHeight)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true);
             pxLeft = 0;
             pyTop = 0;
             pcxWidth = 0;
@@ -365,7 +365,7 @@ namespace NetOffice.OfficeApi
         /// <param name="navDir">Int32 navDir</param>
         /// <param name="varStart">optional object varStart</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object accNavigate(Int32 navDir, object varStart)
         {
             return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir, varStart);
@@ -377,7 +377,7 @@ namespace NetOffice.OfficeApi
         /// <param name="navDir">Int32 navDir</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object accNavigate(Int32 navDir)
         {
             return Factory.ExecuteVariantMethodGet(this, "accNavigate", navDir);
@@ -389,7 +389,7 @@ namespace NetOffice.OfficeApi
         /// <param name="xLeft">Int32 xLeft</param>
         /// <param name="yTop">Int32 yTop</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object accHitTest(Int32 xLeft, Int32 yTop)
         {
             return Factory.ExecuteVariantMethodGet(this, "accHitTest", xLeft, yTop);
@@ -400,7 +400,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="varChild">optional object varChild</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void accDoDefaultAction(object varChild)
         {
             Factory.ExecuteMethod(this, "accDoDefaultAction", varChild);
@@ -411,7 +411,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void accDoDefaultAction()
         {
             Factory.ExecuteMethod(this, "accDoDefaultAction");
@@ -423,7 +423,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.AddItem"/> </remarks>
         /// <param name="text">string text</param>
         /// <param name="index">optional object index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void AddItem(string text, object index)
         {
             Factory.ExecuteMethod(this, "AddItem", text, index);
@@ -435,7 +435,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.AddItem"/> </remarks>
         /// <param name="text">string text</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void AddItem(string text)
         {
             Factory.ExecuteMethod(this, "AddItem", text);
@@ -445,7 +445,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.Clear"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Clear()
         {
             Factory.ExecuteMethod(this, "Clear");
@@ -456,7 +456,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBarComboBox.RemoveItem"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void RemoveItem(Int32 index)
         {
             Factory.ExecuteMethod(this, "RemoveItem", index);
@@ -464,6 +464,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

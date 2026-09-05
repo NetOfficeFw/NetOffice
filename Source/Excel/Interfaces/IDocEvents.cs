@@ -9,11 +9,11 @@ namespace NetOffice.ExcelApi
     /// Interface IDocEvents 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IDocEvents : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IDocEvents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ExcelApi
         public IDocEvents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ExcelApi
         public IDocEvents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDocEvents(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDocEvents() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDocEvents(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -115,7 +115,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.Range target</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SelectionChange(NetOffice.ExcelApi.Range target)
         {
             return Factory.ExecuteInt32MethodGet(this, "SelectionChange", target);
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.Range target</param>
         /// <param name="cancel">bool cancel</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 BeforeDoubleClick(NetOffice.ExcelApi.Range target, bool cancel)
         {
             return Factory.ExecuteInt32MethodGet(this, "BeforeDoubleClick", target, cancel);
@@ -137,7 +137,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.Range target</param>
         /// <param name="cancel">bool cancel</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 BeforeRightClick(NetOffice.ExcelApi.Range target, bool cancel)
         {
             return Factory.ExecuteInt32MethodGet(this, "BeforeRightClick", target, cancel);
@@ -146,7 +146,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Activate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Activate");
@@ -155,7 +155,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Deactivate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Deactivate");
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Calculate()
         {
             return Factory.ExecuteInt32MethodGet(this, "Calculate");
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.Range target</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Change(NetOffice.ExcelApi.Range target)
         {
             return Factory.ExecuteInt32MethodGet(this, "Change", target);
@@ -184,7 +184,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.Hyperlink target</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 FollowHyperlink(NetOffice.ExcelApi.Hyperlink target)
         {
             return Factory.ExecuteInt32MethodGet(this, "FollowHyperlink", target);
@@ -194,7 +194,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.PivotTable target</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public Int32 PivotTableUpdate(NetOffice.ExcelApi.PivotTable target)
         {
             return Factory.ExecuteInt32MethodGet(this, "PivotTableUpdate", target);
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable targetPivotTable</param>
         /// <param name="targetRange">NetOffice.ExcelApi.Range targetRange</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 PivotTableAfterValueChange(NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange)
         {
             return Factory.ExecuteInt32MethodGet(this, "PivotTableAfterValueChange", targetPivotTable, targetRange);
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi
         /// <param name="valueChangeStart">Int32 valueChangeStart</param>
         /// <param name="valueChangeEnd">Int32 valueChangeEnd</param>
         /// <param name="cancel">bool cancel</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 PivotTableBeforeAllocateChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
         {
             return Factory.ExecuteInt32MethodGet(this, "PivotTableBeforeAllocateChanges", targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -231,7 +231,7 @@ namespace NetOffice.ExcelApi
         /// <param name="valueChangeStart">Int32 valueChangeStart</param>
         /// <param name="valueChangeEnd">Int32 valueChangeEnd</param>
         /// <param name="cancel">bool cancel</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 PivotTableBeforeCommitChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, bool cancel)
         {
             return Factory.ExecuteInt32MethodGet(this, "PivotTableBeforeCommitChanges", targetPivotTable, valueChangeStart, valueChangeEnd, cancel);
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
         /// <param name="targetPivotTable">NetOffice.ExcelApi.PivotTable targetPivotTable</param>
         /// <param name="valueChangeStart">Int32 valueChangeStart</param>
         /// <param name="valueChangeEnd">Int32 valueChangeEnd</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 PivotTableBeforeDiscardChanges(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd)
         {
             return Factory.ExecuteInt32MethodGet(this, "PivotTableBeforeDiscardChanges", targetPivotTable, valueChangeStart, valueChangeEnd);
@@ -253,7 +253,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         /// <param name="target">NetOffice.ExcelApi.PivotTable target</param>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         public Int32 PivotTableChangeSync(NetOffice.ExcelApi.PivotTable target)
         {
             return Factory.ExecuteInt32MethodGet(this, "PivotTableChangeSync", target);
@@ -289,6 +289,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

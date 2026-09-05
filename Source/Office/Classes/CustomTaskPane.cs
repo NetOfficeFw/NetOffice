@@ -7,10 +7,10 @@ namespace NetOffice.OfficeApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void CustomTaskPane_VisibleStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
     public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -19,21 +19,21 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._CustomTaskPaneEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._CustomTaskPaneEvents))]
     public class CustomTaskPane : _CustomTaskPane, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events._CustomTaskPaneEvents_SinkHelper __CustomTaskPaneEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -63,9 +63,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -73,14 +73,14 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public CustomTaskPane(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public CustomTaskPane(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -90,7 +90,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CustomTaskPane(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -99,31 +99,31 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CustomTaskPane(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CustomTaskPane(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of CustomTaskPane 
         /// </summary>		
-        public CustomTaskPane():base("Office.CustomTaskPane")
+        public CustomTaskPane() : base("Office.CustomTaskPane")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of CustomTaskPane
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public CustomTaskPane(string progId):base(progId)
+        public CustomTaskPane(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane.VisibleStateChange"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChangeEvent
         {
             add
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane.DockPositionStateChange"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChangeEvent
         {
             add
@@ -180,30 +180,30 @@ namespace NetOffice.OfficeApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomTaskPaneEvents_SinkHelper.Id);
 
 
-            if(Events._CustomTaskPaneEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events._CustomTaskPaneEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 __CustomTaskPaneEvents_SinkHelper = new Events._CustomTaskPaneEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -222,9 +222,9 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -246,16 +246,16 @@ namespace NetOffice.OfficeApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -273,7 +273,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != __CustomTaskPaneEvents_SinkHelper)
+            if (null != __CustomTaskPaneEvents_SinkHelper)
             {
                 __CustomTaskPaneEvents_SinkHelper.Dispose();
                 __CustomTaskPaneEvents_SinkHelper = null;
@@ -281,10 +281,10 @@ namespace NetOffice.OfficeApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

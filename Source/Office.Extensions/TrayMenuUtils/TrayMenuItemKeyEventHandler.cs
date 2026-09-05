@@ -25,7 +25,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// <param name="shift">indicating whether the SHIFT key was pressed</param>
         /// <param name="suppressKeyPress">indicating whether the key event should be passed on to the underlying control</param>
         [TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]
-        public TrayMenuItemKeyEventArgs(TrayMenuItem item, ToolsKeys keyData, bool alt, bool control, bool handled, ToolsKeys keyCode, int keyValue, ToolsKeys modifiers, bool shift, bool suppressKeyPress )
+        public TrayMenuItemKeyEventArgs(TrayMenuItem item, ToolsKeys keyData, bool alt, bool control, bool handled, ToolsKeys keyCode, int keyValue, ToolsKeys modifiers, bool shift, bool suppressKeyPress)
         {
             Item = item;
             Alt = alt;
@@ -95,5 +95,5 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
     /// </summary>
     /// <param name="sender">sender instance</param>
     /// <param name="args">key arguments</param>
-    public delegate void TrayMenuItemKeyEventHandler(object sender, TrayMenuItemKeyEventArgs args);    
+    public delegate void TrayMenuItemKeyEventHandler(object sender, TrayMenuItemKeyEventArgs args);
 }

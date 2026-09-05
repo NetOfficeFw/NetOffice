@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries"/> </remarks>
-    [SupportByVersion("Word", 12,14,15,16)]
+    [SupportByVersion("Word", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class ContentControlListEntries : COMObject, IEnumerableProvider<NetOffice.WordApi.ContentControlListEntry>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ContentControlListEntries(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public ContentControlListEntries(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public ContentControlListEntries(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ContentControlListEntries(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ContentControlListEntries() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ContentControlListEntries(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries.Application"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries.Creator"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries.Parent"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries.Count"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries.Clear"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public void Clear()
         {
             Factory.ExecuteMethod(this, "Clear");
@@ -186,7 +186,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.ContentControlListEntry this[Int32 index]
         {
@@ -203,7 +203,7 @@ namespace NetOffice.WordApi
         /// <param name="text">string text</param>
         /// <param name="value">optional string Value = </param>
         /// <param name="index">optional Int32 Index = 0</param>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.ContentControlListEntry Add(string text, object value, object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.ContentControlListEntry>(this, "Add", NetOffice.WordApi.ContentControlListEntry.LateBindingApiWrapperType, text, value, index);
@@ -215,7 +215,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ContentControlListEntries.Add"/> </remarks>
         /// <param name="text">string text</param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.ContentControlListEntry Add(string text)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.ContentControlListEntry>(this, "Add", NetOffice.WordApi.ContentControlListEntry.LateBindingApiWrapperType, text);
@@ -228,7 +228,7 @@ namespace NetOffice.WordApi
         /// <param name="text">string text</param>
         /// <param name="value">optional string Value = </param>
         [CustomMethod]
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public NetOffice.WordApi.ContentControlListEntry Add(string text, object value)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.ContentControlListEntry>(this, "Add", NetOffice.WordApi.ContentControlListEntry.LateBindingApiWrapperType, text, value);
@@ -270,7 +270,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -278,6 +278,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

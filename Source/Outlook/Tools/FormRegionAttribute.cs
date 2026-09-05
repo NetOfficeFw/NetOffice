@@ -187,7 +187,7 @@ namespace NetOffice.OutlookApi.Tools
             else
                 applicationKey = Registry.CurrentUser.OpenSubKey(targetKey, true);
 
-            applicationKey.SetValue(name , "=" + progId, RegistryValueKind.String);
+            applicationKey.SetValue(name, "=" + progId, RegistryValueKind.String);
             applicationKey.Close();
         }
 

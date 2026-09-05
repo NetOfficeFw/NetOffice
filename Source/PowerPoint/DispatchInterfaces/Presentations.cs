@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Presentations : Collection
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Presentations(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public Presentations(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public Presentations(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Presentations(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Presentations() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Presentations(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.PowerPointApi.Presentation this[object index]
         {
@@ -160,7 +160,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.Add"/> </remarks>
         /// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Add(object withWindow)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Add", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, withWindow);
@@ -171,7 +171,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.Add"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Add", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType);
@@ -185,7 +185,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         /// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open(string fileName, object readOnly, object untitled, object withWindow)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly, untitled, withWindow);
@@ -197,7 +197,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.Open"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName);
@@ -210,7 +210,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="fileName">string fileName</param>
         /// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open(string fileName, object readOnly)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly);
@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open(string fileName, object readOnly, object untitled)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly, untitled);
@@ -238,7 +238,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         /// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, object readOnly, object untitled, object withWindow)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "OpenOld", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly, untitled, withWindow);
@@ -250,7 +250,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="fileName">string fileName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation OpenOld(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "OpenOld", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName);
@@ -263,7 +263,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, object readOnly)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "OpenOld", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly);
@@ -277,7 +277,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation OpenOld(string fileName, object readOnly, object untitled)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "OpenOld", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly, untitled);
@@ -288,7 +288,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.CheckOut"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public void CheckOut(string fileName)
         {
             Factory.ExecuteMethod(this, "CheckOut", fileName);
@@ -299,7 +299,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.CanCheckOut"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public bool CanCheckOut(string fileName)
         {
             return Factory.ExecuteBoolMethodGet(this, "CanCheckOut", fileName);
@@ -314,10 +314,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         /// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
         /// <param name="openAndRepair">optional NetOffice.OfficeApi.Enums.MsoTriState OpenAndRepair = 0</param>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly, object untitled, object withWindow, object openAndRepair)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open2007", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, new object[]{ fileName, readOnly, untitled, withWindow, openAndRepair });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open2007", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, new object[] { fileName, readOnly, untitled, withWindow, openAndRepair });
         }
 
         /// <summary>
@@ -326,7 +326,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Presentations.Open2007"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open2007(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open2007", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName);
@@ -339,7 +339,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="fileName">string fileName</param>
         /// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open2007", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly);
@@ -353,7 +353,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="readOnly">optional NetOffice.OfficeApi.Enums.MsoTriState ReadOnly = 0</param>
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly, object untitled)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open2007", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly, untitled);
@@ -368,7 +368,7 @@ namespace NetOffice.PowerPointApi
         /// <param name="untitled">optional NetOffice.OfficeApi.Enums.MsoTriState Untitled = 0</param>
         /// <param name="withWindow">optional NetOffice.OfficeApi.Enums.MsoTriState WithWindow = -1</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Open2007(string fileName, object readOnly, object untitled, object withWindow)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Presentation>(this, "Open2007", NetOffice.PowerPointApi.Presentation.LateBindingApiWrapperType, fileName, readOnly, untitled, withWindow);
@@ -376,6 +376,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

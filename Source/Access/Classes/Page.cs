@@ -7,13 +7,13 @@ namespace NetOffice.AccessApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void Page_ClickEventHandler();
     public delegate void Page_DblClickEventHandler(ref Int16 cancel);
     public delegate void Page_MouseDownEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
     public delegate void Page_MouseMoveEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
     public delegate void Page_MouseUpEventHandler(ref Int16 button, ref Int16 shift, ref Single x, ref Single y);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -22,22 +22,22 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Page"/> </remarks>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._PageEvents_SinkHelper), typeof(Events.DispPageEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._PageEvents), typeof(Events.DispPageEvents))]
     public class Page : _Page, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events._PageEvents_SinkHelper __PageEvents_SinkHelper;
         private Events.DispPageEvents_SinkHelper _dispPageEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -53,7 +53,7 @@ namespace NetOffice.AccessApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -67,9 +67,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -77,14 +77,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Page(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Page(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -94,7 +94,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Page(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -103,31 +103,31 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Page(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Page(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Page 
         /// </summary>		
-        public Page():base("Access.Page")
+        public Page() : base("Access.Page")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Page
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Page(string progId):base(progId)
+        public Page(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -146,7 +146,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Page.Click"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event Page_ClickEventHandler ClickEvent
         {
             add
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Page.DblClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event Page_DblClickEventHandler DblClickEvent
         {
             add
@@ -192,7 +192,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Page.MouseDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event Page_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -215,7 +215,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Page.MouseMove"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event Page_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -238,7 +238,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Page.MouseUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event Page_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -253,36 +253,36 @@ namespace NetOffice.AccessApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._PageEvents_SinkHelper.Id, Events.DispPageEvents_SinkHelper.Id);
 
 
-            if(Events._PageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events._PageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 __PageEvents_SinkHelper = new Events._PageEvents_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.DispPageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.DispPageEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dispPageEvents_SinkHelper = new Events.DispPageEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -301,9 +301,9 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -325,16 +325,16 @@ namespace NetOffice.AccessApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -352,12 +352,12 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != __PageEvents_SinkHelper)
+            if (null != __PageEvents_SinkHelper)
             {
                 __PageEvents_SinkHelper.Dispose();
                 __PageEvents_SinkHelper = null;
             }
-            if( null != _dispPageEvents_SinkHelper)
+            if (null != _dispPageEvents_SinkHelper)
             {
                 _dispPageEvents_SinkHelper.Dispose();
                 _dispPageEvents_SinkHelper = null;
@@ -365,10 +365,10 @@ namespace NetOffice.AccessApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

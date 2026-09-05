@@ -9,12 +9,12 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface DiagramNode 
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.ExcelApi.DiagramNode")]
     public class DiagramNode : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DiagramNode(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public DiagramNode(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public DiagramNode(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNode(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNode() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNode(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -126,7 +126,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNodeChildren Children
         {
             get
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Shape Shape
         {
             get
@@ -152,7 +152,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode Root
         {
             get
@@ -165,7 +165,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoDiagram Diagram
         {
             get
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
         {
             get
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Shape TextShape
         {
             get
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType NodeType = 1</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode AddNode(object pos, object nodeType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType, pos, nodeType);
@@ -223,7 +223,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode AddNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType);
@@ -234,7 +234,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode AddNode(object pos)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "AddNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType, pos);
@@ -243,7 +243,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -254,7 +254,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="targetNode">NetOffice.OfficeApi.DiagramNode targetNode</param>
         /// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void MoveNode(NetOffice.OfficeApi.DiagramNode targetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
         {
             Factory.ExecuteMethod(this, "MoveNode", targetNode, pos);
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="targetNode">NetOffice.OfficeApi.DiagramNode targetNode</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void ReplaceNode(NetOffice.OfficeApi.DiagramNode targetNode)
         {
             Factory.ExecuteMethod(this, "ReplaceNode", targetNode);
@@ -275,7 +275,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="targetNode">NetOffice.OfficeApi.DiagramNode targetNode</param>
         /// <param name="swapChildren">optional bool SwapChildren = true</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SwapNode(NetOffice.OfficeApi.DiagramNode targetNode, object swapChildren)
         {
             Factory.ExecuteMethod(this, "SwapNode", targetNode, swapChildren);
@@ -286,7 +286,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="targetNode">NetOffice.OfficeApi.DiagramNode targetNode</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SwapNode(NetOffice.OfficeApi.DiagramNode targetNode)
         {
             Factory.ExecuteMethod(this, "SwapNode", targetNode);
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi
         /// <param name="copyChildren">bool copyChildren</param>
         /// <param name="targetNode">NetOffice.OfficeApi.DiagramNode targetNode</param>
         /// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition Pos = 2</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode CloneNode(bool copyChildren, NetOffice.OfficeApi.DiagramNode targetNode, object pos)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "CloneNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType, copyChildren, targetNode, pos);
@@ -310,7 +310,7 @@ namespace NetOffice.OfficeApi
         /// <param name="copyChildren">bool copyChildren</param>
         /// <param name="targetNode">NetOffice.OfficeApi.DiagramNode targetNode</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode CloneNode(bool copyChildren, NetOffice.OfficeApi.DiagramNode targetNode)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "CloneNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType, copyChildren, targetNode);
@@ -320,7 +320,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="receivingNode">NetOffice.OfficeApi.DiagramNode receivingNode</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void TransferChildren(NetOffice.OfficeApi.DiagramNode receivingNode)
         {
             Factory.ExecuteMethod(this, "TransferChildren", receivingNode);
@@ -329,7 +329,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode NextNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "NextNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType);
@@ -338,7 +338,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.DiagramNode PrevNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.DiagramNode>(this, "PrevNode", NetOffice.OfficeApi.DiagramNode.LateBindingApiWrapperType);
@@ -346,6 +346,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

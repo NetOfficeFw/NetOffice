@@ -93,7 +93,7 @@ namespace NetOffice
         /// <summary>
         /// Performance tracer to see how long its need to call and return all or specific actions
         /// </summary>
-        [Category("Settings"), Description("Trace system to measure performance.")]    
+        [Category("Settings"), Description("Trace system to measure performance.")]
         public PerformanceTrace PerformanceTrace
         {
             get
@@ -115,7 +115,7 @@ namespace NetOffice
             set
             {
                 if (value != _enableProxyManagement)
-                { 
+                {
                     _enableProxyManagement = value;
                     OnPropertyChanged("EnableProxyManagement");
                 }
@@ -142,7 +142,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Analyze also known reference proxies to see proxy is may inherited type, false by default
         /// </summary>
@@ -218,7 +218,7 @@ namespace NetOffice
             set
             {
                 if (value != _exceptionMessageBehavior)
-                { 
+                {
                     _exceptionMessageBehavior = value;
                     OnPropertyChanged("ExceptionMessageBehavior");
                 }
@@ -547,14 +547,14 @@ namespace NetOffice
 
             if (other == this)
                 return true;
-           
+
             // todo: handle that better by reflection
 
             if (PerformanceTrace.Enabled != other.PerformanceTrace.Enabled || EnableProxyManagement != other.EnableProxyManagement ||
                 EnableDynamicObjects != other.EnableDynamicObjects || EnableDynamicEventArguments != other.EnableDynamicEventArguments)
                 return false;
 
-            if ( EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != other.EnableDynamicEventArguments ||
+            if (EnableAutoDisposeEventArguments != other.EnableAutoDisposeEventArguments || EnableDynamicEventArguments != other.EnableDynamicEventArguments ||
                  ExceptionMessageBehavior != other.ExceptionMessageBehavior || ExceptionDefaultMessage != other.ExceptionDefaultMessage)
                 return false;
 

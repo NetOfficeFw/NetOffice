@@ -13,11 +13,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences"/> </remarks>
-    [SupportByVersion("Word", 11,12,14,15,16)]
+    [SupportByVersion("Word", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class XMLSchemaReferences : COMObject, IEnumerableProvider<NetOffice.WordApi.XMLSchemaReference>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public XMLSchemaReferences(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.WordApi
         public XMLSchemaReferences(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.WordApi
         public XMLSchemaReferences(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLSchemaReferences(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLSchemaReferences() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLSchemaReferences(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Count"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Application"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Creator"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Parent"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -172,7 +172,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public bool AutomaticValidation
         {
             get
@@ -189,7 +189,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public bool AllowSaveAsXMLWithoutValidation
         {
             get
@@ -207,7 +207,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.HideValidationErrors"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public bool HideValidationErrors
         {
             get
@@ -225,7 +225,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.IgnoreMixedContent"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public bool IgnoreMixedContent
         {
             get
@@ -243,7 +243,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.ShowPlaceholderText"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public bool ShowPlaceholderText
         {
             get
@@ -264,7 +264,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.WordApi.XMLSchemaReference this[object index]
         {
@@ -278,7 +278,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Validate"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void Validate()
         {
             Factory.ExecuteMethod(this, "Validate");
@@ -292,7 +292,7 @@ namespace NetOffice.WordApi
         /// <param name="alias">optional object alias</param>
         /// <param name="fileName">optional object fileName</param>
         /// <param name="installForAllUsers">optional bool InstallForAllUsers = false</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName, object installForAllUsers)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLSchemaReference>(this, "Add", NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType, namespaceURI, alias, fileName, installForAllUsers);
@@ -303,7 +303,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Add"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLSchemaReference Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLSchemaReference>(this, "Add", NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType);
@@ -315,7 +315,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLSchemaReferences.Add"/> </remarks>
         /// <param name="namespaceURI">optional object namespaceURI</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLSchemaReference>(this, "Add", NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType, namespaceURI);
@@ -328,7 +328,7 @@ namespace NetOffice.WordApi
         /// <param name="namespaceURI">optional object namespaceURI</param>
         /// <param name="alias">optional object alias</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLSchemaReference>(this, "Add", NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType, namespaceURI, alias);
@@ -342,7 +342,7 @@ namespace NetOffice.WordApi
         /// <param name="alias">optional object alias</param>
         /// <param name="fileName">optional object fileName</param>
         [CustomMethod]
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XMLSchemaReference Add(object namespaceURI, object alias, object fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.XMLSchemaReference>(this, "Add", NetOffice.WordApi.XMLSchemaReference.LateBindingApiWrapperType, namespaceURI, alias, fileName);
@@ -384,7 +384,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -392,6 +392,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

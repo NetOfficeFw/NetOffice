@@ -7,8 +7,8 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
-    #pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
     #endregion
 
@@ -17,14 +17,14 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AccountRuleCondition"/> </remarks>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     public class AccountRuleCondition : _AccountRuleCondition
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
@@ -58,9 +58,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -68,14 +68,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public AccountRuleCondition(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public AccountRuleCondition(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -85,7 +85,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AccountRuleCondition(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -94,31 +94,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AccountRuleCondition(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public AccountRuleCondition(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of AccountRuleCondition 
         /// </summary>		
-        public AccountRuleCondition():base("Outlook.AccountRuleCondition")
+        public AccountRuleCondition() : base("Outlook.AccountRuleCondition")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of AccountRuleCondition
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public AccountRuleCondition(string progId):base(progId)
+        public AccountRuleCondition(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -129,9 +129,9 @@ namespace NetOffice.OutlookApi
         #region Events
 
         #endregion
-       
 
-        #pragma warning restore
+
+#pragma warning restore
     }
 }
 

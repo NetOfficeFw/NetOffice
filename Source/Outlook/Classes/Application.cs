@@ -8,7 +8,7 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void Application_ItemSendEventHandler(ICOMObject item, ref bool cancel);
     public delegate void Application_NewMailEventHandler();
     public delegate void Application_ReminderEventHandler(ICOMObject item);
@@ -28,7 +28,7 @@ namespace NetOffice.OutlookApi
     public delegate void Application_ContextMenuCloseEventHandler(NetOffice.OutlookApi.Enums.OlContextMenu contextMenu);
     public delegate void Application_ItemLoadEventHandler(ICOMObject item);
     public delegate void Application_BeforeFolderSharingDialogEventHandler(NetOffice.OutlookApi.MAPIFolder folderToShare, ref bool cancel);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -37,23 +37,23 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application"/> </remarks>
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass), ComProgId("Outlook.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
     [EventSink(typeof(Events.ApplicationEvents_SinkHelper), typeof(Events.ApplicationEvents_10_SinkHelper), typeof(Events.ApplicationEvents_11_SinkHelper))]
     [ComEventInterface(typeof(Events.ApplicationEvents), typeof(Events.ApplicationEvents_10), typeof(Events.ApplicationEvents_11))]
     public class Application : _Application, ICloneable<Application>, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ApplicationEvents_SinkHelper _applicationEvents_SinkHelper;
         private Events.ApplicationEvents_10_SinkHelper _applicationEvents_10_SinkHelper;
         private Events.ApplicationEvents_11_SinkHelper _applicationEvents_11_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -83,9 +83,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -123,7 +123,7 @@ namespace NetOffice.OutlookApi
         {
             _callQuitInDispose = true;
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Application(ICOMObject replacedObject) : base(replacedObject)
@@ -157,7 +157,7 @@ namespace NetOffice.OutlookApi
                 else
                 {
                     CreateFromProgId("Outlook.Application", true);
-                }               
+                }
             }
             else
             {
@@ -173,12 +173,12 @@ namespace NetOffice.OutlookApi
         /// Creates a new instance of Application
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Application(string progId):base(progId)
+        public Application(string progId) : base(progId)
         {
             _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
-        
+
         /// <summary>
         /// NetOffice method: dispose instance and all child instances
         /// </summary>
@@ -186,8 +186,8 @@ namespace NetOffice.OutlookApi
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose(bool disposeEventBinding)
         {
-            if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-                GlobalHelperModules.GlobalModule.Instance = null;	
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
+                GlobalHelperModules.GlobalModule.Instance = null;
             base.Dispose(disposeEventBinding);
         }
 
@@ -197,7 +197,7 @@ namespace NetOffice.OutlookApi
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose()
         {
-            if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
                 GlobalHelperModules.GlobalModule.Instance = null;
             base.Dispose();
         }
@@ -248,7 +248,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.ItemSend"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_ItemSendEventHandler ItemSendEvent
         {
             add
@@ -271,7 +271,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.NewMail"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_NewMailEventHandler NewMailEvent
         {
             add
@@ -294,7 +294,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.Reminder"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_ReminderEventHandler ReminderEvent
         {
             add
@@ -317,7 +317,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.OptionsPagesAdd"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_OptionsPagesAddEventHandler OptionsPagesAddEvent
         {
             add
@@ -340,7 +340,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.Startup"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_StartupEventHandler StartupEvent
         {
             add
@@ -363,7 +363,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.Quit(even)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_QuitEventHandler QuitEvent
         {
             add
@@ -386,7 +386,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.AdvancedSearchComplete"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Application_AdvancedSearchCompleteEventHandler AdvancedSearchCompleteEvent
         {
             add
@@ -409,7 +409,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.AdvancedSearchStopped"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Application_AdvancedSearchStoppedEventHandler AdvancedSearchStoppedEvent
         {
             add
@@ -432,7 +432,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.MAPILogonComplete"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Application_MAPILogonCompleteEventHandler MAPILogonCompleteEvent
         {
             add
@@ -455,7 +455,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.NewMailEx"/> </remarks>
-        [SupportByVersion("Outlook", 11,12,14,15,16)]
+        [SupportByVersion("Outlook", 11, 12, 14, 15, 16)]
         public event Application_NewMailExEventHandler NewMailExEvent
         {
             add
@@ -477,7 +477,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_AttachmentContextMenuDisplayEventHandler AttachmentContextMenuDisplayEvent
         {
             add
@@ -499,7 +499,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_FolderContextMenuDisplayEventHandler FolderContextMenuDisplayEvent
         {
             add
@@ -521,7 +521,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_StoreContextMenuDisplayEventHandler StoreContextMenuDisplayEvent
         {
             add
@@ -543,7 +543,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_ShortcutContextMenuDisplayEventHandler ShortcutContextMenuDisplayEvent
         {
             add
@@ -565,7 +565,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_ViewContextMenuDisplayEventHandler ViewContextMenuDisplayEvent
         {
             add
@@ -587,7 +587,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_ItemContextMenuDisplayEventHandler ItemContextMenuDisplayEvent
         {
             add
@@ -609,7 +609,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_ContextMenuCloseEventHandler ContextMenuCloseEvent
         {
             add
@@ -632,7 +632,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.ItemLoad"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_ItemLoadEventHandler ItemLoadEvent
         {
             add
@@ -655,7 +655,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Application.BeforeFolderSharingDialog"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event Application_BeforeFolderSharingDialogEventHandler BeforeFolderSharingDialogEvent
         {
             add
@@ -670,42 +670,42 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ApplicationEvents_SinkHelper.Id, Events.ApplicationEvents_10_SinkHelper.Id, Events.ApplicationEvents_11_SinkHelper.Id);
 
 
-            if(Events.ApplicationEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ApplicationEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _applicationEvents_SinkHelper = new Events.ApplicationEvents_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.ApplicationEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ApplicationEvents_10_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _applicationEvents_10_SinkHelper = new Events.ApplicationEvents_10_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.ApplicationEvents_11_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ApplicationEvents_11_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _applicationEvents_11_SinkHelper = new Events.ApplicationEvents_11_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -714,7 +714,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -724,9 +724,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -748,16 +748,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -775,17 +775,17 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _applicationEvents_SinkHelper)
+            if (null != _applicationEvents_SinkHelper)
             {
                 _applicationEvents_SinkHelper.Dispose();
                 _applicationEvents_SinkHelper = null;
             }
-            if( null != _applicationEvents_10_SinkHelper)
+            if (null != _applicationEvents_10_SinkHelper)
             {
                 _applicationEvents_10_SinkHelper.Dispose();
                 _applicationEvents_10_SinkHelper = null;
             }
-            if( null != _applicationEvents_11_SinkHelper)
+            if (null != _applicationEvents_11_SinkHelper)
             {
                 _applicationEvents_11_SinkHelper.Dispose();
                 _applicationEvents_11_SinkHelper = null;
@@ -810,6 +810,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

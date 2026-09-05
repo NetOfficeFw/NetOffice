@@ -19,7 +19,7 @@ namespace NetOffice.Duck
             Builder.AppendLine(Environment.NewLine + "\t\t#region Properties" + Environment.NewLine + Environment.NewLine);
 
             foreach (PropertyInfo item in properties)
-            {              
+            {
                 if (IsEnumTypeProperty(item))
                 {
                     BuildEnumTypeProperty(item);
@@ -44,7 +44,7 @@ namespace NetOffice.Duck
         private StringBuilder Builder { get; set; }
 
         private bool HasProperties { get; set; }
-        
+
         private bool IsNetOfficeReferenceTypeProperty(PropertyInfo item)
         {
             if (item.GetIndexParameters().Length > 0)
@@ -54,8 +54,8 @@ namespace NetOffice.Duck
         }
 
         private void BuildNetOfficeReferenceTypeProperty(PropertyInfo property)
-        {          
-            Builder.AppendLine("\t\tpublic " + property.PropertyType.FullName + " " +  property.Name);
+        {
+            Builder.AppendLine("\t\tpublic " + property.PropertyType.FullName + " " + property.Name);
             Builder.AppendLine("\t\t{");
 
             Builder.AppendLine("\t\t\tget");
@@ -63,7 +63,7 @@ namespace NetOffice.Duck
 
             Builder.AppendLine("\t\t\t\tobject returnItem = Invoker.PropertyGet(this, \"" + property.Name + "\", null);");
             Builder.AppendLine("\t\t\t\treturn Factory.CreateDuckObjectFromComProxy(this, returnItem, typeof(" + property.PropertyType.FullName + ")) as " + property.PropertyType.FullName + ";");
-     
+
             Builder.AppendLine("\t\t\t}");
 
             if (property.CanWrite)
@@ -107,7 +107,7 @@ namespace NetOffice.Duck
             Builder.AppendLine("\t\t\t\tobject returnItem = Invoker.PropertyGet(this, \"" + property.Name + "\", null);");
             Builder.AppendLine("\t\t\t\tint intReturnItem = NetRuntimeSystem.Convert.ToInt32(returnItem);");
             Builder.AppendLine("\t\t\t\treturn (" + property.PropertyType.FullName + ")intReturnItem;");
-            
+
             Builder.AppendLine("\t\t\t}");
 
             if (property.CanWrite)
@@ -164,7 +164,7 @@ namespace NetOffice.Duck
             }
             Builder.AppendLine("\t\t}" + Environment.NewLine);
         }
-        
+
         private void BuildSystemValueTypeProperty(PropertyInfo property)
         {
             Builder.AppendLine("\t\tpublic " + property.PropertyType.FullName + " " + property.Name);

@@ -9,11 +9,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _SmartTagAction 
     /// SupportByVersion Access, 11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 11,12,14,15,16)]
+    [SupportByVersion("Access", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _SmartTagAction : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _SmartTagAction(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _SmartTagAction(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _SmartTagAction(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _SmartTagAction(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _SmartTagAction() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _SmartTagAction(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagAction.Application"/> </remarks>
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagAction.Parent"/> </remarks>
-        [SupportByVersion("Access", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagAction.Name"/> </remarks>
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -158,7 +158,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.SmartTagAction.Execute"/> </remarks>
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public void Execute()
         {
             Factory.ExecuteMethod(this, "Execute");
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -177,6 +177,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

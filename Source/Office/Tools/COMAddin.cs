@@ -25,7 +25,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// MS-Office Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\{0}\\Addins\\";
+        private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\{0}\\Addins\\";
 
         /// <summary>
         /// First field in OnConnection custom argument array
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi.Tools
         /// Host Application Instance
         /// </summary>
         protected internal ICOMObject Application { get; private set; }
-        
+
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
@@ -329,7 +329,7 @@ namespace NetOffice.OfficeApi.Tools
                 try
                 {
                     RaiseOnDisconnection(RemoveMode, ref custom);
-                    Tweaks.DisposeTweaks(Factory, this, Type);                   
+                    Tweaks.DisposeTweaks(Factory, this, Type);
                     Utils.Dispose();
 
                 }
@@ -454,7 +454,7 @@ namespace NetOffice.OfficeApi.Tools
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
                 return string.Empty;
-            } 
+            }
         }
 
         /// <summary>
@@ -651,14 +651,14 @@ namespace NetOffice.OfficeApi.Tools
         {
             return true;
         }
-        
+
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
         protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
-    
+
         }
 
         /// <summary>
@@ -667,16 +667,16 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="customTaskPaneInst">pane instance</param>
         protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
-            
+
         }
 
         private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
             try
             {
-                foreach(TaskPaneInfo item in TaskPanes)
+                foreach (TaskPaneInfo item in TaskPanes)
                 {
-                    if(item.Pane == customTaskPaneInst)
+                    if (item.Pane == customTaskPaneInst)
                     {
                         try
                         {
@@ -687,13 +687,13 @@ namespace NetOffice.OfficeApi.Tools
                                 {
                                     target.OnVisibleStateChanged(item.Pane.Visible);
                                 }
-                                catch(Exception exception)
+                                catch (Exception exception)
                                 {
                                     Factory.Console.WriteException(exception);
                                 }
                             }
                         }
-                        catch(Exception exception)
+                        catch (Exception exception)
                         {
                             Factory.Console.WriteException(exception);
                         }
@@ -701,9 +701,9 @@ namespace NetOffice.OfficeApi.Tools
                 }
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
-               Factory.Console.WriteException(exception);
+                Factory.Console.WriteException(exception);
             }
         }
 
@@ -711,9 +711,9 @@ namespace NetOffice.OfficeApi.Tools
         {
             try
             {
-                foreach(TaskPaneInfo item in TaskPanes)
+                foreach (TaskPaneInfo item in TaskPanes)
                 {
-                    if(item.Pane == customTaskPaneInst)
+                    if (item.Pane == customTaskPaneInst)
                     {
                         try
                         {
@@ -724,13 +724,13 @@ namespace NetOffice.OfficeApi.Tools
                                 {
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
                                 }
-                                catch(Exception exception)
+                                catch (Exception exception)
                                 {
                                     Factory.Console.WriteException(exception);
                                 }
                             }
                         }
-                        catch(Exception exception)
+                        catch (Exception exception)
                         {
                             Factory.Console.WriteException(exception);
                         }
@@ -738,9 +738,9 @@ namespace NetOffice.OfficeApi.Tools
                 }
                 TaskPaneDockStateChanged(customTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
-               Factory.Console.WriteException(exception);
+                Factory.Console.WriteException(exception);
             }
         }
 
@@ -750,21 +750,21 @@ namespace NetOffice.OfficeApi.Tools
             {
                 return OnCreateTaskPaneInfo(paneInfo);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
                 return false;
             }
         }
-        
+
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
-        {           
+        {
             try
             {
                 CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
             }
@@ -776,10 +776,10 @@ namespace NetOffice.OfficeApi.Tools
             {
                 CallTaskPaneDockPositionStateChange(CustomTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
-            }            
+            }
         }
 
         #endregion
@@ -1022,7 +1022,7 @@ namespace NetOffice.OfficeApi.Tools
         {
 
         }
-        
+
         #endregion
 
         #region COM Register Functions
@@ -1139,7 +1139,7 @@ namespace NetOffice.OfficeApi.Tools
             string[] product = new string[attribute.Products.Length];
             for (int i = 0; i < attribute.Products.Length; i++)
                 product[i] = MultiRegisterAttribute.RegistryEntry(attribute.Products[i]);
-             
+
             return RegExportHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
         }
 

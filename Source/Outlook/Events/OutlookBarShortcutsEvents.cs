@@ -6,31 +6,31 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0006307C-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface OutlookBarShortcutsEvents
     {
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("newShortcut", typeof(OutlookApi.OutlookBarShortcut))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
         void ShortcutAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newShortcut);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
-        void BeforeShortcutAdd([In] [Out] ref object cancel);
+        void BeforeShortcutAdd([In][Out] ref object cancel);
 
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("shortcut", typeof(OutlookApi.OutlookBarShortcut))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
-        void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel);
+        void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In][Out] ref object cancel);
     }
 
     #endregion
@@ -42,22 +42,22 @@ namespace NetOffice.OutlookApi.Events
     public class OutlookBarShortcutsEvents_SinkHelper : SinkHelper, OutlookBarShortcutsEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0006307C-0000-0000-C000-000000000046";
-        
+
         #endregion
-        
+
         #region Construction
 
-        public OutlookBarShortcutsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public OutlookBarShortcutsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region OutlookBarShortcutsEvents
-        
+
         public void ShortcutAdd([In, MarshalAs(UnmanagedType.IDispatch)] object newShortcut)
         {
             if (!Validate("ShortcutAdd"))
@@ -72,7 +72,7 @@ namespace NetOffice.OutlookApi.Events
             EventBinding.RaiseCustomEvent("ShortcutAdd", ref paramsArray);
         }
 
-        public void BeforeShortcutAdd([In] [Out] ref object cancel)
+        public void BeforeShortcutAdd([In][Out] ref object cancel)
         {
             if (!Validate("BeforeShortcutAdd"))
             {
@@ -87,7 +87,7 @@ namespace NetOffice.OutlookApi.Events
             cancel = ToBoolean(paramsArray[0]);
         }
 
-        public void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In] [Out] ref object cancel)
+        public void BeforeShortcutRemove([In, MarshalAs(UnmanagedType.IDispatch)] object shortcut, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeShortcutRemove"))
             {
@@ -106,8 +106,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

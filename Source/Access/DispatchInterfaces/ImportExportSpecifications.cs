@@ -13,11 +13,11 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications"/> </remarks>
-    [SupportByVersion("Access", 12,14,15,16)]
+    [SupportByVersion("Access", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class ImportExportSpecifications : COMObject, IEnumerableProvider<NetOffice.AccessApi.ImportExportSpecification>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ImportExportSpecifications(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.AccessApi
         public ImportExportSpecifications(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.AccessApi
         public ImportExportSpecifications(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ImportExportSpecifications(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ImportExportSpecifications() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ImportExportSpecifications(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Application"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Count"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Parent"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.AccessApi.ImportExportSpecification this[object index]
         {
@@ -179,7 +179,7 @@ namespace NetOffice.AccessApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ImportExportSpecifications.Add"/> </remarks>
         /// <param name="name">string name</param>
         /// <param name="specificationDefinition">string specificationDefinition</param>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.ImportExportSpecification Add(string name, string specificationDefinition)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.AccessApi.ImportExportSpecification>(this, "Add", NetOffice.AccessApi.ImportExportSpecification.LateBindingApiWrapperType, name, specificationDefinition);
@@ -190,7 +190,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -232,7 +232,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// SupportByVersion Access, 12,14,15,16
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
@@ -240,6 +240,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

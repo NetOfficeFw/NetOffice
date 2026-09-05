@@ -9,7 +9,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
     /// Module GlobalModule
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     ///</summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsModule), ModuleBaseType(typeof(ExcelApi.Application))]
     public static class GlobalModule
     {
@@ -38,10 +38,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Factory;
-            else
-                return Core.Default;
+                else
+                    return Core.Default;
             }
         }
 
@@ -49,10 +49,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Invoker;
-            else
-                return Invoker.Default;
+                else
+                    return Invoker.Default;
             }
         }
 
@@ -64,7 +64,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Application Application
         {
             get
@@ -77,7 +77,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -90,7 +90,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Application Parent
         {
             get
@@ -103,7 +103,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range ActiveCell
         {
             get
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Chart ActiveChart
         {
             get
@@ -129,7 +129,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.DialogSheet ActiveDialog
         {
@@ -143,7 +143,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.MenuBar ActiveMenuBar
         {
@@ -157,7 +157,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static string ActivePrinter
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public static object ActiveSheet
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Window ActiveWindow
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Workbook ActiveWorkbook
         {
             get
@@ -214,7 +214,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.AddIns AddIns
         {
@@ -228,7 +228,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.Assistant Assistant
         {
             get
@@ -241,7 +241,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Cells
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Sheets Charts
         {
             get
@@ -267,7 +267,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Range Columns
         {
@@ -281,7 +281,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.CommandBars CommandBars
         {
             get
@@ -294,7 +294,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static Int32 DDEAppReturnCode
         {
             get
@@ -307,7 +307,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Sheets DialogSheets
         {
@@ -321,7 +321,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.MenuBars MenuBars
         {
@@ -335,7 +335,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Modules Modules
         {
@@ -349,7 +349,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Names Names
         {
             get
@@ -364,7 +364,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="cell1">object cell1</param>
         /// <param name="cell2">optional object cell2</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Range get_Range(object cell1, object cell2)
         {
@@ -377,7 +377,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="cell1">object cell1</param>
         /// <param name="cell2">optional object cell2</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), Redirect("get_Range")]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Range")]
         public static NetOffice.ExcelApi.Range Range(object cell1, object cell2)
         {
             return get_Range(cell1, cell2);
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <param name="cell1">object cell1</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Range get_Range(object cell1)
         {
@@ -400,7 +400,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// Alias for get_Range
         /// </summary>
         /// <param name="cell1">object cell1</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), Redirect("get_Range")]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Range")]
         public static NetOffice.ExcelApi.Range Range(object cell1)
         {
             return get_Range(cell1);
@@ -410,7 +410,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Range Rows
         {
@@ -425,7 +425,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public static object Selection
         {
             get
@@ -438,7 +438,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Sheets Sheets
         {
             get
@@ -452,7 +452,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Menu get_ShortcutMenus(Int32 index)
         {
@@ -464,7 +464,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// Alias for get_ShortcutMenus
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), Redirect("get_ShortcutMenus")]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), Redirect("get_ShortcutMenus")]
         public static NetOffice.ExcelApi.Menu ShortcutMenus(Int32 index)
         {
             return get_ShortcutMenus(index);
@@ -474,7 +474,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Workbook ThisWorkbook
         {
             get
@@ -487,7 +487,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.ExcelApi.Toolbars Toolbars
         {
@@ -501,7 +501,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Windows Windows
         {
             get
@@ -514,7 +514,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Workbooks Workbooks
         {
             get
@@ -527,7 +527,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.WorksheetFunction WorksheetFunction
         {
             get
@@ -540,7 +540,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Sheets Worksheets
         {
             get
@@ -553,7 +553,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Sheets Excel4IntlMacroSheets
         {
             get
@@ -566,7 +566,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Sheets Excel4MacroSheets
         {
             get
@@ -582,7 +582,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static void Calculate()
         {
             Factory.ExecuteMethod(_instance, "Calculate");
@@ -593,7 +593,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="channel">Int32 channel</param>
         /// <param name="_string">string string</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static void DDEExecute(Int32 channel, string _string)
         {
             Factory.ExecuteMethod(_instance, "DDEExecute", channel, _string);
@@ -604,7 +604,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="app">string app</param>
         /// <param name="topic">string topic</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static Int32 DDEInitiate(string app, string topic)
         {
             return Factory.ExecuteInt32MethodGet(_instance, "DDEInitiate", app, topic);
@@ -616,7 +616,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="channel">Int32 channel</param>
         /// <param name="item">object item</param>
         /// <param name="data">object data</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static void DDEPoke(Int32 channel, object item, object data)
         {
             Factory.ExecuteMethod(_instance, "DDEPoke", channel, item, data);
@@ -627,7 +627,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="channel">Int32 channel</param>
         /// <param name="item">string item</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object DDERequest(Int32 channel, string item)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Selection", channel, item);
@@ -637,7 +637,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="channel">Int32 channel</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static void DDETerminate(Int32 channel)
         {
             Factory.ExecuteMethod(_instance, "DDETerminate", channel);
@@ -647,7 +647,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="name">object name</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Evaluate(object name)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Evaluate", name);
@@ -658,7 +658,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="name">object name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Evaluate(object name)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Evaluate", name);
@@ -668,7 +668,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="_string">string string</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object ExecuteExcel4Macro(string _string)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "ExecuteExcel4Macro", _string);
@@ -707,7 +707,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         /// <param name="arg30">optional object arg30</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
@@ -719,7 +719,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg1">NetOffice.ExcelApi.Range arg1</param>
         /// <param name="arg2">NetOffice.ExcelApi.Range arg2</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2);
@@ -732,7 +732,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg2">NetOffice.ExcelApi.Range arg2</param>
         /// <param name="arg3">optional object arg3</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3);
@@ -746,7 +746,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg3">optional object arg3</param>
         /// <param name="arg4">optional object arg4</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4);
@@ -761,7 +761,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg4">optional object arg4</param>
         /// <param name="arg5">optional object arg5</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5);
@@ -777,7 +777,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg5">optional object arg5</param>
         /// <param name="arg6">optional object arg6</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -794,7 +794,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg6">optional object arg6</param>
         /// <param name="arg7">optional object arg7</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -812,7 +812,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg7">optional object arg7</param>
         /// <param name="arg8">optional object arg8</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -831,7 +831,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg8">optional object arg8</param>
         /// <param name="arg9">optional object arg9</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
@@ -851,7 +851,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg9">optional object arg9</param>
         /// <param name="arg10">optional object arg10</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
@@ -872,7 +872,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg10">optional object arg10</param>
         /// <param name="arg11">optional object arg11</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
@@ -894,7 +894,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg11">optional object arg11</param>
         /// <param name="arg12">optional object arg12</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
@@ -917,7 +917,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg12">optional object arg12</param>
         /// <param name="arg13">optional object arg13</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
@@ -941,7 +941,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg13">optional object arg13</param>
         /// <param name="arg14">optional object arg14</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
@@ -966,7 +966,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg14">optional object arg14</param>
         /// <param name="arg15">optional object arg15</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
@@ -992,7 +992,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg15">optional object arg15</param>
         /// <param name="arg16">optional object arg16</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
@@ -1019,7 +1019,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg16">optional object arg16</param>
         /// <param name="arg17">optional object arg17</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
@@ -1047,7 +1047,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg17">optional object arg17</param>
         /// <param name="arg18">optional object arg18</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
@@ -1076,7 +1076,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg18">optional object arg18</param>
         /// <param name="arg19">optional object arg19</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
@@ -1106,7 +1106,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg19">optional object arg19</param>
         /// <param name="arg20">optional object arg20</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
@@ -1137,7 +1137,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg20">optional object arg20</param>
         /// <param name="arg21">optional object arg21</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
@@ -1169,7 +1169,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg21">optional object arg21</param>
         /// <param name="arg22">optional object arg22</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
@@ -1202,7 +1202,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg22">optional object arg22</param>
         /// <param name="arg23">optional object arg23</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
@@ -1236,7 +1236,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg23">optional object arg23</param>
         /// <param name="arg24">optional object arg24</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
@@ -1271,7 +1271,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg24">optional object arg24</param>
         /// <param name="arg25">optional object arg25</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
@@ -1307,7 +1307,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg25">optional object arg25</param>
         /// <param name="arg26">optional object arg26</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
@@ -1344,7 +1344,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg26">optional object arg26</param>
         /// <param name="arg27">optional object arg27</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
@@ -1382,7 +1382,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg27">optional object arg27</param>
         /// <param name="arg28">optional object arg28</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
@@ -1421,7 +1421,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Intersect(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Intersect", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
@@ -1461,7 +1461,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         /// <param name="arg30">optional object arg30</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
@@ -1471,7 +1471,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run()
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run");
@@ -1482,7 +1482,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="macro">optional object macro</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro);
@@ -1494,7 +1494,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="macro">optional object macro</param>
         /// <param name="arg1">optional object arg1</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1);
@@ -1507,7 +1507,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg1">optional object arg1</param>
         /// <param name="arg2">optional object arg2</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2);
@@ -1521,7 +1521,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg2">optional object arg2</param>
         /// <param name="arg3">optional object arg3</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2, arg3);
@@ -1536,7 +1536,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg3">optional object arg3</param>
         /// <param name="arg4">optional object arg4</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2, arg3, arg4);
@@ -1552,7 +1552,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg4">optional object arg4</param>
         /// <param name="arg5">optional object arg5</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2, arg3, arg4);
@@ -1569,7 +1569,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg5">optional object arg5</param>
         /// <param name="arg6">optional object arg6</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2, arg3, arg4, arg5);
@@ -1587,7 +1587,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg6">optional object arg6</param>
         /// <param name="arg7">optional object arg7</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1606,7 +1606,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg7">optional object arg7</param>
         /// <param name="arg8">optional object arg8</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -1626,7 +1626,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg8">optional object arg8</param>
         /// <param name="arg9">optional object arg9</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
@@ -1647,7 +1647,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg9">optional object arg9</param>
         /// <param name="arg10">optional object arg10</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
@@ -1669,7 +1669,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg10">optional object arg10</param>
         /// <param name="arg11">optional object arg11</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
@@ -1692,7 +1692,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg11">optional object arg11</param>
         /// <param name="arg12">optional object arg12</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
@@ -1716,7 +1716,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg12">optional object arg12</param>
         /// <param name="arg13">optional object arg13</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
@@ -1741,7 +1741,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg13">optional object arg13</param>
         /// <param name="arg14">optional object arg14</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
@@ -1767,7 +1767,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg14">optional object arg14</param>
         /// <param name="arg15">optional object arg15</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
@@ -1794,7 +1794,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg15">optional object arg15</param>
         /// <param name="arg16">optional object arg16</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
@@ -1822,7 +1822,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg16">optional object arg16</param>
         /// <param name="arg17">optional object arg17</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
@@ -1851,7 +1851,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg17">optional object arg17</param>
         /// <param name="arg18">optional object arg18</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
@@ -1881,7 +1881,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg18">optional object arg18</param>
         /// <param name="arg19">optional object arg19</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
@@ -1912,7 +1912,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg19">optional object arg19</param>
         /// <param name="arg20">optional object arg20</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
@@ -1944,7 +1944,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg20">optional object arg20</param>
         /// <param name="arg21">optional object arg21</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
@@ -1977,7 +1977,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg21">optional object arg21</param>
         /// <param name="arg22">optional object arg22</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
@@ -2011,7 +2011,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg22">optional object arg22</param>
         /// <param name="arg23">optional object arg23</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
@@ -2046,7 +2046,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg23">optional object arg23</param>
         /// <param name="arg24">optional object arg24</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
@@ -2082,7 +2082,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg24">optional object arg24</param>
         /// <param name="arg25">optional object arg25</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
@@ -2119,7 +2119,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg25">optional object arg25</param>
         /// <param name="arg26">optional object arg26</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
@@ -2157,7 +2157,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg26">optional object arg26</param>
         /// <param name="arg27">optional object arg27</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
@@ -2196,7 +2196,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg27">optional object arg27</param>
         /// <param name="arg28">optional object arg28</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
@@ -2236,7 +2236,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object Run(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
@@ -2277,7 +2277,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg29">optional object arg29</param>
         /// <param name="arg30">optional object arg30</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
@@ -2288,7 +2288,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2()
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2");
@@ -2300,7 +2300,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="macro">optional object macro</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro);
@@ -2313,7 +2313,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg1">optional object arg1</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1);
@@ -2327,7 +2327,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg2">optional object arg2</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1, arg2);
@@ -2342,7 +2342,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg3">optional object arg3</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1, arg2, arg3);
@@ -2358,7 +2358,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg4">optional object arg4</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1, arg2, arg3, arg4);
@@ -2375,7 +2375,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg5">optional object arg5</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1, arg2, arg3, arg4, arg5);
@@ -2393,7 +2393,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg6">optional object arg6</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2412,7 +2412,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg7">optional object arg7</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -2475,7 +2475,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg10">optional object arg10</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
@@ -2498,7 +2498,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg11">optional object arg11</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
@@ -2522,7 +2522,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg12">optional object arg12</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
@@ -2547,7 +2547,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg13">optional object arg13</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
@@ -2573,7 +2573,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg14">optional object arg14</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
@@ -2600,7 +2600,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg15">optional object arg15</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
@@ -2628,7 +2628,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg16">optional object arg16</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
@@ -2657,7 +2657,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg17">optional object arg17</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
@@ -2687,7 +2687,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg18">optional object arg18</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
@@ -2718,7 +2718,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg19">optional object arg19</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
@@ -2750,7 +2750,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg20">optional object arg20</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
@@ -2783,7 +2783,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg21">optional object arg21</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
@@ -2817,7 +2817,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg22">optional object arg22</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
@@ -2852,7 +2852,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg23">optional object arg23</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
@@ -2888,7 +2888,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg24">optional object arg24</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
@@ -2925,7 +2925,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg25">optional object arg25</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
@@ -2963,7 +2963,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg26">optional object arg26</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
@@ -3002,7 +3002,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg27">optional object arg27</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
@@ -3042,7 +3042,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
@@ -3083,7 +3083,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg29">optional object arg29</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });
@@ -3094,7 +3094,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="keys">object keys</param>
         /// <param name="wait">optional object wait</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static void SendKeys(object keys, object wait)
         {
             Factory.ExecuteMethod(_instance, "SendKeys", keys, wait);
@@ -3105,7 +3105,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// </summary>
         /// <param name="keys">object keys</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static void SendKeys(object keys)
         {
             Factory.ExecuteMethod(_instance, "SendKeys", keys);
@@ -3144,7 +3144,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         /// <param name="arg30">optional object arg30</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
@@ -3156,7 +3156,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg1">NetOffice.ExcelApi.Range arg1</param>
         /// <param name="arg2">NetOffice.ExcelApi.Range arg2</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2);
@@ -3169,7 +3169,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg2">NetOffice.ExcelApi.Range arg2</param>
         /// <param name="arg3">optional object arg3</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3);
@@ -3183,7 +3183,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg3">optional object arg3</param>
         /// <param name="arg4">optional object arg4</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4);
@@ -3198,7 +3198,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg4">optional object arg4</param>
         /// <param name="arg5">optional object arg5</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5);
@@ -3214,7 +3214,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg5">optional object arg5</param>
         /// <param name="arg6">optional object arg6</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -3231,7 +3231,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg6">optional object arg6</param>
         /// <param name="arg7">optional object arg7</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -3249,7 +3249,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg7">optional object arg7</param>
         /// <param name="arg8">optional object arg8</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -3268,7 +3268,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg8">optional object arg8</param>
         /// <param name="arg9">optional object arg9</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 });
@@ -3288,7 +3288,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg9">optional object arg9</param>
         /// <param name="arg10">optional object arg10</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10 });
@@ -3309,7 +3309,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg10">optional object arg10</param>
         /// <param name="arg11">optional object arg11</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11 });
@@ -3331,7 +3331,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg11">optional object arg11</param>
         /// <param name="arg12">optional object arg12</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12 });
@@ -3354,7 +3354,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg12">optional object arg12</param>
         /// <param name="arg13">optional object arg13</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13 });
@@ -3378,7 +3378,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg13">optional object arg13</param>
         /// <param name="arg14">optional object arg14</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14 });
@@ -3403,7 +3403,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg14">optional object arg14</param>
         /// <param name="arg15">optional object arg15</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15 });
@@ -3429,10 +3429,10 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg15">optional object arg15</param>
         /// <param name="arg16">optional object arg16</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16});
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16 });
         }
 
         /// <summary>
@@ -3456,7 +3456,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg16">optional object arg16</param>
         /// <param name="arg17">optional object arg17</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17 });
@@ -3484,7 +3484,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg17">optional object arg17</param>
         /// <param name="arg18">optional object arg18</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18 });
@@ -3513,7 +3513,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg18">optional object arg18</param>
         /// <param name="arg19">optional object arg19</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19 });
@@ -3543,7 +3543,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg19">optional object arg19</param>
         /// <param name="arg20">optional object arg20</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20 });
@@ -3574,7 +3574,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg20">optional object arg20</param>
         /// <param name="arg21">optional object arg21</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21 });
@@ -3606,7 +3606,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg21">optional object arg21</param>
         /// <param name="arg22">optional object arg22</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22 });
@@ -3639,7 +3639,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg22">optional object arg22</param>
         /// <param name="arg23">optional object arg23</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23 });
@@ -3673,7 +3673,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg23">optional object arg23</param>
         /// <param name="arg24">optional object arg24</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24 });
@@ -3708,7 +3708,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg24">optional object arg24</param>
         /// <param name="arg25">optional object arg25</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25 });
@@ -3744,7 +3744,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg25">optional object arg25</param>
         /// <param name="arg26">optional object arg26</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26 });
@@ -3781,7 +3781,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg26">optional object arg26</param>
         /// <param name="arg27">optional object arg27</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27 });
@@ -3819,7 +3819,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg27">optional object arg27</param>
         /// <param name="arg28">optional object arg28</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28 });
@@ -3858,7 +3858,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         /// <param name="arg28">optional object arg28</param>
         /// <param name="arg29">optional object arg29</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.ExcelApi.Range Union(NetOffice.ExcelApi.Range arg1, NetOffice.ExcelApi.Range arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Range>(_instance, "Union", NetOffice.ExcelApi.Range.LateBindingApiWrapperType, new object[] { arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29 });

@@ -7,7 +7,7 @@ namespace NetOffice.ExcelApi.Enums
     /// SupportByVersion Excel 12, 14, 15, 16
     /// </summary>
     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XlGradientFillType"/> </remarks>
-    [SupportByVersion("Excel", 12,14,15,16)]
+    [SupportByVersion("Excel", 12, 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum XlGradientFillType
     {
@@ -15,14 +15,14 @@ namespace NetOffice.ExcelApi.Enums
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <remarks>0</remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         xlGradientFillLinear = 0,
 
         /// <summary>
         /// SupportByVersion Excel 12, 14, 15, 16
         /// </summary>
         /// <remarks>1</remarks>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         xlGradientFillPath = 1
     }
 }

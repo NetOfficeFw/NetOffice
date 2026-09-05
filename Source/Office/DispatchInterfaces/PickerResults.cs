@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults"/> </remarks>
-    [SupportByVersion("Office", 14,15,16)]
+    [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class PickerResults : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PickerResult>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PickerResults(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public PickerResults(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public PickerResults(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PickerResults(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PickerResults() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PickerResults(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.PickerResult this[Int32 index]
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerResults.Count"/> </remarks>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -154,10 +154,10 @@ namespace NetOffice.OfficeApi
         /// <param name="sIPId">optional string SIPId = </param>
         /// <param name="itemData">optional object itemData</param>
         /// <param name="subItems">optional object subItems</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData, object subItems)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType, new object[]{ id, displayName, type, sIPId, itemData, subItems });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType, new object[] { id, displayName, type, sIPId, itemData, subItems });
         }
 
         /// <summary>
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
         /// <param name="displayName">string displayName</param>
         /// <param name="type">string type</param>
         [CustomMethod]
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType, id, displayName, type);
@@ -183,7 +183,7 @@ namespace NetOffice.OfficeApi
         /// <param name="type">string type</param>
         /// <param name="sIPId">optional string SIPId = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType, id, displayName, type, sIPId);
@@ -199,10 +199,10 @@ namespace NetOffice.OfficeApi
         /// <param name="sIPId">optional string SIPId = </param>
         /// <param name="itemData">optional object itemData</param>
         [CustomMethod]
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public NetOffice.OfficeApi.PickerResult Add(string id, string displayName, string type, object sIPId, object itemData)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType, new object[]{ id, displayName, type, sIPId, itemData });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerResult>(this, "Add", NetOffice.OfficeApi.PickerResult.LateBindingApiWrapperType, new object[] { id, displayName, type, sIPId, itemData });
         }
 
         #endregion
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 14,15,16
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -249,6 +249,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

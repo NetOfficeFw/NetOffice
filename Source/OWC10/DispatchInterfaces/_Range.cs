@@ -28,7 +28,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Range_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -37,7 +37,7 @@ namespace NetOffice.OWC10Api
         public _Range_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -55,7 +55,7 @@ namespace NetOffice.OWC10Api
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range_(ICOMObject replacedObject) : base(replacedObject)
@@ -69,13 +69,13 @@ namespace NetOffice.OWC10Api
         public _Range_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
         {
-            return Factory.ExecuteStringPropertyGet(this, "Address", new object[]{ rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo });
+            return Factory.ExecuteStringPropertyGet(this, "Address", new object[] { rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo });
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class _Range : _Range_, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -342,9 +342,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -359,7 +359,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Range(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -368,7 +368,7 @@ namespace NetOffice.OWC10Api
         public _Range(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -386,18 +386,18 @@ namespace NetOffice.OWC10Api
         public _Range(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range(string progId) : base(progId)
@@ -1248,7 +1248,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
         {
-            Factory.ExecuteMethod(this, "AutoFilter", new object[]{ field, criteria1, _operator, criteria2, visibleDropDown });
+            Factory.ExecuteMethod(this, "AutoFilter", new object[] { field, criteria1, _operator, criteria2, visibleDropDown });
         }
 
         /// <summary>
@@ -1543,7 +1543,7 @@ namespace NetOffice.OWC10Api
         [BaseResult]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
         }
 
         /// <summary>
@@ -1613,7 +1613,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder });
         }
 
         /// <summary>
@@ -1630,7 +1630,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection });
         }
 
         /// <summary>
@@ -1648,7 +1648,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
         }
 
         /// <summary>
@@ -1958,6 +1958,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

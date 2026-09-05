@@ -10,11 +10,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class MailMerge : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public MailMerge(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.WordApi
         public MailMerge(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.WordApi
         public MailMerge(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MailMerge(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MailMerge() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MailMerge(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Application"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Creator"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Parent"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.MainDocumentType"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdMailMergeMainDocType MainDocumentType
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.State"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdMailMergeState State
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Destination"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdMailMergeDestination Destination
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.DataSource"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.MailMergeDataSource DataSource
         {
             get
@@ -220,7 +220,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Fields"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.MailMergeFields Fields
         {
             get
@@ -234,7 +234,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.ViewMailMergeFieldCodes"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ViewMailMergeFieldCodes
         {
             get
@@ -252,7 +252,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.SuppressBlankLines"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool SuppressBlankLines
         {
             get
@@ -270,7 +270,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.MailAsAttachment"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public bool MailAsAttachment
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.MailAddressFieldName"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string MailAddressFieldName
         {
             get
@@ -306,7 +306,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.MailSubject"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public string MailSubject
         {
             get
@@ -324,7 +324,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.HighlightMergeFields"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public bool HighlightMergeFields
         {
             get
@@ -342,7 +342,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.MailFormat"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Enums.WdMailMergeMailFormat MailFormat
         {
             get
@@ -360,7 +360,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.ShowSendToCustom"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public string ShowSendToCustom
         {
             get
@@ -378,7 +378,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.WizardState"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public Int32 WizardState
         {
             get
@@ -408,10 +408,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         /// <param name="connection">optional object connection</param>
         /// <param name="linkToSource">optional object linkToSource</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection, object linkToSource)
         {
-            Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection, linkToSource });
+            Factory.ExecuteMethod(this, "CreateDataSource", new object[] { name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection, linkToSource });
         }
 
         /// <summary>
@@ -419,7 +419,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.CreateDataSource"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource()
         {
             Factory.ExecuteMethod(this, "CreateDataSource");
@@ -431,7 +431,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.CreateDataSource"/> </remarks>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name)
         {
             Factory.ExecuteMethod(this, "CreateDataSource", name);
@@ -444,7 +444,7 @@ namespace NetOffice.WordApi
         /// <param name="name">optional object name</param>
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument)
         {
             Factory.ExecuteMethod(this, "CreateDataSource", name, passwordDocument);
@@ -458,7 +458,7 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument)
         {
             Factory.ExecuteMethod(this, "CreateDataSource", name, passwordDocument, writePasswordDocument);
@@ -473,7 +473,7 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="headerRecord">optional object headerRecord</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord)
         {
             Factory.ExecuteMethod(this, "CreateDataSource", name, passwordDocument, writePasswordDocument, headerRecord);
@@ -489,10 +489,10 @@ namespace NetOffice.WordApi
         /// <param name="headerRecord">optional object headerRecord</param>
         /// <param name="mSQuery">optional object mSQuery</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery)
         {
-            Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery });
+            Factory.ExecuteMethod(this, "CreateDataSource", new object[] { name, passwordDocument, writePasswordDocument, headerRecord, mSQuery });
         }
 
         /// <summary>
@@ -506,10 +506,10 @@ namespace NetOffice.WordApi
         /// <param name="mSQuery">optional object mSQuery</param>
         /// <param name="sQLStatement">optional object sQLStatement</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement)
         {
-            Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement });
+            Factory.ExecuteMethod(this, "CreateDataSource", new object[] { name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement });
         }
 
         /// <summary>
@@ -524,10 +524,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement">optional object sQLStatement</param>
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1)
         {
-            Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1 });
+            Factory.ExecuteMethod(this, "CreateDataSource", new object[] { name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1 });
         }
 
         /// <summary>
@@ -543,10 +543,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         /// <param name="connection">optional object connection</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateDataSource(object name, object passwordDocument, object writePasswordDocument, object headerRecord, object mSQuery, object sQLStatement, object sQLStatement1, object connection)
         {
-            Factory.ExecuteMethod(this, "CreateDataSource", new object[]{ name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection });
+            Factory.ExecuteMethod(this, "CreateDataSource", new object[] { name, passwordDocument, writePasswordDocument, headerRecord, mSQuery, sQLStatement, sQLStatement1, connection });
         }
 
         /// <summary>
@@ -557,7 +557,7 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="headerRecord">optional object headerRecord</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument, object headerRecord)
         {
             Factory.ExecuteMethod(this, "CreateHeaderSource", name, passwordDocument, writePasswordDocument, headerRecord);
@@ -569,7 +569,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.CreateHeaderSource"/> </remarks>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateHeaderSource(string name)
         {
             Factory.ExecuteMethod(this, "CreateHeaderSource", name);
@@ -582,7 +582,7 @@ namespace NetOffice.WordApi
         /// <param name="name">string name</param>
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateHeaderSource(string name, object passwordDocument)
         {
             Factory.ExecuteMethod(this, "CreateHeaderSource", name, passwordDocument);
@@ -596,7 +596,7 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateHeaderSource(string name, object passwordDocument, object writePasswordDocument)
         {
             Factory.ExecuteMethod(this, "CreateHeaderSource", name, passwordDocument, writePasswordDocument);
@@ -620,10 +620,10 @@ namespace NetOffice.WordApi
         /// <param name="connection">optional object connection</param>
         /// <param name="sQLStatement">optional object sQLStatement</param>
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1 });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1 });
         }
 
         /// <summary>
@@ -646,10 +646,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         /// <param name="openExclusive">optional object openExclusive</param>
         /// <param name="subType">optional object subType</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive, object subType)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive, subType });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive, subType });
         }
 
         /// <summary>
@@ -658,7 +658,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.OpenDataSource"/> </remarks>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name)
         {
             Factory.ExecuteMethod(this, "OpenDataSource", name);
@@ -671,7 +671,7 @@ namespace NetOffice.WordApi
         /// <param name="name">string name</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format)
         {
             Factory.ExecuteMethod(this, "OpenDataSource", name, format);
@@ -685,7 +685,7 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="confirmConversions">optional object confirmConversions</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions)
         {
             Factory.ExecuteMethod(this, "OpenDataSource", name, format, confirmConversions);
@@ -700,7 +700,7 @@ namespace NetOffice.WordApi
         /// <param name="confirmConversions">optional object confirmConversions</param>
         /// <param name="readOnly">optional object readOnly</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly)
         {
             Factory.ExecuteMethod(this, "OpenDataSource", name, format, confirmConversions, readOnly);
@@ -716,10 +716,10 @@ namespace NetOffice.WordApi
         /// <param name="readOnly">optional object readOnly</param>
         /// <param name="linkToSource">optional object linkToSource</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource });
         }
 
         /// <summary>
@@ -733,10 +733,10 @@ namespace NetOffice.WordApi
         /// <param name="linkToSource">optional object linkToSource</param>
         /// <param name="addToRecentFiles">optional object addToRecentFiles</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles });
         }
 
         /// <summary>
@@ -751,10 +751,10 @@ namespace NetOffice.WordApi
         /// <param name="addToRecentFiles">optional object addToRecentFiles</param>
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument });
         }
 
         /// <summary>
@@ -770,10 +770,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate });
         }
 
         /// <summary>
@@ -790,10 +790,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         /// <param name="revert">optional object revert</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert });
         }
 
         /// <summary>
@@ -811,10 +811,10 @@ namespace NetOffice.WordApi
         /// <param name="revert">optional object revert</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
         }
 
         /// <summary>
@@ -833,10 +833,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
         }
 
         /// <summary>
@@ -856,10 +856,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         /// <param name="connection">optional object connection</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection });
         }
 
         /// <summary>
@@ -880,10 +880,10 @@ namespace NetOffice.WordApi
         /// <param name="connection">optional object connection</param>
         /// <param name="sQLStatement">optional object sQLStatement</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement });
         }
 
         /// <summary>
@@ -906,10 +906,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         /// <param name="openExclusive">optional object openExclusive</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1, object openExclusive)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive });
+            Factory.ExecuteMethod(this, "OpenDataSource", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1, openExclusive });
         }
 
         /// <summary>
@@ -926,10 +926,10 @@ namespace NetOffice.WordApi
         /// <param name="revert">optional object revert</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
         }
 
         /// <summary>
@@ -947,10 +947,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         /// <param name="openExclusive">optional object openExclusive</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object openExclusive)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, openExclusive });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, openExclusive });
         }
 
         /// <summary>
@@ -959,7 +959,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.OpenHeaderSource"/> </remarks>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource", name);
@@ -972,7 +972,7 @@ namespace NetOffice.WordApi
         /// <param name="name">string name</param>
         /// <param name="format">optional object format</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource", name, format);
@@ -986,7 +986,7 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         /// <param name="confirmConversions">optional object confirmConversions</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource", name, format, confirmConversions);
@@ -1001,7 +1001,7 @@ namespace NetOffice.WordApi
         /// <param name="confirmConversions">optional object confirmConversions</param>
         /// <param name="readOnly">optional object readOnly</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource", name, format, confirmConversions, readOnly);
@@ -1017,10 +1017,10 @@ namespace NetOffice.WordApi
         /// <param name="readOnly">optional object readOnly</param>
         /// <param name="addToRecentFiles">optional object addToRecentFiles</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles });
         }
 
         /// <summary>
@@ -1034,10 +1034,10 @@ namespace NetOffice.WordApi
         /// <param name="addToRecentFiles">optional object addToRecentFiles</param>
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument });
         }
 
         /// <summary>
@@ -1052,10 +1052,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate });
         }
 
         /// <summary>
@@ -1071,10 +1071,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         /// <param name="revert">optional object revert</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert });
         }
 
         /// <summary>
@@ -1091,10 +1091,10 @@ namespace NetOffice.WordApi
         /// <param name="revert">optional object revert</param>
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
+            Factory.ExecuteMethod(this, "OpenHeaderSource", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
         }
 
         /// <summary>
@@ -1102,7 +1102,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Execute"/> </remarks>
         /// <param name="pause">optional object pause</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Execute(object pause)
         {
             Factory.ExecuteMethod(this, "Execute", pause);
@@ -1113,7 +1113,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Execute"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Execute()
         {
             Factory.ExecuteMethod(this, "Execute");
@@ -1123,7 +1123,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.Check"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void Check()
         {
             Factory.ExecuteMethod(this, "Check");
@@ -1133,7 +1133,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.EditDataSource"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditDataSource()
         {
             Factory.ExecuteMethod(this, "EditDataSource");
@@ -1143,7 +1143,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.EditHeaderSource"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditHeaderSource()
         {
             Factory.ExecuteMethod(this, "EditHeaderSource");
@@ -1153,7 +1153,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.EditMainDocument"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void EditMainDocument()
         {
             Factory.ExecuteMethod(this, "EditMainDocument");
@@ -1163,7 +1163,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="type">string type</param>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public void UseAddressBook(string type)
         {
             Factory.ExecuteMethod(this, "UseAddressBook", type);
@@ -1187,10 +1187,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement">optional object sQLStatement</param>
         /// <param name="sQLStatement1">optional object sQLStatement1</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement, object sQLStatement1)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1 });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement, sQLStatement1 });
         }
 
         /// <summary>
@@ -1199,7 +1199,7 @@ namespace NetOffice.WordApi
         /// <param name="name">string name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name)
         {
             Factory.ExecuteMethod(this, "OpenDataSource2000", name);
@@ -1212,7 +1212,7 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format)
         {
             Factory.ExecuteMethod(this, "OpenDataSource2000", name, format);
@@ -1226,7 +1226,7 @@ namespace NetOffice.WordApi
         /// <param name="confirmConversions">optional object confirmConversions</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions)
         {
             Factory.ExecuteMethod(this, "OpenDataSource2000", name, format, confirmConversions);
@@ -1241,7 +1241,7 @@ namespace NetOffice.WordApi
         /// <param name="readOnly">optional object readOnly</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly)
         {
             Factory.ExecuteMethod(this, "OpenDataSource2000", name, format, confirmConversions, readOnly);
@@ -1257,10 +1257,10 @@ namespace NetOffice.WordApi
         /// <param name="linkToSource">optional object linkToSource</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource });
         }
 
         /// <summary>
@@ -1274,10 +1274,10 @@ namespace NetOffice.WordApi
         /// <param name="addToRecentFiles">optional object addToRecentFiles</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles });
         }
 
         /// <summary>
@@ -1292,10 +1292,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument });
         }
 
         /// <summary>
@@ -1311,10 +1311,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate });
         }
 
         /// <summary>
@@ -1331,10 +1331,10 @@ namespace NetOffice.WordApi
         /// <param name="revert">optional object revert</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert });
         }
 
         /// <summary>
@@ -1352,10 +1352,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
         }
 
         /// <summary>
@@ -1374,10 +1374,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
         }
 
         /// <summary>
@@ -1397,10 +1397,10 @@ namespace NetOffice.WordApi
         /// <param name="connection">optional object connection</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection });
         }
 
         /// <summary>
@@ -1421,10 +1421,10 @@ namespace NetOffice.WordApi
         /// <param name="sQLStatement">optional object sQLStatement</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenDataSource2000(string name, object format, object confirmConversions, object readOnly, object linkToSource, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate, object connection, object sQLStatement)
         {
-            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[]{ name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement });
+            Factory.ExecuteMethod(this, "OpenDataSource2000", new object[] { name, format, confirmConversions, readOnly, linkToSource, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate, connection, sQLStatement });
         }
 
         /// <summary>
@@ -1441,10 +1441,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         /// <param name="writePasswordTemplate">optional object writePasswordTemplate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument, object writePasswordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
+            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument, writePasswordTemplate });
         }
 
         /// <summary>
@@ -1453,7 +1453,7 @@ namespace NetOffice.WordApi
         /// <param name="name">string name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource2000", name);
@@ -1466,7 +1466,7 @@ namespace NetOffice.WordApi
         /// <param name="format">optional object format</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource2000", name, format);
@@ -1480,7 +1480,7 @@ namespace NetOffice.WordApi
         /// <param name="confirmConversions">optional object confirmConversions</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource2000", name, format, confirmConversions);
@@ -1495,7 +1495,7 @@ namespace NetOffice.WordApi
         /// <param name="readOnly">optional object readOnly</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly)
         {
             Factory.ExecuteMethod(this, "OpenHeaderSource2000", name, format, confirmConversions, readOnly);
@@ -1511,10 +1511,10 @@ namespace NetOffice.WordApi
         /// <param name="addToRecentFiles">optional object addToRecentFiles</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles });
+            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles });
         }
 
         /// <summary>
@@ -1528,10 +1528,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordDocument">optional object passwordDocument</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument });
+            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument });
         }
 
         /// <summary>
@@ -1546,10 +1546,10 @@ namespace NetOffice.WordApi
         /// <param name="passwordTemplate">optional object passwordTemplate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate });
+            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate });
         }
 
         /// <summary>
@@ -1565,10 +1565,10 @@ namespace NetOffice.WordApi
         /// <param name="revert">optional object revert</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert });
+            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert });
         }
 
         /// <summary>
@@ -1585,10 +1585,10 @@ namespace NetOffice.WordApi
         /// <param name="writePasswordDocument">optional object writePasswordDocument</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void OpenHeaderSource2000(string name, object format, object confirmConversions, object readOnly, object addToRecentFiles, object passwordDocument, object passwordTemplate, object revert, object writePasswordDocument)
         {
-            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[]{ name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
+            Factory.ExecuteMethod(this, "OpenHeaderSource2000", new object[] { name, format, confirmConversions, readOnly, addToRecentFiles, passwordDocument, passwordTemplate, revert, writePasswordDocument });
         }
 
         /// <summary>
@@ -1602,10 +1602,10 @@ namespace NetOffice.WordApi
         /// <param name="showWriteStep">optional object showWriteStep</param>
         /// <param name="showPreviewStep">optional object showPreviewStep</param>
         /// <param name="showMergeStep">optional object showMergeStep</param>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep, object showMergeStep)
         {
-            Factory.ExecuteMethod(this, "ShowWizard", new object[]{ initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep });
+            Factory.ExecuteMethod(this, "ShowWizard", new object[] { initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep, showMergeStep });
         }
 
         /// <summary>
@@ -1614,7 +1614,7 @@ namespace NetOffice.WordApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.MailMerge.ShowWizard"/> </remarks>
         /// <param name="initialState">object initialState</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState)
         {
             Factory.ExecuteMethod(this, "ShowWizard", initialState);
@@ -1627,7 +1627,7 @@ namespace NetOffice.WordApi
         /// <param name="initialState">object initialState</param>
         /// <param name="showDocumentStep">optional object showDocumentStep</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState, object showDocumentStep)
         {
             Factory.ExecuteMethod(this, "ShowWizard", initialState, showDocumentStep);
@@ -1641,7 +1641,7 @@ namespace NetOffice.WordApi
         /// <param name="showDocumentStep">optional object showDocumentStep</param>
         /// <param name="showTemplateStep">optional object showTemplateStep</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep)
         {
             Factory.ExecuteMethod(this, "ShowWizard", initialState, showDocumentStep, showTemplateStep);
@@ -1656,7 +1656,7 @@ namespace NetOffice.WordApi
         /// <param name="showTemplateStep">optional object showTemplateStep</param>
         /// <param name="showDataStep">optional object showDataStep</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep)
         {
             Factory.ExecuteMethod(this, "ShowWizard", initialState, showDocumentStep, showTemplateStep, showDataStep);
@@ -1672,10 +1672,10 @@ namespace NetOffice.WordApi
         /// <param name="showDataStep">optional object showDataStep</param>
         /// <param name="showWriteStep">optional object showWriteStep</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep)
         {
-            Factory.ExecuteMethod(this, "ShowWizard", new object[]{ initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep });
+            Factory.ExecuteMethod(this, "ShowWizard", new object[] { initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep });
         }
 
         /// <summary>
@@ -1689,14 +1689,14 @@ namespace NetOffice.WordApi
         /// <param name="showWriteStep">optional object showWriteStep</param>
         /// <param name="showPreviewStep">optional object showPreviewStep</param>
         [CustomMethod]
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public void ShowWizard(object initialState, object showDocumentStep, object showTemplateStep, object showDataStep, object showWriteStep, object showPreviewStep)
         {
-            Factory.ExecuteMethod(this, "ShowWizard", new object[]{ initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep });
+            Factory.ExecuteMethod(this, "ShowWizard", new object[] { initialState, showDocumentStep, showTemplateStep, showDataStep, showWriteStep, showPreviewStep });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

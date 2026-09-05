@@ -9,11 +9,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _WebBrowserControl 
     /// SupportByVersion Access, 14,15,16
     /// </summary>
-    [SupportByVersion("Access", 14,15,16)]
+    [SupportByVersion("Access", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _WebBrowserControl : NetOffice.OfficeApi.IAccessible
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _WebBrowserControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _WebBrowserControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _WebBrowserControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _WebBrowserControl(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _WebBrowserControl() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _WebBrowserControl(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Application"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Parent"/> </remarks>
-        [SupportByVersion("Access", 14,15,16), ProxyResult]
+        [SupportByVersion("Access", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OldValue"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public object OldValue
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Properties"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Properties Properties
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Controls"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Children Controls
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Hyperlink"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [BaseResult]
         public NetOffice.AccessApi._Hyperlink Hyperlink
         {
@@ -198,7 +198,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Value"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public object Value
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ControlSource"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string ControlSource
         {
             get
@@ -234,7 +234,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.DisplayWhen"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte DisplayWhen
         {
             get
@@ -252,7 +252,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Enabled"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public bool Enabled
         {
             get
@@ -270,7 +270,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ReadyState"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcWebBrowserState ReadyState
         {
             get
@@ -284,7 +284,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Progress"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 Progress
         {
             get
@@ -298,7 +298,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ScrollBars"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcWebBrowserScrollBars ScrollBars
         {
             get
@@ -316,7 +316,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ScrollTop"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 ScrollTop
         {
             get
@@ -334,7 +334,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ScrollLeft"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 ScrollLeft
         {
             get
@@ -352,7 +352,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Transform"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string Transform
         {
             get
@@ -370,7 +370,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.LocationURL"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string LocationURL
         {
             get
@@ -385,7 +385,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Object"/> </remarks>
-        [SupportByVersion("Access", 14,15,16), ProxyResult]
+        [SupportByVersion("Access", 14, 15, 16), ProxyResult]
         public object Object
         {
             get
@@ -399,7 +399,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Left"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 Left
         {
             get
@@ -417,7 +417,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Top"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 Top
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Width"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 Width
         {
             get
@@ -453,7 +453,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Height"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 Height
         {
             get
@@ -471,7 +471,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.SpecialEffect"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 SpecialEffect
         {
             get
@@ -489,7 +489,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BorderStyle"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte BorderStyle
         {
             get
@@ -507,7 +507,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BorderColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BorderColor
         {
             get
@@ -525,7 +525,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BorderWidth"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte BorderWidth
         {
             get
@@ -542,7 +542,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public byte BorderLineStyle
         {
@@ -561,7 +561,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Section"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 Section
         {
             get
@@ -579,7 +579,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnMouseDown"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnMouseDown
         {
             get
@@ -597,7 +597,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnMouseMove"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnMouseMove
         {
             get
@@ -615,7 +615,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnMouseUp"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnMouseUp
         {
             get
@@ -633,7 +633,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnKeyDown"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnKeyDown
         {
             get
@@ -651,7 +651,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnKeyUp"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnKeyUp
         {
             get
@@ -669,7 +669,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnKeyPress"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnKeyPress
         {
             get
@@ -687,7 +687,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Name"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string Name
         {
             get
@@ -705,7 +705,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Layout"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcLayoutType Layout
         {
             get
@@ -719,7 +719,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.LeftPadding"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 LeftPadding
         {
             get
@@ -737,7 +737,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.TopPadding"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 TopPadding
         {
             get
@@ -755,7 +755,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.RightPadding"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 RightPadding
         {
             get
@@ -773,7 +773,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BottomPadding"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 BottomPadding
         {
             get
@@ -791,7 +791,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineStyleLeft"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineStyleLeft
         {
             get
@@ -809,7 +809,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineStyleTop"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineStyleTop
         {
             get
@@ -827,7 +827,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineStyleRight"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineStyleRight
         {
             get
@@ -845,7 +845,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineStyleBottom"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineStyleBottom
         {
             get
@@ -863,7 +863,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineWidthLeft"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineWidthLeft
         {
             get
@@ -881,7 +881,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineWidthTop"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineWidthTop
         {
             get
@@ -899,7 +899,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineWidthRight"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineWidthRight
         {
             get
@@ -917,7 +917,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineWidthBottom"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte GridlineWidthBottom
         {
             get
@@ -935,7 +935,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 GridlineColor
         {
             get
@@ -953,7 +953,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.HorizontalAnchor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
         {
             get
@@ -971,7 +971,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.VerticalAnchor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
         {
             get
@@ -988,7 +988,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnClickMacro
         {
@@ -1006,7 +1006,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnDblClickMacro
         {
@@ -1024,7 +1024,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseDownMacro
         {
@@ -1042,7 +1042,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseMoveMacro
         {
@@ -1060,7 +1060,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseUpMacro
         {
@@ -1078,7 +1078,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyDownMacro
         {
@@ -1096,7 +1096,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyUpMacro
         {
@@ -1114,7 +1114,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyPressMacro
         {
@@ -1133,7 +1133,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.LayoutID"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 LayoutID
         {
             get
@@ -1147,7 +1147,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnBeforeNavigate"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnBeforeNavigate
         {
             get
@@ -1165,7 +1165,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnDocumentComplete"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnDocumentComplete
         {
             get
@@ -1183,7 +1183,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnNavigateError"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnNavigateError
         {
             get
@@ -1201,7 +1201,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnProgressChange"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnProgressChange
         {
             get
@@ -1219,7 +1219,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.OnUpdated"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string OnUpdated
         {
             get
@@ -1236,7 +1236,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnBeforeNavigateMacro
         {
@@ -1254,7 +1254,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnDocumentCompleteMacro
         {
@@ -1272,7 +1272,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnNavigateErrorMacro
         {
@@ -1290,7 +1290,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnProgressChangeMacro
         {
@@ -1308,7 +1308,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnUpdatedMacro
         {
@@ -1327,7 +1327,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.TabStop"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public bool TabStop
         {
             get
@@ -1345,7 +1345,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.TabIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int16 TabIndex
         {
             get
@@ -1363,7 +1363,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Visible"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public bool Visible
         {
             get
@@ -1381,7 +1381,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.InSelection"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool InSelection
         {
@@ -1400,7 +1400,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ControlType"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte ControlType
         {
             get
@@ -1418,7 +1418,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BorderThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BorderThemeColorIndex
         {
             get
@@ -1436,7 +1436,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BorderTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BorderTint
         {
             get
@@ -1454,7 +1454,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.BorderShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BorderShade
         {
             get
@@ -1472,7 +1472,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 GridlineThemeColorIndex
         {
             get
@@ -1490,7 +1490,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single GridlineTint
         {
             get
@@ -1508,7 +1508,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.GridlineShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single GridlineShade
         {
             get
@@ -1526,7 +1526,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.StatusBarText"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string StatusBarText
         {
             get
@@ -1544,7 +1544,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.ControlTipText"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string ControlTipText
         {
             get
@@ -1562,7 +1562,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.EventProcPrefix"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string EventProcPrefix
         {
             get
@@ -1580,7 +1580,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.HelpContextId"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 HelpContextId
         {
             get
@@ -1598,7 +1598,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Tag"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public string Tag
         {
             get
@@ -1619,7 +1619,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Undo"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Undo()
         {
             Factory.ExecuteMethod(this, "Undo");
@@ -1629,7 +1629,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.SizeToFit"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void SizeToFit()
         {
             Factory.ExecuteMethod(this, "SizeToFit");
@@ -1639,7 +1639,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Requery"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Requery()
         {
             Factory.ExecuteMethod(this, "Requery");
@@ -1649,7 +1649,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Goto()
         {
             Factory.ExecuteMethod(this, "Goto");
@@ -1659,7 +1659,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.SetFocus"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void SetFocus()
         {
             Factory.ExecuteMethod(this, "SetFocus");
@@ -1671,7 +1671,7 @@ namespace NetOffice.AccessApi
         /// <param name="bstrExpr">string bstrExpr</param>
         /// <param name="ppsa">optional object[] ppsa</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public object _Evaluate(string bstrExpr, object[] ppsa)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
@@ -1693,7 +1693,7 @@ namespace NetOffice.AccessApi
         /// <param name="bstrExpr">string bstrExpr</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public object _Evaluate(string bstrExpr)
         {
             return Factory.ExecuteVariantMethodGet(this, "_Evaluate", bstrExpr);
@@ -1707,7 +1707,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         /// <param name="height">optional object height</param>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Move(object left, object top, object width, object height)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width, height);
@@ -1719,7 +1719,7 @@ namespace NetOffice.AccessApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.WebBrowserControl.Move"/> </remarks>
         /// <param name="left">object left</param>
         [CustomMethod]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Move(object left)
         {
             Factory.ExecuteMethod(this, "Move", left);
@@ -1732,7 +1732,7 @@ namespace NetOffice.AccessApi
         /// <param name="left">object left</param>
         /// <param name="top">optional object top</param>
         [CustomMethod]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Move(object left, object top)
         {
             Factory.ExecuteMethod(this, "Move", left, top);
@@ -1746,7 +1746,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         [CustomMethod]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public void Move(object left, object top, object width)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width);
@@ -1757,7 +1757,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -1765,6 +1765,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

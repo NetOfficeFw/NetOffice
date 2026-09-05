@@ -9,11 +9,11 @@ namespace NetOffice.ADODBApi
     /// DispatchInterface Field15 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Field15 : _ADO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Field15(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public Field15(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.ADODBApi
         public Field15(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Field15(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Field15() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Field15(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 ActualSize
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 Attributes
         {
             get
@@ -137,7 +137,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 DefinedSize
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public string Name
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public NetOffice.ADODBApi.Enums.DataTypeEnum Type
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public object Value
         {
             get
@@ -193,7 +193,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public byte Precision
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public byte NumericScale
         {
             get
@@ -219,7 +219,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public object OriginalValue
         {
             get
@@ -232,7 +232,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public object UnderlyingValue
         {
             get
@@ -249,7 +249,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <param name="data">object data</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public void AppendChunk(object data)
         {
             Factory.ExecuteMethod(this, "AppendChunk", data);
@@ -259,7 +259,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <param name="length">Int32 length</param>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public object GetChunk(Int32 length)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetChunk", length);
@@ -267,6 +267,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

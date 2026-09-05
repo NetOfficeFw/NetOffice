@@ -9,11 +9,11 @@ namespace NetOffice.VBIDEApi
     /// DispatchInterface VBE 
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class VBE : Application
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.VBIDEApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.VBIDEApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public VBE(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi
         public VBE(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.VBIDEApi
         public VBE(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public VBE(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public VBE() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public VBE(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBProjects VBProjects
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.OfficeApi.CommandBars CommandBars
         {
             get
@@ -137,7 +137,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.CodePanes CodePanes
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Windows Windows
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Events Events
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBProject ActiveVBProject
         {
             get
@@ -193,7 +193,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBComponent SelectedVBComponent
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Window MainWindow
         {
             get
@@ -219,7 +219,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Window ActiveWindow
         {
             get
@@ -232,7 +232,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.CodePane ActiveCodePane
         {
             get
@@ -249,7 +249,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Addins Addins
         {
             get
@@ -264,6 +264,6 @@ namespace NetOffice.VBIDEApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

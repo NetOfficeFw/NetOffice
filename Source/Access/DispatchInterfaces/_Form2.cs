@@ -12,11 +12,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _Form2 
     /// SupportByVersion Access, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 10,11,12,14,15,16)]
+    [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class _Form2 : _Form, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Form2(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.AccessApi
         public _Form2(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.AccessApi
         public _Form2(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Form2(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Form2() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Form2(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public byte DatasheetBorderLineStyle
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public byte DatasheetColumnHeaderUnderlineStyle
         {
             get
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public byte HorizontalDatasheetGridlineStyle
         {
             get
@@ -165,7 +165,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public byte VerticalDatasheetGridlineStyle
         {
             get
@@ -182,7 +182,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public Int16 WindowTop
         {
             get
@@ -195,7 +195,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public Int16 WindowLeft
         {
             get
@@ -208,7 +208,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string OnUndo
         {
             get
@@ -225,7 +225,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnRecordExit
         {
@@ -243,7 +243,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OWC10Api.PivotTable PivotTable
         {
             get
@@ -256,7 +256,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OWC10Api.ChartSpace ChartSpace
         {
             get
@@ -269,7 +269,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.AccessApi._Printer Printer
         {
@@ -287,7 +287,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool Moveable
         {
             get
@@ -304,7 +304,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string BeginBatchEdit
         {
@@ -322,7 +322,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string UndoBatchEdit
         {
@@ -340,7 +340,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string BeforeBeginTransaction
         {
@@ -358,7 +358,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string AfterBeginTransaction
         {
@@ -376,7 +376,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string BeforeCommitTransaction
         {
@@ -394,7 +394,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string AfterCommitTransaction
         {
@@ -412,7 +412,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string RollbackTransaction
         {
@@ -430,7 +430,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool AllowFormView
         {
             get
@@ -447,7 +447,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool AllowDatasheetView
         {
             get
@@ -464,7 +464,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool AllowPivotTableView
         {
             get
@@ -481,7 +481,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool AllowPivotChartView
         {
             get
@@ -498,7 +498,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string OnConnect
         {
             get
@@ -515,7 +515,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string OnDisconnect
         {
             get
@@ -532,7 +532,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string PivotTableChange
         {
             get
@@ -549,7 +549,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string Query
         {
             get
@@ -566,7 +566,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string BeforeQuery
         {
             get
@@ -583,7 +583,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string SelectionChange
         {
             get
@@ -600,7 +600,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string CommandBeforeExecute
         {
             get
@@ -617,7 +617,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string CommandChecked
         {
             get
@@ -634,7 +634,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string CommandEnabled
         {
             get
@@ -651,7 +651,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string CommandExecute
         {
             get
@@ -668,7 +668,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string DataSetChange
         {
             get
@@ -685,7 +685,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string BeforeScreenTip
         {
             get
@@ -702,7 +702,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string AfterFinalRender
         {
             get
@@ -719,7 +719,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string AfterRender
         {
             get
@@ -736,7 +736,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string AfterLayout
         {
             get
@@ -753,7 +753,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string BeforeRender
         {
             get
@@ -770,7 +770,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string MouseWheel
         {
             get
@@ -787,7 +787,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string ViewChange
         {
             get
@@ -804,7 +804,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string DataChange
         {
             get
@@ -821,7 +821,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool FetchDefaults
         {
             get
@@ -838,7 +838,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool BatchUpdates
         {
@@ -856,7 +856,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public byte CommitOnClose
         {
@@ -874,7 +874,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool CommitOnNavigation
         {
@@ -892,7 +892,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public bool UseDefaultPrinter
         {
             get
@@ -909,7 +909,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public string RecordSourceQualifier
         {
             get
@@ -933,7 +933,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         /// <param name="height">optional object height</param>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top, object width, object height)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width, height);
@@ -944,7 +944,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="left">object left</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left)
         {
             Factory.ExecuteMethod(this, "Move", left);
@@ -956,7 +956,7 @@ namespace NetOffice.AccessApi
         /// <param name="left">object left</param>
         /// <param name="top">optional object top</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top)
         {
             Factory.ExecuteMethod(this, "Move", left, top);
@@ -969,14 +969,14 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top, object width)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width);
         }
 
         #endregion
-      
+
         #region IEnumerableProvider<object>
 
         ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
@@ -1011,7 +1011,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// SupportByVersion Access, 10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, true);
@@ -1019,6 +1019,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

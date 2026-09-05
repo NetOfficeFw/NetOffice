@@ -16,7 +16,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Names : COMObject, IEnumerableProvider<NetOffice.OWC10Api.Name>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Names(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OWC10Api
         public Names(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.OWC10Api
         public Names(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Names(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Names() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Names(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.OWC10Api
         #endregion
 
         #region Methods
-        
+
         /// <summary>
         /// SupportByVersion OWC10 1
         /// Custom Indexer
@@ -219,7 +219,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1, object refersToR1C1Local)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1, refersToR1C1Local });
         }
 
         /// <summary>
@@ -294,7 +294,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey });
         }
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey, category });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey, category });
         }
 
         /// <summary>
@@ -327,7 +327,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal });
         }
 
         /// <summary>
@@ -345,7 +345,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal });
         }
 
         /// <summary>
@@ -364,7 +364,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal });
         }
 
         /// <summary>
@@ -384,7 +384,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Add(object name, object refersTo, object visible, object macroType, object shortcutKey, object category, object nameLocal, object refersToLocal, object categoryLocal, object refersToR1C1)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1 });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, refersTo, visible, macroType, shortcutKey, category, nameLocal, refersToLocal, categoryLocal, refersToR1C1 });
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal, object varRefersToR1C1, object varRefersToR1C1Local)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1, varRefersToR1C1Local });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1, varRefersToR1C1Local });
         }
 
         /// <summary>
@@ -486,7 +486,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey });
         }
 
         /// <summary>
@@ -503,7 +503,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory });
         }
 
         /// <summary>
@@ -521,7 +521,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal });
         }
 
         /// <summary>
@@ -540,7 +540,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal });
         }
 
         /// <summary>
@@ -560,7 +560,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal });
         }
 
         /// <summary>
@@ -581,7 +581,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddUI(object varName, object varRefersTo, object varVisible, object varMacroType, object varShortcutKey, object varCategory, object varNameLocal, object varRefersToLocal, object varCategoryLocal, object varRefersToR1C1)
         {
-            Factory.ExecuteMethod(this, "AddUI", new object[]{ varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1 });
+            Factory.ExecuteMethod(this, "AddUI", new object[] { varName, varRefersTo, varVisible, varMacroType, varShortcutKey, varCategory, varNameLocal, varRefersToLocal, varCategoryLocal, varRefersToR1C1 });
         }
 
         #endregion
@@ -628,6 +628,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

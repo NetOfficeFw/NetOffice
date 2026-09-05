@@ -1,4 +1,4 @@
-// Copyright 2025 Cisco Systems, Inc. All rights reserved.
+﻿// Copyright 2025 Cisco Systems, Inc. All rights reserved.
 // Licensed under MIT-style license (see LICENSE.txt file).
 //
 // Generated code file by Claude Haiku 4.5
@@ -24,7 +24,7 @@ namespace NetOffice.OfficeApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class SensitivityLabel : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -159,11 +159,11 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 16)]
         public void SetLabel(NetOffice.OfficeApi.LabelInfo labelInfo, object context)
         {
-            Factory.ExecuteMethod(this, "SetLabel", new object[]{ labelInfo, context });
+            Factory.ExecuteMethod(this, "SetLabel", new object[] { labelInfo, context });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

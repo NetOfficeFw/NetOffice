@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface IMsoChartGroup 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class IMsoChartGroup : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IMsoChartGroup(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public IMsoChartGroup(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.OfficeApi
         public IMsoChartGroup(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IMsoChartGroup(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IMsoChartGroup() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IMsoChartGroup(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 AxisGroup
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 DoughnutHoleSize
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoDownBars DownBars
         {
             get
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoDropLines DropLines
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 FirstSliceAngle
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 GapWidth
         {
             get
@@ -205,7 +205,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool HasDropLines
         {
             get
@@ -222,7 +222,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool HasHiLoLines
         {
             get
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool HasRadarAxisLabels
         {
             get
@@ -256,7 +256,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool HasSeriesLines
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool HasUpDownBars
         {
             get
@@ -290,7 +290,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoHiLoLines HiLoLines
         {
             get
@@ -303,7 +303,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Index
         {
             get
@@ -316,7 +316,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Overlap
         {
             get
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
         public object RadarAxisLabels
         {
             get
@@ -347,7 +347,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoSeriesLines SeriesLines
         {
             get
@@ -360,7 +360,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 SubType
         {
@@ -378,7 +378,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 Type
         {
@@ -396,7 +396,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoUpBars UpBars
         {
             get
@@ -409,7 +409,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool VaryByCategories
         {
             get
@@ -426,7 +426,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.XlSizeRepresents SizeRepresents
         {
             get
@@ -443,7 +443,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 BubbleScale
         {
             get
@@ -460,7 +460,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool ShowNegativeBubbles
         {
             get
@@ -477,7 +477,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.XlChartSplitType SplitType
         {
             get
@@ -494,7 +494,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public object SplitValue
         {
             get
@@ -511,7 +511,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 SecondPlotSize
         {
             get
@@ -528,7 +528,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool Has3DShading
         {
             get
@@ -546,7 +546,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 14,15,16), ProxyResult]
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -559,7 +559,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -573,7 +573,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 14,15,16), ProxyResult]
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -590,7 +590,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         /// <param name="index">optional object index</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public object SeriesCollection(object index)
         {
             return Factory.ExecuteVariantMethodGet(this, "SeriesCollection", index);
@@ -600,7 +600,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public object SeriesCollection()
         {
             return Factory.ExecuteVariantMethodGet(this, "SeriesCollection");
@@ -648,6 +648,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

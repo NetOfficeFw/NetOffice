@@ -9,11 +9,11 @@ namespace NetOffice.ADODBApi
     /// Interface ADORecordsetConstruction 
     /// SupportByVersion ADODB, 2.1,2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsInterface)]
     public class ADORecordsetConstruction : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.ADODBApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ADORecordsetConstruction(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.ADODBApi
         public ADORecordsetConstruction(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.ADODBApi
         public ADORecordsetConstruction(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ADORecordsetConstruction(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ADORecordsetConstruction() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ADORecordsetConstruction(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.ADODBApi
         /// Get/Set
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5), ProxyResult]
+        [SupportByVersion("ADODB", 2.1, 2.5), ProxyResult]
         public object Rowset
         {
             get
@@ -129,7 +129,7 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB 2.1, 2.5
         /// Get/Set
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         public Int32 Chapter
         {
             get
@@ -147,7 +147,7 @@ namespace NetOffice.ADODBApi
         /// Get/Set
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("ADODB", 2.1,2.5), ProxyResult]
+        [SupportByVersion("ADODB", 2.1, 2.5), ProxyResult]
         public object RowPosition
         {
             get
@@ -166,6 +166,6 @@ namespace NetOffice.ADODBApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -9,11 +9,11 @@ namespace NetOffice.DAOApi
     /// DispatchInterface _Relation 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Relation : _DAO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Relation(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.DAOApi
         public _Relation(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.DAOApi
         public _Relation(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Relation(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Relation() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Relation(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Name
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Table
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string ForeignTable
         {
             get
@@ -162,7 +162,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public Int32 Attributes
         {
             get
@@ -179,7 +179,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Fields Fields
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public bool PartialReplica
         {
             get
@@ -215,7 +215,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">optional object name</param>
         /// <param name="type">optional object type</param>
         /// <param name="size">optional object size</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Field CreateField(object name, object type, object size)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType, name, type, size);
@@ -225,7 +225,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Field CreateField()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType);
@@ -236,7 +236,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Field CreateField(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType, name);
@@ -248,7 +248,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">optional object name</param>
         /// <param name="type">optional object type</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Field CreateField(object name, object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.Field>(this, "CreateField", NetOffice.DAOApi.Field.LateBindingApiWrapperType, name, type);
@@ -256,6 +256,6 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

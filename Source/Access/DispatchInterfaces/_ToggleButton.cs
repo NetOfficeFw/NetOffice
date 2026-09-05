@@ -9,11 +9,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _ToggleButton 
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _ToggleButton : NetOffice.OfficeApi.IAccessible
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _ToggleButton(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _ToggleButton(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _ToggleButton(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _ToggleButton(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _ToggleButton() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _ToggleButton(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Application"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Parent"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OldValue"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object OldValue
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Properties"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Properties Properties
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Controls"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Children Controls
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Value"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object Value
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.EventProcPrefix"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string EventProcPrefix
         {
             get
@@ -218,7 +218,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string _Name
         {
@@ -237,7 +237,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ControlType"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte ControlType
         {
             get
@@ -255,7 +255,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ControlSource"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ControlSource
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Caption"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Caption
         {
             get
@@ -291,7 +291,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Picture"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Picture
         {
             get
@@ -309,7 +309,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PictureType"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte PictureType
         {
             get
@@ -327,7 +327,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PictureData"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object PictureData
         {
@@ -346,7 +346,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OptionValue"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 OptionValue
         {
             get
@@ -364,7 +364,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.DefaultValue"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string DefaultValue
         {
             get
@@ -382,7 +382,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ValidationRule"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ValidationRule
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ValidationText"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ValidationText
         {
             get
@@ -418,7 +418,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.StatusBarText"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string StatusBarText
         {
             get
@@ -436,7 +436,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Visible"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool Visible
         {
             get
@@ -454,7 +454,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.DisplayWhen"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte DisplayWhen
         {
             get
@@ -472,7 +472,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Enabled"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool Enabled
         {
             get
@@ -490,7 +490,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Locked"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool Locked
         {
             get
@@ -508,7 +508,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.TripleState"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool TripleState
         {
             get
@@ -526,7 +526,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.TabStop"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool TabStop
         {
             get
@@ -544,7 +544,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.TabIndex"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 TabIndex
         {
             get
@@ -562,7 +562,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HideDuplicates"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool HideDuplicates
         {
             get
@@ -580,7 +580,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Left"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Left
         {
             get
@@ -598,7 +598,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Top"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Top
         {
             get
@@ -616,7 +616,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Width"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Width
         {
             get
@@ -634,7 +634,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Height"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Height
         {
             get
@@ -652,7 +652,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ForeColor"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 ForeColor
         {
             get
@@ -670,7 +670,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.FontName"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string FontName
         {
             get
@@ -688,7 +688,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.FontSize"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 FontSize
         {
             get
@@ -706,7 +706,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.FontWeight"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 FontWeight
         {
             get
@@ -724,7 +724,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.FontItalic"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool FontItalic
         {
             get
@@ -742,7 +742,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.FontUnderline"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool FontUnderline
         {
             get
@@ -759,7 +759,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public byte TextFontCharSet
         {
@@ -778,7 +778,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.FontBold"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 FontBold
         {
             get
@@ -796,7 +796,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ShortcutMenuBar"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ShortcutMenuBar
         {
             get
@@ -814,7 +814,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ControlTipText"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ControlTipText
         {
             get
@@ -832,7 +832,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HelpContextId"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HelpContextId
         {
             get
@@ -850,7 +850,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ColumnWidth"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 ColumnWidth
         {
             get
@@ -868,7 +868,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ColumnOrder"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 ColumnOrder
         {
             get
@@ -886,7 +886,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ColumnHidden"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool ColumnHidden
         {
             get
@@ -904,7 +904,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.AutoLabel"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool AutoLabel
         {
             get
@@ -922,7 +922,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.AddColon"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool AddColon
         {
             get
@@ -940,7 +940,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.LabelX"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 LabelX
         {
             get
@@ -958,7 +958,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.LabelY"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 LabelY
         {
             get
@@ -976,7 +976,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.LabelAlign"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte LabelAlign
         {
             get
@@ -994,7 +994,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Section"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Section
         {
             get
@@ -1011,7 +1011,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string ControlName
         {
@@ -1030,7 +1030,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Tag"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Tag
         {
             get
@@ -1048,7 +1048,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ObjectPalette"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object ObjectPalette
         {
@@ -1067,7 +1067,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.IsVisible"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool IsVisible
         {
             get
@@ -1085,7 +1085,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.InSelection"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool InSelection
         {
@@ -1104,7 +1104,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BeforeUpdate-property"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string BeforeUpdate
         {
             get
@@ -1122,7 +1122,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.AfterUpdate-property"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string AfterUpdate
         {
             get
@@ -1140,7 +1140,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnEnter"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnEnter
         {
             get
@@ -1158,7 +1158,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnExit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnExit
         {
             get
@@ -1176,7 +1176,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnGotFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnGotFocus
         {
             get
@@ -1194,7 +1194,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnLostFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnLostFocus
         {
             get
@@ -1212,7 +1212,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnClick
         {
             get
@@ -1230,7 +1230,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnDblClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnDblClick
         {
             get
@@ -1248,7 +1248,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnMouseDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnMouseDown
         {
             get
@@ -1266,7 +1266,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnMouseMove"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnMouseMove
         {
             get
@@ -1284,7 +1284,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnMouseUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnMouseUp
         {
             get
@@ -1302,7 +1302,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnKeyDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnKeyDown
         {
             get
@@ -1320,7 +1320,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnKeyUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnKeyUp
         {
             get
@@ -1338,7 +1338,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.OnKeyPress"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnKeyPress
         {
             get
@@ -1356,7 +1356,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ReadingOrder"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public byte ReadingOrder
         {
@@ -1375,7 +1375,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Name"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -1392,7 +1392,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string BeforeUpdateMacro
         {
@@ -1410,7 +1410,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string AfterUpdateMacro
         {
@@ -1428,7 +1428,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnEnterMacro
         {
@@ -1446,7 +1446,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnExitMacro
         {
@@ -1464,7 +1464,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnGotFocusMacro
         {
@@ -1482,7 +1482,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnLostFocusMacro
         {
@@ -1500,7 +1500,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnClickMacro
         {
@@ -1518,7 +1518,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnDblClickMacro
         {
@@ -1536,7 +1536,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseDownMacro
         {
@@ -1554,7 +1554,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseMoveMacro
         {
@@ -1572,7 +1572,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseUpMacro
         {
@@ -1590,7 +1590,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyDownMacro
         {
@@ -1608,7 +1608,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyUpMacro
         {
@@ -1626,7 +1626,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyPressMacro
         {
@@ -1645,7 +1645,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Layout"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcLayoutType Layout
         {
             get
@@ -1659,7 +1659,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.LeftPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 LeftPadding
         {
             get
@@ -1677,7 +1677,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.TopPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 TopPadding
         {
             get
@@ -1695,7 +1695,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.RightPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 RightPadding
         {
             get
@@ -1713,7 +1713,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BottomPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 BottomPadding
         {
             get
@@ -1731,7 +1731,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineStyleLeft"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleLeft
         {
             get
@@ -1749,7 +1749,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineStyleTop"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleTop
         {
             get
@@ -1767,7 +1767,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineStyleRight"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleRight
         {
             get
@@ -1785,7 +1785,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineStyleBottom"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleBottom
         {
             get
@@ -1803,7 +1803,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineWidthLeft"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthLeft
         {
             get
@@ -1821,7 +1821,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineWidthTop"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthTop
         {
             get
@@ -1839,7 +1839,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineWidthRight"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthRight
         {
             get
@@ -1857,7 +1857,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineWidthBottom"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthBottom
         {
             get
@@ -1875,7 +1875,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineColor"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int32 GridlineColor
         {
             get
@@ -1893,7 +1893,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HorizontalAnchor"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
         {
             get
@@ -1911,7 +1911,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.VerticalAnchor"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
         {
             get
@@ -1929,7 +1929,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.LayoutID"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int32 LayoutID
         {
             get
@@ -1943,7 +1943,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ForeThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 ForeThemeColorIndex
         {
             get
@@ -1961,7 +1961,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ForeTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single ForeTint
         {
             get
@@ -1979,7 +1979,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ForeShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single ForeShade
         {
             get
@@ -1997,7 +1997,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.ThemeFontIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 ThemeFontIndex
         {
             get
@@ -2015,7 +2015,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BackColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BackColor
         {
             get
@@ -2033,7 +2033,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BackThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BackThemeColorIndex
         {
             get
@@ -2051,7 +2051,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BackTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BackTint
         {
             get
@@ -2069,7 +2069,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BackShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BackShade
         {
             get
@@ -2087,7 +2087,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BorderColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BorderColor
         {
             get
@@ -2105,7 +2105,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BorderThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BorderThemeColorIndex
         {
             get
@@ -2123,7 +2123,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BorderTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BorderTint
         {
             get
@@ -2141,7 +2141,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BorderShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BorderShade
         {
             get
@@ -2159,7 +2159,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BorderWidth"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte BorderWidth
         {
             get
@@ -2177,7 +2177,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BorderStyle"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public byte BorderStyle
         {
             get
@@ -2195,7 +2195,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 HoverColor
         {
             get
@@ -2213,7 +2213,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 HoverThemeColorIndex
         {
             get
@@ -2231,7 +2231,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single HoverTint
         {
             get
@@ -2249,7 +2249,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single HoverShade
         {
             get
@@ -2267,7 +2267,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverForeColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 HoverForeColor
         {
             get
@@ -2285,7 +2285,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverForeThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 HoverForeThemeColorIndex
         {
             get
@@ -2303,7 +2303,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverForeTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single HoverForeTint
         {
             get
@@ -2321,7 +2321,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.HoverForeShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single HoverForeShade
         {
             get
@@ -2339,7 +2339,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 PressedColor
         {
             get
@@ -2357,7 +2357,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 PressedThemeColorIndex
         {
             get
@@ -2375,7 +2375,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single PressedTint
         {
             get
@@ -2393,7 +2393,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single PressedShade
         {
             get
@@ -2411,7 +2411,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedForeColor"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 PressedForeColor
         {
             get
@@ -2429,7 +2429,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedForeThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 PressedForeThemeColorIndex
         {
             get
@@ -2447,7 +2447,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedForeTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single PressedForeTint
         {
             get
@@ -2465,7 +2465,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.PressedForeShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single PressedForeShade
         {
             get
@@ -2483,7 +2483,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.UseTheme"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public bool UseTheme
         {
             get
@@ -2501,7 +2501,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Shape"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 Shape
         {
             get
@@ -2519,7 +2519,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Bevel"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 Bevel
         {
             get
@@ -2537,7 +2537,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Glow"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 Glow
         {
             get
@@ -2555,7 +2555,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Shadow"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 Shadow
         {
             get
@@ -2573,7 +2573,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.SoftEdges"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 SoftEdges
         {
             get
@@ -2591,7 +2591,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 GridlineThemeColorIndex
         {
             get
@@ -2609,7 +2609,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single GridlineTint
         {
             get
@@ -2627,7 +2627,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GridlineShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single GridlineShade
         {
             get
@@ -2645,7 +2645,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.QuickStyle"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 QuickStyle
         {
             get
@@ -2663,7 +2663,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.togglebutton.quickstylemask"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 QuickStyleMask
         {
             get
@@ -2681,7 +2681,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Gradient"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 Gradient
         {
             get
@@ -2702,7 +2702,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Undo"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Undo()
         {
             Factory.ExecuteMethod(this, "Undo");
@@ -2712,7 +2712,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.SizeToFit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void SizeToFit()
         {
             Factory.ExecuteMethod(this, "SizeToFit");
@@ -2722,7 +2722,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Requery"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Requery()
         {
             Factory.ExecuteMethod(this, "Requery");
@@ -2732,7 +2732,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Goto()
         {
             Factory.ExecuteMethod(this, "Goto");
@@ -2742,7 +2742,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.SetFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void SetFocus()
         {
             Factory.ExecuteMethod(this, "SetFocus");
@@ -2754,7 +2754,7 @@ namespace NetOffice.AccessApi
         /// <param name="bstrExpr">string bstrExpr</param>
         /// <param name="ppsa">optional object[] ppsa</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object _Evaluate(string bstrExpr, object[] ppsa)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
@@ -2776,7 +2776,7 @@ namespace NetOffice.AccessApi
         /// <param name="bstrExpr">string bstrExpr</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object _Evaluate(string bstrExpr)
         {
             return Factory.ExecuteVariantMethodGet(this, "_Evaluate", bstrExpr);
@@ -2790,7 +2790,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         /// <param name="height">optional object height</param>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top, object width, object height)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width, height);
@@ -2802,7 +2802,7 @@ namespace NetOffice.AccessApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Move"/> </remarks>
         /// <param name="left">object left</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left)
         {
             Factory.ExecuteMethod(this, "Move", left);
@@ -2815,7 +2815,7 @@ namespace NetOffice.AccessApi
         /// <param name="left">object left</param>
         /// <param name="top">optional object top</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top)
         {
             Factory.ExecuteMethod(this, "Move", left, top);
@@ -2829,7 +2829,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top, object width)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width);
@@ -2840,7 +2840,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -2848,6 +2848,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

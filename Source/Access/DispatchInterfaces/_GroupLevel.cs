@@ -9,11 +9,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _GroupLevel 
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _GroupLevel : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _GroupLevel(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _GroupLevel(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _GroupLevel(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _GroupLevel(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _GroupLevel() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _GroupLevel(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Application"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Parent"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Properties"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Properties Properties
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.ControlSource"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ControlSource
         {
             get
@@ -173,7 +173,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.SortOrder"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool SortOrder
         {
             get
@@ -191,7 +191,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupHeader"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool GroupHeader
         {
             get
@@ -209,7 +209,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupFooter"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool GroupFooter
         {
             get
@@ -227,7 +227,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupOn"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 GroupOn
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupInterval"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 GroupInterval
         {
             get
@@ -263,7 +263,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.KeepTogether"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte KeepTogether
         {
             get
@@ -285,7 +285,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -293,6 +293,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

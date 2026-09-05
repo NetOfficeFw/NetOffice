@@ -17,7 +17,7 @@ namespace NetOffice.Contribution.CollectionsGeneric
         private PropertyDescriptor _sortProperty;
 
         #endregion
-        
+
         #region Ctor
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace NetOffice.Contribution.CollectionsGeneric
             {
                 return 0;
             }
-          
+
             return lhsValue.ToString().CompareTo(rhsValue.ToString());
         }
 

@@ -25,7 +25,7 @@ namespace NetOffice.Running
         #endregion
 
         #region Nested
-         
+
         internal class RunningObjectTableItemCollection : SortableBindingList<ProxyInformation>, IDisposableSequence<ProxyInformation>
         {
             #region IDisposableEnumeration<ProxyInformation>
@@ -285,7 +285,7 @@ namespace NetOffice.Running
         /// <param name="className">class name, for example Application, null is a wildcard </param>
         /// <returns>COM proxy enumerator</returns>
         public static IDisposableSequence GetActiveProxies(string componentName, string className)
-        {          
+        {
             IEnumMoniker monikerList = null;
             IRunningObjectTable runningObjectTable = null;
             List<object> resultList = new List<object>();
@@ -316,9 +316,9 @@ namespace NetOffice.Running
                     string component = TypeDescriptor.GetComponentName(comInstance, false);
 
                     // match for equal and add to list
-                    bool componentNameEqual = String.IsNullOrWhiteSpace(component) ? true : 
+                    bool componentNameEqual = String.IsNullOrWhiteSpace(component) ? true :
                         (componentName.Equals(component, StringComparison.InvariantCultureIgnoreCase));
-                    bool classNameEqual = String.IsNullOrWhiteSpace(className) ? true : 
+                    bool classNameEqual = String.IsNullOrWhiteSpace(className) ? true :
                         (className.Equals(name, StringComparison.InvariantCultureIgnoreCase));
 
                     if (componentNameEqual && classNameEqual)
@@ -428,7 +428,7 @@ namespace NetOffice.Running
                             monikerContainer[0].GetDisplayName(bindInfo, null, out displayName);
                             monikerContainer[0].GetClassID(out classID);
                             TryMarshalReleaseComObject(bindInfo);
-                             
+
                         }
 
                         string itemClassName = TypeDescriptor.GetClassName(comInstance);
@@ -437,14 +437,14 @@ namespace NetOffice.Running
                         COMTypes.ITypeInfo typeInfo = null;
                         string itemLibrary = String.Empty;
                         if (classID != Guid.Empty)
-                        { 
+                        {
                             typeInfo = TryCreateTypeInfo(comInstance);
                             itemLibrary = null != typeInfo ? GetParentLibraryGuid(typeInfo).ToString() : String.Empty;
                         }
 
                         string itemID = classID != Guid.Empty ? classID.ToString() : String.Empty;
 
-                        ProxyInformation entry = 
+                        ProxyInformation entry =
                             new ProxyInformation(comInstance, displayName, itemID, itemClassName,
                             itemComponentName, itemLibrary, IntPtr.Zero, ProxyInformation.ProcessElevation.Unknown);
 
@@ -504,7 +504,7 @@ namespace NetOffice.Running
                         continue;
 
                     string name = TypeDescriptor.GetClassName(comInstance);
-                    string component = TypeDescriptor.GetComponentName(comInstance, false);                    
+                    string component = TypeDescriptor.GetComponentName(comInstance, false);
 
                     IBindCtx bindInfo = null;
                     string displayName = String.Empty;
@@ -558,7 +558,7 @@ namespace NetOffice.Running
 
         internal static void ReleaseTypeInfo(COMTypes.ITypeInfo typeInfo)
         {
-            if(null != typeInfo)
+            if (null != typeInfo)
                 Marshal.ReleaseComObject(typeInfo);
         }
 
@@ -598,7 +598,7 @@ namespace NetOffice.Running
             parentGuid = attributes.guid;
             parentTypeLib.ReleaseTLibAttr(attributesPointer);
             Marshal.ReleaseComObject(parentTypeLib);
-             
+
             return parentGuid;
         }
 

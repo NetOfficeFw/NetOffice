@@ -12,11 +12,11 @@ namespace NetOffice.VBIDEApi
     /// DispatchInterface _Windows_old 
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class _Windows_old : COMObject, IEnumerableProvider<NetOffice.VBIDEApi.Window>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.VBIDEApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.VBIDEApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Windows_old(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.VBIDEApi
         public _Windows_old(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.VBIDEApi
         public _Windows_old(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Windows_old(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Windows_old() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Windows_old(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBE VBE
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [BaseResult]
         public NetOffice.VBIDEApi.Application Parent
         {
@@ -141,7 +141,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public Int32 Count
         {
             get
@@ -158,7 +158,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.VBIDEApi.Window this[object index]
         {
@@ -204,7 +204,7 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// SupportByVersion VBIDE, 12,14,5.3
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this, false);
@@ -212,6 +212,6 @@ namespace NetOffice.VBIDEApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

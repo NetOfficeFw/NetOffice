@@ -9,14 +9,14 @@ namespace NetOffice.DAOApi.GlobalHelperModules
     /// Module GlobalModule
     /// SupportByVersion DAO, 3.6,12.0
     ///</summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsModule)]
     public static class GlobalModule
     {
         #region Fields
 
         private static ICOMObject _instance;
-        
+
         #endregion
 
         #region Internal Properties
@@ -38,10 +38,10 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Factory;
-            else
-                return Core.Default;
+                else
+                    return Core.Default;
             }
         }
 
@@ -49,10 +49,10 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Invoker;
-            else
-                return Invoker.Default;
+                else
+                    return Invoker.Default;
             }
         }
 
@@ -64,7 +64,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static string Version
         {
             get
@@ -79,7 +79,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static string IniPath
         {
             get
@@ -99,7 +99,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static string DefaultUser
         {
             get
@@ -119,7 +119,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static string DefaultPassword
         {
             get
@@ -139,7 +139,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static Int16 LoginTimeout
         {
             get
@@ -159,14 +159,14 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Workspaces Workspaces
         {
             get
             {
                 object[] paramsArray = null;
                 object returnItem = Invoker.PropertyGet(_instance, "Workspaces", paramsArray);
-                NetOffice.DAOApi.Workspaces newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.DAOApi.Workspaces.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspaces;
+                NetOffice.DAOApi.Workspaces newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Workspaces.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspaces;
                 return newObject;
             }
         }
@@ -175,14 +175,14 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Errors Errors
         {
             get
             {
                 object[] paramsArray = null;
                 object returnItem = Invoker.PropertyGet(_instance, "Errors", paramsArray);
-                NetOffice.DAOApi.Errors newObject = Factory.CreateKnownObjectFromComProxy(_instance,returnItem,NetOffice.DAOApi.Errors.LateBindingApiWrapperType) as NetOffice.DAOApi.Errors;
+                NetOffice.DAOApi.Errors newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Errors.LateBindingApiWrapperType) as NetOffice.DAOApi.Errors;
                 return newObject;
             }
         }
@@ -191,7 +191,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static string SystemDB
         {
             get
@@ -211,7 +211,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static Int32 DefaultType
         {
             get
@@ -235,7 +235,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="action">optional object action</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void Idle(object action)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(action);
@@ -246,7 +246,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void Idle()
         {
             object[] paramsArray = null;
@@ -261,7 +261,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="dstLocale">optional object dstLocale</param>
         /// <param name="options">optional object options</param>
         /// <param name="srcLocale">optional object srcLocale</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void CompactDatabase(string srcName, string dstName, object dstLocale, object options, object srcLocale)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale, options, srcLocale);
@@ -274,7 +274,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="srcName">string srcName</param>
         /// <param name="dstName">string dstName</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void CompactDatabase(string srcName, string dstName)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName);
@@ -288,7 +288,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="dstName">string dstName</param>
         /// <param name="dstLocale">optional object dstLocale</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void CompactDatabase(string srcName, string dstName, object dstLocale)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale);
@@ -303,7 +303,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="dstLocale">optional object dstLocale</param>
         /// <param name="options">optional object options</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void CompactDatabase(string srcName, string dstName, object dstLocale, object options)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(srcName, dstName, dstLocale, options);
@@ -315,7 +315,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// </summary>
         /// <param name="name">string name</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void RepairDatabase(string name)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name);
@@ -329,7 +329,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="driver">string driver</param>
         /// <param name="silent">bool silent</param>
         /// <param name="attributes">string attributes</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void RegisterDatabase(string dsn, string driver, bool silent, string attributes)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(dsn, driver, silent, attributes);
@@ -342,12 +342,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="name">string name</param>
         /// <param name="userName">string userName</param>
         /// <param name="password">string password</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Workspace _30_CreateWorkspace(string name, string userName, string password)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
             object returnItem = Invoker.MethodReturn(_instance, "_30_CreateWorkspace", paramsArray);
-            NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
+            NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
             return newObject;
         }
 
@@ -358,12 +358,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         /// <param name="connect">optional object connect</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly, object connect)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
             object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
             return newObject;
         }
 
@@ -372,12 +372,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// </summary>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Database OpenDatabase(string name)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name);
             object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
             return newObject;
         }
 
@@ -387,12 +387,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="name">string name</param>
         /// <param name="options">optional object options</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Database OpenDatabase(string name, object options)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, options);
             object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
             return newObject;
         }
 
@@ -403,12 +403,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Database OpenDatabase(string name, object options, object readOnly)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
             object returnItem = Invoker.MethodReturn(_instance, "OpenDatabase", paramsArray);
-            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
             return newObject;
         }
 
@@ -418,12 +418,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="name">string name</param>
         /// <param name="locale">string locale</param>
         /// <param name="option">optional object option</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Database CreateDatabase(string name, string locale, object option)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, locale, option);
             object returnItem = Invoker.MethodReturn(_instance, "CreateDatabase", paramsArray);
-            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
             return newObject;
         }
 
@@ -433,19 +433,19 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="name">string name</param>
         /// <param name="locale">string locale</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Database CreateDatabase(string name, string locale)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, locale);
             object returnItem = Invoker.MethodReturn(_instance, "CreateDatabase", paramsArray);
-            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
+            NetOffice.DAOApi.Database newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Database.LateBindingApiWrapperType) as NetOffice.DAOApi.Database;
             return newObject;
         }
 
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void FreeLocks()
         {
             object[] paramsArray = null;
@@ -455,7 +455,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void BeginTrans()
         {
             object[] paramsArray = null;
@@ -466,7 +466,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         /// <param name="option">optional Int32 Option = 0</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void CommitTrans(object option)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(option);
@@ -477,7 +477,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void CommitTrans()
         {
             object[] paramsArray = null;
@@ -487,7 +487,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void Rollback()
         {
             object[] paramsArray = null;
@@ -499,7 +499,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// </summary>
         /// <param name="name">string name</param>
         /// <param name="password">string password</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void SetDefaultWorkspace(string name, string password)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, password);
@@ -511,7 +511,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// </summary>
         /// <param name="option">Int16 option</param>
         /// <param name="value">object value</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void SetDataAccessOption(Int16 option, object value)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(option, value);
@@ -524,7 +524,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="statNum">Int32 statNum</param>
         /// <param name="reset">optional object reset</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static Int32 ISAMStats(Int32 statNum, object reset)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(statNum, reset);
@@ -538,7 +538,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="statNum">Int32 statNum</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static Int32 ISAMStats(Int32 statNum)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(statNum);
@@ -553,12 +553,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="userName">string userName</param>
         /// <param name="password">string password</param>
         /// <param name="useType">optional object useType</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password, object useType)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password, useType);
             object returnItem = Invoker.MethodReturn(_instance, "CreateWorkspace", paramsArray);
-            NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
+            NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
             return newObject;
         }
 
@@ -569,12 +569,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="userName">string userName</param>
         /// <param name="password">string password</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Workspace CreateWorkspace(string name, string userName, string password)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, userName, password);
             object returnItem = Invoker.MethodReturn(_instance, "CreateWorkspace", paramsArray);
-            NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
+            NetOffice.DAOApi.Workspace newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Workspace.LateBindingApiWrapperType) as NetOffice.DAOApi.Workspace;
             return newObject;
         }
 
@@ -585,12 +585,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         /// <param name="connect">optional object connect</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly, object connect)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly, connect);
             object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
             return newObject;
         }
 
@@ -599,12 +599,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// </summary>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Connection OpenConnection(string name)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name);
             object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
             return newObject;
         }
 
@@ -614,12 +614,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="name">string name</param>
         /// <param name="options">optional object options</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Connection OpenConnection(string name, object options)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, options);
             object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
             return newObject;
         }
 
@@ -630,12 +630,12 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// <param name="options">optional object options</param>
         /// <param name="readOnly">optional object readOnly</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static NetOffice.DAOApi.Connection OpenConnection(string name, object options, object readOnly)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(name, options, readOnly);
             object returnItem = Invoker.MethodReturn(_instance, "OpenConnection", paramsArray);
-            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem,NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
+            NetOffice.DAOApi.Connection newObject = Factory.CreateKnownObjectFromComProxy(_instance, returnItem, NetOffice.DAOApi.Connection.LateBindingApiWrapperType) as NetOffice.DAOApi.Connection;
             return newObject;
         }
 
@@ -644,7 +644,7 @@ namespace NetOffice.DAOApi.GlobalHelperModules
         /// </summary>
         /// <param name="option">Int32 option</param>
         /// <param name="value">object value</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public static void SetOption(Int32 option, object value)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(option, value);

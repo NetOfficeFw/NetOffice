@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission"/> </remarks>
-    [SupportByVersion("Office", 11,12,14,15,16)]
+    [SupportByVersion("Office", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class Permission : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.UserPermission>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Permission(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public Permission(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public Permission(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Permission(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Permission() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Permission(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.UserPermission this[object index]
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.Count"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.EnableTrustedBrowser"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public bool EnableTrustedBrowser
         {
             get
@@ -164,7 +164,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.Parent"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -178,7 +178,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.Enabled"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public bool Enabled
         {
             get
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.RequestPermissionURL"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string RequestPermissionURL
         {
             get
@@ -214,7 +214,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.PolicyName"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string PolicyName
         {
             get
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.PolicyDescription"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string PolicyDescription
         {
             get
@@ -242,7 +242,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.StoreLicenses"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public bool StoreLicenses
         {
             get
@@ -260,7 +260,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.DocumentAuthor"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public string DocumentAuthor
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.PermissionFromPolicy"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public bool PermissionFromPolicy
         {
             get
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi
         /// <param name="userId">string userId</param>
         /// <param name="permission">optional object permission</param>
         /// <param name="expirationDate">optional object expirationDate</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.UserPermission Add(string userId, object permission, object expirationDate)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, userId, permission, expirationDate);
@@ -310,7 +310,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.Add"/> </remarks>
         /// <param name="userId">string userId</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.UserPermission Add(string userId)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, userId);
@@ -323,7 +323,7 @@ namespace NetOffice.OfficeApi
         /// <param name="userId">string userId</param>
         /// <param name="permission">optional object permission</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.UserPermission Add(string userId, object permission)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.UserPermission>(this, "Add", NetOffice.OfficeApi.UserPermission.LateBindingApiWrapperType, userId, permission);
@@ -334,7 +334,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.ApplyPolicy"/> </remarks>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public void ApplyPolicy(string fileName)
         {
             Factory.ExecuteMethod(this, "ApplyPolicy", fileName);
@@ -344,7 +344,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Permission.RemoveAll"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public void RemoveAll()
         {
             Factory.ExecuteMethod(this, "RemoveAll");
@@ -386,7 +386,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -394,6 +394,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

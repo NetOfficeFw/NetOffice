@@ -8,7 +8,7 @@ namespace NetOffice.WordApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void Application_StartupEventHandler();
     public delegate void Application_QuitEventHandler();
     public delegate void Application_DocumentChangeEventHandler();
@@ -44,7 +44,7 @@ namespace NetOffice.WordApi
     public delegate void Application_ProtectedViewWindowSizeEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
     public delegate void Application_ProtectedViewWindowActivateEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
     public delegate void Application_ProtectedViewWindowDeactivateEventHandler(NetOffice.WordApi.ProtectedViewWindow pvWindow);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -53,23 +53,23 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application"/> </remarks>
-    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass), ComProgId("Word.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
     [EventSink(typeof(Events.ApplicationEvents2_SinkHelper), typeof(Events.ApplicationEvents3_SinkHelper), typeof(Events.ApplicationEvents4_SinkHelper))]
     [ComEventInterface(typeof(Events.ApplicationEvents2), typeof(Events.ApplicationEvents3), typeof(Events.ApplicationEvents4))]
     public class Application : _Application, ICloneable<Application>, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ApplicationEvents2_SinkHelper _applicationEvents2_SinkHelper;
         private Events.ApplicationEvents3_SinkHelper _applicationEvents3_SinkHelper;
         private Events.ApplicationEvents4_SinkHelper _applicationEvents4_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -85,7 +85,7 @@ namespace NetOffice.WordApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -99,9 +99,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -147,14 +147,14 @@ namespace NetOffice.WordApi
         {
             _callQuitInDispose = true;
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Application(ICOMObject replacedObject) : base(replacedObject)
         {
             _callQuitInDispose = true;
         }
-        
+
         /// <summary>
         /// Creates a new instance of Application 
         /// </summary>		
@@ -197,12 +197,12 @@ namespace NetOffice.WordApi
         /// Creates a new instance of Application
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Application(string progId):base(progId)
+        public Application(string progId) : base(progId)
         {
             _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
         }
-        
+
         /// <summary>
         /// NetOffice method: dispose instance and all child instances
         /// </summary>
@@ -210,8 +210,8 @@ namespace NetOffice.WordApi
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose(bool disposeEventBinding)
         {
-            if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-                GlobalHelperModules.GlobalModule.Instance = null;	
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
+                GlobalHelperModules.GlobalModule.Instance = null;
             base.Dispose(disposeEventBinding);
         }
 
@@ -221,13 +221,13 @@ namespace NetOffice.WordApi
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose()
         {
-            if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
                 GlobalHelperModules.GlobalModule.Instance = null;
             base.Dispose();
         }
 
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_StartupEventHandler StartupEvent
         {
             add
@@ -294,7 +294,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.Quit(even)"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_QuitEventHandler QuitEvent
         {
             add
@@ -317,7 +317,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.DocumentChange"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_DocumentChangeEventHandler DocumentChangeEvent
         {
             add
@@ -340,7 +340,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.DocumentOpen"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_DocumentOpenEventHandler DocumentOpenEvent
         {
             add
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.DocumentBeforeClose"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_DocumentBeforeCloseEventHandler DocumentBeforeCloseEvent
         {
             add
@@ -386,7 +386,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.DocumentBeforePrint"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_DocumentBeforePrintEventHandler DocumentBeforePrintEvent
         {
             add
@@ -409,7 +409,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.DocumentBeforeSave"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_DocumentBeforeSaveEventHandler DocumentBeforeSaveEvent
         {
             add
@@ -432,7 +432,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.NewDocument(even)"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_NewDocumentEventHandler NewDocumentEvent
         {
             add
@@ -455,7 +455,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.WindowActivate"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_WindowActivateEventHandler WindowActivateEvent
         {
             add
@@ -478,7 +478,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.WindowDeactivate"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_WindowDeactivateEventHandler WindowDeactivateEvent
         {
             add
@@ -501,7 +501,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.WindowSelectionChange"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_WindowSelectionChangeEventHandler WindowSelectionChangeEvent
         {
             add
@@ -524,7 +524,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.WindowBeforeRightClick"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_WindowBeforeRightClickEventHandler WindowBeforeRightClickEvent
         {
             add
@@ -547,7 +547,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.WindowBeforeDoubleClick"/> </remarks>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
         public event Application_WindowBeforeDoubleClickEventHandler WindowBeforeDoubleClickEvent
         {
             add
@@ -570,7 +570,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.EPostagePropertyDialog"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_EPostagePropertyDialogEventHandler EPostagePropertyDialogEvent
         {
             add
@@ -593,7 +593,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.EPostageInsert"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_EPostageInsertEventHandler EPostageInsertEvent
         {
             add
@@ -616,7 +616,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeAfterMerge"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeAfterMergeEventHandler MailMergeAfterMergeEvent
         {
             add
@@ -639,7 +639,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeAfterRecordMerge"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeAfterRecordMergeEventHandler MailMergeAfterRecordMergeEvent
         {
             add
@@ -662,7 +662,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeBeforeMerge"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeBeforeMergeEventHandler MailMergeBeforeMergeEvent
         {
             add
@@ -685,7 +685,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeBeforeRecordMerge"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeBeforeRecordMergeEventHandler MailMergeBeforeRecordMergeEvent
         {
             add
@@ -708,7 +708,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeDataSourceLoad"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeDataSourceLoadEventHandler MailMergeDataSourceLoadEvent
         {
             add
@@ -731,7 +731,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeDataSourceValidate"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeDataSourceValidateEventHandler MailMergeDataSourceValidateEvent
         {
             add
@@ -754,7 +754,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeWizardSendToCustom"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeWizardSendToCustomEventHandler MailMergeWizardSendToCustomEvent
         {
             add
@@ -777,7 +777,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeWizardStateChange"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_MailMergeWizardStateChangeEventHandler MailMergeWizardStateChangeEvent
         {
             add
@@ -800,7 +800,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.WindowSize"/> </remarks>
-        [SupportByVersion("Word", 10,11,12,14,15,16)]
+        [SupportByVersion("Word", 10, 11, 12, 14, 15, 16)]
         public event Application_WindowSizeEventHandler WindowSizeEvent
         {
             add
@@ -823,7 +823,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.XMLSelectionChange"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public event Application_XMLSelectionChangeEventHandler XMLSelectionChangeEvent
         {
             add
@@ -846,7 +846,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.XMLValidationError"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public event Application_XMLValidationErrorEventHandler XMLValidationErrorEvent
         {
             add
@@ -869,7 +869,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.DocumentSync"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public event Application_DocumentSyncEventHandler DocumentSyncEvent
         {
             add
@@ -892,7 +892,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.EPostageInsertEx"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public event Application_EPostageInsertExEventHandler EPostageInsertExEvent
         {
             add
@@ -915,7 +915,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.MailMergeDataSourceValidate2"/> </remarks>
-        [SupportByVersion("Word", 12,14,15,16)]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
         public event Application_MailMergeDataSourceValidate2EventHandler MailMergeDataSourceValidate2Event
         {
             add
@@ -938,7 +938,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.ProtectedViewWindowOpen"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public event Application_ProtectedViewWindowOpenEventHandler ProtectedViewWindowOpenEvent
         {
             add
@@ -961,7 +961,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.ProtectedViewWindowBeforeEdit"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public event Application_ProtectedViewWindowBeforeEditEventHandler ProtectedViewWindowBeforeEditEvent
         {
             add
@@ -984,7 +984,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.ProtectedViewWindowBeforeClose"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public event Application_ProtectedViewWindowBeforeCloseEventHandler ProtectedViewWindowBeforeCloseEvent
         {
             add
@@ -1007,7 +1007,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.ProtectedViewWindowSize"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public event Application_ProtectedViewWindowSizeEventHandler ProtectedViewWindowSizeEvent
         {
             add
@@ -1030,7 +1030,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.ProtectedViewWindowActivate"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public event Application_ProtectedViewWindowActivateEventHandler ProtectedViewWindowActivateEvent
         {
             add
@@ -1053,7 +1053,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Application.ProtectedViewWindowDeactivate"/> </remarks>
-        [SupportByVersion("Word", 14,15,16)]
+        [SupportByVersion("Word", 14, 15, 16)]
         public event Application_ProtectedViewWindowDeactivateEventHandler ProtectedViewWindowDeactivateEvent
         {
             add
@@ -1068,42 +1068,42 @@ namespace NetOffice.WordApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint2(this, ref _connectPoint, Events.ApplicationEvents2_SinkHelper.Id, Events.ApplicationEvents3_SinkHelper.Id, Events.ApplicationEvents4_SinkHelper.Id);
 
 
-            if(Events.ApplicationEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ApplicationEvents2_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _applicationEvents2_SinkHelper = new Events.ApplicationEvents2_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.ApplicationEvents3_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ApplicationEvents3_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _applicationEvents3_SinkHelper = new Events.ApplicationEvents3_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.ApplicationEvents4_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ApplicationEvents4_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _applicationEvents4_SinkHelper = new Events.ApplicationEvents4_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -1112,7 +1112,7 @@ namespace NetOffice.WordApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -1122,9 +1122,9 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -1146,16 +1146,16 @@ namespace NetOffice.WordApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -1173,17 +1173,17 @@ namespace NetOffice.WordApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _applicationEvents2_SinkHelper)
+            if (null != _applicationEvents2_SinkHelper)
             {
                 _applicationEvents2_SinkHelper.Dispose();
                 _applicationEvents2_SinkHelper = null;
             }
-            if( null != _applicationEvents3_SinkHelper)
+            if (null != _applicationEvents3_SinkHelper)
             {
                 _applicationEvents3_SinkHelper.Dispose();
                 _applicationEvents3_SinkHelper = null;
             }
-            if( null != _applicationEvents4_SinkHelper)
+            if (null != _applicationEvents4_SinkHelper)
             {
                 _applicationEvents4_SinkHelper.Dispose();
                 _applicationEvents4_SinkHelper = null;
@@ -1208,6 +1208,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

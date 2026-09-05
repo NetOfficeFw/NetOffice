@@ -7,7 +7,7 @@ namespace NetOffice.AccessApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void CommandButton_ClickEventHandler();
     public delegate void CommandButton_EnterEventHandler();
     public delegate void CommandButton_ExitEventHandler(ref Int16 cancel);
@@ -20,7 +20,7 @@ namespace NetOffice.AccessApi
     public delegate void CommandButton_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
     public delegate void CommandButton_KeyPressEventHandler(ref Int16 keyAscii);
     public delegate void CommandButton_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -29,22 +29,22 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton"/> </remarks>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._CommandButtonEvents_SinkHelper), typeof(Events.DispCommandButtonEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._CommandButtonEvents), typeof(Events.DispCommandButtonEvents))]
     public class CommandButton : _CommandButton, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events._CommandButtonEvents_SinkHelper __CommandButtonEvents_SinkHelper;
         private Events.DispCommandButtonEvents_SinkHelper _dispCommandButtonEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -60,7 +60,7 @@ namespace NetOffice.AccessApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -74,9 +74,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -84,14 +84,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public CommandButton(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public CommandButton(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -101,7 +101,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CommandButton(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -110,31 +110,31 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CommandButton(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public CommandButton(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of CommandButton 
         /// </summary>		
-        public CommandButton():base("Access.CommandButton")
+        public CommandButton() : base("Access.CommandButton")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of CommandButton
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public CommandButton(string progId):base(progId)
+        public CommandButton(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -153,7 +153,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.Click"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_ClickEventHandler ClickEvent
         {
             add
@@ -176,7 +176,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.Enter"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_EnterEventHandler EnterEvent
         {
             add
@@ -199,7 +199,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.Exit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_ExitEventHandler ExitEvent
         {
             add
@@ -222,7 +222,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.GotFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_GotFocusEventHandler GotFocusEvent
         {
             add
@@ -245,7 +245,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.LostFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_LostFocusEventHandler LostFocusEvent
         {
             add
@@ -268,7 +268,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.DblClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_DblClickEventHandler DblClickEvent
         {
             add
@@ -291,7 +291,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.MouseDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -314,7 +314,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.MouseMove"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -337,7 +337,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.MouseUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -360,7 +360,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.KeyDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_KeyDownEventHandler KeyDownEvent
         {
             add
@@ -383,7 +383,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.KeyPress"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_KeyPressEventHandler KeyPressEvent
         {
             add
@@ -406,7 +406,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CommandButton.KeyUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event CommandButton_KeyUpEventHandler KeyUpEvent
         {
             add
@@ -421,36 +421,36 @@ namespace NetOffice.AccessApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CommandButtonEvents_SinkHelper.Id, Events.DispCommandButtonEvents_SinkHelper.Id);
 
 
-            if(Events._CommandButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events._CommandButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 __CommandButtonEvents_SinkHelper = new Events._CommandButtonEvents_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.DispCommandButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.DispCommandButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dispCommandButtonEvents_SinkHelper = new Events.DispCommandButtonEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -469,9 +469,9 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -493,16 +493,16 @@ namespace NetOffice.AccessApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -520,12 +520,12 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != __CommandButtonEvents_SinkHelper)
+            if (null != __CommandButtonEvents_SinkHelper)
             {
                 __CommandButtonEvents_SinkHelper.Dispose();
                 __CommandButtonEvents_SinkHelper = null;
             }
-            if( null != _dispCommandButtonEvents_SinkHelper)
+            if (null != _dispCommandButtonEvents_SinkHelper)
             {
                 _dispCommandButtonEvents_SinkHelper.Dispose();
                 _dispCommandButtonEvents_SinkHelper = null;
@@ -533,10 +533,10 @@ namespace NetOffice.AccessApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

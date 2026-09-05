@@ -7,8 +7,8 @@ namespace NetOffice.VBIDEApi
 {
     #region Delegates
 
-    #pragma warning disable
-    #pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
     #endregion
 
@@ -16,18 +16,18 @@ namespace NetOffice.VBIDEApi
     /// CoClass VBProject 
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsCoClass)]
     public class VBProject : _VBProject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
-    
+
         #endregion
 
         #region Type Information
@@ -43,7 +43,7 @@ namespace NetOffice.VBIDEApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -57,9 +57,9 @@ namespace NetOffice.VBIDEApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -67,14 +67,14 @@ namespace NetOffice.VBIDEApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public VBProject(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public VBProject(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -84,7 +84,7 @@ namespace NetOffice.VBIDEApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public VBProject(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -93,31 +93,31 @@ namespace NetOffice.VBIDEApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public VBProject(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public VBProject(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of VBProject 
         /// </summary>		
-        public VBProject():base("VBIDE.VBProject")
+        public VBProject() : base("VBIDE.VBProject")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of VBProject
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public VBProject(string progId):base(progId)
+        public VBProject(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -128,9 +128,9 @@ namespace NetOffice.VBIDEApi
         #region Events
 
         #endregion
-       
 
-        #pragma warning restore
+
+#pragma warning restore
     }
 }
 

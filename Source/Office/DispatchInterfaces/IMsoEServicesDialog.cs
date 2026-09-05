@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface IMsoEServicesDialog 
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class IMsoEServicesDialog : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IMsoEServicesDialog(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public IMsoEServicesDialog(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.OfficeApi
         public IMsoEServicesDialog(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IMsoEServicesDialog(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IMsoEServicesDialog() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IMsoEServicesDialog(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string ApplicationName
         {
             get
@@ -125,7 +125,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object WebComponent
         {
             get
@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object ClipArt
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="applyWebComponentChanges">optional bool ApplyWebComponentChanges = false</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Close(object applyWebComponentChanges)
         {
             Factory.ExecuteMethod(this, "Close", applyWebComponentChanges);
@@ -180,7 +180,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -190,7 +190,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="domain">string domain</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void AddTrustedDomain(string domain)
         {
             Factory.ExecuteMethod(this, "AddTrustedDomain", domain);
@@ -198,6 +198,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

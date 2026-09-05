@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface _CustomXMLPart 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _CustomXMLPart : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _CustomXMLPart(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public _CustomXMLPart(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OfficeApi
         public _CustomXMLPart(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CustomXMLPart(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CustomXMLPart() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CustomXMLPart(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.Parent"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.DocumentElement"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CustomXMLNode DocumentElement
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.Id"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string Id
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.NamespaceURI"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string NamespaceURI
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.SchemaCollection"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CustomXMLSchemaCollection SchemaCollection
         {
             get
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.NamespaceManager"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CustomXMLPrefixMappings NamespaceManager
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.XML"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string XML
         {
             get
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.Errors"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CustomXMLValidationErrors Errors
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.BuiltIn"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool BuiltIn
         {
             get
@@ -252,10 +252,10 @@ namespace NetOffice.OfficeApi
         /// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
         /// <param name="nodeValue">optional string NodeValue = </param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType, object nodeValue)
         {
-            Factory.ExecuteMethod(this, "AddNode", new object[]{ parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
+            Factory.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType, nodeValue });
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.AddNode"/> </remarks>
         /// <param name="parent">NetOffice.OfficeApi.CustomXMLNode parent</param>
         [CustomMethod]
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent)
         {
             Factory.ExecuteMethod(this, "AddNode", parent);
@@ -277,7 +277,7 @@ namespace NetOffice.OfficeApi
         /// <param name="parent">NetOffice.OfficeApi.CustomXMLNode parent</param>
         /// <param name="name">optional string Name = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name)
         {
             Factory.ExecuteMethod(this, "AddNode", parent, name);
@@ -291,7 +291,7 @@ namespace NetOffice.OfficeApi
         /// <param name="name">optional string Name = </param>
         /// <param name="namespaceURI">optional string NamespaceURI = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI)
         {
             Factory.ExecuteMethod(this, "AddNode", parent, name, namespaceURI);
@@ -306,7 +306,7 @@ namespace NetOffice.OfficeApi
         /// <param name="namespaceURI">optional string NamespaceURI = </param>
         /// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
         [CustomMethod]
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling)
         {
             Factory.ExecuteMethod(this, "AddNode", parent, name, namespaceURI, nextSibling);
@@ -322,17 +322,17 @@ namespace NetOffice.OfficeApi
         /// <param name="nextSibling">optional NetOffice.OfficeApi.CustomXMLNode NextSibling = 0</param>
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoCustomXMLNodeType NodeType = 1</param>
         [CustomMethod]
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void AddNode(NetOffice.OfficeApi.CustomXMLNode parent, object name, object namespaceURI, object nextSibling, object nodeType)
         {
-            Factory.ExecuteMethod(this, "AddNode", new object[]{ parent, name, namespaceURI, nextSibling, nodeType });
+            Factory.ExecuteMethod(this, "AddNode", new object[] { parent, name, namespaceURI, nextSibling, nodeType });
         }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.Delete"/> </remarks>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -343,7 +343,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.Load"/> </remarks>
         /// <param name="filePath">string filePath</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool Load(string filePath)
         {
             return Factory.ExecuteBoolMethodGet(this, "Load", filePath);
@@ -354,7 +354,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.LoadXML"/> </remarks>
         /// <param name="xML">string xML</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool LoadXML(string xML)
         {
             return Factory.ExecuteBoolMethodGet(this, "LoadXML", xML);
@@ -365,7 +365,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.SelectNodes"/> </remarks>
         /// <param name="xPath">string xPath</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CustomXMLNodes SelectNodes(string xPath)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNodes>(this, "SelectNodes", NetOffice.OfficeApi.CustomXMLNodes.LateBindingApiWrapperType, xPath);
@@ -376,7 +376,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLPart.SelectSingleNode"/> </remarks>
         /// <param name="xPath">string xPath</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CustomXMLNode SelectSingleNode(string xPath)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CustomXMLNode>(this, "SelectSingleNode", NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType, xPath);
@@ -384,6 +384,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

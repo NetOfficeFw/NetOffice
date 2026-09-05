@@ -22,8 +22,8 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// Creates an instance of the class
         /// </summary>
         public AppDomainInfo()
-        { 
-        
+        {
+
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
         {
             List<KeyValuePair<string, string>> list = new List<KeyValuePair<string, string>>();
             list.Add(new KeyValuePair<string, string>(HeaderCaption, HeaderCaptionLine));
- 
+
             foreach (Assembly item in AppDomain.CurrentDomain.GetAssemblies())
             {
                 AssemblyName assName = item.GetName();

@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties"/> </remarks>
-    [SupportByVersion("Office", 14,15,16)]
+    [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class PickerProperties : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PickerProperty>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PickerProperties(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public PickerProperties(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public PickerProperties(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PickerProperties(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PickerProperties() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PickerProperties(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.PickerProperty this[Int32 index]
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties.Count"/> </remarks>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -151,7 +151,7 @@ namespace NetOffice.OfficeApi
         /// <param name="id">string id</param>
         /// <param name="value">string value</param>
         /// <param name="type">NetOffice.OfficeApi.Enums.MsoPickerField type</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public NetOffice.OfficeApi.PickerProperty Add(string id, string value, NetOffice.OfficeApi.Enums.MsoPickerField type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.PickerProperty>(this, "Add", NetOffice.OfficeApi.PickerProperty.LateBindingApiWrapperType, id, value, type);
@@ -162,14 +162,14 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.PickerProperties.Remove"/> </remarks>
         /// <param name="id">string id</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public void Remove(string id)
         {
             Factory.ExecuteMethod(this, "Remove", id);
         }
 
         #endregion
-      
+
         #region IEnumerableProvider<NetOffice.OfficeApi.PickerField>
 
         ICOMObject IEnumerableProvider<NetOffice.OfficeApi.PickerProperty>.GetComObjectEnumerator(ICOMObject parent)
@@ -204,7 +204,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 14,15,16
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -212,6 +212,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

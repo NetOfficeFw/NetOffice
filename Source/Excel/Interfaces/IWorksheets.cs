@@ -12,11 +12,11 @@ namespace NetOffice.ExcelApi
     /// Interface IWorksheets 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class IWorksheets : COMObject, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IWorksheets(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi
         public IWorksheets(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.ExcelApi
         public IWorksheets(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IWorksheets(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IWorksheets() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IWorksheets(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -167,7 +167,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.HPageBreaks HPageBreaks
         {
             get
@@ -180,7 +180,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.VPageBreaks VPageBreaks
         {
             get
@@ -193,7 +193,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Visible
         {
             get
@@ -212,7 +212,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public object this[object index]
         {
@@ -233,7 +233,7 @@ namespace NetOffice.ExcelApi
         /// <param name="after">optional object after</param>
         /// <param name="count">optional object count</param>
         /// <param name="type">optional object type</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Add(object before, object after, object count, object type)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", before, after, count, type);
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Add()
         {
             return Factory.ExecuteVariantMethodGet(this, "Add");
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="before">optional object before</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Add(object before)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", before);
@@ -266,7 +266,7 @@ namespace NetOffice.ExcelApi
         /// <param name="before">optional object before</param>
         /// <param name="after">optional object after</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Add(object before, object after)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", before, after);
@@ -279,7 +279,7 @@ namespace NetOffice.ExcelApi
         /// <param name="after">optional object after</param>
         /// <param name="count">optional object count</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public object Add(object before, object after, object count)
         {
             return Factory.ExecuteVariantMethodGet(this, "Add", before, after, count);
@@ -290,7 +290,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="before">optional object before</param>
         /// <param name="after">optional object after</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Copy(object before, object after)
         {
             return Factory.ExecuteInt32MethodGet(this, "Copy", before, after);
@@ -300,7 +300,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Copy()
         {
             return Factory.ExecuteInt32MethodGet(this, "Copy");
@@ -311,7 +311,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="before">optional object before</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Copy(object before)
         {
             return Factory.ExecuteInt32MethodGet(this, "Copy", before);
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Delete()
         {
             return Factory.ExecuteInt32MethodGet(this, "Delete");
@@ -331,7 +331,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="range">NetOffice.ExcelApi.Range range</param>
         /// <param name="type">optional NetOffice.ExcelApi.Enums.XlFillWith Type = -4104</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 FillAcrossSheets(NetOffice.ExcelApi.Range range, object type)
         {
             return Factory.ExecuteInt32MethodGet(this, "FillAcrossSheets", range, type);
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="range">NetOffice.ExcelApi.Range range</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 FillAcrossSheets(NetOffice.ExcelApi.Range range)
         {
             return Factory.ExecuteInt32MethodGet(this, "FillAcrossSheets", range);
@@ -353,7 +353,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="before">optional object before</param>
         /// <param name="after">optional object after</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Move(object before, object after)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", before, after);
@@ -363,7 +363,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Move()
         {
             return Factory.ExecuteInt32MethodGet(this, "Move");
@@ -374,7 +374,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="before">optional object before</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Move(object before)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", before);
@@ -391,10 +391,10 @@ namespace NetOffice.ExcelApi
         /// <param name="printToFile">optional object printToFile</param>
         /// <param name="collate">optional object collate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
         {
-            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile, collate });
+            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate });
         }
 
         /// <summary>
@@ -409,10 +409,10 @@ namespace NetOffice.ExcelApi
         /// <param name="collate">optional object collate</param>
         /// <param name="prToFileName">optional object prToFileName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
         {
-            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile, collate, prToFileName });
+            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate, prToFileName });
         }
 
         /// <summary>
@@ -420,7 +420,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut()
         {
             return Factory.ExecuteInt32MethodGet(this, "_PrintOut");
@@ -432,7 +432,7 @@ namespace NetOffice.ExcelApi
         /// <param name="from">optional object from</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from)
         {
             return Factory.ExecuteInt32MethodGet(this, "_PrintOut", from);
@@ -445,7 +445,7 @@ namespace NetOffice.ExcelApi
         /// <param name="to">optional object to</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to)
         {
             return Factory.ExecuteInt32MethodGet(this, "_PrintOut", from, to);
@@ -459,7 +459,7 @@ namespace NetOffice.ExcelApi
         /// <param name="copies">optional object copies</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to, object copies)
         {
             return Factory.ExecuteInt32MethodGet(this, "_PrintOut", from, to, copies);
@@ -474,7 +474,7 @@ namespace NetOffice.ExcelApi
         /// <param name="preview">optional object preview</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to, object copies, object preview)
         {
             return Factory.ExecuteInt32MethodGet(this, "_PrintOut", from, to, copies, preview);
@@ -490,10 +490,10 @@ namespace NetOffice.ExcelApi
         /// <param name="activePrinter">optional object activePrinter</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter)
         {
-            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[]{ from, to, copies, preview, activePrinter });
+            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter });
         }
 
         /// <summary>
@@ -507,17 +507,17 @@ namespace NetOffice.ExcelApi
         /// <param name="printToFile">optional object printToFile</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 _PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
         {
-            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile });
+            return Factory.ExecuteInt32MethodGet(this, "_PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile });
         }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="enableChanges">optional object enableChanges</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintPreview(object enableChanges)
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintPreview", enableChanges);
@@ -527,7 +527,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintPreview()
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintPreview");
@@ -537,7 +537,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="replace">optional object replace</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Select(object replace)
         {
             return Factory.ExecuteInt32MethodGet(this, "Select", replace);
@@ -547,7 +547,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Select()
         {
             return Factory.ExecuteInt32MethodGet(this, "Select");
@@ -564,10 +564,10 @@ namespace NetOffice.ExcelApi
         /// <param name="printToFile">optional object printToFile</param>
         /// <param name="collate">optional object collate</param>
         /// <param name="prToFileName">optional object prToFileName</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile, collate, prToFileName });
+            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate, prToFileName });
         }
 
         /// <summary>
@@ -582,17 +582,17 @@ namespace NetOffice.ExcelApi
         /// <param name="collate">optional object collate</param>
         /// <param name="prToFileName">optional object prToFileName</param>
         /// <param name="ignorePrintAreas">optional object ignorePrintAreas</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate, object prToFileName, object ignorePrintAreas)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile, collate, prToFileName, ignorePrintAreas });
+            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate, prToFileName, ignorePrintAreas });
         }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut()
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintOut");
@@ -603,7 +603,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="from">optional object from</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from)
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintOut", from);
@@ -615,7 +615,7 @@ namespace NetOffice.ExcelApi
         /// <param name="from">optional object from</param>
         /// <param name="to">optional object to</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to)
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintOut", from, to);
@@ -628,7 +628,7 @@ namespace NetOffice.ExcelApi
         /// <param name="to">optional object to</param>
         /// <param name="copies">optional object copies</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies)
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintOut", from, to, copies);
@@ -642,7 +642,7 @@ namespace NetOffice.ExcelApi
         /// <param name="copies">optional object copies</param>
         /// <param name="preview">optional object preview</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies, object preview)
         {
             return Factory.ExecuteInt32MethodGet(this, "PrintOut", from, to, copies, preview);
@@ -657,10 +657,10 @@ namespace NetOffice.ExcelApi
         /// <param name="preview">optional object preview</param>
         /// <param name="activePrinter">optional object activePrinter</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[]{ from, to, copies, preview, activePrinter });
+            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter });
         }
 
         /// <summary>
@@ -673,10 +673,10 @@ namespace NetOffice.ExcelApi
         /// <param name="activePrinter">optional object activePrinter</param>
         /// <param name="printToFile">optional object printToFile</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile });
+            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile });
         }
 
         /// <summary>
@@ -690,10 +690,10 @@ namespace NetOffice.ExcelApi
         /// <param name="printToFile">optional object printToFile</param>
         /// <param name="collate">optional object collate</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
         {
-            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile, collate });
+            return Factory.ExecuteInt32MethodGet(this, "PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate });
         }
 
         /// <summary>
@@ -707,10 +707,10 @@ namespace NetOffice.ExcelApi
         /// <param name="printToFile">optional object printToFile</param>
         /// <param name="collate">optional object collate</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile, object collate)
         {
-            return Factory.ExecuteInt32MethodGet(this, "__PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile, collate });
+            return Factory.ExecuteInt32MethodGet(this, "__PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile, collate });
         }
 
         /// <summary>
@@ -718,7 +718,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut()
         {
             return Factory.ExecuteInt32MethodGet(this, "__PrintOut");
@@ -730,7 +730,7 @@ namespace NetOffice.ExcelApi
         /// <param name="from">optional object from</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from)
         {
             return Factory.ExecuteInt32MethodGet(this, "__PrintOut", from);
@@ -743,7 +743,7 @@ namespace NetOffice.ExcelApi
         /// <param name="to">optional object to</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from, object to)
         {
             return Factory.ExecuteInt32MethodGet(this, "__PrintOut", from, to);
@@ -757,7 +757,7 @@ namespace NetOffice.ExcelApi
         /// <param name="copies">optional object copies</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from, object to, object copies)
         {
             return Factory.ExecuteInt32MethodGet(this, "__PrintOut", from, to, copies);
@@ -772,7 +772,7 @@ namespace NetOffice.ExcelApi
         /// <param name="preview">optional object preview</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from, object to, object copies, object preview)
         {
             return Factory.ExecuteInt32MethodGet(this, "__PrintOut", from, to, copies, preview);
@@ -788,10 +788,10 @@ namespace NetOffice.ExcelApi
         /// <param name="activePrinter">optional object activePrinter</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter)
         {
-            return Factory.ExecuteInt32MethodGet(this, "__PrintOut", new object[]{ from, to, copies, preview, activePrinter });
+            return Factory.ExecuteInt32MethodGet(this, "__PrintOut", new object[] { from, to, copies, preview, activePrinter });
         }
 
         /// <summary>
@@ -805,10 +805,10 @@ namespace NetOffice.ExcelApi
         /// <param name="printToFile">optional object printToFile</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public Int32 __PrintOut(object from, object to, object copies, object preview, object activePrinter, object printToFile)
         {
-            return Factory.ExecuteInt32MethodGet(this, "__PrintOut", new object[]{ from, to, copies, preview, activePrinter, printToFile });
+            return Factory.ExecuteInt32MethodGet(this, "__PrintOut", new object[] { from, to, copies, preview, activePrinter, printToFile });
         }
 
         /// <summary>
@@ -906,7 +906,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, true);
@@ -914,6 +914,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

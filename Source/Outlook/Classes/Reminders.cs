@@ -7,14 +7,14 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void Reminders_BeforeReminderShowEventHandler(ref bool cancel);
     public delegate void Reminders_ReminderAddEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
     public delegate void Reminders_ReminderChangeEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
     public delegate void Reminders_ReminderFireEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
     public delegate void Reminders_ReminderRemoveEventHandler();
     public delegate void Reminders_SnoozeEventHandler(NetOffice.OutlookApi._Reminder reminderObject);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -23,21 +23,21 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders"/> </remarks>
-    [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.ReminderCollectionEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.ReminderCollectionEvents))]
     public class Reminders : _Reminders, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ReminderCollectionEvents_SinkHelper _reminderCollectionEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -53,7 +53,7 @@ namespace NetOffice.OutlookApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -67,9 +67,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -77,14 +77,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Reminders(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Reminders(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -94,7 +94,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Reminders(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -103,31 +103,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Reminders(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Reminders(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Reminders 
         /// </summary>		
-        public Reminders():base("Outlook.Reminders")
+        public Reminders() : base("Outlook.Reminders")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Reminders
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Reminders(string progId):base(progId)
+        public Reminders(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -146,7 +146,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders.BeforeReminderShow"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Reminders_BeforeReminderShowEventHandler BeforeReminderShowEvent
         {
             add
@@ -169,7 +169,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders.ReminderAdd"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Reminders_ReminderAddEventHandler ReminderAddEvent
         {
             add
@@ -192,7 +192,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders.ReminderChange"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Reminders_ReminderChangeEventHandler ReminderChangeEvent
         {
             add
@@ -215,7 +215,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders.ReminderFire"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Reminders_ReminderFireEventHandler ReminderFireEvent
         {
             add
@@ -238,7 +238,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders.ReminderRemove"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Reminders_ReminderRemoveEventHandler ReminderRemoveEvent
         {
             add
@@ -261,7 +261,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Reminders.Snooze"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public event Reminders_SnoozeEventHandler SnoozeEvent
         {
             add
@@ -276,30 +276,30 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ReminderCollectionEvents_SinkHelper.Id);
 
 
-            if(Events.ReminderCollectionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ReminderCollectionEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _reminderCollectionEvents_SinkHelper = new Events.ReminderCollectionEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -318,9 +318,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -342,16 +342,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -369,7 +369,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _reminderCollectionEvents_SinkHelper)
+            if (null != _reminderCollectionEvents_SinkHelper)
             {
                 _reminderCollectionEvents_SinkHelper.Dispose();
                 _reminderCollectionEvents_SinkHelper = null;
@@ -377,10 +377,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

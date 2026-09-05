@@ -12,11 +12,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface Axes 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class Axes : COMObject, IEnumerableProvider<NetOffice.OfficeApi.IMsoAxis>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Axes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi
         public Axes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.OfficeApi
         public Axes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Axes(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Axes() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Axes(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 14,15,16), ProxyResult]
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -172,7 +172,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="type">NetOffice.OfficeApi.Enums.XlAxisType type</param>
         /// <param name="axisGroup">optional NetOffice.OfficeApi.Enums.XlAxisGroup axisGroup</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.IMsoAxis this[NetOffice.OfficeApi.Enums.XlAxisType type, object axisGroup]
         {
@@ -181,13 +181,13 @@ namespace NetOffice.OfficeApi
                 return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.IMsoAxis>(this, "_Default", NetOffice.OfficeApi.IMsoAxis.LateBindingApiWrapperType, type, axisGroup);
             }
         }
-        
+
         /// <summary>
         /// SupportByVersion Office 14, 15, 16
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 14,15,16), ProxyResult]
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -244,6 +244,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

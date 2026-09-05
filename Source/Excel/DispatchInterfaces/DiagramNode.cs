@@ -9,12 +9,12 @@ namespace NetOffice.ExcelApi
     /// DispatchInterface DiagramNode 
     /// SupportByVersion Excel, 10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     [Duplicate("NetOffice.OfficeApi.DiagramNode")]
     public class DiagramNode : NetOffice.OfficeApi._IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DiagramNode(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public DiagramNode(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public DiagramNode(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNode(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNode() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DiagramNode(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -126,7 +126,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNodeChildren Children
         {
             get
@@ -139,7 +139,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Shape Shape
         {
             get
@@ -152,7 +152,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode Root
         {
             get
@@ -165,7 +165,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IMsoDiagram Diagram
         {
             get
@@ -178,7 +178,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoOrgChartLayoutType Layout
         {
             get
@@ -195,7 +195,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Shape TextShape
         {
             get
@@ -213,7 +213,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
         /// <param name="nodeType">optional NetOffice.OfficeApi.Enums.MsoDiagramNodeType nodeType = 1</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode AddNode(object pos, object nodeType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType, pos, nodeType);
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode AddNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType);
@@ -234,7 +234,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode AddNode(object pos)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "AddNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType, pos);
@@ -243,7 +243,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -254,7 +254,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
         /// <param name="pos">NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public void MoveNode(NetOffice.ExcelApi.DiagramNode pTargetNode, NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos)
         {
             Factory.ExecuteMethod(this, "MoveNode", pTargetNode, pos);
@@ -264,7 +264,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public void ReplaceNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
         {
             Factory.ExecuteMethod(this, "ReplaceNode", pTargetNode);
@@ -275,7 +275,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
         /// <param name="swapChildren">optional bool swapChildren = true</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode, object swapChildren)
         {
             Factory.ExecuteMethod(this, "SwapNode", pTargetNode, swapChildren);
@@ -286,7 +286,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public void SwapNode(NetOffice.ExcelApi.DiagramNode pTargetNode)
         {
             Factory.ExecuteMethod(this, "SwapNode", pTargetNode);
@@ -298,7 +298,7 @@ namespace NetOffice.ExcelApi
         /// <param name="copyChildren">bool copyChildren</param>
         /// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
         /// <param name="pos">optional NetOffice.OfficeApi.Enums.MsoRelativeNodePosition pos = 2</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode, object pos)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "CloneNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType, copyChildren, pTargetNode, pos);
@@ -310,7 +310,7 @@ namespace NetOffice.ExcelApi
         /// <param name="copyChildren">bool copyChildren</param>
         /// <param name="pTargetNode">NetOffice.ExcelApi.DiagramNode pTargetNode</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode CloneNode(bool copyChildren, NetOffice.ExcelApi.DiagramNode pTargetNode)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "CloneNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType, copyChildren, pTargetNode);
@@ -320,7 +320,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="pReceivingNode">NetOffice.ExcelApi.DiagramNode pReceivingNode</param>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public void TransferChildren(NetOffice.ExcelApi.DiagramNode pReceivingNode)
         {
             Factory.ExecuteMethod(this, "TransferChildren", pReceivingNode);
@@ -329,7 +329,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode NextNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "NextNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType);
@@ -338,7 +338,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.DiagramNode PrevNode()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.DiagramNode>(this, "PrevNode", NetOffice.ExcelApi.DiagramNode.LateBindingApiWrapperType);
@@ -346,6 +346,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

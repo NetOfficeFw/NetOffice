@@ -23,7 +23,7 @@ namespace NetOffice.VBIDEApi.Tools
         /// VBIDE Registry Path 
         /// </summary>
         private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\VBA\\VBE\\6.0\\Addins\\";
-       
+
         /// <summary>
         /// VBIDE Registry Path 64 Bit
         /// </summary>
@@ -50,7 +50,7 @@ namespace NetOffice.VBIDEApi.Tools
         {
             _factory = RaiseCreateFactory();
             if (null == _factory)
-                _factory = Core.Default;        
+                _factory = Core.Default;
         }
 
         #endregion
@@ -100,7 +100,7 @@ namespace NetOffice.VBIDEApi.Tools
                 return _factory;
             }
         }
-       
+
         /// <summary>
         /// Instance managed root com objects
         /// </summary>
@@ -248,7 +248,7 @@ namespace NetOffice.VBIDEApi.Tools
         void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
             try
-            {             
+            {
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
                 Roots = OnCreateRoots();
                 RaiseOnStartupComplete(ref custom);
@@ -285,9 +285,9 @@ namespace NetOffice.VBIDEApi.Tools
         void NetOffice.Tools.Native.IDTExtensibility2.OnDisconnection(ext_DisconnectMode RemoveMode, ref Array custom)
         {
             try
-            {                 
+            {
                 try
-                {                  
+                {
                     RaiseOnDisconnection(RemoveMode, ref custom);
                     Tweaks.DisposeTweaks(Factory, this, Type);
                 }
@@ -295,7 +295,7 @@ namespace NetOffice.VBIDEApi.Tools
                 {
                     Factory.Console.WriteException(exception);
                 }
-                
+
                 try
                 {
                     if (!Application.IsDisposed)
@@ -542,7 +542,7 @@ namespace NetOffice.VBIDEApi.Tools
         {
             if (null == type)
                 throw new ArgumentNullException("type");
-           
+
             OfficeRegisterKeyState currentKeyState = (OfficeRegisterKeyState)keyState;
             return RegExportHandler.ProceedUser(type, new string[] { _addinOfficeRegistryKey, _addinOfficeRegistryKey64 }, currentKeyState);
         }

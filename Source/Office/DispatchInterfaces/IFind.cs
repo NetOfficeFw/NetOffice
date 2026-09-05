@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface IFind 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class IFind : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IFind(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public IFind(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.OfficeApi
         public IFind(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IFind(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IFind() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IFind(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string SearchPath
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool SubDir
         {
             get
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Title
         {
             get
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Author
         {
             get
@@ -196,7 +196,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Keywords
         {
             get
@@ -213,7 +213,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Subject
         {
             get
@@ -230,7 +230,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFileFindOptions Options
         {
             get
@@ -247,7 +247,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool MatchCase
         {
             get
@@ -264,7 +264,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -281,7 +281,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool PatternMatch
         {
             get
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object DateSavedFrom
         {
             get
@@ -315,7 +315,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object DateSavedTo
         {
             get
@@ -332,7 +332,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public string SavedBy
         {
             get
@@ -349,7 +349,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object DateCreatedFrom
         {
             get
@@ -366,7 +366,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public object DateCreatedTo
         {
             get
@@ -383,7 +383,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFileFindView View
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFileFindSortBy SortBy
         {
             get
@@ -417,7 +417,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoFileFindListBy ListBy
         {
             get
@@ -434,7 +434,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SelectedFile
         {
             get
@@ -451,7 +451,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.IFoundFiles Results
         {
             get
@@ -464,7 +464,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 FileType
         {
             get
@@ -484,7 +484,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Show()
         {
             return Factory.ExecuteInt32MethodGet(this, "Show");
@@ -493,7 +493,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Execute()
         {
             Factory.ExecuteMethod(this, "Execute");
@@ -503,7 +503,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrQueryName">string bstrQueryName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Load(string bstrQueryName)
         {
             Factory.ExecuteMethod(this, "Load", bstrQueryName);
@@ -513,7 +513,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrQueryName">string bstrQueryName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Save(string bstrQueryName)
         {
             Factory.ExecuteMethod(this, "Save", bstrQueryName);
@@ -523,7 +523,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="bstrQueryName">string bstrQueryName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete(string bstrQueryName)
         {
             Factory.ExecuteMethod(this, "Delete", bstrQueryName);
@@ -531,6 +531,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

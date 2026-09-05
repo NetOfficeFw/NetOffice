@@ -6,7 +6,7 @@ namespace NetOffice.ADODBApi.Enums
     /// <summary>
     /// SupportByVersion ADODB 2.1, 2.5
     /// </summary>
-    [SupportByVersion("ADODB", 2.1,2.5)]
+    [SupportByVersion("ADODB", 2.1, 2.5)]
     [EntityType(EntityType.IsEnum)]
     public enum ConnectOptionEnum
     {
@@ -14,14 +14,14 @@ namespace NetOffice.ADODBApi.Enums
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>-1</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adConnectUnspecified = -1,
 
         /// <summary>
         /// SupportByVersion ADODB 2.1, 2.5
         /// </summary>
         /// <remarks>16</remarks>
-        [SupportByVersion("ADODB", 2.1,2.5)]
+        [SupportByVersion("ADODB", 2.1, 2.5)]
         adAsyncConnect = 16
     }
 }

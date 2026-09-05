@@ -9,11 +9,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _OptionButton 
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _OptionButton : NetOffice.OfficeApi.IAccessible
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _OptionButton(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _OptionButton(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _OptionButton(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OptionButton(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OptionButton() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OptionButton(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Application"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Parent"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OldValue"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object OldValue
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Properties"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Properties Properties
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Controls"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.AccessApi.Children Controls
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Value"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object Value
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.EventProcPrefix"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string EventProcPrefix
         {
             get
@@ -218,7 +218,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string _Name
         {
@@ -237,7 +237,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ControlType"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte ControlType
         {
             get
@@ -255,7 +255,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OptionValue"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 OptionValue
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ControlSource"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ControlSource
         {
             get
@@ -291,7 +291,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.DefaultValue"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string DefaultValue
         {
             get
@@ -309,7 +309,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ValidationRule"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ValidationRule
         {
             get
@@ -327,7 +327,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ValidationText"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ValidationText
         {
             get
@@ -345,7 +345,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.StatusBarText"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string StatusBarText
         {
             get
@@ -363,7 +363,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Visible"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool Visible
         {
             get
@@ -381,7 +381,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.DisplayWhen"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte DisplayWhen
         {
             get
@@ -399,7 +399,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Enabled"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool Enabled
         {
             get
@@ -417,7 +417,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Locked"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool Locked
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.TripleState"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool TripleState
         {
             get
@@ -453,7 +453,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.TabStop"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool TabStop
         {
             get
@@ -471,7 +471,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.TabIndex"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 TabIndex
         {
             get
@@ -489,7 +489,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.HideDuplicates"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool HideDuplicates
         {
             get
@@ -507,7 +507,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Left"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Left
         {
             get
@@ -525,7 +525,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Top"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Top
         {
             get
@@ -543,7 +543,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Width"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Width
         {
             get
@@ -561,7 +561,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Height"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Height
         {
             get
@@ -579,7 +579,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.SpecialEffect"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte SpecialEffect
         {
             get
@@ -597,7 +597,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BorderStyle"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte BorderStyle
         {
             get
@@ -615,7 +615,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OldBorderStyle"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte OldBorderStyle
         {
             get
@@ -633,7 +633,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BorderWidth"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte BorderWidth
         {
             get
@@ -650,7 +650,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public byte BorderLineStyle
         {
@@ -669,7 +669,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BorderColor"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 BorderColor
         {
             get
@@ -687,7 +687,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ShortcutMenuBar"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ShortcutMenuBar
         {
             get
@@ -705,7 +705,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ControlTipText"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ControlTipText
         {
             get
@@ -723,7 +723,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.HelpContextId"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HelpContextId
         {
             get
@@ -741,7 +741,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ColumnWidth"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 ColumnWidth
         {
             get
@@ -759,7 +759,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ColumnOrder"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 ColumnOrder
         {
             get
@@ -777,7 +777,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ColumnHidden"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool ColumnHidden
         {
             get
@@ -795,7 +795,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.AutoLabel"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool AutoLabel
         {
             get
@@ -813,7 +813,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.AddColon"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool AddColon
         {
             get
@@ -831,7 +831,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.LabelX"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 LabelX
         {
             get
@@ -849,7 +849,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.LabelY"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 LabelY
         {
             get
@@ -867,7 +867,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.LabelAlign"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public byte LabelAlign
         {
             get
@@ -885,7 +885,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Section"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public Int16 Section
         {
             get
@@ -902,7 +902,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string ControlName
         {
@@ -921,7 +921,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Tag"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Tag
         {
             get
@@ -939,7 +939,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.IsVisible"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public bool IsVisible
         {
             get
@@ -957,7 +957,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.InSelection"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool InSelection
         {
@@ -976,7 +976,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BeforeUpdate-property"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string BeforeUpdate
         {
             get
@@ -994,7 +994,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.AfterUpdate-property"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string AfterUpdate
         {
             get
@@ -1012,7 +1012,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnEnter"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnEnter
         {
             get
@@ -1030,7 +1030,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnExit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnExit
         {
             get
@@ -1048,7 +1048,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnGotFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnGotFocus
         {
             get
@@ -1066,7 +1066,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnLostFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnLostFocus
         {
             get
@@ -1084,7 +1084,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnClick
         {
             get
@@ -1102,7 +1102,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnDblClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnDblClick
         {
             get
@@ -1120,7 +1120,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnMouseDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnMouseDown
         {
             get
@@ -1138,7 +1138,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnMouseMove"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnMouseMove
         {
             get
@@ -1156,7 +1156,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnMouseUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnMouseUp
         {
             get
@@ -1174,7 +1174,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnKeyDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnKeyDown
         {
             get
@@ -1192,7 +1192,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnKeyUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnKeyUp
         {
             get
@@ -1210,7 +1210,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.OnKeyPress"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string OnKeyPress
         {
             get
@@ -1228,7 +1228,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.ReadingOrder"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public byte ReadingOrder
         {
@@ -1247,7 +1247,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Name"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -1264,7 +1264,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string BeforeUpdateMacro
         {
@@ -1282,7 +1282,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string AfterUpdateMacro
         {
@@ -1300,7 +1300,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnEnterMacro
         {
@@ -1318,7 +1318,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnExitMacro
         {
@@ -1336,7 +1336,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnGotFocusMacro
         {
@@ -1354,7 +1354,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnLostFocusMacro
         {
@@ -1372,7 +1372,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnClickMacro
         {
@@ -1390,7 +1390,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnDblClickMacro
         {
@@ -1408,7 +1408,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseDownMacro
         {
@@ -1426,7 +1426,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseMoveMacro
         {
@@ -1444,7 +1444,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseUpMacro
         {
@@ -1462,7 +1462,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyDownMacro
         {
@@ -1480,7 +1480,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyUpMacro
         {
@@ -1498,7 +1498,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyPressMacro
         {
@@ -1517,7 +1517,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Layout"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcLayoutType Layout
         {
             get
@@ -1531,7 +1531,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.LeftPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 LeftPadding
         {
             get
@@ -1549,7 +1549,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.TopPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 TopPadding
         {
             get
@@ -1567,7 +1567,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.RightPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 RightPadding
         {
             get
@@ -1585,7 +1585,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BottomPadding"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 BottomPadding
         {
             get
@@ -1603,7 +1603,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineStyleLeft"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleLeft
         {
             get
@@ -1621,7 +1621,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineStyleTop"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleTop
         {
             get
@@ -1639,7 +1639,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineStyleRight"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleRight
         {
             get
@@ -1657,7 +1657,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineStyleBottom"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineStyleBottom
         {
             get
@@ -1675,7 +1675,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineWidthLeft"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthLeft
         {
             get
@@ -1693,7 +1693,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineWidthTop"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthTop
         {
             get
@@ -1711,7 +1711,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineWidthRight"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthRight
         {
             get
@@ -1729,7 +1729,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineWidthBottom"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte GridlineWidthBottom
         {
             get
@@ -1747,7 +1747,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineColor"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int32 GridlineColor
         {
             get
@@ -1765,7 +1765,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.HorizontalAnchor"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcHorizontalAnchor HorizontalAnchor
         {
             get
@@ -1783,7 +1783,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.VerticalAnchor"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public NetOffice.AccessApi.Enums.AcVerticalAnchor VerticalAnchor
         {
             get
@@ -1801,7 +1801,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.LayoutID"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int32 LayoutID
         {
             get
@@ -1815,7 +1815,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BorderThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 BorderThemeColorIndex
         {
             get
@@ -1833,7 +1833,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BorderTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BorderTint
         {
             get
@@ -1851,7 +1851,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.BorderShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single BorderShade
         {
             get
@@ -1869,7 +1869,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineThemeColorIndex"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Int32 GridlineThemeColorIndex
         {
             get
@@ -1887,7 +1887,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineTint"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single GridlineTint
         {
             get
@@ -1905,7 +1905,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.GridlineShade"/> </remarks>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         public Single GridlineShade
         {
             get
@@ -1926,7 +1926,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.SizeToFit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void SizeToFit()
         {
             Factory.ExecuteMethod(this, "SizeToFit");
@@ -1936,7 +1936,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Requery"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Requery()
         {
             Factory.ExecuteMethod(this, "Requery");
@@ -1946,7 +1946,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Goto()
         {
             Factory.ExecuteMethod(this, "Goto");
@@ -1956,7 +1956,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.SetFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void SetFocus()
         {
             Factory.ExecuteMethod(this, "SetFocus");
@@ -1968,7 +1968,7 @@ namespace NetOffice.AccessApi
         /// <param name="bstrExpr">string bstrExpr</param>
         /// <param name="ppsa">optional object[] ppsa</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object _Evaluate(string bstrExpr, object[] ppsa)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(bstrExpr, (object)ppsa);
@@ -1990,7 +1990,7 @@ namespace NetOffice.AccessApi
         /// <param name="bstrExpr">string bstrExpr</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public object _Evaluate(string bstrExpr)
         {
             return Factory.ExecuteVariantMethodGet(this, "_Evaluate", bstrExpr);
@@ -2004,7 +2004,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         /// <param name="height">optional object height</param>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top, object width, object height)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width, height);
@@ -2016,7 +2016,7 @@ namespace NetOffice.AccessApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.OptionButton.Move"/> </remarks>
         /// <param name="left">object left</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left)
         {
             Factory.ExecuteMethod(this, "Move", left);
@@ -2029,7 +2029,7 @@ namespace NetOffice.AccessApi
         /// <param name="left">object left</param>
         /// <param name="top">optional object top</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top)
         {
             Factory.ExecuteMethod(this, "Move", left, top);
@@ -2043,7 +2043,7 @@ namespace NetOffice.AccessApi
         /// <param name="top">optional object top</param>
         /// <param name="width">optional object width</param>
         [CustomMethod]
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public void Move(object left, object top, object width)
         {
             Factory.ExecuteMethod(this, "Move", left, top, width);
@@ -2054,7 +2054,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -2062,6 +2062,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

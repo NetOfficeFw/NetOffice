@@ -7,7 +7,7 @@ namespace NetOffice.ExcelApi.Enums
     /// SupportByVersion Excel 14, 15, 16
     /// </summary>
     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.XlAllocationValue"/> </remarks>
-    [SupportByVersion("Excel", 14,15,16)]
+    [SupportByVersion("Excel", 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum XlAllocationValue
     {
@@ -15,14 +15,14 @@ namespace NetOffice.ExcelApi.Enums
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         /// <remarks>1</remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         xlAllocateValue = 1,
 
         /// <summary>
         /// SupportByVersion Excel 14, 15, 16
         /// </summary>
         /// <remarks>2</remarks>
-        [SupportByVersion("Excel", 14,15,16)]
+        [SupportByVersion("Excel", 14, 15, 16)]
         xlAllocateIncrement = 2
     }
 }

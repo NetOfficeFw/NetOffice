@@ -7,7 +7,7 @@ namespace NetOffice
     /// Represents a COM proxy wrapper with type information and access to the underlying proxy
     /// </summary>
     public interface ICOMObjectProxy
-    {    
+    {
         /// <summary>
         /// Underlying COM proxy
         /// </summary>
@@ -37,7 +37,7 @@ namespace NetOffice
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         string UnderlyingComponentName { get; }
-        
+
         /// <summary>
         /// Full name of the NetOffice Wrapper class
         /// </summary>
@@ -55,7 +55,7 @@ namespace NetOffice
         /// </summary>
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced)]
         string InstanceComponentName { get; }
-       
+
         /// <summary>
         /// Type information from <see cref="ICOMObject"/> instance
         /// </summary>

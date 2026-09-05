@@ -28,7 +28,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChCategoryLabels_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -37,7 +37,7 @@ namespace NetOffice.OWC10Api
         public ChCategoryLabels_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -55,7 +55,7 @@ namespace NetOffice.OWC10Api
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChCategoryLabels_(ICOMObject replacedObject) : base(replacedObject)
@@ -69,13 +69,13 @@ namespace NetOffice.OWC10Api
         public ChCategoryLabels_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChCategoryLabels_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -118,7 +118,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class ChCategoryLabels : ChCategoryLabels_, IEnumerableProvider<NetOffice.OWC10Api.ChCategoryLabel>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -146,9 +146,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -163,7 +163,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChCategoryLabels(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -172,7 +172,7 @@ namespace NetOffice.OWC10Api
         public ChCategoryLabels(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -190,26 +190,26 @@ namespace NetOffice.OWC10Api
         public ChCategoryLabels(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChCategoryLabels(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChCategoryLabels() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChCategoryLabels(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -282,7 +282,7 @@ namespace NetOffice.OWC10Api
                 return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OWC10Api.ChCategoryLabel>(this, "Item", NetOffice.OWC10Api.ChCategoryLabel.LateBindingApiWrapperType, index, level);
             }
         }
-        
+
         /// <summary>
         /// SupportByVersion OWC10 1
         /// Get
@@ -345,6 +345,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -34,7 +34,7 @@ namespace NetOffice.Tools
                             result = errorMethod.Invoke(null, new object[0]);
                             break;
                         case 1:
-                            if(arguments[0].ParameterType.GUID == typeof(RegisterErrorMethodKind).GUID)
+                            if (arguments[0].ParameterType.GUID == typeof(RegisterErrorMethodKind).GUID)
                                 result = errorMethod.Invoke(null, new object[] { methodKind });
                             else
                                 result = errorMethod.Invoke(null, new object[] { exception });

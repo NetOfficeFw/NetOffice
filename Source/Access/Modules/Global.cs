@@ -9,14 +9,14 @@ namespace NetOffice.AccessApi.GlobalHelperModules
     /// Module GlobalModule
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     ///</summary>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsModule), ModuleBaseType(typeof(AccessApi.Application))]
     public static class GlobalModule
     {
         #region Fields
 
         private static ICOMObject _instance;
-        
+
         #endregion
 
         #region Internal Properties
@@ -38,10 +38,10 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Factory;
-            else
-                return Core.Default;
+                else
+                    return Core.Default;
             }
         }
 
@@ -49,10 +49,10 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
+                if (null != _instance)
                     return _instance.Invoker;
-            else
-                return Invoker.Default;
+                else
+                    return Invoker.Default;
             }
         }
 
@@ -65,7 +65,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Application"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Application Application
         {
             get
@@ -80,7 +80,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Parent"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public static object Parent
         {
             get
@@ -95,7 +95,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CodeContextObject"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public static object CodeContextObject
         {
             get
@@ -109,7 +109,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.MenuBar"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static string MenuBar
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CurrentObjectType"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static Int32 CurrentObjectType
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CurrentObjectName"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static string CurrentObjectName
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Forms"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Forms Forms
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Reports"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Reports Reports
         {
             get
@@ -183,7 +183,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Screen"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Screen Screen
         {
             get
@@ -197,7 +197,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.DoCmd"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.DoCmd DoCmd
         {
             get
@@ -211,7 +211,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.ShortcutMenuBar"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static string ShortcutMenuBar
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Visible"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static bool Visible
         {
             get
@@ -247,7 +247,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.UserControl"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static bool UserControl
         {
             get
@@ -265,7 +265,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.DBEngine"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.DAOApi.DBEngine DBEngine
         {
             get
@@ -279,7 +279,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CommandBars"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.CommandBars CommandBars
         {
             get
@@ -292,7 +292,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.Assistant Assistant
         {
             get
@@ -306,7 +306,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.References"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.References References
         {
             get
@@ -320,7 +320,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Modules"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Modules Modules
         {
             get
@@ -333,7 +333,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.FileSearch FileSearch
         {
             get
@@ -347,7 +347,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.IsCompiled"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static bool IsCompiled
         {
             get
@@ -361,7 +361,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get 
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.VBE"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.VBIDEApi.VBE VBE
         {
             get
@@ -374,7 +374,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.DataAccessPages DataAccessPages
         {
             get
@@ -387,7 +387,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static string ADOConnectString
         {
@@ -402,7 +402,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CurrentProject"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.CurrentProject CurrentProject
         {
             get
@@ -416,7 +416,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CurrentData"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.CurrentData CurrentData
         {
             get
@@ -430,7 +430,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CodeProject"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.CodeProject CodeProject
         {
             get
@@ -444,7 +444,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CodeData"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.CodeData CodeData
         {
             get
@@ -457,7 +457,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.AccessApi.WizHook WizHook
         {
@@ -472,7 +472,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.ProductCode"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static string ProductCode
         {
             get
@@ -486,7 +486,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.COMAddIns"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.COMAddIns COMAddIns
         {
             get
@@ -500,7 +500,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Name"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static string Name
         {
             get
@@ -513,7 +513,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.DefaultWebOptions DefaultWebOptions
         {
             get
@@ -527,7 +527,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.LanguageSettings"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.LanguageSettings LanguageSettings
         {
             get
@@ -540,7 +540,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.AnswerWizard AnswerWizard
         {
             get
@@ -554,7 +554,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.FeatureInstall"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static NetOffice.OfficeApi.Enums.MsoFeatureInstall FeatureInstall
         {
             get
@@ -571,7 +571,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static object VGXFrameInterval
         {
@@ -587,7 +587,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// </summary>
         /// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.FileDialog"/> </remarks>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.OfficeApi.FileDialog get_FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType)
         {
@@ -600,7 +600,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// </summary>
         /// <param name="dialogType">NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType</param>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.FileDialog"/> </remarks>
-        [SupportByVersion("Access", 10,11,12,14,15,16), Redirect("get_FileDialog")]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16), Redirect("get_FileDialog")]
         public static NetOffice.OfficeApi.FileDialog FileDialog(NetOffice.OfficeApi.Enums.MsoFileDialogType dialogType)
         {
             return get_FileDialog(dialogType);
@@ -611,7 +611,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.BrokenReference"/> </remarks>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public static bool BrokenReference
         {
             get
@@ -625,7 +625,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> MSDN Online: Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Printers"/> </remarks>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public static NetOffice.AccessApi.Printers Printers
         {
             get
@@ -657,7 +657,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.OfficeApi.MsoDebugOptions MsoDebugOptions
         {
@@ -672,7 +672,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Version"/> </remarks>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public static string Version
         {
             get
@@ -686,7 +686,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Build"/> </remarks>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public static Int32 Build
         {
             get
@@ -761,7 +761,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.TempVars"/> </remarks>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public static NetOffice.AccessApi.TempVars TempVars
         {
             get
@@ -802,7 +802,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static NetOffice.AccessApi.LocalVars LocalVars
         {
@@ -835,7 +835,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.NewCurrentDatabase"/> </remarks>
         /// <param name="filepath">string filepath</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void NewCurrentDatabase(string filepath)
         {
             Factory.ExecuteMethod(_instance, "NewCurrentDatabase", filepath);
@@ -850,7 +850,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <param name="template">optional object template</param>
         /// <param name="siteAddress">optional string SiteAddress = </param>
         /// <param name="listID">optional string ListID = </param>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public static void NewCurrentDatabase(string filepath, object fileFormat, object template, object siteAddress, object listID)
         {
             Factory.ExecuteMethod(_instance, "NewCurrentDatabase", new object[] { filepath, fileFormat, template, siteAddress, listID });
@@ -863,7 +863,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <param name="filepath">string filepath</param>
         /// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
         [CustomMethod]
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public static void NewCurrentDatabase(string filepath, object fileFormat)
         {
             Factory.ExecuteMethod(_instance, "NewCurrentDatabase", filepath, fileFormat);
@@ -877,7 +877,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <param name="fileFormat">optional NetOffice.AccessApi.Enums.AcNewDatabaseFormat FileFormat = 0</param>
         /// <param name="template">optional object template</param>
         [CustomMethod]
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public static void NewCurrentDatabase(string filepath, object fileFormat, object template)
         {
             Factory.ExecuteMethod(_instance, "NewCurrentDatabase", filepath, fileFormat, template);
@@ -892,7 +892,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <param name="template">optional object template</param>
         /// <param name="siteAddress">optional string SiteAddress = </param>
         [CustomMethod]
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public static void NewCurrentDatabase(string filepath, object fileFormat, object template, object siteAddress)
         {
             Factory.ExecuteMethod(_instance, "NewCurrentDatabase", filepath, fileFormat, template, siteAddress);
@@ -904,7 +904,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.OpenCurrentDatabase"/> </remarks>
         /// <param name="filepath">string filepath</param>
         /// <param name="exclusive">optional bool Exclusive = false</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void OpenCurrentDatabase(string filepath, object exclusive)
         {
             Factory.ExecuteMethod(_instance, "OpenCurrentDatabase", filepath, exclusive);
@@ -917,7 +917,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <param name="filepath">string filepath</param>
         /// <param name="exclusive">optional bool Exclusive = false</param>
         /// <param name="bstrPassword">optional string bstrPassword = </param>
-        [SupportByVersion("Access", 10,11,12,14,15,16)]
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
         public static void OpenCurrentDatabase(string filepath, object exclusive, object bstrPassword)
         {
             Factory.ExecuteMethod(_instance, "OpenCurrentDatabase", filepath, exclusive, bstrPassword);
@@ -929,7 +929,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.OpenCurrentDatabase"/> </remarks>
         /// <param name="filepath">string filepath</param>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void OpenCurrentDatabase(string filepath)
         {
             Factory.ExecuteMethod(_instance, "OpenCurrentDatabase", filepath);
@@ -940,7 +940,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.GetOption"/> </remarks>
         /// <param name="optionName">string optionName</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static object GetOption(string optionName)
         {
             return Factory.ExecuteVariantMethodGet(_instance, "GetOption", optionName);
@@ -952,7 +952,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.SetOption"/> </remarks>
         /// <param name="optionName">string optionName</param>
         /// <param name="setting">object setting</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void SetOption(string optionName, object setting)
         {
             Factory.ExecuteMethod(_instance, "SetOption", optionName, setting);
@@ -964,7 +964,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Echo"/> </remarks>
         /// <param name="echoOn">Int16 echoOn</param>
         /// <param name="bstrStatusBarText">optional string bstrStatusBarText = </param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void Echo(Int16 echoOn, object bstrStatusBarText)
         {
             Factory.ExecuteMethod(_instance, "Echo", echoOn, bstrStatusBarText);
@@ -975,7 +975,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Echo"/> </remarks>
         /// <param name="echoOn">Int16 echoOn</param>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void Echo(Int16 echoOn)
         {
             Factory.ExecuteMethod(_instance, "Echo", echoOn);
@@ -985,7 +985,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.CloseCurrentDatabase"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void CloseCurrentDatabase()
         {
             Factory.ExecuteMethod(_instance, "CloseCurrentDatabase");
@@ -996,7 +996,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Quit"/> </remarks>
         /// <param name="option">optional NetOffice.AccessApi.Enums.AcQuitOption Option = 1</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void Quit(object option)
         {
             Factory.ExecuteMethod(_instance, "Quit", option);
@@ -1007,7 +1007,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application.Quit"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public static void Quit()
         {
             Factory.ExecuteMethod(_instance, "Quit");
@@ -4496,7 +4496,7 @@ namespace NetOffice.AccessApi.GlobalHelperModules
         {
             return Factory.ExecuteBoolMethodGet(_instance, "IsClient");
         }
-        
+
         #endregion
     }
 }

@@ -65,12 +65,12 @@ namespace NetOffice.Duck
 
             Builder.AppendLine("\t\t}" + Environment.NewLine);
         }
-        
+
         private void BuildMethod(MethodInfo method)
         {
             bool hasReturn = method.ReturnType.FullName != "System.Void";
             ParameterInfo[] arguments = method.GetParameters();
-            Builder.Append("\t\tpublic " + (hasReturn ? method.ReturnType.FullName : "void") +  " " + method.Name +  "(");
+            Builder.Append("\t\tpublic " + (hasReturn ? method.ReturnType.FullName : "void") + " " + method.Name + "(");
             for (int i = 0; i < arguments.Length; i++)
             {
                 ParameterInfo argument = arguments[i];
@@ -178,7 +178,7 @@ namespace NetOffice.Duck
         }
 
         private static bool IsObjectType(Type type)
-        {         
+        {
             return type.FullName == "System.Object";
         }
 
@@ -196,7 +196,7 @@ namespace NetOffice.Duck
         {
             return type.IsEnum;
         }
-        
+
         public void Dispose()
         {
             if (HasMethods)

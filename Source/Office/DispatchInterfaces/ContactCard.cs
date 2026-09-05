@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ContactCard"/> </remarks>
-    [SupportByVersion("Office", 14,15,16)]
+    [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ContactCard : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ContactCard(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public ContactCard(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public ContactCard(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ContactCard(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ContactCard() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ContactCard(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ContactCard.Close"/> </remarks>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public void Close()
         {
             Factory.ExecuteMethod(this, "Close");
@@ -133,10 +133,10 @@ namespace NetOffice.OfficeApi
         /// <param name="rectangleBottom">Int32 rectangleBottom</param>
         /// <param name="horizontalPosition">Int32 horizontalPosition</param>
         /// <param name="showWithDelay">optional bool ShowWithDelay = false</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition, object showWithDelay)
         {
-            Factory.ExecuteMethod(this, "Show", new object[]{ cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay });
+            Factory.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition, showWithDelay });
         }
 
         /// <summary>
@@ -150,14 +150,14 @@ namespace NetOffice.OfficeApi
         /// <param name="rectangleBottom">Int32 rectangleBottom</param>
         /// <param name="horizontalPosition">Int32 horizontalPosition</param>
         [CustomMethod]
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public void Show(NetOffice.OfficeApi.Enums.MsoContactCardStyle cardStyle, Int32 rectangleLeft, Int32 rectangleRight, Int32 rectangleTop, Int32 rectangleBottom, Int32 horizontalPosition)
         {
-            Factory.ExecuteMethod(this, "Show", new object[]{ cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition });
+            Factory.ExecuteMethod(this, "Show", new object[] { cardStyle, rectangleLeft, rectangleRight, rectangleTop, rectangleBottom, horizontalPosition });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

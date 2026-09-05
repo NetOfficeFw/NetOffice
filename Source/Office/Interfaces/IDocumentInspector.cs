@@ -11,11 +11,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IDocumentInspector : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IDocumentInspector(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
         public IDocumentInspector(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.OfficeApi
         public IDocumentInspector(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDocumentInspector(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDocumentInspector() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDocumentInspector(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -119,10 +119,10 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IDocumentInspector.GetInfo"/> </remarks>
         /// <param name="name">string name</param>
         /// <param name="desc">string desc</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 GetInfo(out string name, out string desc)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             name = string.Empty;
             desc = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(name, desc);
@@ -140,10 +140,10 @@ namespace NetOffice.OfficeApi
         /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
         /// <param name="result">string result</param>
         /// <param name="action">string action</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Inspect(object doc, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result, out string action)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, true, true);
             status = 0;
             result = string.Empty;
             action = string.Empty;
@@ -163,10 +163,10 @@ namespace NetOffice.OfficeApi
         /// <param name="hwnd">Int32 hwnd</param>
         /// <param name="status">NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status</param>
         /// <param name="result">string result</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Fix(object doc, Int32 hwnd, out NetOffice.OfficeApi.Enums.MsoDocInspectorStatus status, out string result)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true, true);
             status = 0;
             result = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(doc, hwnd, status, result);
@@ -178,6 +178,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

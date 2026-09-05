@@ -6,22 +6,22 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
-{	
-    #pragma warning disable
-    
+{
+#pragma warning disable
+
     #region SinkPoint Interface
 
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("F163F201-ADA2-11CF-89A9-00A0C9054129"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _References_Events
     {
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("reference", typeof(NetOffice.AccessApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(0)]
         void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("reference", typeof(NetOffice.AccessApi.Reference))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
         void ItemRemoved([In, MarshalAs(UnmanagedType.IDispatch)] object reference);
@@ -36,22 +36,22 @@ namespace NetOffice.AccessApi.Events
     public class _References_Events_SinkHelper : SinkHelper, _References_Events
     {
         #region Static
-        
+
         public static readonly string Id = "F163F201-ADA2-11CF-89A9-00A0C9054129";
-        
+
         #endregion
-        
+
         #region Ctor
 
-        public _References_Events_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _References_Events_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region _References_Events
-        
+
         public void ItemAdded([In, MarshalAs(UnmanagedType.IDispatch)] object reference)
         {
             if (!Validate("ItemAdded"))
@@ -82,8 +82,8 @@ namespace NetOffice.AccessApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore
+
+#pragma warning restore
 }

@@ -29,7 +29,7 @@ namespace NetOffice.WordApi.Tools
         /// <summary>
         /// MS-Word Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Word\\Addins\\";
+        private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Word\\Addins\\";
 
         /// <summary>
         /// First field in OnConnection custom argument array
@@ -75,7 +75,7 @@ namespace NetOffice.WordApi.Tools
         /// Host Application Instance
         /// </summary>
         protected internal Word.Application Application { get; private set; }
-        
+
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
@@ -305,7 +305,7 @@ namespace NetOffice.WordApi.Tools
                 {
                     object firstCustomItem = custom.GetValue(1);
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
-                    NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);                    
+                    NetRuntimeSystem.Int32.TryParse(tryString, out _automationCode);
                 }
 
                 this.Application = new Word.Application(Factory, null, application);
@@ -391,7 +391,7 @@ namespace NetOffice.WordApi.Tools
                 catch (NetRuntimeSystem.Exception exception)
                 {
                     NetOffice.DebugConsole.Default.WriteException(exception);
-                }	
+                }
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -451,7 +451,7 @@ namespace NetOffice.WordApi.Tools
                 NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
                 return String.Empty;
-            } 
+            }
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace NetOffice.WordApi.Tools
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
             }
         }
-        
+
         /// <summary>
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
@@ -510,14 +510,14 @@ namespace NetOffice.WordApi.Tools
         {
             return true;
         }
-        
+
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
         protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
-    
+
         }
 
         /// <summary>
@@ -526,16 +526,16 @@ namespace NetOffice.WordApi.Tools
         /// <param name="customTaskPaneInst">pane instance</param>
         protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
-            
+
         }
 
         private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
         {
             try
             {
-                foreach(TaskPaneInfo item in TaskPanes)
+                foreach (TaskPaneInfo item in TaskPanes)
                 {
-                    if(item.Pane == customTaskPaneInst)
+                    if (item.Pane == customTaskPaneInst)
                     {
                         try
                         {
@@ -546,13 +546,13 @@ namespace NetOffice.WordApi.Tools
                                 {
                                     target.OnVisibleStateChanged(item.Pane.Visible);
                                 }
-                                catch(Exception exception)
+                                catch (Exception exception)
                                 {
                                     Factory.Console.WriteException(exception);
                                 }
                             }
                         }
-                        catch(Exception exception)
+                        catch (Exception exception)
                         {
                             Factory.Console.WriteException(exception);
                         }
@@ -560,9 +560,9 @@ namespace NetOffice.WordApi.Tools
                 }
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
-               Factory.Console.WriteException(exception);
+                Factory.Console.WriteException(exception);
             }
         }
 
@@ -570,9 +570,9 @@ namespace NetOffice.WordApi.Tools
         {
             try
             {
-                foreach(TaskPaneInfo item in TaskPanes)
+                foreach (TaskPaneInfo item in TaskPanes)
                 {
-                    if(item.Pane == customTaskPaneInst)
+                    if (item.Pane == customTaskPaneInst)
                     {
                         try
                         {
@@ -583,13 +583,13 @@ namespace NetOffice.WordApi.Tools
                                 {
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
                                 }
-                                catch(Exception exception)
+                                catch (Exception exception)
                                 {
                                     Factory.Console.WriteException(exception);
                                 }
                             }
                         }
-                        catch(Exception exception)
+                        catch (Exception exception)
                         {
                             Factory.Console.WriteException(exception);
                         }
@@ -597,9 +597,9 @@ namespace NetOffice.WordApi.Tools
                 }
                 TaskPaneDockStateChanged(customTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
-               Factory.Console.WriteException(exception);
+                Factory.Console.WriteException(exception);
             }
         }
 
@@ -609,21 +609,21 @@ namespace NetOffice.WordApi.Tools
             {
                 return OnCreateTaskPaneInfo(paneInfo);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
                 return false;
             }
         }
-        
+
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
-        {           
+        {
             try
             {
                 CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
             }
@@ -635,14 +635,14 @@ namespace NetOffice.WordApi.Tools
             {
                 CallTaskPaneDockPositionStateChange(CustomTaskPaneInst);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Factory.Console.WriteException(exception);
-            }            
+            }
         }
 
         #endregion
-        
+
         #region IDocumentInspector
 
         private ToolsDocumentInspector CurrentInspector { get; set; }
@@ -903,8 +903,8 @@ namespace NetOffice.WordApi.Tools
             if (null != _isLoadedFromSystem)
                 return _isLoadedFromSystem;
 
-            OfficeApi.Tools.Contribution.RegistryLocationResult result = 
-                OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type, 
+            OfficeApi.Tools.Contribution.RegistryLocationResult result =
+                OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type,
                                             ApplicationIdentifiers.ApplicationType.Word);
             switch (result)
             {
@@ -914,8 +914,8 @@ namespace NetOffice.WordApi.Tools
                 case Office.Tools.Contribution.RegistryLocationResult.System:
                     _isLoadedFromSystem = true;
                     break;
-                //default:
-                //    throw new IndexOutOfRangeException();
+                    //default:
+                    //    throw new IndexOutOfRangeException();
             }
 
             return _isLoadedFromSystem;
@@ -961,7 +961,7 @@ namespace NetOffice.WordApi.Tools
         #endregion
 
         #region COM Register Functions
-   
+
         /// <summary>
         /// Called from regasm while register 
         /// </summary>
@@ -1000,7 +1000,7 @@ namespace NetOffice.WordApi.Tools
         /// <param name="keyState">NetOffice.Tools.OfficeRegisterKeyState enum value</param>
         [ComRegisterCall]
         private static void OptimizedRegisterFunction(Type type, int scope, int keyState)
-        {         
+        {
             if (null == type)
                 throw new ArgumentNullException("type");
             if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())
@@ -1012,7 +1012,7 @@ namespace NetOffice.WordApi.Tools
             COMAddinRegisterHandler.Proceed(type, new string[] { _addinOfficeRegistryKey }, currentScope, currentKeyState);
             RegisterHandleDocumentInspector(type);
         }
-        
+
         /// <summary>
         /// Called from RegAddin while unregister
         /// </summary>
@@ -1058,7 +1058,7 @@ namespace NetOffice.WordApi.Tools
             {
                 DocumentInspectorAttribute[] attributes = DocumentInspectorAttribute.GetAttributes(type);
                 if (attributes.Length > 0)
-                {   
+                {
                     GuidAttribute typeid = AttributeReflector.GetGuidAttribute(type);
                     foreach (var attribute in attributes)
                     {
@@ -1072,7 +1072,7 @@ namespace NetOffice.WordApi.Tools
             catch (NetRuntimeSystem.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
-                if(!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
                     throw;
             }
         }
@@ -1098,7 +1098,7 @@ namespace NetOffice.WordApi.Tools
             catch (NetRuntimeSystem.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
-                if(!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception))
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.UnRegister, exception))
                     throw;
             }
         }

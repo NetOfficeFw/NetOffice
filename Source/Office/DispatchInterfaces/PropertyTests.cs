@@ -12,11 +12,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface PropertyTests 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class PropertyTests : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.PropertyTest>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PropertyTests(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi
         public PropertyTests(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.OfficeApi
         public PropertyTests(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PropertyTests(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PropertyTests() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PropertyTests(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.PropertyTest this[Int32 index]
         {
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -150,10 +150,10 @@ namespace NetOffice.OfficeApi
         /// <param name="value">optional object value</param>
         /// <param name="secondValue">optional object secondValue</param>
         /// <param name="connector">optional NetOffice.OfficeApi.Enums.MsoConnector Connector = 1</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue, object connector)
         {
-            Factory.ExecuteMethod(this, "Add", new object[]{ name, condition, value, secondValue, connector });
+            Factory.ExecuteMethod(this, "Add", new object[] { name, condition, value, secondValue, connector });
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi
         /// <param name="name">string name</param>
         /// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition)
         {
             Factory.ExecuteMethod(this, "Add", name, condition);
@@ -175,7 +175,7 @@ namespace NetOffice.OfficeApi
         /// <param name="condition">NetOffice.OfficeApi.Enums.MsoCondition condition</param>
         /// <param name="value">optional object value</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value)
         {
             Factory.ExecuteMethod(this, "Add", name, condition, value);
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi
         /// <param name="value">optional object value</param>
         /// <param name="secondValue">optional object secondValue</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Add(string name, NetOffice.OfficeApi.Enums.MsoCondition condition, object value, object secondValue)
         {
             Factory.ExecuteMethod(this, "Add", name, condition, value, secondValue);
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Remove(Int32 index)
         {
             Factory.ExecuteMethod(this, "Remove", index);
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this, false);
@@ -249,6 +249,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

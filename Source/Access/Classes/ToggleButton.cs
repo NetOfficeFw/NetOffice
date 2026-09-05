@@ -7,7 +7,7 @@ namespace NetOffice.AccessApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void ToggleButton_ClickEventHandler();
     public delegate void ToggleButton_BeforeUpdateEventHandler(ref Int16 cancel);
     public delegate void ToggleButton_AfterUpdateEventHandler();
@@ -22,7 +22,7 @@ namespace NetOffice.AccessApi
     public delegate void ToggleButton_KeyDownEventHandler(ref Int16 keyCode, ref Int16 shift);
     public delegate void ToggleButton_KeyPressEventHandler(ref Int16 keyAscii);
     public delegate void ToggleButton_KeyUpEventHandler(ref Int16 keyCode, ref Int16 shift);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -31,22 +31,22 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton"/> </remarks>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events._ToggleButtonEvents_SinkHelper), typeof(Events.DispToggleButtonEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._ToggleButtonEvents), typeof(Events.DispToggleButtonEvents))]
     public class ToggleButton : _ToggleButton, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events._ToggleButtonEvents_SinkHelper __ToggleButtonEvents_SinkHelper;
         private Events.DispToggleButtonEvents_SinkHelper _dispToggleButtonEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -76,9 +76,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -86,14 +86,14 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ToggleButton(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ToggleButton(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -103,7 +103,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ToggleButton(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -112,31 +112,31 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ToggleButton(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ToggleButton(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of ToggleButton 
         /// </summary>		
-        public ToggleButton():base("Access.ToggleButton")
+        public ToggleButton() : base("Access.ToggleButton")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of ToggleButton
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public ToggleButton(string progId):base(progId)
+        public ToggleButton(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -155,7 +155,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Click"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_ClickEventHandler ClickEvent
         {
             add
@@ -178,7 +178,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.BeforeUpdate-event"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_BeforeUpdateEventHandler BeforeUpdateEvent
         {
             add
@@ -201,7 +201,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.AfterUpdate-event"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_AfterUpdateEventHandler AfterUpdateEvent
         {
             add
@@ -224,7 +224,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Enter"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_EnterEventHandler EnterEvent
         {
             add
@@ -247,7 +247,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.Exit"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_ExitEventHandler ExitEvent
         {
             add
@@ -270,7 +270,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.GotFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_GotFocusEventHandler GotFocusEvent
         {
             add
@@ -293,7 +293,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.LostFocus"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_LostFocusEventHandler LostFocusEvent
         {
             add
@@ -316,7 +316,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.DblClick"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_DblClickEventHandler DblClickEvent
         {
             add
@@ -339,7 +339,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.MouseDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -362,7 +362,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.MouseMove"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -385,7 +385,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.MouseUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -408,7 +408,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.KeyDown"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_KeyDownEventHandler KeyDownEvent
         {
             add
@@ -431,7 +431,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.KeyPress"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_KeyPressEventHandler KeyPressEvent
         {
             add
@@ -454,7 +454,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.ToggleButton.KeyUp"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public event ToggleButton_KeyUpEventHandler KeyUpEvent
         {
             add
@@ -469,36 +469,36 @@ namespace NetOffice.AccessApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._ToggleButtonEvents_SinkHelper.Id, Events.DispToggleButtonEvents_SinkHelper.Id);
 
 
-            if(Events._ToggleButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events._ToggleButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 __ToggleButtonEvents_SinkHelper = new Events._ToggleButtonEvents_SinkHelper(this, _connectPoint);
                 return;
             }
 
-            if(Events.DispToggleButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.DispToggleButtonEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _dispToggleButtonEvents_SinkHelper = new Events.DispToggleButtonEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -507,7 +507,7 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -517,9 +517,9 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -541,16 +541,16 @@ namespace NetOffice.AccessApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -568,12 +568,12 @@ namespace NetOffice.AccessApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != __ToggleButtonEvents_SinkHelper)
+            if (null != __ToggleButtonEvents_SinkHelper)
             {
                 __ToggleButtonEvents_SinkHelper.Dispose();
                 __ToggleButtonEvents_SinkHelper = null;
             }
-            if( null != _dispToggleButtonEvents_SinkHelper)
+            if (null != _dispToggleButtonEvents_SinkHelper)
             {
                 _dispToggleButtonEvents_SinkHelper.Dispose();
                 _dispToggleButtonEvents_SinkHelper = null;
@@ -581,10 +581,10 @@ namespace NetOffice.AccessApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

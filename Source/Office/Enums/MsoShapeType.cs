@@ -8,7 +8,7 @@ namespace NetOffice.OfficeApi.Enums
     /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
     /// </summary>
     ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.MsoShapeType"/> </remarks>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsEnum)]
     public enum MsoShapeType
     {
@@ -19,7 +19,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>-2</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoShapeTypeMixed = -2,
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>1</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoAutoShape = 1,
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>2</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoCallout = 2,
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>3</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoChart = 3,
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>4</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoComment = 4,
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>5</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoFreeform = 5,
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>6</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoGroup = 6,
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>7</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoEmbeddedOLEObject = 7,
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>8</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoFormControl = 8,
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>9</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoLine = 9,
 
         /// <summary>
@@ -119,7 +119,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>10</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoLinkedOLEObject = 10,
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>11</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoLinkedPicture = 11,
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>12</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoOLEControlObject = 12,
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>13</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoPicture = 13,
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>14</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoPlaceholder = 14,
 
         /// <summary>
@@ -169,7 +169,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>15</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoTextEffect = 15,
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>16</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoMedia = 16,
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>17</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoTextBox = 17,
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>18</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoScriptAnchor = 18,
 
         /// <summary>
@@ -209,7 +209,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>19</value>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         msoTable = 19,
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>20</value>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         msoCanvas = 20,
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>21</value>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         msoDiagram = 21,
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>22</value>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         msoInk = 22,
 
         /// <summary>
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 11, 12, 14, 15, 16
         /// </remarks>
         /// <value>23</value>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         msoInkComment = 23,
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 12, 14, 15, 16
         /// </remarks>
         /// <value>24</value>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         msoSmartArt = 24,
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace NetOffice.OfficeApi.Enums
         /// SupportByVersion Office 14, 15, 16
         /// </remarks>
         /// <value>25</value>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         msoSlicer = 25,
 
         /// <summary>

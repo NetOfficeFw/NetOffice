@@ -11,11 +11,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverter"/> </remarks>
-    [SupportByVersion("Office", 14,15,16)]
+    [SupportByVersion("Office", 14, 15, 16)]
     [EntityType(EntityType.IsInterface)]
     public class IConverter : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IConverter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
         public IConverter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.OfficeApi
         public IConverter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IConverter(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IConverter() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IConverter(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -120,10 +120,10 @@ namespace NetOffice.OfficeApi
         /// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
         /// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
         /// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrInitConverter(NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false);
             ppcp = null;
             object[] paramsArray = Invoker.ValidateParamsArray(pcap, ppcp, pcuic);
             object returnItem = Invoker.MethodReturn(this, "HrInitConverter", paramsArray, modifiers);
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IConverter.HrUninitConverter"/> </remarks>
         /// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrUninitConverter(NetOffice.OfficeApi.IConverterUICallback pcuic)
         {
             return Factory.ExecuteInt32MethodGet(this, "HrUninitConverter", pcuic);
@@ -154,10 +154,10 @@ namespace NetOffice.OfficeApi
         /// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
         /// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
         /// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrImport(string bstrSourcePath, string bstrDestPath, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true, false);
             ppcp = null;
             object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, pcap, ppcp, pcuic);
             object returnItem = Invoker.MethodReturn(this, "HrImport", paramsArray, modifiers);
@@ -178,10 +178,10 @@ namespace NetOffice.OfficeApi
         /// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
         /// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
         /// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrExport(string bstrSourcePath, string bstrDestPath, string bstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true, false);
             ppcp = null;
             object[] paramsArray = Invoker.ValidateParamsArray(bstrSourcePath, bstrDestPath, bstrClass, pcap, ppcp, pcuic);
             object returnItem = Invoker.MethodReturn(this, "HrExport", paramsArray, modifiers);
@@ -201,10 +201,10 @@ namespace NetOffice.OfficeApi
         /// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
         /// <param name="ppcp">NetOffice.OfficeApi.IConverterPreferences ppcp</param>
         /// <param name="pcuic">NetOffice.OfficeApi.IConverterUICallback pcuic</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrGetFormat(string bstrPath, out string pbstrClass, NetOffice.OfficeApi.IConverterApplicationPreferences pcap, out NetOffice.OfficeApi.IConverterPreferences ppcp, NetOffice.OfficeApi.IConverterUICallback pcuic)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false, true, false);
             pbstrClass = string.Empty;
             ppcp = null;
             object[] paramsArray = Invoker.ValidateParamsArray(bstrPath, pbstrClass, pcap, ppcp, pcuic);
@@ -224,10 +224,10 @@ namespace NetOffice.OfficeApi
         /// <param name="hrErr">Int32 hrErr</param>
         /// <param name="pbstrErrorMsg">string pbstrErrorMsg</param>
         /// <param name="pcap">NetOffice.OfficeApi.IConverterApplicationPreferences pcap</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 HrGetErrorString(Int32 hrErr, out string pbstrErrorMsg, NetOffice.OfficeApi.IConverterApplicationPreferences pcap)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, false);
             pbstrErrorMsg = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(hrErr, pbstrErrorMsg, pcap);
             object returnItem = Invoker.MethodReturn(this, "HrGetErrorString", paramsArray, modifiers);
@@ -237,6 +237,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

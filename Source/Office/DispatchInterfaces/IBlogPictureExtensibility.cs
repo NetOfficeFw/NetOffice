@@ -11,11 +11,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogPictureExtensibility"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class IBlogPictureExtensibility : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IBlogPictureExtensibility(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
         public IBlogPictureExtensibility(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.OfficeApi
         public IBlogPictureExtensibility(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IBlogPictureExtensibility(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IBlogPictureExtensibility() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IBlogPictureExtensibility(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -119,10 +119,10 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.IBlogPictureExtensibility.BlogPictureProviderProperties"/> </remarks>
         /// <param name="blogPictureProvider">string blogPictureProvider</param>
         /// <param name="friendlyName">string friendlyName</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void BlogPictureProviderProperties(out string blogPictureProvider, out string friendlyName)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true);
             blogPictureProvider = string.Empty;
             friendlyName = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(blogPictureProvider, friendlyName);
@@ -139,7 +139,7 @@ namespace NetOffice.OfficeApi
         /// <param name="blogProvider">string blogProvider</param>
         /// <param name="parentWindow">Int32 parentWindow</param>
         /// <param name="document">object document</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void CreatePictureAccount(string account, string blogProvider, Int32 parentWindow, object document)
         {
             Factory.ExecuteMethod(this, "CreatePictureAccount", account, blogProvider, parentWindow, document);
@@ -155,10 +155,10 @@ namespace NetOffice.OfficeApi
         /// <param name="image">object image</param>
         /// <param name="pictureURI">string pictureURI</param>
         /// <param name="imageType">Int32 imageType</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void PublishPicture(string account, Int32 parentWindow, object document, object image, out string pictureURI, Int32 imageType)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true, false);
             pictureURI = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(account, parentWindow, document, image, pictureURI, imageType);
             Invoker.Method(this, "PublishPicture", paramsArray, modifiers);
@@ -167,6 +167,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -25,7 +25,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public XMLNamespace_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -34,7 +34,7 @@ namespace NetOffice.WordApi
         public XMLNamespace_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -52,7 +52,7 @@ namespace NetOffice.WordApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespace_(ICOMObject replacedObject) : base(replacedObject)
@@ -66,13 +66,13 @@ namespace NetOffice.WordApi
         public XMLNamespace_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespace_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -83,7 +83,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="allUsers">optional bool allUsers</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Location"/>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string get_Location(object allUsers)
         {
@@ -96,7 +96,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="allUsers">optional bool allUsers</param>
         /// <param name="value">optional string value</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_Location(object allUsers, string value)
         {
@@ -109,7 +109,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Location"/> </remarks>
         /// <param name="allUsers">optional bool allUsers</param>
-        [SupportByVersion("Word", 11,12,14,15,16), Redirect("get_Location")]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), Redirect("get_Location")]
         public string Location(object allUsers)
         {
             return get_Location(allUsers);
@@ -121,7 +121,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="allUsers">optional bool allUsers</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Alias"/>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string get_Alias(object allUsers)
         {
@@ -134,7 +134,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="allUsers">optional bool allUsers</param>
         /// <param name="value">optional string value</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_Alias(object allUsers, string value)
         {
@@ -147,7 +147,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Alias"/> </remarks>
         /// <param name="allUsers">optional bool allUsers</param>
-        [SupportByVersion("Word", 11,12,14,15,16), Redirect("get_Alias")]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), Redirect("get_Alias")]
         public string Alias(object allUsers)
         {
             return get_Alias(allUsers);
@@ -159,7 +159,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="allUsers">optional bool allUsers</param>
         /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.DefaultTransform"/>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.WordApi.XSLTransform get_DefaultTransform(object allUsers)
         {
@@ -172,7 +172,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <param name="allUsers">optional bool allUsers</param>
         /// <param name="value">optional XSLTransform value</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void set_DefaultTransform(object allUsers, NetOffice.WordApi.XSLTransform value)
         {
@@ -185,7 +185,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.DefaultTransform"/> </remarks>
         /// <param name="allUsers">optional bool allUsers</param>
-        [SupportByVersion("Word", 11,12,14,15,16), Redirect("get_DefaultTransform")]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), Redirect("get_DefaultTransform")]
         public NetOffice.WordApi.XSLTransform DefaultTransform(object allUsers)
         {
             return get_DefaultTransform(allUsers);
@@ -203,11 +203,11 @@ namespace NetOffice.WordApi
     /// SupportByVersion Word, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace"/> </remarks>
-    [SupportByVersion("Word", 11,12,14,15,16)]
+    [SupportByVersion("Word", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class XMLNamespace : XMLNamespace_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -235,9 +235,9 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -252,7 +252,7 @@ namespace NetOffice.WordApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public XMLNamespace(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -261,7 +261,7 @@ namespace NetOffice.WordApi
         public XMLNamespace(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -279,26 +279,26 @@ namespace NetOffice.WordApi
         public XMLNamespace(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespace(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespace() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public XMLNamespace(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -306,7 +306,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Application"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.Application Application
         {
             get
@@ -320,7 +320,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Creator"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -335,7 +335,7 @@ namespace NetOffice.WordApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Parent"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -349,7 +349,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.URI"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public string URI
         {
             get
@@ -363,7 +363,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Location"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public string Location
         {
             get
@@ -381,7 +381,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Alias"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public string Alias
         {
             get
@@ -399,7 +399,7 @@ namespace NetOffice.WordApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.XSLTransforms"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XSLTransforms XSLTransforms
         {
             get
@@ -413,7 +413,7 @@ namespace NetOffice.WordApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.DefaultTransform"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public NetOffice.WordApi.XSLTransform DefaultTransform
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.WordApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.AttachToDocument"/> </remarks>
         /// <param name="document">object document</param>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void AttachToDocument(object document)
         {
             Factory.ExecuteMethod(this, "AttachToDocument", document);
@@ -445,7 +445,7 @@ namespace NetOffice.WordApi
         /// SupportByVersion Word 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLNamespace.Delete"/> </remarks>
-        [SupportByVersion("Word", 11,12,14,15,16)]
+        [SupportByVersion("Word", 11, 12, 14, 15, 16)]
         public void Delete()
         {
             Factory.ExecuteMethod(this, "Delete");
@@ -453,6 +453,6 @@ namespace NetOffice.WordApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
