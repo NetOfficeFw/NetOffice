@@ -1,49 +1,73 @@
-# Formatting-only indentation changes from tabs to spaces
+# Formatting-only changes grouped by affected project
 
-# Convert indentation from tabs to spaces in project `ADODBApi.csproj`
+# Formatting-only changes affecting project `NetOffice.csproj`
+56be87543fec8b26a1bc89feafa44fd6f71f2972
+
+# Formatting-only changes affecting project `NetOffice.Tests.csproj`
+bd6c132ef31c9f6d005c5516844468a24d85cde6
+
+# Formatting-only changes affecting project `ADODBApi.csproj`
 6af363289506c23d1f8906ef248a2bebd26d3494
 f57555669f77bf7355f0d32d21c544548db3c1be
+63753408ab0b08c8403912ecc902bfb0687c4980
 
-# Convert indentation from tabs to spaces in project `DAOApi.csproj`
+# Formatting-only changes affecting project `DAOApi.csproj`
 5981cb8ce71464a2182f0a98390e503349791530
 48c3655915cec30f21f9add0f5e3fb00ef2c6b84
+725674665b46f4a1c74035024ad3462a87496386
 
-# Convert indentation from tabs to spaces in project `MSComctlLibApi.csproj`
+# Formatting-only changes affecting project `MSComctlLibApi.csproj`
 6bb1f1e184d8c7a6586f532282c8fe6f18a10888
 2288da43345029b897634bc7a598bc6b4cd53fb2
+c784ec919d1e2b2ca51e1d241c0295fdbe761aa9
 
-# Convert indentation from tabs to spaces in project `MSDATASRCApi.csproj`
+# Formatting-only changes affecting project `MSDATASRCApi.csproj`
 87d32ea3691e520ddce3c9ae9b2cd7b4818759c1
 3e19e98ac36dc9bbc1b70267d1c12595ed3e71e6
+34324756e08f0147b582fc5d6fb35c43625b41af
 
-# Convert indentation from tabs to spaces in project `OfficeApi.csproj`
+# Formatting-only changes affecting project `OfficeApi.csproj`
 cf74c5f86a74bca96ee3b357f9df4cf0bfb7f535
 2d24c4072b49b4a923f54abb2aef460d14edd3e2
+40d626ddaf40c4bcffb43d0ce6e79ac8923faedc
 
-# Convert indentation from tabs to spaces in project `VBIDEApi.csproj`
+# Formatting-only changes affecting project `OfficeApi.Extensions.csproj`
+7105db53929cbf0015ea5dfae7d342a235e69290
+
+# Formatting-only changes affecting project `VBIDEApi.csproj`
 7eb5c5985c90c0e07e0f96eb64f681444d886b25
 f709f575b439d0ec5db2b273e11b442276fd0e74
+d23bbcddbe08ecabfbc9b3799fcb05337b62c59e
 
-# Convert indentation from tabs to spaces in project `OWC10Api.csproj`
+# Formatting-only changes affecting project `OWC10Api.csproj`
 2545f440c601666e71e4f3c679dedd2ea6bcb35a
 046ab1923a47ead0a93337054197a6ea09305790
+4488e509f73a145b0979a3310390f525a7e5907c
 
-# Convert indentation from tabs to spaces in project `OutlookApi.csproj`
+# Formatting-only changes affecting project `OutlookApi.csproj`
 17f9d48b1fee7ee631beaca9ed605a1f2de16299
 1a9b74de74a705ff069e53137d11240ff2be635d
+b62274f0b760a4e90cc490e55bc2dad6c311144a
 
-# Convert indentation from tabs to spaces in project `ExcelApi.csproj`
+# Formatting-only changes affecting project `ExcelApi.csproj`
 20f8c00f203691f488af825c7df89f59d7bd03e3
 feed99654bacc5598f10ca4405759255dd2a3724
+4f94cbd8084a2eec8c3f5877c9b0599e40d98cc8
 
-# Convert indentation from tabs to spaces in project `PowerPointApi.csproj`
+# Formatting-only changes affecting project `PowerPointApi.csproj`
 90df9b93c4de2135bfa81fa4c0b34ffcd79b2932
 ebf515c09c723a76cf461f3580b636d3ab887478
+14e1833b174aa89ce9aaa9d2c5d84688da0576c5
 
-# Convert indentation from tabs to spaces in project `WordApi.csproj`
+# Formatting-only changes affecting project `WordApi.csproj`
 26ca7198f20d3c03c2afe93fe8074638bbf1d156
 3df69b17bfb207afecd71419387984581138ba7e
+a1e8ec37c07539f3308adf389dd409575d19d8d9
 
-# Convert indentation from tabs to spaces in project `AccessApi.csproj`
+# Formatting-only changes affecting project `AccessApi.csproj`
 6db208ae5adf919613652870680e6dc1ac5c0854
 153b15e4ac3262a65bdf3be0a6735752e0a6cddc
+477726e8d8badfab1a7b73a32a899432e5e8c10f
+
+# Formatting-only changes affecting project `ClientApplication.csproj`
+2a30524064e68000ba0aae0a80113236252c0182
