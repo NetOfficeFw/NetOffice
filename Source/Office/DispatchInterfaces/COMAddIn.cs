@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface COMAddIn 
-	/// SupportByVersion Office, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn"/> </remarks>
-	[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class COMAddIn : _IMsoDispObj
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface COMAddIn 
+    /// SupportByVersion Office, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn"/> </remarks>
+    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class COMAddIn : _IMsoDispObj
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,173 +45,173 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public COMAddIn(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public COMAddIn(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public COMAddIn(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public COMAddIn(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public COMAddIn(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public COMAddIn(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public COMAddIn(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Description"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public string Description
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Description", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.ProgId"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public string ProgId
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ProgId");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMAddIn(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMAddIn(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMAddIn() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public COMAddIn(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Guid"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public string Guid
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Guid");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Description"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public string Description
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Description");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Description", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Connect"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16)]
-		public bool Connect
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Connect");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Connect", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.ProgId"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public string ProgId
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ProgId");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Object"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
-		public object Object
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Object");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "Object", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Guid"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public string Guid
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Guid");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Parent"/> </remarks>
-		[SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Connect"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        public bool Connect
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "Connect");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Connect", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Object"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        public object Object
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Object");
+            }
+            set
+            {
+                Factory.ExecuteReferencePropertySet(this, "Object", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.COMAddIn.Parent"/> </remarks>
+        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Methods
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

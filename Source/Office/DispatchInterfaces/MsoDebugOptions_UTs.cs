@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface MsoDebugOptions_UTs 
-	/// SupportByVersion Office, 12,14,15,16
-	/// </summary>
-	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
-	public class MsoDebugOptions_UTs : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.MsoDebugOptions_UT>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface MsoDebugOptions_UTs 
+    /// SupportByVersion Office, 12,14,15,16
+    /// </summary>
+    [SupportByVersion("Office", 12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
+    public class MsoDebugOptions_UTs : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.MsoDebugOptions_UT>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -47,132 +47,132 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public MsoDebugOptions_UTs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public MsoDebugOptions_UTs(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public MsoDebugOptions_UTs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public MsoDebugOptions_UTs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MsoDebugOptions_UTs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MsoDebugOptions_UTs(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public MsoDebugOptions_UTs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MsoDebugOptions_UTs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MsoDebugOptions_UTs(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MsoDebugOptions_UTs() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public MsoDebugOptions_UTs(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public MsoDebugOptions_UTs(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Office", 12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.OfficeApi.MsoDebugOptions_UT this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions_UT>(this, "Item", NetOffice.OfficeApi.MsoDebugOptions_UT.LateBindingApiWrapperType, index);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public MsoDebugOptions_UTs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public MsoDebugOptions_UTs(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public MsoDebugOptions_UTs() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public MsoDebugOptions_UTs(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("Office", 12,14,15,16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.OfficeApi.MsoDebugOptions_UT this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.MsoDebugOptions_UT>(this, "Item", NetOffice.OfficeApi.MsoDebugOptions_UT.LateBindingApiWrapperType, index);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Office", 12,14,15,16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		/// <param name="bstrCollectionName">string bstrCollectionName</param>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.MsoDebugOptions_UTs GetUnitTestsInCollection(string bstrCollectionName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "GetUnitTestsInCollection", NetOffice.OfficeApi.MsoDebugOptions_UTs.LateBindingApiWrapperType, bstrCollectionName);
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		/// <param name="bstrCollectionName">string bstrCollectionName</param>
-		/// <param name="bstrUnitTestName">string bstrUnitTestName</param>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.MsoDebugOptions_UT GetUnitTest(string bstrCollectionName, string bstrUnitTestName)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UT>(this, "GetUnitTest", NetOffice.OfficeApi.MsoDebugOptions_UT.LateBindingApiWrapperType, bstrCollectionName, bstrUnitTestName);
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// </summary>
-		/// <param name="bstrCollectionName">string bstrCollectionName</param>
-		/// <param name="bstrUnitTestNameFilter">string bstrUnitTestNameFilter</param>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "GetMatchingUnitTestsInCollection", NetOffice.OfficeApi.MsoDebugOptions_UTs.LateBindingApiWrapperType, bstrCollectionName, bstrUnitTestNameFilter);
-		}
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        /// <param name="bstrCollectionName">string bstrCollectionName</param>
+        [SupportByVersion("Office", 12,14,15,16)]
+        public NetOffice.OfficeApi.MsoDebugOptions_UTs GetUnitTestsInCollection(string bstrCollectionName)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "GetUnitTestsInCollection", NetOffice.OfficeApi.MsoDebugOptions_UTs.LateBindingApiWrapperType, bstrCollectionName);
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        /// <param name="bstrCollectionName">string bstrCollectionName</param>
+        /// <param name="bstrUnitTestName">string bstrUnitTestName</param>
+        [SupportByVersion("Office", 12,14,15,16)]
+        public NetOffice.OfficeApi.MsoDebugOptions_UT GetUnitTest(string bstrCollectionName, string bstrUnitTestName)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UT>(this, "GetUnitTest", NetOffice.OfficeApi.MsoDebugOptions_UT.LateBindingApiWrapperType, bstrCollectionName, bstrUnitTestName);
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// </summary>
+        /// <param name="bstrCollectionName">string bstrCollectionName</param>
+        /// <param name="bstrUnitTestNameFilter">string bstrUnitTestNameFilter</param>
+        [SupportByVersion("Office", 12,14,15,16)]
+        public NetOffice.OfficeApi.MsoDebugOptions_UTs GetMatchingUnitTestsInCollection(string bstrCollectionName, string bstrUnitTestNameFilter)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.MsoDebugOptions_UTs>(this, "GetMatchingUnitTestsInCollection", NetOffice.OfficeApi.MsoDebugOptions_UTs.LateBindingApiWrapperType, bstrCollectionName, bstrUnitTestNameFilter);
+        }
 
         #endregion
 
@@ -211,13 +211,13 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office, 12,14,15,16
         /// </summary>
         [SupportByVersion("Office", 12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
-		}
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }

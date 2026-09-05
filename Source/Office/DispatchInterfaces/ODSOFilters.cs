@@ -8,34 +8,34 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface ODSOFilters 
-	/// SupportByVersion Office, 10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters"/> </remarks>
-	[SupportByVersion("Office", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class ODSOFilters : _IMsoDispObj, IEnumerableProvider<object>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface ODSOFilters 
+    /// SupportByVersion Office, 10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters"/> </remarks>
+    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class ODSOFilters : _IMsoDispObj, IEnumerableProvider<object>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -48,183 +48,183 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ODSOFilters(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ODSOFilters(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ODSOFilters(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ODSOFilters(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ODSOFilters(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ODSOFilters(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public ODSOFilters(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ODSOFilters(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ODSOFilters(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ODSOFilters() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ODSOFilters(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public ODSOFilters(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Count"/> </remarks>
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Parent"/> </remarks>
-		[SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ODSOFilters(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ODSOFilters(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ODSOFilters() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ODSOFilters(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Count"/> </remarks>
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Parent"/> </remarks>
+        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public object this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteVariantMethodGet(this, "Item", index);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
-		/// <param name="column">string column</param>
-		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
-		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
-		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
-		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
-		{
-			 Factory.ExecuteMethod(this, "Add", new object[]{ column, comparison, conjunction, bstrCompareTo, deferUpdate });
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
-		/// <param name="column">string column</param>
-		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
-		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
-		[CustomMethod]
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
-		{
-			 Factory.ExecuteMethod(this, "Add", column, comparison, conjunction);
-		}
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public object this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteVariantMethodGet(this, "Item", index);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
-		/// <param name="column">string column</param>
-		/// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
-		/// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
-		/// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
-		[CustomMethod]
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
-		{
-			 Factory.ExecuteMethod(this, "Add", column, comparison, conjunction, bstrCompareTo);
-		}
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
+        /// <param name="column">string column</param>
+        /// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
+        /// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
+        /// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
+        /// <param name="deferUpdate">optional bool DeferUpdate = false</param>
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo, object deferUpdate)
+        {
+             Factory.ExecuteMethod(this, "Add", new object[]{ column, comparison, conjunction, bstrCompareTo, deferUpdate });
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Delete"/> </remarks>
-		/// <param name="index">Int32 index</param>
-		/// <param name="deferUpdate">optional bool DeferUpdate = false</param>
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Delete(Int32 index, object deferUpdate)
-		{
-			 Factory.ExecuteMethod(this, "Delete", index, deferUpdate);
-		}
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
+        /// <param name="column">string column</param>
+        /// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
+        /// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
+        [CustomMethod]
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction)
+        {
+             Factory.ExecuteMethod(this, "Add", column, comparison, conjunction);
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Delete"/> </remarks>
-		/// <param name="index">Int32 index</param>
-		[CustomMethod]
-		[SupportByVersion("Office", 10,11,12,14,15,16)]
-		public void Delete(Int32 index)
-		{
-			 Factory.ExecuteMethod(this, "Delete", index);
-		}
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Add"/> </remarks>
+        /// <param name="column">string column</param>
+        /// <param name="comparison">NetOffice.OfficeApi.Enums.MsoFilterComparison comparison</param>
+        /// <param name="conjunction">NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction</param>
+        /// <param name="bstrCompareTo">optional string bstrCompareTo = </param>
+        [CustomMethod]
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        public void Add(string column, NetOffice.OfficeApi.Enums.MsoFilterComparison comparison, NetOffice.OfficeApi.Enums.MsoFilterConjunction conjunction, object bstrCompareTo)
+        {
+             Factory.ExecuteMethod(this, "Add", column, comparison, conjunction, bstrCompareTo);
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Delete"/> </remarks>
+        /// <param name="index">Int32 index</param>
+        /// <param name="deferUpdate">optional bool DeferUpdate = false</param>
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        public void Delete(Int32 index, object deferUpdate)
+        {
+             Factory.ExecuteMethod(this, "Delete", index, deferUpdate);
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ODSOFilters.Delete"/> </remarks>
+        /// <param name="index">Int32 index</param>
+        [CustomMethod]
+        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        public void Delete(Int32 index)
+        {
+             Factory.ExecuteMethod(this, "Delete", index);
+        }
 
         #endregion
        

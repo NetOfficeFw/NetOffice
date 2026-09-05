@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface SharedWorkspaceLink 
-	/// SupportByVersion Office, 11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink"/> </remarks>
-	[SupportByVersion("Office", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class SharedWorkspaceLink : _IMsoDispObj
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface SharedWorkspaceLink 
+    /// SupportByVersion Office, 11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink"/> </remarks>
+    [SupportByVersion("Office", 11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class SharedWorkspaceLink : _IMsoDispObj
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,220 +45,220 @@ namespace NetOffice.OfficeApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public SharedWorkspaceLink(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public SharedWorkspaceLink(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public SharedWorkspaceLink(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public SharedWorkspaceLink(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SharedWorkspaceLink(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SharedWorkspaceLink(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public SharedWorkspaceLink(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SharedWorkspaceLink(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SharedWorkspaceLink(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SharedWorkspaceLink() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SharedWorkspaceLink(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public SharedWorkspaceLink(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.URL"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public string URL
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "URL");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "URL", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Description"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public string Description
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Description");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Description", value);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SharedWorkspaceLink(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SharedWorkspaceLink(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SharedWorkspaceLink() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SharedWorkspaceLink(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Notes"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public string Notes
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Notes");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Notes", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.URL"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public string URL
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "URL");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "URL", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.CreatedBy"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public string CreatedBy
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CreatedBy");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Description"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public string Description
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Description");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Description", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.CreatedDate"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public object CreatedDate
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "CreatedDate");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Notes"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public string Notes
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Notes");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Notes", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.ModifiedBy"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public string ModifiedBy
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ModifiedBy");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.CreatedBy"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public string CreatedBy
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "CreatedBy");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.ModifiedDate"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public object ModifiedDate
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "ModifiedDate");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.CreatedDate"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public object CreatedDate
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "CreatedDate");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Parent"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.ModifiedBy"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public string ModifiedBy
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ModifiedBy");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.ModifiedDate"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public object ModifiedDate
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "ModifiedDate");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Parent"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Save"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void Save()
-		{
-			 Factory.ExecuteMethod(this, "Save");
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Delete"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        #region Methods
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Save"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public void Save()
+        {
+             Factory.ExecuteMethod(this, "Save");
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceLink.Delete"/> </remarks>
+        [SupportByVersion("Office", 11,12,14,15,16)]
+        public void Delete()
+        {
+             Factory.ExecuteMethod(this, "Delete");
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }

@@ -60,15 +60,15 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="throwException">throw exception if not found</param>
         /// <returns>MultiRegisterAttribute instance</returns>
         internal static MultiRegisterAttribute GetAttribute(Type type, bool throwException = true)
-		{
-		    object[] array = type.GetCustomAttributes(typeof(MultiRegisterAttribute), false);
+        {
+            object[] array = type.GetCustomAttributes(typeof(MultiRegisterAttribute), false);
             if (array.Length == 0 && throwException)
                 throw new ArgumentException("MultiRegisterAttribute is missing");
             if (array.Length > 0)
                 return array[0] as MultiRegisterAttribute;
             else
                 return null;
-		}
+        }
 
         /// <summary>
         /// Get registry value string

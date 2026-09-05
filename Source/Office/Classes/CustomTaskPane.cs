@@ -5,43 +5,43 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	public delegate void CustomTaskPane_VisibleStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
-	public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
-	#pragma warning restore
+    #pragma warning disable
+    public delegate void CustomTaskPane_VisibleStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
+    public delegate void CustomTaskPane_DockPositionStateChangeEventHandler(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst);
+    #pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass CustomTaskPane 
-	/// SupportByVersion Office, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane"/> </remarks>
-	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events._CustomTaskPaneEvents_SinkHelper))]
+    /// <summary>
+    /// CoClass CustomTaskPane 
+    /// SupportByVersion Office, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane"/> </remarks>
+    [SupportByVersion("Office", 12,14,15,16)]
+    [EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._CustomTaskPaneEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._CustomTaskPaneEvents))]
     public class CustomTaskPane : _CustomTaskPane, IEventBinding
-	{
-		#pragma warning disable
+    {
+        #pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+        
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
         private Events._CustomTaskPaneEvents_SinkHelper __CustomTaskPaneEvents_SinkHelper;
-	
-		#endregion
+    
+        #endregion
 
-		#region Type Information
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -53,7 +53,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -65,145 +65,145 @@ namespace NetOffice.OfficeApi
         }
         
         #endregion
-        		
-		#region Construction
+                
+        #region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CustomTaskPane(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public CustomTaskPane(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CustomTaskPane(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public CustomTaskPane(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+            
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CustomTaskPane(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CustomTaskPane(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
+            
+        }
 
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CustomTaskPane(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CustomTaskPane(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CustomTaskPane(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+            
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CustomTaskPane(ICOMObject replacedObject) : base(replacedObject)
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of CustomTaskPane 
         /// </summary>		
-		public CustomTaskPane():base("Office.CustomTaskPane")
-		{
-			
-		}
-		
-		/// <summary>
+        public CustomTaskPane():base("Office.CustomTaskPane")
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of CustomTaskPane
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public CustomTaskPane(string progId):base(progId)
-		{
-			
-		}
+        public CustomTaskPane(string progId):base(progId)
+        {
+            
+        }
 
-		#endregion
+        #endregion
 
-		#region Static CoClass Methods
-		#endregion
+        #region Static CoClass Methods
+        #endregion
 
-		#region Events
+        #region Events
 
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        private event CustomTaskPane_VisibleStateChangeEventHandler _VisibleStateChangeEvent;
 
-		/// <summary>
-		/// SupportByVersion Office 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane.VisibleStateChange"/> </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_VisibleStateChangeEvent += value;
-			}
-			remove
-			{
-				_VisibleStateChangeEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane.VisibleStateChange"/> </remarks>
+        [SupportByVersion("Office", 12,14,15,16)]
+        public event CustomTaskPane_VisibleStateChangeEventHandler VisibleStateChangeEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _VisibleStateChangeEvent += value;
+            }
+            remove
+            {
+                _VisibleStateChangeEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        private event CustomTaskPane_DockPositionStateChangeEventHandler _DockPositionStateChangeEvent;
 
-		/// <summary>
-		/// SupportByVersion Office 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane.DockPositionStateChange"/> </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DockPositionStateChangeEvent += value;
-			}
-			remove
-			{
-				_DockPositionStateChangeEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomTaskPane.DockPositionStateChange"/> </remarks>
+        [SupportByVersion("Office", 12,14,15,16)]
+        public event CustomTaskPane_DockPositionStateChangeEventHandler DockPositionStateChangeEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _DockPositionStateChangeEvent += value;
+            }
+            remove
+            {
+                _DockPositionStateChangeEvent -= value;
+            }
+        }
 
-		#endregion
+        #endregion
        
-	    #region IEventBinding
+        #region IEventBinding
         
-		/// <summary>
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void CreateEventBridge()
         {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
+            if(false == Factory.Settings.EnableEvents)
+                return;
+    
+            if (null != _connectPoint)
+                return;
+    
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomTaskPaneEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomTaskPaneEvents_SinkHelper.Id);
 
 
-			if(Events._CustomTaskPaneEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				__CustomTaskPaneEvents_SinkHelper = new Events._CustomTaskPaneEvents_SinkHelper(this, _connectPoint);
-				return;
-			} 
+            if(Events._CustomTaskPaneEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            {
+                __CustomTaskPaneEvents_SinkHelper = new Events._CustomTaskPaneEvents_SinkHelper(this, _connectPoint);
+                return;
+            } 
         }
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
@@ -262,29 +262,29 @@ namespace NetOffice.OfficeApi
         /// <param name="eventName">name of the event without 'Event' at the end</param>
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
+        {
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
+        }
         /// <summary>
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-			if( null != __CustomTaskPaneEvents_SinkHelper)
-			{
-				__CustomTaskPaneEvents_SinkHelper.Dispose();
-				__CustomTaskPaneEvents_SinkHelper = null;
-			}
+            if( null != __CustomTaskPaneEvents_SinkHelper)
+            {
+                __CustomTaskPaneEvents_SinkHelper.Dispose();
+                __CustomTaskPaneEvents_SinkHelper = null;
+            }
 
-			_connectPoint = null;
-		}
+            _connectPoint = null;
+        }
         
         #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
 
