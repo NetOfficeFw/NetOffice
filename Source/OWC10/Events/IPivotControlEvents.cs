@@ -7,159 +7,159 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
 {	
-	#pragma warning disable CS1591
+    #pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("OWC10", 1)]
+    [SupportByVersion("OWC10", 1)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("F5B39A87-1480-11D3-8549-00C04FAC67D7"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface IPivotControlEvents
-	{
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6003)]
-		void SelectionChange();
+    public interface IPivotControlEvents
+    {
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6003)]
+        void SelectionChange();
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("reason", SinkArgumentType.Enum, typeof(OWC10Api.Enums.PivotViewReasonEnum))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6004)]
-		void ViewChange([In] object reason);
+        void ViewChange([In] object reason);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("reason", SinkArgumentType.Enum, typeof(OWC10Api.Enums.PivotViewReasonEnum))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6007)]
-		void DataChange([In] object reason);
+        void DataChange([In] object reason);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("reason", SinkArgumentType.Enum, typeof(OWC10Api.Enums.PivotViewReasonEnum))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6021)]
-		void PivotTableChange([In] object reason);
+        void PivotTableChange([In] object reason);
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6043)]
-		void BeforeQuery();
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6043)]
+        void BeforeQuery();
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6044)]
-		void Query();
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6044)]
+        void Query();
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6029)]
-		void OnConnect();
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6029)]
+        void OnConnect();
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6030)]
-		void OnDisconnect();
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6030)]
+        void OnDisconnect();
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("x", SinkArgumentType.Int32)]
         [SinkArgument("y", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6034)]
-		void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
+        void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("x", SinkArgumentType.Int32)]
         [SinkArgument("y", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6032)]
-		void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
+        void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("x", SinkArgumentType.Int32)]
         [SinkArgument("y", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6033)]
-		void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
+        void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("page", SinkArgumentType.Bool)]
         [SinkArgument("count", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6035)]
-		void MouseWheel([In] object page, [In] object count);
+        void MouseWheel([In] object page, [In] object count);
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6005)]
-		void Click();
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6005)]
+        void Click();
 
-		[SupportByVersion("OWC10", 1)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6006)]
-		void DblClick();
+        [SupportByVersion("OWC10", 1)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6006)]
+        void DblClick();
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("enabled", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1000)]
-		void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
+        void CommandEnabled([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object enabled);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("_checked", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1001)]
-		void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
+        void CommandChecked([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object _checked);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("caption", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1002)]
-		void CommandTipText([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption);
+        void CommandTipText([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object caption);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1003)]
-		void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+        void CommandBeforeExecute([In] object command, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("succeeded", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1004)]
-		void CommandExecute([In] object command, [In] object succeeded);
+        void CommandExecute([In] object command, [In] object succeeded);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyCode", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1009)]
-		void KeyDown([In] object keyCode, [In] object shift);
+        void KeyDown([In] object keyCode, [In] object shift);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyCode", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1008)]
-		void KeyUp([In] object keyCode, [In] object shift);
+        void KeyUp([In] object keyCode, [In] object shift);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyAscii", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1010)]
-		void KeyPress([In] object keyAscii);
+        void KeyPress([In] object keyAscii);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyCode", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1006)]
-		void BeforeKeyDown([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+        void BeforeKeyDown([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyCode", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1005)]
-		void BeforeKeyUp([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+        void BeforeKeyUp([In] object keyCode, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyAscii", SinkArgumentType.Int32)]
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1007)]
-		void BeforeKeyPress([In] object keyAscii, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+        void BeforeKeyPress([In] object keyAscii, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("x", SinkArgumentType.Int32)]
         [SinkArgument("y", SinkArgumentType.Int32)]
         [SinkArgument("menu", typeof(OWC10Api.ByRef))]
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1011)]
-		void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
+        void BeforeContextMenu([In] object x, [In] object y, [In, MarshalAs(UnmanagedType.IDispatch)] object menu, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("selection", SinkArgumentType.UnknownProxy)]
         [SinkArgument("activeObject", SinkArgumentType.UnknownProxy)]
         [SinkArgument("initialValue", typeof(OWC10Api.ByRef))]
@@ -168,22 +168,22 @@ namespace NetOffice.OWC10Api.Events
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [SinkArgument("errorDescription", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6045)]
-		void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object activeObject, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object arrowMode, [In, MarshalAs(UnmanagedType.IDispatch)] object caretPosition, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
+        void StartEdit([In, MarshalAs(UnmanagedType.IDispatch)] object selection, [In, MarshalAs(UnmanagedType.IDispatch)] object activeObject, [In, MarshalAs(UnmanagedType.IDispatch)] object initialValue, [In, MarshalAs(UnmanagedType.IDispatch)] object arrowMode, [In, MarshalAs(UnmanagedType.IDispatch)] object caretPosition, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("accept", SinkArgumentType.Bool)]
         [SinkArgument("finalValue", typeof(OWC10Api.ByRef))]
         [SinkArgument("cancel", typeof(OWC10Api.ByRef))]
         [SinkArgument("errorDescription", typeof(OWC10Api.ByRef))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6046)]
-		void EndEdit([In] object accept, [In, MarshalAs(UnmanagedType.IDispatch)] object finalValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
+        void EndEdit([In] object accept, [In, MarshalAs(UnmanagedType.IDispatch)] object finalValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription);
 
-		[SupportByVersion("OWC10", 1)]
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("screenTipText", typeof(OWC10Api.ByRef))]
         [SinkArgument("sourceObject", SinkArgumentType.UnknownProxy)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(6049)]
-		void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object screenTipText, [In, MarshalAs(UnmanagedType.IDispatch)] object sourceObject);
-	}
+        void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object screenTipText, [In, MarshalAs(UnmanagedType.IDispatch)] object sourceObject);
+    }
 
     #endregion
 
@@ -611,64 +611,64 @@ namespace NetOffice.OWC10Api.Events
                 return;
             }
 
-			object newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as object;
-			object newActiveObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, activeObject) as object;
-			NetOffice.OWC10Api.ByRef newInitialValue = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, initialValue, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			NetOffice.OWC10Api.ByRef newArrowMode = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, arrowMode, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			NetOffice.OWC10Api.ByRef newCaretPosition = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, caretPosition, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, errorDescription, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			object[] paramsArray = new object[7];
-			paramsArray[0] = newSelection;
-			paramsArray[1] = newActiveObject;
-			paramsArray[2] = newInitialValue;
-			paramsArray[3] = newArrowMode;
-			paramsArray[4] = newCaretPosition;
-			paramsArray[5] = newCancel;
-			paramsArray[6] = newErrorDescription;
-			EventBinding.RaiseCustomEvent("StartEdit", ref paramsArray);
-		}
+            object newSelection = Factory.CreateEventArgumentObjectFromComProxy(EventClass, selection) as object;
+            object newActiveObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, activeObject) as object;
+            NetOffice.OWC10Api.ByRef newInitialValue = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, initialValue, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newArrowMode = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, arrowMode, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newCaretPosition = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, caretPosition, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, errorDescription, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[7];
+            paramsArray[0] = newSelection;
+            paramsArray[1] = newActiveObject;
+            paramsArray[2] = newInitialValue;
+            paramsArray[3] = newArrowMode;
+            paramsArray[4] = newCaretPosition;
+            paramsArray[5] = newCancel;
+            paramsArray[6] = newErrorDescription;
+            EventBinding.RaiseCustomEvent("StartEdit", ref paramsArray);
+        }
 
         public void EndEdit([In] object accept, [In, MarshalAs(UnmanagedType.IDispatch)] object finalValue, [In, MarshalAs(UnmanagedType.IDispatch)] object cancel, [In, MarshalAs(UnmanagedType.IDispatch)] object errorDescription)
-		{
+        {
             if (!Validate("EndEdit"))
             {
                 Invoker.ReleaseParamsArray(accept, finalValue, cancel, errorDescription);
                 return;
             }
 
-			bool newAccept = ToBoolean(accept);
-			NetOffice.OWC10Api.ByRef newFinalValue = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, finalValue, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, errorDescription, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			object[] paramsArray = new object[4];
-			paramsArray[0] = newAccept;
-			paramsArray[1] = newFinalValue;
-			paramsArray[2] = newCancel;
-			paramsArray[3] = newErrorDescription;
-			EventBinding.RaiseCustomEvent("EndEdit", ref paramsArray);
-		}
+            bool newAccept = ToBoolean(accept);
+            NetOffice.OWC10Api.ByRef newFinalValue = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, finalValue, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newCancel = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, cancel, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            NetOffice.OWC10Api.ByRef newErrorDescription = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, errorDescription, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object[] paramsArray = new object[4];
+            paramsArray[0] = newAccept;
+            paramsArray[1] = newFinalValue;
+            paramsArray[2] = newCancel;
+            paramsArray[3] = newErrorDescription;
+            EventBinding.RaiseCustomEvent("EndEdit", ref paramsArray);
+        }
 
         public void BeforeScreenTip([In, MarshalAs(UnmanagedType.IDispatch)] object screenTipText, [In, MarshalAs(UnmanagedType.IDispatch)] object sourceObject)
-		{
+        {
             if (!Validate("BeforeScreenTip"))
             {
                 Invoker.ReleaseParamsArray(screenTipText, sourceObject);
                 return;
             }
 
-			NetOffice.OWC10Api.ByRef newScreenTipText = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, screenTipText, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
-			object newSourceObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sourceObject) as object;
-			object[] paramsArray = new object[2];
-			paramsArray[0] = newScreenTipText;
-			paramsArray[1] = newSourceObject;
-			EventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
-		}
+            NetOffice.OWC10Api.ByRef newScreenTipText = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, screenTipText, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
+            object newSourceObject = Factory.CreateEventArgumentObjectFromComProxy(EventClass, sourceObject) as object;
+            object[] paramsArray = new object[2];
+            paramsArray[0] = newScreenTipText;
+            paramsArray[1] = newSourceObject;
+            EventBinding.RaiseCustomEvent("BeforeScreenTip", ref paramsArray);
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+        #endregion
+    }
+    
+    #endregion
+    
+    #pragma warning restore CS1591
 }
