@@ -6,28 +6,28 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.AccessApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	#pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass Application 
-	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application"/> </remarks>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
+    /// <summary>
+    /// CoClass Application 
+    /// SupportByVersion Access, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application"/> </remarks>
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
     public class Application : _Application, ICloneable<Application>
     {
-		#pragma warning disable
+#pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
 
         #endregion
@@ -45,11 +45,11 @@ namespace NetOffice.AccessApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -59,63 +59,63 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
-        #endregion
-        		
-		#region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        #endregion
+
+        #region Ctor
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			_callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
+        public Application(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			_callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
+        public Application(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			_callQuitInDispose = true;
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Application(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
+            _callQuitInDispose = true;
+        }
 
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			_callQuitInDispose = true;
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Application(ICOMObject replacedObject) : base(replacedObject)
-		{
-			_callQuitInDispose = true;
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Application(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+            _callQuitInDispose = true;
+        }
+
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Application(ICOMObject replacedObject) : base(replacedObject)
+        {
+            _callQuitInDispose = true;
+        }
+
+        /// <summary>
         /// Creates a new instance of Application
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public Application(string progId):base(progId)
-		{
-			_callQuitInDispose = true;
-			GlobalHelperModules.GlobalModule.Instance = this;
-		}
+        public Application(string progId) : base(progId)
+        {
+            _callQuitInDispose = true;
+            GlobalHelperModules.GlobalModule.Instance = this;
+        }
 
         /// <summary>
         /// Creates a new instance of Application 
@@ -156,27 +156,27 @@ namespace NetOffice.AccessApi
         }
 
         /// <summary>
-		/// NetOffice method: dispose instance and all child instances
-		/// </summary>
-		/// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
-		[Category("NetOffice"), CoreOverridden]
-		public override void Dispose(bool disposeEventBinding)
-		{
-			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-				 GlobalHelperModules.GlobalModule.Instance = null;	
-			base.Dispose(disposeEventBinding);
-		}
+        /// NetOffice method: dispose instance and all child instances
+        /// </summary>
+        /// <param name="disposeEventBinding">dispose event exported proxies with one or more event recipients</param>
+        [Category("NetOffice"), CoreOverridden]
+        public override void Dispose(bool disposeEventBinding)
+        {
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
+                GlobalHelperModules.GlobalModule.Instance = null;
+            base.Dispose(disposeEventBinding);
+        }
 
-		/// <summary>
-		/// NetOffice method: dispose instance and all child instances
-		/// </summary>
-		[Category("NetOffice"), CoreOverridden]
-		public override void Dispose()
-		{
-			if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-				 GlobalHelperModules.GlobalModule.Instance = null;
-			base.Dispose();
-		}
+        /// <summary>
+        /// NetOffice method: dispose instance and all child instances
+        /// </summary>
+        [Category("NetOffice"), CoreOverridden]
+        public override void Dispose()
+        {
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
+                GlobalHelperModules.GlobalModule.Instance = null;
+            base.Dispose();
+        }
 
         #endregion
 
@@ -231,6 +231,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

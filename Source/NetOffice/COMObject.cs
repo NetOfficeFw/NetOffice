@@ -72,12 +72,12 @@ namespace NetOffice
         /// list of runtime supported entities
         /// </summary>
         private Dictionary<string, string> _listSupportedEntities;
-        
+
         /// <summary>
         /// monitor lock object for the main dispose method
         /// </summary>
         private object _disposeLock = new object();
-       
+
         /// <summary>
         /// monitor lock object for accessing the child list
         /// </summary>
@@ -122,7 +122,7 @@ namespace NetOffice
         /// InstanceType cache field
         /// </summary>
         private Type _instanceType;
-        
+
         #endregion
 
         #region Ctor
@@ -220,7 +220,7 @@ namespace NetOffice
         /// <param name="comProxy">the now wrapped comProxy root instance</param>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, object comProxy)
-        {         
+        {
             if (!(comProxy is MarshalByRefObject))
                 throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
 
@@ -358,7 +358,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator)
         {
-            if(false == isEnumerator && (!(comProxy is MarshalByRefObject)))
+            if (false == isEnumerator && (!(comProxy is MarshalByRefObject)))
                 throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
 
             if (null == factory)
@@ -389,8 +389,8 @@ namespace NetOffice
         /// <param name="name">custom instance name</param>
         [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false)]
         public COMObject(Core factory, ICOMObject parentObject, object comProxy, bool isEnumerator, string name)
-        {        
-            if(false == isEnumerator && (!(comProxy is MarshalByRefObject)))
+        {
+            if (false == isEnumerator && (!(comProxy is MarshalByRefObject)))
                 throw new ArgumentException("Argument is not a COM proxy." + (null != comProxy ? "(" + comProxy.ToString() + ")" : ""));
 
             if (null == factory)
@@ -510,12 +510,12 @@ namespace NetOffice
         public COMObject(string progId)
         {
             if (String.IsNullOrEmpty(progId))
-                throw new ArgumentNullException("progId");          
+                throw new ArgumentNullException("progId");
             Factory = Core.Default;
             SyncRoot = new object();
             CreateFromProgId(progId);
             Factory.AddObjectToList(this);
-             
+
             OnCreate();
         }
 
@@ -525,7 +525,7 @@ namespace NetOffice
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public COMObject()
         {
-            
+
         }
 
         #endregion
@@ -538,7 +538,7 @@ namespace NetOffice
         [Browsable(false), EditorBrowsable(EditorBrowsableState.Advanced), Category("NetOffice")]
         public static COMObject Empty
         {
-            get 
+            get
             {
                 return null;
             }
@@ -596,7 +596,7 @@ namespace NetOffice
             catch (Exception exception)
             {
                 throw new CreateInstanceException(exception);
-            }   
+            }
         }
 
         /// <summary>
@@ -642,7 +642,7 @@ namespace NetOffice
             if (factoryAddObject)
                 Factory.AddObjectToList(this);
         }
-        
+
         /// <summary>
         ///  NetOffice method: release com proxy
         /// </summary>
@@ -883,13 +883,13 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectDisposable
-       
+
         /// <summary>
         /// NetOffice event: these event was called from Dispose and you can skip the dispose operation here if you want. the event can be helpful for troubleshooting if you don't know why your objects are being disposed
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public event OnDisposeEventHandler OnDispose;
-        
+
         /// <summary>
         /// NetOffice property: returns information the instance is already disposed
         /// </summary>
@@ -974,9 +974,9 @@ namespace NetOffice
                         _parentObject.RemoveChildObject(this);
                         _parentObject = null;
                     }
-                    
+
                     if (true == removeFromParent)
-                    {        
+                    {
                         // call quit automatically if wanted
                         if (_callQuitInDispose && Settings.EnableAutomaticQuit)
                             new Callers.QuitCaller().TryCall(Settings, Invoker, this);
@@ -997,11 +997,11 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
-                throw new COMDisposeException("An unexpected error occured while disposing <" + 
+                throw new COMDisposeException("An unexpected error occured while disposing <" +
                     InstanceName + ">.", exception);
             }
         }
-        
+
         /// <summary>
         /// Call the OnDispose event as service for client callers.
         /// The method implementation ignore any exception in the event handler.
@@ -1089,7 +1089,7 @@ namespace NetOffice
         /// <exception cref="COMChildRelationException">Unexpected error</exception>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
         public bool RemoveChildObject(ICOMObject childObject)
-        {      
+        {
             try
             {
                 if (null == childObject)
@@ -1097,7 +1097,7 @@ namespace NetOffice
                 lock (_childListLock)
                 {
                     return _listChildObjects.Remove(childObject);
-                }             
+                }
             }
             catch (Exception exception)
             {
@@ -1109,7 +1109,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectTableDisposable
-        
+
         /// <summary>
         /// NetOffice method: dispose all child instances
         /// </summary>
@@ -1131,7 +1131,7 @@ namespace NetOffice
                 lock (_disposeChildLock)
                 {
                     foreach (ICOMObject itemObject in _listChildObjects.ToArray())
-                    {                       
+                    {
                         itemObject.Dispose(disposeEventBinding);
                     }
                     _listChildObjects.Clear();
@@ -1146,7 +1146,7 @@ namespace NetOffice
         #endregion
 
         #region ICOMObjectEvents
-       
+
         /// <summary>
         /// NetOffice property: returns instance export events
         /// </summary>
@@ -1306,7 +1306,7 @@ namespace NetOffice
         {
             return base.Equals(obj);
         }
-        
+
         /// <summary>
         /// Gets a Type object that represents the specified type.
         /// </summary>

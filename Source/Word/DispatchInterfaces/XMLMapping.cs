@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.WordApi
 {
-	/// <summary>
-	/// DispatchInterface XMLMapping 
-	/// SupportByVersion Word, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping"/> </remarks>
-	[SupportByVersion("Word", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class XMLMapping : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface XMLMapping 
+    /// SupportByVersion Word, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping"/> </remarks>
+    [SupportByVersion("Word", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class XMLMapping : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,250 +42,250 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public XMLMapping(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public XMLMapping(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public XMLMapping(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public XMLMapping(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLMapping(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLMapping(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public XMLMapping(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLMapping(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLMapping(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLMapping() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public XMLMapping(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public XMLMapping(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Application"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Creator"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLMapping(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Parent"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLMapping(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.IsMapped"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public bool IsMapped
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsMapped");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLMapping() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.CustomXMLPart"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.OfficeApi.CustomXMLPart CustomXMLPart
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPart>(this, "CustomXMLPart", NetOffice.OfficeApi.CustomXMLPart.LateBindingApiWrapperType);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public XMLMapping(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.CustomXMLNode"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public NetOffice.OfficeApi.CustomXMLNode CustomXMLNode
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "CustomXMLNode", NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.XPath"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public string XPath
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "XPath");
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.PrefixMappings"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public string PrefixMappings
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "PrefixMappings");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Application"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public NetOffice.WordApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Creator"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public Int32 Creator
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Parent"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMapping"/> </remarks>
-		/// <param name="xPath">string xPath</param>
-		/// <param name="prefixMapping">optional string PrefixMapping = </param>
-		/// <param name="source">optional NetOffice.OfficeApi.CustomXMLPart Source = 0</param>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public bool SetMapping(string xPath, object prefixMapping, object source)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "SetMapping", xPath, prefixMapping, source);
-		}
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.IsMapped"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public bool IsMapped
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IsMapped");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMapping"/> </remarks>
-		/// <param name="xPath">string xPath</param>
-		[CustomMethod]
-		[SupportByVersion("Word", 12,14,15,16)]
-		public bool SetMapping(string xPath)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "SetMapping", xPath);
-		}
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.CustomXMLPart"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.CustomXMLPart CustomXMLPart
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLPart>(this, "CustomXMLPart", NetOffice.OfficeApi.CustomXMLPart.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMapping"/> </remarks>
-		/// <param name="xPath">string xPath</param>
-		/// <param name="prefixMapping">optional string PrefixMapping = </param>
-		[CustomMethod]
-		[SupportByVersion("Word", 12,14,15,16)]
-		public bool SetMapping(string xPath, object prefixMapping)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "SetMapping", xPath, prefixMapping);
-		}
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.CustomXMLNode"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.CustomXMLNode CustomXMLNode
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.CustomXMLNode>(this, "CustomXMLNode", NetOffice.OfficeApi.CustomXMLNode.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Delete"/> </remarks>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.XPath"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public string XPath
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "XPath");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMappingByNode"/> </remarks>
-		/// <param name="node">NetOffice.OfficeApi.CustomXMLNode node</param>
-		[SupportByVersion("Word", 12,14,15,16)]
-		public bool SetMappingByNode(NetOffice.OfficeApi.CustomXMLNode node)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "SetMappingByNode", node);
-		}
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.PrefixMappings"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public string PrefixMappings
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "PrefixMappings");
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMapping"/> </remarks>
+        /// <param name="xPath">string xPath</param>
+        /// <param name="prefixMapping">optional string PrefixMapping = </param>
+        /// <param name="source">optional NetOffice.OfficeApi.CustomXMLPart Source = 0</param>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public bool SetMapping(string xPath, object prefixMapping, object source)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "SetMapping", xPath, prefixMapping, source);
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMapping"/> </remarks>
+        /// <param name="xPath">string xPath</param>
+        [CustomMethod]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public bool SetMapping(string xPath)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "SetMapping", xPath);
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMapping"/> </remarks>
+        /// <param name="xPath">string xPath</param>
+        /// <param name="prefixMapping">optional string PrefixMapping = </param>
+        [CustomMethod]
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public bool SetMapping(string xPath, object prefixMapping)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "SetMapping", xPath, prefixMapping);
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.Delete"/> </remarks>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public void Delete()
+        {
+            Factory.ExecuteMethod(this, "Delete");
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.XMLMapping.SetMappingByNode"/> </remarks>
+        /// <param name="node">NetOffice.OfficeApi.CustomXMLNode node</param>
+        [SupportByVersion("Word", 12, 14, 15, 16)]
+        public bool SetMappingByNode(NetOffice.OfficeApi.CustomXMLNode node)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "SetMappingByNode", node);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

@@ -14,7 +14,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
     /// NetOffice Tools Base Dialog
     /// </summary>
     public partial class ToolsDialog : Form
-    {        
+    {
         #region Ctor
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
         /// <param name="error">error description</param>
         protected void ShowSingleException(Exception error)
         {
-            if(null != error)
+            if (null != error)
                 MessageBox.Show(this, error.ToString(), Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 

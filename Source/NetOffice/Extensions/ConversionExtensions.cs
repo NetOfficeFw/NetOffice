@@ -17,7 +17,7 @@ namespace NetOffice.Extensions.Conversion
         /// <param name="throwException">return null or throw exception if its failed to convert</param>
         /// <returns>instance of T or null(Nothing in Visual Basic)</returns>
         /// <exception cref="CloneException">Failed to convert instance to <see cref="ICOMObject"/></exception>
-        public static T To<T>(this object value, bool throwException = false) where T:class, ICOMObject
+        public static T To<T>(this object value, bool throwException = false) where T : class, ICOMObject
         {
             ICOMObject comObject = value as ICOMObject;
             if (null != comObject)

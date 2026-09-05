@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.DAOApi
 {
-	/// <summary>
-	/// DispatchInterface _Collection 
-	/// SupportByVersion DAO, 3.6,12.0
-	/// </summary>
-	[SupportByVersion("DAO", 3.6,12.0)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class _Collection : COMObject, IEnumerableProvider<object>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _Collection 
+    /// SupportByVersion DAO, 3.6,12.0
+    /// </summary>
+    [SupportByVersion("DAO", 3.6, 12.0)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+    public class _Collection : COMObject, IEnumerableProvider<object>
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -44,97 +44,97 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Collection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _Collection(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Collection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _Collection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Collection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Collection(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public _Collection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Collection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Collection(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Collection() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Collection(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _Collection(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion DAO 3.6, 12.0
-		/// Get
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		public Int16 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "Count");
-			}
-		}
+        }
 
-		#endregion
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Collection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		#region Methods
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Collection(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion DAO 3.6, 12.0
-		/// </summary>
-		[SupportByVersion("DAO", 3.6,12.0)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Collection() : base()
+        {
+        }
+
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Collection(string progId) : base(progId)
+        {
+        }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion DAO 3.6, 12.0
+        /// Get
+        /// </summary>
+        [SupportByVersion("DAO", 3.6, 12.0)]
+        public Int16 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt16PropertyGet(this, "Count");
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion DAO 3.6, 12.0
+        /// </summary>
+        [SupportByVersion("DAO", 3.6, 12.0)]
+        public void Refresh()
+        {
+            Factory.ExecuteMethod(this, "Refresh");
+        }
 
         #endregion
 
@@ -172,14 +172,14 @@ namespace NetOffice.DAOApi
         /// <summary>
         /// SupportByVersion DAO, 3.6,12.0
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
-		}
+        [SupportByVersion("DAO", 3.6, 12.0)]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+#pragma warning restore
+    }
 }

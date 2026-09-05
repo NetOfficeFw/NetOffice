@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.WordApi
 {
-	/// <summary>
-	/// DispatchInterface Floor 
-	/// SupportByVersion Word, 14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor"/> </remarks>
-	[SupportByVersion("Word", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Floor : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Floor 
+    /// SupportByVersion Word, 14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor"/> </remarks>
+    [SupportByVersion("Word", 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class Floor : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,258 +42,258 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Floor(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Floor(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Floor(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Floor(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Floor(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Floor(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public Floor(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Floor(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Floor(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Floor() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Floor(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Floor(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Name"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Parent"/> </remarks>
-		[SupportByVersion("Word", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Floor(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartBorder Border
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartBorder>(this, "Border", NetOffice.WordApi.ChartBorder.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Floor(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.Interior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Interior>(this, "Interior", NetOffice.WordApi.Interior.LateBindingApiWrapperType);
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Floor() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartFillFormat Fill
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFillFormat>(this, "Fill", NetOffice.WordApi.ChartFillFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Floor(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.PictureType"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object PictureType
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "PictureType");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "PictureType", value);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Thickness"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Int32 Thickness
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Thickness");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Thickness", value);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Format"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.ChartFormat Format
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFormat>(this, "Format", NetOffice.WordApi.ChartFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Name"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Application"/> </remarks>
-		[SupportByVersion("Word", 14,15,16), ProxyResult]
-		public object Application
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Application");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Parent"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Creator"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartBorder Border
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartBorder>(this, "Border", NetOffice.WordApi.ChartBorder.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.Interior Interior
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Interior>(this, "Interior", NetOffice.WordApi.Interior.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14, 15, 16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartFillFormat Fill
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFillFormat>(this, "Fill", NetOffice.WordApi.ChartFillFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Select"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object Select()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.PictureType"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public object PictureType
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "PictureType");
+            }
+            set
+            {
+                Factory.ExecuteVariantPropertySet(this, "PictureType", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.ClearFormats"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object ClearFormats()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Thickness"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public Int32 Thickness
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Thickness");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Thickness", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Paste"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public void Paste()
-		{
-			 Factory.ExecuteMethod(this, "Paste");
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Format"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public NetOffice.WordApi.ChartFormat Format
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFormat>(this, "Format", NetOffice.WordApi.ChartFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Application"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16), ProxyResult]
+        public object Application
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Application");
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Creator"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public Int32 Creator
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Select"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public object Select()
+        {
+            return Factory.ExecuteVariantMethodGet(this, "Select");
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.ClearFormats"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public object ClearFormats()
+        {
+            return Factory.ExecuteVariantMethodGet(this, "ClearFormats");
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.Floor.Paste"/> </remarks>
+        [SupportByVersion("Word", 14, 15, 16)]
+        public void Paste()
+        {
+            Factory.ExecuteMethod(this, "Paste");
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

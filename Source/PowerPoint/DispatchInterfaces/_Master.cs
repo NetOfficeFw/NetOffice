@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface _Master 
-	/// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _Master : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _Master 
+    /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType]
+    public class _Master : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -41,391 +41,391 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _Master(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _Master(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _Master(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _Master(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Master(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Master(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public _Master(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Master(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Master(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Master() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _Master(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _Master(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Application"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Parent"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Master(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Shapes"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Shapes Shapes
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Shapes>(this, "Shapes", NetOffice.PowerPointApi.Shapes.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Master(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.HeadersFooters"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.HeadersFooters HeadersFooters
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.HeadersFooters>(this, "HeadersFooters", NetOffice.PowerPointApi.HeadersFooters.LateBindingApiWrapperType);
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Master() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.ColorScheme"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.ColorScheme ColorScheme
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ColorScheme>(this, "ColorScheme", NetOffice.PowerPointApi.ColorScheme.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "ColorScheme", value);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _Master(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Background"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.ShapeRange Background
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ShapeRange>(this, "Background", NetOffice.PowerPointApi.ShapeRange.LateBindingApiWrapperType);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Name"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Height"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public Single Height
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Height");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Application"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Width"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public Single Width
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Width");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Parent"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.TextStyles"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.TextStyles TextStyles
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TextStyles>(this, "TextStyles", NetOffice.PowerPointApi.TextStyles.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Shapes"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.Shapes Shapes
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Shapes>(this, "Shapes", NetOffice.PowerPointApi.Shapes.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Hyperlinks"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Hyperlinks Hyperlinks
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Hyperlinks>(this, "Hyperlinks", NetOffice.PowerPointApi.Hyperlinks.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.HeadersFooters"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.HeadersFooters HeadersFooters
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.HeadersFooters>(this, "HeadersFooters", NetOffice.PowerPointApi.HeadersFooters.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public NetOffice.OfficeApi.Scripts Scripts
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Scripts>(this, "Scripts", NetOffice.OfficeApi.Scripts.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.ColorScheme"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.ColorScheme ColorScheme
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ColorScheme>(this, "ColorScheme", NetOffice.PowerPointApi.ColorScheme.LateBindingApiWrapperType);
+            }
+            set
+            {
+                Factory.ExecuteReferencePropertySet(this, "ColorScheme", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Design"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.Design Design
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Design>(this, "Design", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Background"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.ShapeRange Background
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ShapeRange>(this, "Background", NetOffice.PowerPointApi.ShapeRange.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.TimeLine"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.TimeLine TimeLine
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TimeLine>(this, "TimeLine", NetOffice.PowerPointApi.TimeLine.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Name"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Name", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.SlideShowTransition"/> </remarks>
-		[SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
-		public NetOffice.PowerPointApi.SlideShowTransition SlideShowTransition
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.SlideShowTransition>(this, "SlideShowTransition", NetOffice.PowerPointApi.SlideShowTransition.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Height"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public Single Height
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Height");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.CustomLayouts"/> </remarks>
-		[SupportByVersion("PowerPoint", 12,14,15,16)]
-		public NetOffice.PowerPointApi.CustomLayouts CustomLayouts
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.CustomLayouts>(this, "CustomLayouts", NetOffice.PowerPointApi.CustomLayouts.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Width"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public Single Width
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Width");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Theme"/> </remarks>
-		[SupportByVersion("PowerPoint", 12,14,15,16)]
-		public NetOffice.OfficeApi.OfficeTheme Theme
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.OfficeTheme>(this, "Theme", NetOffice.OfficeApi.OfficeTheme.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.TextStyles"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.TextStyles TextStyles
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TextStyles>(this, "TextStyles", NetOffice.PowerPointApi.TextStyles.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.BackgroundStyle"/> </remarks>
-		[SupportByVersion("PowerPoint", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex BackgroundStyle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex>(this, "BackgroundStyle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "BackgroundStyle", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Hyperlinks"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.Hyperlinks Hyperlinks
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Hyperlinks>(this, "Hyperlinks", NetOffice.PowerPointApi.Hyperlinks.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.CustomerData"/> </remarks>
-		[SupportByVersion("PowerPoint", 12,14,15,16)]
-		public NetOffice.PowerPointApi.CustomerData CustomerData
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.CustomerData>(this, "CustomerData", NetOffice.PowerPointApi.CustomerData.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.Scripts Scripts
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.Scripts>(this, "Scripts", NetOffice.OfficeApi.Scripts.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 15,16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.master.guides"/> </remarks>
-		[SupportByVersion("PowerPoint", 15, 16)]
-		public NetOffice.PowerPointApi.Guides Guides
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Guides>(this, "Guides", NetOffice.PowerPointApi.Guides.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Design"/> </remarks>
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.Design Design
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Design>(this, "Design", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.TimeLine"/> </remarks>
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.TimeLine TimeLine
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TimeLine>(this, "TimeLine", NetOffice.PowerPointApi.TimeLine.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.SlideShowTransition"/> </remarks>
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.SlideShowTransition SlideShowTransition
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.SlideShowTransition>(this, "SlideShowTransition", NetOffice.PowerPointApi.SlideShowTransition.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Delete"/> </remarks>
-		[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.CustomLayouts"/> </remarks>
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.CustomLayouts CustomLayouts
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.CustomLayouts>(this, "CustomLayouts", NetOffice.PowerPointApi.CustomLayouts.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.ApplyTheme"/> </remarks>
-		/// <param name="themeName">string themeName</param>
-		[SupportByVersion("PowerPoint", 12,14,15,16)]
-		public void ApplyTheme(string themeName)
-		{
-			 Factory.ExecuteMethod(this, "ApplyTheme", themeName);
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Theme"/> </remarks>
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.OfficeTheme Theme
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.OfficeTheme>(this, "Theme", NetOffice.OfficeApi.OfficeTheme.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.BackgroundStyle"/> </remarks>
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex BackgroundStyle
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoBackgroundStyleIndex>(this, "BackgroundStyle");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "BackgroundStyle", value);
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion PowerPoint 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.CustomerData"/> </remarks>
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
+        public NetOffice.PowerPointApi.CustomerData CustomerData
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.CustomerData>(this, "CustomerData", NetOffice.PowerPointApi.CustomerData.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 15,16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.master.guides"/> </remarks>
+        [SupportByVersion("PowerPoint", 15, 16)]
+        public NetOffice.PowerPointApi.Guides Guides
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Guides>(this, "Guides", NetOffice.PowerPointApi.Guides.LateBindingApiWrapperType);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.Delete"/> </remarks>
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
+        public void Delete()
+        {
+            Factory.ExecuteMethod(this, "Delete");
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Master.ApplyTheme"/> </remarks>
+        /// <param name="themeName">string themeName</param>
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
+        public void ApplyTheme(string themeName)
+        {
+            Factory.ExecuteMethod(this, "ApplyTheme", themeName);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

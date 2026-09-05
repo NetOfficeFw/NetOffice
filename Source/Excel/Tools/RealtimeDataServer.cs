@@ -117,7 +117,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <returns>System.Object</returns>
         [SupportByVersion("Excel", 10, 11, 12, 14, 15, 16)]
         protected abstract object ConnectData(int topicID, object strings, bool getNewValues);
-        
+
         /// <summary>
         /// SupportByVersion Excel, 10,11,12,14,15,16
         /// This method is called by Microsoft Excel to get new data.
@@ -163,7 +163,7 @@ namespace NetOffice.ExcelApi.Tools
         #endregion
 
         #region IRtdServer
-       
+
         object Native.IRtdServer.ConnectData(int topicID, ref object strings, ref bool getNewValues)
         {
             try
@@ -218,7 +218,7 @@ namespace NetOffice.ExcelApi.Tools
             try
             {
                 lock (_thisLock)
-                {                 
+                {
                     object result = RefreshData(topicCount);
                     return Invoker.ValidateParam(result);
                 }

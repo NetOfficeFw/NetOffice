@@ -5,44 +5,44 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	public delegate void CustomXMLParts_PartAfterAddEventHandler(NetOffice.OfficeApi.CustomXMLPart newPart);
-	public delegate void CustomXMLParts_PartBeforeDeleteEventHandler(NetOffice.OfficeApi.CustomXMLPart oldPart);
-	public delegate void CustomXMLParts_PartAfterLoadEventHandler(NetOffice.OfficeApi.CustomXMLPart part);
-	#pragma warning restore
+#pragma warning disable
+    public delegate void CustomXMLParts_PartAfterAddEventHandler(NetOffice.OfficeApi.CustomXMLPart newPart);
+    public delegate void CustomXMLParts_PartBeforeDeleteEventHandler(NetOffice.OfficeApi.CustomXMLPart oldPart);
+    public delegate void CustomXMLParts_PartAfterLoadEventHandler(NetOffice.OfficeApi.CustomXMLPart part);
+#pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass CustomXMLParts 
-	/// SupportByVersion Office, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts"/> </remarks>
-	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events._CustomXMLPartsEvents_SinkHelper))]
+    /// <summary>
+    /// CoClass CustomXMLParts 
+    /// SupportByVersion Office, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts"/> </remarks>
+    [SupportByVersion("Office", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events._CustomXMLPartsEvents_SinkHelper))]
     [ComEventInterface(typeof(Events._CustomXMLPartsEvents))]
     public class CustomXMLParts : _CustomXMLParts, IEventBinding
-	{
-		#pragma warning disable
+    {
+#pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
         private Events._CustomXMLPartsEvents_SinkHelper __CustomXMLPartsEvents_SinkHelper;
-	
-		#endregion
 
-		#region Type Information
+        #endregion
+
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -54,7 +54,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -64,170 +64,170 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
-        #endregion
-        		
-		#region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        #endregion
+
+        #region Construction
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CustomXMLParts(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public CustomXMLParts(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CustomXMLParts(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public CustomXMLParts(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CustomXMLParts(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CustomXMLParts(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CustomXMLParts(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CustomXMLParts(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CustomXMLParts(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+
+        }
+
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CustomXMLParts(ICOMObject replacedObject) : base(replacedObject)
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of CustomXMLParts 
         /// </summary>		
-		public CustomXMLParts():base("Office.CustomXMLParts")
-		{
-			
-		}
-		
-		/// <summary>
+        public CustomXMLParts() : base("Office.CustomXMLParts")
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of CustomXMLParts
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public CustomXMLParts(string progId):base(progId)
-		{
-			
-		}
+        public CustomXMLParts(string progId) : base(progId)
+        {
 
-		#endregion
+        }
 
-		#region Static CoClass Methods
-		#endregion
+        #endregion
 
-		#region Events
+        #region Static CoClass Methods
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		private event CustomXMLParts_PartAfterAddEventHandler _PartAfterAddEvent;
+        #region Events
 
-		/// <summary>
-		/// SupportByVersion Office 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartAfterAdd"/> </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public event CustomXMLParts_PartAfterAddEventHandler PartAfterAddEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PartAfterAddEvent += value;
-			}
-			remove
-			{
-				_PartAfterAddEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        private event CustomXMLParts_PartAfterAddEventHandler _PartAfterAddEvent;
 
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		private event CustomXMLParts_PartBeforeDeleteEventHandler _PartBeforeDeleteEvent;
+        /// <summary>
+        /// SupportByVersion Office 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartAfterAdd"/> </remarks>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public event CustomXMLParts_PartAfterAddEventHandler PartAfterAddEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PartAfterAddEvent += value;
+            }
+            remove
+            {
+                _PartAfterAddEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartBeforeDelete"/> </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public event CustomXMLParts_PartBeforeDeleteEventHandler PartBeforeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PartBeforeDeleteEvent += value;
-			}
-			remove
-			{
-				_PartBeforeDeleteEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        private event CustomXMLParts_PartBeforeDeleteEventHandler _PartBeforeDeleteEvent;
 
-		/// <summary>
-		/// SupportByVersion Office, 12,14,15,16
-		/// </summary>
-		private event CustomXMLParts_PartAfterLoadEventHandler _PartAfterLoadEvent;
+        /// <summary>
+        /// SupportByVersion Office 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartBeforeDelete"/> </remarks>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public event CustomXMLParts_PartBeforeDeleteEventHandler PartBeforeDeleteEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PartBeforeDeleteEvent += value;
+            }
+            remove
+            {
+                _PartBeforeDeleteEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartAfterLoad"/> </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public event CustomXMLParts_PartAfterLoadEventHandler PartAfterLoadEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PartAfterLoadEvent += value;
-			}
-			remove
-			{
-				_PartAfterLoadEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Office, 12,14,15,16
+        /// </summary>
+        private event CustomXMLParts_PartAfterLoadEventHandler _PartAfterLoadEvent;
 
-		#endregion
-       
-	    #region IEventBinding Member
-        
-		/// <summary>
+        /// <summary>
+        /// SupportByVersion Office 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CustomXMLParts.PartAfterLoad"/> </remarks>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public event CustomXMLParts_PartAfterLoadEventHandler PartAfterLoadEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PartAfterLoadEvent += value;
+            }
+            remove
+            {
+                _PartAfterLoadEvent -= value;
+            }
+        }
+
+        #endregion
+
+        #region IEventBinding Member
+
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void CreateEventBridge()
         {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
+            if (false == Factory.Settings.EnableEvents)
+                return;
+
+            if (null != _connectPoint)
+                return;
+
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomXMLPartsEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._CustomXMLPartsEvents_SinkHelper.Id);
 
 
-			if(Events._CustomXMLPartsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				__CustomXMLPartsEvents_SinkHelper = new Events._CustomXMLPartsEvents_SinkHelper(this, _connectPoint);
-				return;
-			} 
+            if (Events._CustomXMLPartsEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            {
+                __CustomXMLPartsEvents_SinkHelper = new Events._CustomXMLPartsEvents_SinkHelper(this, _connectPoint);
+                return;
+            }
         }
 
         /// <summary>
@@ -236,7 +236,7 @@ namespace NetOffice.OfficeApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -246,9 +246,9 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -270,45 +270,45 @@ namespace NetOffice.OfficeApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
         /// <param name="eventName">name of the event without 'Event' at the end</param>
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
+        {
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
+        }
         /// <summary>
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-			if( null != __CustomXMLPartsEvents_SinkHelper)
-			{
-				__CustomXMLPartsEvents_SinkHelper.Dispose();
-				__CustomXMLPartsEvents_SinkHelper = null;
-			}
+            if (null != __CustomXMLPartsEvents_SinkHelper)
+            {
+                __CustomXMLPartsEvents_SinkHelper.Dispose();
+                __CustomXMLPartsEvents_SinkHelper = null;
+            }
 
-			_connectPoint = null;
-		}
-        
+            _connectPoint = null;
+        }
+
         #endregion
 
-		#pragma warning restore
-	}
+#pragma warning restore
+    }
 }
 

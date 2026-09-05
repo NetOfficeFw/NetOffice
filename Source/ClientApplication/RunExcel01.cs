@@ -46,7 +46,7 @@ namespace ClientApplication
 
         private void PerformanceTrace_Alert(PerformanceTrace sender, PerformanceTrace.PerformanceAlertEventArgs args)
         {
-            Console.WriteLine("Call {4} => {0}:{1} passed in {2} milliseconds ({3} Ticks)", 
+            Console.WriteLine("Call {4} => {0}:{1} passed in {2} milliseconds ({3} Ticks)",
                 args.EntityName, args.MethodName, args.TimeElapsedMS, args.Ticks, args.CallType);
         }
     }

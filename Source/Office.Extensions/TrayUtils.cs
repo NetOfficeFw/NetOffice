@@ -51,37 +51,37 @@ namespace NetOffice.OfficeApi.Extensions
         /// Occurs when the balloon tip is closed by the user
         /// </summary>
         public event EventHandler BalloonTipClosed;
-        
+
         /// <summary>
         /// Occurs when the balloon tip is displayed on the screen
         /// </summary>
         public event EventHandler BalloonTipShown;
-        
+
         /// <summary>
         /// Occurs when the user clicks the icon in the notification area
         /// </summary>
         public event EventHandler Click;
-        
+
         /// <summary>
         /// Occurs when the user double-clicks the icon in the notification area of the taskbar
         /// </summary>
         public event EventHandler DoubleClick;
-        
+
         /// <summary>
         /// Occurs when the user clicks a NotifyIcon with the mouse
         /// </summary>
         public event ToolsMouseEventHandler MouseClick;
-        
+
         /// <summary>
         /// Occurs when the user double-clicks the NotifyIcon with the mouse
         /// </summary>
         public event ToolsMouseEventHandler MouseDoubleClick;
-        
+
         /// <summary>
         /// Occurs when the user presses the mouse button while the pointer is over the icon in the notification area of the taskbar
         /// </summary>
         public event ToolsMouseEventHandler MouseDown;
-        
+
         /// <summary>
         /// Occurs when the user moves the mouse while the pointer is over the icon in the notification area of the taskbar
         /// </summary>
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Extensions
         public event ToolsMouseEventHandler MouseUp;
 
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace NetOffice.OfficeApi.Extensions
         /// </summary>
         public string BalloonTipText
         {
-            get 
+            get
             {
                 return null != _icon ? _icon.BalloonTipText : String.Empty;
             }
@@ -194,7 +194,7 @@ namespace NetOffice.OfficeApi.Extensions
                 _icon.BalloonTipIcon = (ToolTipIcon)value;
             }
         }
-         
+
         /// <summary>
         /// Gets or sets the current icon
         /// </summary>
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi.Extensions
                     _icon = CreateConnectTray(value);
             }
         }
-         
+
         /// <summary>
         /// Gets or sets a value indicating whether the icon is visible in the notification area of the taskbar
         /// </summary>
@@ -230,13 +230,13 @@ namespace NetOffice.OfficeApi.Extensions
 
                 if (value)
                 {
-                    if(null == _icon)
+                    if (null == _icon)
                         _icon = CreateConnectTray();
                 }
                 else
                 {
                     if (null != _icon)
-                    { 
+                    {
                         DisposeTray();
                         _icon = null;
                     }
@@ -346,7 +346,7 @@ namespace NetOffice.OfficeApi.Extensions
         {
             return null;
         }
-      
+
         /// <summary>
         /// Creates NotifyIcon for the instance
         /// </summary>
@@ -373,7 +373,7 @@ namespace NetOffice.OfficeApi.Extensions
         protected internal virtual void DisposeTrayIcon()
         {
             if (null != _icon)
-            {                
+            {
                 _icon.Dispose();
                 _icon = null;
             }
@@ -395,7 +395,7 @@ namespace NetOffice.OfficeApi.Extensions
         {
             DisconnectEvents(_icon);
             DisposeMenu();
-            DisposeTrayIcon();           
+            DisposeTrayIcon();
         }
 
         private NotifyIcon CreateConnectTray(Icon value)
@@ -512,7 +512,7 @@ namespace NetOffice.OfficeApi.Extensions
         private void Icon_MouseMove(object sender, MouseEventArgs e)
         {
             try
-            {                 
+            {
                 if (null != MouseMove)
                     MouseMove(this, new ToolsMouseEventArgs((ToolsMouseButtons)e.Button, e.Clicks, e.X, e.Y, e.Delta));
             }

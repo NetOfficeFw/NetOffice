@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-	/// <summary>
-	/// DispatchInterface _GroupLevel 
-	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _GroupLevel : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _GroupLevel 
+    /// SupportByVersion Access, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType]
+    public class _GroupLevel : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -41,258 +41,258 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _GroupLevel(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _GroupLevel(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _GroupLevel(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _GroupLevel(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _GroupLevel(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _GroupLevel(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public _GroupLevel(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _GroupLevel(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _GroupLevel(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _GroupLevel() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _GroupLevel(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _GroupLevel(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Application"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Parent"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _GroupLevel(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Properties"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.Properties Properties
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Properties>(this, "Properties", NetOffice.AccessApi.Properties.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _GroupLevel(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.ControlSource"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string ControlSource
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ControlSource");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ControlSource", value);
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _GroupLevel() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.SortOrder"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool SortOrder
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "SortOrder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "SortOrder", value);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _GroupLevel(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupHeader"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool GroupHeader
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "GroupHeader");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GroupHeader", value);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupFooter"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool GroupFooter
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "GroupFooter");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GroupFooter", value);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupOn"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int16 GroupOn
-		{
-			get
-			{
-				return Factory.ExecuteInt16PropertyGet(this, "GroupOn");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GroupOn", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Application"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Application>(this, "Application", NetOffice.AccessApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupInterval"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 GroupInterval
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "GroupInterval");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "GroupInterval", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Parent"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.KeepTogether"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public byte KeepTogether
-		{
-			get
-			{
-				return Factory.ExecuteBytePropertyGet(this, "KeepTogether");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "KeepTogether", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.Properties"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.Properties Properties
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.Properties>(this, "Properties", NetOffice.AccessApi.Properties.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.ControlSource"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public string ControlSource
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ControlSource");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ControlSource", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.SortOrder"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public bool SortOrder
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "SortOrder");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "SortOrder", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="dispid">Int32 dispid</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupHeader"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public bool GroupHeader
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "GroupHeader");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "GroupHeader", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupFooter"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public bool GroupFooter
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "GroupFooter");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "GroupFooter", value);
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupOn"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public Int16 GroupOn
+        {
+            get
+            {
+                return Factory.ExecuteInt16PropertyGet(this, "GroupOn");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "GroupOn", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.GroupInterval"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 GroupInterval
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "GroupInterval");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "GroupInterval", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.GroupLevel.KeepTogether"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public byte KeepTogether
+        {
+            get
+            {
+                return Factory.ExecuteBytePropertyGet(this, "KeepTogether");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "KeepTogether", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Access 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="dispid">Int32 dispid</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        public bool IsMemberSafe(Int32 dispid)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

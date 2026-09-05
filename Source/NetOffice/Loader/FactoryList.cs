@@ -8,7 +8,7 @@ namespace NetOffice.Loader
     /// <summary>
     /// Contains loaded factory information
     /// </summary>
-    public class FactoryList: List<IFactoryInfo>
+    public class FactoryList : List<IFactoryInfo>
     {
         /// <summary>
         /// Check for loaded assembly in factory list

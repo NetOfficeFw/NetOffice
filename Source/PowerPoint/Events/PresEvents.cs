@@ -6,17 +6,17 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi.Events
-{	
-	#pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("91493463-5A91-11CF-8700-00AA0060263B"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface PresEvents
-	{
-	}
+    public interface PresEvents
+    {
+    }
 
     #endregion
 
@@ -24,29 +24,29 @@ namespace NetOffice.PowerPointApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class PresEvents_SinkHelper : SinkHelper, PresEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "91493463-5A91-11CF-8700-00AA0060263B";
-		
-		#endregion
+    public class PresEvents_SinkHelper : SinkHelper, PresEvents
+    {
+        #region Static
 
-		#region Ctor
+        public static readonly string Id = "91493463-5A91-11CF-8700-00AA0060263B";
 
-		public PresEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
+        #endregion
 
-		#region PresEvents
-		
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+        #region Ctor
+
+        public PresEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+
+        #endregion
+
+        #region PresEvents
+
+        #endregion
+    }
+
+    #endregion
+
+#pragma warning restore CS1591
 }

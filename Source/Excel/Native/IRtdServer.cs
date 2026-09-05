@@ -15,7 +15,7 @@ namespace NetOffice.ExcelApi.Native
     [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsNativeInterface)]
     public interface IRtdServer
-	{
+    {
         #region Methods
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace NetOffice.ExcelApi.Native
         /// <returns>System.Int32</returns>
         [DispId(10), MethodImpl(4096)]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
-        int ServerStart([MarshalAs(UnmanagedType.Interface)] [In] IRTDUpdateEvent callbackObject);
+        int ServerStart([MarshalAs(UnmanagedType.Interface)][In] IRTDUpdateEvent callbackObject);
 
         /// <summary>
         /// Adds new topics from a real-time data server. The ConnectData method is called when a file is opened that contains real-time data functions or when a user types in a new formula which contains the RTD function.
@@ -39,7 +39,7 @@ namespace NetOffice.ExcelApi.Native
         [DispId(11), MethodImpl(4096)]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [return: MarshalAs(UnmanagedType.Struct)]
-        object ConnectData([In] int topicID, [MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref object strings, [In] [Out] ref bool getNewValues);
+        object ConnectData([In] int topicID, [MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)][In] ref object strings, [In][Out] ref bool getNewValues);
 
         /// <summary>
         /// This method is called by Microsoft Excel to get new data.
@@ -51,7 +51,7 @@ namespace NetOffice.ExcelApi.Native
         [DispId(12), MethodImpl(4096)]
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [return: MarshalAs(UnmanagedType.SafeArray, SafeArraySubType = VarEnum.VT_VARIANT)]
-        object RefreshData([In] [Out] ref int topicCount);
+        object RefreshData([In][Out] ref int topicCount);
 
         /// <summary>
         /// Notifies a real-time data (RTD) server application that a topic is no longer in use.

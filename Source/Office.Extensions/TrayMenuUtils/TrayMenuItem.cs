@@ -82,7 +82,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         #endregion
 
         #region Properties
-         
+
         /// <summary>
         /// Owner Menu
         /// </summary>
@@ -93,7 +93,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 return _owner;
             }
         }
-         
+
         /// <summary>
         /// Optional Child Items
         /// </summary>
@@ -166,7 +166,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 }
             }
         }
-       
+
         /// <summary>
         /// Get or set item visibility
         /// </summary>
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 }
             }
         }
-        
+
         /// <summary>
         /// Item Enabled State
         /// </summary>

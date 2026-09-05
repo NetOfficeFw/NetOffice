@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-	/// <summary>
-	/// DispatchInterface _SelectNamesDialog 
-	/// SupportByVersion Outlook, 12,14,15,16
-	/// </summary>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _SelectNamesDialog : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _SelectNamesDialog 
+    /// SupportByVersion Outlook, 12,14,15,16
+    /// </summary>
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType]
+    public class _SelectNamesDialog : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -41,338 +41,338 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _SelectNamesDialog(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _SelectNamesDialog(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _SelectNamesDialog(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _SelectNamesDialog(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _SelectNamesDialog(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _SelectNamesDialog(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public _SelectNamesDialog(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _SelectNamesDialog(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _SelectNamesDialog(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _SelectNamesDialog() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _SelectNamesDialog(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _SelectNamesDialog(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Application"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Class"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _SelectNamesDialog(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Session"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _SelectNamesDialog(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Parent"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _SelectNamesDialog() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Caption"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _SelectNamesDialog(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Recipients"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Recipients Recipients
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Recipients>(this, "Recipients", NetOffice.OutlookApi.Recipients.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "Recipients", value);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.BccLabel"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string BccLabel
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "BccLabel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "BccLabel", value);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.CcLabel"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string CcLabel
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "CcLabel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "CcLabel", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Application"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.ToLabel"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public string ToLabel
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ToLabel");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ToLabel", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Class"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlObjectClass Class
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.AllowMultipleSelection"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool AllowMultipleSelection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "AllowMultipleSelection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "AllowMultipleSelection", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Session"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._NameSpace Session
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.ForceResolution"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool ForceResolution
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ForceResolution");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ForceResolution", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Parent"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.ShowOnlyInitialAddressList"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool ShowOnlyInitialAddressList
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowOnlyInitialAddressList");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowOnlyInitialAddressList", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Caption"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public string Caption
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Caption");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Caption", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.NumberOfRecipientSelectors"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlRecipientSelectors NumberOfRecipientSelectors
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlRecipientSelectors>(this, "NumberOfRecipientSelectors");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "NumberOfRecipientSelectors", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Recipients"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Recipients Recipients
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.Recipients>(this, "Recipients", NetOffice.OutlookApi.Recipients.LateBindingApiWrapperType);
+            }
+            set
+            {
+                Factory.ExecuteReferencePropertySet(this, "Recipients", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.InitialAddressList"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.AddressList InitialAddressList
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AddressList>(this, "InitialAddressList", NetOffice.OutlookApi.AddressList.LateBindingApiWrapperType);
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "InitialAddressList", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.BccLabel"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public string BccLabel
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "BccLabel");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "BccLabel", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.CcLabel"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public string CcLabel
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "CcLabel");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "CcLabel", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.ToLabel"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public string ToLabel
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ToLabel");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ToLabel", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Display"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public bool Display()
-		{
-			return Factory.ExecuteBoolMethodGet(this, "Display");
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.AllowMultipleSelection"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public bool AllowMultipleSelection
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "AllowMultipleSelection");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "AllowMultipleSelection", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.SetDefaultDisplayMode"/> </remarks>
-		/// <param name="defaultMode">NetOffice.OutlookApi.Enums.OlDefaultSelectNamesDisplayMode defaultMode</param>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public void SetDefaultDisplayMode(NetOffice.OutlookApi.Enums.OlDefaultSelectNamesDisplayMode defaultMode)
-		{
-			 Factory.ExecuteMethod(this, "SetDefaultDisplayMode", defaultMode);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.ForceResolution"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public bool ForceResolution
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "ForceResolution");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ForceResolution", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.ShowOnlyInitialAddressList"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public bool ShowOnlyInitialAddressList
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "ShowOnlyInitialAddressList");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ShowOnlyInitialAddressList", value);
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.NumberOfRecipientSelectors"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlRecipientSelectors NumberOfRecipientSelectors
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlRecipientSelectors>(this, "NumberOfRecipientSelectors");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "NumberOfRecipientSelectors", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.InitialAddressList"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.AddressList InitialAddressList
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AddressList>(this, "InitialAddressList", NetOffice.OutlookApi.AddressList.LateBindingApiWrapperType);
+            }
+            set
+            {
+                Factory.ExecuteReferencePropertySet(this, "InitialAddressList", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.Display"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public bool Display()
+        {
+            return Factory.ExecuteBoolMethodGet(this, "Display");
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.SelectNamesDialog.SetDefaultDisplayMode"/> </remarks>
+        /// <param name="defaultMode">NetOffice.OutlookApi.Enums.OlDefaultSelectNamesDisplayMode defaultMode</param>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public void SetDefaultDisplayMode(NetOffice.OutlookApi.Enums.OlDefaultSelectNamesDisplayMode defaultMode)
+        {
+            Factory.ExecuteMethod(this, "SetDefaultDisplayMode", defaultMode);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

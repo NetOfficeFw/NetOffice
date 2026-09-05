@@ -11,7 +11,7 @@ namespace NetOffice.Tools
     /// </summary>
     [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class CodebaseAttribute : System.Attribute
-    { 
+    {
         /// <summary>
         /// Create/Delete Codebase entry. True by default
         /// </summary>
@@ -53,7 +53,7 @@ namespace NetOffice.Tools
                     return true;
                 }
                 else
-                { 
+                {
                     return true;
                 }
             }
@@ -111,14 +111,14 @@ namespace NetOffice.Tools
         {
             Microsoft.Win32.RegistryKey result = null;
             if (isSystem)
-            {               
-                result = Microsoft.Win32.Registry.ClassesRoot.CreateSubKey("CLSID\\{" + guid.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);                
+            {
+                result = Microsoft.Win32.Registry.ClassesRoot.CreateSubKey("CLSID\\{" + guid.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
             }
             else
-            {               
+            {
                 result = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\\Classes\\CLSID\\{" + guid.ToString().ToUpper() + "}\\InprocServer32\\" + assemblyVersion);
             }
             return result;
-        } 
+        }
     }
 }

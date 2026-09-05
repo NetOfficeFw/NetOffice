@@ -32,7 +32,7 @@ namespace NetOffice.Contribution.Controls
             Controls.Add(View);
             View.Visible = true;
             OverlayPanel = new Panel();
-             
+
             TextBox textBox = new TextBox();
             textBox.ReadOnly = true;
             textBox.Multiline = true;
@@ -61,7 +61,7 @@ namespace NetOffice.Contribution.Controls
 
             View.AfterSelect += delegate
             {
-                if(!IsDisposed)
+                if (!IsDisposed)
                     OnSelectedInstanceChanged();
             };
         }
@@ -123,7 +123,7 @@ namespace NetOffice.Contribution.Controls
             set
             {
                 if (value != HighlightTimer.Enabled)
-                { 
+                {
                     HighlightTimer.Enabled = value;
                     if (!value)
                     {
@@ -152,7 +152,7 @@ namespace NetOffice.Contribution.Controls
         /// </summary>
         [Description("Automaticly expand all nodes"), DefaultValue(true), Category("InstanceMonitor")]
         public bool AutoExpandNodes { get; set; }
-        
+
         private TreeView View { get; set; }
 
         private Dictionary<TreeNode, DateTime> HighlightNodes { get; set; }
@@ -197,7 +197,7 @@ namespace NetOffice.Contribution.Controls
             else
                 View.Nodes.Clear();
         }
-        
+
         private void EnumerateProxies(TreeNode node, ICOMObject[] children)
         {
             TreeNode[] childNodes = new TreeNode[children.Length];
@@ -217,7 +217,7 @@ namespace NetOffice.Contribution.Controls
             int count = 0;
             foreach (ICOMObject item in values)
                 count++;
-            
+
             ICOMObject[] result = new ICOMObject[count];
             count = 0;
             foreach (ICOMObject item in values)
@@ -344,7 +344,7 @@ namespace NetOffice.Contribution.Controls
         #endregion
 
         #region Trigger
-       
+
         private void Core_ProxyAdded(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
         {
             void ProxyAddedAction()

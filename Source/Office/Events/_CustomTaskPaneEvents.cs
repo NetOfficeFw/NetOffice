@@ -6,26 +6,26 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Events
-{	
-	#pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000C033C-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface _CustomTaskPaneEvents
-	{
-		[SupportByVersion("Office", 12,14,15,16)]
+    public interface _CustomTaskPaneEvents
+    {
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("customTaskPaneInst", typeof(NetOffice.OfficeApi._CustomTaskPane))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
-		void VisibleStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst);
+        void VisibleStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst);
 
-		[SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("customTaskPaneInst", typeof(NetOffice.OfficeApi._CustomTaskPane))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
-		void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst);
-	}
+        void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst);
+    }
 
     #endregion
 
@@ -33,27 +33,27 @@ namespace NetOffice.OfficeApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class _CustomTaskPaneEvents_SinkHelper : SinkHelper, _CustomTaskPaneEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "000C033C-0000-0000-C000-000000000046";
-		
-		#endregion
-		
-		#region Ctor
+    public class _CustomTaskPaneEvents_SinkHelper : SinkHelper, _CustomTaskPaneEvents
+    {
+        #region Static
 
-		public _CustomTaskPaneEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
-		#region _CustomTaskPaneEvents
-		
-		public void VisibleStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
-		{
+        public static readonly string Id = "000C033C-0000-0000-C000-000000000046";
+
+        #endregion
+
+        #region Ctor
+
+        public _CustomTaskPaneEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+
+        #endregion
+
+        #region _CustomTaskPaneEvents
+
+        public void VisibleStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
+        {
             if (!Validate("VisibleStateChange"))
             {
                 Invoker.ReleaseParamsArray(customTaskPaneInst);
@@ -61,13 +61,13 @@ namespace NetOffice.OfficeApi.Events
             }
 
             NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateEventArgumentObjectFromComProxy(EventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
-			object[] paramsArray = new object[1];
-			paramsArray[0] = newCustomTaskPaneInst;
-			EventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
+            object[] paramsArray = new object[1];
+            paramsArray[0] = newCustomTaskPaneInst;
+            EventBinding.RaiseCustomEvent("VisibleStateChange", ref paramsArray);
         }
 
-		public void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
-		{
+        public void DockPositionStateChange([In, MarshalAs(UnmanagedType.IDispatch)] object customTaskPaneInst)
+        {
             if (!Validate("DockPositionStateChange"))
             {
                 Invoker.ReleaseParamsArray(customTaskPaneInst);
@@ -76,14 +76,14 @@ namespace NetOffice.OfficeApi.Events
 
             NetOffice.OfficeApi._CustomTaskPane newCustomTaskPaneInst = Factory.CreateEventArgumentObjectFromComProxy(EventClass, customTaskPaneInst) as NetOffice.OfficeApi._CustomTaskPane;
             object[] paramsArray = new object[1];
-			paramsArray[0] = newCustomTaskPaneInst;
+            paramsArray[0] = newCustomTaskPaneInst;
             EventBinding.RaiseCustomEvent("DockPositionStateChange", ref paramsArray);
         }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+        #endregion
+    }
+
+    #endregion
+
+#pragma warning restore CS1591
 }

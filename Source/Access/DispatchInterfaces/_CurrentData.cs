@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-	/// <summary>
-	/// DispatchInterface _CurrentData 
-	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType]
- 	public class _CurrentData : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _CurrentData 
+    /// SupportByVersion Access, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType]
+    public class _CurrentData : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -41,173 +41,173 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _CurrentData(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _CurrentData(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _CurrentData(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _CurrentData(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _CurrentData(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _CurrentData(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public _CurrentData(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _CurrentData(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _CurrentData(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _CurrentData() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _CurrentData(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _CurrentData(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllTables"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.AllTables AllTables
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllTables>(this, "AllTables", NetOffice.AccessApi.AllTables.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllQueries"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.AllQueries AllQueries
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllQueries>(this, "AllQueries", NetOffice.AccessApi.AllQueries.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _CurrentData(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllViews"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.AllViews AllViews
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllViews>(this, "AllViews", NetOffice.AccessApi.AllViews.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _CurrentData(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllStoredProcedures"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.AllStoredProcedures AllStoredProcedures
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllStoredProcedures>(this, "AllStoredProcedures", NetOffice.AccessApi.AllStoredProcedures.LateBindingApiWrapperType);
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _CurrentData() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllDatabaseDiagrams"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.AllDatabaseDiagrams AllDatabaseDiagrams
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllDatabaseDiagrams>(this, "AllDatabaseDiagrams", NetOffice.AccessApi.AllDatabaseDiagrams.LateBindingApiWrapperType);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _CurrentData(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllFunctions"/> </remarks>
-		[SupportByVersion("Access", 10,11,12,14,15,16)]
-		public NetOffice.AccessApi.AllFunctions AllFunctions
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllFunctions>(this, "AllFunctions", NetOffice.AccessApi.AllFunctions.LateBindingApiWrapperType);
-			}
-		}
+        #endregion
 
-		#endregion
+        #region Properties
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllTables"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.AllTables AllTables
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllTables>(this, "AllTables", NetOffice.AccessApi.AllTables.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="dispid">Int32 dispid</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllQueries"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.AllQueries AllQueries
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllQueries>(this, "AllQueries", NetOffice.AccessApi.AllQueries.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllViews"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.AllViews AllViews
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllViews>(this, "AllViews", NetOffice.AccessApi.AllViews.LateBindingApiWrapperType);
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllStoredProcedures"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.AllStoredProcedures AllStoredProcedures
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllStoredProcedures>(this, "AllStoredProcedures", NetOffice.AccessApi.AllStoredProcedures.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllDatabaseDiagrams"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.AllDatabaseDiagrams AllDatabaseDiagrams
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllDatabaseDiagrams>(this, "AllDatabaseDiagrams", NetOffice.AccessApi.AllDatabaseDiagrams.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Access 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.CurrentData.AllFunctions"/> </remarks>
+        [SupportByVersion("Access", 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.AllFunctions AllFunctions
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.AllFunctions>(this, "AllFunctions", NetOffice.AccessApi.AllFunctions.LateBindingApiWrapperType);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Access 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="dispid">Int32 dispid</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        public bool IsMemberSafe(Int32 dispid)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api
 {
-	/// <summary>
-	/// DispatchInterface SchemaParameter 
-	/// SupportByVersion OWC10, 1
-	/// </summary>
-	[SupportByVersion("OWC10", 1)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class SchemaParameter : SchemaField
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface SchemaParameter 
+    /// SupportByVersion OWC10, 1
+    /// </summary>
+    [SupportByVersion("OWC10", 1)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class SchemaParameter : SchemaField
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -41,117 +41,117 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public SchemaParameter(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public SchemaParameter(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public SchemaParameter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public SchemaParameter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SchemaParameter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SchemaParameter(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public SchemaParameter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SchemaParameter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SchemaParameter(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SchemaParameter() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public SchemaParameter(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public SchemaParameter(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
-		public Int32 NumericScale
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "NumericScale");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
-		public Int32 Precision
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Precision");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SchemaParameter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion OWC10 1
-		/// Get
-		/// </summary>
-		[SupportByVersion("OWC10", 1)]
-		public NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.ParameterDirectionEnum>(this, "Direction");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SchemaParameter(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		#endregion
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SchemaParameter() : base()
+        {
+        }
 
-		#region Methods
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public SchemaParameter(string progId) : base(progId)
+        {
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        public Int32 NumericScale
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "NumericScale");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        public Int32 Precision
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Precision");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion OWC10 1
+        /// Get
+        /// </summary>
+        [SupportByVersion("OWC10", 1)]
+        public NetOffice.ADODBApi.Enums.ParameterDirectionEnum Direction
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.ADODBApi.Enums.ParameterDirectionEnum>(this, "Direction");
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        #endregion
+
+#pragma warning restore
+    }
 }

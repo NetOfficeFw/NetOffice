@@ -22,7 +22,7 @@ namespace NetOffice.Tools
             try
             {
                 RegistryKey lockbackKey = null;
-                if(isSystem)
+                if (isSystem)
                     lockbackKey = Registry.ClassesRoot.CreateSubKey("Interface\\{000C0601-0000-0000-C000-000000000046}");
                 else
                     lockbackKey = Registry.CurrentUser.CreateSubKey("Software\\Classes\\Interface\\{000C0601-0000-0000-C000-000000000046}");

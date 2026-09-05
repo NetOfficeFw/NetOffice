@@ -6,7 +6,7 @@ namespace NetOffice.OfficeApi.Tools
     /// Set a target office product for registering
     /// </summary>
     public enum RegisterIn
-    { 
+    {
         /// <summary>
         /// MS Excel in any version
         /// </summary>
@@ -21,7 +21,7 @@ namespace NetOffice.OfficeApi.Tools
         /// MS Outlook in any version
         /// </summary>
         Outlook = 2,
-        
+
         /// <summary>
         /// MS PowerPoint in any version
         /// </summary>
@@ -36,7 +36,7 @@ namespace NetOffice.OfficeApi.Tools
     /// <summary>
     /// This attribute must be used for NetOffice.OfficeApi.Tools.COMAddin to specify multipe office products you want support
     /// </summary>
-    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple=false)]
+    [System.AttributeUsage(System.AttributeTargets.Class, AllowMultiple = false)]
     public class MultiRegisterAttribute : System.Attribute
     {
         /// <summary>
@@ -60,15 +60,15 @@ namespace NetOffice.OfficeApi.Tools
         /// <param name="throwException">throw exception if not found</param>
         /// <returns>MultiRegisterAttribute instance</returns>
         internal static MultiRegisterAttribute GetAttribute(Type type, bool throwException = true)
-		{
-		    object[] array = type.GetCustomAttributes(typeof(MultiRegisterAttribute), false);
+        {
+            object[] array = type.GetCustomAttributes(typeof(MultiRegisterAttribute), false);
             if (array.Length == 0 && throwException)
                 throw new ArgumentException("MultiRegisterAttribute is missing");
             if (array.Length > 0)
                 return array[0] as MultiRegisterAttribute;
             else
                 return null;
-		}
+        }
 
         /// <summary>
         /// Get registry value string

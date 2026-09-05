@@ -5,33 +5,33 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface PPCheckBox 
-	/// SupportByVersion PowerPoint, 9
-	/// </summary>
-	[SupportByVersion("PowerPoint", 9)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class PPCheckBox : PPControl
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface PPCheckBox 
+    /// SupportByVersion PowerPoint, 9
+    /// </summary>
+    [SupportByVersion("PowerPoint", 9)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class PPCheckBox : PPControl
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -41,121 +41,121 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PPCheckBox(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public PPCheckBox(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PPCheckBox(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public PPCheckBox(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPCheckBox(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPCheckBox(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public PPCheckBox(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPCheckBox(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPCheckBox(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPCheckBox() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPCheckBox(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public PPCheckBox(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-		public NetOffice.OfficeApi.Enums.MsoTriState State
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "State");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "State", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-		public string OnClick
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnClick");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnClick", value);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPCheckBox(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		#endregion
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPCheckBox(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		#region Methods
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPCheckBox() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-		public void Click()
-		{
-			 Factory.ExecuteMethod(this, "Click");
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPCheckBox(string progId) : base(progId)
+        {
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        public NetOffice.OfficeApi.Enums.MsoTriState State
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoTriState>(this, "State");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "State", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        public string OnClick
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "OnClick");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "OnClick", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        public void Click()
+        {
+            Factory.ExecuteMethod(this, "Click");
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

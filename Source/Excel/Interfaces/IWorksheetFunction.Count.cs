@@ -100,7 +100,7 @@ namespace NetOffice.ExcelApi
         {
             return Factory.ExecuteDoubleMethodGet(this, "Count", arg1, arg2, arg3, arg4);
         }
-        
+
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>

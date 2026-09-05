@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-	/// <summary>
-	/// DispatchInterface AddressEntry 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry"/> </remarks>
-	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class AddressEntry : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface AddressEntry 
+    /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry"/> </remarks>
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class AddressEntry : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,426 +42,426 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public AddressEntry(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public AddressEntry(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public AddressEntry(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public AddressEntry(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddressEntry(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddressEntry(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public AddressEntry(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddressEntry(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddressEntry(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddressEntry() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public AddressEntry(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public AddressEntry(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Application"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Class"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public AddressEntry(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Session"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public AddressEntry(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Parent"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public AddressEntry() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Address"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Address
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Address");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Address", value);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public AddressEntry(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.DisplayType"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlDisplayType DisplayType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlDisplayType>(this, "DisplayType");
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.ID"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string ID
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ID");
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.AddressEntry Manager
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AddressEntry>(this, "Manager", NetOffice.OutlookApi.AddressEntry.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Application"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object MAPIOBJECT
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "MAPIOBJECT");
-			}
-			set
-			{
-				Factory.ExecuteReferencePropertySet(this, "MAPIOBJECT", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Class"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlObjectClass Class
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.AddressEntries Members
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AddressEntries>(this, "Members", NetOffice.OutlookApi.AddressEntries.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Session"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._NameSpace Session
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Name"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Name", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Parent"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Type"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string Type
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Type");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Type", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Address"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public string Address
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Address");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Address", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.AddressEntryUserType"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlAddressEntryUserType AddressEntryUserType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlAddressEntryUserType>(this, "AddressEntryUserType");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.DisplayType"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlDisplayType DisplayType
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlDisplayType>(this, "DisplayType");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.PropertyAccessor"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.PropertyAccessor>(this, "PropertyAccessor", NetOffice.OutlookApi.PropertyAccessor.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.ID"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public string ID
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ID");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.AddressEntry Manager
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AddressEntry>(this, "Manager", NetOffice.OutlookApi.AddressEntry.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// Unknown COM Proxy
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public object MAPIOBJECT
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "MAPIOBJECT");
+            }
+            set
+            {
+                Factory.ExecuteReferencePropertySet(this, "MAPIOBJECT", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Delete"/> </remarks>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Delete()
-		{
-			 Factory.ExecuteMethod(this, "Delete");
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.AddressEntries Members
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AddressEntries>(this, "Members", NetOffice.OutlookApi.AddressEntries.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Details"/> </remarks>
-		/// <param name="hWnd">optional object hWnd</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Details(object hWnd)
-		{
-			 Factory.ExecuteMethod(this, "Details", hWnd);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Name"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Name", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Details"/> </remarks>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Details()
-		{
-			 Factory.ExecuteMethod(this, "Details");
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Type"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public string Type
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Type");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Type", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetFreeBusy"/> </remarks>
-		/// <param name="start">DateTime start</param>
-		/// <param name="minPerChar">Int32 minPerChar</param>
-		/// <param name="completeFormat">optional object completeFormat</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string GetFreeBusy(DateTime start, Int32 minPerChar, object completeFormat)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetFreeBusy", start, minPerChar, completeFormat);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.AddressEntryUserType"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlAddressEntryUserType AddressEntryUserType
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlAddressEntryUserType>(this, "AddressEntryUserType");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetFreeBusy"/> </remarks>
-		/// <param name="start">DateTime start</param>
-		/// <param name="minPerChar">Int32 minPerChar</param>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public string GetFreeBusy(DateTime start, Int32 minPerChar)
-		{
-			return Factory.ExecuteStringMethodGet(this, "GetFreeBusy", start, minPerChar);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.PropertyAccessor"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.PropertyAccessor>(this, "PropertyAccessor", NetOffice.OutlookApi.PropertyAccessor.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
-		/// <param name="makePermanent">optional object makePermanent</param>
-		/// <param name="refresh">optional object refresh</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Update(object makePermanent, object refresh)
-		{
-			 Factory.ExecuteMethod(this, "Update", makePermanent, refresh);
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Update()
-		{
-			 Factory.ExecuteMethod(this, "Update");
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
-		/// <param name="makePermanent">optional object makePermanent</param>
-		[CustomMethod]
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Update(object makePermanent)
-		{
-			 Factory.ExecuteMethod(this, "Update", makePermanent);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Delete"/> </remarks>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void Delete()
+        {
+            Factory.ExecuteMethod(this, "Delete");
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void UpdateFreeBusy()
-		{
-			 Factory.ExecuteMethod(this, "UpdateFreeBusy");
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Details"/> </remarks>
+        /// <param name="hWnd">optional object hWnd</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void Details(object hWnd)
+        {
+            Factory.ExecuteMethod(this, "Details", hWnd);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetContact"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._ContactItem GetContact()
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._ContactItem>(this, "GetContact");
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Details"/> </remarks>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void Details()
+        {
+            Factory.ExecuteMethod(this, "Details");
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetExchangeUser"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.ExchangeUser GetExchangeUser()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ExchangeUser>(this, "GetExchangeUser", NetOffice.OutlookApi.ExchangeUser.LateBindingApiWrapperType);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetFreeBusy"/> </remarks>
+        /// <param name="start">DateTime start</param>
+        /// <param name="minPerChar">Int32 minPerChar</param>
+        /// <param name="completeFormat">optional object completeFormat</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public string GetFreeBusy(DateTime start, Int32 minPerChar, object completeFormat)
+        {
+            return Factory.ExecuteStringMethodGet(this, "GetFreeBusy", start, minPerChar, completeFormat);
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetExchangeDistributionList"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.ExchangeDistributionList GetExchangeDistributionList()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ExchangeDistributionList>(this, "GetExchangeDistributionList", NetOffice.OutlookApi.ExchangeDistributionList.LateBindingApiWrapperType);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetFreeBusy"/> </remarks>
+        /// <param name="start">DateTime start</param>
+        /// <param name="minPerChar">Int32 minPerChar</param>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public string GetFreeBusy(DateTime start, Int32 minPerChar)
+        {
+            return Factory.ExecuteStringMethodGet(this, "GetFreeBusy", start, minPerChar);
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
+        /// <param name="makePermanent">optional object makePermanent</param>
+        /// <param name="refresh">optional object refresh</param>
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void Update(object makePermanent, object refresh)
+        {
+            Factory.ExecuteMethod(this, "Update", makePermanent, refresh);
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void Update()
+        {
+            Factory.ExecuteMethod(this, "Update");
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.Update"/> </remarks>
+        /// <param name="makePermanent">optional object makePermanent</param>
+        [CustomMethod]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void Update(object makePermanent)
+        {
+            Factory.ExecuteMethod(this, "Update", makePermanent);
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        public void UpdateFreeBusy()
+        {
+            Factory.ExecuteMethod(this, "UpdateFreeBusy");
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetContact"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._ContactItem GetContact()
+        {
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._ContactItem>(this, "GetContact");
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetExchangeUser"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.ExchangeUser GetExchangeUser()
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ExchangeUser>(this, "GetExchangeUser", NetOffice.OutlookApi.ExchangeUser.LateBindingApiWrapperType);
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AddressEntry.GetExchangeDistributionList"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.ExchangeDistributionList GetExchangeDistributionList()
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ExchangeDistributionList>(this, "GetExchangeDistributionList", NetOffice.OutlookApi.ExchangeDistributionList.LateBindingApiWrapperType);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

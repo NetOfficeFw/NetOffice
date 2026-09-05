@@ -43,7 +43,7 @@ namespace NetOffice.Tests.ExcelApi.DispatchInterfaces
         }
 
         [Test(Description = "When workbook is not hosted in cloud, the AutoSaveOn property is disabled and setting it will result in an error.")]
-        public void AutoSaveOn_SetValueForLocalWorkbook_Fails([Values]bool autoSaveOnValue)
+        public void AutoSaveOn_SetValueForLocalWorkbook_Fails([Values] bool autoSaveOnValue)
         {
             // Arrange
             using (var workbook = this.ExcelApplication.Workbooks.Add())

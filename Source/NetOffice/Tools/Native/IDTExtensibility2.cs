@@ -19,7 +19,7 @@ namespace NetOffice.Tools.Native
         /// <param name="custom">An empty array that you can use to pass host-specific data for use in the add-in</param>
         [DispId(1)]
         [MethodImpl(4096)]
-        void OnConnection([MarshalAs(26)] [In] object Application, [In] ext_ConnectMode ConnectMode, [MarshalAs(26)] [In] object AddInInst, [MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
+        void OnConnection([MarshalAs(26)][In] object Application, [In] ext_ConnectMode ConnectMode, [MarshalAs(26)][In] object AddInInst, [MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)][In] ref Array custom);
 
         /// <summary>
         /// Occurs whenever an add-in is unloaded from MS Office
@@ -28,7 +28,7 @@ namespace NetOffice.Tools.Native
         /// <param name="custom">An empty array that you can use to pass host-specific data for use after the add-in unloads</param>
         [DispId(2)]
         [MethodImpl(4096)]
-        void OnDisconnection([In] ext_DisconnectMode RemoveMode, [MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
+        void OnDisconnection([In] ext_DisconnectMode RemoveMode, [MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)][In] ref Array custom);
 
         /// <summary>
         /// Occurs whenever an add-in is loaded or unloaded from MS Office
@@ -36,7 +36,7 @@ namespace NetOffice.Tools.Native
         /// <param name="custom">An empty array that you can use to pass host-specific data for use in the add-in</param>
         [DispId(3)]
         [MethodImpl(4096)]
-        void OnAddInsUpdate([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
+        void OnAddInsUpdate([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)][In] ref Array custom);
 
         /// <summary>
         ///  Occurs whenever an add-in, which is set to load when MS Office starts, loads.
@@ -44,7 +44,7 @@ namespace NetOffice.Tools.Native
         /// <param name="custom">An empty array that you can use to pass host-specific data for use when the add-in loads</param>
         [DispId(4)]
         [MethodImpl(4096)]
-        void OnStartupComplete([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
+        void OnStartupComplete([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)][In] ref Array custom);
 
         /// <summary>
         /// Occurs whenever MS Office shuts down while an add-in is running
@@ -52,7 +52,7 @@ namespace NetOffice.Tools.Native
         /// <param name="custom">An empty array that you can use to pass host-specific data for use in the add-in</param>
         [DispId(5)]
         [MethodImpl(4096)]
-        void OnBeginShutdown([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)] [In] ref Array custom);
+        void OnBeginShutdown([MarshalAs(29, SafeArraySubType = VarEnum.VT_VARIANT)][In] ref Array custom);
     }
 }
 

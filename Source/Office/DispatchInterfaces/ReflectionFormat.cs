@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface ReflectionFormat 
-	/// SupportByVersion Office, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat"/> </remarks>
-	[SupportByVersion("Office", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ReflectionFormat : _IMsoDispObj
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface ReflectionFormat 
+    /// SupportByVersion Office, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat"/> </remarks>
+    [SupportByVersion("Office", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class ReflectionFormat : _IMsoDispObj
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,168 +42,168 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ReflectionFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ReflectionFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ReflectionFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ReflectionFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ReflectionFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ReflectionFormat(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public ReflectionFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ReflectionFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ReflectionFormat(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ReflectionFormat() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ReflectionFormat(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public ReflectionFormat(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Type"/> </remarks>
-		[SupportByVersion("Office", 12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoReflectionType Type
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoReflectionType>(this, "Type");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Type", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Transparency"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public Single Transparency
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Transparency");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Transparency", value);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ReflectionFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Size"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public Single Size
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Size");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Size", value);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ReflectionFormat(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Offset"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public Single Offset
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Offset");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Offset", value);
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ReflectionFormat() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Blur"/> </remarks>
-		[SupportByVersion("Office", 14,15,16)]
-		public Single Blur
-		{
-			get
-			{
-				return Factory.ExecuteSinglePropertyGet(this, "Blur");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Blur", value);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ReflectionFormat(string progId) : base(progId)
+        {
+        }
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Properties
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Office 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Type"/> </remarks>
+        [SupportByVersion("Office", 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.Enums.MsoReflectionType Type
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoReflectionType>(this, "Type");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "Type", value);
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Transparency"/> </remarks>
+        [SupportByVersion("Office", 14, 15, 16)]
+        public Single Transparency
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Transparency");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Transparency", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Size"/> </remarks>
+        [SupportByVersion("Office", 14, 15, 16)]
+        public Single Size
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Size");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Size", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Offset"/> </remarks>
+        [SupportByVersion("Office", 14, 15, 16)]
+        public Single Offset
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Offset");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Offset", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.ReflectionFormat.Blur"/> </remarks>
+        [SupportByVersion("Office", 14, 15, 16)]
+        public Single Blur
+        {
+            get
+            {
+                return Factory.ExecuteSinglePropertyGet(this, "Blur");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Blur", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        #endregion
+
+#pragma warning restore
+    }
 }

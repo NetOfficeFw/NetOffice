@@ -48,7 +48,7 @@ namespace NetOffice.Running
         private struct RECT
         {
             public int Left;
-            public int Top; 
+            public int Top;
             public int Right;
             public int Bottom;
         }
@@ -276,41 +276,41 @@ namespace NetOffice.Running
             switch (instance.Mode)
             {
                 case FilterMode.Full:
-                {                       
-                    if(false == String.IsNullOrEmpty(_currentInstance.Filter))
                     {
-                        if (_currentInstance.Filter.Equals(className, StringComparison.InvariantCultureIgnoreCase))
-                            return true;
+                        if (false == String.IsNullOrEmpty(_currentInstance.Filter))
+                        {
+                            if (_currentInstance.Filter.Equals(className, StringComparison.InvariantCultureIgnoreCase))
+                                return true;
+                            else
+                                return false;
+                        }
                         else
-                            return false;
+                            return true;
                     }
-                    else
-                        return true;                    
-                }
                 case FilterMode.Start:
-                {
-                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";                    
-                    string target = className.ToLower();
-                    return target.StartsWith(start);
-                }
+                    {
+                        string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
+                        string target = className.ToLower();
+                        return target.StartsWith(start);
+                    }
                 case FilterMode.End:
-                {
-                    string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
-                    string target = className.ToLower();
-                    return target.EndsWith(end);
-                }
+                    {
+                        string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
+                        string target = className.ToLower();
+                        return target.EndsWith(end);
+                    }
                 case FilterMode.StartEnd:
-                {
-                    string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
-                    string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
-                    string target = className.ToLower();    
-                    return target.StartsWith(start) && target.EndsWith(end);
-                }
+                    {
+                        string start = null != instance.StartsWithFilter ? instance.StartsWithFilter.ToLower() : "";
+                        string end = null != instance.EndsWithFilter ? instance.EndsWithFilter.ToLower() : "";
+                        string target = className.ToLower();
+                        return target.StartsWith(start) && target.EndsWith(end);
+                    }
                 default:
-                {
-                    throw new IndexOutOfRangeException();
-                }
-            }           
+                    {
+                        throw new IndexOutOfRangeException();
+                    }
+            }
         }
 
         #endregion

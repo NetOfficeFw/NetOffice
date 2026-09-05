@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface FileConverter 
-	/// SupportByVersion PowerPoint, 14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter"/> </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class FileConverter : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface FileConverter 
+    /// SupportByVersion PowerPoint, 14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter"/> </remarks>
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class FileConverter : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,246 +42,246 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public FileConverter(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public FileConverter(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public FileConverter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public FileConverter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public FileConverter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public FileConverter(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public FileConverter(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Application"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.CanOpen"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool CanOpen
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CanOpen");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public FileConverter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.CanSave"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public bool CanSave
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "CanSave");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public FileConverter(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.ClassName"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string ClassName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "ClassName");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public FileConverter() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Creator"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.FileConverters Creator
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FileConverters>(this, "Creator", NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public FileConverter(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Extensions"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string Extensions
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Extensions");
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.FormatName"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string FormatName
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FormatName");
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Name"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Application"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Parent"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.FileConverters Parent
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FileConverters>(this, "Parent", NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.CanOpen"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public bool CanOpen
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "CanOpen");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Path"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public string Path
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Path");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.CanSave"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public bool CanSave
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "CanSave");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.OpenFormat"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 OpenFormat
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "OpenFormat");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.ClassName"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public string ClassName
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "ClassName");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.SaveFormat"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 SaveFormat
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "SaveFormat");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Creator"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.FileConverters Creator
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FileConverters>(this, "Creator", NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Extensions"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public string Extensions
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Extensions");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.FormatName"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public string FormatName
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "FormatName");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Name"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Parent"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.FileConverters Parent
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FileConverters>(this, "Parent", NetOffice.PowerPointApi.FileConverters.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.Path"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public string Path
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Path");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.OpenFormat"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public Int32 OpenFormat
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "OpenFormat");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.FileConverter.SaveFormat"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public Int32 SaveFormat
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "SaveFormat");
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        #endregion
+
+#pragma warning restore
+    }
 }
