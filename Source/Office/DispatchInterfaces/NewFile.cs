@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile"/> </remarks>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class NewFile : _IMsoDispObj
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public NewFile(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public NewFile(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public NewFile(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NewFile(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NewFile() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NewFile(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi
         /// <param name="section">optional object section</param>
         /// <param name="displayName">optional object displayName</param>
         /// <param name="action">optional object action</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Add(string fileName, object section, object displayName, object action)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName, action);
@@ -132,7 +132,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Add"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Add(string fileName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName);
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
         /// <param name="fileName">string fileName</param>
         /// <param name="section">optional object section</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Add(string fileName, object section)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section);
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
         /// <param name="section">optional object section</param>
         /// <param name="displayName">optional object displayName</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Add(string fileName, object section, object displayName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Add", fileName, section, displayName);
@@ -173,7 +173,7 @@ namespace NetOffice.OfficeApi
         /// <param name="section">optional object section</param>
         /// <param name="displayName">optional object displayName</param>
         /// <param name="action">optional object action</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Remove(string fileName, object section, object displayName, object action)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName, action);
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.NewFile.Remove"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Remove(string fileName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName);
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi
         /// <param name="fileName">string fileName</param>
         /// <param name="section">optional object section</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Remove(string fileName, object section)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section);
@@ -212,7 +212,7 @@ namespace NetOffice.OfficeApi
         /// <param name="section">optional object section</param>
         /// <param name="displayName">optional object displayName</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool Remove(string fileName, object section, object displayName)
         {
             return Factory.ExecuteBoolMethodGet(this, "Remove", fileName, section, displayName);
@@ -220,6 +220,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -6,23 +6,23 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000CDB07-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _CustomXMLPartEvents
     {
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("newNode", typeof(OfficeApi.CustomXMLNode))]
-        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]       
+        [SinkArgument("inUndoRedo", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
         void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo);
 
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         [SinkArgument("oldNode", typeof(OfficeApi.CustomXMLNode))]
         [SinkArgument("oldParentNode", typeof(OfficeApi.CustomXMLNode))]
         [SinkArgument("oldNextSibling", typeof(OfficeApi.CustomXMLNode))]
@@ -30,7 +30,7 @@ namespace NetOffice.OfficeApi.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2)]
         void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo);
 
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
 
         [SinkArgument("oldNode", typeof(OfficeApi.CustomXMLNode))]
         [SinkArgument("newNode", typeof(OfficeApi.CustomXMLNode))]
@@ -48,22 +48,22 @@ namespace NetOffice.OfficeApi.Events
     public class _CustomXMLPartEvents_SinkHelper : SinkHelper, _CustomXMLPartEvents
     {
         #region Static
-        
+
         public static readonly string Id = "000CDB07-0000-0000-C000-000000000046";
-        
+
         #endregion
-    
+
         #region Construction
 
-        public _CustomXMLPartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _CustomXMLPartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-    
+
         #region _CustomXMLPartEvents
- 
+
         public void NodeAfterInsert([In, MarshalAs(UnmanagedType.IDispatch)] object newNode, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterInsert"))
@@ -79,7 +79,7 @@ namespace NetOffice.OfficeApi.Events
             paramsArray[1] = newInUndoRedo;
             EventBinding.RaiseCustomEvent("NodeAfterInsert", ref paramsArray);
         }
-        
+
         public void NodeAfterDelete([In, MarshalAs(UnmanagedType.IDispatch)] object oldNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldParentNode, [In, MarshalAs(UnmanagedType.IDispatch)] object oldNextSibling, [In] object inUndoRedo)
         {
             if (!Validate("NodeAfterDelete"))
@@ -119,8 +119,8 @@ namespace NetOffice.OfficeApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

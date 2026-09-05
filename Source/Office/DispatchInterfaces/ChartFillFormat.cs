@@ -9,11 +9,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface ChartFillFormat 
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ChartFillFormat : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChartFillFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OfficeApi
         public ChartFillFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.OfficeApi
         public ChartFillFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartFillFormat(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartFillFormat() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChartFillFormat(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ChartColorFormat BackColor
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public NetOffice.OfficeApi.ChartColorFormat ForeColor
         {
             get
@@ -137,7 +137,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 GradientColorType
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Single GradientDegree
         {
             get
@@ -163,7 +163,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 GradientStyle
         {
             get
@@ -176,7 +176,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 GradientVariant
         {
             get
@@ -189,7 +189,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Pattern
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 PresetGradientType
         {
             get
@@ -215,7 +215,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 PresetTexture
         {
             get
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string TextureName
         {
             get
@@ -241,7 +241,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 TextureType
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Type
         {
             get
@@ -267,7 +267,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Visible
         {
             get
@@ -285,7 +285,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 14,15,16), ProxyResult]
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         public object Application
         {
             get
@@ -298,7 +298,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public Int32 Creator
         {
             get
@@ -312,7 +312,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 14,15,16), ProxyResult]
+        [SupportByVersion("Office", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -331,10 +331,10 @@ namespace NetOffice.OfficeApi
         /// <param name="style">Int32 style</param>
         /// <param name="variant">Int32 variant</param>
         /// <param name="degree">Single degree</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void OneColorGradient(Int32 style, Int32 variant, Single degree)
         {
-             Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
+            Factory.ExecuteMethod(this, "OneColorGradient", style, variant, degree);
         }
 
         /// <summary>
@@ -342,39 +342,39 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="style">Int32 style</param>
         /// <param name="variant">Int32 variant</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void TwoColorGradient(Int32 style, Int32 variant)
         {
-             Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
+            Factory.ExecuteMethod(this, "TwoColorGradient", style, variant);
         }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         /// <param name="presetTexture">Int32 presetTexture</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void PresetTextured(Int32 presetTexture)
         {
-             Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
+            Factory.ExecuteMethod(this, "PresetTextured", presetTexture);
         }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Solid()
         {
-             Factory.ExecuteMethod(this, "Solid");
+            Factory.ExecuteMethod(this, "Solid");
         }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         /// <param name="pattern">Int32 pattern</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Patterned(Int32 pattern)
         {
-             Factory.ExecuteMethod(this, "Patterned", pattern);
+            Factory.ExecuteMethod(this, "Patterned", pattern);
         }
 
         /// <summary>
@@ -384,20 +384,20 @@ namespace NetOffice.OfficeApi
         /// <param name="pictureFormat">object pictureFormat</param>
         /// <param name="pictureStackUnit">object pictureStackUnit</param>
         /// <param name="picturePlacement">object picturePlacement</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void UserPicture(object pictureFile, object pictureFormat, object pictureStackUnit, object picturePlacement)
         {
-             Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
+            Factory.ExecuteMethod(this, "UserPicture", pictureFile, pictureFormat, pictureStackUnit, picturePlacement);
         }
 
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         /// <param name="textureFile">string textureFile</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void UserTextured(string textureFile)
         {
-             Factory.ExecuteMethod(this, "UserTextured", textureFile);
+            Factory.ExecuteMethod(this, "UserTextured", textureFile);
         }
 
         /// <summary>
@@ -406,14 +406,14 @@ namespace NetOffice.OfficeApi
         /// <param name="style">Int32 style</param>
         /// <param name="variant">Int32 variant</param>
         /// <param name="presetGradientType">Int32 presetGradientType</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void PresetGradient(Int32 style, Int32 variant, Int32 presetGradientType)
         {
-             Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
+            Factory.ExecuteMethod(this, "PresetGradient", style, variant, presetGradientType);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -153,7 +153,7 @@ namespace NetOffice.OfficeApi
         [SupportByVersion("Office", 12, 14, 15, 16)]
         public void Invalidate()
         {
-            if(HasUnderlyingObject)
+            if (HasUnderlyingObject)
                 NativeRibbon.Invalidate();
         }
 
@@ -218,7 +218,7 @@ namespace NetOffice.OfficeApi
             if (HasUnderlyingObject)
                 NativeRibbon.ActivateTabQ(controlID, _namespace);
         }
-    
+
         #endregion
     }
 }

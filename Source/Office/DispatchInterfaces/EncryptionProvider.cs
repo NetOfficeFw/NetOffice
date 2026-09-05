@@ -11,11 +11,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider"/> </remarks>
-    [SupportByVersion("Office", 12,14,15,16)]
+    [SupportByVersion("Office", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class EncryptionProvider : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public EncryptionProvider(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi
         public EncryptionProvider(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.OfficeApi
         public EncryptionProvider(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public EncryptionProvider(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public EncryptionProvider() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public EncryptionProvider(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.GetProviderDetail"/> </remarks>
         /// <param name="encprovdet">NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public object GetProviderDetail(NetOffice.OfficeApi.Enums.EncryptionProviderDetail encprovdet)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetProviderDetail", encprovdet);
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.NewSession"/> </remarks>
         /// <param name="parentWindow">object parentWindow</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 NewSession(object parentWindow)
         {
             return Factory.ExecuteInt32MethodGet(this, "NewSession", parentWindow);
@@ -142,10 +142,10 @@ namespace NetOffice.OfficeApi
         /// <param name="parentWindow">object parentWindow</param>
         /// <param name="encryptionData">object encryptionData</param>
         /// <param name="permissionsMask">UIntPtr permissionsMask</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Authenticate(object parentWindow, object encryptionData, out UIntPtr permissionsMask)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true);
             permissionsMask = UIntPtr.Zero;
             object[] paramsArray = Invoker.ValidateParamsArray(parentWindow, encryptionData, permissionsMask);
             object returnItem = Invoker.MethodReturn(this, "Authenticate", paramsArray, modifiers);
@@ -158,7 +158,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.CloneSession"/> </remarks>
         /// <param name="sessionHandle">Int32 sessionHandle</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 CloneSession(Int32 sessionHandle)
         {
             return Factory.ExecuteInt32MethodGet(this, "CloneSession", sessionHandle);
@@ -169,10 +169,10 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.EndSession"/> </remarks>
         /// <param name="sessionHandle">Int32 sessionHandle</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void EndSession(Int32 sessionHandle)
         {
-             Factory.ExecuteMethod(this, "EndSession", sessionHandle);
+            Factory.ExecuteMethod(this, "EndSession", sessionHandle);
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.EncryptionProvider.Save"/> </remarks>
         /// <param name="sessionHandle">Int32 sessionHandle</param>
         /// <param name="encryptionData">object encryptionData</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public Int32 Save(Int32 sessionHandle, object encryptionData)
         {
             return Factory.ExecuteInt32MethodGet(this, "Save", sessionHandle, encryptionData);
@@ -195,10 +195,10 @@ namespace NetOffice.OfficeApi
         /// <param name="streamName">string streamName</param>
         /// <param name="unencryptedStream">object unencryptedStream</param>
         /// <param name="encryptedStream">object encryptedStream</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void EncryptStream(Int32 sessionHandle, string streamName, object unencryptedStream, object encryptedStream)
         {
-             Factory.ExecuteMethod(this, "EncryptStream", sessionHandle, streamName, unencryptedStream, encryptedStream);
+            Factory.ExecuteMethod(this, "EncryptStream", sessionHandle, streamName, unencryptedStream, encryptedStream);
         }
 
         /// <summary>
@@ -209,10 +209,10 @@ namespace NetOffice.OfficeApi
         /// <param name="streamName">string streamName</param>
         /// <param name="encryptedStream">object encryptedStream</param>
         /// <param name="unencryptedStream">object unencryptedStream</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void DecryptStream(Int32 sessionHandle, string streamName, object encryptedStream, object unencryptedStream)
         {
-             Factory.ExecuteMethod(this, "DecryptStream", sessionHandle, streamName, encryptedStream, unencryptedStream);
+            Factory.ExecuteMethod(this, "DecryptStream", sessionHandle, streamName, encryptedStream, unencryptedStream);
         }
 
         /// <summary>
@@ -223,10 +223,10 @@ namespace NetOffice.OfficeApi
         /// <param name="parentWindow">object parentWindow</param>
         /// <param name="readOnly">bool readOnly</param>
         /// <param name="remove">bool remove</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void ShowSettings(Int32 sessionHandle, object parentWindow, bool readOnly, out bool remove)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true);
             remove = false;
             object[] paramsArray = Invoker.ValidateParamsArray(sessionHandle, parentWindow, readOnly, remove);
             Invoker.Method(this, "ShowSettings", paramsArray, modifiers);
@@ -235,6 +235,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

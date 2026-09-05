@@ -6,17 +6,17 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000C0354-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _CommandBarComboBoxEvents
     {
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("ctrl", typeof(OfficeApi.CommandBarComboBox))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
         void Change([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl);
@@ -31,22 +31,22 @@ namespace NetOffice.OfficeApi.Events
     public class _CommandBarComboBoxEvents_SinkHelper : SinkHelper, _CommandBarComboBoxEvents
     {
         #region Static
-        
+
         public static readonly string Id = "000C0354-0000-0000-C000-000000000046";
-        
+
         #endregion
-            
+
         #region Ctor
 
-        public _CommandBarComboBoxEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _CommandBarComboBoxEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-        
+
         #region _CommandBarComboBoxEvents
-        
+
         public void Change([In, MarshalAs(UnmanagedType.IDispatch)] object ctrl)
         {
             if (!Validate("Change"))
@@ -63,8 +63,8 @@ namespace NetOffice.OfficeApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

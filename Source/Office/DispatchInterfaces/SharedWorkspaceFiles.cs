@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceFiles"/> </remarks>
-    [SupportByVersion("Office", 11,12,14,15,16)]
+    [SupportByVersion("Office", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class SharedWorkspaceFiles : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.SharedWorkspaceFile>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SharedWorkspaceFiles(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public SharedWorkspaceFiles(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public SharedWorkspaceFiles(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceFiles(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceFiles() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SharedWorkspaceFiles(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.SharedWorkspaceFile this[Int32 index]
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceFiles.Count"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceFiles.Parent"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -160,7 +160,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceFiles.ItemCountExceeded"/> </remarks>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public bool ItemCountExceeded
         {
             get
@@ -181,7 +181,7 @@ namespace NetOffice.OfficeApi
         /// <param name="parentFolder">optional object parentFolder</param>
         /// <param name="overwriteIfFileAlreadyExists">optional object overwriteIfFileAlreadyExists</param>
         /// <param name="keepInSync">optional object keepInSync</param>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists, object keepInSync)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType, fileName, parentFolder, overwriteIfFileAlreadyExists, keepInSync);
@@ -193,7 +193,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.SharedWorkspaceFiles.Add"/> </remarks>
         /// <param name="fileName">string fileName</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType, fileName);
@@ -206,7 +206,7 @@ namespace NetOffice.OfficeApi
         /// <param name="fileName">string fileName</param>
         /// <param name="parentFolder">optional object parentFolder</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType, fileName, parentFolder);
@@ -220,7 +220,7 @@ namespace NetOffice.OfficeApi
         /// <param name="parentFolder">optional object parentFolder</param>
         /// <param name="overwriteIfFileAlreadyExists">optional object overwriteIfFileAlreadyExists</param>
         [CustomMethod]
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.SharedWorkspaceFile Add(string fileName, object parentFolder, object overwriteIfFileAlreadyExists)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.SharedWorkspaceFile>(this, "Add", NetOffice.OfficeApi.SharedWorkspaceFile.LateBindingApiWrapperType, fileName, parentFolder, overwriteIfFileAlreadyExists);
@@ -262,7 +262,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 11,12,14,15,16)]
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -270,6 +270,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -12,12 +12,12 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface ShapeNodes 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
     [Duplicate("NetOffice.ExcelApi.ShapeNodes")]
     public class ShapeNodes : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.ShapeNode>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ShapeNodes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public ShapeNodes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public ShapeNodes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ShapeNodes(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ShapeNodes() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ShapeNodes(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -129,7 +129,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -146,7 +146,7 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.ShapeNode this[object index]
         {
@@ -160,10 +160,10 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Delete(Int32 index)
         {
-             Factory.ExecuteMethod(this, "Delete", index);
+            Factory.ExecuteMethod(this, "Delete", index);
         }
 
         /// <summary>
@@ -178,10 +178,10 @@ namespace NetOffice.OfficeApi
         /// <param name="y2">optional Single Y2 = 0</param>
         /// <param name="x3">optional Single X3 = 0</param>
         /// <param name="y3">optional Single Y3 = 0</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3, object y3)
         {
-             Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2, y2, x3, y3 });
+            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2, x3, y3 });
         }
 
         /// <summary>
@@ -193,10 +193,10 @@ namespace NetOffice.OfficeApi
         /// <param name="x1">Single x1</param>
         /// <param name="y1">Single y1</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1)
         {
-             Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1 });
+            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1 });
         }
 
         /// <summary>
@@ -209,10 +209,10 @@ namespace NetOffice.OfficeApi
         /// <param name="y1">Single y1</param>
         /// <param name="x2">optional Single X2 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2)
         {
-             Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2 });
+            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2 });
         }
 
         /// <summary>
@@ -226,10 +226,10 @@ namespace NetOffice.OfficeApi
         /// <param name="x2">optional Single X2 = 0</param>
         /// <param name="y2">optional Single Y2 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2)
         {
-             Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2, y2 });
+            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2 });
         }
 
         /// <summary>
@@ -244,10 +244,10 @@ namespace NetOffice.OfficeApi
         /// <param name="y2">optional Single Y2 = 0</param>
         /// <param name="x3">optional Single X3 = 0</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void Insert(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType, NetOffice.OfficeApi.Enums.MsoEditingType editingType, Single x1, Single y1, object x2, object y2, object x3)
         {
-             Factory.ExecuteMethod(this, "Insert", new object[]{ index, segmentType, editingType, x1, y1, x2, y2, x3 });
+            Factory.ExecuteMethod(this, "Insert", new object[] { index, segmentType, editingType, x1, y1, x2, y2, x3 });
         }
 
         /// <summary>
@@ -255,10 +255,10 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="index">Int32 index</param>
         /// <param name="editingType">NetOffice.OfficeApi.Enums.MsoEditingType editingType</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void SetEditingType(Int32 index, NetOffice.OfficeApi.Enums.MsoEditingType editingType)
         {
-             Factory.ExecuteMethod(this, "SetEditingType", index, editingType);
+            Factory.ExecuteMethod(this, "SetEditingType", index, editingType);
         }
 
         /// <summary>
@@ -267,10 +267,10 @@ namespace NetOffice.OfficeApi
         /// <param name="index">Int32 index</param>
         /// <param name="x1">Single x1</param>
         /// <param name="y1">Single y1</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void SetPosition(Int32 index, Single x1, Single y1)
         {
-             Factory.ExecuteMethod(this, "SetPosition", index, x1, y1);
+            Factory.ExecuteMethod(this, "SetPosition", index, x1, y1);
         }
 
         /// <summary>
@@ -278,10 +278,10 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="index">Int32 index</param>
         /// <param name="segmentType">NetOffice.OfficeApi.Enums.MsoSegmentType segmentType</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void SetSegmentType(Int32 index, NetOffice.OfficeApi.Enums.MsoSegmentType segmentType)
         {
-             Factory.ExecuteMethod(this, "SetSegmentType", index, segmentType);
+            Factory.ExecuteMethod(this, "SetSegmentType", index, segmentType);
         }
 
         #endregion
@@ -320,7 +320,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -328,6 +328,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

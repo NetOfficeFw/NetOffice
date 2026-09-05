@@ -10,11 +10,11 @@ namespace NetOffice.OfficeApi
     /// SupportByVersion Office, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject"/> </remarks>
-    [SupportByVersion("Office", 10,11,12,14,15,16)]
+    [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class OfficeDataSourceObject : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OfficeDataSourceObject(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi
         public OfficeDataSourceObject(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OfficeApi
         public OfficeDataSourceObject(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OfficeDataSourceObject(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OfficeDataSourceObject() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OfficeDataSourceObject(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.ConnectString"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string ConnectString
         {
             get
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Table"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string Table
         {
             get
@@ -149,7 +149,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.DataSource"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public string DataSource
         {
             get
@@ -168,7 +168,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Columns"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Columns
         {
             get
@@ -182,7 +182,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.RowCount"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 RowCount
         {
             get
@@ -197,7 +197,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Filters"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Filters
         {
             get
@@ -216,7 +216,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Move"/> </remarks>
         /// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow</param>
         /// <param name="rowNbr">optional Int32 RowNbr = 1</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow, object rowNbr)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", msoMoveRow, rowNbr);
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Move"/> </remarks>
         /// <param name="msoMoveRow">NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public Int32 Move(NetOffice.OfficeApi.Enums.MsoMoveRow msoMoveRow)
         {
             return Factory.ExecuteInt32MethodGet(this, "Move", msoMoveRow);
@@ -243,10 +243,10 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrTable">optional string bstrTable = </param>
         /// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
         /// <param name="fNeverPrompt">optional Int32 fNeverPrompt = 1</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive, object fNeverPrompt)
         {
-             Factory.ExecuteMethod(this, "Open", new object[]{ bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt });
+            Factory.ExecuteMethod(this, "Open", new object[] { bstrSrc, bstrConnect, bstrTable, fOpenExclusive, fNeverPrompt });
         }
 
         /// <summary>
@@ -254,10 +254,10 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Open()
         {
-             Factory.ExecuteMethod(this, "Open");
+            Factory.ExecuteMethod(this, "Open");
         }
 
         /// <summary>
@@ -266,10 +266,10 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.Open"/> </remarks>
         /// <param name="bstrSrc">optional string bstrSrc = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Open(object bstrSrc)
         {
-             Factory.ExecuteMethod(this, "Open", bstrSrc);
+            Factory.ExecuteMethod(this, "Open", bstrSrc);
         }
 
         /// <summary>
@@ -279,10 +279,10 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrSrc">optional string bstrSrc = </param>
         /// <param name="bstrConnect">optional string bstrConnect = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Open(object bstrSrc, object bstrConnect)
         {
-             Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect);
+            Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect);
         }
 
         /// <summary>
@@ -293,10 +293,10 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrConnect">optional string bstrConnect = </param>
         /// <param name="bstrTable">optional string bstrTable = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Open(object bstrSrc, object bstrConnect, object bstrTable)
         {
-             Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable);
+            Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable);
         }
 
         /// <summary>
@@ -308,10 +308,10 @@ namespace NetOffice.OfficeApi
         /// <param name="bstrTable">optional string bstrTable = </param>
         /// <param name="fOpenExclusive">optional Int32 fOpenExclusive = 0</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void Open(object bstrSrc, object bstrConnect, object bstrTable, object fOpenExclusive)
         {
-             Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
+            Factory.ExecuteMethod(this, "Open", bstrSrc, bstrConnect, bstrTable, fOpenExclusive);
         }
 
         /// <summary>
@@ -324,10 +324,10 @@ namespace NetOffice.OfficeApi
         /// <param name="sortAscending2">optional bool SortAscending2 = true</param>
         /// <param name="sortField3">optional string SortField3 = </param>
         /// <param name="sortAscending3">optional bool SortAscending3 = true</param>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3, object sortAscending3)
         {
-             Factory.ExecuteMethod(this, "SetSortOrder", new object[]{ sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3 });
+            Factory.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3, sortAscending3 });
         }
 
         /// <summary>
@@ -336,10 +336,10 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.SetSortOrder"/> </remarks>
         /// <param name="sortField1">string sortField1</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetSortOrder(string sortField1)
         {
-             Factory.ExecuteMethod(this, "SetSortOrder", sortField1);
+            Factory.ExecuteMethod(this, "SetSortOrder", sortField1);
         }
 
         /// <summary>
@@ -349,10 +349,10 @@ namespace NetOffice.OfficeApi
         /// <param name="sortField1">string sortField1</param>
         /// <param name="sortAscending1">optional bool SortAscending1 = true</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetSortOrder(string sortField1, object sortAscending1)
         {
-             Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1);
+            Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1);
         }
 
         /// <summary>
@@ -363,10 +363,10 @@ namespace NetOffice.OfficeApi
         /// <param name="sortAscending1">optional bool SortAscending1 = true</param>
         /// <param name="sortField2">optional string SortField2 = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetSortOrder(string sortField1, object sortAscending1, object sortField2)
         {
-             Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2);
+            Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2);
         }
 
         /// <summary>
@@ -378,10 +378,10 @@ namespace NetOffice.OfficeApi
         /// <param name="sortField2">optional string SortField2 = </param>
         /// <param name="sortAscending2">optional bool SortAscending2 = true</param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2)
         {
-             Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2, sortAscending2);
+            Factory.ExecuteMethod(this, "SetSortOrder", sortField1, sortAscending1, sortField2, sortAscending2);
         }
 
         /// <summary>
@@ -394,24 +394,24 @@ namespace NetOffice.OfficeApi
         /// <param name="sortAscending2">optional bool SortAscending2 = true</param>
         /// <param name="sortField3">optional string SortField3 = </param>
         [CustomMethod]
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void SetSortOrder(string sortField1, object sortAscending1, object sortField2, object sortAscending2, object sortField3)
         {
-             Factory.ExecuteMethod(this, "SetSortOrder", new object[]{ sortField1, sortAscending1, sortField2, sortAscending2, sortField3 });
+            Factory.ExecuteMethod(this, "SetSortOrder", new object[] { sortField1, sortAscending1, sortField2, sortAscending2, sortField3 });
         }
 
         /// <summary>
         /// SupportByVersion Office 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.OfficeDataSourceObject.ApplyFilter"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public void ApplyFilter()
         {
-             Factory.ExecuteMethod(this, "ApplyFilter");
+            Factory.ExecuteMethod(this, "ApplyFilter");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

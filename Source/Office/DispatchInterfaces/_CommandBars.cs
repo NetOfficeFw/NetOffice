@@ -13,11 +13,11 @@ namespace NetOffice.OfficeApi
     /// DispatchInterface _CommandBars 
     /// SupportByVersion Office, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class _CommandBars : _IMsoDispObj, IEnumerableProvider<NetOffice.OfficeApi.CommandBar>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OfficeApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _CommandBars(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OfficeApi
         public _CommandBars(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OfficeApi
         public _CommandBars(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CommandBars(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CommandBars() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _CommandBars(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.ActionControl"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OfficeApi.CommandBarControl ActionControl
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.ActiveMenuBar"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar ActiveMenuBar
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.Count"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.DisplayTooltips"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayTooltips
         {
             get
@@ -177,7 +177,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.DisplayKeysInTooltips"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayKeysInTooltips
         {
             get
@@ -195,7 +195,7 @@ namespace NetOffice.OfficeApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OfficeApi.CommandBar this[object index]
         {
@@ -210,7 +210,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.LargeButtons"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool LargeButtons
         {
             get
@@ -228,7 +228,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.MenuAnimationStyle"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoMenuAnimation MenuAnimationStyle
         {
             get
@@ -247,7 +247,7 @@ namespace NetOffice.OfficeApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.Parent"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -262,11 +262,11 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="ids">Int32 ids</param>
         /// <param name="pbstrName">string pbstrName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 get_IdsString(Int32 ids, out string pbstrName)
-        {		
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
+        {
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             pbstrName = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(ids, pbstrName);
             object returnItem = Invoker.PropertyGet(this, "IdsString", paramsArray, modifiers);
@@ -280,7 +280,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="ids">Int32 ids</param>
         /// <param name="pbstrName">string pbstrName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), Redirect("get_IdsString")]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_IdsString")]
         public Int32 IdsString(Int32 ids, out string pbstrName)
         {
             return get_IdsString(ids, out pbstrName);
@@ -292,11 +292,11 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="tmc">Int32 tmc</param>
         /// <param name="pbstrName">string pbstrName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 get_TmcGetName(Int32 tmc, out string pbstrName)
-        {		
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
+        {
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             pbstrName = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(tmc, pbstrName);
             object returnItem = Invoker.PropertyGet(this, "TmcGetName", paramsArray, modifiers);
@@ -310,7 +310,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <param name="tmc">Int32 tmc</param>
         /// <param name="pbstrName">string pbstrName</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16), Redirect("get_TmcGetName")]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16), Redirect("get_TmcGetName")]
         public Int32 TmcGetName(Int32 tmc, out string pbstrName)
         {
             return get_TmcGetName(tmc, out pbstrName);
@@ -321,7 +321,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.AdaptiveMenus"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool AdaptiveMenus
         {
             get
@@ -339,7 +339,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.DisplayFonts"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public bool DisplayFonts
         {
             get
@@ -357,7 +357,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.DisableCustomize"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool DisableCustomize
         {
             get
@@ -375,7 +375,7 @@ namespace NetOffice.OfficeApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.DisableAskAQuestionDropdown"/> </remarks>
-        [SupportByVersion("Office", 10,11,12,14,15,16)]
+        [SupportByVersion("Office", 10, 11, 12, 14, 15, 16)]
         public bool DisableAskAQuestionDropdown
         {
             get
@@ -400,7 +400,7 @@ namespace NetOffice.OfficeApi
         /// <param name="position">optional object position</param>
         /// <param name="menuBar">optional object menuBar</param>
         /// <param name="temporary">optional object temporary</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar Add(object name, object position, object menuBar, object temporary)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name, position, menuBar, temporary);
@@ -411,7 +411,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.Add"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType);
@@ -423,7 +423,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.Add"/> </remarks>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar Add(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name);
@@ -436,7 +436,7 @@ namespace NetOffice.OfficeApi
         /// <param name="name">optional object name</param>
         /// <param name="position">optional object position</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar Add(object name, object position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name, position);
@@ -450,7 +450,7 @@ namespace NetOffice.OfficeApi
         /// <param name="position">optional object position</param>
         /// <param name="menuBar">optional object menuBar</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar Add(object name, object position, object menuBar)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "Add", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, name, position, menuBar);
@@ -464,7 +464,7 @@ namespace NetOffice.OfficeApi
         /// <param name="id">optional object id</param>
         /// <param name="tag">optional object tag</param>
         /// <param name="visible">optional object visible</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag, object visible)
         {
@@ -477,7 +477,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.FindControl"/> </remarks>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControl FindControl()
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl");
@@ -490,7 +490,7 @@ namespace NetOffice.OfficeApi
         /// <param name="type">optional object type</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControl FindControl(object type)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type);
@@ -504,7 +504,7 @@ namespace NetOffice.OfficeApi
         /// <param name="id">optional object id</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id);
@@ -519,7 +519,7 @@ namespace NetOffice.OfficeApi
         /// <param name="tag">optional object tag</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControl FindControl(object type, object id, object tag)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OfficeApi.CommandBarControl>(this, "FindControl", type, id, tag);
@@ -529,10 +529,10 @@ namespace NetOffice.OfficeApi
         /// SupportByVersion Office 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.ReleaseFocus"/> </remarks>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public void ReleaseFocus()
         {
-             Factory.ExecuteMethod(this, "ReleaseFocus");
+            Factory.ExecuteMethod(this, "ReleaseFocus");
         }
 
         /// <summary>
@@ -543,7 +543,7 @@ namespace NetOffice.OfficeApi
         /// <param name="id">optional object id</param>
         /// <param name="tag">optional object tag</param>
         /// <param name="visible">optional object visible</param>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id, object tag, object visible)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type, id, tag, visible);
@@ -554,7 +554,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.FindControls"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControls FindControls()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType);
@@ -566,7 +566,7 @@ namespace NetOffice.OfficeApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.FindControls"/> </remarks>
         /// <param name="type">optional object type</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControls FindControls(object type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type);
@@ -579,7 +579,7 @@ namespace NetOffice.OfficeApi
         /// <param name="type">optional object type</param>
         /// <param name="id">optional object id</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type, id);
@@ -593,7 +593,7 @@ namespace NetOffice.OfficeApi
         /// <param name="id">optional object id</param>
         /// <param name="tag">optional object tag</param>
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBarControls FindControls(object type, object id, object tag)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBarControls>(this, "FindControls", NetOffice.OfficeApi.CommandBarControls.LateBindingApiWrapperType, type, id, tag);
@@ -608,10 +608,10 @@ namespace NetOffice.OfficeApi
         /// <param name="temporary">optional object temporary</param>
         /// <param name="tbtrProtection">optional object tbtrProtection</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar, object temporary, object tbtrProtection)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, new object[]{ tbidOrName, position, menuBar, temporary, tbtrProtection });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, new object[] { tbidOrName, position, menuBar, temporary, tbtrProtection });
         }
 
         /// <summary>
@@ -619,7 +619,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar AddEx()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType);
@@ -631,7 +631,7 @@ namespace NetOffice.OfficeApi
         /// <param name="tbidOrName">optional object tbidOrName</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName);
@@ -644,7 +644,7 @@ namespace NetOffice.OfficeApi
         /// <param name="position">optional object position</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName, position);
@@ -658,7 +658,7 @@ namespace NetOffice.OfficeApi
         /// <param name="menuBar">optional object menuBar</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName, position, menuBar);
@@ -673,7 +673,7 @@ namespace NetOffice.OfficeApi
         /// <param name="temporary">optional object temporary</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBar AddEx(object tbidOrName, object position, object menuBar, object temporary)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OfficeApi.CommandBar>(this, "AddEx", NetOffice.OfficeApi.CommandBar.LateBindingApiWrapperType, tbidOrName, position, menuBar, temporary);
@@ -684,10 +684,10 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.ExecuteMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public void ExecuteMso(string idMso)
         {
-             Factory.ExecuteMethod(this, "ExecuteMso", idMso);
+            Factory.ExecuteMethod(this, "ExecuteMso", idMso);
         }
 
         /// <summary>
@@ -695,7 +695,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.GetEnabledMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool GetEnabledMso(string idMso)
         {
             return Factory.ExecuteBoolMethodGet(this, "GetEnabledMso", idMso);
@@ -706,7 +706,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.GetVisibleMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool GetVisibleMso(string idMso)
         {
             return Factory.ExecuteBoolMethodGet(this, "GetVisibleMso", idMso);
@@ -717,7 +717,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.GetPressedMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public bool GetPressedMso(string idMso)
         {
             return Factory.ExecuteBoolMethodGet(this, "GetPressedMso", idMso);
@@ -728,7 +728,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.GetLabelMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string GetLabelMso(string idMso)
         {
             return Factory.ExecuteStringMethodGet(this, "GetLabelMso", idMso);
@@ -739,7 +739,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.GetScreentipMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string GetScreentipMso(string idMso)
         {
             return Factory.ExecuteStringMethodGet(this, "GetScreentipMso", idMso);
@@ -750,7 +750,7 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.GetSupertipMso"/> </remarks>
         /// <param name="idMso">string idMso</param>
-        [SupportByVersion("Office", 12,14,15,16)]
+        [SupportByVersion("Office", 12, 14, 15, 16)]
         public string GetSupertipMso(string idMso)
         {
             return Factory.ExecuteStringMethodGet(this, "GetSupertipMso", idMso);
@@ -763,7 +763,7 @@ namespace NetOffice.OfficeApi
         /// <param name="idMso">string idMso</param>
         /// <param name="width">Int32 width</param>
         /// <param name="height">Int32 height</param>
-        [SupportByVersion("Office", 12,14,15,16), NativeResult]
+        [SupportByVersion("Office", 12, 14, 15, 16), NativeResult]
         public stdole.Picture GetImageMso(string idMso, Int32 width, Int32 height)
         {
             object[] paramsArray = Invoker.ValidateParamsArray(idMso, width, height);
@@ -776,10 +776,10 @@ namespace NetOffice.OfficeApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.CommandBars.CommitRenderingTransaction"/> </remarks>
         /// <param name="hwnd">Int32 hwnd</param>
-        [SupportByVersion("Office", 14,15,16)]
+        [SupportByVersion("Office", 14, 15, 16)]
         public void CommitRenderingTransaction(Int32 hwnd)
         {
-             Factory.ExecuteMethod(this, "CommitRenderingTransaction", hwnd);
+            Factory.ExecuteMethod(this, "CommitRenderingTransaction", hwnd);
         }
 
         #endregion
@@ -818,7 +818,7 @@ namespace NetOffice.OfficeApi
         /// <summary>
         /// SupportByVersion Office, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Office", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Office", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -826,6 +826,6 @@ namespace NetOffice.OfficeApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
