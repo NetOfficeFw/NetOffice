@@ -12,11 +12,11 @@ namespace NetOffice.ExcelApi
     /// DispatchInterface MenuItems 
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class MenuItems : COMObject, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public MenuItems(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.ExcelApi
         public MenuItems(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,33 +88,33 @@ namespace NetOffice.ExcelApi
         public MenuItems(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MenuItems(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MenuItems() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public MenuItems(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -127,7 +127,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -169,7 +169,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public object this[object index]
         {
@@ -194,10 +194,10 @@ namespace NetOffice.ExcelApi
         /// <param name="statusBar">optional object statusBar</param>
         /// <param name="helpFile">optional object helpFile</param>
         /// <param name="helpContextID">optional object helpContextID</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar, object helpFile, object helpContextID)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[]{ caption, onAction, shortcutKey, before, restore, statusBar, helpFile, helpContextID });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[] { caption, onAction, shortcutKey, before, restore, statusBar, helpFile, helpContextID });
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="caption">string caption</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, caption);
@@ -217,7 +217,7 @@ namespace NetOffice.ExcelApi
         /// <param name="caption">string caption</param>
         /// <param name="onAction">optional object onAction</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, caption, onAction);
@@ -230,7 +230,7 @@ namespace NetOffice.ExcelApi
         /// <param name="onAction">optional object onAction</param>
         /// <param name="shortcutKey">optional object shortcutKey</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, caption, onAction, shortcutKey);
@@ -244,7 +244,7 @@ namespace NetOffice.ExcelApi
         /// <param name="shortcutKey">optional object shortcutKey</param>
         /// <param name="before">optional object before</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, caption, onAction, shortcutKey, before);
@@ -259,10 +259,10 @@ namespace NetOffice.ExcelApi
         /// <param name="before">optional object before</param>
         /// <param name="restore">optional object restore</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[]{ caption, onAction, shortcutKey, before, restore });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[] { caption, onAction, shortcutKey, before, restore });
         }
 
         /// <summary>
@@ -275,10 +275,10 @@ namespace NetOffice.ExcelApi
         /// <param name="restore">optional object restore</param>
         /// <param name="statusBar">optional object statusBar</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[]{ caption, onAction, shortcutKey, before, restore, statusBar });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[] { caption, onAction, shortcutKey, before, restore, statusBar });
         }
 
         /// <summary>
@@ -292,10 +292,10 @@ namespace NetOffice.ExcelApi
         /// <param name="statusBar">optional object statusBar</param>
         /// <param name="helpFile">optional object helpFile</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.MenuItem Add(string caption, object onAction, object shortcutKey, object before, object restore, object statusBar, object helpFile)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[]{ caption, onAction, shortcutKey, before, restore, statusBar, helpFile });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.MenuItem>(this, "Add", NetOffice.ExcelApi.MenuItem.LateBindingApiWrapperType, new object[] { caption, onAction, shortcutKey, before, restore, statusBar, helpFile });
         }
 
         /// <summary>
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi
         /// <param name="caption">string caption</param>
         /// <param name="before">optional object before</param>
         /// <param name="restore">optional object restore</param>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Menu AddMenu(string caption, object before, object restore)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", NetOffice.ExcelApi.Menu.LateBindingApiWrapperType, caption, before, restore);
@@ -315,7 +315,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <param name="caption">string caption</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Menu AddMenu(string caption)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", NetOffice.ExcelApi.Menu.LateBindingApiWrapperType, caption);
@@ -327,7 +327,7 @@ namespace NetOffice.ExcelApi
         /// <param name="caption">string caption</param>
         /// <param name="before">optional object before</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Menu AddMenu(string caption, object before)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.Menu>(this, "AddMenu", NetOffice.ExcelApi.Menu.LateBindingApiWrapperType, caption, before);
@@ -369,7 +369,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -377,6 +377,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

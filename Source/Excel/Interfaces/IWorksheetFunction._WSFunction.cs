@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi
         public object _WSFunction()
         {
             return Factory.ExecuteVariantMethodGet(this, "_WSFunction");
-        }  
+        }
 
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi
         {
             return Factory.ExecuteVariantMethodGet(this, "_WSFunction", arg1, arg2, arg3, arg4);
         }
-        
+
         /// <summary>
         /// SupportByVersion Excel 9, 10, 11, 12, 14, 15, 16
         /// </summary>

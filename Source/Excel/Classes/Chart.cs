@@ -7,7 +7,7 @@ namespace NetOffice.ExcelApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void Chart_ActivateEventHandler();
     public delegate void Chart_DeactivateEventHandler();
     public delegate void Chart_ResizeEventHandler();
@@ -21,7 +21,7 @@ namespace NetOffice.ExcelApi
     public delegate void Chart_SelectEventHandler(Int32 elementID, Int32 arg1, Int32 arg2);
     public delegate void Chart_SeriesChangeEventHandler(Int32 seriesIndex, Int32 pointIndex);
     public delegate void Chart_CalculateEventHandler();
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -30,21 +30,21 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart(object)"/> </remarks>
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.ChartEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.ChartEvents))]
     public class Chart : _Chart, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.ChartEvents_SinkHelper _chartEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -61,7 +61,7 @@ namespace NetOffice.ExcelApi
             }
         }
 
-       
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -75,9 +75,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -85,14 +85,14 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Chart(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Chart(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -102,7 +102,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -111,31 +111,31 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Chart(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Chart 
         /// </summary>		
-        public Chart():base("Excel.Chart")
+        public Chart() : base("Excel.Chart")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of Chart
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Chart(string progId):base(progId)
+        public Chart(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -154,7 +154,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Activate(even)"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_ActivateEventHandler ActivateEvent
         {
             add
@@ -177,7 +177,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Deactivate"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_DeactivateEventHandler DeactivateEvent
         {
             add
@@ -200,7 +200,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Resize"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_ResizeEventHandler ResizeEvent
         {
             add
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.MouseDown"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.MouseUp"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -269,7 +269,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.MouseMove"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -292,7 +292,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.BeforeRightClick"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_BeforeRightClickEventHandler BeforeRightClickEvent
         {
             add
@@ -314,7 +314,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_DragPlotEventHandler DragPlotEvent
         {
             add
@@ -336,7 +336,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_DragOverEventHandler DragOverEvent
         {
             add
@@ -359,7 +359,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.BeforeDoubleClick"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
         {
             add
@@ -382,7 +382,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Select(even)"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_SelectEventHandler SelectEvent
         {
             add
@@ -405,7 +405,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.SeriesChange"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_SeriesChangeEventHandler SeriesChangeEvent
         {
             add
@@ -428,7 +428,7 @@ namespace NetOffice.ExcelApi
         /// SupportByVersion Excel 9 10 11 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Chart.Calculate"/> </remarks>
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public event Chart_CalculateEventHandler CalculateEvent
         {
             add
@@ -443,30 +443,30 @@ namespace NetOffice.ExcelApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.ChartEvents_SinkHelper.Id);
 
 
-            if(Events.ChartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.ChartEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _chartEvents_SinkHelper = new Events.ChartEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -475,7 +475,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -485,9 +485,9 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -509,16 +509,16 @@ namespace NetOffice.ExcelApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -536,7 +536,7 @@ namespace NetOffice.ExcelApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _chartEvents_SinkHelper)
+            if (null != _chartEvents_SinkHelper)
             {
                 _chartEvents_SinkHelper.Dispose();
                 _chartEvents_SinkHelper = null;
@@ -544,10 +544,10 @@ namespace NetOffice.ExcelApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

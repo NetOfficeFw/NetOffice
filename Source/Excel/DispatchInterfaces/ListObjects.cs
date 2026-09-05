@@ -13,11 +13,11 @@ namespace NetOffice.ExcelApi
     /// SupportByVersion Excel, 11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects"/> </remarks>
-    [SupportByVersion("Excel", 11,12,14,15,16)]
+    [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class ListObjects : COMObject, IEnumerableProvider<NetOffice.ExcelApi.ListObject>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ListObjects(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.ExcelApi
         public ListObjects(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.ExcelApi
         public ListObjects(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ListObjects(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ListObjects() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ListObjects(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects.Application"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Application Application
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects.Creator"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.Enums.XlCreator Creator
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.ExcelApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects.Parent"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -159,7 +159,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.ExcelApi.ListObject this[object index]
         {
@@ -174,7 +174,7 @@ namespace NetOffice.ExcelApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects.Count"/> </remarks>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -196,10 +196,10 @@ namespace NetOffice.ExcelApi
         /// <param name="linkSource">optional object linkSource</param>
         /// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
         /// <param name="destination">optional object destination</param>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, new object[]{ sourceType, source, linkSource, xlListObjectHasHeaders, destination });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination });
         }
 
         /// <summary>
@@ -212,10 +212,10 @@ namespace NetOffice.ExcelApi
         /// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
         /// <param name="destination">optional object destination</param>
         /// <param name="tableStyleName">optional object tableStyleName</param>
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination, object tableStyleName)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, new object[]{ sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination, tableStyleName });
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects.Add"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType);
@@ -235,7 +235,7 @@ namespace NetOffice.ExcelApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.ListObjects.Add"/> </remarks>
         /// <param name="sourceType">optional NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType = 1</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add(object sourceType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType);
@@ -248,7 +248,7 @@ namespace NetOffice.ExcelApi
         /// <param name="sourceType">optional NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType = 1</param>
         /// <param name="source">optional object source</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add(object sourceType, object source)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType, source);
@@ -262,7 +262,7 @@ namespace NetOffice.ExcelApi
         /// <param name="source">optional object source</param>
         /// <param name="linkSource">optional object linkSource</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType, source, linkSource);
@@ -277,7 +277,7 @@ namespace NetOffice.ExcelApi
         /// <param name="linkSource">optional object linkSource</param>
         /// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
         [CustomMethod]
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType, source, linkSource, xlListObjectHasHeaders);
@@ -292,10 +292,10 @@ namespace NetOffice.ExcelApi
         /// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
         /// <param name="destination">optional object destination</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders, object destination)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, new object[]{ sourceType, source, linkSource, xlListObjectHasHeaders, destination });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, new object[] { sourceType, source, linkSource, xlListObjectHasHeaders, destination });
         }
 
         /// <summary>
@@ -303,7 +303,7 @@ namespace NetOffice.ExcelApi
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject _Add()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType);
@@ -315,7 +315,7 @@ namespace NetOffice.ExcelApi
         /// <param name="sourceType">optional NetOffice.ExcelApi.Enums.XlListObjectSourceType SourceType = 1</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject _Add(object sourceType)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType);
@@ -328,7 +328,7 @@ namespace NetOffice.ExcelApi
         /// <param name="source">optional object source</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType, source);
@@ -342,7 +342,7 @@ namespace NetOffice.ExcelApi
         /// <param name="linkSource">optional object linkSource</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType, source, linkSource);
@@ -357,7 +357,7 @@ namespace NetOffice.ExcelApi
         /// <param name="xlListObjectHasHeaders">optional NetOffice.ExcelApi.Enums.XlYesNoGuess XlListObjectHasHeaders = 0</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         [CustomMethod]
-        [SupportByVersion("Excel", 12,14,15,16)]
+        [SupportByVersion("Excel", 12, 14, 15, 16)]
         public NetOffice.ExcelApi.ListObject _Add(object sourceType, object source, object linkSource, object xlListObjectHasHeaders)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.ExcelApi.ListObject>(this, "_Add", NetOffice.ExcelApi.ListObject.LateBindingApiWrapperType, sourceType, source, linkSource, xlListObjectHasHeaders);
@@ -399,7 +399,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// SupportByVersion Excel, 11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Excel", 11,12,14,15,16)]
+        [SupportByVersion("Excel", 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
@@ -407,6 +407,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

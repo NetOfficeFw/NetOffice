@@ -6,29 +6,29 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0002440F-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface ChartEvents
     {
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(304)]
         void Activate();
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1530)]
         void Deactivate();
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(256)]
         void Resize();
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("x", SinkArgumentType.Int32)]
@@ -36,7 +36,7 @@ namespace NetOffice.ExcelApi.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1531)]
         void MouseDown([In] object button, [In] object shift, [In] object x, [In] object y);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("x", SinkArgumentType.Int32)]
@@ -44,7 +44,7 @@ namespace NetOffice.ExcelApi.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1532)]
         void MouseUp([In] object button, [In] object shift, [In] object x, [In] object y);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
         [SinkArgument("x", SinkArgumentType.Int32)]
@@ -52,41 +52,41 @@ namespace NetOffice.ExcelApi.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1533)]
         void MouseMove([In] object button, [In] object shift, [In] object x, [In] object y);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1534)]
-        void BeforeRightClick([In] [Out] ref object cancel);
+        void BeforeRightClick([In][Out] ref object cancel);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1535)]
         void DragPlot();
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1536)]
         void DragOver();
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("elementID", SinkArgumentType.Int32)]
         [SinkArgument("arg1", SinkArgumentType.Int32)]
         [SinkArgument("arg2", SinkArgumentType.Int32)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1537)]
-        void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In] [Out] ref object cancel);
+        void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In][Out] ref object cancel);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("elementID", SinkArgumentType.Int32)]
         [SinkArgument("arg1", SinkArgumentType.Int32)]
         [SinkArgument("arg2", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(235)]
         void Select([In] object elementID, [In] object arg1, [In] object arg2);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("seriesIndex", SinkArgumentType.Int32)]
         [SinkArgument("pointIndex", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1538)]
         void SeriesChange([In] object seriesIndex, [In] object pointIndex);
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(279)]
         void Calculate();
     }
@@ -100,22 +100,22 @@ namespace NetOffice.ExcelApi.Events
     public class ChartEvents_SinkHelper : SinkHelper, ChartEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0002440F-0000-0000-C000-000000000046";
 
         #endregion
 
         #region Ctor
 
-        public ChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public ChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region ChartEvents
-        
+
         public void Activate()
         {
             if (!Validate("Activate"))
@@ -156,7 +156,7 @@ namespace NetOffice.ExcelApi.Events
                 Invoker.ReleaseParamsArray(button, shift, x, y);
                 return;
             }
-            
+
             Int32 newButton = ToInt32(button);
             Int32 newShift = ToInt32(shift);
             Int32 newx = ToInt32(x);
@@ -209,7 +209,7 @@ namespace NetOffice.ExcelApi.Events
             EventBinding.RaiseCustomEvent("MouseMove", ref paramsArray);
         }
 
-        public void BeforeRightClick([In] [Out] ref object cancel)
+        public void BeforeRightClick([In][Out] ref object cancel)
         {
             if (!Validate("BeforeRightClick"))
             {
@@ -246,7 +246,7 @@ namespace NetOffice.ExcelApi.Events
             EventBinding.RaiseCustomEvent("DragOver", ref paramsArray);
         }
 
-        public void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In] [Out] ref object cancel)
+        public void BeforeDoubleClick([In] object elementID, [In] object arg1, [In] object arg2, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeDoubleClick"))
             {
@@ -314,8 +314,8 @@ namespace NetOffice.ExcelApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

@@ -2,7 +2,7 @@
 using Excel = NetOffice.ExcelApi;
 
 namespace NetOffice.ExcelApi.Tools
-{   
+{
     /// <summary>
     /// Custom task pane UserControl instance may implement this interface to be notified about the lifetime of the custom task pane.
     /// </summary>

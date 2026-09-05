@@ -6,21 +6,21 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("00024410-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface OLEObjectEvents
     {
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1541)]
         void GotFocus();
 
-        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1542)]
         void LostFocus();
     }
@@ -34,22 +34,22 @@ namespace NetOffice.ExcelApi.Events
     public class OLEObjectEvents_SinkHelper : SinkHelper, OLEObjectEvents
     {
         #region Static
-        
+
         public static readonly string Id = "00024410-0000-0000-C000-000000000046";
-        
+
         #endregion
-            
+
         #region Ctor
 
-        public OLEObjectEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public OLEObjectEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
-        #endregion		
+
+        #endregion
 
         #region OLEObjectEvents
-        
+
         public void GotFocus()
         {
             if (!Validate("GotFocus"))
@@ -74,8 +74,8 @@ namespace NetOffice.ExcelApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

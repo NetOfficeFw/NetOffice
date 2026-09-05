@@ -14,7 +14,7 @@ namespace NetOffice.ExcelApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class DataFeedConnection : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.ExcelApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DataFeedConnection(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.ExcelApi
         public DataFeedConnection(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.ExcelApi
         public DataFeedConnection(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataFeedConnection(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataFeedConnection() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataFeedConnection(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public void CancelRefresh()
         {
-             Factory.ExecuteMethod(this, "CancelRefresh");
+            Factory.ExecuteMethod(this, "CancelRefresh");
         }
 
         /// <summary>
@@ -398,7 +398,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public void SaveAsODC(string oDCFileName, object description, object keywords)
         {
-             Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
+            Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description, keywords);
         }
 
         /// <summary>
@@ -423,7 +423,7 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public void SaveAsODC(string oDCFileName)
         {
-             Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
+            Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName);
         }
 
         /// <summary>
@@ -436,11 +436,11 @@ namespace NetOffice.ExcelApi
         [SupportByVersion("Excel", 15, 16)]
         public void SaveAsODC(string oDCFileName, object description)
         {
-             Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
+            Factory.ExecuteMethod(this, "SaveAsODC", oDCFileName, description);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
