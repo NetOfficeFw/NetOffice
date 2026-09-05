@@ -7,8 +7,8 @@ namespace NetOffice.Exceptions
     /// <summary>
     /// Signals the target method or property is not supported from the COM proxy in the current version
     /// </summary>
-    public class EntityNotSupportedException : NetOfficeException 
-    {        
+    public class EntityNotSupportedException : NetOfficeException
+    {
         /// <summary>
         /// Creates an instance of the exception
         /// </summary>

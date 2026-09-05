@@ -28,7 +28,7 @@ namespace NetOffice
                 lock (_lockUtils)
                 {
                     if (null == _default)
-                        _default = new Utils();                  
+                        _default = new Utils();
                 }
                 return _default;
             }
@@ -151,7 +151,7 @@ namespace NetOffice
                 {
                     object itemProxy = comObject.Factory.Invoker.PropertyGetWithoutSafeMode(enumerator, "Current", null);
                     if (itemProxy is MarshalByRefObject)
-                    { 
+                    {
                         ICOMObject returnClass = comObject.Factory.CreateObjectFromComProxy(enumerator, itemProxy);
                         yield return returnClass;
                     }

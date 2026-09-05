@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace NetOffice.Tools
-{       
+{
     /// <summary>
     /// The current install/uninstall scope
     /// </summary>

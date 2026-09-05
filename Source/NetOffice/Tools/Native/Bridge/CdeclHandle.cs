@@ -28,7 +28,7 @@ namespace NetOffice.Tools.Native.Bridge
         {
             if (underlying == IntPtr.Zero)
                 throw new ArgumentOutOfRangeException("underlying", "Underlying module handle can not be empty.");
-            if(String.IsNullOrWhiteSpace(name))
+            if (String.IsNullOrWhiteSpace(name))
                 throw new ArgumentNullException("name", "Name can not be null or empty.");
 
             Underlying = underlying;
@@ -108,7 +108,7 @@ namespace NetOffice.Tools.Native.Bridge
                     throw new Win32Exception(String.Format("Unable to get proc address <{0}> in <{1}>.", name, Name));
                 result = Marshal.GetDelegateForFunctionPointer(ptr, type) as Delegate;
                 if (null == result)
-                    throw new Win32Exception(String.Format("Unable to get function pointer <{0}> in <{1}>.", name, Name));              
+                    throw new Win32Exception(String.Format("Unable to get function pointer <{0}> in <{1}>.", name, Name));
                 Functions.Add(name, result);
             }
             else
@@ -152,7 +152,7 @@ namespace NetOffice.Tools.Native.Bridge
             IntPtr ptr = Interop.LoadLibrary(fullFileName);
             if (ptr == IntPtr.Zero)
                 throw new Win32Exception(String.Format("Unable to load library <{0}>.", fileName));
-            
+
             return new CdeclHandle(ptr, folder, fileName);
         }
 

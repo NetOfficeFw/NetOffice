@@ -12,7 +12,7 @@ namespace NetOffice.Extensions
     /// that implement NetOffice.CollectionsGeneric.IEnumerableProvider`1.
     /// </summary>
     public static class EnumerableExtensions
-    {   
+    {
         /// <summary>
         /// Returns the first element of a sequence
         /// </summary>
@@ -46,7 +46,7 @@ namespace NetOffice.Extensions
                 throw;
             }
         }
-        
+
         /// <summary>
         /// Returns the first element of a sequence
         /// </summary>
@@ -264,7 +264,7 @@ namespace NetOffice.Extensions
                 throw;
             }
         }
-       
+
         /// <summary>
         /// Returns the last element of a sequence
         /// </summary>
@@ -414,7 +414,7 @@ namespace NetOffice.Extensions
                 enumerator = source.GetComObjectEnumerator(null);
                 foreach (TSource current in source.FetchVariantComObjectEnumerator(true == append ? source as ICOMObject : null, enumerator))
                 {
-                    if(predicate(current))
+                    if (predicate(current))
                         result++;
                     TryDispose(current);
                 }
@@ -580,7 +580,7 @@ namespace NetOffice.Extensions
                 return list;
             }
             catch
-            {               
+            {
                 for (int i = list.Count - 1; i >= 0; i++)
                     TryDispose(list[i]);
                 if (null != enumerator && enumerator != source)
@@ -623,7 +623,7 @@ namespace NetOffice.Extensions
             }
             catch
             {
-                for (int i = list.Count-1; i >=0; i++)
+                for (int i = list.Count - 1; i >= 0; i++)
                     TryDispose(list[i]);
                 if (null != enumerator && enumerator != source)
                     enumerator.Dispose();

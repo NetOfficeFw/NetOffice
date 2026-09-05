@@ -141,7 +141,7 @@ namespace NetOffice
         /// <param name="argument">argument as any</param>
         public static void ExecuteValuePropertySet(this Core value, ICOMObject caller, string name, object newValue, object argument)
         {
-            object[] args = Invoker.ValidateParamsArray(argument,  newValue);
+            object[] args = Invoker.ValidateParamsArray(argument, newValue);
             value.Invoker.PropertySet(caller, name, args);
         }
 
@@ -213,7 +213,7 @@ namespace NetOffice
         #endregion
 
         #region ExecuteValuePropertySet<T>
-     
+
         /// <summary>
         /// Execute a value property set
         /// </summary>
@@ -404,7 +404,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ExecuteReferencePropertySet
 
         /// <summary>
@@ -586,7 +586,7 @@ namespace NetOffice
         /// <param name="name">property name</param>
         /// <param name="newValue">value to set</param>
         /// <param name="paramsArray">arguments as any</param>
-        public static void ExecuteReferencePropertySet<T>(this Core value, ICOMObject caller, string name, T newValue, object[] paramsArray) where T:class,ICOMObject
+        public static void ExecuteReferencePropertySet<T>(this Core value, ICOMObject caller, string name, T newValue, object[] paramsArray) where T : class, ICOMObject
         {
             object[] newParamsArray = new object[paramsArray.Length + 1];
             for (int i = 0; i < paramsArray.Length; i++)
@@ -597,7 +597,7 @@ namespace NetOffice
         }
 
         #endregion
-       
+
         #region ExecuteVariantPropertySet
 
         /// <summary>

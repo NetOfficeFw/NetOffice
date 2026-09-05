@@ -123,7 +123,7 @@ namespace NetOffice.Extensions.Calling
         /// <param name="arg31">optional argument 31</param>
         /// <param name="arg32">optional argument 32</param>
         /// <returns>result of T</returns>
-        public static T MethodGet<T>(this ICOMObject comObject, string name, 
+        public static T MethodGet<T>(this ICOMObject comObject, string name,
                                     object arg1 = null, object arg2 = null, object arg3 = null, object arg4 = null,
                                     object arg5 = null, object arg6 = null, object arg7 = null, object arg8 = null,
                                     object arg9 = null, object arg10 = null, object arg11 = null, object arg12 = null,

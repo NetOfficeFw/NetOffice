@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace NetOffice.Tools
-{  
+{
     /// <summary>
     /// Specify a custom task pane
     /// </summary>
@@ -172,28 +172,28 @@ namespace NetOffice.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionLeft = 0,
-       
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionTop = 1,
-        
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRight = 2,
-        
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionBottom = 3,
-        
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionFloating = 4
     }
-    
+
     /// <summary>
     /// SupportByVersion Office 12, 14, 15, 16
     /// </summary>
@@ -203,17 +203,17 @@ namespace NetOffice.Tools
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNone = 0,
-       
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNoChange = 1,
-        
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>
         msoCTPDockPositionRestrictNoHorizontal = 2,
-       
+
         /// <summary>
         /// SupportByVersion Office 12, 14, 15, 16
         /// </summary>

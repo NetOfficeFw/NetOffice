@@ -11,7 +11,7 @@ namespace NetOffice.Tools
     /// Handle <see cref="COMAddinBase"/> unregistration process.
     /// </summary>
     public static class COMAddinUnRegisterHandler
-    {     
+    {
         /// <summary>
         /// Do unregister process per user uninstallation
         /// </summary>
@@ -33,7 +33,7 @@ namespace NetOffice.Tools
         public static void Proceed(Type type, string[] addinOfficeRegistryKey, InstallScope scope, OfficeUnRegisterKeyState keyState)
         {
             try
-            {                 
+            {
                 MethodInfo registerMethod = null;
                 UnRegisterFunctionAttribute registerAttribute = null;
                 bool registerMethodPresent = AttributeReflector.GetUnRegisterAttribute(type, ref registerMethod, ref registerAttribute);
@@ -46,7 +46,7 @@ namespace NetOffice.Tools
                     if (registerAttribute.Value == RegisterMode.Replace)
                         return;
                 }
-                  
+
                 ProgIdAttribute progId = AttributeReflector.GetProgIDAttribute(type);
                 RegistryLocationAttribute location = AttributeReflector.GetRegistryLocationAttribute(type);
                 CodebaseAttribute codebase = AttributeReflector.GetCodebaseAttribute(type);
@@ -67,7 +67,7 @@ namespace NetOffice.Tools
                 }
 
                 if (keyState == OfficeUnRegisterKeyState.NeedToDelete)
-                {                    
+                {
                     foreach (string item in addinOfficeRegistryKey)
                     {
                         RegistryLocationAttribute.TryDeleteApplicationKey(isSystemAddin, item, progId.Value);
@@ -136,5 +136,5 @@ namespace NetOffice.Tools
                 return false;
             }
         }
-     }
+    }
 }
