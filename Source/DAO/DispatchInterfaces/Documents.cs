@@ -9,11 +9,11 @@ namespace NetOffice.DAOApi
     /// DispatchInterface Documents 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class Documents : _Collection
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Documents(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.DAOApi
         public Documents(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.DAOApi
         public Documents(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Documents(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Documents() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Documents(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.DAOApi
         /// Get
         /// </summary>
         /// <param name="item">object item</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.DAOApi.Document this[object item]
         {
@@ -128,6 +128,6 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

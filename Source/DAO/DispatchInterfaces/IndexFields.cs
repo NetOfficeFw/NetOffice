@@ -28,7 +28,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IndexFields_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -37,7 +37,7 @@ namespace NetOffice.DAOApi
         public IndexFields_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -55,7 +55,7 @@ namespace NetOffice.DAOApi
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IndexFields_(ICOMObject replacedObject) : base(replacedObject)
@@ -69,13 +69,13 @@ namespace NetOffice.DAOApi
         public IndexFields_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IndexFields_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -91,11 +91,11 @@ namespace NetOffice.DAOApi
     /// DispatchInterface IndexFields 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class IndexFields : IndexFields_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -123,9 +123,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -140,7 +140,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IndexFields(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -149,7 +149,7 @@ namespace NetOffice.DAOApi
         public IndexFields(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -167,26 +167,26 @@ namespace NetOffice.DAOApi
         public IndexFields(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IndexFields(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IndexFields() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IndexFields(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace NetOffice.DAOApi
         /// Get
         /// </summary>
         /// <param name="item">optional object item</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public object this[object item]
         {
@@ -209,7 +209,7 @@ namespace NetOffice.DAOApi
         #region Methods
 
         #endregion
-        
-        #pragma warning restore
+
+#pragma warning restore
     }
 }

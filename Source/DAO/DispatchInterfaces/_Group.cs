@@ -9,11 +9,11 @@ namespace NetOffice.DAOApi
     /// DispatchInterface _Group 
     /// SupportByVersion DAO, 3.6,12.0
     /// </summary>
-    [SupportByVersion("DAO", 3.6,12.0)]
+    [SupportByVersion("DAO", 3.6, 12.0)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Group : _DAO
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.DAOApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.DAOApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Group(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.DAOApi
         public _Group(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.DAOApi
         public _Group(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Group(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Group() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Group(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string Name
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get/Set
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public string PID
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// Get
         /// </summary>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.Users Users
         {
             get
@@ -164,7 +164,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">optional object name</param>
         /// <param name="pID">optional object pID</param>
         /// <param name="password">optional object password</param>
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser(object name, object pID, object password)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType, name, pID, password);
@@ -174,7 +174,7 @@ namespace NetOffice.DAOApi
         /// SupportByVersion DAO 3.6, 12.0
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType);
@@ -185,7 +185,7 @@ namespace NetOffice.DAOApi
         /// </summary>
         /// <param name="name">optional object name</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser(object name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType, name);
@@ -197,7 +197,7 @@ namespace NetOffice.DAOApi
         /// <param name="name">optional object name</param>
         /// <param name="pID">optional object pID</param>
         [CustomMethod]
-        [SupportByVersion("DAO", 3.6,12.0)]
+        [SupportByVersion("DAO", 3.6, 12.0)]
         public NetOffice.DAOApi.User CreateUser(object name, object pID)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.DAOApi.User>(this, "CreateUser", NetOffice.DAOApi.User.LateBindingApiWrapperType, name, pID);
@@ -205,6 +205,6 @@ namespace NetOffice.DAOApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
