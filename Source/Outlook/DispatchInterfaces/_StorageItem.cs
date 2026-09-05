@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _StorageItem 
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _StorageItem : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _StorageItem(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _StorageItem(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OutlookApi
         public _StorageItem(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _StorageItem(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _StorageItem() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _StorageItem(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Application"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Class"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Session"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -157,7 +157,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.CreationTime"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public DateTime CreationTime
         {
             get
@@ -185,7 +185,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.LastModificationTime"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public DateTime LastModificationTime
         {
             get
@@ -199,7 +199,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.EntryID"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string EntryID
         {
             get
@@ -213,7 +213,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Body"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Body
         {
             get
@@ -231,7 +231,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Attachments"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Attachments Attachments
         {
             get
@@ -245,7 +245,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Size"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public Int32 Size
         {
             get
@@ -259,7 +259,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.UserProperties"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.UserProperties UserProperties
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.PropertyAccessor"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
         {
             get
@@ -287,7 +287,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Subject"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Subject
         {
             get
@@ -305,7 +305,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Creator"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Creator
         {
             get
@@ -326,24 +326,24 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Save"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Save()
         {
-             Factory.ExecuteMethod(this, "Save");
+            Factory.ExecuteMethod(this, "Save");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.StorageItem.Delete"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Delete()
         {
-             Factory.ExecuteMethod(this, "Delete");
+            Factory.ExecuteMethod(this, "Delete");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

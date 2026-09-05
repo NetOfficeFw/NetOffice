@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _TimelineView 
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _TimelineView : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _TimelineView(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _TimelineView(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OutlookApi
         public _TimelineView(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _TimelineView(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _TimelineView() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _TimelineView(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Application"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Class"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Session"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -157,7 +157,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Language"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Language
         {
             get
@@ -189,7 +189,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.LockUserChanges"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool LockUserChanges
         {
             get
@@ -207,7 +207,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Name"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -225,7 +225,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.SaveOption"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlViewSaveOption SaveOption
         {
             get
@@ -239,7 +239,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Standard"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool Standard
         {
             get
@@ -253,7 +253,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.ViewType"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlViewType ViewType
         {
             get
@@ -267,7 +267,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.XML"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string XML
         {
             get
@@ -285,7 +285,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Filter"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Filter
         {
             get
@@ -303,7 +303,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.StartField"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string StartField
         {
             get
@@ -321,7 +321,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.EndField"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string EndField
         {
             get
@@ -339,7 +339,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.GroupByFields"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.OrderFields GroupByFields
         {
             get
@@ -353,7 +353,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.DefaultExpandCollapseSetting"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlDefaultExpandCollapseSetting DefaultExpandCollapseSetting
         {
             get
@@ -371,7 +371,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.ShowWeekNumbers"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool ShowWeekNumbers
         {
             get
@@ -389,7 +389,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.MaxLabelWidth"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public Int32 MaxLabelWidth
         {
             get
@@ -407,7 +407,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.ShowLabelWhenViewingByMonth"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool ShowLabelWhenViewingByMonth
         {
             get
@@ -425,7 +425,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.UpperScaleFont"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.ViewFont UpperScaleFont
         {
             get
@@ -439,7 +439,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.LowerScaleFont"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.ViewFont LowerScaleFont
         {
             get
@@ -453,7 +453,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.ItemFont"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.ViewFont ItemFont
         {
             get
@@ -467,7 +467,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.TimelineViewMode"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlTimelineViewMode TimelineViewMode
         {
             get
@@ -488,10 +488,10 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Apply"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Apply()
         {
-             Factory.ExecuteMethod(this, "Apply");
+            Factory.ExecuteMethod(this, "Apply");
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Copy"/> </remarks>
         /// <param name="name">string name</param>
         /// <param name="saveOption">optional NetOffice.OutlookApi.Enums.OlViewSaveOption saveOption</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.View Copy(string name, object saveOption)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.View>(this, "Copy", NetOffice.OutlookApi.View.LateBindingApiWrapperType, name, saveOption);
@@ -512,7 +512,7 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Copy"/> </remarks>
         /// <param name="name">string name</param>
         [CustomMethod]
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.View Copy(string name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.View>(this, "Copy", NetOffice.OutlookApi.View.LateBindingApiWrapperType, name);
@@ -522,30 +522,30 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Delete"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Delete()
         {
-             Factory.ExecuteMethod(this, "Delete");
+            Factory.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Reset"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Reset()
         {
-             Factory.ExecuteMethod(this, "Reset");
+            Factory.ExecuteMethod(this, "Reset");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.Save"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Save()
         {
-             Factory.ExecuteMethod(this, "Save");
+            Factory.ExecuteMethod(this, "Save");
         }
 
         /// <summary>
@@ -553,14 +553,14 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.TimelineView.GoToDate"/> </remarks>
         /// <param name="date">DateTime date</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void GoToDate(DateTime date)
         {
-             Factory.ExecuteMethod(this, "GoToDate", date);
+            Factory.ExecuteMethod(this, "GoToDate", date);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

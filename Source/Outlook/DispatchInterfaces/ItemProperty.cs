@@ -10,11 +10,11 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty"/> </remarks>
-    [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class ItemProperty : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ItemProperty(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OutlookApi
         public ItemProperty(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OutlookApi
         public ItemProperty(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ItemProperty(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ItemProperty() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ItemProperty(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Application"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -128,7 +128,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Class"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Session"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -158,7 +158,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string Formula
         {
@@ -190,7 +190,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Name"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public string Name
         {
             get
@@ -204,7 +204,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Type"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlUserPropertyType Type
         {
             get
@@ -217,7 +217,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string ValidationFormula
         {
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string ValidationText
         {
@@ -254,7 +254,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.Value"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public object Value
         {
             get
@@ -272,7 +272,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperty.IsUserProperty"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public bool IsUserProperty
         {
             get
@@ -289,14 +289,14 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public void Delete()
         {
-             Factory.ExecuteMethod(this, "Delete");
+            Factory.ExecuteMethod(this, "Delete");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

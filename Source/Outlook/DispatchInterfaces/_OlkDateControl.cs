@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _OlkDateControl 
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _OlkDateControl : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _OlkDateControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _OlkDateControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OutlookApi
         public _OlkDateControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OlkDateControl(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OlkDateControl() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _OlkDateControl(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.AutoSize"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool AutoSize
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.AutoWordSelect"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool AutoWordSelect
         {
             get
@@ -148,7 +148,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.BackColor"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public Int32 BackColor
         {
             get
@@ -166,7 +166,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.BackStyle"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlBackStyle BackStyle
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Date"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public DateTime Date
         {
             get
@@ -202,7 +202,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Enabled"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool Enabled
         {
             get
@@ -220,7 +220,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.EnterFieldBehavior"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlEnterFieldBehavior EnterFieldBehavior
         {
             get
@@ -238,7 +238,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Font"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16), NativeResult]
+        [SupportByVersion("Outlook", 12, 14, 15, 16), NativeResult]
         public stdole.Font Font
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.ForeColor"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public Int32 ForeColor
         {
             get
@@ -272,7 +272,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.HideSelection"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool HideSelection
         {
             get
@@ -290,7 +290,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Locked"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool Locked
         {
             get
@@ -308,7 +308,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseIcon"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16), NativeResult]
+        [SupportByVersion("Outlook", 12, 14, 15, 16), NativeResult]
         public stdole.Picture MouseIcon
         {
             get
@@ -329,7 +329,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MousePointer"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlMousePointer MousePointer
         {
             get
@@ -347,7 +347,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.ShowNoneButton"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public bool ShowNoneButton
         {
             get
@@ -365,7 +365,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Text"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public string Text
         {
             get
@@ -383,7 +383,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.TextAlign"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlTextAlign TextAlign
         {
             get
@@ -401,7 +401,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Value"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public object Value
         {
             get
@@ -422,14 +422,14 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.DropDown"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void DropDown()
         {
-             Factory.ExecuteMethod(this, "DropDown");
+            Factory.ExecuteMethod(this, "DropDown");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

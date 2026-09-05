@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _MobileItem 
     /// SupportByVersion Outlook, 14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 14,15,16)]
+    [SupportByVersion("Outlook", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _MobileItem : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _MobileItem(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _MobileItem(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.OutlookApi
         public _MobileItem(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _MobileItem(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _MobileItem() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _MobileItem(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -125,7 +125,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -138,7 +138,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -153,7 +153,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -166,7 +166,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Actions Actions
         {
             get
@@ -179,7 +179,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Attachments Attachments
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string BillingInformation
         {
             get
@@ -209,7 +209,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string Body
         {
             get
@@ -226,7 +226,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string Categories
         {
             get
@@ -243,7 +243,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string Companies
         {
             get
@@ -260,7 +260,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string ConversationIndex
         {
             get
@@ -273,7 +273,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string ConversationTopic
         {
             get
@@ -286,7 +286,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public DateTime CreationTime
         {
             get
@@ -299,7 +299,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string EntryID
         {
             get
@@ -312,7 +312,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.FormDescription FormDescription
         {
             get
@@ -325,7 +325,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Inspector GetInspector
         {
@@ -339,7 +339,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlImportance Importance
         {
             get
@@ -356,7 +356,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public DateTime LastModificationTime
         {
             get
@@ -370,7 +370,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object MAPIOBJECT
         {
@@ -384,7 +384,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string MessageClass
         {
             get
@@ -401,7 +401,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string Mileage
         {
             get
@@ -418,7 +418,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public bool NoAging
         {
             get
@@ -435,7 +435,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public Int32 OutlookInternalVersion
         {
             get
@@ -448,7 +448,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string OutlookVersion
         {
             get
@@ -461,7 +461,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public bool Saved
         {
             get
@@ -474,7 +474,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlSensitivity Sensitivity
         {
             get
@@ -491,7 +491,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public Int32 Size
         {
             get
@@ -504,7 +504,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string Subject
         {
             get
@@ -521,7 +521,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public bool UnRead
         {
             get
@@ -538,7 +538,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.UserProperties UserProperties
         {
             get
@@ -551,7 +551,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string HTMLBody
         {
             get
@@ -568,7 +568,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlMobileFormat MobileFormat
         {
             get
@@ -581,7 +581,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string SMILBody
         {
             get
@@ -598,7 +598,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Recipients Recipients
         {
             get
@@ -611,7 +611,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string To
         {
             get
@@ -628,7 +628,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string ReplyRecipientNames
         {
             get
@@ -641,7 +641,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Recipients ReplyRecipients
         {
             get
@@ -654,7 +654,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -667,7 +667,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public bool Submitted
         {
             get
@@ -680,7 +680,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.ItemProperties ItemProperties
         {
             get
@@ -693,7 +693,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public DateTime ReceivedTime
         {
             get
@@ -706,7 +706,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Account SendUsingAccount
         {
             get
@@ -723,7 +723,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public bool Sent
         {
             get
@@ -736,7 +736,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public DateTime SentOn
         {
             get
@@ -749,7 +749,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.PropertyAccessor PropertyAccessor
         {
             get
@@ -762,7 +762,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string ReceivedByEntryID
         {
             get
@@ -775,7 +775,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string ReceivedByName
         {
             get
@@ -788,7 +788,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string SenderEmailAddress
         {
             get
@@ -801,7 +801,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string SenderEmailType
         {
             get
@@ -814,7 +814,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string SenderName
         {
             get
@@ -831,16 +831,16 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <param name="saveMode">NetOffice.OutlookApi.Enums.OlInspectorClose saveMode</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void Close(NetOffice.OutlookApi.Enums.OlInspectorClose saveMode)
         {
-             Factory.ExecuteMethod(this, "Close", saveMode);
+            Factory.ExecuteMethod(this, "Close", saveMode);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public object Copy()
         {
             return Factory.ExecuteVariantMethodGet(this, "Copy");
@@ -849,37 +849,37 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void Delete()
         {
-             Factory.ExecuteMethod(this, "Delete");
+            Factory.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <param name="modal">optional object modal</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void Display(object modal)
         {
-             Factory.ExecuteMethod(this, "Display", modal);
+            Factory.ExecuteMethod(this, "Display", modal);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void Display()
         {
-             Factory.ExecuteMethod(this, "Display");
+            Factory.ExecuteMethod(this, "Display");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <param name="destFldr">NetOffice.OutlookApi.MAPIFolder destFldr</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public object Move(NetOffice.OutlookApi.MAPIFolder destFldr)
         {
             return Factory.ExecuteVariantMethodGet(this, "Move", destFldr);
@@ -888,19 +888,19 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void PrintOut()
         {
-             Factory.ExecuteMethod(this, "PrintOut");
+            Factory.ExecuteMethod(this, "PrintOut");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void Save()
         {
-             Factory.ExecuteMethod(this, "Save");
+            Factory.ExecuteMethod(this, "Save");
         }
 
         /// <summary>
@@ -908,10 +908,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <param name="path">string path</param>
         /// <param name="type">optional object type</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void SaveAs(string path, object type)
         {
-             Factory.ExecuteMethod(this, "SaveAs", path, type);
+            Factory.ExecuteMethod(this, "SaveAs", path, type);
         }
 
         /// <summary>
@@ -919,16 +919,16 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <param name="path">string path</param>
         [CustomMethod]
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void SaveAs(string path)
         {
-             Factory.ExecuteMethod(this, "SaveAs", path);
+            Factory.ExecuteMethod(this, "SaveAs", path);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.MobileItem Reply()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MobileItem>(this, "Reply", NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType);
@@ -937,7 +937,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.MobileItem ReplyAll()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MobileItem>(this, "ReplyAll", NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType);
@@ -947,16 +947,16 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <param name="forceSend">bool forceSend</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void Send(bool forceSend)
         {
-             Factory.ExecuteMethod(this, "Send", forceSend);
+            Factory.ExecuteMethod(this, "Send", forceSend);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.MobileItem Forward()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.MobileItem>(this, "Forward", NetOffice.OutlookApi.MobileItem.LateBindingApiWrapperType);
@@ -964,6 +964,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

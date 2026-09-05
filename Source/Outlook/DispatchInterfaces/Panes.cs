@@ -13,11 +13,11 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Panes"/> </remarks>
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Variant, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Panes : COMObject, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Panes(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OutlookApi
         public Panes(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OutlookApi
         public Panes(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Panes(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Panes() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Panes(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Panes.Application"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Panes.Class"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Panes.Session"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -161,7 +161,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Panes.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Panes.Count"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public object this[object index]
         {
@@ -203,7 +203,7 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEnumerableProvider<object>
 
         ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
@@ -258,6 +258,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

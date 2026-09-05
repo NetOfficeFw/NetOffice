@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _Explorer 
     /// SupportByVersion Outlook, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Explorer : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Explorer(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _Explorer(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OutlookApi
         public _Explorer(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Explorer(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Explorer() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Explorer(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Application"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Class"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Session"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -157,7 +157,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.CommandBars CommandBars
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.CurrentFolder"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder CurrentFolder
         {
@@ -203,7 +203,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Caption"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public string Caption
         {
             get
@@ -217,7 +217,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.CurrentView"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public object CurrentView
         {
             get
@@ -235,7 +235,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Height"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Height
         {
             get
@@ -253,7 +253,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Left"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Left
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Panes"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Panes Panes
         {
             get
@@ -285,7 +285,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Selection"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Selection Selection
         {
             get
@@ -299,7 +299,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Top"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Top
         {
             get
@@ -317,7 +317,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Width"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Width
         {
             get
@@ -335,7 +335,7 @@ namespace NetOffice.OutlookApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.WindowState"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlWindowState WindowState
         {
             get
@@ -353,7 +353,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object Views
         {
@@ -369,7 +369,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.HTMLDocument"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object HTMLDocument
         {
             get
@@ -383,7 +383,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.NavigationPane"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NavigationPane NavigationPane
         {
@@ -398,7 +398,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.AccountSelector"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._AccountSelector AccountSelector
         {
@@ -413,7 +413,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.AttachmentSelection"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._AttachmentSelection AttachmentSelection
         {
@@ -461,30 +461,30 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Close(method)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public void Close()
         {
-             Factory.ExecuteMethod(this, "Close");
+            Factory.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Display"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public void Display()
         {
-             Factory.ExecuteMethod(this, "Display");
+            Factory.ExecuteMethod(this, "Display");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Activate(method)"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public void Activate()
         {
-             Factory.ExecuteMethod(this, "Activate");
+            Factory.ExecuteMethod(this, "Activate");
         }
 
         /// <summary>
@@ -492,7 +492,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.IsPaneVisible"/> </remarks>
         /// <param name="pane">NetOffice.OutlookApi.Enums.OlPane pane</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public bool IsPaneVisible(NetOffice.OutlookApi.Enums.OlPane pane)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsPaneVisible", pane);
@@ -504,37 +504,37 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.ShowPane"/> </remarks>
         /// <param name="pane">NetOffice.OutlookApi.Enums.OlPane pane</param>
         /// <param name="visible">bool visible</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public void ShowPane(NetOffice.OutlookApi.Enums.OlPane pane, bool visible)
         {
-             Factory.ExecuteMethod(this, "ShowPane", pane, visible);
+            Factory.ExecuteMethod(this, "ShowPane", pane, visible);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="folder">NetOffice.OutlookApi.MAPIFolder folder</param>
-        [SupportByVersion("Outlook", 11,12,14,15,16)]
+        [SupportByVersion("Outlook", 11, 12, 14, 15, 16)]
         public void SelectFolder(NetOffice.OutlookApi.MAPIFolder folder)
         {
-             Factory.ExecuteMethod(this, "SelectFolder", folder);
+            Factory.ExecuteMethod(this, "SelectFolder", folder);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="folder">NetOffice.OutlookApi.MAPIFolder folder</param>
-        [SupportByVersion("Outlook", 11,12,14,15,16)]
+        [SupportByVersion("Outlook", 11, 12, 14, 15, 16)]
         public void DeselectFolder(NetOffice.OutlookApi.MAPIFolder folder)
         {
-             Factory.ExecuteMethod(this, "DeselectFolder", folder);
+            Factory.ExecuteMethod(this, "DeselectFolder", folder);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="folder">NetOffice.OutlookApi.MAPIFolder folder</param>
-        [SupportByVersion("Outlook", 11,12,14,15,16)]
+        [SupportByVersion("Outlook", 11, 12, 14, 15, 16)]
         public bool IsFolderSelected(NetOffice.OutlookApi.MAPIFolder folder)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsFolderSelected", folder);
@@ -544,10 +544,10 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.ClearSearch"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void ClearSearch()
         {
-             Factory.ExecuteMethod(this, "ClearSearch");
+            Factory.ExecuteMethod(this, "ClearSearch");
         }
 
         /// <summary>
@@ -556,10 +556,10 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.Search"/> </remarks>
         /// <param name="query">string query</param>
         /// <param name="searchScope">NetOffice.OutlookApi.Enums.OlSearchScope searchScope</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Search(string query, NetOffice.OutlookApi.Enums.OlSearchScope searchScope)
         {
-             Factory.ExecuteMethod(this, "Search", query, searchScope);
+            Factory.ExecuteMethod(this, "Search", query, searchScope);
         }
 
         /// <summary>
@@ -567,7 +567,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.IsItemSelectableInView"/> </remarks>
         /// <param name="item">object item</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public bool IsItemSelectableInView(object item)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsItemSelectableInView", item);
@@ -578,10 +578,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.AddToSelection"/> </remarks>
         /// <param name="item">object item</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void AddToSelection(object item)
         {
-             Factory.ExecuteMethod(this, "AddToSelection", item);
+            Factory.ExecuteMethod(this, "AddToSelection", item);
         }
 
         /// <summary>
@@ -589,34 +589,34 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.RemoveFromSelection"/> </remarks>
         /// <param name="item">object item</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void RemoveFromSelection(object item)
         {
-             Factory.ExecuteMethod(this, "RemoveFromSelection", item);
+            Factory.ExecuteMethod(this, "RemoveFromSelection", item);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.SelectAllItems"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void SelectAllItems()
         {
-             Factory.ExecuteMethod(this, "SelectAllItems");
+            Factory.ExecuteMethod(this, "SelectAllItems");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Explorer.ClearSelection"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void ClearSelection()
         {
-             Factory.ExecuteMethod(this, "ClearSelection");
+            Factory.ExecuteMethod(this, "ClearSelection");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

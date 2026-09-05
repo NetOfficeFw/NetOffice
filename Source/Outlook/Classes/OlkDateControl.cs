@@ -7,7 +7,7 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void OlkDateControl_ClickEventHandler();
     public delegate void OlkDateControl_DoubleClickEventHandler();
     public delegate void OlkDateControl_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
@@ -22,7 +22,7 @@ namespace NetOffice.OutlookApi
     public delegate void OlkDateControl_DropButtonClickEventHandler();
     public delegate void OlkDateControl_AfterUpdateEventHandler();
     public delegate void OlkDateControl_BeforeUpdateEventHandler(ref bool cancel);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -31,21 +31,21 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl"/> </remarks>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.OlkDateControlEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.OlkDateControlEvents))]
     public class OlkDateControl : _OlkDateControl, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.OlkDateControlEvents_SinkHelper _olkDateControlEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -75,9 +75,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -85,14 +85,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OlkDateControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OlkDateControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -102,7 +102,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkDateControl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -111,31 +111,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkDateControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkDateControl(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of OlkDateControl 
         /// </summary>		
-        public OlkDateControl():base("Outlook.OlkDateControl")
+        public OlkDateControl() : base("Outlook.OlkDateControl")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of OlkDateControl
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public OlkDateControl(string progId):base(progId)
+        public OlkDateControl(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -154,7 +154,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Click"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_ClickEventHandler ClickEvent
         {
             add
@@ -177,7 +177,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.DoubleClick"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_DoubleClickEventHandler DoubleClickEvent
         {
             add
@@ -200,7 +200,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseDown"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -223,7 +223,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseMove"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -246,7 +246,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.MouseUp"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -269,7 +269,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Enter"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_EnterEventHandler EnterEvent
         {
             add
@@ -292,7 +292,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Exit"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_ExitEventHandler ExitEvent
         {
             add
@@ -315,7 +315,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.KeyDown"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_KeyDownEventHandler KeyDownEvent
         {
             add
@@ -338,7 +338,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.KeyPress"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_KeyPressEventHandler KeyPressEvent
         {
             add
@@ -361,7 +361,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.KeyUp"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_KeyUpEventHandler KeyUpEvent
         {
             add
@@ -384,7 +384,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.Change"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_ChangeEventHandler ChangeEvent
         {
             add
@@ -407,7 +407,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.DropButtonClick"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_DropButtonClickEventHandler DropButtonClickEvent
         {
             add
@@ -430,7 +430,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.AfterUpdate"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_AfterUpdateEventHandler AfterUpdateEvent
         {
             add
@@ -453,7 +453,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkDateControl.BeforeUpdate"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkDateControl_BeforeUpdateEventHandler BeforeUpdateEvent
         {
             add
@@ -468,30 +468,30 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding Member
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkDateControlEvents_SinkHelper.Id);
 
 
-            if(Events.OlkDateControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.OlkDateControlEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _olkDateControlEvents_SinkHelper = new Events.OlkDateControlEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -500,7 +500,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -510,9 +510,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -534,16 +534,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -561,7 +561,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _olkDateControlEvents_SinkHelper)
+            if (null != _olkDateControlEvents_SinkHelper)
             {
                 _olkDateControlEvents_SinkHelper.Dispose();
                 _olkDateControlEvents_SinkHelper = null;
@@ -569,10 +569,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

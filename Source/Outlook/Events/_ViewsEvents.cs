@@ -6,22 +6,22 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000630A5-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _ViewsEvents
     {
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [SinkArgument("view", typeof(OutlookApi.View))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(400)]
         void ViewAdd([In, MarshalAs(UnmanagedType.IDispatch)] object view);
 
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [SinkArgument("view", typeof(OutlookApi.View))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64071)]
         void ViewRemove([In, MarshalAs(UnmanagedType.IDispatch)] object view);
@@ -36,14 +36,14 @@ namespace NetOffice.OutlookApi.Events
     public class _ViewsEvents_SinkHelper : SinkHelper, _ViewsEvents
     {
         #region Static
-        
+
         public static readonly string Id = "000630A5-0000-0000-C000-000000000046";
 
         #endregion
 
         #region Ctor
 
-        public _ViewsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _ViewsEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
@@ -80,8 +80,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

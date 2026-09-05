@@ -9,8 +9,8 @@ namespace NetOffice.OutlookApi.Native
     /// NativeInterface PropertyPage SupportByVersion Outlook, 9,10,11,12,14,15,16
     /// Represents a custom property page in the Options dialog box or in the folder Properties dialog box.
     /// </summary>
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-    [ComImport, Guid("0006307E-0000-0000-C000-000000000046"), TypeLibType((short) 4096)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+    [ComImport, Guid("0006307E-0000-0000-C000-000000000046"), TypeLibType((short)4096)]
     [EntityType(EntityType.IsNativeInterface)]
     public interface PropertyPage
     {
@@ -20,12 +20,12 @@ namespace NetOffice.OutlookApi.Native
         /// </summary>
         /// <param name="HelpFile">Specifies the Help file associated with the property page</param>
         /// <param name="HelpContext">Specifies the context ID of the Help topic associated with the property page</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("HelpFile", SinkArgumentType.String)]
         [SinkArgument("HelpContext", SinkArgumentType.Int32)]
-        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8448)]
-        void GetPageInfo([MarshalAs(19)] [In] [Out] ref string HelpFile, [In] [Out] ref int HelpContext);
-      
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8448)]
+        void GetPageInfo([MarshalAs(19)][In][Out] ref string HelpFile, [In][Out] ref int HelpContext);
+
         /// <summary>
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16
         /// Get
@@ -39,8 +39,8 @@ namespace NetOffice.OutlookApi.Native
         /// SupportByVersion Outlook, 9,10,11,12,14,15,16
         /// Applies the changes that have been made in a custom property page.
         /// </summary>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType=MethodCodeType.Runtime), DispId(8450)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(8450)]
         void Apply();
     }
 }

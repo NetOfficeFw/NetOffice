@@ -12,11 +12,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _AutoFormatRules 
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class _AutoFormatRules : COMObject, IEnumerableProvider<NetOffice.OutlookApi.AutoFormatRule>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _AutoFormatRules(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OutlookApi
         public _AutoFormatRules(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.OutlookApi
         public _AutoFormatRules(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _AutoFormatRules(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _AutoFormatRules() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _AutoFormatRules(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Application"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -130,7 +130,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Class"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Session"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -160,7 +160,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Count"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -191,7 +191,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OutlookApi.AutoFormatRule this[object index]
         {
@@ -206,7 +206,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Add"/> </remarks>
         /// <param name="name">string name</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.AutoFormatRule Add(string name)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.AutoFormatRule>(this, "Add", NetOffice.OutlookApi.AutoFormatRule.LateBindingApiWrapperType, name);
@@ -218,7 +218,7 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Insert"/> </remarks>
         /// <param name="name">string name</param>
         /// <param name="index">object index</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.AutoFormatRule Insert(string name, object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.AutoFormatRule>(this, "Insert", NetOffice.OutlookApi.AutoFormatRule.LateBindingApiWrapperType, name, index);
@@ -229,30 +229,30 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Remove"/> </remarks>
         /// <param name="index">object index</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Remove(object index)
         {
-             Factory.ExecuteMethod(this, "Remove", index);
+            Factory.ExecuteMethod(this, "Remove", index);
         }
 
         /// <summary>
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.RemoveAll"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void RemoveAll()
         {
-             Factory.ExecuteMethod(this, "RemoveAll");
+            Factory.ExecuteMethod(this, "RemoveAll");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.AutoFormatRules.Save"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void Save()
         {
-             Factory.ExecuteMethod(this, "Save");
+            Factory.ExecuteMethod(this, "Save");
         }
 
         #endregion
@@ -311,6 +311,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

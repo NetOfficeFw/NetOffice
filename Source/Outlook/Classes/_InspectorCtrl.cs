@@ -7,8 +7,8 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
-    #pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
     #endregion
 
@@ -22,15 +22,15 @@ namespace NetOffice.OutlookApi
     [ComEventInterface(typeof(Events._DInspectorEvents))]
     public class _InspectorCtrl : _DInspectorCtrl, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events._DInspectorEvents_SinkHelper __DInspectorEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -60,9 +60,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -70,14 +70,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _InspectorCtrl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _InspectorCtrl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -87,7 +87,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _InspectorCtrl(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -96,31 +96,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _InspectorCtrl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _InspectorCtrl(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of _InspectorCtrl 
         /// </summary>		
-        public _InspectorCtrl():base("Outlook._InspectorCtrl")
+        public _InspectorCtrl() : base("Outlook._InspectorCtrl")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of _InspectorCtrl
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public _InspectorCtrl(string progId):base(progId)
+        public _InspectorCtrl(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -131,30 +131,30 @@ namespace NetOffice.OutlookApi
         #region Events
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events._DInspectorEvents_SinkHelper.Id);
 
 
-            if(Events._DInspectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events._DInspectorEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 __DInspectorEvents_SinkHelper = new Events._DInspectorEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -173,9 +173,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -197,16 +197,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -224,7 +224,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != __DInspectorEvents_SinkHelper)
+            if (null != __DInspectorEvents_SinkHelper)
             {
                 __DInspectorEvents_SinkHelper.Dispose();
                 __DInspectorEvents_SinkHelper = null;
@@ -232,10 +232,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

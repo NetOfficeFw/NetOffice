@@ -7,13 +7,13 @@ namespace NetOffice.OutlookApi
 {
     #region Delegates
 
-    #pragma warning disable
+#pragma warning disable
     public delegate void OlkLabel_ClickEventHandler();
     public delegate void OlkLabel_DoubleClickEventHandler();
     public delegate void OlkLabel_MouseDownEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
     public delegate void OlkLabel_MouseMoveEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
     public delegate void OlkLabel_MouseUpEventHandler(NetOffice.OutlookApi.Enums.OlMouseButton button, NetOffice.OutlookApi.Enums.OlShiftState shift, Single x, Single y);
-    #pragma warning restore
+#pragma warning restore
 
     #endregion
 
@@ -22,21 +22,21 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel"/> </remarks>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass)]
     [EventSink(typeof(Events.OlkLabelEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.OlkLabelEvents))]
     public class OlkLabel : _OlkLabel, IEventBinding
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
         private Events.OlkLabelEvents_SinkHelper _olkLabelEvents_SinkHelper;
-    
+
         #endregion
 
         #region Type Information
@@ -52,7 +52,7 @@ namespace NetOffice.OutlookApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -66,9 +66,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Construction
 
         ///<param name="factory">current used factory core</param>
@@ -76,14 +76,14 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OlkLabel(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public OlkLabel(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="factory">current used factory core</param>
@@ -93,7 +93,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkLabel(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -102,31 +102,31 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkLabel(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
-            
+
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public OlkLabel(ICOMObject replacedObject) : base(replacedObject)
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of OlkLabel 
         /// </summary>		
-        public OlkLabel():base("Outlook.OlkLabel")
+        public OlkLabel() : base("Outlook.OlkLabel")
         {
-            
+
         }
-        
+
         /// <summary>
         /// Creates a new instance of OlkLabel
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public OlkLabel(string progId):base(progId)
+        public OlkLabel(string progId) : base(progId)
         {
-            
+
         }
 
         #endregion
@@ -145,7 +145,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.Click"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkLabel_ClickEventHandler ClickEvent
         {
             add
@@ -168,7 +168,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.DoubleClick"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkLabel_DoubleClickEventHandler DoubleClickEvent
         {
             add
@@ -191,7 +191,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.MouseDown"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkLabel_MouseDownEventHandler MouseDownEvent
         {
             add
@@ -214,7 +214,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.MouseMove"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkLabel_MouseMoveEventHandler MouseMoveEvent
         {
             add
@@ -237,7 +237,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12 14 15,16
         /// </summary>
         ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.OlkLabel.MouseUp"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public event OlkLabel_MouseUpEventHandler MouseUpEvent
         {
             add
@@ -252,30 +252,30 @@ namespace NetOffice.OutlookApi
         }
 
         #endregion
-       
+
         #region IEventBinding
-        
+
         /// <summary>
         /// Creates active sink helper
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void CreateEventBridge()
         {
-            if(false == Factory.Settings.EnableEvents)
+            if (false == Factory.Settings.EnableEvents)
                 return;
-    
+
             if (null != _connectPoint)
                 return;
-    
+
             if (null == _activeSinkId)
                 _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.OlkLabelEvents_SinkHelper.Id);
 
 
-            if(Events.OlkLabelEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            if (Events.OlkLabelEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
             {
                 _olkLabelEvents_SinkHelper = new Events.OlkLabelEvents_SinkHelper(this, _connectPoint);
                 return;
-            } 
+            }
         }
 
         /// <summary>
@@ -284,7 +284,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool EventBridgeInitialized
         {
-            get 
+            get
             {
                 return (null != _connectPoint);
             }
@@ -294,9 +294,9 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <returns>true if one or more event is active, otherwise false</returns>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        public bool HasEventRecipients()       
+        public bool HasEventRecipients()
         {
-            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);            
+            return NetOffice.Events.CoClassEventReflector.HasEventRecipients(this, LateBindingApiWrapperType);
         }
 
         /// <summary>
@@ -318,16 +318,16 @@ namespace NetOffice.OutlookApi
         {
             return NetOffice.Events.CoClassEventReflector.GetEventRecipients(this, LateBindingApiWrapperType, eventName);
         }
-       
+
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
-            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
-         }
-        
+            return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);
+        }
+
         /// <summary>
         /// Raise an instance event
         /// </summary>
@@ -345,7 +345,7 @@ namespace NetOffice.OutlookApi
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-            if( null != _olkLabelEvents_SinkHelper)
+            if (null != _olkLabelEvents_SinkHelper)
             {
                 _olkLabelEvents_SinkHelper.Dispose();
                 _olkLabelEvents_SinkHelper = null;
@@ -353,10 +353,10 @@ namespace NetOffice.OutlookApi
 
             _connectPoint = null;
         }
-        
+
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
 

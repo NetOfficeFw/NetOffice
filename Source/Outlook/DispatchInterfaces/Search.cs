@@ -10,11 +10,11 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search"/> </remarks>
-    [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Search : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Search(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OutlookApi
         public Search(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OutlookApi
         public Search(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Search(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Search() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Search(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Application"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -128,7 +128,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Class"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Session"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -158,7 +158,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -172,7 +172,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Filter"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public string Filter
         {
             get
@@ -186,7 +186,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.IsSynchronous"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public bool IsSynchronous
         {
             get
@@ -200,7 +200,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Results"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Results Results
         {
@@ -215,7 +215,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.SearchSubFolders"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public bool SearchSubFolders
         {
             get
@@ -229,7 +229,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Tag"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public string Tag
         {
             get
@@ -243,7 +243,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Scope"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public string Scope
         {
             get
@@ -260,10 +260,10 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Stop"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public void Stop()
         {
-             Factory.ExecuteMethod(this, "Stop");
+            Factory.ExecuteMethod(this, "Stop");
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Save"/> </remarks>
         /// <param name="name">string name</param>
-        [SupportByVersion("Outlook", 11,12,14,15,16)]
+        [SupportByVersion("Outlook", 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder Save(string name)
         {
@@ -282,7 +282,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.GetTable"/> </remarks>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Table GetTable()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
@@ -290,6 +290,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

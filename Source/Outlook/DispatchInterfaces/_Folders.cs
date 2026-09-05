@@ -12,11 +12,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _Folders 
     /// SupportByVersion Outlook, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class _Folders : COMObject, IEnumerableProvider<NetOffice.OutlookApi.MAPIFolder>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Folders(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OutlookApi
         public _Folders(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.OutlookApi
         public _Folders(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Folders(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Folders() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Folders(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Application"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -130,7 +130,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Class"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -144,7 +144,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Session"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -160,7 +160,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -174,7 +174,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Count"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public object RawTable
         {
@@ -206,7 +206,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OutlookApi.MAPIFolder this[object index]
@@ -223,7 +223,7 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Add"/> </remarks>
         /// <param name="name">string name</param>
         /// <param name="type">optional object type</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder Add(string name, object type)
         {
@@ -237,7 +237,7 @@ namespace NetOffice.OutlookApi
         /// <param name="name">string name</param>
         [CustomMethod]
         [BaseResult]
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.MAPIFolder Add(string name)
         {
             return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "Add", name);
@@ -247,7 +247,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.GetFirst"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder GetFirst()
         {
@@ -258,7 +258,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.GetLast"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder GetLast()
         {
@@ -269,7 +269,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.GetNext"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder GetNext()
         {
@@ -280,7 +280,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.GetPrevious"/> </remarks>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder GetPrevious()
         {
@@ -292,10 +292,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Folders.Remove"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 9, 10, 11, 12, 14, 15, 16)]
         public void Remove(Int32 index)
         {
-             Factory.ExecuteMethod(this, "Remove", index);
+            Factory.ExecuteMethod(this, "Remove", index);
         }
 
         #endregion
@@ -354,6 +354,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -27,26 +27,26 @@ namespace NetOffice.OutlookApi.Events
     public class _DPageWrapCtrlEvents_SinkHelper : SinkHelper, _DPageWrapCtrlEvents
     {
         #region Static
-        
+
         public static readonly string Id = "494F0971-DD96-11D2-AF70-006008AFF117";
 
         #endregion
 
         #region Ctor
 
-        public _DPageWrapCtrlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _DPageWrapCtrlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region _DPageWrapCtrlEvents
-        
+
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

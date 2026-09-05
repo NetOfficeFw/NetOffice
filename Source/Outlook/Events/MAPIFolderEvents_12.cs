@@ -6,28 +6,28 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("000630F7-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface MAPIFolderEvents_12
     {
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [SinkArgument("moveTo", typeof(OutlookApi.MAPIFolder))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64424)]
-        void BeforeFolderMove([In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel);
+        void BeforeFolderMove([In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In][Out] ref object cancel);
 
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [SinkArgument("item", SinkArgumentType.UnknownProxy)]
         [SinkArgument("moveTo", typeof(OutlookApi.MAPIFolder))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64425)]
-        void BeforeItemMove([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel);
+        void BeforeItemMove([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In][Out] ref object cancel);
     }
 
     #endregion
@@ -39,23 +39,23 @@ namespace NetOffice.OutlookApi.Events
     public class MAPIFolderEvents_12_SinkHelper : SinkHelper, MAPIFolderEvents_12
     {
         #region Static
-        
+
         public static readonly string Id = "000630F7-0000-0000-C000-000000000046";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public MAPIFolderEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public MAPIFolderEvents_12_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region MAPIFolderEvents_12
-        
-        public void BeforeFolderMove([In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel)
+
+        public void BeforeFolderMove([In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeFolderMove"))
             {
@@ -72,7 +72,7 @@ namespace NetOffice.OutlookApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void BeforeItemMove([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In] [Out] ref object cancel)
+        public void BeforeItemMove([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In, MarshalAs(UnmanagedType.IDispatch)] object moveTo, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeItemMove"))
             {
@@ -93,8 +93,8 @@ namespace NetOffice.OutlookApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

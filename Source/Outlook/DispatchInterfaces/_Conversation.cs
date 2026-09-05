@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _Conversation 
     /// SupportByVersion Outlook, 14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 14,15,16)]
+    [SupportByVersion("Outlook", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Conversation : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Conversation(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _Conversation(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OutlookApi
         public _Conversation(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Conversation(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Conversation() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Conversation(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Application"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -127,7 +127,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Class"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -141,7 +141,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Session"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -157,7 +157,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.ConversationID"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string ConversationID
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetTable"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Table GetTable()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
@@ -199,7 +199,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetChildren"/> </remarks>
         /// <param name="item">object item</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.SimpleItems GetChildren(object item)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.SimpleItems>(this, "GetChildren", NetOffice.OutlookApi.SimpleItems.LateBindingApiWrapperType, item);
@@ -210,7 +210,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetParent"/> </remarks>
         /// <param name="item">object item</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public object GetParent(object item)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetParent", item);
@@ -220,7 +220,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetRootItems"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.SimpleItems GetRootItems()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.SimpleItems>(this, "GetRootItems", NetOffice.OutlookApi.SimpleItems.LateBindingApiWrapperType);
@@ -231,7 +231,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetAlwaysAssignCategories"/> </remarks>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public string GetAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
         {
             return Factory.ExecuteStringMethodGet(this, "GetAlwaysAssignCategories", store);
@@ -242,7 +242,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetAlwaysDelete"/> </remarks>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation GetAlwaysDelete(NetOffice.OutlookApi._Store store)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation>(this, "GetAlwaysDelete", store);
@@ -253,7 +253,7 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.GetAlwaysMoveToFolder"/> </remarks>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi.MAPIFolder GetAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
         {
@@ -264,20 +264,20 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.MarkAsRead"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void MarkAsRead()
         {
-             Factory.ExecuteMethod(this, "MarkAsRead");
+            Factory.ExecuteMethod(this, "MarkAsRead");
         }
 
         /// <summary>
         /// SupportByVersion Outlook 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.MarkAsUnread"/> </remarks>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void MarkAsUnread()
         {
-             Factory.ExecuteMethod(this, "MarkAsUnread");
+            Factory.ExecuteMethod(this, "MarkAsUnread");
         }
 
         /// <summary>
@@ -286,10 +286,10 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.SetAlwaysAssignCategories"/> </remarks>
         /// <param name="categories">string categories</param>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void SetAlwaysAssignCategories(string categories, NetOffice.OutlookApi._Store store)
         {
-             Factory.ExecuteMethod(this, "SetAlwaysAssignCategories", categories, store);
+            Factory.ExecuteMethod(this, "SetAlwaysAssignCategories", categories, store);
         }
 
         /// <summary>
@@ -298,10 +298,10 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.SetAlwaysDelete"/> </remarks>
         /// <param name="alwaysDelete">NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete</param>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void SetAlwaysDelete(NetOffice.OutlookApi.Enums.OlAlwaysDeleteConversation alwaysDelete, NetOffice.OutlookApi._Store store)
         {
-             Factory.ExecuteMethod(this, "SetAlwaysDelete", alwaysDelete, store);
+            Factory.ExecuteMethod(this, "SetAlwaysDelete", alwaysDelete, store);
         }
 
         /// <summary>
@@ -310,10 +310,10 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.SetAlwaysMoveToFolder"/> </remarks>
         /// <param name="moveToFolder">NetOffice.OutlookApi.MAPIFolder moveToFolder</param>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void SetAlwaysMoveToFolder(NetOffice.OutlookApi.MAPIFolder moveToFolder, NetOffice.OutlookApi._Store store)
         {
-             Factory.ExecuteMethod(this, "SetAlwaysMoveToFolder", moveToFolder, store);
+            Factory.ExecuteMethod(this, "SetAlwaysMoveToFolder", moveToFolder, store);
         }
 
         /// <summary>
@@ -321,10 +321,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.ClearAlwaysAssignCategories"/> </remarks>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void ClearAlwaysAssignCategories(NetOffice.OutlookApi._Store store)
         {
-             Factory.ExecuteMethod(this, "ClearAlwaysAssignCategories", store);
+            Factory.ExecuteMethod(this, "ClearAlwaysAssignCategories", store);
         }
 
         /// <summary>
@@ -332,10 +332,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.StopAlwaysDelete"/> </remarks>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void StopAlwaysDelete(NetOffice.OutlookApi._Store store)
         {
-             Factory.ExecuteMethod(this, "StopAlwaysDelete", store);
+            Factory.ExecuteMethod(this, "StopAlwaysDelete", store);
         }
 
         /// <summary>
@@ -343,14 +343,14 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Conversation.StopAlwaysMoveToFolder"/> </remarks>
         /// <param name="store">NetOffice.OutlookApi._Store store</param>
-        [SupportByVersion("Outlook", 14,15,16)]
+        [SupportByVersion("Outlook", 14, 15, 16)]
         public void StopAlwaysMoveToFolder(NetOffice.OutlookApi._Store store)
         {
-             Factory.ExecuteMethod(this, "StopAlwaysMoveToFolder", store);
+            Factory.ExecuteMethod(this, "StopAlwaysMoveToFolder", store);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

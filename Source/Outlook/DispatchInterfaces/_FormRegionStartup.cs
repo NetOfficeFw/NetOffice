@@ -9,11 +9,11 @@ namespace NetOffice.OutlookApi
     /// DispatchInterface _FormRegionStartup 
     /// SupportByVersion Outlook, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Outlook", 12,14,15,16)]
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _FormRegionStartup : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _FormRegionStartup(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OutlookApi
         public _FormRegionStartup(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OutlookApi
         public _FormRegionStartup(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _FormRegionStartup(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _FormRegionStartup() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _FormRegionStartup(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -120,10 +120,10 @@ namespace NetOffice.OutlookApi
         /// <param name="lCID">Int32 lCID</param>
         /// <param name="formRegionMode">NetOffice.OutlookApi.Enums.OlFormRegionMode formRegionMode</param>
         /// <param name="formRegionSize">NetOffice.OutlookApi.Enums.OlFormRegionSize formRegionSize</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public object GetFormRegionStorage(string formRegionName, object item, Int32 lCID, NetOffice.OutlookApi.Enums.OlFormRegionMode formRegionMode, NetOffice.OutlookApi.Enums.OlFormRegionSize formRegionSize)
         {
-            return Factory.ExecuteVariantMethodGet(this, "GetFormRegionStorage", new object[]{ formRegionName, item, lCID, formRegionMode, formRegionSize });
+            return Factory.ExecuteVariantMethodGet(this, "GetFormRegionStorage", new object[] { formRegionName, item, lCID, formRegionMode, formRegionSize });
         }
 
         /// <summary>
@@ -131,10 +131,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegionStartup.BeforeFormRegionShow"/> </remarks>
         /// <param name="formRegion">NetOffice.OutlookApi.FormRegion formRegion</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public void BeforeFormRegionShow(NetOffice.OutlookApi.FormRegion formRegion)
         {
-             Factory.ExecuteMethod(this, "BeforeFormRegionShow", formRegion);
+            Factory.ExecuteMethod(this, "BeforeFormRegionShow", formRegion);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace NetOffice.OutlookApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.FormRegionStartup.GetFormRegionManifest"/> </remarks>
         /// <param name="formRegionName">string formRegionName</param>
         /// <param name="lCID">Int32 lCID</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public object GetFormRegionManifest(string formRegionName, Int32 lCID)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetFormRegionManifest", formRegionName, lCID);
@@ -156,7 +156,7 @@ namespace NetOffice.OutlookApi
         /// <param name="formRegionName">string formRegionName</param>
         /// <param name="lCID">Int32 lCID</param>
         /// <param name="icon">NetOffice.OutlookApi.Enums.OlFormRegionIcon icon</param>
-        [SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
         public object GetFormRegionIcon(string formRegionName, Int32 lCID, NetOffice.OutlookApi.Enums.OlFormRegionIcon icon)
         {
             return Factory.ExecuteVariantMethodGet(this, "GetFormRegionIcon", formRegionName, lCID, icon);
@@ -164,6 +164,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

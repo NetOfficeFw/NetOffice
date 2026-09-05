@@ -13,11 +13,11 @@ namespace NetOffice.OutlookApi
     /// SupportByVersion Outlook, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties"/> </remarks>
-    [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class ItemProperties : COMObject, IEnumerableProvider<NetOffice.OutlookApi.ItemProperty>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -45,9 +45,9 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -62,7 +62,7 @@ namespace NetOffice.OutlookApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ItemProperties(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -71,7 +71,7 @@ namespace NetOffice.OutlookApi
         public ItemProperties(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -89,26 +89,26 @@ namespace NetOffice.OutlookApi
         public ItemProperties(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ItemProperties(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ItemProperties() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ItemProperties(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties.Application"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._Application Application
         {
@@ -131,7 +131,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties.Class"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.Enums.OlObjectClass Class
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties.Session"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [BaseResult]
         public NetOffice.OutlookApi._NameSpace Session
         {
@@ -161,7 +161,7 @@ namespace NetOffice.OutlookApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties.Parent"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -175,7 +175,7 @@ namespace NetOffice.OutlookApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties.Count"/> </remarks>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public Int32 Count
         {
             get
@@ -192,7 +192,7 @@ namespace NetOffice.OutlookApi
         /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.OutlookApi.ItemProperty this[object index]
         {
@@ -210,7 +210,7 @@ namespace NetOffice.OutlookApi
         /// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType type</param>
         /// <param name="addToFolderFields">optional object addToFolderFields</param>
         /// <param name="displayFormat">optional object displayFormat</param>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields, object displayFormat)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ItemProperty>(this, "Add", NetOffice.OutlookApi.ItemProperty.LateBindingApiWrapperType, name, type, addToFolderFields, displayFormat);
@@ -223,7 +223,7 @@ namespace NetOffice.OutlookApi
         /// <param name="name">string name</param>
         /// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType type</param>
         [CustomMethod]
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ItemProperty>(this, "Add", NetOffice.OutlookApi.ItemProperty.LateBindingApiWrapperType, name, type);
@@ -237,7 +237,7 @@ namespace NetOffice.OutlookApi
         /// <param name="type">NetOffice.OutlookApi.Enums.OlUserPropertyType type</param>
         /// <param name="addToFolderFields">optional object addToFolderFields</param>
         [CustomMethod]
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public NetOffice.OutlookApi.ItemProperty Add(string name, NetOffice.OutlookApi.Enums.OlUserPropertyType type, object addToFolderFields)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.ItemProperty>(this, "Add", NetOffice.OutlookApi.ItemProperty.LateBindingApiWrapperType, name, type, addToFolderFields);
@@ -248,10 +248,10 @@ namespace NetOffice.OutlookApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.ItemProperties.Remove"/> </remarks>
         /// <param name="index">Int32 index</param>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         public void Remove(Int32 index)
         {
-             Factory.ExecuteMethod(this, "Remove", index);
+            Factory.ExecuteMethod(this, "Remove", index);
         }
 
         #endregion
@@ -292,7 +292,7 @@ namespace NetOffice.OutlookApi
         /// <summary>
         /// SupportByVersion Outlook, 10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -300,6 +300,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
