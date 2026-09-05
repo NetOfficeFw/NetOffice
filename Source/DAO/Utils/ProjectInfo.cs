@@ -19,7 +19,7 @@ namespace DAOApi.Utils
         private Assembly  _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
         private Type[]	  _exportedTypes;
-		private string[]  _dependents;
+        private string[]  _dependents;
 
         #endregion
 
@@ -80,8 +80,8 @@ namespace DAOApi.Utils
         {
             get
             {
-				if(null == _dependents)
-					_dependents = new string[0];
+                if(null == _dependents)
+                    _dependents = new string[0];
                 return _dependents;
             }
         }
