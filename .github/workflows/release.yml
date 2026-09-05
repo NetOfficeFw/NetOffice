@@ -192,6 +192,6 @@ jobs:
 
     - name: Publish packages
       run: |
-        dotnet nuget push "*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json
+        dotnet nuget push "*.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
       env:
         NUGET_API_KEY: ${{ steps.nuget.outputs.NUGET_API_KEY }}
