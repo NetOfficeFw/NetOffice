@@ -12,11 +12,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _Report3 
     /// SupportByVersion Access, 12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 12,14,15,16)]
+    [SupportByVersion("Access", 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
     public class _Report3 : _Report2, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Report3(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.AccessApi
         public _Report3(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.AccessApi
         public _Report3(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Report3(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Report3() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Report3(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -132,12 +132,12 @@ namespace NetOffice.AccessApi
         {
             return get__SectionOld(index);
         }
-        
+
         /// <summary>
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool FilterOnLoad
         {
             get
@@ -154,7 +154,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool OrderByOnLoad
         {
             get
@@ -171,7 +171,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte DefaultView
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool AllowReportView
         {
             get
@@ -205,7 +205,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte ScrollBars
         {
             get
@@ -222,7 +222,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte Cycle
         {
             get
@@ -239,7 +239,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public bool AllowDesignChanges
         {
@@ -257,7 +257,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnCurrent
         {
             get
@@ -274,7 +274,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool KeyPreview
         {
             get
@@ -291,7 +291,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int32 TimerInterval
         {
             get
@@ -308,7 +308,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public Int16 CurrentView
         {
             get
@@ -325,7 +325,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnOpenMacro
         {
@@ -343,7 +343,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnCloseMacro
         {
@@ -361,7 +361,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnActivateMacro
         {
@@ -379,7 +379,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnDeactivateMacro
         {
@@ -397,7 +397,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnNoDataMacro
         {
@@ -415,7 +415,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnPageMacro
         {
@@ -433,7 +433,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnErrorMacro
         {
@@ -451,7 +451,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnCurrentMacro
         {
@@ -469,7 +469,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnLoadMacro
         {
@@ -487,7 +487,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnResizeMacro
         {
@@ -505,7 +505,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnUnloadMacro
         {
@@ -523,7 +523,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnGotFocusMacro
         {
@@ -541,7 +541,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnLostFocusMacro
         {
@@ -559,7 +559,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnClickMacro
         {
@@ -577,7 +577,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnDblClickMacro
         {
@@ -595,7 +595,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseDownMacro
         {
@@ -613,7 +613,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseMoveMacro
         {
@@ -631,7 +631,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnMouseUpMacro
         {
@@ -649,7 +649,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyDownMacro
         {
@@ -667,7 +667,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyUpMacro
         {
@@ -685,7 +685,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnKeyPressMacro
         {
@@ -703,7 +703,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnFilterMacro
         {
@@ -721,7 +721,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnApplyFilterMacro
         {
@@ -739,7 +739,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string OnTimerMacro
         {
@@ -757,7 +757,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string MouseWheelMacro
         {
@@ -775,7 +775,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool ShowPageMargins
         {
             get
@@ -792,7 +792,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool FitToPage
         {
             get
@@ -809,7 +809,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public bool AllowLayoutView
         {
             get
@@ -826,7 +826,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnLoad
         {
             get
@@ -843,7 +843,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnResize
         {
             get
@@ -860,7 +860,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnUnload
         {
             get
@@ -877,7 +877,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnGotFocus
         {
             get
@@ -894,7 +894,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnLostFocus
         {
             get
@@ -911,7 +911,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnClick
         {
             get
@@ -928,7 +928,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnDblClick
         {
             get
@@ -945,7 +945,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnMouseDown
         {
             get
@@ -962,7 +962,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnMouseMove
         {
             get
@@ -979,7 +979,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnMouseUp
         {
             get
@@ -996,7 +996,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnKeyDown
         {
             get
@@ -1013,7 +1013,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnKeyUp
         {
             get
@@ -1030,7 +1030,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnKeyPress
         {
             get
@@ -1047,7 +1047,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnFilter
         {
             get
@@ -1064,7 +1064,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnApplyFilter
         {
             get
@@ -1081,7 +1081,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string OnTimer
         {
             get
@@ -1098,7 +1098,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string MouseWheel
         {
             get
@@ -1115,7 +1115,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public byte DisplayOnSharePointSite
         {
             get
@@ -1133,7 +1133,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.AccessApi._Section get_Section(object index)
         {
@@ -1145,7 +1145,7 @@ namespace NetOffice.AccessApi
         /// Alias for get_Section
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16), Redirect("get_Section")]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16), Redirect("get_Section")]
         public NetOffice.AccessApi._Section Section(object index)
         {
             return get_Section(index);
@@ -1155,7 +1155,7 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public string RibbonName
         {
             get
@@ -1173,7 +1173,7 @@ namespace NetOffice.AccessApi
         /// Get
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Access", 14,15,16)]
+        [SupportByVersion("Access", 14, 15, 16)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public NetOffice.AccessApi.Section get_SectionOld(object index)
         {
@@ -1185,7 +1185,7 @@ namespace NetOffice.AccessApi
         /// Alias for get_SectionOld
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("Access", 14,15,16), Redirect("get_SectionOld")]
+        [SupportByVersion("Access", 14, 15, 16), Redirect("get_SectionOld")]
         public NetOffice.AccessApi.Section SectionOld(object index)
         {
             return get_SectionOld(index);
@@ -1198,14 +1198,14 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// SupportByVersion Access 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         public void Requery()
         {
-             Factory.ExecuteMethod(this, "Requery");
+            Factory.ExecuteMethod(this, "Requery");
         }
 
         #endregion
-     
+
         #region IEnumerableProvider<object>
 
         ICOMObject IEnumerableProvider<object>.GetComObjectEnumerator(ICOMObject parent)
@@ -1240,7 +1240,7 @@ namespace NetOffice.AccessApi
         /// <summary>
         /// SupportByVersion Access, 12,14,15,16
         /// </summary>
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
         {
             return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
@@ -1248,6 +1248,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

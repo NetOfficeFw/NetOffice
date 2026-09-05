@@ -6,140 +6,140 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Access", 12,14,15,16)]
+    [SupportByVersion("Access", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("D7281A87-4B30-41C5-AB7B-FABF9A35442A"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _ReportEvents2
     {
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2066)]
-        void Open([In] [Out] ref object cancel);
+        void Open([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2070)]
         void Close();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2071)]
         void Activate();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2072)]
         void Deactivate();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("dataErr", SinkArgumentType.Int16)]
         [SinkArgument("response", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2083)]
-        void Error([In] [Out] ref object dataErr, [In] [Out] ref object response);
+        void Error([In][Out] ref object dataErr, [In][Out] ref object response);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2161)]
-        void NoData([In] [Out] ref object cancel);
+        void NoData([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2162)]
         void Page();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2058)]
         void Current();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2067)]
         void Load();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2068)]
         void Resize();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2069)]
-        void Unload([In] [Out] ref object cancel);
+        void Unload([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2073)]
         void GotFocus();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2074)]
         void LostFocus();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-600)]
         void Click();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-601)]
-        void DblClick([In] [Out] ref object cancel);
+        void DblClick([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-605)]
-        void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseDown([In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-606)]
-        void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseMove([In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("button", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [SinkArgument("x", SinkArgumentType.Single)]
         [SinkArgument("y", SinkArgumentType.Single)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-607)]
-        void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y);
+        void MouseUp([In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("keyCode", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-602)]
-        void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift);
+        void KeyDown([In][Out] ref object keyCode, [In][Out] ref object shift);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("keyAscii", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-603)]
-        void KeyPress([In] [Out] ref object keyAscii);
+        void KeyPress([In][Out] ref object keyAscii);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(-604)]
-        void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift);
+        void KeyUp([In][Out] ref object keyCode, [In][Out] ref object shift);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("keyCode", SinkArgumentType.Int16)]
         [SinkArgument("shift", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2084)]
         void Timer();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [SinkArgument("filterType", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2155)]
-        void Filter([In] [Out] ref object cancel, [In] [Out] ref object filterType);
+        void Filter([In][Out] ref object cancel, [In][Out] ref object filterType);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [SinkArgument("applyType", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2156)]
-        void ApplyFilter([In] [Out] ref object cancel, [In] [Out] ref object applyType);
+        void ApplyFilter([In][Out] ref object cancel, [In][Out] ref object applyType);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("page", SinkArgumentType.Bool)]
         [SinkArgument("count", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2401)]
@@ -155,23 +155,23 @@ namespace NetOffice.AccessApi.Events
     public class _ReportEvents2_SinkHelper : SinkHelper, _ReportEvents2
     {
         #region Static
-        
+
         public static readonly string Id = "D7281A87-4B30-41C5-AB7B-FABF9A35442A";
-        
+
         #endregion
-        
+
         #region Ctor
 
-        public _ReportEvents2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _ReportEvents2_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-            
+
         #region _ReportEvents2
-        
-        public void Open([In] [Out] ref object cancel)
+
+        public void Open([In][Out] ref object cancel)
         {
             if (!Validate("Open"))
             {
@@ -219,7 +219,7 @@ namespace NetOffice.AccessApi.Events
             EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
         }
 
-        public void Error([In] [Out] ref object dataErr, [In] [Out] ref object response)
+        public void Error([In][Out] ref object dataErr, [In][Out] ref object response)
         {
             if (!Validate("Error"))
             {
@@ -236,7 +236,7 @@ namespace NetOffice.AccessApi.Events
             response = ToInt16(paramsArray[1]);
         }
 
-        public void NoData([In] [Out] ref object cancel)
+        public void NoData([In][Out] ref object cancel)
         {
             if (!Validate("NoData"))
             {
@@ -295,14 +295,14 @@ namespace NetOffice.AccessApi.Events
             EventBinding.RaiseCustomEvent("Resize", ref paramsArray);
         }
 
-        public void Unload([In] [Out] ref object cancel)
+        public void Unload([In][Out] ref object cancel)
         {
             if (!Validate("Unload"))
             {
                 Invoker.ReleaseParamsArray(cancel);
                 return;
             }
-            
+
             object[] paramsArray = new object[1];
             paramsArray.SetValue(cancel, 0);
             EventBinding.RaiseCustomEvent("Unload", ref paramsArray);
@@ -343,7 +343,7 @@ namespace NetOffice.AccessApi.Events
             EventBinding.RaiseCustomEvent("Click", ref paramsArray);
         }
 
-        public void DblClick([In] [Out] ref object cancel)
+        public void DblClick([In][Out] ref object cancel)
         {
             if (!Validate("DblClick"))
             {
@@ -358,7 +358,7 @@ namespace NetOffice.AccessApi.Events
             cancel = ToInt16(paramsArray[0]);
         }
 
-        public void MouseDown([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        public void MouseDown([In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y)
         {
             if (!Validate("MouseDown"))
             {
@@ -379,7 +379,7 @@ namespace NetOffice.AccessApi.Events
             y = ToSingle(paramsArray[3]);
         }
 
-        public void MouseMove([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        public void MouseMove([In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y)
         {
             if (!Validate("MouseMove"))
             {
@@ -400,7 +400,7 @@ namespace NetOffice.AccessApi.Events
             y = ToSingle(paramsArray[3]);
         }
 
-        public void MouseUp([In] [Out] ref object button, [In] [Out] ref object shift, [In] [Out] ref object x, [In] [Out] ref object y)
+        public void MouseUp([In][Out] ref object button, [In][Out] ref object shift, [In][Out] ref object x, [In][Out] ref object y)
         {
             if (!Validate("MouseUp"))
             {
@@ -421,7 +421,7 @@ namespace NetOffice.AccessApi.Events
             y = ToSingle(paramsArray[3]);
         }
 
-        public void KeyDown([In] [Out] ref object keyCode, [In] [Out] ref object shift)
+        public void KeyDown([In][Out] ref object keyCode, [In][Out] ref object shift)
         {
             if (!Validate("MouseUp"))
             {
@@ -438,7 +438,7 @@ namespace NetOffice.AccessApi.Events
             shift = ToInt16(paramsArray[1]);
         }
 
-        public void KeyPress([In] [Out] ref object keyAscii)
+        public void KeyPress([In][Out] ref object keyAscii)
         {
             if (!Validate("KeyPress"))
             {
@@ -453,7 +453,7 @@ namespace NetOffice.AccessApi.Events
             keyAscii = ToInt16(paramsArray[0]);
         }
 
-        public void KeyUp([In] [Out] ref object keyCode, [In] [Out] ref object shift)
+        public void KeyUp([In][Out] ref object keyCode, [In][Out] ref object shift)
         {
             if (!Validate("KeyUp"))
             {
@@ -469,7 +469,7 @@ namespace NetOffice.AccessApi.Events
             keyCode = ToInt16(paramsArray[0]);
             shift = ToInt16(paramsArray[1]);
         }
-        
+
         public void Timer()
         {
             if (!Validate("Timer"))
@@ -481,7 +481,7 @@ namespace NetOffice.AccessApi.Events
             EventBinding.RaiseCustomEvent("Timer", ref paramsArray);
         }
 
-        public void Filter([In] [Out] ref object cancel, [In] [Out] ref object filterType)
+        public void Filter([In][Out] ref object cancel, [In][Out] ref object filterType)
         {
             if (!Validate("Filter"))
             {
@@ -498,7 +498,7 @@ namespace NetOffice.AccessApi.Events
             filterType = ToInt16(paramsArray[1]);
         }
 
-        public void ApplyFilter([In] [Out] ref object cancel, [In] [Out] ref object applyType)
+        public void ApplyFilter([In][Out] ref object cancel, [In][Out] ref object applyType)
         {
             if (!Validate("ApplyFilter"))
             {
@@ -525,7 +525,7 @@ namespace NetOffice.AccessApi.Events
             }
 
             Delegate[] recipients = EventBinding.GetEventRecipients("MouseWheel");
-            if( (true == EventClass.IsCurrentlyDisposing) || (recipients.Length == 0) )
+            if ((true == EventClass.IsCurrentlyDisposing) || (recipients.Length == 0))
             {
                 Invoker.ReleaseParamsArray(page, count);
                 return;
@@ -541,8 +541,8 @@ namespace NetOffice.AccessApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

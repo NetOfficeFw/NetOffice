@@ -6,35 +6,35 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Access", 12,14,15,16)]
+    [SupportByVersion("Access", 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("2E70526E-92D1-43CC-A57B-ED48BCCC711D"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface DispCustomControlEvents
     {
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2076)]
-        void Updated([In] [Out] ref object code);
+        void Updated([In][Out] ref object code);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
         void Enter();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
-        void Exit([In] [Out] ref object cancel);
+        void Exit([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2073)]
         void GotFocus();
 
-        [SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2074)]
         void LostFocus();
     }
@@ -48,23 +48,23 @@ namespace NetOffice.AccessApi.Events
     public class DispCustomControlEvents_SinkHelper : SinkHelper, DispCustomControlEvents
     {
         #region Static
-        
+
         public static readonly string Id = "2E70526E-92D1-43CC-A57B-ED48BCCC711D";
-        
+
         #endregion
 
         #region Ctor
 
-        public DispCustomControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public DispCustomControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region DispCustomControlEvents
-        
-        public void Updated([In] [Out] ref object code)
+
+        public void Updated([In][Out] ref object code)
         {
             if (!Validate("Updated"))
             {
@@ -90,7 +90,7 @@ namespace NetOffice.AccessApi.Events
             EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
         }
 
-        public void Exit([In] [Out] ref object cancel)
+        public void Exit([In][Out] ref object cancel)
         {
             if (!Validate("Exit"))
             {
@@ -129,8 +129,8 @@ namespace NetOffice.AccessApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

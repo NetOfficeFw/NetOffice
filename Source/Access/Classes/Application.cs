@@ -8,8 +8,8 @@ namespace NetOffice.AccessApi
 {
     #region Delegates
 
-    #pragma warning disable
-    #pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
     #endregion
 
@@ -18,14 +18,14 @@ namespace NetOffice.AccessApi
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Application"/> </remarks>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsCoClass), ComProgId("Access.Application"), ModuleProvider(typeof(GlobalHelperModules.GlobalModule))]
     public class Application : _Application, ICloneable<Application>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Fields
-        
+
         private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
         private string _activeSinkId;
         private static Type _type;
@@ -45,7 +45,7 @@ namespace NetOffice.AccessApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
@@ -59,9 +59,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-                
+
         #region Ctor
 
         ///<param name="factory">current used factory core</param>
@@ -99,19 +99,19 @@ namespace NetOffice.AccessApi
         {
             _callQuitInDispose = true;
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Application(ICOMObject replacedObject) : base(replacedObject)
         {
             _callQuitInDispose = true;
         }
-        
+
         /// <summary>
         /// Creates a new instance of Application
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-        public Application(string progId):base(progId)
+        public Application(string progId) : base(progId)
         {
             _callQuitInDispose = true;
             GlobalHelperModules.GlobalModule.Instance = this;
@@ -162,8 +162,8 @@ namespace NetOffice.AccessApi
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose(bool disposeEventBinding)
         {
-            if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-                 GlobalHelperModules.GlobalModule.Instance = null;	
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
+                GlobalHelperModules.GlobalModule.Instance = null;
             base.Dispose(disposeEventBinding);
         }
 
@@ -173,8 +173,8 @@ namespace NetOffice.AccessApi
         [Category("NetOffice"), CoreOverridden]
         public override void Dispose()
         {
-            if(this.Equals(GlobalHelperModules.GlobalModule.Instance))
-                 GlobalHelperModules.GlobalModule.Instance = null;
+            if (this.Equals(GlobalHelperModules.GlobalModule.Instance))
+                GlobalHelperModules.GlobalModule.Instance = null;
             base.Dispose();
         }
 
@@ -231,6 +231,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

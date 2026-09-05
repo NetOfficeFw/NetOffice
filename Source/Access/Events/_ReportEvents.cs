@@ -6,45 +6,45 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("BC9E4357-F037-11CD-8701-00AA003F0F07"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _ReportEvents
     {
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2066)]
-        void Open([In] [Out] ref object cancel);
+        void Open([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2070)]
         void Close();
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2071)]
         void Activate();
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2072)]
         void Deactivate();
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("dataErr", SinkArgumentType.Int16)]
         [SinkArgument("response", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2083)]
-        void Error([In] [Out] ref object dataErr, [In] [Out] ref object response);
+        void Error([In][Out] ref object dataErr, [In][Out] ref object response);
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2161)]
-        void NoData([In] [Out] ref object cancel);
+        void NoData([In][Out] ref object cancel);
 
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2162)]
         void Page();
     }
@@ -58,23 +58,23 @@ namespace NetOffice.AccessApi.Events
     public class _ReportEvents_SinkHelper : SinkHelper, _ReportEvents
     {
         #region Static
-        
+
         public static readonly string Id = "BC9E4357-F037-11CD-8701-00AA003F0F07";
-        
+
         #endregion
 
         #region Ctor
 
-        public _ReportEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _ReportEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region _ReportEvents
-        
-        public void Open([In] [Out] ref object cancel)
+
+        public void Open([In][Out] ref object cancel)
         {
             if (!Validate("Open"))
             {
@@ -122,7 +122,7 @@ namespace NetOffice.AccessApi.Events
             EventBinding.RaiseCustomEvent("Deactivate", ref paramsArray);
         }
 
-        public void Error([In] [Out] ref object dataErr, [In] [Out] ref object response)
+        public void Error([In][Out] ref object dataErr, [In][Out] ref object response)
         {
             if (!Validate("Error"))
             {
@@ -139,7 +139,7 @@ namespace NetOffice.AccessApi.Events
             response = ToInt16(paramsArray[1]);
         }
 
-        public void NoData([In] [Out] ref object cancel)
+        public void NoData([In][Out] ref object cancel)
         {
             if (!Validate("NoData"))
             {
@@ -167,8 +167,8 @@ namespace NetOffice.AccessApi.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

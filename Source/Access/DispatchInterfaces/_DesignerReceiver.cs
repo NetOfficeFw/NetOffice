@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class _DesignerReceiver : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _DesignerReceiver(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _DesignerReceiver(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _DesignerReceiver(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _DesignerReceiver(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _DesignerReceiver() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _DesignerReceiver(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -118,7 +118,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void SetReady()
         {
-             Factory.ExecuteMethod(this, "SetReady");
+            Factory.ExecuteMethod(this, "SetReady");
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void RefreshRibbon()
         {
-             Factory.ExecuteMethod(this, "RefreshRibbon");
+            Factory.ExecuteMethod(this, "RefreshRibbon");
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void RecordSourceUpdated(string bstrRecordSource)
         {
-             Factory.ExecuteMethod(this, "RecordSourceUpdated", bstrRecordSource);
+            Factory.ExecuteMethod(this, "RecordSourceUpdated", bstrRecordSource);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void QuickCreateView(string bstrViewName, Int16 viewtype, string bstrRecordSource, bool fStandalone)
         {
-             Factory.ExecuteMethod(this, "QuickCreateView", bstrViewName, viewtype, bstrRecordSource, fStandalone);
+            Factory.ExecuteMethod(this, "QuickCreateView", bstrViewName, viewtype, bstrRecordSource, fStandalone);
         }
 
         /// <summary>
@@ -233,7 +233,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void NotifyControlIDChanged(string bstrOldCtrlID, string bstrNewCtrlID)
         {
-             Factory.ExecuteMethod(this, "NotifyControlIDChanged", bstrOldCtrlID, bstrNewCtrlID);
+            Factory.ExecuteMethod(this, "NotifyControlIDChanged", bstrOldCtrlID, bstrNewCtrlID);
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void OpenAccessObject(Int32 accessObjectType, string accessObjectName, bool fDesignMode)
         {
-             Factory.ExecuteMethod(this, "OpenAccessObject", accessObjectType, accessObjectName, fDesignMode);
+            Factory.ExecuteMethod(this, "OpenAccessObject", accessObjectType, accessObjectName, fDesignMode);
         }
 
         /// <summary>
@@ -282,7 +282,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void DuplicateAccessObject(Int32 accessObjectType, string accessObjectName)
         {
-             Factory.ExecuteMethod(this, "DuplicateAccessObject", accessObjectType, accessObjectName);
+            Factory.ExecuteMethod(this, "DuplicateAccessObject", accessObjectType, accessObjectName);
         }
 
         /// <summary>
@@ -331,7 +331,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void SaveEmbeddedObject(Int32 handlerType, string bstrCtrl, string bstrProperty, string bstrExpression)
         {
-             Factory.ExecuteMethod(this, "SaveEmbeddedObject", handlerType, bstrCtrl, bstrProperty, bstrExpression);
+            Factory.ExecuteMethod(this, "SaveEmbeddedObject", handlerType, bstrCtrl, bstrProperty, bstrExpression);
         }
 
         /// <summary>
@@ -344,7 +344,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void DeleteEmbeddedObject(Int32 handlerType, string bstrCtrl, string bstrProperty)
         {
-             Factory.ExecuteMethod(this, "DeleteEmbeddedObject", handlerType, bstrCtrl, bstrProperty);
+            Factory.ExecuteMethod(this, "DeleteEmbeddedObject", handlerType, bstrCtrl, bstrProperty);
         }
 
         /// <summary>
@@ -372,6 +372,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

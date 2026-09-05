@@ -9,11 +9,11 @@ namespace NetOffice.AccessApi
     /// DispatchInterface _Hyperlink 
     /// SupportByVersion Access, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _Hyperlink : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Hyperlink(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _Hyperlink(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _Hyperlink(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Hyperlink(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Hyperlink() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Hyperlink(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.SubAddress"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string SubAddress
         {
             get
@@ -130,7 +130,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.Address"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string Address
         {
             get
@@ -148,7 +148,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.EmailSubject"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string EmailSubject
         {
             get
@@ -166,7 +166,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.ScreenTip"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string ScreenTip
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.AccessApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.TextToDisplay"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public string TextToDisplay
         {
             get
@@ -205,10 +205,10 @@ namespace NetOffice.AccessApi
         /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.AddToFavorites"/> </remarks>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void AddToFavorites()
         {
-             Factory.ExecuteMethod(this, "AddToFavorites");
+            Factory.ExecuteMethod(this, "AddToFavorites");
         }
 
         /// <summary>
@@ -220,10 +220,10 @@ namespace NetOffice.AccessApi
         /// <param name="extraInfo">optional object extraInfo</param>
         /// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
         /// <param name="headerInfo">optional string HeaderInfo = </param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
         {
-             Factory.ExecuteMethod(this, "Follow", new object[]{ newWindow, addHistory, extraInfo, method, headerInfo });
+            Factory.ExecuteMethod(this, "Follow", new object[] { newWindow, addHistory, extraInfo, method, headerInfo });
         }
 
         /// <summary>
@@ -231,10 +231,10 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.Follow"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Follow()
         {
-             Factory.ExecuteMethod(this, "Follow");
+            Factory.ExecuteMethod(this, "Follow");
         }
 
         /// <summary>
@@ -243,10 +243,10 @@ namespace NetOffice.AccessApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Hyperlink.Follow"/> </remarks>
         /// <param name="newWindow">optional bool NewWindow = false</param>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Follow(object newWindow)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow);
+            Factory.ExecuteMethod(this, "Follow", newWindow);
         }
 
         /// <summary>
@@ -256,10 +256,10 @@ namespace NetOffice.AccessApi
         /// <param name="newWindow">optional bool NewWindow = false</param>
         /// <param name="addHistory">optional bool AddHistory = true</param>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Follow(object newWindow, object addHistory)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
+            Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
         }
 
         /// <summary>
@@ -270,10 +270,10 @@ namespace NetOffice.AccessApi
         /// <param name="addHistory">optional bool AddHistory = true</param>
         /// <param name="extraInfo">optional object extraInfo</param>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Follow(object newWindow, object addHistory, object extraInfo)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
+            Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
         }
 
         /// <summary>
@@ -285,10 +285,10 @@ namespace NetOffice.AccessApi
         /// <param name="extraInfo">optional object extraInfo</param>
         /// <param name="method">optional NetOffice.OfficeApi.Enums.MsoExtraInfoMethod Method = 0</param>
         [CustomMethod]
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void Follow(object newWindow, object addHistory, object extraInfo, object method)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
+            Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
         }
 
         /// <summary>
@@ -298,10 +298,10 @@ namespace NetOffice.AccessApi
         /// <param name="fileName">string fileName</param>
         /// <param name="editNow">bool editNow</param>
         /// <param name="overwrite">bool overwrite</param>
-        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
         public void CreateNewDocument(string fileName, bool editNow, bool overwrite)
         {
-             Factory.ExecuteMethod(this, "CreateNewDocument", fileName, editNow, overwrite);
+            Factory.ExecuteMethod(this, "CreateNewDocument", fileName, editNow, overwrite);
         }
 
         /// <summary>
@@ -309,7 +309,7 @@ namespace NetOffice.AccessApi
         /// </summary>
         /// <param name="dispid">Int32 dispid</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("Access", 11,12,14,15,16)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
         public bool IsMemberSafe(Int32 dispid)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
@@ -317,6 +317,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

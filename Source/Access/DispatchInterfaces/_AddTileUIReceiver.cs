@@ -13,7 +13,7 @@ namespace NetOffice.AccessApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class _AddTileUIReceiver : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.AccessApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _AddTileUIReceiver(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.AccessApi
         public _AddTileUIReceiver(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.AccessApi
         public _AddTileUIReceiver(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _AddTileUIReceiver(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _AddTileUIReceiver() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _AddTileUIReceiver(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         #endregion
@@ -173,7 +173,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void CreateObjectFromDefinition(object pdispNounDefArray, object pdispFinalNameArray)
         {
-             Factory.ExecuteMethod(this, "CreateObjectFromDefinition", pdispNounDefArray, pdispFinalNameArray);
+            Factory.ExecuteMethod(this, "CreateObjectFromDefinition", pdispNounDefArray, pdispFinalNameArray);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void CreateRelationship(string bstrLeftTable, string bstrRightTable, string bstrLookupFieldName, string bstrLookupFieldDescription, Int32 lookupFieldPosition, Int32 iOptions)
         {
-             Factory.ExecuteMethod(this, "CreateRelationship", new object[]{ bstrLeftTable, bstrRightTable, bstrLookupFieldName, bstrLookupFieldDescription, lookupFieldPosition, iOptions });
+            Factory.ExecuteMethod(this, "CreateRelationship", new object[] { bstrLeftTable, bstrRightTable, bstrLookupFieldName, bstrLookupFieldDescription, lookupFieldPosition, iOptions });
         }
 
         /// <summary>
@@ -200,7 +200,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void ImportData(Int16 type)
         {
-             Factory.ExecuteMethod(this, "ImportData", type);
+            Factory.ExecuteMethod(this, "ImportData", type);
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void RegisterSearchTerm(string bstrSearchTerm)
         {
-             Factory.ExecuteMethod(this, "RegisterSearchTerm", bstrSearchTerm);
+            Factory.ExecuteMethod(this, "RegisterSearchTerm", bstrSearchTerm);
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void BeginBatchNounAdd()
         {
-             Factory.ExecuteMethod(this, "BeginBatchNounAdd");
+            Factory.ExecuteMethod(this, "BeginBatchNounAdd");
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void FinishBatchNounAdd()
         {
-             Factory.ExecuteMethod(this, "FinishBatchNounAdd");
+            Factory.ExecuteMethod(this, "FinishBatchNounAdd");
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void NotifyAddTileUIVisibilityChange(bool fVisible)
         {
-             Factory.ExecuteMethod(this, "NotifyAddTileUIVisibilityChange", fVisible);
+            Factory.ExecuteMethod(this, "NotifyAddTileUIVisibilityChange", fVisible);
         }
 
         /// <summary>
@@ -264,7 +264,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void LaunchHyperlink(Int16 type, string bstrUrl)
         {
-             Factory.ExecuteMethod(this, "LaunchHyperlink", type, bstrUrl);
+            Factory.ExecuteMethod(this, "LaunchHyperlink", type, bstrUrl);
         }
 
         /// <summary>
@@ -274,7 +274,7 @@ namespace NetOffice.AccessApi
         [SupportByVersion("Access", 15, 16)]
         public void MetadataLoaded()
         {
-             Factory.ExecuteMethod(this, "MetadataLoaded");
+            Factory.ExecuteMethod(this, "MetadataLoaded");
         }
 
         /// <summary>
@@ -289,6 +289,6 @@ namespace NetOffice.AccessApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
