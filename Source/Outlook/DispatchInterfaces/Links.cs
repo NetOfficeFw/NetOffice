@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
-	/// <summary>
-	/// DispatchInterface Links 
-	/// SupportByVersion Outlook, 9,10,11,12,14,15,16
-	/// </summary>
-	[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class Links : COMObject, IEnumerableProvider<NetOffice.OutlookApi.Link>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Links 
+    /// SupportByVersion Outlook, 9,10,11,12,14,15,16
+    /// </summary>
+    [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class Links : COMObject, IEnumerableProvider<NetOffice.OutlookApi.Link>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -47,174 +47,174 @@ namespace NetOffice.OutlookApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Links(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Links(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Links(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Links(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Links(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Links(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public Links(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Links(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Links(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Links() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Links(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Links(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Links(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Links(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Links() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Links(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        public NetOffice.OutlookApi.Enums.OlObjectClass Class
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._NameSpace Session
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="index">object index</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.OutlookApi.Link this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Link>(this, "Item", NetOffice.OutlookApi.Link.LateBindingApiWrapperType, index);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="item">object item</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Link Add(object item)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Link>(this, "Add", NetOffice.OutlookApi.Link.LateBindingApiWrapperType, item);
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="index">object index</param>
-		[SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
-		public void Remove(object index)
-		{
-			 Factory.ExecuteMethod(this, "Remove", index);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">object index</param>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.OutlookApi.Link this[object index]
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Link>(this, "Item", NetOffice.OutlookApi.Link.LateBindingApiWrapperType, index);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="item">object item</param>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        public NetOffice.OutlookApi.Link Add(object item)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Link>(this, "Add", NetOffice.OutlookApi.Link.LateBindingApiWrapperType, item);
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">object index</param>
+        [SupportByVersion("Outlook", 9,10,11,12,14,15,16)]
+        public void Remove(object index)
+        {
+             Factory.ExecuteMethod(this, "Remove", index);
+        }
 
         #endregion
 

@@ -7,152 +7,152 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi.Events
 {	
-	#pragma warning disable CS1591
+    #pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    [SupportByVersion("Outlook", 10,11,12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0006302B-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface ItemEvents_10
-	{
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+    public interface ItemEvents_10
+    {
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61443)]
-		void Open([In] [Out] ref object cancel);
+        void Open([In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("action", SinkArgumentType.UnknownProxy)]
         [SinkArgument("response", SinkArgumentType.UnknownProxy)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61446)]
-		void CustomAction([In, MarshalAs(UnmanagedType.IDispatch)] object action, [In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel);
+        void CustomAction([In, MarshalAs(UnmanagedType.IDispatch)] object action, [In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("name", SinkArgumentType.String)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61448)]
-		void CustomPropertyChange([In] object name);
+        void CustomPropertyChange([In] object name);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("forward", SinkArgumentType.UnknownProxy)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(62568)]
-		void Forward([In, MarshalAs(UnmanagedType.IDispatch)] object forward, [In] [Out] ref object cancel);
+        void Forward([In, MarshalAs(UnmanagedType.IDispatch)] object forward, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61444)]
-		void Close([In] [Out] ref object cancel);
+        void Close([In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("name", SinkArgumentType.String)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61449)]
-		void PropertyChange([In] object name);
+        void PropertyChange([In] object name);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
-		void Read();
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61441)]
+        void Read();
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("response", SinkArgumentType.UnknownProxy)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(62566)]
-		void Reply([In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel);
+        void Reply([In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("response", SinkArgumentType.UnknownProxy)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(62567)]
-		void ReplyAll([In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel);
+        void ReplyAll([In, MarshalAs(UnmanagedType.IDispatch)] object response, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61445)]
-		void Send([In] [Out] ref object cancel);
+        void Send([In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61442)]
-		void Write([In] [Out] ref object cancel);
+        void Write([In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61450)]
-		void BeforeCheckNames([In] [Out] ref object cancel);
+        void BeforeCheckNames([In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61451)]
-		void AttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment);
+        void AttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61452)]
-		void AttachmentRead([In, MarshalAs(UnmanagedType.IDispatch)] object attachment);
+        void AttachmentRead([In, MarshalAs(UnmanagedType.IDispatch)] object attachment);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(61453)]
-		void BeforeAttachmentSave([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
+        void BeforeAttachmentSave([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
+        [SupportByVersion("Outlook", 10,11,12,14,15,16)]
         [SinkArgument("item", SinkArgumentType.UnknownProxy)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64117)]
-		void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel);
+        void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64430)]
-		void AttachmentRemove([In, MarshalAs(UnmanagedType.IDispatch)] object attachment);
+        void AttachmentRemove([In, MarshalAs(UnmanagedType.IDispatch)] object attachment);
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64432)]
-		void BeforeAttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
+        void BeforeAttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64431)]
-		void BeforeAttachmentPreview([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
+        void BeforeAttachmentPreview([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64427)]
-		void BeforeAttachmentRead([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
+        void BeforeAttachmentRead([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12,14,15,16)]
         [SinkArgument("attachment", typeof(OutlookApi.Attachment))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64434)]
-		void BeforeAttachmentWriteToTempFile([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
+        void BeforeAttachmentWriteToTempFile([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64429)]
-		void Unload();
+        [SupportByVersion("Outlook", 12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64429)]
+        void Unload();
 
-		[SupportByVersion("Outlook", 12,14,15,16)]
+        [SupportByVersion("Outlook", 12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64514)]
-		void BeforeAutoSave([In] [Out] ref object cancel);
+        void BeforeAutoSave([In] [Out] ref object cancel);
 
-		[SupportByVersion("Outlook", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64652)]
-		void BeforeRead();
+        [SupportByVersion("Outlook", 14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64652)]
+        void BeforeRead();
 
-		[SupportByVersion("Outlook", 14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64653)]
-		void AfterWrite();
+        [SupportByVersion("Outlook", 14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64653)]
+        void AfterWrite();
 
-		[SupportByVersion("Outlook", 15, 16)]
+        [SupportByVersion("Outlook", 15, 16)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(64655)]
-		void ReadComplete([In] [Out] ref object cancel);
-	}
+        void ReadComplete([In] [Out] ref object cancel);
+    }
 
     #endregion
 
@@ -401,12 +401,12 @@ namespace NetOffice.OutlookApi.Events
 
             NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
-			paramsArray[0] = newAttachment;
-			paramsArray.SetValue(cancel, 1);
-			EventBinding.RaiseCustomEvent("BeforeAttachmentSave", ref paramsArray);
+            paramsArray[0] = newAttachment;
+            paramsArray.SetValue(cancel, 1);
+            EventBinding.RaiseCustomEvent("BeforeAttachmentSave", ref paramsArray);
 
-			cancel = ToBoolean(paramsArray[1]);
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
         public void BeforeDelete([In, MarshalAs(UnmanagedType.IDispatch)] object item, [In] [Out] ref object cancel)
         {
@@ -416,17 +416,17 @@ namespace NetOffice.OutlookApi.Events
                 return;
             }
 
-			object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
-			object[] paramsArray = new object[2];
-			paramsArray[0] = newItem;
-			paramsArray.SetValue(cancel, 1);
-			EventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
+            object newItem = Factory.CreateEventArgumentObjectFromComProxy(EventClass, item) as object;
+            object[] paramsArray = new object[2];
+            paramsArray[0] = newItem;
+            paramsArray.SetValue(cancel, 1);
+            EventBinding.RaiseCustomEvent("BeforeDelete", ref paramsArray);
 
             cancel = ToBoolean(paramsArray[1]);
         }
 
         public void AttachmentRemove([In, MarshalAs(UnmanagedType.IDispatch)] object attachment)
-		{
+        {
             if (!Validate("AttachmentRemove"))
             {
                 Invoker.ReleaseParamsArray(attachment);
@@ -434,13 +434,13 @@ namespace NetOffice.OutlookApi.Events
             }
 
             NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
-			object[] paramsArray = new object[1];
-			paramsArray[0] = newAttachment;
-			EventBinding.RaiseCustomEvent("AttachmentRemove", ref paramsArray);
-		}
+            object[] paramsArray = new object[1];
+            paramsArray[0] = newAttachment;
+            EventBinding.RaiseCustomEvent("AttachmentRemove", ref paramsArray);
+        }
 
         public void BeforeAttachmentAdd([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
-		{
+        {
             if (!Validate("BeforeAttachmentAdd"))
             {
                 Invoker.ReleaseParamsArray(attachment, cancel);
@@ -449,12 +449,12 @@ namespace NetOffice.OutlookApi.Events
 
             NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
-			paramsArray[0] = newAttachment;
-			paramsArray.SetValue(cancel, 1);
-			EventBinding.RaiseCustomEvent("BeforeAttachmentAdd", ref paramsArray);
+            paramsArray[0] = newAttachment;
+            paramsArray.SetValue(cancel, 1);
+            EventBinding.RaiseCustomEvent("BeforeAttachmentAdd", ref paramsArray);
 
-			cancel = ToBoolean(paramsArray[1]);
-		}
+            cancel = ToBoolean(paramsArray[1]);
+        }
 
         public void BeforeAttachmentPreview([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
         {
@@ -466,9 +466,9 @@ namespace NetOffice.OutlookApi.Events
 
             NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
-			paramsArray[0] = newAttachment;
-			paramsArray.SetValue(cancel, 1);
-			EventBinding.RaiseCustomEvent("BeforeAttachmentPreview", ref paramsArray);
+            paramsArray[0] = newAttachment;
+            paramsArray.SetValue(cancel, 1);
+            EventBinding.RaiseCustomEvent("BeforeAttachmentPreview", ref paramsArray);
 
             cancel = ToBoolean(paramsArray[1]);
         }
@@ -483,15 +483,15 @@ namespace NetOffice.OutlookApi.Events
 
             NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
-			paramsArray[0] = newAttachment;
-			paramsArray.SetValue(cancel, 1);
-			EventBinding.RaiseCustomEvent("BeforeAttachmentRead", ref paramsArray);
+            paramsArray[0] = newAttachment;
+            paramsArray.SetValue(cancel, 1);
+            EventBinding.RaiseCustomEvent("BeforeAttachmentRead", ref paramsArray);
 
             cancel = ToBoolean(paramsArray[1]);
         }
 
         public void BeforeAttachmentWriteToTempFile([In, MarshalAs(UnmanagedType.IDispatch)] object attachment, [In] [Out] ref object cancel)
-		{
+        {
             if (!Validate("BeforeAttachmentWriteToTempFile"))
             {
                 Invoker.ReleaseParamsArray(attachment, cancel);
@@ -500,63 +500,63 @@ namespace NetOffice.OutlookApi.Events
 
             NetOffice.OutlookApi.Attachment newAttachment = Factory.CreateKnownObjectFromComProxy<NetOffice.OutlookApi.Attachment>(EventClass, attachment, NetOffice.OutlookApi.Attachment.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
-			paramsArray[0] = newAttachment;
-			paramsArray.SetValue(cancel, 1);
-			EventBinding.RaiseCustomEvent("BeforeAttachmentWriteToTempFile", ref paramsArray);
+            paramsArray[0] = newAttachment;
+            paramsArray.SetValue(cancel, 1);
+            EventBinding.RaiseCustomEvent("BeforeAttachmentWriteToTempFile", ref paramsArray);
 
             cancel = ToBoolean(paramsArray[1]);
         }
 
         public void Unload()
-		{
+        {
             if (!Validate("Unload"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("Unload", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("Unload", ref paramsArray);
+        }
 
         public void BeforeAutoSave([In] [Out] ref object cancel)
-		{
+        {
             if (!Validate("BeforeAutoSave"))
             {
                 Invoker.ReleaseParamsArray(cancel);
                 return;
             }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			EventBinding.RaiseCustomEvent("BeforeAutoSave", ref paramsArray);
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("BeforeAutoSave", ref paramsArray);
 
-			cancel = ToBoolean(paramsArray[0]);
-		}
+            cancel = ToBoolean(paramsArray[0]);
+        }
 
-		public void BeforeRead()
-		{
+        public void BeforeRead()
+        {
             if (!Validate("BeforeRead"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("BeforeRead", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("BeforeRead", ref paramsArray);
+        }
 
-		public void AfterWrite()
-		{
+        public void AfterWrite()
+        {
             if (!Validate("AfterWrite"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("AfterWrite", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("AfterWrite", ref paramsArray);
+        }
 
         public void ReadComplete([In] [Out] ref object cancel)
-		{
+        {
             if (!Validate("ReadComplete"))
             {
                 Invoker.ReleaseParamsArray(cancel);
@@ -564,16 +564,16 @@ namespace NetOffice.OutlookApi.Events
             }
 
             object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			EventBinding.RaiseCustomEvent("ReadComplete", ref paramsArray);
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("ReadComplete", ref paramsArray);
 
-			cancel = ToBoolean(paramsArray[0]);
-		}
+            cancel = ToBoolean(paramsArray[0]);
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+        #endregion
+    }
+    
+    #endregion
+    
+    #pragma warning restore CS1591
 }
