@@ -35,10 +35,10 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
 
     - name: Setup dotnet
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: 8
 
@@ -52,7 +52,7 @@ jobs:
       run: dotnet tool install --verbosity minimal --global Knapcode.CertificateExtractor --version 0.1.1
 
     - name: Cache packages
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: ~/.nuget/packages
         key: NetOffice-nuget-${{ hashFiles('**/packages.lock.json') }}
@@ -84,7 +84,7 @@ jobs:
 
     - name: Sign NetOffice libraries
       if: success() && steps.build.outputs.sign_binaries == 'true'
-      uses: azure/artifact-signing-action@v1
+      uses: azure/artifact-signing-action@v2
       with:
         endpoint: ${{ secrets.ARTIFACTS_SIGNING_ENDPOINT }}
         signing-account-name: ${{ secrets.ARTIFACTS_SIGNING_ACCOUNT_NAME }}
