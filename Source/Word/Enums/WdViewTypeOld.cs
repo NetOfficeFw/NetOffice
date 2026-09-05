@@ -3,25 +3,25 @@ using NetOffice;
 using NetOffice.Attributes;
 namespace NetOffice.WordApi.Enums
 {
-	 /// <summary>
-	 /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-	 /// </summary>
-	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsEnum)]
-	public enum WdViewTypeOld
-	{
-		 /// <summary>
-		 /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		 /// </summary>
-		 /// <remarks>3</remarks>
-		 [SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		 wdPageView = 3,
+     /// <summary>
+     /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+     /// </summary>
+    [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+    [EntityType(EntityType.IsEnum)]
+    public enum WdViewTypeOld
+    {
+         /// <summary>
+         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+         /// </summary>
+         /// <remarks>3</remarks>
+         [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+         wdPageView = 3,
 
-		 /// <summary>
-		 /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		 /// </summary>
-		 /// <remarks>6</remarks>
-		 [SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		 wdOnlineView = 6
-	}
+         /// <summary>
+         /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+         /// </summary>
+         /// <remarks>6</remarks>
+         [SupportByVersion("Word", 9,10,11,12,14,15,16)]
+         wdOnlineView = 6
+    }
 }

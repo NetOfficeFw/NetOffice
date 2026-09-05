@@ -10,12 +10,12 @@ namespace NetOffice.WordApi.GlobalHelperModules
     /// SupportByVersion Word, 9,10,11,12,14,15,16
     ///</summary>
     [SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsModule), ModuleBaseType(typeof(WordApi.Application))]
-	public static class GlobalModule
-	{
-		#region Fields
+    [EntityType(EntityType.IsModule), ModuleBaseType(typeof(WordApi.Application))]
+    public static class GlobalModule
+    {
+        #region Fields
 
-		private static ICOMObject _instance;
+        private static ICOMObject _instance;
 
         #endregion
 
@@ -35,26 +35,26 @@ namespace NetOffice.WordApi.GlobalHelperModules
         }
 
         internal static Core Factory
-		{
-			get
-			{
-				if(null != _instance)
-					 return _instance.Factory;
-			else
-				return Core.Default;
-			}
-		}
+        {
+            get
+            {
+                if(null != _instance)
+                     return _instance.Factory;
+            else
+                return Core.Default;
+            }
+        }
 
-		internal static Invoker Invoker
-		{
-			get
-			{
-				if(null != _instance)
-					 return _instance.Invoker;
-			else
-				return Invoker.Default;
-			}
-		}
+        internal static Invoker Invoker
+        {
+            get
+            {
+                if(null != _instance)
+                     return _instance.Invoker;
+            else
+                return Invoker.Default;
+            }
+        }
 
         #endregion
 

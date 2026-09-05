@@ -5,165 +5,165 @@ using NetOffice.Attributes;
 
 namespace NetOffice.WordApi
 {
-	/// <summary>
-	/// ChartTitle
-	/// </summary>
-	[SyntaxBypass]
- 	public class ChartTitle_ : COMObject
-	{
-		#region Ctor
+    /// <summary>
+    /// ChartTitle
+    /// </summary>
+    [SyntaxBypass]
+    public class ChartTitle_ : COMObject
+    {
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ChartTitle_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ChartTitle_(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ChartTitle_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ChartTitle_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		/// <param name="parentObject">object there has created the proxy</param>
+        public ChartTitle_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
+        public ChartTitle_(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle_(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		}
-		
-		/// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle_(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
+        }
+        
+        /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle_(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
+        /// <summary>
         /// Hidden stub .ctor
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle_() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle_(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle_() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle_(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
 
-		#region Properties
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <param name="start">optional object start</param>
-		/// <param name="length">optional object length</param>
-		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartCharacters get_Characters(object start, object length)
-		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartCharacters>(this, "Characters", NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType, start, length);
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <param name="start">optional object start</param>
+        /// <param name="length">optional object length</param>
+        /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartCharacters get_Characters(object start, object length)
+        {
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartCharacters>(this, "Characters", NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType, start, length);
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Alias for get_Characters
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/> </remarks>
-		/// <param name="start">optional object start</param>
-		/// <param name="length">optional object length</param>
-		[SupportByVersion("Word", 14,15,16), Redirect("get_Characters")]
-		public NetOffice.WordApi.ChartCharacters Characters(object start, object length)
-		{
-			return get_Characters(start, length);
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Alias for get_Characters
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/> </remarks>
+        /// <param name="start">optional object start</param>
+        /// <param name="length">optional object length</param>
+        [SupportByVersion("Word", 14,15,16), Redirect("get_Characters")]
+        public NetOffice.WordApi.ChartCharacters Characters(object start, object length)
+        {
+            return get_Characters(start, length);
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <param name="start">optional object start</param>
-		/// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartCharacters get_Characters(object start)
-		{
-			return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartCharacters>(this, "Characters", NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType, start);
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <param name="start">optional object start</param>
+        /// MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartCharacters get_Characters(object start)
+        {
+            return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartCharacters>(this, "Characters", NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType, start);
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Alias for get_Characters
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/> </remarks>
-		/// <param name="start">optional object start</param>
-		[SupportByVersion("Word", 14,15,16), Redirect("get_Characters")]
-		public NetOffice.WordApi.ChartCharacters Characters(object start)
-		{
-			return get_Characters(start);
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Alias for get_Characters
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/> </remarks>
+        /// <param name="start">optional object start</param>
+        [SupportByVersion("Word", 14,15,16), Redirect("get_Characters")]
+        public NetOffice.WordApi.ChartCharacters Characters(object start)
+        {
+            return get_Characters(start);
+        }
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		#endregion
-	}
+        #endregion
+    }
 
-	/// <summary>
-	/// DispatchInterface ChartTitle 
-	/// SupportByVersion Word, 14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle"/> </remarks>
-	[SupportByVersion("Word", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ChartTitle : ChartTitle_
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface ChartTitle 
+    /// SupportByVersion Word, 14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle"/> </remarks>
+    [SupportByVersion("Word", 14,15,16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class ChartTitle : ChartTitle_
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -176,553 +176,553 @@ namespace NetOffice.WordApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ChartTitle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ChartTitle(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ChartTitle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ChartTitle(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public ChartTitle(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartTitle(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public ChartTitle(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Caption"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string Caption
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Caption");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Caption", value);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.ChartCharacters Characters
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartCharacters>(this, "Characters", NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartTitle(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartFont Font
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFont>(this, "Font", NetOffice.WordApi.ChartFont.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Caption"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string Caption
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Caption");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Caption", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.HorizontalAlignment"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object HorizontalAlignment
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "HorizontalAlignment");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "HorizontalAlignment", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Characters"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public NetOffice.WordApi.ChartCharacters Characters
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartCharacters>(this, "Characters", NetOffice.WordApi.ChartCharacters.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Left"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Double Left
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Left");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Left", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartFont Font
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFont>(this, "Font", NetOffice.WordApi.ChartFont.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Orientation"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object Orientation
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "Orientation");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "Orientation", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.HorizontalAlignment"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public object HorizontalAlignment
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "HorizontalAlignment");
+            }
+            set
+            {
+                Factory.ExecuteVariantPropertySet(this, "HorizontalAlignment", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Shadow"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public bool Shadow
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "Shadow");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Shadow", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Left"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public Double Left
+        {
+            get
+            {
+                return Factory.ExecuteDoublePropertyGet(this, "Left");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Left", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Text"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string Text
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Text");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Text", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Orientation"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public object Orientation
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "Orientation");
+            }
+            set
+            {
+                Factory.ExecuteVariantPropertySet(this, "Orientation", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Top"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Double Top
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Top");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Top", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Shadow"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public bool Shadow
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "Shadow");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Shadow", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.VerticalAlignment"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object VerticalAlignment
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "VerticalAlignment");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "VerticalAlignment", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Text"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string Text
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Text");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Text", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.ReadingOrder"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Int32 ReadingOrder
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ReadingOrder", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Top"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public Double Top
+        {
+            get
+            {
+                return Factory.ExecuteDoublePropertyGet(this, "Top");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Top", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public object AutoScaleFont
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "AutoScaleFont");
-			}
-			set
-			{
-				Factory.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.VerticalAlignment"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public object VerticalAlignment
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "VerticalAlignment");
+            }
+            set
+            {
+                Factory.ExecuteVariantPropertySet(this, "VerticalAlignment", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.Interior Interior
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Interior>(this, "Interior", NetOffice.WordApi.Interior.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.ReadingOrder"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public Int32 ReadingOrder
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "ReadingOrder");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ReadingOrder", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartFillFormat Fill
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFillFormat>(this, "Fill", NetOffice.WordApi.ChartFillFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public object AutoScaleFont
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "AutoScaleFont");
+            }
+            set
+            {
+                Factory.ExecuteVariantPropertySet(this, "AutoScaleFont", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		[SupportByVersion("Word", 14,15,16)]
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public NetOffice.WordApi.ChartBorder Border
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartBorder>(this, "Border", NetOffice.WordApi.ChartBorder.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.Interior Interior
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Interior>(this, "Interior", NetOffice.WordApi.Interior.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Name"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartFillFormat Fill
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFillFormat>(this, "Fill", NetOffice.WordApi.ChartFillFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Parent"/> </remarks>
-		[SupportByVersion("Word", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        [SupportByVersion("Word", 14,15,16)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public NetOffice.WordApi.ChartBorder Border
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartBorder>(this, "Border", NetOffice.WordApi.ChartBorder.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.IncludeInLayout"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public bool IncludeInLayout
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeInLayout");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeInLayout", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Name"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Position"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.Enums.XlChartElementPosition Position
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlChartElementPosition>(this, "Position");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "Position", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Parent"/> </remarks>
+        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Format"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public NetOffice.WordApi.ChartFormat Format
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFormat>(this, "Format", NetOffice.WordApi.ChartFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.IncludeInLayout"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public bool IncludeInLayout
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IncludeInLayout");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "IncludeInLayout", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Application"/> </remarks>
-		[SupportByVersion("Word", 14,15,16), ProxyResult]
-		public object Application
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Application");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Position"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public NetOffice.WordApi.Enums.XlChartElementPosition Position
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.XlChartElementPosition>(this, "Position");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "Position", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Creator"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Format"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public NetOffice.WordApi.ChartFormat Format
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.ChartFormat>(this, "Format", NetOffice.WordApi.ChartFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Height"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Double Height
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Height");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Application"/> </remarks>
+        [SupportByVersion("Word", 14,15,16), ProxyResult]
+        public object Application
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Width"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public Double Width
-		{
-			get
-			{
-				return Factory.ExecuteDoublePropertyGet(this, "Width");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Creator"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public Int32 Creator
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Formula"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string Formula
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Formula");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "Formula", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Height"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public Double Height
+        {
+            get
+            {
+                return Factory.ExecuteDoublePropertyGet(this, "Height");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.FormulaR1C1"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string FormulaR1C1
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FormulaR1C1");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FormulaR1C1", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Width"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public Double Width
+        {
+            get
+            {
+                return Factory.ExecuteDoublePropertyGet(this, "Width");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.FormulaLocal"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string FormulaLocal
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FormulaLocal");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FormulaLocal", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Formula"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string Formula
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Formula");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "Formula", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.FormulaR1C1Local"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public string FormulaR1C1Local
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FormulaR1C1Local");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "FormulaR1C1Local", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.FormulaR1C1"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string FormulaR1C1
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "FormulaR1C1");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "FormulaR1C1", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.FormulaLocal"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string FormulaLocal
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "FormulaLocal");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "FormulaLocal", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.FormulaR1C1Local"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public string FormulaR1C1Local
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "FormulaR1C1Local");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "FormulaR1C1Local", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Delete"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object Delete()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Delete");
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Word 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Select"/> </remarks>
-		[SupportByVersion("Word", 14,15,16)]
-		public object Select()
-		{
-			return Factory.ExecuteVariantMethodGet(this, "Select");
-		}
+        #region Methods
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Delete"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public object Delete()
+        {
+            return Factory.ExecuteVariantMethodGet(this, "Delete");
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Word 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.ChartTitle.Select"/> </remarks>
+        [SupportByVersion("Word", 14,15,16)]
+        public object Select()
+        {
+            return Factory.ExecuteVariantMethodGet(this, "Select");
+        }
+
+        #endregion
+
+        #pragma warning restore
+    }
 }
