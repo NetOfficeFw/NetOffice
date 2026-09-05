@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast"/> </remarks>
-    [SupportByVersion("PowerPoint", 14,15,16)]
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Broadcast : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Broadcast(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public Broadcast(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public Broadcast(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Broadcast(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Broadcast() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Broadcast(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast.AttendeeUrl"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string AttendeeUrl
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast.IsBroadcasting"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool IsBroadcasting
         {
             get
@@ -230,20 +230,20 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast.Start"/> </remarks>
         /// <param name="serverUrl">string serverUrl</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void Start(string serverUrl)
         {
-             Factory.ExecuteMethod(this, "Start", serverUrl);
+            Factory.ExecuteMethod(this, "Start", serverUrl);
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Broadcast.End"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void End()
         {
-             Factory.ExecuteMethod(this, "End");
+            Factory.ExecuteMethod(this, "End");
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 15, 16)]
         public void Pause()
         {
-             Factory.ExecuteMethod(this, "Pause");
+            Factory.ExecuteMethod(this, "Pause");
         }
 
         /// <summary>
@@ -263,7 +263,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 15, 16)]
         public void Resume()
         {
-             Factory.ExecuteMethod(this, "Resume");
+            Factory.ExecuteMethod(this, "Resume");
         }
 
         /// <summary>
@@ -275,11 +275,11 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 15, 16)]
         public void AddMeetingNotes(string notesUrl, string notesWacUrl)
         {
-             Factory.ExecuteMethod(this, "AddMeetingNotes", notesUrl, notesWacUrl);
+            Factory.ExecuteMethod(this, "AddMeetingNotes", notesUrl, notesWacUrl);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

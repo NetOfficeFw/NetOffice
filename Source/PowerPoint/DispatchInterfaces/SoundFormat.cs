@@ -9,11 +9,11 @@ namespace NetOffice.PowerPointApi
     /// DispatchInterface SoundFormat 
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class SoundFormat : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SoundFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.PowerPointApi
         public SoundFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.PowerPointApi
         public SoundFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SoundFormat(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SoundFormat() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SoundFormat(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpSoundFormatType Type
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string SourceFullName
         {
             get
@@ -140,27 +140,27 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Play()
         {
-             Factory.ExecuteMethod(this, "Play");
+            Factory.ExecuteMethod(this, "Play");
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Import(string fileName)
         {
-             Factory.ExecuteMethod(this, "Import", fileName);
+            Factory.ExecuteMethod(this, "Import", fileName);
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpSoundFormatType Export(string fileName)
         {
             return Factory.ExecuteEnumMethodGet<NetOffice.PowerPointApi.Enums.PpSoundFormatType>(this, "Export", fileName);
@@ -168,6 +168,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs"/> </remarks>
-    [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class Designs : Collection
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Designs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public Designs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public Designs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Designs(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Designs() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Designs(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -145,7 +145,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="index">object index</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
         public NetOffice.PowerPointApi.Design this[object index]
         {
@@ -161,7 +161,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Add"/> </remarks>
         /// <param name="designName">string designName</param>
         /// <param name="index">optional Int32 Index = -1</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Design Add(string designName, object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Design>(this, "Add", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType, designName, index);
@@ -173,7 +173,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Add"/> </remarks>
         /// <param name="designName">string designName</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Design Add(string designName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Design>(this, "Add", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType, designName);
@@ -185,7 +185,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Load"/> </remarks>
         /// <param name="templateName">string templateName</param>
         /// <param name="index">optional Int32 Index = -1</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Design Load(string templateName, object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Design>(this, "Load", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType, templateName, index);
@@ -197,7 +197,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Load"/> </remarks>
         /// <param name="templateName">string templateName</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Design Load(string templateName)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Design>(this, "Load", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType, templateName);
@@ -209,7 +209,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Clone"/> </remarks>
         /// <param name="pOriginal">NetOffice.PowerPointApi.Design pOriginal</param>
         /// <param name="index">optional Int32 Index = -1</param>
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal, object index)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Design>(this, "Clone", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType, pOriginal, index);
@@ -221,7 +221,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Designs.Clone"/> </remarks>
         /// <param name="pOriginal">NetOffice.PowerPointApi.Design pOriginal</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Design Clone(NetOffice.PowerPointApi.Design pOriginal)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Design>(this, "Clone", NetOffice.PowerPointApi.Design.LateBindingApiWrapperType, pOriginal);
@@ -229,6 +229,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

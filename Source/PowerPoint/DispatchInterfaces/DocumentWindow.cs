@@ -9,11 +9,11 @@ namespace NetOffice.PowerPointApi
     /// DispatchInterface DocumentWindow 
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class DocumentWindow : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DocumentWindow(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.PowerPointApi
         public DocumentWindow(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.PowerPointApi
         public DocumentWindow(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DocumentWindow(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DocumentWindow() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DocumentWindow(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -125,7 +125,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -138,7 +138,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Selection Selection
         {
             get
@@ -151,7 +151,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.View View
         {
             get
@@ -164,7 +164,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Presentation Presentation
         {
             get
@@ -177,7 +177,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpViewType ViewType
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState BlackAndWhite
         {
             get
@@ -211,7 +211,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.OfficeApi.Enums.MsoTriState Active
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpWindowState WindowState
         {
             get
@@ -241,7 +241,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public string Caption
         {
             get
@@ -254,7 +254,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Left
         {
             get
@@ -271,7 +271,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Top
         {
             get
@@ -288,7 +288,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Width
         {
             get
@@ -305,7 +305,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Single Height
         {
             get
@@ -322,7 +322,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HWND
         {
             get
@@ -335,7 +335,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Pane ActivePane
         {
             get
@@ -348,7 +348,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Panes Panes
         {
             get
@@ -361,7 +361,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SplitVertical
         {
             get
@@ -378,7 +378,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// Get/Set
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 SplitHorizontal
         {
             get
@@ -398,19 +398,19 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void FitToPage()
         {
-             Factory.ExecuteMethod(this, "FitToPage");
+            Factory.ExecuteMethod(this, "FitToPage");
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Activate()
         {
-             Factory.ExecuteMethod(this, "Activate");
+            Factory.ExecuteMethod(this, "Activate");
         }
 
         /// <summary>
@@ -420,20 +420,20 @@ namespace NetOffice.PowerPointApi
         /// <param name="up">optional Int32 Up = 0</param>
         /// <param name="toRight">optional Int32 ToRight = 0</param>
         /// <param name="toLeft">optional Int32 ToLeft = 0</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down, object up, object toRight, object toLeft)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll()
         {
-             Factory.ExecuteMethod(this, "LargeScroll");
+            Factory.ExecuteMethod(this, "LargeScroll");
         }
 
         /// <summary>
@@ -441,10 +441,10 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="down">optional Int32 Down = 1</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down);
+            Factory.ExecuteMethod(this, "LargeScroll", down);
         }
 
         /// <summary>
@@ -453,10 +453,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="down">optional Int32 Down = 1</param>
         /// <param name="up">optional Int32 Up = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up);
         }
 
         /// <summary>
@@ -466,10 +466,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="up">optional Int32 Up = 0</param>
         /// <param name="toRight">optional Int32 ToRight = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void LargeScroll(object down, object up, object toRight)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
         }
 
         /// <summary>
@@ -479,20 +479,20 @@ namespace NetOffice.PowerPointApi
         /// <param name="up">optional Int32 Up = 0</param>
         /// <param name="toRight">optional Int32 ToRight = 0</param>
         /// <param name="toLeft">optional Int32 ToLeft = 0</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down, object up, object toRight, object toLeft)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll()
         {
-             Factory.ExecuteMethod(this, "SmallScroll");
+            Factory.ExecuteMethod(this, "SmallScroll");
         }
 
         /// <summary>
@@ -500,10 +500,10 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="down">optional Int32 Down = 1</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down);
+            Factory.ExecuteMethod(this, "SmallScroll", down);
         }
 
         /// <summary>
@@ -512,10 +512,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="down">optional Int32 Down = 1</param>
         /// <param name="up">optional Int32 Up = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up);
         }
 
         /// <summary>
@@ -525,16 +525,16 @@ namespace NetOffice.PowerPointApi
         /// <param name="up">optional Int32 Up = 0</param>
         /// <param name="toRight">optional Int32 ToRight = 0</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void SmallScroll(object down, object up, object toRight)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.DocumentWindow NewWindow()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.DocumentWindow>(this, "NewWindow", NetOffice.PowerPointApi.DocumentWindow.LateBindingApiWrapperType);
@@ -543,10 +543,10 @@ namespace NetOffice.PowerPointApi
         /// <summary>
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void Close()
         {
-             Factory.ExecuteMethod(this, "Close");
+            Factory.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
@@ -554,7 +554,7 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="x">Int32 x</param>
         /// <param name="y">Int32 y</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public object RangeFromPoint(Int32 x, Int32 y)
         {
             return Factory.ExecuteVariantMethodGet(this, "RangeFromPoint", x, y);
@@ -564,7 +564,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="points">Single points</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PointsToScreenPixelsX(Single points)
         {
             return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsX", points);
@@ -574,7 +574,7 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         /// <param name="points">Single points</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 PointsToScreenPixelsY(Single points)
         {
             return Factory.ExecuteInt32MethodGet(this, "PointsToScreenPixelsY", points);
@@ -588,10 +588,10 @@ namespace NetOffice.PowerPointApi
         /// <param name="width">Single width</param>
         /// <param name="height">Single height</param>
         /// <param name="start">optional NetOffice.OfficeApi.Enums.MsoTriState Start = -1</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ScrollIntoView(Single left, Single top, Single width, Single height, object start)
         {
-             Factory.ExecuteMethod(this, "ScrollIntoView", new object[]{ left, top, width, height, start });
+            Factory.ExecuteMethod(this, "ScrollIntoView", new object[] { left, top, width, height, start });
         }
 
         /// <summary>
@@ -602,17 +602,17 @@ namespace NetOffice.PowerPointApi
         /// <param name="width">Single width</param>
         /// <param name="height">Single height</param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void ScrollIntoView(Single left, Single top, Single width, Single height)
         {
-             Factory.ExecuteMethod(this, "ScrollIntoView", left, top, width, height);
+            Factory.ExecuteMethod(this, "ScrollIntoView", left, top, width, height);
         }
 
         /// <summary>
         /// SupportByVersion PowerPoint 14, 15, 16
         /// </summary>
         /// <param name="sectionIndex">Int32 sectionIndex</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public bool IsSectionExpanded(Int32 sectionIndex)
         {
             return Factory.ExecuteBoolMethodGet(this, "IsSectionExpanded", sectionIndex);
@@ -623,14 +623,14 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <param name="sectionIndex">Int32 sectionIndex</param>
         /// <param name="expand">bool expand</param>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public void ExpandSection(Int32 sectionIndex, bool expand)
         {
-             Factory.ExecuteMethod(this, "ExpandSection", sectionIndex, expand);
+            Factory.ExecuteMethod(this, "ExpandSection", sectionIndex, expand);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

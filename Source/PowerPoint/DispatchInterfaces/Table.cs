@@ -10,11 +10,11 @@ namespace NetOffice.PowerPointApi
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     /// </summary>
     /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table"/> </remarks>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Table : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Table(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.PowerPointApi
         public Table(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.PowerPointApi
         public Table(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Table(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Table() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Table(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Application"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Application Application
         {
             get
@@ -128,7 +128,7 @@ namespace NetOffice.PowerPointApi
         /// Unknown COM Proxy
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Parent"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16), ProxyResult]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
         public object Parent
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Columns"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Columns Columns
         {
             get
@@ -156,7 +156,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Rows"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Rows Rows
         {
             get
@@ -170,7 +170,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.TableDirection"/> </remarks>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Enums.PpDirection TableDirection
         {
             get
@@ -188,7 +188,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.FirstRow"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool FirstRow
         {
             get
@@ -206,7 +206,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.LastRow"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool LastRow
         {
             get
@@ -224,7 +224,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.FirstCol"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool FirstCol
         {
             get
@@ -242,7 +242,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.LastCol"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool LastCol
         {
             get
@@ -260,7 +260,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.HorizBanding"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool HorizBanding
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.VertBanding"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public bool VertBanding
         {
             get
@@ -296,7 +296,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Style"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.TableStyle Style
         {
             get
@@ -310,7 +310,7 @@ namespace NetOffice.PowerPointApi
         /// Get
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Background"/> </remarks>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.TableBackground Background
         {
             get
@@ -324,7 +324,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.AlternativeText"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string AlternativeText
         {
             get
@@ -342,7 +342,7 @@ namespace NetOffice.PowerPointApi
         /// Get/Set
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Title"/> </remarks>
-        [SupportByVersion("PowerPoint", 14,15,16)]
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
         public string Title
         {
             get
@@ -365,7 +365,7 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.Cell"/> </remarks>
         /// <param name="row">Int32 row</param>
         /// <param name="column">Int32 column</param>
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public NetOffice.PowerPointApi.Cell Cell(Int32 row, Int32 column)
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.Cell>(this, "Cell", NetOffice.PowerPointApi.Cell.LateBindingApiWrapperType, row, column);
@@ -375,10 +375,10 @@ namespace NetOffice.PowerPointApi
         /// SupportByVersion PowerPoint 9, 10, 11, 12, 14, 15, 16
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+        [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
         public void MergeBorders()
         {
-             Factory.ExecuteMethod(this, "MergeBorders");
+            Factory.ExecuteMethod(this, "MergeBorders");
         }
 
         /// <summary>
@@ -386,10 +386,10 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.ScaleProportionally"/> </remarks>
         /// <param name="scale">Single scale</param>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public void ScaleProportionally(Single scale)
         {
-             Factory.ExecuteMethod(this, "ScaleProportionally", scale);
+            Factory.ExecuteMethod(this, "ScaleProportionally", scale);
         }
 
         /// <summary>
@@ -398,10 +398,10 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.ApplyStyle"/> </remarks>
         /// <param name="styleID">optional string StyleID = </param>
         /// <param name="saveFormatting">optional bool SaveFormatting = false</param>
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public void ApplyStyle(object styleID, object saveFormatting)
         {
-             Factory.ExecuteMethod(this, "ApplyStyle", styleID, saveFormatting);
+            Factory.ExecuteMethod(this, "ApplyStyle", styleID, saveFormatting);
         }
 
         /// <summary>
@@ -409,10 +409,10 @@ namespace NetOffice.PowerPointApi
         /// </summary>
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.ApplyStyle"/> </remarks>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public void ApplyStyle()
         {
-             Factory.ExecuteMethod(this, "ApplyStyle");
+            Factory.ExecuteMethod(this, "ApplyStyle");
         }
 
         /// <summary>
@@ -421,14 +421,14 @@ namespace NetOffice.PowerPointApi
         /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.Table.ApplyStyle"/> </remarks>
         /// <param name="styleID">optional string StyleID = </param>
         [CustomMethod]
-        [SupportByVersion("PowerPoint", 12,14,15,16)]
+        [SupportByVersion("PowerPoint", 12, 14, 15, 16)]
         public void ApplyStyle(object styleID)
         {
-             Factory.ExecuteMethod(this, "ApplyStyle", styleID);
+            Factory.ExecuteMethod(this, "ApplyStyle", styleID);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

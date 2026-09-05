@@ -9,7 +9,7 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
     /// Module GlobalModule
     /// SupportByVersion PowerPoint, 9,10,11,12,14,15,16
     ///</summary>
-    [SupportByVersion("PowerPoint", 9,10,11,12,14,15,16)]
+    [SupportByVersion("PowerPoint", 9, 10, 11, 12, 14, 15, 16)]
     [EntityType(EntityType.IsModule), ModuleBaseType(typeof(PowerPointApi.Application))]
     public static class GlobalModule
     {
@@ -38,10 +38,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
-                     return _instance.Factory;
-            else
-                return Core.Default;
+                if (null != _instance)
+                    return _instance.Factory;
+                else
+                    return Core.Default;
             }
         }
 
@@ -49,10 +49,10 @@ namespace NetOffice.PowerPointApi.GlobalHelperModules
         {
             get
             {
-                if(null != _instance)
-                     return _instance.Invoker;
-            else
-                return Invoker.Default;
+                if (null != _instance)
+                    return _instance.Invoker;
+                else
+                    return Invoker.Default;
             }
         }
 

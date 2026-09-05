@@ -13,7 +13,7 @@ namespace NetOffice.PowerPointApi
     [EntityType(EntityType.IsDispatchInterface), HasIndexProperty(IndexInvoke.Method, "Item")]
     public class PPControls : Collection
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.PowerPointApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PPControls(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.PowerPointApi
         public PPControls(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.PowerPointApi
         public PPControls(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PPControls(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PPControls() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PPControls(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -258,7 +258,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 9)]
         public NetOffice.PowerPointApi.PPEditText AddEditText(Single left, Single top, Single width, Single height, object verticalScrollBar)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPEditText>(this, "AddEditText", NetOffice.PowerPointApi.PPEditText.LateBindingApiWrapperType, new object[]{ left, top, width, height, verticalScrollBar });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPEditText>(this, "AddEditText", NetOffice.PowerPointApi.PPEditText.LateBindingApiWrapperType, new object[] { left, top, width, height, verticalScrollBar });
         }
 
         /// <summary>
@@ -325,7 +325,7 @@ namespace NetOffice.PowerPointApi
         [SupportByVersion("PowerPoint", 9)]
         public NetOffice.PowerPointApi.PPScrollBar AddScrollBar(NetOffice.PowerPointApi.Enums.PpScrollBarStyle style, Single left, Single top, Single width, Single height)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPScrollBar>(this, "AddScrollBar", NetOffice.PowerPointApi.PPScrollBar.LateBindingApiWrapperType, new object[]{ style, left, top, width, height });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPScrollBar>(this, "AddScrollBar", NetOffice.PowerPointApi.PPScrollBar.LateBindingApiWrapperType, new object[] { style, left, top, width, height });
         }
 
         /// <summary>
@@ -395,6 +395,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
