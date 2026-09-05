@@ -6,12 +6,12 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.VBIDEApi.EventInterfaces
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("0002E131-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
     public interface _dispCommandBarControlEvents
@@ -19,37 +19,37 @@ namespace NetOffice.VBIDEApi.EventInterfaces
         [SinkArgument("commandBarControl", SinkArgumentType.UnknownProxy)]
         [SinkArgument("handled", SinkArgumentType.Bool)]
         [SinkArgument("cancelDefault", SinkArgumentType.Bool)]
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1)]
-        void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault);
+        void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In][Out] ref object handled, [In][Out] ref object cancelDefault);
     }
-    
+
     #endregion
-    
+
     #region SinkHelper
-    
+
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
     public class _dispCommandBarControlEvents_SinkHelper : SinkHelper, _dispCommandBarControlEvents
     {
         #region Static
-        
+
         public static readonly string Id = "0002E131-0000-0000-C000-000000000046";
-        
+
         #endregion
-        
+
         #region Ctor
 
-        public _dispCommandBarControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _dispCommandBarControlEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region _dispCommandBarControlEvents
- 
-        public void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In] [Out] ref object handled, [In] [Out] ref object cancelDefault)
+
+        public void Click([In, MarshalAs(UnmanagedType.IDispatch)] object commandBarControl, [In][Out] ref object handled, [In][Out] ref object cancelDefault)
         {
             if (!Validate("Click"))
             {
@@ -70,8 +70,8 @@ namespace NetOffice.VBIDEApi.EventInterfaces
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

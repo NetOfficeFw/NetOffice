@@ -9,11 +9,11 @@ namespace NetOffice.VBIDEApi
     /// DispatchInterface _VBComponent_Old 
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class _VBComponent_Old : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.VBIDEApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.VBIDEApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _VBComponent_Old(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi
         public _VBComponent_Old(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.VBIDEApi
         public _VBComponent_Old(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _VBComponent_Old(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _VBComponent_Old() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _VBComponent_Old(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public bool Saved
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public string Name
         {
             get
@@ -142,7 +142,7 @@ namespace NetOffice.VBIDEApi
         /// Get
         /// Unknown COM Proxy
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3), ProxyResult]
+        [SupportByVersion("VBIDE", 12, 14, 5.3), ProxyResult]
         public object Designer
         {
             get
@@ -155,7 +155,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.CodeModule CodeModule
         {
             get
@@ -168,7 +168,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Enums.vbext_ComponentType Type
         {
             get
@@ -181,7 +181,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBE VBE
         {
             get
@@ -194,7 +194,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBComponents Collection
         {
             get
@@ -207,7 +207,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public bool HasOpenDesigner
         {
             get
@@ -220,7 +220,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Properties Properties
         {
             get
@@ -237,16 +237,16 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         /// <param name="fileName">string fileName</param>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void Export(string fileName)
         {
-             Factory.ExecuteMethod(this, "Export", fileName);
+            Factory.ExecuteMethod(this, "Export", fileName);
         }
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Window DesignerWindow()
         {
             return Factory.ExecuteKnownReferenceMethodGet<NetOffice.VBIDEApi.Window>(this, "DesignerWindow", NetOffice.VBIDEApi.Window.LateBindingApiWrapperType);
@@ -255,14 +255,14 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void Activate()
         {
-             Factory.ExecuteMethod(this, "Activate");
+            Factory.ExecuteMethod(this, "Activate");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

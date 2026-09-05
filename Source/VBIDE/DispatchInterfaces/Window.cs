@@ -9,11 +9,11 @@ namespace NetOffice.VBIDEApi
     /// DispatchInterface Window 
     /// SupportByVersion VBIDE, 12,14,5.3
     /// </summary>
-    [SupportByVersion("VBIDE", 12,14,5.3)]
+    [SupportByVersion("VBIDE", 12, 14, 5.3)]
     [EntityType(EntityType.IsDispatchInterface)]
     public class Window : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.VBIDEApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.VBIDEApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Window(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.VBIDEApi
         public Window(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,33 +85,33 @@ namespace NetOffice.VBIDEApi
         public Window(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.VBE VBE
         {
             get
@@ -124,7 +124,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Windows Collection
         {
             get
@@ -137,7 +137,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public string Caption
         {
             get
@@ -150,7 +150,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public bool Visible
         {
             get
@@ -167,7 +167,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public Int32 Left
         {
             get
@@ -184,7 +184,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public Int32 Top
         {
             get
@@ -201,7 +201,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public Int32 Width
         {
             get
@@ -218,7 +218,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public Int32 Height
         {
             get
@@ -235,7 +235,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get/Set
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Enums.vbext_WindowState WindowState
         {
             get
@@ -252,7 +252,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Enums.vbext_WindowType Type
         {
             get
@@ -265,7 +265,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.LinkedWindows LinkedWindows
         {
             get
@@ -278,7 +278,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public NetOffice.VBIDEApi.Window LinkedWindowFrame
         {
             get
@@ -291,7 +291,7 @@ namespace NetOffice.VBIDEApi
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// Get
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Int32 HWnd
         {
@@ -308,19 +308,19 @@ namespace NetOffice.VBIDEApi
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void Close()
         {
-             Factory.ExecuteMethod(this, "Close");
+            Factory.ExecuteMethod(this, "Close");
         }
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void SetFocus()
         {
-             Factory.ExecuteMethod(this, "SetFocus");
+            Factory.ExecuteMethod(this, "SetFocus");
         }
 
         /// <summary>
@@ -328,20 +328,20 @@ namespace NetOffice.VBIDEApi
         /// </summary>
         /// <param name="eKind">NetOffice.VBIDEApi.Enums.vbext_WindowType eKind</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void SetKind(NetOffice.VBIDEApi.Enums.vbext_WindowType eKind)
         {
-             Factory.ExecuteMethod(this, "SetKind", eKind);
+            Factory.ExecuteMethod(this, "SetKind", eKind);
         }
 
         /// <summary>
         /// SupportByVersion VBIDE 12, 14, 5.3
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void Detach()
         {
-             Factory.ExecuteMethod(this, "Detach");
+            Factory.ExecuteMethod(this, "Detach");
         }
 
         /// <summary>
@@ -349,14 +349,14 @@ namespace NetOffice.VBIDEApi
         /// </summary>
         /// <param name="lWindowHandle">Int32 lWindowHandle</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-        [SupportByVersion("VBIDE", 12,14,5.3)]
+        [SupportByVersion("VBIDE", 12, 14, 5.3)]
         public void Attach(Int32 lWindowHandle)
         {
-             Factory.ExecuteMethod(this, "Attach", lWindowHandle);
+            Factory.ExecuteMethod(this, "Attach", lWindowHandle);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
