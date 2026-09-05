@@ -7,24 +7,24 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
 {	
-	#pragma warning disable CS1591
+    #pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("Access", 12,14,15,16)]
+    [SupportByVersion("Access", 12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("2E705277-92D1-43CC-A57B-ED48BCCC711D"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface DispSubFormEvents
-	{
-		[SupportByVersion("Access", 12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
-		void Enter();
+    public interface DispSubFormEvents
+    {
+        [SupportByVersion("Access", 12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
+        void Enter();
 
-		[SupportByVersion("Access", 12,14,15,16)]
+        [SupportByVersion("Access", 12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
-		void Exit([In] [Out] ref object cancel);
-	}
+        void Exit([In] [Out] ref object cancel);
+    }
 
     #endregion
 
@@ -32,20 +32,20 @@ namespace NetOffice.AccessApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class DispSubFormEvents_SinkHelper : SinkHelper, DispSubFormEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "2E705277-92D1-43CC-A57B-ED48BCCC711D";
-		
-		#endregion
-		
-		#region Ctor
+    public class DispSubFormEvents_SinkHelper : SinkHelper, DispSubFormEvents
+    {
+        #region Static
+        
+        public static readonly string Id = "2E705277-92D1-43CC-A57B-ED48BCCC711D";
+        
+        #endregion
+        
+        #region Ctor
 
-		public DispSubFormEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
+        public DispSubFormEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
 
         #endregion
 
@@ -79,8 +79,8 @@ namespace NetOffice.AccessApi.Events
 
         #endregion
     }
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+    
+    #endregion
+    
+    #pragma warning restore CS1591
 }

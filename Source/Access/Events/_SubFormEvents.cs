@@ -7,24 +7,24 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi.Events
 {	
-	#pragma warning disable CS1591
+    #pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Access", 9,10,11,12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("BC9E4350-F037-11CD-8701-00AA003F0F07"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface _SubFormEvents
-	{
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
-		void Enter();
+    public interface _SubFormEvents
+    {
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2019)]
+        void Enter();
 
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
+        [SupportByVersion("Access", 9,10,11,12,14,15,16)]
         [SinkArgument("cancel", SinkArgumentType.Int16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2075)]
-		void Exit([In] [Out] ref object cancel);
-	}
+        void Exit([In] [Out] ref object cancel);
+    }
 
     #endregion
 
@@ -32,55 +32,55 @@ namespace NetOffice.AccessApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class _SubFormEvents_SinkHelper : SinkHelper, _SubFormEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "BC9E4350-F037-11CD-8701-00AA003F0F07";
-		
-		#endregion
-		
-		#region Ctor
+    public class _SubFormEvents_SinkHelper : SinkHelper, _SubFormEvents
+    {
+        #region Static
+        
+        public static readonly string Id = "BC9E4350-F037-11CD-8701-00AA003F0F07";
+        
+        #endregion
+        
+        #region Ctor
 
-		public _SubFormEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion
-		
-		#region _SubFormEvents
-		
-		public void Enter()
-		{
+        public _SubFormEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+        
+        #endregion
+        
+        #region _SubFormEvents
+        
+        public void Enter()
+        {
             if (!Validate("Enter"))
             {
                 return;
             }
 
             object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
-		}
+            EventBinding.RaiseCustomEvent("Enter", ref paramsArray);
+        }
 
-		public void Exit([In] [Out] ref object cancel)
-		{
+        public void Exit([In] [Out] ref object cancel)
+        {
             if (!Validate("Exit"))
             {
                 Invoker.ReleaseParamsArray(cancel);
                 return;
             }
 
-			object[] paramsArray = new object[1];
-			paramsArray.SetValue(cancel, 0);
-			EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
+            object[] paramsArray = new object[1];
+            paramsArray.SetValue(cancel, 0);
+            EventBinding.RaiseCustomEvent("Exit", ref paramsArray);
 
-			cancel = ToInt16(paramsArray[0]);
-		}
+            cancel = ToInt16(paramsArray[0]);
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+        #endregion
+    }
+    
+    #endregion
+    
+    #pragma warning restore CS1591
 }
