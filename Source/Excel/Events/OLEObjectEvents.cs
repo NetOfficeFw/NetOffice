@@ -7,23 +7,23 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Events
 {	
-	#pragma warning disable CS1591
+    #pragma warning disable CS1591
 
-	#region SinkPoint Interface
+    #region SinkPoint Interface
 
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
     [InternalEntity(InternalEntityKind.ComEventInterface)]
     [ComImport, Guid("00024410-0000-0000-C000-000000000046"), InterfaceType(ComInterfaceType.InterfaceIsIDispatch), TypeLibType((short)0x1010)]
-	public interface OLEObjectEvents
-	{
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1541)]
-		void GotFocus();
+    public interface OLEObjectEvents
+    {
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1541)]
+        void GotFocus();
 
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		[PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1542)]
-		void LostFocus();
-	}
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1542)]
+        void LostFocus();
+    }
 
     #endregion
 
@@ -31,38 +31,38 @@ namespace NetOffice.ExcelApi.Events
 
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
-	public class OLEObjectEvents_SinkHelper : SinkHelper, OLEObjectEvents
-	{
-		#region Static
-		
-		public static readonly string Id = "00024410-0000-0000-C000-000000000046";
-		
-		#endregion
-			
-		#region Ctor
+    public class OLEObjectEvents_SinkHelper : SinkHelper, OLEObjectEvents
+    {
+        #region Static
+        
+        public static readonly string Id = "00024410-0000-0000-C000-000000000046";
+        
+        #endregion
+            
+        #region Ctor
 
-		public OLEObjectEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
-		{
-			SetupEventBinding(connectPoint);
-		}
-		
-		#endregion		
+        public OLEObjectEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        {
+            SetupEventBinding(connectPoint);
+        }
+        
+        #endregion		
 
-		#region OLEObjectEvents
-		
-		public void GotFocus()
+        #region OLEObjectEvents
+        
+        public void GotFocus()
         {
             if (!Validate("GotFocus"))
             {
                 return;
             }
 
-			object[] paramsArray = new object[0];
-			EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
-		}
+            object[] paramsArray = new object[0];
+            EventBinding.RaiseCustomEvent("GotFocus", ref paramsArray);
+        }
 
-		public void LostFocus()
-		{
+        public void LostFocus()
+        {
             if (!Validate("LostFocus"))
             {
                 return;
@@ -70,12 +70,12 @@ namespace NetOffice.ExcelApi.Events
 
             object[] paramsArray = new object[0];
             EventBinding.RaiseCustomEvent("LostFocus", ref paramsArray);
-		}
+        }
 
-		#endregion
-	}
-	
-	#endregion
-	
-	#pragma warning restore CS1591
+        #endregion
+    }
+    
+    #endregion
+    
+    #pragma warning restore CS1591
 }

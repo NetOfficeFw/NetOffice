@@ -6,58 +6,58 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ExcelApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	public delegate void Worksheet_SelectionChangeEventHandler(NetOffice.ExcelApi.Range target);
-	public delegate void Worksheet_BeforeDoubleClickEventHandler(NetOffice.ExcelApi.Range target, ref bool cancel);
-	public delegate void Worksheet_BeforeRightClickEventHandler(NetOffice.ExcelApi.Range target, ref bool cancel);
-	public delegate void Worksheet_ActivateEventHandler();
-	public delegate void Worksheet_DeactivateEventHandler();
-	public delegate void Worksheet_CalculateEventHandler();
-	public delegate void Worksheet_ChangeEventHandler(NetOffice.ExcelApi.Range target);
-	public delegate void Worksheet_FollowHyperlinkEventHandler(NetOffice.ExcelApi.Hyperlink target);
-	public delegate void Worksheet_PivotTableUpdateEventHandler(NetOffice.ExcelApi.PivotTable target);
-	public delegate void Worksheet_PivotTableAfterValueChangeEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange);
-	public delegate void Worksheet_PivotTableBeforeAllocateChangesEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
-	public delegate void Worksheet_PivotTableBeforeCommitChangesEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
-	public delegate void Worksheet_PivotTableBeforeDiscardChangesEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd);
-	public delegate void Worksheet_PivotTableChangeSyncEventHandler(NetOffice.ExcelApi.PivotTable target);
-	public delegate void Worksheet_LensGalleryRenderCompleteEventHandler();
-	public delegate void Worksheet_TableUpdateEventHandler(NetOffice.ExcelApi.TableObject target);
-	public delegate void Worksheet_BeforeDeleteEventHandler();
-	#pragma warning restore
+    #pragma warning disable
+    public delegate void Worksheet_SelectionChangeEventHandler(NetOffice.ExcelApi.Range target);
+    public delegate void Worksheet_BeforeDoubleClickEventHandler(NetOffice.ExcelApi.Range target, ref bool cancel);
+    public delegate void Worksheet_BeforeRightClickEventHandler(NetOffice.ExcelApi.Range target, ref bool cancel);
+    public delegate void Worksheet_ActivateEventHandler();
+    public delegate void Worksheet_DeactivateEventHandler();
+    public delegate void Worksheet_CalculateEventHandler();
+    public delegate void Worksheet_ChangeEventHandler(NetOffice.ExcelApi.Range target);
+    public delegate void Worksheet_FollowHyperlinkEventHandler(NetOffice.ExcelApi.Hyperlink target);
+    public delegate void Worksheet_PivotTableUpdateEventHandler(NetOffice.ExcelApi.PivotTable target);
+    public delegate void Worksheet_PivotTableAfterValueChangeEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, NetOffice.ExcelApi.Range targetRange);
+    public delegate void Worksheet_PivotTableBeforeAllocateChangesEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
+    public delegate void Worksheet_PivotTableBeforeCommitChangesEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd, ref bool cancel);
+    public delegate void Worksheet_PivotTableBeforeDiscardChangesEventHandler(NetOffice.ExcelApi.PivotTable targetPivotTable, Int32 valueChangeStart, Int32 valueChangeEnd);
+    public delegate void Worksheet_PivotTableChangeSyncEventHandler(NetOffice.ExcelApi.PivotTable target);
+    public delegate void Worksheet_LensGalleryRenderCompleteEventHandler();
+    public delegate void Worksheet_TableUpdateEventHandler(NetOffice.ExcelApi.TableObject target);
+    public delegate void Worksheet_BeforeDeleteEventHandler();
+    #pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass Worksheet 
-	/// SupportByVersion Excel, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet"/> </remarks>
-	[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsCoClass)]
-	[EventSink(typeof(Events.DocEvents_SinkHelper))]
+    /// <summary>
+    /// CoClass Worksheet 
+    /// SupportByVersion Excel, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet"/> </remarks>
+    [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+    [EntityType(EntityType.IsCoClass)]
+    [EventSink(typeof(Events.DocEvents_SinkHelper))]
     [ComEventInterface(typeof(Events.DocEvents))]
     public class Worksheet : _Worksheet, IEventBinding
-	{
-		#pragma warning disable
+    {
+        #pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+        
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
         private Events.DocEvents_SinkHelper _docEvents_SinkHelper;
-	
-		#endregion
+    
+        #endregion
 
-		#region Type Information
+        #region Type Information
 
         /// <summary>
         /// Instance Type
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
         public override Type InstanceType
         {
             get
@@ -69,7 +69,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -81,66 +81,66 @@ namespace NetOffice.ExcelApi
         }
         
         #endregion
-        		
-		#region Construction
+                
+        #region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Worksheet(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Worksheet(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Worksheet(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public Worksheet(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+            
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Worksheet(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Worksheet(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
+            
+        }
 
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Worksheet(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Worksheet(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Worksheet(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+            
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Worksheet(ICOMObject replacedObject) : base(replacedObject)
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of Worksheet 
         /// </summary>		
-		public Worksheet():base("Excel.Worksheet")
-		{
-			
-		}
-		
-		/// <summary>
+        public Worksheet():base("Excel.Worksheet")
+        {
+            
+        }
+        
+        /// <summary>
         /// Creates a new instance of Worksheet
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public Worksheet(string progId):base(progId)
-		{
-			
-		}
+        public Worksheet(string progId):base(progId)
+        {
+            
+        }
 
         #endregion
 
@@ -174,417 +174,417 @@ namespace NetOffice.ExcelApi
         /// </summary>
         private event Worksheet_SelectionChangeEventHandler _SelectionChangeEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.SelectionChange"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_SelectionChangeEventHandler SelectionChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_SelectionChangeEvent += value;
-			}
-			remove
-			{
-				_SelectionChangeEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.SelectionChange"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_SelectionChangeEventHandler SelectionChangeEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _SelectionChangeEvent += value;
+            }
+            remove
+            {
+                _SelectionChangeEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_BeforeDoubleClickEventHandler _BeforeDoubleClickEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.BeforeDoubleClick"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDoubleClickEvent += value;
-			}
-			remove
-			{
-				_BeforeDoubleClickEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.BeforeDoubleClick"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_BeforeDoubleClickEventHandler BeforeDoubleClickEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _BeforeDoubleClickEvent += value;
+            }
+            remove
+            {
+                _BeforeDoubleClickEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_BeforeRightClickEventHandler _BeforeRightClickEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_BeforeRightClickEventHandler _BeforeRightClickEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.BeforeRightClick"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_BeforeRightClickEventHandler BeforeRightClickEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeRightClickEvent += value;
-			}
-			remove
-			{
-				_BeforeRightClickEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.BeforeRightClick"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_BeforeRightClickEventHandler BeforeRightClickEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _BeforeRightClickEvent += value;
+            }
+            remove
+            {
+                _BeforeRightClickEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_ActivateEventHandler _ActivateEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_ActivateEventHandler _ActivateEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Activate(even)"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_ActivateEventHandler ActivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ActivateEvent += value;
-			}
-			remove
-			{
-				_ActivateEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Activate(even)"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_ActivateEventHandler ActivateEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _ActivateEvent += value;
+            }
+            remove
+            {
+                _ActivateEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_DeactivateEventHandler _DeactivateEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_DeactivateEventHandler _DeactivateEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Deactivate"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_DeactivateEventHandler DeactivateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_DeactivateEvent += value;
-			}
-			remove
-			{
-				_DeactivateEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Deactivate"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_DeactivateEventHandler DeactivateEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _DeactivateEvent += value;
+            }
+            remove
+            {
+                _DeactivateEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_CalculateEventHandler _CalculateEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_CalculateEventHandler _CalculateEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Calculate(even)"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_CalculateEventHandler CalculateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_CalculateEvent += value;
-			}
-			remove
-			{
-				_CalculateEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Calculate(even)"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_CalculateEventHandler CalculateEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _CalculateEvent += value;
+            }
+            remove
+            {
+                _CalculateEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_ChangeEventHandler _ChangeEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_ChangeEventHandler _ChangeEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Change"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_ChangeEventHandler ChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_ChangeEvent += value;
-			}
-			remove
-			{
-				_ChangeEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.Change"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_ChangeEventHandler ChangeEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _ChangeEvent += value;
+            }
+            remove
+            {
+                _ChangeEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 9,10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_FollowHyperlinkEventHandler _FollowHyperlinkEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 9,10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_FollowHyperlinkEventHandler _FollowHyperlinkEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 9 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.FollowHyperlink"/> </remarks>
-		[SupportByVersion("Excel", 9,10,11,12,14,15,16)]
-		public event Worksheet_FollowHyperlinkEventHandler FollowHyperlinkEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_FollowHyperlinkEvent += value;
-			}
-			remove
-			{
-				_FollowHyperlinkEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 9 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.FollowHyperlink"/> </remarks>
+        [SupportByVersion("Excel", 9,10,11,12,14,15,16)]
+        public event Worksheet_FollowHyperlinkEventHandler FollowHyperlinkEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _FollowHyperlinkEvent += value;
+            }
+            remove
+            {
+                _FollowHyperlinkEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 10,11,12,14,15,16
-		/// </summary>
-		private event Worksheet_PivotTableUpdateEventHandler _PivotTableUpdateEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 10,11,12,14,15,16
+        /// </summary>
+        private event Worksheet_PivotTableUpdateEventHandler _PivotTableUpdateEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 10 11 12 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableUpdate"/> </remarks>
-		[SupportByVersion("Excel", 10,11,12,14,15,16)]
-		public event Worksheet_PivotTableUpdateEventHandler PivotTableUpdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PivotTableUpdateEvent += value;
-			}
-			remove
-			{
-				_PivotTableUpdateEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 10 11 12 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableUpdate"/> </remarks>
+        [SupportByVersion("Excel", 10,11,12,14,15,16)]
+        public event Worksheet_PivotTableUpdateEventHandler PivotTableUpdateEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PivotTableUpdateEvent += value;
+            }
+            remove
+            {
+                _PivotTableUpdateEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 14,15,16
-		/// </summary>
-		private event Worksheet_PivotTableAfterValueChangeEventHandler _PivotTableAfterValueChangeEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        private event Worksheet_PivotTableAfterValueChangeEventHandler _PivotTableAfterValueChangeEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableAfterValueChange"/> </remarks>
-		[SupportByVersion("Excel", 14,15,16)]
-		public event Worksheet_PivotTableAfterValueChangeEventHandler PivotTableAfterValueChangeEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PivotTableAfterValueChangeEvent += value;
-			}
-			remove
-			{
-				_PivotTableAfterValueChangeEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableAfterValueChange"/> </remarks>
+        [SupportByVersion("Excel", 14,15,16)]
+        public event Worksheet_PivotTableAfterValueChangeEventHandler PivotTableAfterValueChangeEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PivotTableAfterValueChangeEvent += value;
+            }
+            remove
+            {
+                _PivotTableAfterValueChangeEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 14,15,16
-		/// </summary>
-		private event Worksheet_PivotTableBeforeAllocateChangesEventHandler _PivotTableBeforeAllocateChangesEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        private event Worksheet_PivotTableBeforeAllocateChangesEventHandler _PivotTableBeforeAllocateChangesEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableBeforeAllocateChanges"/> </remarks>
-		[SupportByVersion("Excel", 14,15,16)]
-		public event Worksheet_PivotTableBeforeAllocateChangesEventHandler PivotTableBeforeAllocateChangesEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PivotTableBeforeAllocateChangesEvent += value;
-			}
-			remove
-			{
-				_PivotTableBeforeAllocateChangesEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableBeforeAllocateChanges"/> </remarks>
+        [SupportByVersion("Excel", 14,15,16)]
+        public event Worksheet_PivotTableBeforeAllocateChangesEventHandler PivotTableBeforeAllocateChangesEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PivotTableBeforeAllocateChangesEvent += value;
+            }
+            remove
+            {
+                _PivotTableBeforeAllocateChangesEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 14,15,16
-		/// </summary>
-		private event Worksheet_PivotTableBeforeCommitChangesEventHandler _PivotTableBeforeCommitChangesEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        private event Worksheet_PivotTableBeforeCommitChangesEventHandler _PivotTableBeforeCommitChangesEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableBeforeCommitChanges"/> </remarks>
-		[SupportByVersion("Excel", 14,15,16)]
-		public event Worksheet_PivotTableBeforeCommitChangesEventHandler PivotTableBeforeCommitChangesEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PivotTableBeforeCommitChangesEvent += value;
-			}
-			remove
-			{
-				_PivotTableBeforeCommitChangesEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableBeforeCommitChanges"/> </remarks>
+        [SupportByVersion("Excel", 14,15,16)]
+        public event Worksheet_PivotTableBeforeCommitChangesEventHandler PivotTableBeforeCommitChangesEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PivotTableBeforeCommitChangesEvent += value;
+            }
+            remove
+            {
+                _PivotTableBeforeCommitChangesEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 14,15,16
-		/// </summary>
-		private event Worksheet_PivotTableBeforeDiscardChangesEventHandler _PivotTableBeforeDiscardChangesEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        private event Worksheet_PivotTableBeforeDiscardChangesEventHandler _PivotTableBeforeDiscardChangesEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableBeforeDiscardChanges"/> </remarks>
-		[SupportByVersion("Excel", 14,15,16)]
-		public event Worksheet_PivotTableBeforeDiscardChangesEventHandler PivotTableBeforeDiscardChangesEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PivotTableBeforeDiscardChangesEvent += value;
-			}
-			remove
-			{
-				_PivotTableBeforeDiscardChangesEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableBeforeDiscardChanges"/> </remarks>
+        [SupportByVersion("Excel", 14,15,16)]
+        public event Worksheet_PivotTableBeforeDiscardChangesEventHandler PivotTableBeforeDiscardChangesEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PivotTableBeforeDiscardChangesEvent += value;
+            }
+            remove
+            {
+                _PivotTableBeforeDiscardChangesEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 14,15,16
-		/// </summary>
-		private event Worksheet_PivotTableChangeSyncEventHandler _PivotTableChangeSyncEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 14,15,16
+        /// </summary>
+        private event Worksheet_PivotTableChangeSyncEventHandler _PivotTableChangeSyncEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 14 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableChangeSync"/> </remarks>
-		[SupportByVersion("Excel", 14,15,16)]
-		public event Worksheet_PivotTableChangeSyncEventHandler PivotTableChangeSyncEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_PivotTableChangeSyncEvent += value;
-			}
-			remove
-			{
-				_PivotTableChangeSyncEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 14 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.Worksheet.PivotTableChangeSync"/> </remarks>
+        [SupportByVersion("Excel", 14,15,16)]
+        public event Worksheet_PivotTableChangeSyncEventHandler PivotTableChangeSyncEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _PivotTableChangeSyncEvent += value;
+            }
+            remove
+            {
+                _PivotTableChangeSyncEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// </summary>
-		private event Worksheet_LensGalleryRenderCompleteEventHandler _LensGalleryRenderCompleteEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        private event Worksheet_LensGalleryRenderCompleteEventHandler _LensGalleryRenderCompleteEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.worksheet.lensgalleryrendercomplete"/> </remarks>
-		[SupportByVersion("Excel", 15, 16)]
-		public event Worksheet_LensGalleryRenderCompleteEventHandler LensGalleryRenderCompleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_LensGalleryRenderCompleteEvent += value;
-			}
-			remove
-			{
-				_LensGalleryRenderCompleteEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.worksheet.lensgalleryrendercomplete"/> </remarks>
+        [SupportByVersion("Excel", 15, 16)]
+        public event Worksheet_LensGalleryRenderCompleteEventHandler LensGalleryRenderCompleteEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _LensGalleryRenderCompleteEvent += value;
+            }
+            remove
+            {
+                _LensGalleryRenderCompleteEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// </summary>
-		private event Worksheet_TableUpdateEventHandler _TableUpdateEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        private event Worksheet_TableUpdateEventHandler _TableUpdateEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.worksheet.tableupdate"/> </remarks>
-		[SupportByVersion("Excel", 15, 16)]
-		public event Worksheet_TableUpdateEventHandler TableUpdateEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_TableUpdateEvent += value;
-			}
-			remove
-			{
-				_TableUpdateEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.worksheet.tableupdate"/> </remarks>
+        [SupportByVersion("Excel", 15, 16)]
+        public event Worksheet_TableUpdateEventHandler TableUpdateEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _TableUpdateEvent += value;
+            }
+            remove
+            {
+                _TableUpdateEvent -= value;
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Excel, 15, 16
-		/// </summary>
-		private event Worksheet_BeforeDeleteEventHandler _BeforeDeleteEvent;
+        /// <summary>
+        /// SupportByVersion Excel, 15, 16
+        /// </summary>
+        private event Worksheet_BeforeDeleteEventHandler _BeforeDeleteEvent;
 
-		/// <summary>
-		/// SupportByVersion Excel 15,16
-		/// </summary>
-		///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.worksheet.beforedelete"/> </remarks>
-		[SupportByVersion("Excel", 15, 16)]
-		public event Worksheet_BeforeDeleteEventHandler BeforeDeleteEvent
-		{
-			add
-			{
-				CreateEventBridge();
-				_BeforeDeleteEvent += value;
-			}
-			remove
-			{
-				_BeforeDeleteEvent -= value;
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Excel 15,16
+        /// </summary>
+        ///<remarks> MSDN Online Documentation: <see href="https://docs.microsoft.com/en-us/office/vba/api/Excel.worksheet.beforedelete"/> </remarks>
+        [SupportByVersion("Excel", 15, 16)]
+        public event Worksheet_BeforeDeleteEventHandler BeforeDeleteEvent
+        {
+            add
+            {
+                CreateEventBridge();
+                _BeforeDeleteEvent += value;
+            }
+            remove
+            {
+                _BeforeDeleteEvent -= value;
+            }
+        }
 
-		#endregion
+        #endregion
        
-	    #region IEventBinding
+        #region IEventBinding
         
-		/// <summary>
+        /// <summary>
         /// Creates active sink helper
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public void CreateEventBridge()
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public void CreateEventBridge()
         {
-			if(false == Factory.Settings.EnableEvents)
-				return;
-	
-			if (null != _connectPoint)
-				return;
-	
+            if(false == Factory.Settings.EnableEvents)
+                return;
+    
+            if (null != _connectPoint)
+                return;
+    
             if (null == _activeSinkId)
-				_activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DocEvents_SinkHelper.Id);
+                _activeSinkId = SinkHelper.GetConnectionPoint(this, ref _connectPoint, Events.DocEvents_SinkHelper.Id);
 
 
-			if(Events.DocEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
-			{
-				_docEvents_SinkHelper = new Events.DocEvents_SinkHelper(this, _connectPoint);
-				return;
-			} 
+            if(Events.DocEvents_SinkHelper.Id.Equals(_activeSinkId, StringComparison.InvariantCultureIgnoreCase))
+            {
+                _docEvents_SinkHelper = new Events.DocEvents_SinkHelper(this, _connectPoint);
+                return;
+            } 
         }
 
         /// <summary>
@@ -631,7 +631,7 @@ namespace NetOffice.ExcelApi
         /// <summary>
         /// Returns the current count of event recipients
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int GetCountOfEventRecipients(string eventName)
         {
             return NetOffice.Events.CoClassEventReflector.GetCountOfEventRecipients(this, LateBindingApiWrapperType, eventName);       
@@ -643,29 +643,29 @@ namespace NetOffice.ExcelApi
         /// <param name="eventName">name of the event without 'Event' at the end</param>
         /// <param name="paramsArray">custom arguments for the event</param>
         /// <returns>count of called event recipients</returns>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public int RaiseCustomEvent(string eventName, ref object[] paramsArray)
-		{
+        {
             return NetOffice.Events.CoClassEventReflector.RaiseCustomEvent(this, LateBindingApiWrapperType, eventName, ref paramsArray);
-		}
+        }
         /// <summary>
         /// Stop listening events for the instance
         /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public void DisposeEventBridge()
         {
-			if( null != _docEvents_SinkHelper)
-			{
-				_docEvents_SinkHelper.Dispose();
-				_docEvents_SinkHelper = null;
-			}
+            if( null != _docEvents_SinkHelper)
+            {
+                _docEvents_SinkHelper.Dispose();
+                _docEvents_SinkHelper = null;
+            }
 
-			_connectPoint = null;
-		}
+            _connectPoint = null;
+        }
         
         #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
 
