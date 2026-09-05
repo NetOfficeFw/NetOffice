@@ -15,7 +15,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class SchemaRelationships : COMObject, IEnumerable<NetOffice.OWC10Api.SchemaRelationship>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -43,9 +43,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -60,7 +60,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SchemaRelationships(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -69,7 +69,7 @@ namespace NetOffice.OWC10Api
         public SchemaRelationships(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -87,26 +87,26 @@ namespace NetOffice.OWC10Api
         public SchemaRelationships(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SchemaRelationships(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SchemaRelationships() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SchemaRelationships(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api.SchemaRelationship Add(string name, string manySchemaRowsource, string oneSchemaRowsource, string manySchemaField, string oneSchemaField)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRelationship>(this, "Add", NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType, new object[]{ name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRelationship>(this, "Add", NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType, new object[] { name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField });
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api.SchemaRelationship AddNew(string name, string manySchemaRowsource, string oneSchemaRowsource, string manySchemaField, string oneSchemaField)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRelationship>(this, "AddNew", NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType, new object[]{ name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaRelationship>(this, "AddNew", NetOffice.OWC10Api.SchemaRelationship.LateBindingApiWrapperType, new object[] { name, manySchemaRowsource, oneSchemaRowsource, manySchemaField, oneSchemaField });
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Delete(object index)
         {
-             Factory.ExecuteMethod(this, "Delete", index);
+            Factory.ExecuteMethod(this, "Delete", index);
         }
 
         #endregion
@@ -210,6 +210,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

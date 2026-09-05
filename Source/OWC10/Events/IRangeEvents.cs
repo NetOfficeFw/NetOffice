@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -30,22 +30,22 @@ namespace NetOffice.OWC10Api.Events
     public class IRangeEvents_SinkHelper : SinkHelper, IRangeEvents
     {
         #region Static
-        
+
         public static readonly string Id = "B8891063-2B00-48EC-957F-6DEBEADE9D8B";
-        
+
         #endregion
 
         #region Ctor
 
-        public IRangeEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public IRangeEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region IRangeEvents
-        
+
         public void Change()
         {
             if (!Validate("Change"))
@@ -59,8 +59,8 @@ namespace NetOffice.OWC10Api.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

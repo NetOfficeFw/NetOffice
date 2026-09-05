@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class DataPage : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public DataPage(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public DataPage(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public DataPage(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataPage(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataPage() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public DataPage(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void MoveFirst()
         {
-             Factory.ExecuteMethod(this, "MoveFirst");
+            Factory.ExecuteMethod(this, "MoveFirst");
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void MoveLast()
         {
-             Factory.ExecuteMethod(this, "MoveLast");
+            Factory.ExecuteMethod(this, "MoveLast");
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void MoveNext()
         {
-             Factory.ExecuteMethod(this, "MoveNext");
+            Factory.ExecuteMethod(this, "MoveNext");
         }
 
         /// <summary>
@@ -217,7 +217,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void MovePrevious()
         {
-             Factory.ExecuteMethod(this, "MovePrevious");
+            Factory.ExecuteMethod(this, "MovePrevious");
         }
 
         /// <summary>
@@ -226,7 +226,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void NewRecord()
         {
-             Factory.ExecuteMethod(this, "NewRecord");
+            Factory.ExecuteMethod(this, "NewRecord");
         }
 
         /// <summary>
@@ -235,7 +235,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DeleteRecord()
         {
-             Factory.ExecuteMethod(this, "DeleteRecord");
+            Factory.ExecuteMethod(this, "DeleteRecord");
         }
 
         /// <summary>
@@ -244,7 +244,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Save()
         {
-             Factory.ExecuteMethod(this, "Save");
+            Factory.ExecuteMethod(this, "Save");
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Undo()
         {
-             Factory.ExecuteMethod(this, "Undo");
+            Factory.ExecuteMethod(this, "Undo");
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Requery()
         {
-             Factory.ExecuteMethod(this, "Requery");
+            Factory.ExecuteMethod(this, "Requery");
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SortAscending()
         {
-             Factory.ExecuteMethod(this, "SortAscending");
+            Factory.ExecuteMethod(this, "SortAscending");
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SortDescending()
         {
-             Factory.ExecuteMethod(this, "SortDescending");
+            Factory.ExecuteMethod(this, "SortDescending");
         }
 
         /// <summary>
@@ -289,7 +289,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ApplyFilter()
         {
-             Factory.ExecuteMethod(this, "ApplyFilter");
+            Factory.ExecuteMethod(this, "ApplyFilter");
         }
 
         /// <summary>
@@ -298,7 +298,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ToggleFilter()
         {
-             Factory.ExecuteMethod(this, "ToggleFilter");
+            Factory.ExecuteMethod(this, "ToggleFilter");
         }
 
         /// <summary>
@@ -308,7 +308,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Help()
         {
-             Factory.ExecuteMethod(this, "Help");
+            Factory.ExecuteMethod(this, "Help");
         }
 
         /// <summary>
@@ -323,6 +323,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

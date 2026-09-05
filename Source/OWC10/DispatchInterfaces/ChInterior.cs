@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class ChInterior : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChInterior(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public ChInterior(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public ChInterior(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChInterior(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChInterior() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChInterior(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType, object color, object backColor)
         {
-             Factory.ExecuteMethod(this, "SetPatterned", patternType, color, backColor);
+            Factory.ExecuteMethod(this, "SetPatterned", patternType, color, backColor);
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType)
         {
-             Factory.ExecuteMethod(this, "SetPatterned", patternType);
+            Factory.ExecuteMethod(this, "SetPatterned", patternType);
         }
 
         /// <summary>
@@ -333,7 +333,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetPatterned(NetOffice.OWC10Api.Enums.ChartPatternTypeEnum patternType, object color)
         {
-             Factory.ExecuteMethod(this, "SetPatterned", patternType, color);
+            Factory.ExecuteMethod(this, "SetPatterned", patternType, color);
         }
 
         /// <summary>
@@ -345,7 +345,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetPresetGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVarient, NetOffice.OWC10Api.Enums.ChartPresetGradientTypeEnum gradientPreset)
         {
-             Factory.ExecuteMethod(this, "SetPresetGradient", gradientStyle, gradientVarient, gradientPreset);
+            Factory.ExecuteMethod(this, "SetPresetGradient", gradientStyle, gradientVarient, gradientPreset);
         }
 
         /// <summary>
@@ -358,7 +358,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTextured(object textureFile, object textureFormat, object stackUnit, object texturePlacement)
         {
-             Factory.ExecuteMethod(this, "SetTextured", textureFile, textureFormat, stackUnit, texturePlacement);
+            Factory.ExecuteMethod(this, "SetTextured", textureFile, textureFormat, stackUnit, texturePlacement);
         }
 
         /// <summary>
@@ -369,7 +369,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTextured(object textureFile)
         {
-             Factory.ExecuteMethod(this, "SetTextured", textureFile);
+            Factory.ExecuteMethod(this, "SetTextured", textureFile);
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTextured(object textureFile, object textureFormat)
         {
-             Factory.ExecuteMethod(this, "SetTextured", textureFile, textureFormat);
+            Factory.ExecuteMethod(this, "SetTextured", textureFile, textureFormat);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTextured(object textureFile, object textureFormat, object stackUnit)
         {
-             Factory.ExecuteMethod(this, "SetTextured", textureFile, textureFormat, stackUnit);
+            Factory.ExecuteMethod(this, "SetTextured", textureFile, textureFormat, stackUnit);
         }
 
         /// <summary>
@@ -407,7 +407,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetOneColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree, object color)
         {
-             Factory.ExecuteMethod(this, "SetOneColorGradient", gradientStyle, gradientVariant, gradientDegree, color);
+            Factory.ExecuteMethod(this, "SetOneColorGradient", gradientStyle, gradientVariant, gradientDegree, color);
         }
 
         /// <summary>
@@ -420,7 +420,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetOneColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, Double gradientDegree)
         {
-             Factory.ExecuteMethod(this, "SetOneColorGradient", gradientStyle, gradientVariant, gradientDegree);
+            Factory.ExecuteMethod(this, "SetOneColorGradient", gradientStyle, gradientVariant, gradientDegree);
         }
 
         /// <summary>
@@ -430,7 +430,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetSolid(object color)
         {
-             Factory.ExecuteMethod(this, "SetSolid", color);
+            Factory.ExecuteMethod(this, "SetSolid", color);
         }
 
         /// <summary>
@@ -440,7 +440,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetSolid()
         {
-             Factory.ExecuteMethod(this, "SetSolid");
+            Factory.ExecuteMethod(this, "SetSolid");
         }
 
         /// <summary>
@@ -453,7 +453,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, object color, object backColor)
         {
-             Factory.ExecuteMethod(this, "SetTwoColorGradient", gradientStyle, gradientVariant, color, backColor);
+            Factory.ExecuteMethod(this, "SetTwoColorGradient", gradientStyle, gradientVariant, color, backColor);
         }
 
         /// <summary>
@@ -465,7 +465,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant)
         {
-             Factory.ExecuteMethod(this, "SetTwoColorGradient", gradientStyle, gradientVariant);
+            Factory.ExecuteMethod(this, "SetTwoColorGradient", gradientStyle, gradientVariant);
         }
 
         /// <summary>
@@ -478,11 +478,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTwoColorGradient(NetOffice.OWC10Api.Enums.ChartGradientStyleEnum gradientStyle, NetOffice.OWC10Api.Enums.ChartGradientVariantEnum gradientVariant, object color)
         {
-             Factory.ExecuteMethod(this, "SetTwoColorGradient", gradientStyle, gradientVariant, color);
+            Factory.ExecuteMethod(this, "SetTwoColorGradient", gradientStyle, gradientVariant, color);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

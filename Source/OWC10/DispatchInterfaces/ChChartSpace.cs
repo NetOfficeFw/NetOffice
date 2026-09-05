@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class ChChartSpace : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChChartSpace(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public ChChartSpace(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public ChChartSpace(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChChartSpace(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChChartSpace() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChChartSpace(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -1133,7 +1133,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BuildLitChart()
         {
-             Factory.ExecuteMethod(this, "BuildLitChart");
+            Factory.ExecuteMethod(this, "BuildLitChart");
         }
 
         /// <summary>
@@ -1143,7 +1143,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Load(string filename)
         {
-             Factory.ExecuteMethod(this, "Load", filename);
+            Factory.ExecuteMethod(this, "Load", filename);
         }
 
         /// <summary>
@@ -1152,7 +1152,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Clear()
         {
-             Factory.ExecuteMethod(this, "Clear");
+            Factory.ExecuteMethod(this, "Clear");
         }
 
         /// <summary>
@@ -1162,7 +1162,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowHelp(Int32 iTopic)
         {
-             Factory.ExecuteMethod(this, "ShowHelp", iTopic);
+            Factory.ExecuteMethod(this, "ShowHelp", iTopic);
         }
 
         /// <summary>
@@ -1175,7 +1175,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename, object filterName, object width, object height)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width, height);
+            Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width, height);
         }
 
         /// <summary>
@@ -1185,7 +1185,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture()
         {
-             Factory.ExecuteMethod(this, "ExportPicture");
+            Factory.ExecuteMethod(this, "ExportPicture");
         }
 
         /// <summary>
@@ -1196,7 +1196,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename);
+            Factory.ExecuteMethod(this, "ExportPicture", filename);
         }
 
         /// <summary>
@@ -1208,7 +1208,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename, object filterName)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename, filterName);
+            Factory.ExecuteMethod(this, "ExportPicture", filename, filterName);
         }
 
         /// <summary>
@@ -1221,7 +1221,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename, object filterName, object width)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width);
+            Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width);
         }
 
         /// <summary>
@@ -1230,7 +1230,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -1239,7 +1239,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select()
         {
-             Factory.ExecuteMethod(this, "Select");
+            Factory.ExecuteMethod(this, "Select");
         }
 
         /// <summary>
@@ -1248,7 +1248,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BeginUndo()
         {
-             Factory.ExecuteMethod(this, "BeginUndo");
+            Factory.ExecuteMethod(this, "BeginUndo");
         }
 
         /// <summary>
@@ -1257,7 +1257,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void EndUndo()
         {
-             Factory.ExecuteMethod(this, "EndUndo");
+            Factory.ExecuteMethod(this, "EndUndo");
         }
 
         /// <summary>
@@ -1266,7 +1266,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Undo()
         {
-             Factory.ExecuteMethod(this, "Undo");
+            Factory.ExecuteMethod(this, "Undo");
         }
 
         /// <summary>
@@ -1289,7 +1289,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum dimension, Int32 dataSourceIndex, object dataReference)
         {
-             Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex, dataReference);
+            Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex, dataReference);
         }
 
         /// <summary>
@@ -1301,7 +1301,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetData(NetOffice.OWC10Api.Enums.ChartDimensionsEnum dimension, Int32 dataSourceIndex)
         {
-             Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex);
+            Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex);
         }
 
         /// <summary>
@@ -1323,7 +1323,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void FieldListAddTo(object punk, Int32 lPos)
         {
-             Factory.ExecuteMethod(this, "FieldListAddTo", punk, lPos);
+            Factory.ExecuteMethod(this, "FieldListAddTo", punk, lPos);
         }
 
         /// <summary>
@@ -1333,7 +1333,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LocateDataSource()
         {
-             Factory.ExecuteMethod(this, "LocateDataSource");
+            Factory.ExecuteMethod(this, "LocateDataSource");
         }
 
         /// <summary>
@@ -1345,7 +1345,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowContextMenu(Int32 x, Int32 y, object menu)
         {
-             Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
+            Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
         }
 
         /// <summary>
@@ -1401,7 +1401,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetSpreadsheetData(string dataReference, object seriesByRows)
         {
-             Factory.ExecuteMethod(this, "SetSpreadsheetData", dataReference, seriesByRows);
+            Factory.ExecuteMethod(this, "SetSpreadsheetData", dataReference, seriesByRows);
         }
 
         /// <summary>
@@ -1412,7 +1412,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetSpreadsheetData(string dataReference)
         {
-             Factory.ExecuteMethod(this, "SetSpreadsheetData", dataReference);
+            Factory.ExecuteMethod(this, "SetSpreadsheetData", dataReference);
         }
 
         /// <summary>
@@ -1421,7 +1421,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Repaint()
         {
-             Factory.ExecuteMethod(this, "Repaint");
+            Factory.ExecuteMethod(this, "Repaint");
         }
 
         /// <summary>
@@ -1441,7 +1441,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ClearUndo()
         {
-             Factory.ExecuteMethod(this, "ClearUndo");
+            Factory.ExecuteMethod(this, "ClearUndo");
         }
 
         /// <summary>
@@ -1450,11 +1450,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void OkToBindToControlByName()
         {
-             Factory.ExecuteMethod(this, "OkToBindToControlByName");
+            Factory.ExecuteMethod(this, "OkToBindToControlByName");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

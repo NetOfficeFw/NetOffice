@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class PivotDataAxis : PivotAxis
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public PivotDataAxis(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public PivotDataAxis(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public PivotDataAxis(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PivotDataAxis(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PivotDataAxis() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public PivotDataAxis(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void InsertTotal(NetOffice.OWC10Api.PivotTotal total, object before)
         {
-             Factory.ExecuteMethod(this, "InsertTotal", total, before);
+            Factory.ExecuteMethod(this, "InsertTotal", total, before);
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void InsertTotal(NetOffice.OWC10Api.PivotTotal total)
         {
-             Factory.ExecuteMethod(this, "InsertTotal", total);
+            Factory.ExecuteMethod(this, "InsertTotal", total);
         }
 
         /// <summary>
@@ -153,11 +153,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void RemoveTotal(object total)
         {
-             Factory.ExecuteMethod(this, "RemoveTotal", total);
+            Factory.ExecuteMethod(this, "RemoveTotal", total);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

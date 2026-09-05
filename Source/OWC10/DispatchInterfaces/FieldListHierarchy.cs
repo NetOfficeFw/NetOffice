@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class FieldListHierarchy : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public FieldListHierarchy(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public FieldListHierarchy(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public FieldListHierarchy(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FieldListHierarchy(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FieldListHierarchy() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public FieldListHierarchy(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetHierarchySite(NetOffice.OWC10Api.FieldListHierarchySite pflhs)
         {
-             Factory.ExecuteMethod(this, "SetHierarchySite", pflhs);
+            Factory.ExecuteMethod(this, "SetHierarchySite", pflhs);
         }
 
         /// <summary>
@@ -210,7 +210,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api.FieldListNode AddNode(NetOffice.OWC10Api.FieldListNode pflnParent, bool fInsertFirst, Int32 nID, string bstrName, string bstrData, Int32 nType)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListNode>(this, "AddNode", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType, new object[]{ pflnParent, fInsertFirst, nID, bstrName, bstrData, nType });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.FieldListNode>(this, "AddNode", NetOffice.OWC10Api.FieldListNode.LateBindingApiWrapperType, new object[] { pflnParent, fInsertFirst, nID, bstrName, bstrData, nType });
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void RemoveNode(NetOffice.OWC10Api.FieldListNode pfln)
         {
-             Factory.ExecuteMethod(this, "RemoveNode", pfln);
+            Factory.ExecuteMethod(this, "RemoveNode", pfln);
         }
 
         /// <summary>
@@ -266,6 +266,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

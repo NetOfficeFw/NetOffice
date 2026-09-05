@@ -25,7 +25,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Workbook_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -34,7 +34,7 @@ namespace NetOffice.OWC10Api
         public Workbook_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -52,7 +52,7 @@ namespace NetOffice.OWC10Api
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workbook_(ICOMObject replacedObject) : base(replacedObject)
@@ -66,13 +66,13 @@ namespace NetOffice.OWC10Api
         public Workbook_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workbook_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -128,7 +128,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class Workbook : Workbook_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -156,9 +156,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -173,7 +173,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Workbook(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -182,7 +182,7 @@ namespace NetOffice.OWC10Api
         public Workbook(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -200,26 +200,26 @@ namespace NetOffice.OWC10Api
         public Workbook(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workbook(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workbook() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Workbook(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -384,7 +384,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Protect(object password, object structure, object windows)
         {
-             Factory.ExecuteMethod(this, "Protect", password, structure, windows);
+            Factory.ExecuteMethod(this, "Protect", password, structure, windows);
         }
 
         /// <summary>
@@ -394,7 +394,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Protect()
         {
-             Factory.ExecuteMethod(this, "Protect");
+            Factory.ExecuteMethod(this, "Protect");
         }
 
         /// <summary>
@@ -405,7 +405,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Protect(object password)
         {
-             Factory.ExecuteMethod(this, "Protect", password);
+            Factory.ExecuteMethod(this, "Protect", password);
         }
 
         /// <summary>
@@ -417,7 +417,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Protect(object password, object structure)
         {
-             Factory.ExecuteMethod(this, "Protect", password, structure);
+            Factory.ExecuteMethod(this, "Protect", password, structure);
         }
 
         /// <summary>
@@ -426,7 +426,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ResetColors()
         {
-             Factory.ExecuteMethod(this, "ResetColors");
+            Factory.ExecuteMethod(this, "ResetColors");
         }
 
         /// <summary>
@@ -436,7 +436,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Unprotect(object password)
         {
-             Factory.ExecuteMethod(this, "Unprotect", password);
+            Factory.ExecuteMethod(this, "Unprotect", password);
         }
 
         /// <summary>
@@ -446,11 +446,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Unprotect()
         {
-             Factory.ExecuteMethod(this, "Unprotect");
+            Factory.ExecuteMethod(this, "Unprotect");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

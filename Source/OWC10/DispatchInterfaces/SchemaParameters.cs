@@ -16,7 +16,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class SchemaParameters : COMObject, IEnumerableProvider<NetOffice.OWC10Api.SchemaParameter>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public SchemaParameters(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.OWC10Api
         public SchemaParameters(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.OWC10Api
         public SchemaParameters(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SchemaParameters(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SchemaParameters() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public SchemaParameters(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -154,7 +154,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision, object direction)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[]{ name, dataType, size, scale, precision, direction });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[] { name, dataType, size, scale, precision, direction });
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api.SchemaParameter Add(string name, object dataType, object size, object scale, object precision)
         {
-            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[]{ name, dataType, size, scale, precision });
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OWC10Api.SchemaParameter>(this, "Add", NetOffice.OWC10Api.SchemaParameter.LateBindingApiWrapperType, new object[] { name, dataType, size, scale, precision });
         }
 
         #endregion
@@ -266,6 +266,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -126,32 +126,32 @@ namespace NetOffice.OWC10Api.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(648)]
         void Focus([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo);
     }
-    
+
     #endregion
-    
+
     #region SinkHelper
-    
+
     [InternalEntity(InternalEntityKind.SinkHelper)]
     [ComVisible(true), ClassInterface(ClassInterfaceType.None), TypeLibType(TypeLibTypeFlags.FHidden)]
     public class _DataSourceControlEvent_SinkHelper : SinkHelper, _DataSourceControlEvent
     {
         #region Static
-        
+
         public static readonly string Id = "F5B39A9B-1480-11D3-8549-00C04FAC67D7";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public _DataSourceControlEvent_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _DataSourceControlEvent_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
-        #endregion		
+
+        #endregion
 
         #region _DataSourceControlEvent
-        
+
         public void Current([In, MarshalAs(UnmanagedType.IDispatch)] object dSCEventInfo)
         {
             if (!Validate("Current"))
@@ -462,8 +462,8 @@ namespace NetOffice.OWC10Api.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

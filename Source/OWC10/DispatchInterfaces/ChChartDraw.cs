@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class ChChartDraw : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChChartDraw(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public ChChartDraw(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public ChChartDraw(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChChartDraw(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChChartDraw() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChChartDraw(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BeginObject(Int32 id)
         {
-             Factory.ExecuteMethod(this, "BeginObject", id);
+            Factory.ExecuteMethod(this, "BeginObject", id);
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void EndObject()
         {
-             Factory.ExecuteMethod(this, "EndObject");
+            Factory.ExecuteMethod(this, "EndObject");
         }
 
         /// <summary>
@@ -219,7 +219,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DrawLine(Int32 x0, Int32 y0, Int32 x1, Int32 y1)
         {
-             Factory.ExecuteMethod(this, "DrawLine", x0, y0, x1, y1);
+            Factory.ExecuteMethod(this, "DrawLine", x0, y0, x1, y1);
         }
 
         /// <summary>
@@ -232,7 +232,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DrawRectangle(Int32 left, Int32 top, Int32 right, Int32 bottom)
         {
-             Factory.ExecuteMethod(this, "DrawRectangle", left, top, right, bottom);
+            Factory.ExecuteMethod(this, "DrawRectangle", left, top, right, bottom);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DrawEllipse(Int32 left, Int32 top, Int32 right, Int32 bottom)
         {
-             Factory.ExecuteMethod(this, "DrawEllipse", left, top, right, bottom);
+            Factory.ExecuteMethod(this, "DrawEllipse", left, top, right, bottom);
         }
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DrawText(string bstrText, Int32 left, Int32 top)
         {
-             Factory.ExecuteMethod(this, "DrawText", bstrText, left, top);
+            Factory.ExecuteMethod(this, "DrawText", bstrText, left, top);
         }
 
         /// <summary>
@@ -268,7 +268,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DrawPolyLine(object xValues, object yValues)
         {
-             Factory.ExecuteMethod(this, "DrawPolyLine", xValues, yValues);
+            Factory.ExecuteMethod(this, "DrawPolyLine", xValues, yValues);
         }
 
         /// <summary>
@@ -279,7 +279,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DrawPolygon(object xValues, object yValues)
         {
-             Factory.ExecuteMethod(this, "DrawPolygon", xValues, yValues);
+            Factory.ExecuteMethod(this, "DrawPolygon", xValues, yValues);
         }
 
         /// <summary>
@@ -304,6 +304,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

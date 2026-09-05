@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -175,22 +175,22 @@ namespace NetOffice.OWC10Api.Events
     public class IChartEvents_SinkHelper : SinkHelper, IChartEvents
     {
         #region Static
-        
+
         public static readonly string Id = "F5B39A7A-1480-11D3-8549-00C04FAC67D7";
-        
+
         #endregion
 
         #region Ctor
 
-        public IChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public IChartEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region IChartEvents
-        
+
         public void DataSetChange()
         {
             if (!Validate("DataSetChange"))
@@ -464,7 +464,7 @@ namespace NetOffice.OWC10Api.Events
                 Invoker.ReleaseParamsArray(command, caption);
                 return;
             }
-            
+
             object newCommand = (object)command;
             NetOffice.OWC10Api.ByRef newCaption = Factory.CreateKnownObjectFromComProxy<NetOffice.OWC10Api.ByRef>(EventClass, command, NetOffice.OWC10Api.ByRef.LateBindingApiWrapperType);
             object[] paramsArray = new object[2];
@@ -600,8 +600,8 @@ namespace NetOffice.OWC10Api.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

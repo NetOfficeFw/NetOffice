@@ -26,7 +26,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IDataSourceControl_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -35,7 +35,7 @@ namespace NetOffice.OWC10Api
         public IDataSourceControl_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -53,7 +53,7 @@ namespace NetOffice.OWC10Api
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDataSourceControl_(ICOMObject replacedObject) : base(replacedObject)
@@ -67,13 +67,13 @@ namespace NetOffice.OWC10Api
         public IDataSourceControl_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDataSourceControl_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -116,7 +116,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class IDataSourceControl : IDataSourceControl_
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -144,9 +144,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -161,7 +161,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IDataSourceControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -170,7 +170,7 @@ namespace NetOffice.OWC10Api
         public IDataSourceControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -188,26 +188,26 @@ namespace NetOffice.OWC10Api
         public IDataSourceControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDataSourceControl(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDataSourceControl() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IDataSourceControl(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -1010,7 +1010,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetDataAssistant(object dataAssistant)
         {
-             Factory.ExecuteMethod(this, "SetDataAssistant", dataAssistant);
+            Factory.ExecuteMethod(this, "SetDataAssistant", dataAssistant);
         }
 
         /// <summary>
@@ -1022,7 +1022,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DesignAdvise(object advise, string sinkName)
         {
-             Factory.ExecuteMethod(this, "DesignAdvise", advise, sinkName);
+            Factory.ExecuteMethod(this, "DesignAdvise", advise, sinkName);
         }
 
         /// <summary>
@@ -1033,7 +1033,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DesignUnAdvise(string sinkName)
         {
-             Factory.ExecuteMethod(this, "DesignUnAdvise", sinkName);
+            Factory.ExecuteMethod(this, "DesignUnAdvise", sinkName);
         }
 
         /// <summary>
@@ -1049,7 +1049,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ProcessDrop(object pUnknownDropGoo, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
         {
-             Factory.ExecuteMethod(this, "ProcessDrop", new object[]{ pUnknownDropGoo, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship });
+            Factory.ExecuteMethod(this, "ProcessDrop", new object[] { pUnknownDropGoo, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship });
         }
 
         /// <summary>
@@ -1067,7 +1067,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ScriptDrop(object rowsources, object relationships, object fields, string bstrRecordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, string pageRowsource, string schemaRelationship)
         {
-             Factory.ExecuteMethod(this, "ScriptDrop", new object[]{ rowsources, relationships, fields, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship });
+            Factory.ExecuteMethod(this, "ScriptDrop", new object[] { rowsources, relationships, fields, bstrRecordSetDefName, dl, dt, pageRowsource, schemaRelationship });
         }
 
         /// <summary>
@@ -1096,7 +1096,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ScriptValidate(object rowsources, object relationships, object fields, string recordsetDef, NetOffice.OWC10Api.Enums.DscDropLocationEnum dl, NetOffice.OWC10Api.Enums.DscDropTypeEnum dt, out string dropRowsource, out object rowsourcesOut, out object relationshipsOut)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,false,false,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, false, false, true, true, true);
             dropRowsource = string.Empty;
             rowsourcesOut = null;
             relationshipsOut = null;
@@ -1122,7 +1122,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ValidateDrop(object unknownDropGoo, string recordSetDefName, NetOffice.OWC10Api.Enums.DscDropLocationEnum location, NetOffice.OWC10Api.Enums.DscDropTypeEnum type, out string dropRowsource, out object rowsourcesOut, out object relationshipsOut, out Int32 numberOfDrops)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,false,true,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, false, true, true, true, true);
             dropRowsource = string.Empty;
             rowsourcesOut = null;
             relationshipsOut = null;
@@ -1154,7 +1154,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SchemaRefresh()
         {
-             Factory.ExecuteMethod(this, "SchemaRefresh");
+            Factory.ExecuteMethod(this, "SchemaRefresh");
         }
 
         /// <summary>
@@ -1166,7 +1166,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void UpdateElementID(string oldID, string newID)
         {
-             Factory.ExecuteMethod(this, "UpdateElementID", oldID, newID);
+            Factory.ExecuteMethod(this, "UpdateElementID", oldID, newID);
         }
 
         /// <summary>
@@ -1176,7 +1176,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Reset()
         {
-             Factory.ExecuteMethod(this, "Reset");
+            Factory.ExecuteMethod(this, "Reset");
         }
 
         /// <summary>
@@ -1211,7 +1211,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void GetSectionInfo(object sectionElement, out string recordSource, out NetOffice.OWC10Api.Enums.SectTypeEnum sectionType, out NetOffice.OWC10Api.GroupLevel groupLevel)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, true, true);
             recordSource = string.Empty;
             sectionType = 0;
             groupLevel = null;
@@ -1233,7 +1233,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DeleteRecordSourceIfUnused(string recordSource)
         {
-             Factory.ExecuteMethod(this, "DeleteRecordSourceIfUnused", recordSource);
+            Factory.ExecuteMethod(this, "DeleteRecordSourceIfUnused", recordSource);
         }
 
         /// <summary>
@@ -1245,7 +1245,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DeletePageFieldIfUnused(string recordSource, string pageField)
         {
-             Factory.ExecuteMethod(this, "DeletePageFieldIfUnused", recordSource, pageField);
+            Factory.ExecuteMethod(this, "DeletePageFieldIfUnused", recordSource, pageField);
         }
 
         /// <summary>
@@ -1256,7 +1256,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ResetRecordset(string bstrRecordset)
         {
-             Factory.ExecuteMethod(this, "ResetRecordset", bstrRecordset);
+            Factory.ExecuteMethod(this, "ResetRecordset", bstrRecordset);
         }
 
         /// <summary>
@@ -1268,7 +1268,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void GetExportableConnectString(NetOffice.OWC10Api.Enums.ExportableConnectStringEnum exportType, out string connectString)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true);
             connectString = string.Empty;
             object[] paramsArray = Invoker.ValidateParamsArray(exportType, connectString);
             Invoker.Method(this, "GetExportableConnectString", paramsArray, modifiers);
@@ -1282,7 +1282,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportXML(object eEncoding)
         {
-             Factory.ExecuteMethod(this, "ExportXML", eEncoding);
+            Factory.ExecuteMethod(this, "ExportXML", eEncoding);
         }
 
         /// <summary>
@@ -1292,7 +1292,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportXML()
         {
-             Factory.ExecuteMethod(this, "ExportXML");
+            Factory.ExecuteMethod(this, "ExportXML");
         }
 
         /// <summary>
@@ -1303,7 +1303,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetRootRecordset(string recordsetName, NetOffice.ADODBApi.Recordset recordset)
         {
-             Factory.ExecuteMethod(this, "SetRootRecordset", recordsetName, recordset);
+            Factory.ExecuteMethod(this, "SetRootRecordset", recordsetName, recordset);
         }
 
         /// <summary>
@@ -1316,7 +1316,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void GetOfflineDisplayInfo(out string onlineServer, out string onlineDatabase, out string offlineServer, out string offlineDatabase)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,true,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, true, true, true);
             onlineServer = string.Empty;
             onlineDatabase = string.Empty;
             offlineServer = string.Empty;
@@ -1337,7 +1337,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Refresh(object refreshType)
         {
-             Factory.ExecuteMethod(this, "Refresh", refreshType);
+            Factory.ExecuteMethod(this, "Refresh", refreshType);
         }
 
         /// <summary>
@@ -1348,7 +1348,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -1361,7 +1361,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void FindRelatedGroupLevel(NetOffice.OWC10Api.GroupLevel pGroupLevel, Int32 fChild, out NetOffice.OWC10Api.GroupLevel ppGrouplevel)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, true);
             ppGrouplevel = null;
             object[] paramsArray = Invoker.ValidateParamsArray(pGroupLevel, fChild, ppGrouplevel);
             Invoker.Method(this, "FindRelatedGroupLevel", paramsArray, modifiers);
@@ -1379,7 +1379,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DllNotification(NetOffice.OWC10Api.Enums.NotificationType notification)
         {
-             Factory.ExecuteMethod(this, "DllNotification", notification);
+            Factory.ExecuteMethod(this, "DllNotification", notification);
         }
 
         /// <summary>
@@ -1390,7 +1390,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SuspendUndo(bool suspend)
         {
-             Factory.ExecuteMethod(this, "SuspendUndo", suspend);
+            Factory.ExecuteMethod(this, "SuspendUndo", suspend);
         }
 
         /// <summary>
@@ -1400,7 +1400,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void UpdateFocus()
         {
-             Factory.ExecuteMethod(this, "UpdateFocus");
+            Factory.ExecuteMethod(this, "UpdateFocus");
         }
 
         /// <summary>
@@ -1425,7 +1425,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public Double EuroConvert(Double number, string sourceCurrency, string targetCurrency, object fullPrecision, object triangulationPrecision)
         {
-            return Factory.ExecuteDoubleMethodGet(this, "EuroConvert", new object[]{ number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision });
+            return Factory.ExecuteDoubleMethodGet(this, "EuroConvert", new object[] { number, sourceCurrency, targetCurrency, fullPrecision, triangulationPrecision });
         }
 
         /// <summary>
@@ -1475,7 +1475,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetSynchronizing(bool synchronizing)
         {
-             Factory.ExecuteMethod(this, "SetSynchronizing", synchronizing);
+            Factory.ExecuteMethod(this, "SetSynchronizing", synchronizing);
         }
 
         /// <summary>
@@ -1486,7 +1486,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetDisplayError(bool displayError)
         {
-             Factory.ExecuteMethod(this, "SetDisplayError", displayError);
+            Factory.ExecuteMethod(this, "SetDisplayError", displayError);
         }
 
         /// <summary>
@@ -1497,7 +1497,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SuspendXMLReExecute(bool suspend)
         {
-             Factory.ExecuteMethod(this, "SuspendXMLReExecute", suspend);
+            Factory.ExecuteMethod(this, "SuspendXMLReExecute", suspend);
         }
 
         /// <summary>
@@ -1508,7 +1508,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetFirePropChange(bool firePropChange)
         {
-             Factory.ExecuteMethod(this, "SetFirePropChange", firePropChange);
+            Factory.ExecuteMethod(this, "SetFirePropChange", firePropChange);
         }
 
         /// <summary>
@@ -1539,7 +1539,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void RefreshJetCache()
         {
-             Factory.ExecuteMethod(this, "RefreshJetCache");
+            Factory.ExecuteMethod(this, "RefreshJetCache");
         }
 
         /// <summary>
@@ -1549,11 +1549,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoRefreshOfflineSource()
         {
-             Factory.ExecuteMethod(this, "AutoRefreshOfflineSource");
+            Factory.ExecuteMethod(this, "AutoRefreshOfflineSource");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

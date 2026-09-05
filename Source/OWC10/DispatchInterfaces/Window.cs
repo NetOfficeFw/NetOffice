@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class Window : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Window(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public Window(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public Window(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Window(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -701,7 +701,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LargeScroll(object down, object up, object toRight, object toLeft)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight, toLeft);
         }
 
         /// <summary>
@@ -711,7 +711,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LargeScroll()
         {
-             Factory.ExecuteMethod(this, "LargeScroll");
+            Factory.ExecuteMethod(this, "LargeScroll");
         }
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LargeScroll(object down)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down);
+            Factory.ExecuteMethod(this, "LargeScroll", down);
         }
 
         /// <summary>
@@ -734,7 +734,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LargeScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up);
         }
 
         /// <summary>
@@ -747,7 +747,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LargeScroll(object down, object up, object toRight)
         {
-             Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
+            Factory.ExecuteMethod(this, "LargeScroll", down, up, toRight);
         }
 
         /// <summary>
@@ -788,7 +788,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ResetHeadings()
         {
-             Factory.ExecuteMethod(this, "ResetHeadings");
+            Factory.ExecuteMethod(this, "ResetHeadings");
         }
 
         /// <summary>
@@ -802,7 +802,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height, object start)
         {
-             Factory.ExecuteMethod(this, "ScrollIntoView", new object[]{ left, top, width, height, start });
+            Factory.ExecuteMethod(this, "ScrollIntoView", new object[] { left, top, width, height, start });
         }
 
         /// <summary>
@@ -816,7 +816,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ScrollIntoView(Int32 left, Int32 top, Int32 width, Int32 height)
         {
-             Factory.ExecuteMethod(this, "ScrollIntoView", left, top, width, height);
+            Factory.ExecuteMethod(this, "ScrollIntoView", left, top, width, height);
         }
 
         /// <summary>
@@ -829,7 +829,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SmallScroll(object down, object up, object toRight, object toLeft)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight, toLeft);
         }
 
         /// <summary>
@@ -839,7 +839,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SmallScroll()
         {
-             Factory.ExecuteMethod(this, "SmallScroll");
+            Factory.ExecuteMethod(this, "SmallScroll");
         }
 
         /// <summary>
@@ -850,7 +850,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SmallScroll(object down)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down);
+            Factory.ExecuteMethod(this, "SmallScroll", down);
         }
 
         /// <summary>
@@ -862,7 +862,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SmallScroll(object down, object up)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up);
         }
 
         /// <summary>
@@ -875,11 +875,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SmallScroll(object down, object up, object toRight)
         {
-             Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
+            Factory.ExecuteMethod(this, "SmallScroll", down, up, toRight);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

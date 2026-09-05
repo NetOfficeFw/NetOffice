@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -95,7 +95,7 @@ namespace NetOffice.OWC10Api.Events
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1009)]
         void KeyDown([In] object keyCode, [In] object shift);
 
-        [SupportByVersion("OWC10", 1)]  
+        [SupportByVersion("OWC10", 1)]
         [SinkArgument("keyAscii", SinkArgumentType.Int32)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1010)]
         void KeyPress([In] object keyAscii);
@@ -128,7 +128,7 @@ namespace NetOffice.OWC10Api.Events
         [SupportByVersion("OWC10", 1)]
         [SinkArgument("button", SinkArgumentType.Int32)]
         [SinkArgument("shift", SinkArgumentType.Int32)]
-        [SinkArgument("target", typeof(OWC10Api._Range))] 
+        [SinkArgument("target", typeof(OWC10Api._Range))]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1507)]
         void MouseOver([In] object button, [In] object shift, [In, MarshalAs(UnmanagedType.IDispatch)] object target);
 
@@ -206,14 +206,14 @@ namespace NetOffice.OWC10Api.Events
     public class ISpreadsheetEventSink_SinkHelper : SinkHelper, ISpreadsheetEventSink
     {
         #region Static
-        
+
         public static readonly string Id = "F5B39A75-1480-11D3-8549-00C04FAC67D7";
-        
+
         #endregion
-        
+
         #region Ctor
 
-        public ISpreadsheetEventSink_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public ISpreadsheetEventSink_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
@@ -300,7 +300,7 @@ namespace NetOffice.OWC10Api.Events
             {
                 return;
             }
-            
+
             object[] paramsArray = new object[0];
             EventBinding.RaiseCustomEvent("Click", ref paramsArray);
         }
@@ -419,7 +419,7 @@ namespace NetOffice.OWC10Api.Events
         public void Initialize()
         {
             if (!Validate("Initialize"))
-            {        
+            {
                 return;
             }
 
@@ -731,8 +731,8 @@ namespace NetOffice.OWC10Api.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

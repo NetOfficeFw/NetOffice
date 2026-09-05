@@ -14,7 +14,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class IXRangeEnum : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IXRangeEnum(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OWC10Api
         public IXRangeEnum(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OWC10Api
         public IXRangeEnum(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IXRangeEnum(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IXRangeEnum() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IXRangeEnum(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Next(Int32 cElt, out object rgvar, out Int32 pcEltFetched)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, true);
             rgvar = null;
             pcEltFetched = 0;
             object[] paramsArray = Invoker.ValidateParamsArray(cElt, rgvar, pcEltFetched);
@@ -163,7 +163,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Skip(Int32 cElt)
         {
-             Factory.ExecuteMethod(this, "Skip", cElt);
+            Factory.ExecuteMethod(this, "Skip", cElt);
         }
 
         /// <summary>
@@ -172,7 +172,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Reset()
         {
-             Factory.ExecuteMethod(this, "Reset");
+            Factory.ExecuteMethod(this, "Reset");
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetTraversal(UIntPtr nTraverseCode)
         {
-             Factory.ExecuteMethod(this, "SetTraversal", nTraverseCode);
+            Factory.ExecuteMethod(this, "SetTraversal", nTraverseCode);
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ChangeType(out object _out, object _in, Int16 vt)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true,false,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(true, false, false);
             _out = null;
             object[] paramsArray = Invoker.ValidateParamsArray(_out, _in, vt);
             Invoker.Method(this, "ChangeType", paramsArray, modifiers);
@@ -231,7 +231,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void GetElements(Int32 cElt, Int32 iStart, object rvarDest, out Int32 pcFetched, Int16 vtCoerceTo, Int32 vtbCoerceFrom, object fill)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,false,false,true,false,false,false);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, false, false, true, false, false, false);
             pcFetched = 0;
             object[] paramsArray = Invoker.ValidateParamsArray(cElt, iStart, rvarDest, pcFetched, vtCoerceTo, vtbCoerceFrom, fill);
             Invoker.Method(this, "GetElements", paramsArray, modifiers);
@@ -240,6 +240,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

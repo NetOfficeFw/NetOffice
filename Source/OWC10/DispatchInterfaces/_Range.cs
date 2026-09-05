@@ -28,7 +28,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Range_(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         /// <param name="parentObject">object there has created the proxy</param>
@@ -37,7 +37,7 @@ namespace NetOffice.OWC10Api
         public _Range_(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="comProxy">inner wrapped COM proxy</param>
         /// <param name="comProxyType">Type of inner wrapped COM proxy"</param>
@@ -55,7 +55,7 @@ namespace NetOffice.OWC10Api
         {
 
         }
-        
+
         /// <param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range_(ICOMObject replacedObject) : base(replacedObject)
@@ -69,13 +69,13 @@ namespace NetOffice.OWC10Api
         public _Range_() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range_(string progId) : base(progId)
         {
         }
-        
+
         #endregion
 
         #region Properties
@@ -93,7 +93,7 @@ namespace NetOffice.OWC10Api
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public string get_Address(object rowAbsolute, object columnAbsolute, object referenceStyle, object external, object relativeTo)
         {
-            return Factory.ExecuteStringPropertyGet(this, "Address", new object[]{ rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo });
+            return Factory.ExecuteStringPropertyGet(this, "Address", new object[] { rowAbsolute, columnAbsolute, referenceStyle, external, relativeTo });
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Property, "_Default")]
     public class _Range : _Range_, IEnumerableProvider<object>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -342,9 +342,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -359,7 +359,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public _Range(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -368,7 +368,7 @@ namespace NetOffice.OWC10Api
         public _Range(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -386,18 +386,18 @@ namespace NetOffice.OWC10Api
         public _Range(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public _Range(string progId) : base(progId)
@@ -1234,7 +1234,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Activate()
         {
-             Factory.ExecuteMethod(this, "Activate");
+            Factory.ExecuteMethod(this, "Activate");
         }
 
         /// <summary>
@@ -1248,7 +1248,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter(object field, object criteria1, object _operator, object criteria2, object visibleDropDown)
         {
-             Factory.ExecuteMethod(this, "AutoFilter", new object[]{ field, criteria1, _operator, criteria2, visibleDropDown });
+            Factory.ExecuteMethod(this, "AutoFilter", new object[] { field, criteria1, _operator, criteria2, visibleDropDown });
         }
 
         /// <summary>
@@ -1258,7 +1258,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter()
         {
-             Factory.ExecuteMethod(this, "AutoFilter");
+            Factory.ExecuteMethod(this, "AutoFilter");
         }
 
         /// <summary>
@@ -1269,7 +1269,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter(object field)
         {
-             Factory.ExecuteMethod(this, "AutoFilter", field);
+            Factory.ExecuteMethod(this, "AutoFilter", field);
         }
 
         /// <summary>
@@ -1281,7 +1281,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter(object field, object criteria1)
         {
-             Factory.ExecuteMethod(this, "AutoFilter", field, criteria1);
+            Factory.ExecuteMethod(this, "AutoFilter", field, criteria1);
         }
 
         /// <summary>
@@ -1294,7 +1294,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter(object field, object criteria1, object _operator)
         {
-             Factory.ExecuteMethod(this, "AutoFilter", field, criteria1, _operator);
+            Factory.ExecuteMethod(this, "AutoFilter", field, criteria1, _operator);
         }
 
         /// <summary>
@@ -1308,7 +1308,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFilter(object field, object criteria1, object _operator, object criteria2)
         {
-             Factory.ExecuteMethod(this, "AutoFilter", field, criteria1, _operator, criteria2);
+            Factory.ExecuteMethod(this, "AutoFilter", field, criteria1, _operator, criteria2);
         }
 
         /// <summary>
@@ -1317,7 +1317,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AutoFit()
         {
-             Factory.ExecuteMethod(this, "AutoFit");
+            Factory.ExecuteMethod(this, "AutoFit");
         }
 
         /// <summary>
@@ -1330,7 +1330,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BorderAround(object lineStyle, object weight, object colorIndex, object color)
         {
-             Factory.ExecuteMethod(this, "BorderAround", lineStyle, weight, colorIndex, color);
+            Factory.ExecuteMethod(this, "BorderAround", lineStyle, weight, colorIndex, color);
         }
 
         /// <summary>
@@ -1340,7 +1340,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BorderAround()
         {
-             Factory.ExecuteMethod(this, "BorderAround");
+            Factory.ExecuteMethod(this, "BorderAround");
         }
 
         /// <summary>
@@ -1351,7 +1351,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BorderAround(object lineStyle)
         {
-             Factory.ExecuteMethod(this, "BorderAround", lineStyle);
+            Factory.ExecuteMethod(this, "BorderAround", lineStyle);
         }
 
         /// <summary>
@@ -1363,7 +1363,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BorderAround(object lineStyle, object weight)
         {
-             Factory.ExecuteMethod(this, "BorderAround", lineStyle, weight);
+            Factory.ExecuteMethod(this, "BorderAround", lineStyle, weight);
         }
 
         /// <summary>
@@ -1376,7 +1376,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BorderAround(object lineStyle, object weight, object colorIndex)
         {
-             Factory.ExecuteMethod(this, "BorderAround", lineStyle, weight, colorIndex);
+            Factory.ExecuteMethod(this, "BorderAround", lineStyle, weight, colorIndex);
         }
 
         /// <summary>
@@ -1385,7 +1385,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Calculate()
         {
-             Factory.ExecuteMethod(this, "Calculate");
+            Factory.ExecuteMethod(this, "Calculate");
         }
 
         /// <summary>
@@ -1394,7 +1394,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Clear()
         {
-             Factory.ExecuteMethod(this, "Clear");
+            Factory.ExecuteMethod(this, "Clear");
         }
 
         /// <summary>
@@ -1403,7 +1403,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ClearFormats()
         {
-             Factory.ExecuteMethod(this, "ClearFormats");
+            Factory.ExecuteMethod(this, "ClearFormats");
         }
 
         /// <summary>
@@ -1412,7 +1412,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ClearContents()
         {
-             Factory.ExecuteMethod(this, "ClearContents");
+            Factory.ExecuteMethod(this, "ClearContents");
         }
 
         /// <summary>
@@ -1422,7 +1422,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Copy(object destination)
         {
-             Factory.ExecuteMethod(this, "Copy", destination);
+            Factory.ExecuteMethod(this, "Copy", destination);
         }
 
         /// <summary>
@@ -1432,7 +1432,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Copy()
         {
-             Factory.ExecuteMethod(this, "Copy");
+            Factory.ExecuteMethod(this, "Copy");
         }
 
         /// <summary>
@@ -1477,7 +1477,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Cut(object destination)
         {
-             Factory.ExecuteMethod(this, "Cut", destination);
+            Factory.ExecuteMethod(this, "Cut", destination);
         }
 
         /// <summary>
@@ -1487,7 +1487,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Cut()
         {
-             Factory.ExecuteMethod(this, "Cut");
+            Factory.ExecuteMethod(this, "Cut");
         }
 
         /// <summary>
@@ -1497,7 +1497,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Delete(object shift)
         {
-             Factory.ExecuteMethod(this, "Delete", shift);
+            Factory.ExecuteMethod(this, "Delete", shift);
         }
 
         /// <summary>
@@ -1507,7 +1507,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Delete()
         {
-             Factory.ExecuteMethod(this, "Delete");
+            Factory.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -1516,7 +1516,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void FillDown()
         {
-             Factory.ExecuteMethod(this, "FillDown");
+            Factory.ExecuteMethod(this, "FillDown");
         }
 
         /// <summary>
@@ -1525,7 +1525,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void FillRight()
         {
-             Factory.ExecuteMethod(this, "FillRight");
+            Factory.ExecuteMethod(this, "FillRight");
         }
 
         /// <summary>
@@ -1543,7 +1543,7 @@ namespace NetOffice.OWC10Api
         [BaseResult]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase, object matchByte)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase, matchByte });
         }
 
         /// <summary>
@@ -1613,7 +1613,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder });
         }
 
         /// <summary>
@@ -1630,7 +1630,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection });
         }
 
         /// <summary>
@@ -1648,7 +1648,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public NetOffice.OWC10Api._Range Find(object what, object after, object lookIn, object lookAt, object searchOrder, object searchDirection, object matchCase)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[]{ what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OWC10Api._Range>(this, "Find", new object[] { what, after, lookIn, lookAt, searchOrder, searchDirection, matchCase });
         }
 
         /// <summary>
@@ -1702,7 +1702,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Insert(object shift)
         {
-             Factory.ExecuteMethod(this, "Insert", shift);
+            Factory.ExecuteMethod(this, "Insert", shift);
         }
 
         /// <summary>
@@ -1712,7 +1712,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Insert()
         {
-             Factory.ExecuteMethod(this, "Insert");
+            Factory.ExecuteMethod(this, "Insert");
         }
 
         /// <summary>
@@ -1725,7 +1725,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LoadText(string file, object delimiters, object consecutiveDelimAsOne, object textQualifier)
         {
-             Factory.ExecuteMethod(this, "LoadText", file, delimiters, consecutiveDelimAsOne, textQualifier);
+            Factory.ExecuteMethod(this, "LoadText", file, delimiters, consecutiveDelimAsOne, textQualifier);
         }
 
         /// <summary>
@@ -1736,7 +1736,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LoadText(string file)
         {
-             Factory.ExecuteMethod(this, "LoadText", file);
+            Factory.ExecuteMethod(this, "LoadText", file);
         }
 
         /// <summary>
@@ -1748,7 +1748,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LoadText(string file, object delimiters)
         {
-             Factory.ExecuteMethod(this, "LoadText", file, delimiters);
+            Factory.ExecuteMethod(this, "LoadText", file, delimiters);
         }
 
         /// <summary>
@@ -1761,7 +1761,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LoadText(string file, object delimiters, object consecutiveDelimAsOne)
         {
-             Factory.ExecuteMethod(this, "LoadText", file, delimiters, consecutiveDelimAsOne);
+            Factory.ExecuteMethod(this, "LoadText", file, delimiters, consecutiveDelimAsOne);
         }
 
         /// <summary>
@@ -1771,7 +1771,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Merge(object across)
         {
-             Factory.ExecuteMethod(this, "Merge", across);
+            Factory.ExecuteMethod(this, "Merge", across);
         }
 
         /// <summary>
@@ -1781,7 +1781,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Merge()
         {
-             Factory.ExecuteMethod(this, "Merge");
+            Factory.ExecuteMethod(this, "Merge");
         }
 
         /// <summary>
@@ -1794,7 +1794,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ParseText(string text, object delimiters, object consecutiveDelimAsOne, object textQualifier)
         {
-             Factory.ExecuteMethod(this, "ParseText", text, delimiters, consecutiveDelimAsOne, textQualifier);
+            Factory.ExecuteMethod(this, "ParseText", text, delimiters, consecutiveDelimAsOne, textQualifier);
         }
 
         /// <summary>
@@ -1805,7 +1805,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ParseText(string text)
         {
-             Factory.ExecuteMethod(this, "ParseText", text);
+            Factory.ExecuteMethod(this, "ParseText", text);
         }
 
         /// <summary>
@@ -1817,7 +1817,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ParseText(string text, object delimiters)
         {
-             Factory.ExecuteMethod(this, "ParseText", text, delimiters);
+            Factory.ExecuteMethod(this, "ParseText", text, delimiters);
         }
 
         /// <summary>
@@ -1830,7 +1830,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ParseText(string text, object delimiters, object consecutiveDelimAsOne)
         {
-             Factory.ExecuteMethod(this, "ParseText", text, delimiters, consecutiveDelimAsOne);
+            Factory.ExecuteMethod(this, "ParseText", text, delimiters, consecutiveDelimAsOne);
         }
 
         /// <summary>
@@ -1839,7 +1839,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Paste()
         {
-             Factory.ExecuteMethod(this, "Paste");
+            Factory.ExecuteMethod(this, "Paste");
         }
 
         /// <summary>
@@ -1848,7 +1848,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select()
         {
-             Factory.ExecuteMethod(this, "Select");
+            Factory.ExecuteMethod(this, "Select");
         }
 
         /// <summary>
@@ -1857,7 +1857,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Show()
         {
-             Factory.ExecuteMethod(this, "Show");
+            Factory.ExecuteMethod(this, "Show");
         }
 
         /// <summary>
@@ -1869,7 +1869,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Sort(object columnKey, object order, object header)
         {
-             Factory.ExecuteMethod(this, "Sort", columnKey, order, header);
+            Factory.ExecuteMethod(this, "Sort", columnKey, order, header);
         }
 
         /// <summary>
@@ -1879,7 +1879,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Sort()
         {
-             Factory.ExecuteMethod(this, "Sort");
+            Factory.ExecuteMethod(this, "Sort");
         }
 
         /// <summary>
@@ -1890,7 +1890,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Sort(object columnKey)
         {
-             Factory.ExecuteMethod(this, "Sort", columnKey);
+            Factory.ExecuteMethod(this, "Sort", columnKey);
         }
 
         /// <summary>
@@ -1902,7 +1902,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Sort(object columnKey, object order)
         {
-             Factory.ExecuteMethod(this, "Sort", columnKey, order);
+            Factory.ExecuteMethod(this, "Sort", columnKey, order);
         }
 
         /// <summary>
@@ -1911,7 +1911,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void UnMerge()
         {
-             Factory.ExecuteMethod(this, "UnMerge");
+            Factory.ExecuteMethod(this, "UnMerge");
         }
 
         #endregion
@@ -1958,6 +1958,6 @@ namespace NetOffice.OWC10Api
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

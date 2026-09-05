@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class IPivotControl : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IPivotControl(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public IPivotControl(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public IPivotControl(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPivotControl(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPivotControl() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IPivotControl(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -1034,7 +1034,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export(object filename, object action)
         {
-             Factory.ExecuteMethod(this, "Export", filename, action);
+            Factory.ExecuteMethod(this, "Export", filename, action);
         }
 
         /// <summary>
@@ -1044,7 +1044,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export()
         {
-             Factory.ExecuteMethod(this, "Export");
+            Factory.ExecuteMethod(this, "Export");
         }
 
         /// <summary>
@@ -1055,7 +1055,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export(object filename)
         {
-             Factory.ExecuteMethod(this, "Export", filename);
+            Factory.ExecuteMethod(this, "Export", filename);
         }
 
         /// <summary>
@@ -1064,7 +1064,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -1077,7 +1077,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename, object filterName, object width, object height)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width, height);
+            Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width, height);
         }
 
         /// <summary>
@@ -1087,7 +1087,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture()
         {
-             Factory.ExecuteMethod(this, "ExportPicture");
+            Factory.ExecuteMethod(this, "ExportPicture");
         }
 
         /// <summary>
@@ -1098,7 +1098,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename);
+            Factory.ExecuteMethod(this, "ExportPicture", filename);
         }
 
         /// <summary>
@@ -1110,7 +1110,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename, object filterName)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename, filterName);
+            Factory.ExecuteMethod(this, "ExportPicture", filename, filterName);
         }
 
         /// <summary>
@@ -1123,7 +1123,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ExportPicture(object filename, object filterName, object width)
         {
-             Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width);
+            Factory.ExecuteMethod(this, "ExportPicture", filename, filterName, width);
         }
 
         /// <summary>
@@ -1133,7 +1133,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LocateDataSource()
         {
-             Factory.ExecuteMethod(this, "LocateDataSource");
+            Factory.ExecuteMethod(this, "LocateDataSource");
         }
 
         /// <summary>
@@ -1143,7 +1143,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Copy(object selection)
         {
-             Factory.ExecuteMethod(this, "Copy", selection);
+            Factory.ExecuteMethod(this, "Copy", selection);
         }
 
         /// <summary>
@@ -1153,7 +1153,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Copy()
         {
-             Factory.ExecuteMethod(this, "Copy");
+            Factory.ExecuteMethod(this, "Copy");
         }
 
         /// <summary>
@@ -1167,7 +1167,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void DoDragDrop(NetOffice.OWC10Api.DropSource source, object dragItem, NetOffice.OWC10Api.DropTarget target, Int32 dwLegalEffect)
         {
-             Factory.ExecuteMethod(this, "DoDragDrop", source, dragItem, target, dwLegalEffect);
+            Factory.ExecuteMethod(this, "DoDragDrop", source, dragItem, target, dwLegalEffect);
         }
 
         /// <summary>
@@ -1181,7 +1181,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select(object selection, object activeObject, object scrollType, object update, object notify)
         {
-             Factory.ExecuteMethod(this, "Select", new object[]{ selection, activeObject, scrollType, update, notify });
+            Factory.ExecuteMethod(this, "Select", new object[] { selection, activeObject, scrollType, update, notify });
         }
 
         /// <summary>
@@ -1193,7 +1193,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select(object selection, object activeObject)
         {
-             Factory.ExecuteMethod(this, "Select", selection, activeObject);
+            Factory.ExecuteMethod(this, "Select", selection, activeObject);
         }
 
         /// <summary>
@@ -1206,7 +1206,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select(object selection, object activeObject, object scrollType)
         {
-             Factory.ExecuteMethod(this, "Select", selection, activeObject, scrollType);
+            Factory.ExecuteMethod(this, "Select", selection, activeObject, scrollType);
         }
 
         /// <summary>
@@ -1220,7 +1220,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select(object selection, object activeObject, object scrollType, object update)
         {
-             Factory.ExecuteMethod(this, "Select", selection, activeObject, scrollType, update);
+            Factory.ExecuteMethod(this, "Select", selection, activeObject, scrollType, update);
         }
 
         /// <summary>
@@ -1230,7 +1230,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowHelp(Int32 topic)
         {
-             Factory.ExecuteMethod(this, "ShowHelp", topic);
+            Factory.ExecuteMethod(this, "ShowHelp", topic);
         }
 
         /// <summary>
@@ -1239,7 +1239,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowAbout()
         {
-             Factory.ExecuteMethod(this, "ShowAbout");
+            Factory.ExecuteMethod(this, "ShowAbout");
         }
 
         /// <summary>
@@ -1251,7 +1251,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowContextMenu(Int32 x, Int32 y, object menu)
         {
-             Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
+            Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
         }
 
         /// <summary>
@@ -1263,7 +1263,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void StartEdit(object initialValue, object arrowMode, object caretPosition)
         {
-             Factory.ExecuteMethod(this, "StartEdit", initialValue, arrowMode, caretPosition);
+            Factory.ExecuteMethod(this, "StartEdit", initialValue, arrowMode, caretPosition);
         }
 
         /// <summary>
@@ -1273,7 +1273,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void StartEdit()
         {
-             Factory.ExecuteMethod(this, "StartEdit");
+            Factory.ExecuteMethod(this, "StartEdit");
         }
 
         /// <summary>
@@ -1284,7 +1284,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void StartEdit(object initialValue)
         {
-             Factory.ExecuteMethod(this, "StartEdit", initialValue);
+            Factory.ExecuteMethod(this, "StartEdit", initialValue);
         }
 
         /// <summary>
@@ -1296,7 +1296,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void StartEdit(object initialValue, object arrowMode)
         {
-             Factory.ExecuteMethod(this, "StartEdit", initialValue, arrowMode);
+            Factory.ExecuteMethod(this, "StartEdit", initialValue, arrowMode);
         }
 
         /// <summary>
@@ -1306,7 +1306,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void EndEdit(object accept)
         {
-             Factory.ExecuteMethod(this, "EndEdit", accept);
+            Factory.ExecuteMethod(this, "EndEdit", accept);
         }
 
         /// <summary>
@@ -1316,7 +1316,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void EndEdit()
         {
-             Factory.ExecuteMethod(this, "EndEdit");
+            Factory.ExecuteMethod(this, "EndEdit");
         }
 
         /// <summary>
@@ -1326,7 +1326,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void CancelDragDrop()
         {
-             Factory.ExecuteMethod(this, "CancelDragDrop");
+            Factory.ExecuteMethod(this, "CancelDragDrop");
         }
 
         /// <summary>
@@ -1335,11 +1335,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void OkToBindToControlByName()
         {
-             Factory.ExecuteMethod(this, "OkToBindToControlByName");
+            Factory.ExecuteMethod(this, "OkToBindToControlByName");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

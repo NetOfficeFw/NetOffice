@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class ViewSurface : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ViewSurface(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public ViewSurface(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public ViewSurface(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ViewSurface(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ViewSurface() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ViewSurface(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false), NativeResult]
         public stdole.Picture get_PictureAlphaBlended(stdole.Picture picture, stdole.Picture mask)
-        {		
+        {
             object[] paramsArray = Invoker.ValidateParamsArray(picture, mask);
             object returnItem = Invoker.PropertyGet(this, "PictureAlphaBlended", paramsArray);
             return returnItem as stdole.Picture;
@@ -298,7 +298,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Rectangle(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, Int32 color)
         {
-             Factory.ExecuteMethod(this, "Rectangle", new object[]{ cx1, cy1, cx2, cy2, left, top, width, height, color });
+            Factory.ExecuteMethod(this, "Rectangle", new object[] { cx1, cy1, cx2, cy2, left, top, width, height, color });
         }
 
         /// <summary>
@@ -316,7 +316,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Line(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 x1, Int32 y1, Int32 x2, Int32 y2, Int32 color)
         {
-             Factory.ExecuteMethod(this, "Line", new object[]{ cx1, cy1, cx2, cy2, x1, y1, x2, y2, color });
+            Factory.ExecuteMethod(this, "Line", new object[] { cx1, cy1, cx2, cy2, x1, y1, x2, y2, color });
         }
 
         /// <summary>
@@ -335,7 +335,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Text(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, NetOffice.OWC10Api.TextFormat textFormat, object text)
         {
-             Factory.ExecuteMethod(this, "Text", new object[]{ cx1, cy1, cx2, cy2, left, top, width, height, textFormat, text });
+            Factory.ExecuteMethod(this, "Text", new object[] { cx1, cy1, cx2, cy2, left, top, width, height, textFormat, text });
         }
 
         /// <summary>
@@ -353,7 +353,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Picture(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, stdole.Picture picture)
         {
-             Factory.ExecuteMethod(this, "Picture", new object[]{ cx1, cy1, cx2, cy2, left, top, width, height, picture });
+            Factory.ExecuteMethod(this, "Picture", new object[] { cx1, cy1, cx2, cy2, left, top, width, height, picture });
         }
 
         /// <summary>
@@ -372,11 +372,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void PictureMasked(Int32 cx1, Int32 cy1, Int32 cx2, Int32 cy2, Int32 left, Int32 top, Int32 width, Int32 height, stdole.Picture picture, stdole.Picture mask)
         {
-             Factory.ExecuteMethod(this, "PictureMasked", new object[]{ cx1, cy1, cx2, cy2, left, top, width, height, picture, mask });
+            Factory.ExecuteMethod(this, "PictureMasked", new object[] { cx1, cy1, cx2, cy2, left, top, width, height, picture, mask });
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

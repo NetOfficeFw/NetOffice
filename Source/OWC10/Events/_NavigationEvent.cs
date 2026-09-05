@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.OWC10Api.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -31,22 +31,22 @@ namespace NetOffice.OWC10Api.Events
     public class _NavigationEvent_SinkHelper : SinkHelper, _NavigationEvent
     {
         #region Static
-        
+
         public static readonly string Id = "4BD09D02-45CC-11D1-B1D1-006097C97F9B";
-        
+
         #endregion
-    
+
         #region Ctor
 
-        public _NavigationEvent_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public _NavigationEvent_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
-        
+
         #region _NavigationEvent
-        
+
         public void ButtonClick([In] object navButton)
         {
             if (!Validate("ButtonClick"))
@@ -63,8 +63,8 @@ namespace NetOffice.OWC10Api.Events
 
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }

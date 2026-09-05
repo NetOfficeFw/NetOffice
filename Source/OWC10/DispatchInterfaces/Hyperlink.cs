@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class Hyperlink : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public Hyperlink(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public Hyperlink(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public Hyperlink(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Hyperlink(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Hyperlink() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public Hyperlink(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Delete()
         {
-             Factory.ExecuteMethod(this, "Delete");
+            Factory.ExecuteMethod(this, "Delete");
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Follow(object newWindow, object addHistory, object extraInfo, object method, object headerInfo)
         {
-             Factory.ExecuteMethod(this, "Follow", new object[]{ newWindow, addHistory, extraInfo, method, headerInfo });
+            Factory.ExecuteMethod(this, "Follow", new object[] { newWindow, addHistory, extraInfo, method, headerInfo });
         }
 
         /// <summary>
@@ -216,7 +216,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Follow()
         {
-             Factory.ExecuteMethod(this, "Follow");
+            Factory.ExecuteMethod(this, "Follow");
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Follow(object newWindow)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow);
+            Factory.ExecuteMethod(this, "Follow", newWindow);
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Follow(object newWindow, object addHistory)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
+            Factory.ExecuteMethod(this, "Follow", newWindow, addHistory);
         }
 
         /// <summary>
@@ -252,7 +252,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Follow(object newWindow, object addHistory, object extraInfo)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
+            Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo);
         }
 
         /// <summary>
@@ -266,11 +266,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Follow(object newWindow, object addHistory, object extraInfo, object method)
         {
-             Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
+            Factory.ExecuteMethod(this, "Follow", newWindow, addHistory, extraInfo, method);
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

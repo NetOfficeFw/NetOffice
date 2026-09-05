@@ -13,7 +13,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class ISpreadsheet : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ISpreadsheet(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.OWC10Api
         public ISpreadsheet(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.OWC10Api
         public ISpreadsheet(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ISpreadsheet(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ISpreadsheet() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ISpreadsheet(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -1223,7 +1223,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void AddIn(object addIn)
         {
-             Factory.ExecuteMethod(this, "AddIn", addIn);
+            Factory.ExecuteMethod(this, "AddIn", addIn);
         }
 
         /// <summary>
@@ -1232,7 +1232,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void BeginUndo()
         {
-             Factory.ExecuteMethod(this, "BeginUndo");
+            Factory.ExecuteMethod(this, "BeginUndo");
         }
 
         /// <summary>
@@ -1241,7 +1241,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Calculate()
         {
-             Factory.ExecuteMethod(this, "Calculate");
+            Factory.ExecuteMethod(this, "Calculate");
         }
 
         /// <summary>
@@ -1250,7 +1250,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void CalculateFull()
         {
-             Factory.ExecuteMethod(this, "CalculateFull");
+            Factory.ExecuteMethod(this, "CalculateFull");
         }
 
         /// <summary>
@@ -1260,7 +1260,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void EndUndo(object cancel)
         {
-             Factory.ExecuteMethod(this, "EndUndo", cancel);
+            Factory.ExecuteMethod(this, "EndUndo", cancel);
         }
 
         /// <summary>
@@ -1270,7 +1270,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void EndUndo()
         {
-             Factory.ExecuteMethod(this, "EndUndo");
+            Factory.ExecuteMethod(this, "EndUndo");
         }
 
         /// <summary>
@@ -1303,7 +1303,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export(object filename, object action, object format)
         {
-             Factory.ExecuteMethod(this, "Export", filename, action, format);
+            Factory.ExecuteMethod(this, "Export", filename, action, format);
         }
 
         /// <summary>
@@ -1313,7 +1313,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export()
         {
-             Factory.ExecuteMethod(this, "Export");
+            Factory.ExecuteMethod(this, "Export");
         }
 
         /// <summary>
@@ -1324,7 +1324,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export(object filename)
         {
-             Factory.ExecuteMethod(this, "Export", filename);
+            Factory.ExecuteMethod(this, "Export", filename);
         }
 
         /// <summary>
@@ -1336,7 +1336,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Export(object filename, object action)
         {
-             Factory.ExecuteMethod(this, "Export", filename, action);
+            Factory.ExecuteMethod(this, "Export", filename, action);
         }
 
         /// <summary>
@@ -1346,7 +1346,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void LocateDataSource()
         {
-             Factory.ExecuteMethod(this, "LocateDataSource");
+            Factory.ExecuteMethod(this, "LocateDataSource");
         }
 
         /// <summary>
@@ -1390,7 +1390,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Refresh()
         {
-             Factory.ExecuteMethod(this, "Refresh");
+            Factory.ExecuteMethod(this, "Refresh");
         }
 
         /// <summary>
@@ -1399,7 +1399,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Repaint()
         {
-             Factory.ExecuteMethod(this, "Repaint");
+            Factory.ExecuteMethod(this, "Repaint");
         }
 
         /// <summary>
@@ -1408,7 +1408,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowAbout()
         {
-             Factory.ExecuteMethod(this, "ShowAbout");
+            Factory.ExecuteMethod(this, "ShowAbout");
         }
 
         /// <summary>
@@ -1420,7 +1420,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowContextMenu(Int32 x, Int32 y, object menu)
         {
-             Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
+            Factory.ExecuteMethod(this, "ShowContextMenu", x, y, menu);
         }
 
         /// <summary>
@@ -1430,7 +1430,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void ShowHelp(Int32 topic)
         {
-             Factory.ExecuteMethod(this, "ShowHelp", topic);
+            Factory.ExecuteMethod(this, "ShowHelp", topic);
         }
 
         /// <summary>
@@ -1439,7 +1439,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Undo()
         {
-             Factory.ExecuteMethod(this, "Undo");
+            Factory.ExecuteMethod(this, "Undo");
         }
 
         /// <summary>
@@ -1448,11 +1448,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void UpdatePropertyToolbox()
         {
-             Factory.ExecuteMethod(this, "UpdatePropertyToolbox");
+            Factory.ExecuteMethod(this, "UpdatePropertyToolbox");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

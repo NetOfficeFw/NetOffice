@@ -14,7 +14,7 @@ namespace NetOffice.OWC10Api
     [EntityType(EntityType.IsDispatchInterface)]
     public class ChErrorBars : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -42,9 +42,9 @@ namespace NetOffice.OWC10Api
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -59,7 +59,7 @@ namespace NetOffice.OWC10Api
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ChErrorBars(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -68,7 +68,7 @@ namespace NetOffice.OWC10Api
         public ChErrorBars(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -86,26 +86,26 @@ namespace NetOffice.OWC10Api
         public ChErrorBars(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChErrorBars(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChErrorBars() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ChErrorBars(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum dimension, Int32 dataSourceIndex, object dataReference)
         {
-             Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex, dataReference);
+            Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex, dataReference);
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void SetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum dimension, Int32 dataSourceIndex)
         {
-             Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex);
+            Factory.ExecuteMethod(this, "SetData", dimension, dataSourceIndex);
         }
 
         /// <summary>
@@ -354,7 +354,7 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void GetData(NetOffice.OWC10Api.Enums.ChartErrorBarCustomValuesEnum errorBarDirection, out object dataSourceIndex, out object dataReference)
         {
-            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false,true,true);
+            ParameterModifier[] modifiers = Invoker.CreateParamModifiers(false, true, true);
             dataSourceIndex = null;
             dataReference = null;
             object[] paramsArray = Invoker.ValidateParamsArray(errorBarDirection, dataSourceIndex, dataReference);
@@ -369,11 +369,11 @@ namespace NetOffice.OWC10Api
         [SupportByVersion("OWC10", 1)]
         public void Select()
         {
-             Factory.ExecuteMethod(this, "Select");
+            Factory.ExecuteMethod(this, "Select");
         }
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }
