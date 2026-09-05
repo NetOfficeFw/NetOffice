@@ -16,7 +16,7 @@ namespace NetOffice.MSComctlLibApi
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class ITabs : COMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.ITab>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.MSComctlLibApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.MSComctlLibApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public ITabs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.MSComctlLibApi
         public ITabs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.MSComctlLibApi
         public ITabs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ITabs(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ITabs() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public ITabs(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Remove(object pvIndex)
         {
-             Factory.ExecuteMethod(this, "Remove", pvIndex);
+            Factory.ExecuteMethod(this, "Remove", pvIndex);
         }
 
         /// <summary>
@@ -202,7 +202,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Clear()
         {
-             Factory.ExecuteMethod(this, "Clear");
+            Factory.ExecuteMethod(this, "Clear");
         }
 
         /// <summary>
@@ -313,6 +313,6 @@ namespace NetOffice.MSComctlLibApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

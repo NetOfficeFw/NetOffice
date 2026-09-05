@@ -16,7 +16,7 @@ namespace NetOffice.MSComctlLibApi
     [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method), HasIndexProperty(IndexInvoke.Property, "Item")]
     public class IColumnHeaders : COMObject, IEnumerableProvider<NetOffice.MSComctlLibApi.IColumnHeader>
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -44,9 +44,9 @@ namespace NetOffice.MSComctlLibApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -61,7 +61,7 @@ namespace NetOffice.MSComctlLibApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IColumnHeaders(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -70,7 +70,7 @@ namespace NetOffice.MSComctlLibApi
         public IColumnHeaders(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -88,26 +88,26 @@ namespace NetOffice.MSComctlLibApi
         public IColumnHeaders(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IColumnHeaders(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IColumnHeaders() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IColumnHeaders(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public NetOffice.MSComctlLibApi.IColumnHeader Add_PreVB98(object index, object key, object text, object width, object alignment)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", new object[]{ index, key, text, width, alignment });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add_PreVB98", new object[] { index, key, text, width, alignment });
         }
 
         /// <summary>
@@ -262,7 +262,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Clear()
         {
-             Factory.ExecuteMethod(this, "Clear");
+            Factory.ExecuteMethod(this, "Clear");
         }
 
         /// <summary>
@@ -272,7 +272,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Remove(object index)
         {
-             Factory.ExecuteMethod(this, "Remove", index);
+            Factory.ExecuteMethod(this, "Remove", index);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace NetOffice.MSComctlLibApi
         [BaseResult]
         public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment, object icon)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment, icon });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[] { index, key, text, width, alignment, icon });
         }
 
         /// <summary>
@@ -369,7 +369,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public NetOffice.MSComctlLibApi.IColumnHeader Add(object index, object key, object text, object width, object alignment)
         {
-            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[]{ index, key, text, width, alignment });
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.MSComctlLibApi.IColumnHeader>(this, "Add", new object[] { index, key, text, width, alignment });
         }
 
         #endregion
@@ -416,6 +416,6 @@ namespace NetOffice.MSComctlLibApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

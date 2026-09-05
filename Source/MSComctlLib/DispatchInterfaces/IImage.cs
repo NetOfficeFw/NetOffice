@@ -13,7 +13,7 @@ namespace NetOffice.MSComctlLibApi
     [EntityType(EntityType.IsDispatchInterface), BaseType]
     public class IImage : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -41,9 +41,9 @@ namespace NetOffice.MSComctlLibApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
+
         #region Ctor
 
         /// <param name="factory">current used factory core</param>
@@ -58,7 +58,7 @@ namespace NetOffice.MSComctlLibApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IImage(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
         {
-            
+
         }
 
         ///<param name="parentObject">object there has created the proxy</param>
@@ -67,7 +67,7 @@ namespace NetOffice.MSComctlLibApi
         public IImage(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
         {
         }
-        
+
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
@@ -85,26 +85,26 @@ namespace NetOffice.MSComctlLibApi
         public IImage(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
         {
         }
-        
+
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IImage(ICOMObject replacedObject) : base(replacedObject)
         {
         }
-        
+
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IImage() : base()
         {
         }
-        
+
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IImage(string progId) : base(progId)
         {
         }
-        
+
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Draw(Int32 hDC, object x, object y, object style)
         {
-             Factory.ExecuteMethod(this, "Draw", hDC, x, y, style);
+            Factory.ExecuteMethod(this, "Draw", hDC, x, y, style);
         }
 
         /// <summary>
@@ -203,7 +203,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Draw(Int32 hDC)
         {
-             Factory.ExecuteMethod(this, "Draw", hDC);
+            Factory.ExecuteMethod(this, "Draw", hDC);
         }
 
         /// <summary>
@@ -215,7 +215,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Draw(Int32 hDC, object x)
         {
-             Factory.ExecuteMethod(this, "Draw", hDC, x);
+            Factory.ExecuteMethod(this, "Draw", hDC, x);
         }
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace NetOffice.MSComctlLibApi
         [SupportByVersion("MSComctlLib", 6)]
         public void Draw(Int32 hDC, object x, object y)
         {
-             Factory.ExecuteMethod(this, "Draw", hDC, x, y);
+            Factory.ExecuteMethod(this, "Draw", hDC, x, y);
         }
 
         /// <summary>
@@ -244,6 +244,6 @@ namespace NetOffice.MSComctlLibApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

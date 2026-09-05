@@ -6,8 +6,8 @@ using NetOffice;
 using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi.Events
-{	
-    #pragma warning disable CS1591
+{
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -27,33 +27,33 @@ namespace NetOffice.MSComctlLibApi.Events
     public class ImageListEvents_SinkHelper : SinkHelper, ImageListEvents
     {
         #region Static
-        
+
         public static readonly string Id = "2C247F22-8591-11D1-B16A-00C0F0283628";
-        
+
         #endregion
-    
+
         #region Fields
 
-        private IEventBinding	_eventBinding;
+        private IEventBinding _eventBinding;
         private ICOMObject _eventClass;
-        
+
         #endregion
-        
+
         #region Ctor
 
-        public ImageListEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint): base(eventClass)
+        public ImageListEvents_SinkHelper(ICOMObject eventClass, IConnectionPoint connectPoint) : base(eventClass)
         {
             SetupEventBinding(connectPoint);
         }
-        
+
         #endregion
 
         #region ImageListEvents
-        
+
         #endregion
     }
-    
+
     #endregion
-    
-    #pragma warning restore CS1591
+
+#pragma warning restore CS1591
 }
