@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.ADODBApi
 {
-	/// <summary>
-	/// DispatchInterface Fields20 
-	/// SupportByVersion ADODB, 2.5
-	/// </summary>
-	[SupportByVersion("ADODB", 2.5)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
-	public class Fields20 : Fields15, IEnumerableProvider<object>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Fields20 
+    /// SupportByVersion ADODB, 2.5
+    /// </summary>
+    [SupportByVersion("ADODB", 2.5)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Method)]
+    public class Fields20 : Fields15, IEnumerableProvider<object>
+    {
+        #pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -47,145 +47,145 @@ namespace NetOffice.ADODBApi
         
         #endregion
         
-		#region Ctor
+        #region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Fields20(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Fields20(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Fields20(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Fields20(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+            
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Fields20(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Fields20(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        public Fields20(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
+        
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Fields20(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Fields20(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Fields20() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Fields20(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Fields20(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// Get
-		/// </summary>
-		[SupportByVersion("ADODB", 2.5)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        }
 
-		#endregion
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Fields20(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
+        
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Fields20(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
+        
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Fields20() : base()
+        {
+        }
+        
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Fields20(string progId) : base(progId)
+        {
+        }
+        
+        #endregion
+        
+        #region Properties
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// Get
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		[SupportByVersion("ADODB", 2.5)]
-		public void Refresh()
-		{
-			 Factory.ExecuteMethod(this, "Refresh");
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="name">string name</param>
-		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
-		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
-		/// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
-		{
-			 Factory.ExecuteMethod(this, "_Append", name, type, definedSize, attrib);
-		}
+        #region Methods
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="name">string name</param>
-		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethod]
-		[SupportByVersion("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
-		{
-			 Factory.ExecuteMethod(this, "_Append", name, type);
-		}
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        [SupportByVersion("ADODB", 2.5)]
+        public void Refresh()
+        {
+             Factory.ExecuteMethod(this, "Refresh");
+        }
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="name">string name</param>
-		/// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
-		/// <param name="definedSize">optional Int32 DefinedSize = 0</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[CustomMethod]
-		[SupportByVersion("ADODB", 2.5)]
-		public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
-		{
-			 Factory.ExecuteMethod(this, "_Append", name, type, definedSize);
-		}
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        /// <param name="name">string name</param>
+        /// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
+        /// <param name="definedSize">optional Int32 DefinedSize = 0</param>
+        /// <param name="attrib">optional NetOffice.ADODBApi.Enums.FieldAttributeEnum Attrib = -1</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [SupportByVersion("ADODB", 2.5)]
+        public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize, object attrib)
+        {
+             Factory.ExecuteMethod(this, "_Append", name, type, definedSize, attrib);
+        }
 
-		/// <summary>
-		/// SupportByVersion ADODB 2.5
-		/// </summary>
-		/// <param name="index">object index</param>
-		[SupportByVersion("ADODB", 2.5)]
-		public void Delete(object index)
-		{
-			 Factory.ExecuteMethod(this, "Delete", index);
-		}
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        /// <param name="name">string name</param>
+        /// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [CustomMethod]
+        [SupportByVersion("ADODB", 2.5)]
+        public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type)
+        {
+             Factory.ExecuteMethod(this, "_Append", name, type);
+        }
+
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        /// <param name="name">string name</param>
+        /// <param name="type">NetOffice.ADODBApi.Enums.DataTypeEnum type</param>
+        /// <param name="definedSize">optional Int32 DefinedSize = 0</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [CustomMethod]
+        [SupportByVersion("ADODB", 2.5)]
+        public void _Append(string name, NetOffice.ADODBApi.Enums.DataTypeEnum type, object definedSize)
+        {
+             Factory.ExecuteMethod(this, "_Append", name, type, definedSize);
+        }
+
+        /// <summary>
+        /// SupportByVersion ADODB 2.5
+        /// </summary>
+        /// <param name="index">object index</param>
+        [SupportByVersion("ADODB", 2.5)]
+        public void Delete(object index)
+        {
+             Factory.ExecuteMethod(this, "Delete", index);
+        }
 
         #endregion
 
@@ -224,13 +224,13 @@ namespace NetOffice.ADODBApi
         /// SupportByVersion ADODB, 2.5
         /// </summary>
         [SupportByVersion("ADODB", 2.5)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
-		}
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsMethod(this);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #pragma warning restore
+    }
 }
