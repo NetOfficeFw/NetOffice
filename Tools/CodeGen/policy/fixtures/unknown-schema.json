@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "projection-policy/v0",
+  "dataSchemaVersion": "2.0",
+  "contractSchemaVersion": "1.0",
+  "generatedRoot": "Generated",
+  "filePartitionStrategy": "type",
+  "fileExtension": ".cs",
+  "docsKeyPrefix": "vba",
+  "names": { "reservedWords": [], "invalidCharacterReplacement": "_" },
+  "overrides": [],
+  "runtimeCapabilities": {},
+  "digest": ""
+}

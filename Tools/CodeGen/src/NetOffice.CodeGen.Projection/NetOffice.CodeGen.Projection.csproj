@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>NetOffice.CodeGen.Projection</RootNamespace>
+    <AssemblyName>NetOffice.CodeGen.Projection</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice.CodeGen.Data\NetOffice.CodeGen.Data.csproj" />
+    <Compile Include="..\..\policy\ProjectionPolicy.cs" Link="Policy\ProjectionPolicy.cs" />
+  </ItemGroup>
+</Project>

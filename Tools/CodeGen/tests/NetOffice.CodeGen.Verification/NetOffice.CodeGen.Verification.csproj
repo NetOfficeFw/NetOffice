@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>NetOffice.CodeGen.Verification</AssemblyName>
+    <RootNamespace>NetOffice.CodeGen.Verification</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.Data\NetOffice.CodeGen.Data.csproj" />
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.TypeLib\NetOffice.CodeGen.TypeLib.csproj" />
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.Projection\NetOffice.CodeGen.Projection.csproj" />
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.Emit\NetOffice.CodeGen.Emit.csproj" />
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.Storage\NetOffice.CodeGen.Storage.csproj" />
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.Docs\NetOffice.CodeGen.Docs.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fixtures\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

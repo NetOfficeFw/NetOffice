@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://netoffice.io/schemas/wrapper-contract-1.0.json",
+  "title": "NetOffice Wrapper Contract",
+  "description": "Deterministic source contract for the public and protected NetOffice wrapper surface.",
+  "type": "object",
+  "required": ["SchemaVersion", "ContractKind", "Generator", "Source", "Types", "Unknowns", "Ambiguities"],
+  "properties": {
+    "SchemaVersion": { "const": "1.0" },
+    "ContractKind": { "const": "NetOffice.WrapperContract" },
+    "Generator": {
+      "type": "object",
+      "required": ["Name", "Version"],
+      "properties": {
+        "Name": { "type": "string", "minLength": 1 },
+        "Version": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "Source": {
+      "type": "object",
+      "required": ["Root", "Api", "SourceRoots", "Files"],
+      "properties": {
+        "Root": { "type": "string" },
+        "Api": { "type": "string", "minLength": 1 },
+        "SourceRoots": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "Files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["Path", "Sha256", "LineCount"],
+            "properties": {
+              "Path": { "type": "string", "minLength": 1 },
+              "Sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "LineCount": { "type": "integer", "minimum": 1 }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Types": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/type" }
+    },
+    "Unknowns": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/unknown" }
+    },
+    "Ambiguities": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ambiguity" }
+    }
+  },
+  "$defs": {
+    "type": {
+      "type": "object",
+      "required": ["LogicalId", "Namespace", "Name", "Kind", "Accessibility", "Modifiers", "Interfaces", "Attributes", "Source", "Line", "Signature", "Members"],
+      "properties": {
+        "LogicalId": { "type": "string", "minLength": 1 },
+        "Namespace": { "type": "string" },
+        "Name": { "type": "string", "minLength": 1 },
+        "Kind": { "enum": ["class", "interface", "struct", "enum", "delegate"] },
+        "Accessibility": { "type": "string" },
+        "Modifiers": { "type": "array", "items": { "type": "string" } },
+        "BaseType": { "type": ["string", "null"] },
+        "Interfaces": { "type": "array", "items": { "type": "string" } },
+        "Attributes": { "type": "array", "items": { "type": "string" } },
+        "Source": { "type": "string", "minLength": 1 },
+        "Line": { "type": "integer", "minimum": 1 },
+        "Signature": { "type": "string", "minLength": 1 },
+        "Members": { "type": "array", "items": { "$ref": "#/$defs/member" } }
+      },
+      "additionalProperties": false
+    },
+    "member": {
+      "type": "object",
+      "required": ["Name", "Kind", "Accessibility", "Modifiers", "Signature", "Attributes", "InvocationText", "Source", "Line"],
+      "properties": {
+        "Name": { "type": "string", "minLength": 1 },
+        "Kind": { "type": "string", "minLength": 1 },
+        "Accessibility": { "type": "string" },
+        "Modifiers": { "type": "array", "items": { "type": "string" } },
+        "ReturnType": { "type": ["string", "null"] },
+        "Parameters": { "type": ["string", "null"] },
+        "Signature": { "type": "string", "minLength": 1 },
+        "Attributes": { "type": "array", "items": { "type": "string" } },
+        "InvocationText": { "type": "array", "items": { "type": "string" } },
+        "Source": { "type": "string", "minLength": 1 },
+        "Line": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "unknown": {
+      "type": "object",
+      "required": ["Code", "Message", "Path"],
+      "properties": {
+        "Code": { "type": "string", "minLength": 1 },
+        "Message": { "type": "string", "minLength": 1 },
+        "Path": { "type": "string", "minLength": 1 },
+        "Line": { "type": ["integer", "null"], "minimum": 1 },
+        "LogicalId": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "ambiguity": {
+      "type": "object",
+      "required": ["Code", "Message", "Candidates"],
+      "properties": {
+        "Code": { "type": "string", "minLength": 1 },
+        "Message": { "type": "string", "minLength": 1 },
+        "Candidates": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

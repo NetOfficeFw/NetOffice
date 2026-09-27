@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "projection-policy/v1",
+  "dataSchemaVersion": "2.0",
+  "contractSchemaVersion": "1.0",
+  "generatedRoot": "Generated",
+  "filePartitionStrategy": "type",
+  "fileExtension": ".cs",
+  "docsKeyPrefix": "vba",
+  "names": { "reservedWords": [], "invalidCharacterReplacement": "_" },
+  "overrides": [{ "id": "stale-member", "memberName": "RemovedMember", "property": "csharpName", "value": "StillPresent", "expectedMatches": 1 }],
+  "runtimeCapabilities": {},
+  "digest": "26b32eafd96707287d8842e4e20c452370a67b21aadb803c92293ef1eebe3e24"
+}

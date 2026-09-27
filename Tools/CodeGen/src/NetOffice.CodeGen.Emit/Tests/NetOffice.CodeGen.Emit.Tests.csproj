@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetOffice.CodeGen.Emit.csproj" />
+    <ProjectReference Include="..\..\NetOffice.CodeGen.Storage\NetOffice.CodeGen.Storage.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://netoffice.io/schemas/wrapper-compatibility-ledger-1.0.json",
+  "title": "NetOffice Wrapper Compatibility Ledger",
+  "type": "object",
+  "required": ["SchemaVersion", "ContractKind", "Api", "Entries"],
+  "properties": {
+    "SchemaVersion": { "const": "1.0" },
+    "ContractKind": { "const": "NetOffice.WrapperCompatibilityLedger" },
+    "Api": { "type": "string", "minLength": 1 },
+    "Entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["LogicalId", "RecordKind", "Source", "Status", "ExpectedMatchCount"],
+        "properties": {
+          "LogicalId": { "type": "string", "minLength": 1 },
+          "RecordKind": { "enum": ["type", "member"] },
+          "Source": { "type": "string", "minLength": 1 },
+          "Status": { "type": "string", "minLength": 1 },
+          "ExpectedMatchCount": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

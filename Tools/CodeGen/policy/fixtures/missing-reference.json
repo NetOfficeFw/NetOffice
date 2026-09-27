@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "projection-policy/v1",
+  "dataSchemaVersion": "2.0",
+  "contractSchemaVersion": "1.0",
+  "generatedRoot": "Generated",
+  "filePartitionStrategy": "type",
+  "fileExtension": ".cs",
+  "docsKeyPrefix": "vba",
+  "names": { "reservedWords": [], "invalidCharacterReplacement": "_" },
+  "overrides": [{ "id": "missing-type", "typeLogicalId": "not-in-graph", "property": "csharpName", "value": "Missing", "expectedMatches": 1 }],
+  "digest": "e9367b5d0a410da0d7af67ef40f8a914c3f91bbbc2a291d217e44fca4259878d"
+}

@@ -1,0 +1,487 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperClassification",
+  "Api": "DAO",
+  "Entries": [
+    {
+      "LogicalId": "DAOApi.Utils.ProjectInfo",
+      "Source": "Utils/ProjectInfo.cs",
+      "Category": "Utils",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.ComplexType",
+      "Source": "DispatchInterfaces/ComplexType.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Connection",
+      "Source": "DispatchInterfaces/Connection.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Connections",
+      "Source": "DispatchInterfaces/Connections.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Constants.LanguageConstants",
+      "Source": "Constants/LanguageConstants.cs",
+      "Category": "Constants",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Container",
+      "Source": "DispatchInterfaces/Container.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Containers",
+      "Source": "DispatchInterfaces/Containers.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.DBEngine",
+      "Source": "Classes/DBEngine.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Database",
+      "Source": "DispatchInterfaces/Database.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Databases",
+      "Source": "DispatchInterfaces/Databases.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Document",
+      "Source": "DispatchInterfaces/Document.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Documents",
+      "Source": "DispatchInterfaces/Documents.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.CollatingOrderEnum",
+      "Source": "Enums/CollatingOrderEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.CommitTransOptionsEnum",
+      "Source": "Enums/CommitTransOptionsEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.CursorDriverEnum",
+      "Source": "Enums/CursorDriverEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.DataTypeEnum",
+      "Source": "Enums/DataTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.DatabaseTypeEnum",
+      "Source": "Enums/DatabaseTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.DriverPromptEnum",
+      "Source": "Enums/DriverPromptEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.EditModeEnum",
+      "Source": "Enums/EditModeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.FieldAttributeEnum",
+      "Source": "Enums/FieldAttributeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.IdleEnum",
+      "Source": "Enums/IdleEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.LockTypeEnum",
+      "Source": "Enums/LockTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.ParameterDirectionEnum",
+      "Source": "Enums/ParameterDirectionEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.PermissionEnum",
+      "Source": "Enums/PermissionEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.QueryDefStateEnum",
+      "Source": "Enums/QueryDefStateEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.QueryDefTypeEnum",
+      "Source": "Enums/QueryDefTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.RecordStatusEnum",
+      "Source": "Enums/RecordStatusEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.RecordsetOptionEnum",
+      "Source": "Enums/RecordsetOptionEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.RecordsetTypeEnum",
+      "Source": "Enums/RecordsetTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.RelationAttributeEnum",
+      "Source": "Enums/RelationAttributeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.ReplicaTypeEnum",
+      "Source": "Enums/ReplicaTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.SetOptionEnum",
+      "Source": "Enums/SetOptionEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.SynchronizeTypeEnum",
+      "Source": "Enums/SynchronizeTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.TableDefAttributeEnum",
+      "Source": "Enums/TableDefAttributeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.UpdateCriteriaEnum",
+      "Source": "Enums/UpdateCriteriaEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.UpdateTypeEnum",
+      "Source": "Enums/UpdateTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums.WorkspaceTypeEnum",
+      "Source": "Enums/WorkspaceTypeEnum.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Enums._DAOSuppHelp",
+      "Source": "Enums/_DAOSuppHelp.cs",
+      "Category": "Enums",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Error",
+      "Source": "DispatchInterfaces/Error.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Errors",
+      "Source": "DispatchInterfaces/Errors.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Field",
+      "Source": "Classes/Field.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Field2",
+      "Source": "DispatchInterfaces/Field2.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Field3",
+      "Source": "DispatchInterfaces/Field3.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Fields",
+      "Source": "DispatchInterfaces/Fields.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.GlobalHelperModules.GlobalModule",
+      "Source": "Modules/Global.cs",
+      "Category": "Modules",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Group",
+      "Source": "Classes/Group.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Groups",
+      "Source": "DispatchInterfaces/Groups.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Index",
+      "Source": "Classes/Index.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.IndexFields",
+      "Source": "DispatchInterfaces/IndexFields.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.IndexFields_",
+      "Source": "DispatchInterfaces/IndexFields.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Indexes",
+      "Source": "DispatchInterfaces/Indexes.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Parameter",
+      "Source": "DispatchInterfaces/Parameter.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Parameters",
+      "Source": "DispatchInterfaces/Parameters.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.PrivDBEngine",
+      "Source": "Classes/PrivDBEngine.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Properties",
+      "Source": "DispatchInterfaces/Properties.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Property",
+      "Source": "DispatchInterfaces/Property.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.QueryDef",
+      "Source": "Classes/QueryDef.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.QueryDefs",
+      "Source": "DispatchInterfaces/QueryDefs.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Recordset",
+      "Source": "DispatchInterfaces/Recordset.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Recordset2",
+      "Source": "DispatchInterfaces/Recordset2.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Recordsets",
+      "Source": "DispatchInterfaces/Recordsets.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Relation",
+      "Source": "Classes/Relation.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Relations",
+      "Source": "DispatchInterfaces/Relations.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.TableDef",
+      "Source": "Classes/TableDef.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.TableDefs",
+      "Source": "DispatchInterfaces/TableDefs.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.User",
+      "Source": "Classes/User.cs",
+      "Category": "Classes",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Users",
+      "Source": "DispatchInterfaces/Users.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Workspace",
+      "Source": "DispatchInterfaces/Workspace.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi.Workspaces",
+      "Source": "DispatchInterfaces/Workspaces.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._Collection",
+      "Source": "DispatchInterfaces/_Collection.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._DAO",
+      "Source": "DispatchInterfaces/_DAO.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._DBEngine",
+      "Source": "DispatchInterfaces/_DBEngine.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._DynaCollection",
+      "Source": "DispatchInterfaces/_DynaCollection.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._Field",
+      "Source": "DispatchInterfaces/_Field.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._Group",
+      "Source": "DispatchInterfaces/_Group.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._Index",
+      "Source": "DispatchInterfaces/_Index.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._QueryDef",
+      "Source": "DispatchInterfaces/_QueryDef.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._Relation",
+      "Source": "DispatchInterfaces/_Relation.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._TableDef",
+      "Source": "DispatchInterfaces/_TableDef.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.DAOApi._User",
+      "Source": "DispatchInterfaces/_User.cs",
+      "Category": "DispatchInterfaces",
+      "Kind": "class"
+    }
+  ]
+}

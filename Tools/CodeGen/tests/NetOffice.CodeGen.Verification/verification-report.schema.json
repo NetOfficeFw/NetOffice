@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://netoffice.io/schemas/codegen-verification-report-1.0.json",
+  "title": "NetOffice CodeGen Verification Report",
+  "type": "object",
+  "required": ["schemaVersion", "outcome", "firstDivergentStage", "checks"],
+  "properties": {
+    "schemaVersion": { "const": "netoffice-codegen-verification/v1" },
+    "outcome": { "enum": ["passed", "failed"] },
+    "firstDivergentStage": { "type": "string" },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "stage", "passed", "message"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "stage": { "type": "string", "minLength": 1 },
+          "passed": { "type": "boolean" },
+          "message": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

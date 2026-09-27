@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>NetOffice.DataV08Converter</AssemblyName>
+    <RootNamespace>NetOffice.DataV08Converter</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/NetOffice.CodeGen.Data/NetOffice.CodeGen.Data.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://netoffice.io/schemas/projection-policy-v1.json",
+  "title": "NetOffice Projection Policy v1",
+  "type": "object",
+  "required": ["schemaVersion", "dataSchemaVersion", "contractSchemaVersion", "generatedRoot", "filePartitionStrategy", "fileExtension", "docsKeyPrefix", "names", "overrides", "runtimeCapabilities", "digest"],
+  "properties": {
+    "schemaVersion": { "const": "projection-policy/v1" },
+    "dataSchemaVersion": { "const": "2.0" },
+    "contractSchemaVersion": { "const": "1.0" },
+    "filePartitionStrategy": { "enum": ["type", "source"] },
+    "fileExtension": { "const": ".cs" },
+    "docsKeyPrefix": { "type": "string", "minLength": 1 },
+    "names": {
+      "type": "object",
+      "required": ["reservedWords", "invalidCharacterReplacement"],
+      "properties": {
+        "reservedWords": { "type": "array", "items": { "type": "string" } },
+        "invalidCharacterReplacement": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["property", "value", "expectedMatches"],
+        "properties": {
+          "id": { "type": ["string", "null"] },
+          "typeLogicalId": { "type": ["string", "null"] },
+          "memberLogicalId": { "type": ["string", "null"] },
+          "memberName": { "type": ["string", "null"] },
+          "property": { "type": "string", "minLength": 1 },
+          "value": { "type": "string" },
+          "expectedMatches": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "runtimeCapabilities": { "type": "object", "additionalProperties": { "type": "string" } },
+    "digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "additionalProperties": false
+}

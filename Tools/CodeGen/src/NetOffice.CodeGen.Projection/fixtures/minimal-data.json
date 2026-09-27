@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "2.0",
+  "serialization": "netoffice-data-v2-json",
+  "source": {
+    "kind": "fixture",
+    "path": "minimal",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "libraries": [
+    {
+      "logicalId": "fixture.lib",
+      "name": "Fixture",
+      "guid": "00000000-0000-0000-0000-000000000001",
+      "version": "1.0",
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
+    }
+  ],
+  "types": [
+    {
+      "logicalId": "fixture.type",
+      "libraryId": "fixture.lib",
+      "name": "Widget",
+      "kind": "Interface",
+      "sourceKey": "Widget",
+      "baseTypeIds": [],
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
+    }
+  ],
+  "members": [
+    {
+      "logicalId": "fixture.member",
+      "typeId": "fixture.type",
+      "name": "Run",
+      "kind": "method",
+      "sourceKey": "Run",
+      "returnType": "void",
+      "parameterTypes": ["string"],
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
+    }
+  ],
+  "accessorGroups": [],
+  "ambiguities": [],
+  "digest": "ee20249d178bc0a42091f9af1dd84ba7c1c40cd58a4d7f2ebeccc66f11879879"
+}

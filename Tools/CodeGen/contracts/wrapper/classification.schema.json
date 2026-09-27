@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://netoffice.io/schemas/wrapper-classification-1.0.json",
+  "title": "NetOffice Wrapper Classification",
+  "type": "object",
+  "required": ["SchemaVersion", "ContractKind", "Api", "Entries"],
+  "properties": {
+    "SchemaVersion": { "const": "1.0" },
+    "ContractKind": { "const": "NetOffice.WrapperClassification" },
+    "Api": { "type": "string", "minLength": 1 },
+    "Entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["LogicalId", "Source", "Category", "Kind"],
+        "properties": {
+          "LogicalId": { "type": "string", "minLength": 1 },
+          "Source": { "type": "string", "minLength": 1 },
+          "Category": { "type": "string", "minLength": 1 },
+          "Kind": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
