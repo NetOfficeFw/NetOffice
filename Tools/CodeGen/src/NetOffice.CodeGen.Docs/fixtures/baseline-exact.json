@@ -1,0 +1,110 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperContract",
+  "Types": [
+    {
+      "LogicalId": "Fixture.Type",
+      "Name": "Type",
+      "Documentation": {
+        "Raw": "<summary>Current source summary.</summary><remarks>Current source remarks.</remarks>",
+        "Parameters": {},
+        "TypeParameters": {},
+        "Exceptions": []
+      },
+      "Parts": [
+        {
+          "Source": "Interfaces/Type.Aggregate.cs",
+          "Documentation": {
+            "Raw": "<summary>Aggregate part.</summary>",
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        },
+        {
+          "Source": "Interfaces/Type.cs",
+          "Documentation": {
+            "Raw": "<summary>Primary type part.</summary>",
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ],
+      "Members": [
+        {
+          "Name": "Run",
+          "Kind": "method",
+          "Signature": "public int Run(string input, int count)",
+          "Parameters": "(string input, int count)",
+          "Documentation": {
+            "Raw": "<summary>Runs the fixture.</summary><param name=\"input\">Input text.</param><param name=\"count\">Repeat count.</param><returns>The result.</returns><remarks>Current support remarks.</remarks>",
+            "Parameters": { "input": "Input text.", "count": "Repeat count." },
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        },
+        {
+          "Name": "Run",
+          "Kind": "method",
+          "Signature": "public int Run(string input, string format)",
+          "Parameters": "(string input, string format)",
+          "Documentation": {
+            "Raw": "<summary>Runs formatted text.</summary><param name=\"input\">Input text.</param><param name=\"format\">Format text.</param>",
+            "Parameters": { "input": "Input text.", "format": "Format text." },
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ]
+    },
+    {
+      "LogicalId": "Fixture.Type_",
+      "Namespace": "Fixture",
+      "Name": "Type_",
+      "Documentation": {
+        "Raw": "<summary>Hidden split type.</summary>",
+        "Parameters": {},
+        "TypeParameters": {},
+        "Exceptions": []
+      },
+      "Members": [
+        {
+          "Name": "Type_",
+          "Kind": "constructor",
+          "Signature": "public Type_() : base() {",
+          "Parameters": "()",
+          "Documentation": {
+            "Raw": "<summary>Hidden stub .ctor</summary>",
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ]
+    },
+    {
+      "LogicalId": "Fixture.Interfaces.Type",
+      "Namespace": "Fixture.Interfaces",
+      "Name": "Type",
+      "Documentation": {
+        "Raw": "<summary>Nested namespace type.</summary>",
+        "Parameters": {},
+        "TypeParameters": {},
+        "Exceptions": []
+      },
+      "Parts": [
+        {
+          "Source": "Interfaces/Nested.Type.cs",
+          "Documentation": {
+            "Raw": "<summary>Nested namespace part.</summary>",
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ],
+      "Members": []
+    }
+  ]
+}

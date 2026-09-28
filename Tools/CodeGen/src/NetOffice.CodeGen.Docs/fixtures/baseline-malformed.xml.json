@@ -1,0 +1,5 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperContract",
+  "Types": [{"LogicalId": "Fixture.Type", "Documentation": {"ParseStatus": "invalid", "ParseError": "Malformed XML documentation.", "Raw": "<summary>unterminated", "Parameters": {}, "TypeParameters": {}, "Exceptions": []}, "Members": []}]
+}

@@ -1,0 +1,15 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperContract",
+  "Types": [
+    {
+      "LogicalId": "Fixture.Type",
+      "Name": "Type",
+      "Documentation": null,
+      "Members": [
+        { "Name": "Run", "Kind": "method", "Signature": "public void Run()", "Parameters": "()", "Documentation": null },
+        { "Name": "Run", "Kind": "method", "Signature": "public void Run(string value)", "Parameters": "(string value)", "Documentation": null }
+      ]
+    }
+  ]
+}
