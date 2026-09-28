@@ -1,0 +1,3005 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperClassification",
+  "Api": "MSComctlLib",
+  "Files": [
+    {
+      "Path": "AssemblyInfo.cs",
+      "Ownership": "manual",
+      "BuildAction": "copy-companion",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Hand-maintained project source outside generator ownership.",
+      "TypeLogicalIds": []
+    },
+    {
+      "Path": "Classes/Button.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Button"
+      ]
+    },
+    {
+      "Path": "Classes/ButtonMenu.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ButtonMenu"
+      ]
+    },
+    {
+      "Path": "Classes/ButtonMenus.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ButtonMenus"
+      ]
+    },
+    {
+      "Path": "Classes/Buttons.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Buttons"
+      ]
+    },
+    {
+      "Path": "Classes/ColumnHeader.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ColumnHeader"
+      ]
+    },
+    {
+      "Path": "Classes/ColumnHeaders.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ColumnHeaders"
+      ]
+    },
+    {
+      "Path": "Classes/ComboItem.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ComboItem"
+      ]
+    },
+    {
+      "Path": "Classes/ComboItems.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ComboItems"
+      ]
+    },
+    {
+      "Path": "Classes/Controls.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Controls"
+      ]
+    },
+    {
+      "Path": "Classes/DataObject.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.DataObject"
+      ]
+    },
+    {
+      "Path": "Classes/DataObjectFiles.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.DataObjectFiles"
+      ]
+    },
+    {
+      "Path": "Classes/ImageCombo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ImageCombo",
+        "NetOffice.MSComctlLibApi.ImageCombo_ChangeEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_DropdownEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_KeyDownEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_KeyPressEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_KeyUpEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.ImageCombo_OLEStartDragEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/ImageList.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ImageList"
+      ]
+    },
+    {
+      "Path": "Classes/ListImage.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListImage"
+      ]
+    },
+    {
+      "Path": "Classes/ListImages.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListImages"
+      ]
+    },
+    {
+      "Path": "Classes/ListItem.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListItem"
+      ]
+    },
+    {
+      "Path": "Classes/ListItems.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListItems"
+      ]
+    },
+    {
+      "Path": "Classes/ListSubItem.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListSubItem"
+      ]
+    },
+    {
+      "Path": "Classes/ListSubItems.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListSubItems"
+      ]
+    },
+    {
+      "Path": "Classes/ListView.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ListView",
+        "NetOffice.MSComctlLibApi.ListView_AfterLabelEditEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_BeforeLabelEditEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_ColumnClickEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_DblClickEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_ItemCheckEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_ItemClickEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_KeyDownEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_KeyPressEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_KeyUpEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.ListView_OLEStartDragEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Node.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Node"
+      ]
+    },
+    {
+      "Path": "Classes/Nodes.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Nodes"
+      ]
+    },
+    {
+      "Path": "Classes/Panel.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Panel"
+      ]
+    },
+    {
+      "Path": "Classes/Panels.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Panels"
+      ]
+    },
+    {
+      "Path": "Classes/ProgressBar.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ProgressBar",
+        "NetOffice.MSComctlLibApi.ProgressBar_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.ProgressBar_OLEStartDragEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Slider.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Slider",
+        "NetOffice.MSComctlLibApi.Slider_ChangeEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_KeyDownEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_KeyPressEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_KeyUpEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_OLEStartDragEventHandler",
+        "NetOffice.MSComctlLibApi.Slider_ScrollEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/StatusBar.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.StatusBar",
+        "NetOffice.MSComctlLibApi.StatusBar_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_DblClickEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_OLEStartDragEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_PanelClickEventHandler",
+        "NetOffice.MSComctlLibApi.StatusBar_PanelDblClickEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Tab.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Tab"
+      ]
+    },
+    {
+      "Path": "Classes/TabStrip.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.TabStrip",
+        "NetOffice.MSComctlLibApi.TabStrip_BeforeClickEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_KeyDownEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_KeyPressEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_KeyUpEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.TabStrip_OLEStartDragEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Tabs.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Tabs"
+      ]
+    },
+    {
+      "Path": "Classes/Toolbar.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Toolbar",
+        "NetOffice.MSComctlLibApi.Toolbar_ButtonClickEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_ButtonDropDownEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_ButtonMenuClickEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_ChangeEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_DblClickEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.Toolbar_OLEStartDragEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/TreeView.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.TreeView",
+        "NetOffice.MSComctlLibApi.TreeView_AfterLabelEditEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_BeforeLabelEditEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_ClickEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_CollapseEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_DblClickEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_ExpandEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_KeyDownEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_KeyPressEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_KeyUpEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_MouseDownEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_MouseMoveEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_MouseUpEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_NodeCheckEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_NodeClickEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_OLECompleteDragEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_OLEDragDropEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_OLEDragOverEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_OLEGiveFeedbackEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_OLESetDataEventHandler",
+        "NetOffice.MSComctlLibApi.TreeView_OLEStartDragEventHandler"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IButton.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IButton"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IButtonMenu.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IButtonMenu"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IButtonMenus.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IButtonMenus"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IButtons.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IButtons"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IColumnHeader.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IColumnHeader"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IColumnHeaders.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IColumnHeaders"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IComboItem.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IComboItem"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IComboItems.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IComboItems"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IControls.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IControls"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IImage.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IImage"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IImageCombo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IImageCombo"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IImageList.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IImageList"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IImages.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IImages"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IListItem.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IListItem"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IListItems.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IListItems"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IListSubItem.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IListSubItem"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IListSubItems.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IListSubItems"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IListView.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IListView"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/INode.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.INode"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/INodes.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.INodes"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IPanel.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IPanel"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IPanels.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IPanels"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IProgressBar.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IProgressBar"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ISlider.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ISlider"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IStatusBar.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IStatusBar"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ITab.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ITab"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ITabStrip.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ITabStrip"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ITabs.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ITabs"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IToolbar.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IToolbar"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ITreeView.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.ITreeView"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IVBDataObject.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IVBDataObject"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IVBDataObjectFiles.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.IVBDataObjectFiles"
+      ]
+    },
+    {
+      "Path": "Enums/AppearanceConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.AppearanceConstants"
+      ]
+    },
+    {
+      "Path": "Enums/BorderStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.BorderStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ButtonStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ClipBoardConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ClipBoardConstants"
+      ]
+    },
+    {
+      "Path": "Enums/DragOverConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.DragOverConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ErrorConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ErrorConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ImageComboStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ImageComboStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ImageDrawConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ImageDrawConstants"
+      ]
+    },
+    {
+      "Path": "Enums/LabelEditConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.LabelEditConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListArrangeConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListArrangeConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListColumnAlignmentConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListFindItemHowConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListFindItemHowConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListFindItemWhereConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListFindItemWhereConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListLabelEditConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListPictureAlignmentConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListSortOrderConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListSortOrderConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListTextBackgroundConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListTextBackgroundConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ListViewConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ListViewConstants"
+      ]
+    },
+    {
+      "Path": "Enums/MousePointerConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.MousePointerConstants"
+      ]
+    },
+    {
+      "Path": "Enums/OLEDragConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.OLEDragConstants"
+      ]
+    },
+    {
+      "Path": "Enums/OLEDropConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.OLEDropConstants"
+      ]
+    },
+    {
+      "Path": "Enums/OLEDropEffectConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.OLEDropEffectConstants"
+      ]
+    },
+    {
+      "Path": "Enums/OrientationConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.OrientationConstants"
+      ]
+    },
+    {
+      "Path": "Enums/PanelAlignmentConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.PanelAlignmentConstants"
+      ]
+    },
+    {
+      "Path": "Enums/PanelAutoSizeConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.PanelAutoSizeConstants"
+      ]
+    },
+    {
+      "Path": "Enums/PanelBevelConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.PanelBevelConstants"
+      ]
+    },
+    {
+      "Path": "Enums/PanelStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.PanelStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/PlacementConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.PlacementConstants"
+      ]
+    },
+    {
+      "Path": "Enums/SbarStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.SbarStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ScrollingConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ScrollingConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TabSelStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TabStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TabStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TabWidthStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TextPositionConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TextPositionConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TickStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TickStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ToolbarStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ToolbarStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ToolbarTextAlignConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ToolbarTextAlignConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TreeLineStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TreeLineStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TreeRelationshipConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants"
+      ]
+    },
+    {
+      "Path": "Enums/TreeStyleConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.TreeStyleConstants"
+      ]
+    },
+    {
+      "Path": "Enums/VB4AppearanceConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.VB4AppearanceConstants"
+      ]
+    },
+    {
+      "Path": "Enums/ValueConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Enums.ValueConstants"
+      ]
+    },
+    {
+      "Path": "Events/DImageComboEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.DImageComboEvents",
+        "NetOffice.MSComctlLibApi.Events.DImageComboEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/IProgressBarEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.IProgressBarEvents",
+        "NetOffice.MSComctlLibApi.Events.IProgressBarEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/ISliderEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.ISliderEvents",
+        "NetOffice.MSComctlLibApi.Events.ISliderEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/IStatusBarEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.IStatusBarEvents",
+        "NetOffice.MSComctlLibApi.Events.IStatusBarEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/ITabStripEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.ITabStripEvents",
+        "NetOffice.MSComctlLibApi.Events.ITabStripEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/IToolbarEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.IToolbarEvents",
+        "NetOffice.MSComctlLibApi.Events.IToolbarEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/ITreeViewEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.ITreeViewEvents",
+        "NetOffice.MSComctlLibApi.Events.ITreeViewEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/ImageListEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.ImageListEvents",
+        "NetOffice.MSComctlLibApi.Events.ImageListEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/ListViewEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSComctlLibApi.Events.ListViewEvents",
+        "NetOffice.MSComctlLibApi.Events.ListViewEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Utils/ProjectInfo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "MSComctlLibApi.Utils.ProjectInfo"
+      ]
+    }
+  ],
+  "Entries": [
+    {
+      "LogicalId": "MSComctlLibApi.Utils.ProjectInfo",
+      "Source": "Utils/ProjectInfo.cs",
+      "Category": "Utils",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Button",
+      "Source": "Classes/Button.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ButtonMenu",
+      "Source": "Classes/ButtonMenu.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ButtonMenus",
+      "Source": "Classes/ButtonMenus.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Buttons",
+      "Source": "Classes/Buttons.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ColumnHeader",
+      "Source": "Classes/ColumnHeader.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ColumnHeaders",
+      "Source": "Classes/ColumnHeaders.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ComboItem",
+      "Source": "Classes/ComboItem.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ComboItems",
+      "Source": "Classes/ComboItems.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Controls",
+      "Source": "Classes/Controls.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.DataObject",
+      "Source": "Classes/DataObject.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.DataObjectFiles",
+      "Source": "Classes/DataObjectFiles.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.AppearanceConstants",
+      "Source": "Enums/AppearanceConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.BorderStyleConstants",
+      "Source": "Enums/BorderStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ButtonStyleConstants",
+      "Source": "Enums/ButtonStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ClipBoardConstants",
+      "Source": "Enums/ClipBoardConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.DragOverConstants",
+      "Source": "Enums/DragOverConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ErrorConstants",
+      "Source": "Enums/ErrorConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ImageComboStyleConstants",
+      "Source": "Enums/ImageComboStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ImageDrawConstants",
+      "Source": "Enums/ImageDrawConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.LabelEditConstants",
+      "Source": "Enums/LabelEditConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListArrangeConstants",
+      "Source": "Enums/ListArrangeConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListColumnAlignmentConstants",
+      "Source": "Enums/ListColumnAlignmentConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListFindItemHowConstants",
+      "Source": "Enums/ListFindItemHowConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListFindItemWhereConstants",
+      "Source": "Enums/ListFindItemWhereConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListLabelEditConstants",
+      "Source": "Enums/ListLabelEditConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListPictureAlignmentConstants",
+      "Source": "Enums/ListPictureAlignmentConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListSortOrderConstants",
+      "Source": "Enums/ListSortOrderConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListTextBackgroundConstants",
+      "Source": "Enums/ListTextBackgroundConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ListViewConstants",
+      "Source": "Enums/ListViewConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.MousePointerConstants",
+      "Source": "Enums/MousePointerConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.OLEDragConstants",
+      "Source": "Enums/OLEDragConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.OLEDropConstants",
+      "Source": "Enums/OLEDropConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.OLEDropEffectConstants",
+      "Source": "Enums/OLEDropEffectConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.OrientationConstants",
+      "Source": "Enums/OrientationConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.PanelAlignmentConstants",
+      "Source": "Enums/PanelAlignmentConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.PanelAutoSizeConstants",
+      "Source": "Enums/PanelAutoSizeConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.PanelBevelConstants",
+      "Source": "Enums/PanelBevelConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.PanelStyleConstants",
+      "Source": "Enums/PanelStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.PlacementConstants",
+      "Source": "Enums/PlacementConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.SbarStyleConstants",
+      "Source": "Enums/SbarStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ScrollingConstants",
+      "Source": "Enums/ScrollingConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TabSelStyleConstants",
+      "Source": "Enums/TabSelStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TabStyleConstants",
+      "Source": "Enums/TabStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TabWidthStyleConstants",
+      "Source": "Enums/TabWidthStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TextPositionConstants",
+      "Source": "Enums/TextPositionConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TickStyleConstants",
+      "Source": "Enums/TickStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ToolbarStyleConstants",
+      "Source": "Enums/ToolbarStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ToolbarTextAlignConstants",
+      "Source": "Enums/ToolbarTextAlignConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TreeLineStyleConstants",
+      "Source": "Enums/TreeLineStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TreeRelationshipConstants",
+      "Source": "Enums/TreeRelationshipConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.TreeStyleConstants",
+      "Source": "Enums/TreeStyleConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.VB4AppearanceConstants",
+      "Source": "Enums/VB4AppearanceConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Enums.ValueConstants",
+      "Source": "Enums/ValueConstants.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.DImageComboEvents",
+      "Source": "Events/DImageComboEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.DImageComboEvents_SinkHelper",
+      "Source": "Events/DImageComboEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.IProgressBarEvents",
+      "Source": "Events/IProgressBarEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.IProgressBarEvents_SinkHelper",
+      "Source": "Events/IProgressBarEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ISliderEvents",
+      "Source": "Events/ISliderEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ISliderEvents_SinkHelper",
+      "Source": "Events/ISliderEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.IStatusBarEvents",
+      "Source": "Events/IStatusBarEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.IStatusBarEvents_SinkHelper",
+      "Source": "Events/IStatusBarEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ITabStripEvents",
+      "Source": "Events/ITabStripEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ITabStripEvents_SinkHelper",
+      "Source": "Events/ITabStripEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.IToolbarEvents",
+      "Source": "Events/IToolbarEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.IToolbarEvents_SinkHelper",
+      "Source": "Events/IToolbarEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ITreeViewEvents",
+      "Source": "Events/ITreeViewEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ITreeViewEvents_SinkHelper",
+      "Source": "Events/ITreeViewEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ImageListEvents",
+      "Source": "Events/ImageListEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ImageListEvents_SinkHelper",
+      "Source": "Events/ImageListEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ListViewEvents",
+      "Source": "Events/ListViewEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Events.ListViewEvents_SinkHelper",
+      "Source": "Events/ListViewEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IButton",
+      "Source": "DispatchInterfaces/IButton.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IButtonMenu",
+      "Source": "DispatchInterfaces/IButtonMenu.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IButtonMenus",
+      "Source": "DispatchInterfaces/IButtonMenus.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IButtons",
+      "Source": "DispatchInterfaces/IButtons.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IColumnHeader",
+      "Source": "DispatchInterfaces/IColumnHeader.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IColumnHeaders",
+      "Source": "DispatchInterfaces/IColumnHeaders.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IComboItem",
+      "Source": "DispatchInterfaces/IComboItem.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IComboItems",
+      "Source": "DispatchInterfaces/IComboItems.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IControls",
+      "Source": "DispatchInterfaces/IControls.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IImage",
+      "Source": "DispatchInterfaces/IImage.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IImageCombo",
+      "Source": "DispatchInterfaces/IImageCombo.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IImageList",
+      "Source": "DispatchInterfaces/IImageList.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IImages",
+      "Source": "DispatchInterfaces/IImages.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IListItem",
+      "Source": "DispatchInterfaces/IListItem.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IListItems",
+      "Source": "DispatchInterfaces/IListItems.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IListSubItem",
+      "Source": "DispatchInterfaces/IListSubItem.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IListSubItems",
+      "Source": "DispatchInterfaces/IListSubItems.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IListView",
+      "Source": "DispatchInterfaces/IListView.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.INode",
+      "Source": "DispatchInterfaces/INode.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.INodes",
+      "Source": "DispatchInterfaces/INodes.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IPanel",
+      "Source": "DispatchInterfaces/IPanel.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IPanels",
+      "Source": "DispatchInterfaces/IPanels.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IProgressBar",
+      "Source": "DispatchInterfaces/IProgressBar.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ISlider",
+      "Source": "DispatchInterfaces/ISlider.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IStatusBar",
+      "Source": "DispatchInterfaces/IStatusBar.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ITab",
+      "Source": "DispatchInterfaces/ITab.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ITabStrip",
+      "Source": "DispatchInterfaces/ITabStrip.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ITabs",
+      "Source": "DispatchInterfaces/ITabs.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IToolbar",
+      "Source": "DispatchInterfaces/IToolbar.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ITreeView",
+      "Source": "DispatchInterfaces/ITreeView.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IVBDataObject",
+      "Source": "DispatchInterfaces/IVBDataObject.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.IVBDataObjectFiles",
+      "Source": "DispatchInterfaces/IVBDataObjectFiles.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_ChangeEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_ClickEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_DropdownEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_KeyDownEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_KeyPressEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_KeyUpEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_OLECompleteDragEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_OLEDragDropEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_OLEDragOverEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_OLESetDataEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageCombo_OLEStartDragEventHandler",
+      "Source": "Classes/ImageCombo.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ImageList",
+      "Source": "Classes/ImageList.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListImage",
+      "Source": "Classes/ListImage.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListImages",
+      "Source": "Classes/ListImages.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListItem",
+      "Source": "Classes/ListItem.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListItems",
+      "Source": "Classes/ListItems.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListSubItem",
+      "Source": "Classes/ListSubItem.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListSubItems",
+      "Source": "Classes/ListSubItems.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_AfterLabelEditEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_BeforeLabelEditEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_ClickEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_ColumnClickEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_DblClickEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_ItemCheckEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_ItemClickEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_KeyDownEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_KeyPressEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_KeyUpEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_MouseDownEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_MouseMoveEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_MouseUpEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_OLECompleteDragEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_OLEDragDropEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_OLEDragOverEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_OLESetDataEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ListView_OLEStartDragEventHandler",
+      "Source": "Classes/ListView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Node",
+      "Source": "Classes/Node.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Nodes",
+      "Source": "Classes/Nodes.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Panel",
+      "Source": "Classes/Panel.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Panels",
+      "Source": "Classes/Panels.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_ClickEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_MouseDownEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_MouseMoveEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_MouseUpEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_OLECompleteDragEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_OLEDragDropEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_OLEDragOverEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_OLESetDataEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.ProgressBar_OLEStartDragEventHandler",
+      "Source": "Classes/ProgressBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_ChangeEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_ClickEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_KeyDownEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_KeyPressEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_KeyUpEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_MouseDownEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_MouseMoveEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_MouseUpEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_OLECompleteDragEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_OLEDragDropEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_OLEDragOverEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_OLESetDataEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_OLEStartDragEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Slider_ScrollEventHandler",
+      "Source": "Classes/Slider.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_ClickEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_DblClickEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_MouseDownEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_MouseMoveEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_MouseUpEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_OLECompleteDragEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_OLEDragDropEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_OLEDragOverEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_OLESetDataEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_OLEStartDragEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_PanelClickEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.StatusBar_PanelDblClickEventHandler",
+      "Source": "Classes/StatusBar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Tab",
+      "Source": "Classes/Tab.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_BeforeClickEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_ClickEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_KeyDownEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_KeyPressEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_KeyUpEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_MouseDownEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_MouseMoveEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_MouseUpEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_OLECompleteDragEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_OLEDragDropEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_OLEDragOverEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_OLESetDataEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TabStrip_OLEStartDragEventHandler",
+      "Source": "Classes/TabStrip.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Tabs",
+      "Source": "Classes/Tabs.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_ButtonClickEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_ButtonDropDownEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_ButtonMenuClickEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_ChangeEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_ClickEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_DblClickEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_MouseDownEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_MouseMoveEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_MouseUpEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_OLECompleteDragEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_OLEDragDropEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_OLEDragOverEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_OLESetDataEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.Toolbar_OLEStartDragEventHandler",
+      "Source": "Classes/Toolbar.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_AfterLabelEditEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_BeforeLabelEditEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_ClickEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_CollapseEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_DblClickEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_ExpandEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_KeyDownEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_KeyPressEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_KeyUpEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_MouseDownEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_MouseMoveEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_MouseUpEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_NodeCheckEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_NodeClickEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_OLECompleteDragEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_OLEDragDropEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_OLEDragOverEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_OLEGiveFeedbackEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_OLESetDataEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.MSComctlLibApi.TreeView_OLEStartDragEventHandler",
+      "Source": "Classes/TreeView.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    }
+  ]
+}

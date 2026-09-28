@@ -1,0 +1,2216 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperClassification",
+  "Api": "ADODB",
+  "Files": [
+    {
+      "Path": "AssemblyInfo.cs",
+      "Ownership": "manual",
+      "BuildAction": "copy-companion",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Hand-maintained project source outside generator ownership.",
+      "TypeLogicalIds": []
+    },
+    {
+      "Path": "Classes/Command.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Command"
+      ]
+    },
+    {
+      "Path": "Classes/Connection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Connection",
+        "NetOffice.ADODBApi.Connection_BeginTransCompleteEventHandler",
+        "NetOffice.ADODBApi.Connection_CommitTransCompleteEventHandler",
+        "NetOffice.ADODBApi.Connection_ConnectCompleteEventHandler",
+        "NetOffice.ADODBApi.Connection_DisconnectEventHandler",
+        "NetOffice.ADODBApi.Connection_ExecuteCompleteEventHandler",
+        "NetOffice.ADODBApi.Connection_InfoMessageEventHandler",
+        "NetOffice.ADODBApi.Connection_RollbackTransCompleteEventHandler",
+        "NetOffice.ADODBApi.Connection_WillConnectEventHandler",
+        "NetOffice.ADODBApi.Connection_WillExecuteEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Parameter.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Parameter"
+      ]
+    },
+    {
+      "Path": "Classes/Record.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Record"
+      ]
+    },
+    {
+      "Path": "Classes/Recordset.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset",
+        "NetOffice.ADODBApi.Recordset_EndOfRecordsetEventHandler",
+        "NetOffice.ADODBApi.Recordset_FetchCompleteEventHandler",
+        "NetOffice.ADODBApi.Recordset_FetchProgressEventHandler",
+        "NetOffice.ADODBApi.Recordset_FieldChangeCompleteEventHandler",
+        "NetOffice.ADODBApi.Recordset_MoveCompleteEventHandler",
+        "NetOffice.ADODBApi.Recordset_RecordChangeCompleteEventHandler",
+        "NetOffice.ADODBApi.Recordset_RecordsetChangeCompleteEventHandler",
+        "NetOffice.ADODBApi.Recordset_WillChangeFieldEventHandler",
+        "NetOffice.ADODBApi.Recordset_WillChangeRecordEventHandler",
+        "NetOffice.ADODBApi.Recordset_WillChangeRecordsetEventHandler",
+        "NetOffice.ADODBApi.Recordset_WillMoveEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Stream.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Stream"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Command15.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Command15"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Command15_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Command15_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Connection15.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Connection15"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Connection15_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Connection15_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ConnectionEvents_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ConnectionEvents_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Error.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Error"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Errors.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Errors"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Field"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field15.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Field15"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field15_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Field15_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field20.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Field20"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field20_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Field20_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Field_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Fields"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields15.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Fields15"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields15_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Fields15_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields20.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Fields20"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields20_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Fields20_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Fields_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IRecFields.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.IRecFields"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Parameters.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Parameters"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Parameters_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Parameters_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Properties.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Properties"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Property.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Property"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset15.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset15"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset15_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset15_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset20.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset20"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset20_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset20_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset21.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset21"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset21_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Recordset21_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/RecordsetEvents_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.RecordsetEvents_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_ADO.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._ADO"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Collection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Collection"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Command.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Command"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Command_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Command_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Connection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Connection"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Connection_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Connection_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_DynaCollection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._DynaCollection"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Parameter.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Parameter"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Parameter_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Parameter_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Record.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Record"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Record_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Record_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Recordset.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Recordset"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Recordset_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Recordset_Deprecated"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Stream.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Stream"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Stream_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi._Stream_Deprecated"
+      ]
+    },
+    {
+      "Path": "Enums/ADCPROP_ASYNCTHREADPRIORITY_ENUM.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ADCPROP_ASYNCTHREADPRIORITY_ENUM"
+      ]
+    },
+    {
+      "Path": "Enums/ADCPROP_AUTORECALC_ENUM.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ADCPROP_AUTORECALC_ENUM"
+      ]
+    },
+    {
+      "Path": "Enums/ADCPROP_UPDATECRITERIA_ENUM.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ADCPROP_UPDATECRITERIA_ENUM"
+      ]
+    },
+    {
+      "Path": "Enums/ADCPROP_UPDATERESYNC_ENUM.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM"
+      ]
+    },
+    {
+      "Path": "Enums/AffectEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.AffectEnum"
+      ]
+    },
+    {
+      "Path": "Enums/BookmarkEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.BookmarkEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CEResyncEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CEResyncEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CommandTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CommandTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CompareEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CompareEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ConnectModeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ConnectModeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ConnectOptionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ConnectOptionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ConnectPromptEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ConnectPromptEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CopyRecordOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CursorLocationEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CursorLocationEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CursorOptionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CursorOptionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CursorTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.CursorTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/DataTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.DataTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/EditModeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.EditModeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ErrorValueEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ErrorValueEnum"
+      ]
+    },
+    {
+      "Path": "Enums/EventReasonEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.EventReasonEnum"
+      ]
+    },
+    {
+      "Path": "Enums/EventStatusEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.EventStatusEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ExecuteOptionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ExecuteOptionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/FieldAttributeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.FieldAttributeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/FieldEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.FieldEnum"
+      ]
+    },
+    {
+      "Path": "Enums/FieldStatusEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.FieldStatusEnum"
+      ]
+    },
+    {
+      "Path": "Enums/FilterGroupEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.FilterGroupEnum"
+      ]
+    },
+    {
+      "Path": "Enums/GetRowsOptionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.GetRowsOptionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/IsolationLevelEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.IsolationLevelEnum"
+      ]
+    },
+    {
+      "Path": "Enums/LineSeparatorEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.LineSeparatorEnum"
+      ]
+    },
+    {
+      "Path": "Enums/LockTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.LockTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/MarshalOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.MarshalOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/MoveRecordOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ObjectStateEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ObjectStateEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ParameterAttributesEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ParameterAttributesEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ParameterDirectionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ParameterDirectionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/PersistFormatEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.PersistFormatEnum"
+      ]
+    },
+    {
+      "Path": "Enums/PositionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.PositionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/PropertyAttributesEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.PropertyAttributesEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordCreateOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordOpenOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordStatusEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.RecordStatusEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.RecordTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ResyncEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.ResyncEnum"
+      ]
+    },
+    {
+      "Path": "Enums/SaveOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.SaveOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/SchemaEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.SchemaEnum"
+      ]
+    },
+    {
+      "Path": "Enums/SearchDirectionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.SearchDirectionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/SeekEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.SeekEnum"
+      ]
+    },
+    {
+      "Path": "Enums/StreamOpenOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/StreamReadEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.StreamReadEnum"
+      ]
+    },
+    {
+      "Path": "Enums/StreamTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.StreamTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/StreamWriteEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.StreamWriteEnum"
+      ]
+    },
+    {
+      "Path": "Enums/StringFormatEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.StringFormatEnum"
+      ]
+    },
+    {
+      "Path": "Enums/XactAttributeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Enums.XactAttributeEnum"
+      ]
+    },
+    {
+      "Path": "Events/ConnectionEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Events.ConnectionEvents",
+        "NetOffice.ADODBApi.Events.ConnectionEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/RecordsetEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.Events.RecordsetEvents",
+        "NetOffice.ADODBApi.Events.RecordsetEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADOCommandConstruction.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADOCommandConstruction"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADOConnectionConstruction.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADOConnectionConstruction"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADOConnectionConstruction15.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADOConnectionConstruction15"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADORecordConstruction.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADORecordConstruction"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADORecordsetConstruction.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADORecordsetConstruction"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADORecordsetConstruction_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADORecordsetConstruction_Deprecated"
+      ]
+    },
+    {
+      "Path": "Interfaces/ADOStreamConstruction.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ADOStreamConstruction"
+      ]
+    },
+    {
+      "Path": "Interfaces/ConnectionEventsVt.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ConnectionEventsVt"
+      ]
+    },
+    {
+      "Path": "Interfaces/ConnectionEventsVt_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.ConnectionEventsVt_Deprecated"
+      ]
+    },
+    {
+      "Path": "Interfaces/RecordsetEventsVt.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.RecordsetEventsVt"
+      ]
+    },
+    {
+      "Path": "Interfaces/RecordsetEventsVt_Deprecated.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.ADODBApi.RecordsetEventsVt_Deprecated"
+      ]
+    },
+    {
+      "Path": "Utils/ProjectInfo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "ADODBApi.Utils.ProjectInfo"
+      ]
+    }
+  ],
+  "Entries": [
+    {
+      "LogicalId": "ADODBApi.Utils.ProjectInfo",
+      "Source": "Utils/ProjectInfo.cs",
+      "Category": "Utils",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADOCommandConstruction",
+      "Source": "Interfaces/ADOCommandConstruction.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADOConnectionConstruction",
+      "Source": "Interfaces/ADOConnectionConstruction.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADOConnectionConstruction15",
+      "Source": "Interfaces/ADOConnectionConstruction15.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADORecordConstruction",
+      "Source": "Interfaces/ADORecordConstruction.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADORecordsetConstruction",
+      "Source": "Interfaces/ADORecordsetConstruction.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADORecordsetConstruction_Deprecated",
+      "Source": "Interfaces/ADORecordsetConstruction_Deprecated.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ADOStreamConstruction",
+      "Source": "Interfaces/ADOStreamConstruction.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Command",
+      "Source": "Classes/Command.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Command15",
+      "Source": "DispatchInterfaces/Command15.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Command15_Deprecated",
+      "Source": "DispatchInterfaces/Command15_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection15",
+      "Source": "DispatchInterfaces/Connection15.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection15_Deprecated",
+      "Source": "DispatchInterfaces/Connection15_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ConnectionEventsVt",
+      "Source": "Interfaces/ConnectionEventsVt.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ConnectionEventsVt_Deprecated",
+      "Source": "Interfaces/ConnectionEventsVt_Deprecated.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.ConnectionEvents_Deprecated",
+      "Source": "DispatchInterfaces/ConnectionEvents_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_BeginTransCompleteEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_CommitTransCompleteEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_ConnectCompleteEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_DisconnectEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_ExecuteCompleteEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_InfoMessageEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_RollbackTransCompleteEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_WillConnectEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Connection_WillExecuteEventHandler",
+      "Source": "Classes/Connection.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ADCPROP_ASYNCTHREADPRIORITY_ENUM",
+      "Source": "Enums/ADCPROP_ASYNCTHREADPRIORITY_ENUM.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ADCPROP_AUTORECALC_ENUM",
+      "Source": "Enums/ADCPROP_AUTORECALC_ENUM.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ADCPROP_UPDATECRITERIA_ENUM",
+      "Source": "Enums/ADCPROP_UPDATECRITERIA_ENUM.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ADCPROP_UPDATERESYNC_ENUM",
+      "Source": "Enums/ADCPROP_UPDATERESYNC_ENUM.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.AffectEnum",
+      "Source": "Enums/AffectEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.BookmarkEnum",
+      "Source": "Enums/BookmarkEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CEResyncEnum",
+      "Source": "Enums/CEResyncEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CommandTypeEnum",
+      "Source": "Enums/CommandTypeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CompareEnum",
+      "Source": "Enums/CompareEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ConnectModeEnum",
+      "Source": "Enums/ConnectModeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ConnectOptionEnum",
+      "Source": "Enums/ConnectOptionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ConnectPromptEnum",
+      "Source": "Enums/ConnectPromptEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CopyRecordOptionsEnum",
+      "Source": "Enums/CopyRecordOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CursorLocationEnum",
+      "Source": "Enums/CursorLocationEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CursorOptionEnum",
+      "Source": "Enums/CursorOptionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.CursorTypeEnum",
+      "Source": "Enums/CursorTypeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.DataTypeEnum",
+      "Source": "Enums/DataTypeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.EditModeEnum",
+      "Source": "Enums/EditModeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ErrorValueEnum",
+      "Source": "Enums/ErrorValueEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.EventReasonEnum",
+      "Source": "Enums/EventReasonEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.EventStatusEnum",
+      "Source": "Enums/EventStatusEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ExecuteOptionEnum",
+      "Source": "Enums/ExecuteOptionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.FieldAttributeEnum",
+      "Source": "Enums/FieldAttributeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.FieldEnum",
+      "Source": "Enums/FieldEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.FieldStatusEnum",
+      "Source": "Enums/FieldStatusEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.FilterGroupEnum",
+      "Source": "Enums/FilterGroupEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.GetRowsOptionEnum",
+      "Source": "Enums/GetRowsOptionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.IsolationLevelEnum",
+      "Source": "Enums/IsolationLevelEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.LineSeparatorEnum",
+      "Source": "Enums/LineSeparatorEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.LockTypeEnum",
+      "Source": "Enums/LockTypeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.MarshalOptionsEnum",
+      "Source": "Enums/MarshalOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.MoveRecordOptionsEnum",
+      "Source": "Enums/MoveRecordOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ObjectStateEnum",
+      "Source": "Enums/ObjectStateEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ParameterAttributesEnum",
+      "Source": "Enums/ParameterAttributesEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ParameterDirectionEnum",
+      "Source": "Enums/ParameterDirectionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.PersistFormatEnum",
+      "Source": "Enums/PersistFormatEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.PositionEnum",
+      "Source": "Enums/PositionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.PropertyAttributesEnum",
+      "Source": "Enums/PropertyAttributesEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.RecordCreateOptionsEnum",
+      "Source": "Enums/RecordCreateOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.RecordOpenOptionsEnum",
+      "Source": "Enums/RecordOpenOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.RecordStatusEnum",
+      "Source": "Enums/RecordStatusEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.RecordTypeEnum",
+      "Source": "Enums/RecordTypeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.ResyncEnum",
+      "Source": "Enums/ResyncEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.SaveOptionsEnum",
+      "Source": "Enums/SaveOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.SchemaEnum",
+      "Source": "Enums/SchemaEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.SearchDirectionEnum",
+      "Source": "Enums/SearchDirectionEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.SeekEnum",
+      "Source": "Enums/SeekEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.StreamOpenOptionsEnum",
+      "Source": "Enums/StreamOpenOptionsEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.StreamReadEnum",
+      "Source": "Enums/StreamReadEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.StreamTypeEnum",
+      "Source": "Enums/StreamTypeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.StreamWriteEnum",
+      "Source": "Enums/StreamWriteEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.StringFormatEnum",
+      "Source": "Enums/StringFormatEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Enums.XactAttributeEnum",
+      "Source": "Enums/XactAttributeEnum.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Error",
+      "Source": "DispatchInterfaces/Error.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Errors",
+      "Source": "DispatchInterfaces/Errors.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Events.ConnectionEvents",
+      "Source": "Events/ConnectionEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Events.ConnectionEvents_SinkHelper",
+      "Source": "Events/ConnectionEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Events.RecordsetEvents",
+      "Source": "Events/RecordsetEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Events.RecordsetEvents_SinkHelper",
+      "Source": "Events/RecordsetEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Field",
+      "Source": "DispatchInterfaces/Field.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Field15",
+      "Source": "DispatchInterfaces/Field15.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Field15_Deprecated",
+      "Source": "DispatchInterfaces/Field15_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Field20",
+      "Source": "DispatchInterfaces/Field20.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Field20_Deprecated",
+      "Source": "DispatchInterfaces/Field20_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Field_Deprecated",
+      "Source": "DispatchInterfaces/Field_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Fields",
+      "Source": "DispatchInterfaces/Fields.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Fields15",
+      "Source": "DispatchInterfaces/Fields15.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Fields15_Deprecated",
+      "Source": "DispatchInterfaces/Fields15_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Fields20",
+      "Source": "DispatchInterfaces/Fields20.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Fields20_Deprecated",
+      "Source": "DispatchInterfaces/Fields20_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Fields_Deprecated",
+      "Source": "DispatchInterfaces/Fields_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.IRecFields",
+      "Source": "DispatchInterfaces/IRecFields.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Parameter",
+      "Source": "Classes/Parameter.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Parameters",
+      "Source": "DispatchInterfaces/Parameters.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Parameters_Deprecated",
+      "Source": "DispatchInterfaces/Parameters_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Properties",
+      "Source": "DispatchInterfaces/Properties.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Property",
+      "Source": "DispatchInterfaces/Property.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Record",
+      "Source": "Classes/Record.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset15",
+      "Source": "DispatchInterfaces/Recordset15.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset15_Deprecated",
+      "Source": "DispatchInterfaces/Recordset15_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset20",
+      "Source": "DispatchInterfaces/Recordset20.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset20_Deprecated",
+      "Source": "DispatchInterfaces/Recordset20_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset21",
+      "Source": "DispatchInterfaces/Recordset21.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset21_Deprecated",
+      "Source": "DispatchInterfaces/Recordset21_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.RecordsetEventsVt",
+      "Source": "Interfaces/RecordsetEventsVt.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.RecordsetEventsVt_Deprecated",
+      "Source": "Interfaces/RecordsetEventsVt_Deprecated.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.RecordsetEvents_Deprecated",
+      "Source": "DispatchInterfaces/RecordsetEvents_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_EndOfRecordsetEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_FetchCompleteEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_FetchProgressEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_FieldChangeCompleteEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_MoveCompleteEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_RecordChangeCompleteEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_RecordsetChangeCompleteEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_WillChangeFieldEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_WillChangeRecordEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_WillChangeRecordsetEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Recordset_WillMoveEventHandler",
+      "Source": "Classes/Recordset.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi.Stream",
+      "Source": "Classes/Stream.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._ADO",
+      "Source": "DispatchInterfaces/_ADO.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Collection",
+      "Source": "DispatchInterfaces/_Collection.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Command",
+      "Source": "DispatchInterfaces/_Command.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Command_Deprecated",
+      "Source": "DispatchInterfaces/_Command_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Connection",
+      "Source": "DispatchInterfaces/_Connection.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Connection_Deprecated",
+      "Source": "DispatchInterfaces/_Connection_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._DynaCollection",
+      "Source": "DispatchInterfaces/_DynaCollection.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Parameter",
+      "Source": "DispatchInterfaces/_Parameter.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Parameter_Deprecated",
+      "Source": "DispatchInterfaces/_Parameter_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Record",
+      "Source": "DispatchInterfaces/_Record.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Record_Deprecated",
+      "Source": "DispatchInterfaces/_Record_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Recordset",
+      "Source": "DispatchInterfaces/_Recordset.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Recordset_Deprecated",
+      "Source": "DispatchInterfaces/_Recordset_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Stream",
+      "Source": "DispatchInterfaces/_Stream.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.ADODBApi._Stream_Deprecated",
+      "Source": "DispatchInterfaces/_Stream_Deprecated.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    }
+  ]
+}

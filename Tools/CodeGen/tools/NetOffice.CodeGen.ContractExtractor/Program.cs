@@ -18,52 +18,12 @@ internal static class Program
     {
         try
         {
-            var options = Options.Parse(args);
-            if (options.ShowHelp)
-            {
-                Console.WriteLine(Options.Usage);
-                return 0;
-            }
-
-            if (string.IsNullOrWhiteSpace(options.Source) || string.IsNullOrWhiteSpace(options.Api))
-                throw new UsageException("--source and --api are required.");
-
-            var source = Path.GetFullPath(options.Source);
-            if (!Directory.Exists(source))
-                throw new UsageException("Source directory does not exist: " + source);
-
-            var apiRoot = Path.Combine(source, options.Api);
-            if (!Directory.Exists(apiRoot))
-                throw new UsageException("API source directory does not exist: " + apiRoot);
-
-            var contract = Extractor.Extract(source, options.Api, apiRoot);
-            var output = options.Output ?? Path.Combine("contracts", "wrapper", options.Api + ".wrapper-contract.json");
-            var outputPath = Path.GetFullPath(output);
-            Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
-            JsonFile.Write(outputPath, contract);
-
-            var outputDirectory = Path.GetDirectoryName(outputPath)!;
-            var stem = Path.GetFileNameWithoutExtension(outputPath);
-            if (stem.EndsWith(".wrapper-contract", StringComparison.Ordinal))
-                stem = stem[..^".wrapper-contract".Length];
-
-            var ledgerPath = options.Ledger ?? Path.Combine(outputDirectory, stem + ".compatibility-ledger.json");
-            var classificationPath = options.Classification ?? Path.Combine(outputDirectory, stem + ".classification.json");
-            JsonFile.Write(Path.GetFullPath(ledgerPath), Records.CreateLedger(contract));
-            JsonFile.Write(Path.GetFullPath(classificationPath), Records.CreateClassification(contract));
-
-            Console.WriteLine("Extracted " + contract.Types.Count.ToString(System.Globalization.CultureInfo.InvariantCulture) +
-                              " types and " + contract.Types.Sum(t => t.Members.Count).ToString(System.Globalization.CultureInfo.InvariantCulture) +
-                              " members from " + options.Api + ".");
-            Console.WriteLine("Contract: " + outputPath);
-            Console.WriteLine("Ledger: " + Path.GetFullPath(ledgerPath));
-            Console.WriteLine("Classification: " + Path.GetFullPath(classificationPath));
-            return 0;
+            return CommandRunner.Run(args);
         }
-        catch (UsageException ex)
+        catch (CommandLineException ex)
         {
             Console.Error.WriteLine("error: " + ex.Message);
-            Console.Error.WriteLine(Options.Usage);
+            Console.Error.WriteLine(CommandRunner.Usage);
             return 2;
         }
         catch (Exception ex)
@@ -74,56 +34,11 @@ internal static class Program
     }
 }
 
-internal sealed class UsageException : Exception
-{
-    public UsageException(string message) : base(message) { }
-}
-
-internal sealed class Options
-{
-    public string Source { get; private set; }
-    public string Api { get; private set; }
-    public string Output { get; private set; }
-    public string Ledger { get; private set; }
-    public string Classification { get; private set; }
-    public bool ShowHelp { get; private set; }
-
-    public static readonly string Usage = "Usage: dotnet run --project NetOffice.CodeGen.ContractExtractor.csproj -- --source <Source> --api <Api> [--output <file>] [--ledger <file>] [--classification <file>]";
-
-    public static Options Parse(string[] args)
-    {
-        var result = new Options();
-        for (var i = 0; i < args.Length; i++)
-        {
-            var arg = args[i];
-            if (arg is "-h" or "--help")
-            {
-                result.ShowHelp = true;
-                continue;
-            }
-
-            if (!arg.StartsWith("--", StringComparison.Ordinal) || i + 1 >= args.Length)
-                throw new UsageException("Unknown or incomplete argument: " + arg);
-
-            var value = args[++i];
-            switch (arg)
-            {
-                case "--source": result.Source = value; break;
-                case "--api": result.Api = value; break;
-                case "--output": result.Output = value; break;
-                case "--ledger": result.Ledger = value; break;
-                case "--classification": result.Classification = value; break;
-                default: throw new UsageException("Unknown argument: " + arg);
-            }
-        }
-        return result;
-    }
-}
-
 internal static class Extractor
 {
     private static readonly Regex NamespaceRegex = new Regex(@"^\s*namespace\s+([A-Za-z_][\w.]*)", RegexOptions.Compiled);
-    private static readonly Regex TypeRegex = new Regex(@"^\s*(?<access>public|protected|internal|private)?\s*(?<mods>(?:(?:abstract|sealed|static|partial|unsafe|readonly)\s+)*)?(?<kind>class|interface|struct|enum|delegate)\s+(?<name>[A-Za-z_]\w*(?:\s*<[^>{}]+>)?)\s*(?::\s*(?<bases>[^\{]+))?", RegexOptions.Compiled);
+    private static readonly Regex TypeRegex = new Regex(@"^\s*(?<access>public|protected|internal|private)?\s*(?<mods>(?:(?:abstract|sealed|static|partial|unsafe|readonly)\s+)*)?(?<kind>class|interface|struct|enum)\s+(?<name>[A-Za-z_]\w*(?:\s*<[^>{}]+>)?)\s*(?::\s*(?<bases>[^\{]+))?", RegexOptions.Compiled);
+    private static readonly Regex DelegateRegex = new Regex(@"^\s*(?<access>public|protected|internal|private)?\s*(?<mods>(?:(?:static|unsafe)\s+)*)?delegate\s+(?<return>.+?)\s+(?<name>[A-Za-z_]\w*(?:\s*<[^>{}]+>)?)\s*(?<parameters>\([^;]*\))\s*;", RegexOptions.Compiled);
     private static readonly Regex AccessRegex = new Regex(@"^\s*(?<access>public|protected(?:\s+internal)?|internal)\b(?<rest>.*)$", RegexOptions.Compiled);
     private static readonly Regex NameBeforeParenRegex = new Regex(@"(?<name>[A-Za-z_]\w*)\s*(?:<[^>]+>)?\s*\(", RegexOptions.Compiled);
     private static readonly Regex IdentifierRegex = new Regex(@"[A-Za-z_]\w*", RegexOptions.Compiled);
@@ -145,7 +60,7 @@ internal static class Extractor
         };
 
         var paths = Directory.EnumerateFiles(apiRoot, "*.cs", SearchOption.AllDirectories)
-            .Where(p => !IsBuildPath(p))
+            .Where(p => !IsBuildPath(Path.GetRelativePath(apiRoot, p)))
             .OrderBy(p => NormalizePath(Path.GetRelativePath(apiRoot, p)), StringComparer.Ordinal)
             .ToArray();
         if (paths.Length == 0)
@@ -169,11 +84,35 @@ internal static class Extractor
         }
 
         contract.Source.Files = contract.Source.Files.OrderBy(f => f.Path, StringComparer.Ordinal).ToList();
-        contract.Types = contract.Types.OrderBy(t => t.Namespace, StringComparer.Ordinal)
-            .ThenBy(t => t.Name, StringComparer.Ordinal).ToList();
+        contract.Types = MergePartialTypes(contract.Types).OrderBy(t => t.LogicalId, StringComparer.Ordinal)
+            .ThenBy(t => t.Source, StringComparer.Ordinal).ToList();
         foreach (var type in contract.Types)
-            type.Members = type.Members.OrderBy(m => m.Line).ThenBy(m => m.Name, StringComparer.Ordinal).ToList();
-        foreach (var duplicate in contract.Types.GroupBy(t => t.LogicalId, StringComparer.Ordinal).Where(g => g.Count() > 1).OrderBy(g => g.Key, StringComparer.Ordinal))
+        {
+            type.Interfaces = type.Interfaces.Distinct(StringComparer.Ordinal).OrderBy(value => value, StringComparer.Ordinal).ToList();
+            type.Attributes = type.Attributes.OrderBy(value => value, StringComparer.Ordinal).ToList();
+            type.SupportVersions = ContractIdentity.GetSupportVersions(type.Attributes);
+            foreach (var member in type.Members)
+            {
+                member.LogicalId = ContractIdentity.MemberLogicalId(type.LogicalId, member);
+                member.Attributes = member.Attributes.OrderBy(value => value, StringComparer.Ordinal).ToList();
+                member.InvocationText = member.InvocationText.Distinct(StringComparer.Ordinal).OrderBy(value => value, StringComparer.Ordinal).ToList();
+                member.SupportVersions = ContractIdentity.GetSupportVersions(member.Attributes);
+            }
+            type.Members = type.Members.OrderBy(m => m.LogicalId, StringComparer.Ordinal)
+                .ThenBy(m => m.Source, StringComparer.Ordinal).ThenBy(m => m.Line).ToList();
+            foreach (var duplicate in type.Members.GroupBy(m => m.LogicalId, StringComparer.Ordinal).Where(g => g.Count() > 1).OrderBy(g => g.Key, StringComparer.Ordinal))
+            {
+                contract.Ambiguities.Add(new AmbiguityRecord
+                {
+                    Code = "DUPLICATE_MEMBER_LOGICAL_ID",
+                    Message = "More than one source member has the same semantic logical ID.",
+                    Candidates = duplicate.Select(m => m.LogicalId + ":" + m.Source + ":" + m.Line.ToString(System.Globalization.CultureInfo.InvariantCulture)).OrderBy(v => v, StringComparer.Ordinal).ToList()
+                });
+            }
+        }
+        foreach (var duplicate in contract.Types.GroupBy(t => t.LogicalId, StringComparer.Ordinal)
+            .Where(group => group.Count() > 1 && !group.All(type => type.Modifiers.Contains("partial", StringComparer.Ordinal)))
+            .OrderBy(group => group.Key, StringComparer.Ordinal))
         {
             contract.Ambiguities.Add(new AmbiguityRecord
             {
@@ -185,92 +124,178 @@ internal static class Extractor
         return contract;
     }
 
+    private static List<TypeRecord> MergePartialTypes(IEnumerable<TypeRecord> records)
+    {
+        var result = new List<TypeRecord>();
+        foreach (var group in records.GroupBy(type => type.LogicalId, StringComparer.Ordinal)
+                     .OrderBy(group => group.Key, StringComparer.Ordinal))
+        {
+            var declarations = group.OrderBy(type => type.Source, StringComparer.Ordinal).ThenBy(type => type.Line).ToList();
+            foreach (var declaration in declarations)
+            {
+                declaration.Parts.Add(new TypePartRecord
+                {
+                    Source = declaration.Source,
+                    Line = declaration.Line,
+                    Signature = declaration.Signature,
+                    Attributes = declaration.Attributes.ToList(),
+                    BaseType = declaration.BaseType,
+                    Interfaces = declaration.Interfaces.ToList(),
+                    Documentation = declaration.Documentation
+                });
+            }
+
+            if (declarations.Count == 1 || !declarations.All(type => type.Modifiers.Contains("partial", StringComparer.Ordinal)))
+            {
+                result.AddRange(declarations);
+                continue;
+            }
+
+            var merged = declarations[0];
+            merged.Modifiers = declarations.SelectMany(type => type.Modifiers).Distinct(StringComparer.Ordinal)
+                .OrderBy(value => value, StringComparer.Ordinal).ToList();
+            merged.Attributes = declarations.SelectMany(type => type.Attributes).Distinct(StringComparer.Ordinal)
+                .OrderBy(value => value, StringComparer.Ordinal).ToList();
+            merged.Interfaces = declarations.SelectMany(type => type.Interfaces).Distinct(StringComparer.Ordinal)
+                .OrderBy(value => value, StringComparer.Ordinal).ToList();
+            merged.BaseType = declarations.Select(type => type.BaseType).FirstOrDefault(value => !string.IsNullOrWhiteSpace(value));
+            merged.Members = declarations.SelectMany(type => type.Members).ToList();
+            merged.Parts = declarations.SelectMany(type => type.Parts).OrderBy(part => part.Source, StringComparer.Ordinal)
+                .ThenBy(part => part.Line).ToList();
+            result.Add(merged);
+        }
+        return result;
+    }
+
     private static void ParseFile(string text, string relative, WrapperContract contract)
     {
         var lines = text.Replace("\r\n", "\n", StringComparison.Ordinal).Replace('\r', '\n').Split('\n');
         var ns = "";
         var pendingAttributes = new List<string>();
+        var pendingDocumentation = new List<string>();
         TypeRecord type = null;
         var bodyDepth = -1;
         var depth = 0;
-        MemberBuilder member = null;
+        var member = (MemberBuilder)null;
+        var typeHeader = new List<string>();
 
         for (var index = 0; index < lines.Length; index++)
         {
             var raw = lines[index];
             var line = StripLineComment(raw);
+            var trimmed = line.Trim();
             var namespaceMatch = NamespaceRegex.Match(line);
             if (namespaceMatch.Success && type == null)
                 ns = namespaceMatch.Groups[1].Value;
 
             if (type == null)
             {
-                if (line.TrimStart().StartsWith("[", StringComparison.Ordinal))
+                if (trimmed.StartsWith("///", StringComparison.Ordinal))
                 {
-                    pendingAttributes.Add(line.Trim());
+                    pendingDocumentation.Add(trimmed[3..].TrimStart());
+                }
+                else if (trimmed.StartsWith("[", StringComparison.Ordinal) || HasOpenAttribute(pendingAttributes))
+                {
+                    pendingAttributes.Add(trimmed);
                 }
                 else
                 {
-                    var typeMatch = TypeRegex.Match(line);
-                    if (typeMatch.Success)
+                    var delegateMatch = DelegateRegex.Match(line);
+                    if (delegateMatch.Success)
                     {
-                        type = new TypeRecord
-                        {
-                            LogicalId = (ns.Length == 0 ? "" : ns + ".") + typeMatch.Groups["name"].Value,
-                            Namespace = ns,
-                            Name = typeMatch.Groups["name"].Value,
-                            Kind = typeMatch.Groups["kind"].Value,
-                            Accessibility = typeMatch.Groups["access"].Success ? typeMatch.Groups["access"].Value : "private",
-                            Modifiers = SplitWords(typeMatch.Groups["mods"].Value).ToList(),
-                            Attributes = ExtractAttributes(string.Join(" ", pendingAttributes)),
-                            Source = relative,
-                            Line = index + 1,
-                            Signature = Normalize(line)
-                        };
-                        ParseBases(type, typeMatch.Groups["bases"].Value);
-                        contract.Types.Add(type);
+                        contract.Types.Add(CreateDelegate(delegateMatch, ns, relative, index + 1, pendingAttributes, pendingDocumentation, contract));
                         pendingAttributes.Clear();
-                        var opens = Count(line, '{');
-                        if (opens > 0)
-                            bodyDepth = depth + opens;
-                        // A declaration may put its opening brace on the following line.
-                    }
-                }
-            }
-            else if (bodyDepth >= 0)
-            {
-                if (member == null && depth == bodyDepth)
-                {
-                    if (line.TrimStart().StartsWith("[", StringComparison.Ordinal))
-                    {
-                        pendingAttributes.Add(line.Trim());
+                        pendingDocumentation.Clear();
                     }
                     else
                     {
-                        var declaration = type.Kind == "enum" ? ParseEnumMemberDeclaration(line) : ParseMemberDeclaration(line, type);
-                        if (declaration != null)
+                        var typeMatch = TypeRegex.Match(line);
+                        if (typeMatch.Success)
                         {
-                            declaration.Line = index + 1;
-                            declaration.Attributes = ExtractAttributes(string.Join(" ", pendingAttributes));
-                            declaration.Source = relative;
-                            member = declaration;
+                            typeHeader.Clear();
+                            typeHeader.Add(line);
+                            type = CreateType(typeMatch, ns, relative, index + 1, pendingAttributes, pendingDocumentation, contract);
+                            contract.Types.Add(type);
                             pendingAttributes.Clear();
+                            pendingDocumentation.Clear();
+                            if (line.Contains('{', StringComparison.Ordinal))
+                            {
+                                bodyDepth = depth + Count(line, '{') - Count(line, '}');
+                            }
                         }
-                        else if (IsPotentialPublicDeclaration(line))
-                        {
-                            contract.Unknowns.Add(new UnknownRecord { Code = "UNPARSED_DECLARATION", Message = Normalize(line), Path = relative, Line = index + 1, LogicalId = type.LogicalId });
-                            pendingAttributes.Clear();
-                        }
-                        else if (!string.IsNullOrWhiteSpace(line) && !line.TrimStart().StartsWith("///", StringComparison.Ordinal) && !line.TrimStart().StartsWith("//", StringComparison.Ordinal))
-                        {
-                            pendingAttributes.Clear();
-                        }
+                    }
+                }
+            }
+            else if (bodyDepth < 0)
+            {
+                // Complete declarations whose opening brace is on a later line, including
+                // multiline base/interface lists.
+                if (!string.IsNullOrWhiteSpace(line))
+                {
+                    typeHeader.Add(line);
+                    var header = Normalize(string.Join(" ", typeHeader));
+                    var typeMatch = TypeRegex.Match(header);
+                    if (typeMatch.Success)
+                    {
+                        ParseBases(type, typeMatch.Groups["bases"].Value);
+                        type.Signature = Normalize(header[..Math.Max(0, header.IndexOf('{', StringComparison.Ordinal) < 0 ? header.Length : header.IndexOf('{', StringComparison.Ordinal))]);
+                    }
+                }
+                if (line.Contains('{', StringComparison.Ordinal))
+                    bodyDepth = depth + Count(line, '{') - Count(line, '}');
+            }
+            else
+            {
+                if (member == null && depth == bodyDepth)
+                {
+                    if (trimmed.StartsWith("///", StringComparison.Ordinal))
+                    {
+                        pendingDocumentation.Add(trimmed[3..].TrimStart());
+                    }
+                    else if (trimmed.StartsWith("[", StringComparison.Ordinal) || HasOpenAttribute(pendingAttributes))
+                    {
+                        pendingAttributes.Add(trimmed);
+                    }
+                    else if (type.Kind == "enum" && !string.IsNullOrWhiteSpace(trimmed) &&
+                             !trimmed.StartsWith("#", StringComparison.Ordinal) && !trimmed.StartsWith("}", StringComparison.Ordinal))
+                    {
+                        member = new MemberBuilder { Source = relative, Line = index + 1 };
+                        member.Lines.Add(line);
+                        member.Attributes = ExtractAttributes(string.Join(" ", pendingAttributes));
+                        member.Documentation = ParseDocumentation(pendingDocumentation, relative, index + 1, type.LogicalId, contract);
+                        pendingAttributes.Clear();
+                        pendingDocumentation.Clear();
+                    }
+                    else if (IsDeclarationStart(line, type))
+                    {
+                        member = new MemberBuilder { Source = relative, Line = index + 1 };
+                        member.Lines.Add(line);
+                        member.Attributes = ExtractAttributes(string.Join(" ", pendingAttributes));
+                        member.Documentation = ParseDocumentation(pendingDocumentation, relative, index + 1, type.LogicalId, contract);
+                        pendingAttributes.Clear();
+                        pendingDocumentation.Clear();
+                    }
+                    else if (IsPotentialDeclaration(line))
+                    {
+                        AddUnknown(contract, "UNPARSED_DECLARATION", Normalize(line), relative, index + 1, type.LogicalId);
+                        pendingAttributes.Clear();
+                        pendingDocumentation.Clear();
+                    }
+                    else if (!string.IsNullOrWhiteSpace(trimmed))
+                    {
+                        // Documentation and attributes belong only to the immediately
+                        // following declaration. Consume trivia for ignored private/manual
+                        // declarations instead of leaking it to the next contract member.
+                        pendingAttributes.Clear();
+                        pendingDocumentation.Clear();
                     }
                 }
 
                 if (member != null)
                 {
-                    member.Lines.Add(line);
+                    if ((member.Lines.Count == 0 || !ReferenceEquals(member.Lines[^1], line)) &&
+                        !(type.Kind == "enum" && trimmed.StartsWith("}", StringComparison.Ordinal)))
+                        member.Lines.Add(line);
                     if (line.Contains("Factory.", StringComparison.Ordinal) || line.Contains("Invoke", StringComparison.Ordinal) || line.Contains("Execute", StringComparison.Ordinal))
                     {
                         var invocation = Normalize(line);
@@ -280,35 +305,195 @@ internal static class Extractor
                 }
             }
 
-            var before = depth;
             depth += Count(line, '{') - Count(line, '}');
-            if (type != null && bodyDepth < 0 && line.Contains('{', StringComparison.Ordinal))
-                bodyDepth = depth;
-            if (member != null)
+            if (member != null && ((type.Kind == "enum" && Normalize(string.Join(" ", member.Lines)).EndsWith(",", StringComparison.Ordinal)) || IsCompleteMember(member, depth, bodyDepth)))
             {
-                var hasBody = member.Lines.Any(l => l.Contains('{', StringComparison.Ordinal));
-                var complete = (!hasBody && line.Contains(';', StringComparison.Ordinal)) || (hasBody && depth == bodyDepth);
-                if (complete)
+                var finished = type.Kind == "enum" ? ParseEnumMemberDeclaration(string.Join(" ", member.Lines)) : ParseMemberDeclaration(string.Join(" ", member.Lines), type);
+                if (finished == null)
                 {
-                    var finished = member.ToRecord();
-                    type.Members.Add(finished);
-                    member = null;
+                    AddUnknown(contract, "UNPARSED_DECLARATION", Normalize(string.Join(" ", member.Lines)), relative, member.Line, type.LogicalId);
                 }
+                else
+                {
+                    finished.Line = member.Line;
+                    finished.Source = relative;
+                    finished.Attributes = member.Attributes;
+                    finished.InvocationText = CompleteInvocationText(finished, member);
+                    finished.Documentation = member.Documentation;
+                    type.Members.Add(finished.ToRecord());
+                }
+                member = null;
             }
+
             if (type != null && bodyDepth >= 0 && depth < bodyDepth)
             {
                 if (member != null)
-                    type.Members.Add(member.ToRecord());
+                {
+                    var finished = type.Kind == "enum" ? ParseEnumMemberDeclaration(string.Join(" ", member.Lines)) : ParseMemberDeclaration(string.Join(" ", member.Lines), type);
+                    if (finished != null)
+                    {
+                        finished.Line = member.Line;
+                        finished.Source = relative;
+                        finished.Attributes = member.Attributes;
+                        finished.InvocationText = CompleteInvocationText(finished, member);
+                        finished.Documentation = member.Documentation;
+                        type.Members.Add(finished.ToRecord());
+                    }
+                    else
+                        AddUnknown(contract, "UNPARSED_DECLARATION", Normalize(string.Join(" ", member.Lines)), relative, member.Line, type.LogicalId);
+                }
                 member = null;
                 type = null;
                 bodyDepth = -1;
                 pendingAttributes.Clear();
+                pendingDocumentation.Clear();
+                typeHeader.Clear();
             }
-            _ = before;
         }
 
+
         if (type != null)
-            contract.Unknowns.Add(new UnknownRecord { Code = "UNBALANCED_TYPE", Message = "Type body did not close before end of file.", Path = relative, Line = type.Line, LogicalId = type.LogicalId });
+        {
+            if (member != null)
+                AddUnknown(contract, "UNPARSED_DECLARATION", Normalize(string.Join(" ", member.Lines)), relative, member.Line, type.LogicalId);
+            AddUnknown(contract, "UNBALANCED_TYPE", "Type body did not close before end of file.", relative, type.Line, type.LogicalId);
+        }
+    }
+    private static List<string> CompleteInvocationText(MemberBuilder finished, MemberBuilder parsed)
+    {
+        if (string.Equals(finished.Kind, "enumValue", StringComparison.Ordinal))
+            return new List<string>();
+        if (!string.Equals(finished.Kind, "event", StringComparison.Ordinal))
+            return parsed.InvocationText;
+        var invocationText = new List<string>();
+        var declaration = string.Join(" ", parsed.Lines);
+        var bodyStart = FindTopLevel(declaration, '{');
+        if (bodyStart >= 0)
+            invocationText.Add(Normalize(declaration[bodyStart..]));
+        return invocationText;
+    }
+
+    private static TypeRecord CreateType(Match typeMatch, string ns, string relative, int line, List<string> attributes, List<string> documentation, WrapperContract contract)
+    {
+        var type = new TypeRecord
+        {
+            LogicalId = (ns.Length == 0 ? "" : ns + ".") + typeMatch.Groups["name"].Value,
+            Namespace = ns,
+            Name = typeMatch.Groups["name"].Value,
+            Kind = typeMatch.Groups["kind"].Value,
+            Accessibility = typeMatch.Groups["access"].Success ? typeMatch.Groups["access"].Value : "private",
+            Modifiers = SplitWords(typeMatch.Groups["mods"].Value).ToList(),
+            Attributes = ExtractAttributes(string.Join(" ", attributes)),
+            Documentation = ParseDocumentation(documentation, relative, line, null, contract),
+            Source = relative,
+            Line = line,
+            Signature = Normalize(typeMatch.Value)
+        };
+        ParseBases(type, typeMatch.Groups["bases"].Value);
+        return type;
+    }
+
+    private static TypeRecord CreateDelegate(Match match, string ns, string relative, int line, List<string> attributes, List<string> documentation, WrapperContract contract)
+    {
+        var name = match.Groups["name"].Value;
+        return new TypeRecord
+        {
+            LogicalId = (ns.Length == 0 ? "" : ns + ".") + name,
+            Namespace = ns,
+            Name = name,
+            Kind = "delegate",
+            Accessibility = match.Groups["access"].Success ? match.Groups["access"].Value : "private",
+            Modifiers = SplitWords(match.Groups["mods"].Value).ToList(),
+            Attributes = ExtractAttributes(string.Join(" ", attributes)),
+            Documentation = ParseDocumentation(documentation, relative, line, null, contract),
+            Source = relative,
+            Line = line,
+            Signature = Normalize(match.Value)
+        };
+    }
+
+    private static bool IsCompleteMember(MemberBuilder member, int depth, int bodyDepth)
+    {
+        var declaration = Normalize(string.Join(" ", member.Lines));
+        var hasBody = declaration.Contains('{', StringComparison.Ordinal);
+        if (hasBody)
+            return depth == bodyDepth && (declaration.Contains('}', StringComparison.Ordinal) || declaration.Contains("=>", StringComparison.Ordinal));
+        return declaration.Contains(';', StringComparison.Ordinal);
+    }
+
+    private static bool IsDeclarationStart(string line, TypeRecord type)
+    {
+        var trimmed = line.Trim();
+        if (string.IsNullOrWhiteSpace(trimmed) || trimmed.StartsWith("#", StringComparison.Ordinal) ||
+            trimmed.StartsWith("}", StringComparison.Ordinal) || trimmed.StartsWith("else", StringComparison.Ordinal) ||
+            trimmed.StartsWith("if ", StringComparison.Ordinal) || trimmed.StartsWith("if(", StringComparison.Ordinal) ||
+            trimmed.StartsWith("private ", StringComparison.Ordinal))
+            return false;
+        if (AccessRegex.IsMatch(line) || trimmed.StartsWith("event ", StringComparison.Ordinal) ||
+            trimmed.StartsWith("new ", StringComparison.Ordinal))
+            return true;
+        // Explicit interface implementations have no accessibility modifier.
+        if (trimmed.Contains('.', StringComparison.Ordinal) &&
+            (trimmed.Contains('(', StringComparison.Ordinal) || trimmed.Contains('[', StringComparison.Ordinal) ||
+             trimmed.Contains('{', StringComparison.Ordinal) || !trimmed.EndsWith(";", StringComparison.Ordinal)))
+            return true;
+        return type.Kind == "interface" && (trimmed.Contains('(', StringComparison.Ordinal) ||
+            trimmed.Contains(';', StringComparison.Ordinal) || trimmed.Contains('{', StringComparison.Ordinal));
+    }
+
+    private static bool IsPotentialDeclaration(string line)
+    {
+        var trimmed = line.Trim();
+        return !trimmed.StartsWith("private ", StringComparison.Ordinal) &&
+               (AccessRegex.IsMatch(line) || trimmed.StartsWith("event ", StringComparison.Ordinal) ||
+                (line.Contains('.', StringComparison.Ordinal) && line.Contains('(', StringComparison.Ordinal)));
+    }
+
+    private static void AddUnknown(WrapperContract contract, string code, string message, string path, int line, string logicalId)
+    {
+        if (OwnershipClassifier.GetOwnership(path) != "wrapper-generated")
+            return;
+        contract.Unknowns.Add(new UnknownRecord { Code = code, Message = message, Path = path, Line = line, LogicalId = logicalId });
+    }
+
+    private static DocumentationRecord ParseDocumentation(List<string> lines, string path, int line, string logicalId, WrapperContract contract)
+    {
+        if (lines == null || lines.Count == 0)
+            return null;
+        var raw = string.Join("\n", lines.Select(x => x.Trim()));
+        var result = new DocumentationRecord { Raw = raw };
+        try
+        {
+            var xml = System.Xml.Linq.XElement.Parse("<root>" + raw + "</root>", System.Xml.Linq.LoadOptions.PreserveWhitespace);
+            foreach (var element in xml.Elements())
+            {
+                var value = Normalize(element.Value);
+                switch (element.Name.LocalName)
+                {
+                    case "summary": result.Summary = value; break;
+                    case "remarks": result.Remarks = value; break;
+                    case "returns": result.Returns = value; break;
+                    case "value": result.Value = value; break;
+                    case "param":
+                        var parameter = (string)element.Attribute("name");
+                        if (!string.IsNullOrWhiteSpace(parameter)) result.Parameters[parameter] = value;
+                        break;
+                    case "typeparam":
+                        var typeParameter = (string)element.Attribute("name");
+                        if (!string.IsNullOrWhiteSpace(typeParameter)) result.TypeParameters[typeParameter] = value;
+                        break;
+                    case "exception":
+                        result.Exceptions.Add(value);
+                        break;
+                }
+            }
+        }
+        catch (System.Xml.XmlException)
+        {
+            result.ParseStatus = "invalid";
+            result.ParseError = "Malformed XML documentation.";
+        }
+        return result;
     }
 
     private static MemberBuilder ParseEnumMemberDeclaration(string line)
@@ -328,59 +513,162 @@ internal static class Extractor
 
     private static MemberBuilder ParseMemberDeclaration(string line, TypeRecord type)
     {
-        var match = AccessRegex.Match(line);
-        if (!match.Success)
+        var declaration = Normalize(RemoveDeclarationBody(line));
+        declaration = Regex.Replace(declaration, @"^\s*(?:\[[^\]]*\]\s*)+", "");
+        var accessMatch = AccessRegex.Match(declaration);
+        var explicitInterface = !accessMatch.Success && IsExplicitInterfaceDeclaration(declaration);
+        if (!accessMatch.Success && !explicitInterface && type.Kind != "interface")
             return null;
-        var rest = match.Groups["rest"].Value.Trim();
+
+        var accessibility = accessMatch.Success ? accessMatch.Groups["access"].Value : "public";
+        var rest = accessMatch.Success ? accessMatch.Groups["rest"].Value.Trim() : declaration;
         if (rest.Length == 0 || rest.StartsWith("if ", StringComparison.Ordinal) || rest.StartsWith("if(", StringComparison.Ordinal))
             return null;
+
         var modifiers = new List<string>();
         while (true)
         {
-            var m = Regex.Match(rest, @"^(static|virtual|override|abstract|sealed|new|extern|unsafe|async|readonly|const|event)\s+(.*)$");
-            if (!m.Success) break;
-            modifiers.Add(m.Groups[1].Value);
-            rest = m.Groups[2].Value.Trim();
+            var modifier = Regex.Match(rest, @"^(static|virtual|override|abstract|sealed|new|extern|unsafe|async|readonly|const|event|partial)\s+(.*)$");
+            if (!modifier.Success) break;
+            modifiers.Add(modifier.Groups[1].Value);
+            rest = modifier.Groups[2].Value.Trim();
         }
 
-        var builder = new MemberBuilder { Accessibility = match.Groups["access"].Value, Modifiers = modifiers };
-        var paren = NameBeforeParenRegex.Match(rest);
-        if (paren.Success)
+        var builder = new MemberBuilder { Accessibility = accessibility, Modifiers = modifiers };
+        var paren = FindTopLevelParen(rest);
+        if (paren >= 0)
         {
-            builder.Name = paren.Groups["name"].Value;
-            var prefix = rest[..paren.Index].Trim();
-            builder.Kind = string.Equals(builder.Name, type.Name, StringComparison.Ordinal) ? "constructor" : "method";
-            builder.ReturnType = builder.Kind == "constructor" ? null : prefix;
-            var open = rest.IndexOf('(', paren.Index);
-            var close = FindClosingParen(rest, open);
-            if (close >= 0)
-                builder.Parameters = Normalize(rest.Substring(open, close - open + 1));
-            builder.Signature = Normalize(match.Groups["access"].Value + " " + string.Join(" ", modifiers) + " " + rest);
+            var before = rest[..paren].Trim();
+            var methodName = ExtractMemberName(before, type.Name);
+            builder.Name = methodName.Name;
+            builder.Kind = string.Equals(methodName.Name, type.Name, StringComparison.Ordinal) ? "constructor" : "method";
+            builder.ReturnType = builder.Kind == "constructor" ? null : methodName.Prefix;
+            var close = FindClosingParen(rest, paren);
+            if (close < 0)
+                return null;
+            builder.Parameters = Normalize(rest.Substring(paren, close - paren + 1));
+            builder.DefaultValues = ParseDefaultValues(rest.Substring(paren + 1, close - paren - 1));
+            builder.Signature = Normalize(accessibility + " " + string.Join(" ", modifiers) + " " + rest);
             return builder;
         }
 
-        var declaration = rest;
-        var equals = declaration.IndexOf('=');
-        if (equals >= 0) declaration = declaration[..equals].Trim();
-        declaration = declaration.TrimEnd(';').Trim();
-        var identifiers = IdentifierRegex.Matches(declaration).Cast<Match>().Select(m => m.Value).ToList();
-        if (identifiers.Count < 1)
-            return null;
-        builder.Name = identifiers[^1];
-        builder.ReturnType = declaration[..Math.Max(0, declaration.LastIndexOf(builder.Name, StringComparison.Ordinal))].Trim();
-        if (declaration.Contains("this[", StringComparison.Ordinal))
+        var withoutInitializer = RemoveInitializer(rest);
+        var indexerMarker = Regex.Match(withoutInitializer, @"\bthis\s*\[", RegexOptions.Singleline);
+        if (indexerMarker.Success)
         {
+            var open = withoutInitializer.IndexOf('[', indexerMarker.Index);
+            var close = FindClosingBracket(withoutInitializer, open);
+            if (close < 0)
+                return null;
+            var parameters = withoutInitializer.Substring(open, close - open + 1);
             builder.Name = "this";
             builder.Kind = "indexer";
+            builder.ReturnType = Normalize(withoutInitializer[..indexerMarker.Index]);
+            builder.Parameters = Normalize(parameters);
+            builder.DefaultValues = ParseDefaultValues(parameters.Trim('[', ']'));
         }
-        else if (modifiers.Contains("event", StringComparer.Ordinal))
-            builder.Kind = "event";
-        else if (line.Contains('{', StringComparison.Ordinal) || line.Contains(" get", StringComparison.Ordinal) || line.Contains(" set", StringComparison.Ordinal))
-            builder.Kind = "property";
         else
-            builder.Kind = "field";
-        builder.Signature = Normalize(match.Groups["access"].Value + " " + string.Join(" ", modifiers) + " " + rest);
+        {
+            var identifiers = IdentifierRegex.Matches(withoutInitializer).Cast<Match>().Select(m => m.Value).ToList();
+            if (identifiers.Count < 1)
+                return null;
+            builder.Name = explicitInterface ? ExtractMemberName(withoutInitializer, null).Name : identifiers[^1];
+            var nameIndex = withoutInitializer.LastIndexOf(builder.Name, StringComparison.Ordinal);
+            builder.ReturnType = Normalize(withoutInitializer[..Math.Max(0, nameIndex)]);
+            if (modifiers.Contains("event", StringComparer.Ordinal))
+                builder.Kind = "event";
+            else if (withoutInitializer.Contains('{', StringComparison.Ordinal) || withoutInitializer.Contains("=>", StringComparison.Ordinal) ||
+                Regex.IsMatch(line, @"\b(get|set|init)\b"))
+                builder.Kind = "property";
+            else
+                builder.Kind = "field";
+        }
+
+        builder.Signature = Normalize(accessibility + " " + string.Join(" ", modifiers) + " " + rest);
         return builder;
+    }
+
+    private static string RemoveDeclarationBody(string value)
+    {
+        var brace = FindTopLevel(value, '{');
+        if (brace >= 0)
+            value = value[..brace] + " {";
+        var arrow = FindTopLevel(value, '=');
+        if (arrow >= 0 && (arrow + 1 >= value.Length || value[arrow + 1] != '>'))
+            value = value[..arrow].TrimEnd();
+        return value.Trim().TrimEnd(';').Trim();
+    }
+
+    private static string RemoveInitializer(string value)
+    {
+        var equals = FindTopLevel(value, '=');
+        return equals >= 0 ? value[..equals].Trim() : value;
+    }
+
+    private static bool IsExplicitInterfaceDeclaration(string value) =>
+        !Regex.IsMatch(value, @"\b(class|interface|struct|enum|delegate)\b") &&
+        value.Contains('.', StringComparison.Ordinal) &&
+        (value.Contains('(', StringComparison.Ordinal) || value.Contains('{', StringComparison.Ordinal) ||
+         value.Contains('[', StringComparison.Ordinal));
+
+    private static (string Name, string Prefix) ExtractMemberName(string value, string typeName)
+    {
+        var identifierMatches = Regex.Matches(value, @"[A-Za-z_]\w*(?:\s*<[^>]+>)?");
+        if (identifierMatches.Count == 0)
+            return (string.Empty, string.Empty);
+        var last = identifierMatches[^1];
+        var name = last.Value.Trim();
+        var before = value[..last.Index].Trim();
+        if (before.EndsWith(".", StringComparison.Ordinal))
+        {
+            var prefixName = Regex.Match(before, @"(?<qualified>[A-Za-z_][\w.]*)\.$").Groups["qualified"].Value;
+            if (prefixName.Length > 0)
+                name = prefixName + "." + name;
+        }
+        var prefix = value[..Math.Max(0, value.LastIndexOf(name, StringComparison.Ordinal))].Trim();
+        if (typeName != null && name.Contains('.', StringComparison.Ordinal))
+            prefix = prefix.Replace(name[..(name.LastIndexOf(".", StringComparison.Ordinal) + 1)], "", StringComparison.Ordinal).Trim();
+        return (name, prefix);
+    }
+
+    private static int FindTopLevelParen(string value) => FindTopLevel(value, '(');
+
+    private static int FindTopLevel(string value, char target)
+    {
+        var angle = 0;
+        var square = 0;
+        var parenthesis = 0;
+        for (var i = 0; i < value.Length; i++)
+        {
+            if (value[i] == target && angle == 0 && square == 0 && parenthesis == 0)
+                return i;
+            switch (value[i])
+            {
+                case '<': angle++; break;
+                case '>': if (angle > 0) angle--; break;
+                case '[': square++; break;
+                case ']': if (square > 0) square--; break;
+                case '(': parenthesis++; break;
+                case ')': if (parenthesis > 0) parenthesis--; break;
+            }
+        }
+        return -1;
+    }
+
+    private static Dictionary<string, string> ParseDefaultValues(string value)
+    {
+        var result = new Dictionary<string, string>(StringComparer.Ordinal);
+        foreach (var parameter in SplitCommaSeparated(value))
+        {
+            var equals = FindTopLevel(parameter, '=');
+            if (equals < 0) continue;
+            var left = parameter[..equals].Trim();
+            var right = Normalize(parameter[(equals + 1)..]);
+            var names = IdentifierRegex.Matches(left).Cast<Match>().Select(m => m.Value).ToArray();
+            if (names.Length > 0 && right.Length > 0)
+                result[names[^1]] = right;
+        }
+        return result;
     }
 
     private static void ParseBases(TypeRecord type, string bases)
@@ -389,11 +677,26 @@ internal static class Extractor
         var values = SplitCommaSeparated(bases);
         if (type.Kind == "class" && values.Count > 0)
         {
-            type.BaseType = values[0];
-            type.Interfaces.AddRange(values.Skip(1));
+            if (string.IsNullOrWhiteSpace(type.BaseType))
+                type.BaseType = values[0];
+            foreach (var value in values.Skip(1))
+                if (!type.Interfaces.Contains(value, StringComparer.Ordinal))
+                    type.Interfaces.Add(value);
         }
         else
-            type.Interfaces.AddRange(values);
+        {
+            foreach (var value in values)
+                if (!type.Interfaces.Contains(value, StringComparer.Ordinal))
+                    type.Interfaces.Add(value);
+        }
+    }
+
+    private static bool HasOpenAttribute(IEnumerable<string> lines)
+    {
+        var balance = 0;
+        foreach (var line in lines)
+            balance += Count(line, '[') - Count(line, ']');
+        return balance > 0;
     }
 
     private static List<string> ExtractAttributes(string text)
@@ -401,8 +704,12 @@ internal static class Extractor
         var values = new List<string>();
         foreach (Match match in Regex.Matches(text, @"\[(?<value>[^\]]+)\]"))
         {
-            var value = Normalize(match.Groups["value"].Value);
-            if (value.Length > 0) values.Add(value);
+            foreach (var attribute in SplitCommaSeparated(match.Groups["value"].Value))
+            {
+                var value = Normalize(attribute);
+                if (value.Length > 0)
+                    values.Add(value);
+            }
         }
         return values;
     }
@@ -419,6 +726,19 @@ internal static class Extractor
         return -1;
     }
 
+    private static int FindClosingBracket(string text, int open)
+    {
+        var level = 0;
+        for (var index = open; index < text.Length; index++)
+        {
+            if (text[index] == '[')
+                level++;
+            else if (text[index] == ']' && --level == 0)
+                return index;
+        }
+        return -1;
+    }
+
     private static string StripLineComment(string line)
     {
         var index = line.IndexOf("//", StringComparison.Ordinal);
@@ -428,16 +748,31 @@ internal static class Extractor
     private static List<string> SplitCommaSeparated(string value)
     {
         var result = new List<string>();
-        var level = 0;
+        var angle = 0;
+        var parenthesis = 0;
+        var square = 0;
+        var braces = 0;
+        var quoted = false;
         var start = 0;
         for (var i = 0; i < value.Length; i++)
         {
-            if (value[i] == '<') level++;
-            else if (value[i] == '>') level--;
-            else if (value[i] == ',' && level == 0)
+            if (value[i] == '"' && (i == 0 || value[i - 1] != '\\'))
+                quoted = !quoted;
+            if (quoted) continue;
+            switch (value[i])
             {
-                result.Add(Normalize(value[start..i]));
-                start = i + 1;
+                case '<': angle++; break;
+                case '>': if (angle > 0) angle--; break;
+                case '(': parenthesis++; break;
+                case ')': if (parenthesis > 0) parenthesis--; break;
+                case '[': square++; break;
+                case ']': if (square > 0) square--; break;
+                case '{': braces++; break;
+                case '}': if (braces > 0) braces--; break;
+                case ',' when angle == 0 && parenthesis == 0 && square == 0 && braces == 0:
+                    result.Add(Normalize(value[start..i]));
+                    start = i + 1;
+                    break;
             }
         }
         var last = Normalize(value[start..]);
@@ -471,11 +806,13 @@ internal sealed class MemberBuilder
     public string Kind { get; set; }
     public string ReturnType { get; set; }
     public string Parameters { get; set; }
+    public Dictionary<string, string> DefaultValues { get; set; } = new Dictionary<string, string>(StringComparer.Ordinal);
     public string Signature { get; set; }
     public string Source { get; set; }
     public int Line { get; set; }
     public List<string> Attributes { get; set; } = new List<string>();
     public List<string> InvocationText { get; set; } = new List<string>();
+    public DocumentationRecord Documentation { get; set; }
     public List<string> Lines { get; } = new List<string>();
 
     public MemberRecord ToRecord() => new MemberRecord
@@ -486,11 +823,13 @@ internal sealed class MemberBuilder
         Modifiers = Modifiers,
         ReturnType = ReturnType,
         Parameters = Parameters,
+        DefaultValues = DefaultValues.OrderBy(x => x.Key, StringComparer.Ordinal).ToDictionary(x => x.Key, x => x.Value, StringComparer.Ordinal),
         Signature = Signature,
         Source = Source,
         Line = Line,
         Attributes = Attributes,
-        InvocationText = InvocationText.Distinct(StringComparer.Ordinal).ToList()
+        InvocationText = InvocationText.Distinct(StringComparer.Ordinal).ToList(),
+        Documentation = Documentation
     };
 }
 
@@ -502,28 +841,60 @@ internal sealed class TypeRecord
     public string Kind { get; set; }
     public string Accessibility { get; set; }
     public List<string> Modifiers { get; set; } = new List<string>();
+    public List<string> SupportVersions { get; set; } = new List<string>();
     public string BaseType { get; set; }
     public List<string> Interfaces { get; set; } = new List<string>();
     public List<string> Attributes { get; set; } = new List<string>();
+    public DocumentationRecord Documentation { get; set; }
     public string Source { get; set; }
     public int Line { get; set; }
     public string Signature { get; set; }
+    public List<TypePartRecord> Parts { get; set; } = new List<TypePartRecord>();
     public List<MemberRecord> Members { get; set; } = new List<MemberRecord>();
+}
+
+internal sealed class TypePartRecord
+{
+    public string Source { get; set; }
+    public int Line { get; set; }
+    public string Signature { get; set; }
+    public List<string> Attributes { get; set; } = new List<string>();
+    public string BaseType { get; set; }
+    public List<string> Interfaces { get; set; } = new List<string>();
+    public DocumentationRecord Documentation { get; set; }
 }
 
 internal sealed class MemberRecord
 {
+    public string LogicalId { get; set; }
     public string Name { get; set; }
     public string Kind { get; set; }
     public string Accessibility { get; set; }
     public List<string> Modifiers { get; set; } = new List<string>();
     public string ReturnType { get; set; }
     public string Parameters { get; set; }
+    public Dictionary<string, string> DefaultValues { get; set; } = new Dictionary<string, string>(StringComparer.Ordinal);
     public string Signature { get; set; }
     public List<string> Attributes { get; set; } = new List<string>();
     public List<string> InvocationText { get; set; } = new List<string>();
+    public List<string> SupportVersions { get; set; } = new List<string>();
+    public DocumentationRecord Documentation { get; set; }
     public string Source { get; set; }
     public int Line { get; set; }
+}
+
+internal sealed class DocumentationRecord
+{
+    public string ParseStatus { get; set; } = "parsed";
+    public string ParseError { get; set; }
+    public string Raw { get; set; }
+    public string Summary { get; set; }
+    public string Remarks { get; set; }
+    public string Returns { get; set; }
+    public string Value { get; set; }
+    public Dictionary<string, string> Parameters { get; set; } = new Dictionary<string, string>(StringComparer.Ordinal);
+    public Dictionary<string, string> TypeParameters { get; set; } = new Dictionary<string, string>(StringComparer.Ordinal);
+    public List<string> Exceptions { get; set; } = new List<string>();
 }
 
 internal sealed class WrapperContract
@@ -554,25 +925,56 @@ internal static class Records
     public static CompatibilityLedger CreateLedger(WrapperContract contract)
     {
         var ledger = new CompatibilityLedger { SchemaVersion = "1.0", ContractKind = "NetOffice.WrapperCompatibilityLedger", Api = contract.Source.Api };
-        foreach (var type in contract.Types)
-        {
-            ledger.Entries.Add(new LedgerEntry { LogicalId = type.LogicalId, RecordKind = "type", Source = type.Source, Status = "extracted", ExpectedMatchCount = 1 });
-            foreach (var member in type.Members)
-                ledger.Entries.Add(new LedgerEntry { LogicalId = type.LogicalId + "." + member.Name, RecordKind = "member", Source = member.Source, Status = "extracted", ExpectedMatchCount = 1 });
-        }
-        ledger.Entries = ledger.Entries.OrderBy(e => e.LogicalId, StringComparer.Ordinal).ThenBy(e => e.RecordKind, StringComparer.Ordinal).ToList();
+        var records = contract.Types.Select(type => new LedgerEntry
+            {
+                LogicalId = type.LogicalId,
+                RecordKind = "type",
+                Source = string.Join(";", type.Parts.Select(part => ContractIdentity.NormalizePartition(part.Source)).Distinct(StringComparer.Ordinal).OrderBy(value => value, StringComparer.Ordinal)),
+                Status = "extracted",
+                ExpectedMatchCount = 1
+            })
+            .Concat(contract.Types.SelectMany(type => type.Members.Select(member => new LedgerEntry
+            {
+                LogicalId = member.LogicalId, RecordKind = "member", Source = ContractIdentity.NormalizePartition(member.Source),
+                Status = "extracted", ExpectedMatchCount = 1
+            })));
+        ledger.Entries = records.GroupBy(entry => entry.LogicalId + "\0" + entry.RecordKind, StringComparer.Ordinal)
+            .Select(group => new LedgerEntry
+            {
+                LogicalId = group.First().LogicalId,
+                RecordKind = group.First().RecordKind,
+                Source = string.Join(";", group.Select(entry => entry.Source).Distinct(StringComparer.Ordinal).OrderBy(value => value, StringComparer.Ordinal)),
+                Status = "extracted",
+                ExpectedMatchCount = group.Count()
+            })
+            .OrderBy(entry => entry.LogicalId, StringComparer.Ordinal).ThenBy(entry => entry.RecordKind, StringComparer.Ordinal).ToList();
         return ledger;
     }
 
     public static ClassificationReport CreateClassification(WrapperContract contract)
     {
         var report = new ClassificationReport { SchemaVersion = "1.0", ContractKind = "NetOffice.WrapperClassification", Api = contract.Source.Api };
+        foreach (var file in contract.Source.Files)
+        {
+            var fileTypes = contract.Types.Where(type => type.Parts.Any(part => string.Equals(part.Source, file.Path, StringComparison.Ordinal))).ToList();
+            report.Files.Add(OwnershipClassifier.Classify(file, fileTypes));
+        }
         foreach (var type in contract.Types)
         {
-            var folder = type.Source.Contains("/", StringComparison.Ordinal) ? type.Source[..type.Source.IndexOf('/', StringComparison.Ordinal)] : "Root";
-            report.Entries.Add(new ClassificationEntry { LogicalId = type.LogicalId, Source = type.Source, Category = folder, Kind = type.Kind });
+            foreach (var part in type.Parts)
+            {
+                var path = ContractIdentity.NormalizePartition(part.Source);
+                var folder = path.Contains("/", StringComparison.Ordinal) ? path[..path.IndexOf('/', StringComparison.Ordinal)] : "Root";
+                var ownership = report.Files.Single(file => file.Path == path).Ownership;
+                report.Entries.Add(new ClassificationEntry
+                {
+                    LogicalId = type.LogicalId, Source = path, Category = folder, Kind = type.Kind, Ownership = ownership
+                });
+            }
         }
-        report.Entries = report.Entries.OrderBy(e => e.LogicalId, StringComparer.Ordinal).ToList();
+        report.Files = report.Files.OrderBy(file => file.Path, StringComparer.Ordinal).ToList();
+        report.Entries = report.Entries.OrderBy(entry => entry.LogicalId, StringComparer.Ordinal)
+            .ThenBy(entry => entry.Source, StringComparer.Ordinal).ToList();
         return report;
     }
 }
@@ -591,12 +993,17 @@ internal sealed class LedgerEntry
     public string Source { get; set; }
     public string Status { get; set; }
     public int ExpectedMatchCount { get; set; }
+    public string Facet { get; set; }
+    public string Rationale { get; set; }
+    public string Provenance { get; set; }
+    public string ApprovedBy { get; set; }
 }
 internal sealed class ClassificationReport
 {
     public string SchemaVersion { get; set; }
     public string ContractKind { get; set; }
     public string Api { get; set; }
+    public List<FileClassification> Files { get; set; } = new List<FileClassification>();
     public List<ClassificationEntry> Entries { get; set; } = new List<ClassificationEntry>();
 }
 internal sealed class ClassificationEntry
@@ -604,21 +1011,42 @@ internal sealed class ClassificationEntry
     public string LogicalId { get; set; }
     public string Source { get; set; }
     public string Category { get; set; }
+    public string Ownership { get; set; }
     public string Kind { get; set; }
 }
+internal sealed class FileClassification
+{
+    public string Path { get; set; }
+    public string Ownership { get; set; }
+    public string BuildAction { get; set; }
+    public bool RequiredForIsolatedBuild { get; set; }
+    public string Reason { get; set; }
+    public List<string> TypeLogicalIds { get; set; } = new List<string>();
+}
+
 
 internal static class JsonFile
 {
-    private static readonly JsonSerializerOptions Options = new JsonSerializerOptions
+    internal static readonly JsonSerializerOptions SerializerOptions = new JsonSerializerOptions
     {
         WriteIndented = true,
         Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-        DefaultIgnoreCondition = JsonIgnoreCondition.Never
+        DefaultIgnoreCondition = JsonIgnoreCondition.Never,
+        PropertyNameCaseInsensitive = false
     };
+
+    public static T Read<T>(string path)
+    {
+        var result = JsonSerializer.Deserialize<T>(File.ReadAllText(path), SerializerOptions);
+        return result ?? throw new InvalidDataException("JSON artifact is empty: " + path);
+    }
+
+    public static string Serialize<T>(T value) =>
+        JsonSerializer.Serialize(value, SerializerOptions).Replace("\r\n", "\n", StringComparison.Ordinal).Replace('\r', '\n') + "\n";
 
     public static void Write<T>(string path, T value)
     {
-        var json = JsonSerializer.Serialize(value, Options).Replace("\r\n", "\n", StringComparison.Ordinal).Replace('\r', '\n') + "\n";
-        File.WriteAllText(path, json, new UTF8Encoding(false));
+        Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path))!);
+        File.WriteAllText(path, Serialize(value), new UTF8Encoding(false));
     }
 }

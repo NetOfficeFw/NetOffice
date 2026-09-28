@@ -3,20 +3,37 @@
   "$id": "https://netoffice.io/schemas/wrapper-classification-1.0.json",
   "title": "NetOffice Wrapper Classification",
   "type": "object",
-  "required": ["SchemaVersion", "ContractKind", "Api", "Entries"],
+  "required": ["SchemaVersion", "ContractKind", "Api", "Files", "Entries"],
   "properties": {
     "SchemaVersion": { "const": "1.0" },
     "ContractKind": { "const": "NetOffice.WrapperClassification" },
     "Api": { "type": "string", "minLength": 1 },
+    "Files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["Path", "Ownership", "BuildAction", "RequiredForIsolatedBuild", "Reason", "TypeLogicalIds"],
+        "properties": {
+          "Path": { "type": "string", "minLength": 1 },
+          "Ownership": { "enum": ["wrapper-generated", "companion", "runtime", "manual"] },
+          "BuildAction": { "enum": ["generate", "copy-companion"] },
+          "RequiredForIsolatedBuild": { "type": "boolean" },
+          "Reason": { "type": "string", "minLength": 1 },
+          "TypeLogicalIds": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+        },
+        "additionalProperties": false
+      }
+    },
     "Entries": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["LogicalId", "Source", "Category", "Kind"],
+        "required": ["LogicalId", "Source", "Category", "Ownership", "Kind"],
         "properties": {
           "LogicalId": { "type": "string", "minLength": 1 },
           "Source": { "type": "string", "minLength": 1 },
           "Category": { "type": "string", "minLength": 1 },
+          "Ownership": { "enum": ["wrapper-generated", "companion", "runtime", "manual"] },
           "Kind": { "type": "string", "minLength": 1 }
         },
         "additionalProperties": false

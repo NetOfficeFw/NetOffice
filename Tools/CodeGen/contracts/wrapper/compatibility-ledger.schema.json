@@ -12,13 +12,17 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["LogicalId", "RecordKind", "Source", "Status", "ExpectedMatchCount"],
+        "required": ["LogicalId", "RecordKind", "Source", "Status", "ExpectedMatchCount", "Facet", "Rationale", "Provenance", "ApprovedBy"],
         "properties": {
           "LogicalId": { "type": "string", "minLength": 1 },
           "RecordKind": { "enum": ["type", "member"] },
           "Source": { "type": "string", "minLength": 1 },
-          "Status": { "type": "string", "minLength": 1 },
-          "ExpectedMatchCount": { "type": "integer", "minimum": 0 }
+          "Status": { "enum": ["extracted", "intentional"] },
+          "ExpectedMatchCount": { "type": "integer", "minimum": 0 },
+          "Facet": { "type": ["string", "null"] },
+          "Rationale": { "type": ["string", "null"] },
+          "Provenance": { "type": ["string", "null"] },
+          "ApprovedBy": { "type": ["string", "null"] }
         },
         "additionalProperties": false
       }

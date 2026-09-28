@@ -2,485 +2,1366 @@
   "SchemaVersion": "1.0",
   "ContractKind": "NetOffice.WrapperClassification",
   "Api": "DAO",
+  "Files": [
+    {
+      "Path": "AssemblyInfo.cs",
+      "Ownership": "manual",
+      "BuildAction": "copy-companion",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Hand-maintained project source outside generator ownership.",
+      "TypeLogicalIds": []
+    },
+    {
+      "Path": "Classes/DBEngine.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.DBEngine"
+      ]
+    },
+    {
+      "Path": "Classes/Field.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Field"
+      ]
+    },
+    {
+      "Path": "Classes/Group.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Group"
+      ]
+    },
+    {
+      "Path": "Classes/Index.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Index"
+      ]
+    },
+    {
+      "Path": "Classes/PrivDBEngine.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.PrivDBEngine"
+      ]
+    },
+    {
+      "Path": "Classes/QueryDef.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.QueryDef"
+      ]
+    },
+    {
+      "Path": "Classes/Relation.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Relation"
+      ]
+    },
+    {
+      "Path": "Classes/TableDef.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.TableDef"
+      ]
+    },
+    {
+      "Path": "Classes/User.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.User"
+      ]
+    },
+    {
+      "Path": "Constants/LanguageConstants.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Constants.LanguageConstants"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/ComplexType.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.ComplexType"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Connection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Connection"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Connections.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Connections"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Container.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Container"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Containers.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Containers"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Database.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Database"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Databases.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Databases"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Document.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Document"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Documents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Documents"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Error.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Error"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Errors.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Errors"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field2.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Field2"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Field3.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Field3"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Fields.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Fields"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Groups.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Groups"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/IndexFields.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.IndexFields",
+        "NetOffice.DAOApi.IndexFields_"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Indexes.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Indexes"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Parameter.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Parameter"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Parameters.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Parameters"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Properties.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Properties"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Property.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Property"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/QueryDefs.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.QueryDefs"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Recordset"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordset2.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Recordset2"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Recordsets.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Recordsets"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Relations.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Relations"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/TableDefs.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.TableDefs"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Users.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Users"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Workspace.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Workspace"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Workspaces.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Workspaces"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Collection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._Collection"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_DAO.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._DAO"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_DBEngine.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._DBEngine"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_DynaCollection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._DynaCollection"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Field.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._Field"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Group.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._Group"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Index.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._Index"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_QueryDef.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._QueryDef"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Relation.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._Relation"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_TableDef.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._TableDef"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_User.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi._User"
+      ]
+    },
+    {
+      "Path": "Enums/CollatingOrderEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.CollatingOrderEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CommitTransOptionsEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.CommitTransOptionsEnum"
+      ]
+    },
+    {
+      "Path": "Enums/CursorDriverEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.CursorDriverEnum"
+      ]
+    },
+    {
+      "Path": "Enums/DataTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.DataTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/DatabaseTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.DatabaseTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/DriverPromptEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.DriverPromptEnum"
+      ]
+    },
+    {
+      "Path": "Enums/EditModeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.EditModeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/FieldAttributeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.FieldAttributeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/IdleEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.IdleEnum"
+      ]
+    },
+    {
+      "Path": "Enums/LockTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.LockTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ParameterDirectionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.ParameterDirectionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/PermissionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.PermissionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/QueryDefStateEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.QueryDefStateEnum"
+      ]
+    },
+    {
+      "Path": "Enums/QueryDefTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.QueryDefTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordStatusEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.RecordStatusEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordsetOptionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.RecordsetOptionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RecordsetTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.RecordsetTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/RelationAttributeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.RelationAttributeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/ReplicaTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.ReplicaTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/SetOptionEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.SetOptionEnum"
+      ]
+    },
+    {
+      "Path": "Enums/SynchronizeTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.SynchronizeTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/TableDefAttributeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.TableDefAttributeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/UpdateCriteriaEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.UpdateCriteriaEnum"
+      ]
+    },
+    {
+      "Path": "Enums/UpdateTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.UpdateTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/WorkspaceTypeEnum.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums.WorkspaceTypeEnum"
+      ]
+    },
+    {
+      "Path": "Enums/_DAOSuppHelp.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.Enums._DAOSuppHelp"
+      ]
+    },
+    {
+      "Path": "Modules/Global.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.DAOApi.GlobalHelperModules.GlobalModule"
+      ]
+    },
+    {
+      "Path": "Utils/ProjectInfo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "DAOApi.Utils.ProjectInfo"
+      ]
+    }
+  ],
   "Entries": [
     {
       "LogicalId": "DAOApi.Utils.ProjectInfo",
       "Source": "Utils/ProjectInfo.cs",
       "Category": "Utils",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.ComplexType",
       "Source": "DispatchInterfaces/ComplexType.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Connection",
       "Source": "DispatchInterfaces/Connection.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Connections",
       "Source": "DispatchInterfaces/Connections.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Constants.LanguageConstants",
       "Source": "Constants/LanguageConstants.cs",
       "Category": "Constants",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Container",
       "Source": "DispatchInterfaces/Container.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Containers",
       "Source": "DispatchInterfaces/Containers.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.DBEngine",
       "Source": "Classes/DBEngine.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Database",
       "Source": "DispatchInterfaces/Database.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Databases",
       "Source": "DispatchInterfaces/Databases.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Document",
       "Source": "DispatchInterfaces/Document.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Documents",
       "Source": "DispatchInterfaces/Documents.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.CollatingOrderEnum",
       "Source": "Enums/CollatingOrderEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.CommitTransOptionsEnum",
       "Source": "Enums/CommitTransOptionsEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.CursorDriverEnum",
       "Source": "Enums/CursorDriverEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.DataTypeEnum",
       "Source": "Enums/DataTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.DatabaseTypeEnum",
       "Source": "Enums/DatabaseTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.DriverPromptEnum",
       "Source": "Enums/DriverPromptEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.EditModeEnum",
       "Source": "Enums/EditModeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.FieldAttributeEnum",
       "Source": "Enums/FieldAttributeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.IdleEnum",
       "Source": "Enums/IdleEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.LockTypeEnum",
       "Source": "Enums/LockTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.ParameterDirectionEnum",
       "Source": "Enums/ParameterDirectionEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.PermissionEnum",
       "Source": "Enums/PermissionEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.QueryDefStateEnum",
       "Source": "Enums/QueryDefStateEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.QueryDefTypeEnum",
       "Source": "Enums/QueryDefTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.RecordStatusEnum",
       "Source": "Enums/RecordStatusEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.RecordsetOptionEnum",
       "Source": "Enums/RecordsetOptionEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.RecordsetTypeEnum",
       "Source": "Enums/RecordsetTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.RelationAttributeEnum",
       "Source": "Enums/RelationAttributeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.ReplicaTypeEnum",
       "Source": "Enums/ReplicaTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.SetOptionEnum",
       "Source": "Enums/SetOptionEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.SynchronizeTypeEnum",
       "Source": "Enums/SynchronizeTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.TableDefAttributeEnum",
       "Source": "Enums/TableDefAttributeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.UpdateCriteriaEnum",
       "Source": "Enums/UpdateCriteriaEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.UpdateTypeEnum",
       "Source": "Enums/UpdateTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums.WorkspaceTypeEnum",
       "Source": "Enums/WorkspaceTypeEnum.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Enums._DAOSuppHelp",
       "Source": "Enums/_DAOSuppHelp.cs",
       "Category": "Enums",
+      "Ownership": "wrapper-generated",
       "Kind": "enum"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Error",
       "Source": "DispatchInterfaces/Error.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Errors",
       "Source": "DispatchInterfaces/Errors.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Field",
       "Source": "Classes/Field.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Field2",
       "Source": "DispatchInterfaces/Field2.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Field3",
       "Source": "DispatchInterfaces/Field3.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Fields",
       "Source": "DispatchInterfaces/Fields.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.GlobalHelperModules.GlobalModule",
       "Source": "Modules/Global.cs",
       "Category": "Modules",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Group",
       "Source": "Classes/Group.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Groups",
       "Source": "DispatchInterfaces/Groups.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Index",
       "Source": "Classes/Index.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.IndexFields",
       "Source": "DispatchInterfaces/IndexFields.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.IndexFields_",
       "Source": "DispatchInterfaces/IndexFields.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Indexes",
       "Source": "DispatchInterfaces/Indexes.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Parameter",
       "Source": "DispatchInterfaces/Parameter.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Parameters",
       "Source": "DispatchInterfaces/Parameters.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.PrivDBEngine",
       "Source": "Classes/PrivDBEngine.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Properties",
       "Source": "DispatchInterfaces/Properties.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Property",
       "Source": "DispatchInterfaces/Property.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.QueryDef",
       "Source": "Classes/QueryDef.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.QueryDefs",
       "Source": "DispatchInterfaces/QueryDefs.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Recordset",
       "Source": "DispatchInterfaces/Recordset.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Recordset2",
       "Source": "DispatchInterfaces/Recordset2.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Recordsets",
       "Source": "DispatchInterfaces/Recordsets.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Relation",
       "Source": "Classes/Relation.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Relations",
       "Source": "DispatchInterfaces/Relations.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.TableDef",
       "Source": "Classes/TableDef.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.TableDefs",
       "Source": "DispatchInterfaces/TableDefs.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.User",
       "Source": "Classes/User.cs",
       "Category": "Classes",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Users",
       "Source": "DispatchInterfaces/Users.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Workspace",
       "Source": "DispatchInterfaces/Workspace.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi.Workspaces",
       "Source": "DispatchInterfaces/Workspaces.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._Collection",
       "Source": "DispatchInterfaces/_Collection.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._DAO",
       "Source": "DispatchInterfaces/_DAO.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._DBEngine",
       "Source": "DispatchInterfaces/_DBEngine.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._DynaCollection",
       "Source": "DispatchInterfaces/_DynaCollection.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._Field",
       "Source": "DispatchInterfaces/_Field.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._Group",
       "Source": "DispatchInterfaces/_Group.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._Index",
       "Source": "DispatchInterfaces/_Index.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._QueryDef",
       "Source": "DispatchInterfaces/_QueryDef.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._Relation",
       "Source": "DispatchInterfaces/_Relation.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._TableDef",
       "Source": "DispatchInterfaces/_TableDef.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     },
     {
       "LogicalId": "NetOffice.DAOApi._User",
       "Source": "DispatchInterfaces/_User.cs",
       "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
       "Kind": "class"
     }
   ]

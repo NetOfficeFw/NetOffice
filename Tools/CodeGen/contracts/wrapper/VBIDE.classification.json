@@ -1,0 +1,1203 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperClassification",
+  "Api": "VBIDE",
+  "Files": [
+    {
+      "Path": "AssemblyInfo.cs",
+      "Ownership": "manual",
+      "BuildAction": "copy-companion",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Hand-maintained project source outside generator ownership.",
+      "TypeLogicalIds": []
+    },
+    {
+      "Path": "Classes/Addins.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Addins"
+      ]
+    },
+    {
+      "Path": "Classes/CodeModule.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.CodeModule"
+      ]
+    },
+    {
+      "Path": "Classes/CodePane.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.CodePane"
+      ]
+    },
+    {
+      "Path": "Classes/CodePanes.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.CodePanes"
+      ]
+    },
+    {
+      "Path": "Classes/CommandBarEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.CommandBarEvents",
+        "NetOffice.VBIDEApi.CommandBarEvents_ClickEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/Component.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Component"
+      ]
+    },
+    {
+      "Path": "Classes/Components.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Components"
+      ]
+    },
+    {
+      "Path": "Classes/LinkedWindows.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.LinkedWindows"
+      ]
+    },
+    {
+      "Path": "Classes/ProjectTemplate.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.ProjectTemplate"
+      ]
+    },
+    {
+      "Path": "Classes/Properties.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Properties"
+      ]
+    },
+    {
+      "Path": "Classes/References.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.References",
+        "NetOffice.VBIDEApi.References_ItemAddedEventHandler",
+        "NetOffice.VBIDEApi.References_ItemRemovedEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/ReferencesEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.ReferencesEvents",
+        "NetOffice.VBIDEApi.ReferencesEvents_ItemAddedEventHandler",
+        "NetOffice.VBIDEApi.ReferencesEvents_ItemRemovedEventHandler"
+      ]
+    },
+    {
+      "Path": "Classes/VBComponent.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.VBComponent"
+      ]
+    },
+    {
+      "Path": "Classes/VBComponents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.VBComponents"
+      ]
+    },
+    {
+      "Path": "Classes/VBProject.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.VBProject"
+      ]
+    },
+    {
+      "Path": "Classes/VBProjects.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.VBProjects"
+      ]
+    },
+    {
+      "Path": "Classes/Windows.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Windows"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/AddIn.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.AddIn"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Application.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Application"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Events.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Events"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Property.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Property"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Reference.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Reference"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/SelectedComponents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.SelectedComponents"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/VBE.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.VBE"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/Window.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Window"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_AddIns.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._AddIns"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_CodeModule.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._CodeModule"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_CodePane.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._CodePane"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_CodePanes.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._CodePanes"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Component.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._Component"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Components.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._Components"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_LinkedWindows.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._LinkedWindows"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_ProjectTemplate.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._ProjectTemplate"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Properties.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._Properties"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_References.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._References"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBComponent.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBComponent"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBComponent_Old.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBComponent_Old"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBComponents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBComponents"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBComponents_Old.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBComponents_Old"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBProject.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBProject"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBProject_Old.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBProject_Old"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBProjects.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBProjects"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_VBProjects_Old.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBProjects_Old"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Windows.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._Windows"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_Windows_old.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._Windows_old"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_dispVBComponentsEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._dispVBComponentsEvents"
+      ]
+    },
+    {
+      "Path": "DispatchInterfaces/_dispVBProjectsEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._dispVBProjectsEvents"
+      ]
+    },
+    {
+      "Path": "Enums/vbextFileTypes.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbextFileTypes"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_CodePaneview.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_CodePaneview"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_ComponentType.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_ComponentType"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_ProcKind.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_ProcKind"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_ProjectProtection.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_ProjectProtection"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_ProjectType.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_ProjectType"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_RefKind.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_RefKind"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_VBAMode.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_VBAMode"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_WindowState.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_WindowState"
+      ]
+    },
+    {
+      "Path": "Enums/vbext_WindowType.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Enums.vbext_WindowType"
+      ]
+    },
+    {
+      "Path": "Events/_dispCommandBarControlEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.EventInterfaces._dispCommandBarControlEvents",
+        "NetOffice.VBIDEApi.EventInterfaces._dispCommandBarControlEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/_dispReferencesEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.EventInterfaces._dispReferencesEvents",
+        "NetOffice.VBIDEApi.EventInterfaces._dispReferencesEvents_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Events/_dispReferences_Events.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.EventInterfaces._dispReferences_Events",
+        "NetOffice.VBIDEApi.EventInterfaces._dispReferences_Events_SinkHelper"
+      ]
+    },
+    {
+      "Path": "Interfaces/_CommandBarControlEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._CommandBarControlEvents"
+      ]
+    },
+    {
+      "Path": "Interfaces/_ReferencesEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._ReferencesEvents"
+      ]
+    },
+    {
+      "Path": "Interfaces/_VBComponentsEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBComponentsEvents"
+      ]
+    },
+    {
+      "Path": "Interfaces/_VBProjectsEvents.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi._VBProjectsEvents"
+      ]
+    },
+    {
+      "Path": "Tools/COMAddin.cs",
+      "Ownership": "companion",
+      "BuildAction": "copy-companion",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Hand-maintained API companion source required beside generated wrappers.",
+      "TypeLogicalIds": [
+        "NetOffice.VBIDEApi.Tools.COMAddin"
+      ]
+    },
+    {
+      "Path": "Utils/ProjectInfo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "VBIDEApi.Utils.ProjectInfo"
+      ]
+    }
+  ],
+  "Entries": [
+    {
+      "LogicalId": "NetOffice.VBIDEApi.AddIn",
+      "Source": "DispatchInterfaces/AddIn.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Addins",
+      "Source": "Classes/Addins.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Application",
+      "Source": "DispatchInterfaces/Application.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.CodeModule",
+      "Source": "Classes/CodeModule.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.CodePane",
+      "Source": "Classes/CodePane.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.CodePanes",
+      "Source": "Classes/CodePanes.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.CommandBarEvents",
+      "Source": "Classes/CommandBarEvents.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.CommandBarEvents_ClickEventHandler",
+      "Source": "Classes/CommandBarEvents.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Component",
+      "Source": "Classes/Component.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Components",
+      "Source": "Classes/Components.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbextFileTypes",
+      "Source": "Enums/vbextFileTypes.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_CodePaneview",
+      "Source": "Enums/vbext_CodePaneview.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_ComponentType",
+      "Source": "Enums/vbext_ComponentType.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_ProcKind",
+      "Source": "Enums/vbext_ProcKind.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_ProjectProtection",
+      "Source": "Enums/vbext_ProjectProtection.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_ProjectType",
+      "Source": "Enums/vbext_ProjectType.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_RefKind",
+      "Source": "Enums/vbext_RefKind.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_VBAMode",
+      "Source": "Enums/vbext_VBAMode.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_WindowState",
+      "Source": "Enums/vbext_WindowState.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Enums.vbext_WindowType",
+      "Source": "Enums/vbext_WindowType.cs",
+      "Category": "Enums",
+      "Ownership": "wrapper-generated",
+      "Kind": "enum"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.EventInterfaces._dispCommandBarControlEvents",
+      "Source": "Events/_dispCommandBarControlEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.EventInterfaces._dispCommandBarControlEvents_SinkHelper",
+      "Source": "Events/_dispCommandBarControlEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.EventInterfaces._dispReferencesEvents",
+      "Source": "Events/_dispReferencesEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.EventInterfaces._dispReferencesEvents_SinkHelper",
+      "Source": "Events/_dispReferencesEvents.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.EventInterfaces._dispReferences_Events",
+      "Source": "Events/_dispReferences_Events.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "interface"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.EventInterfaces._dispReferences_Events_SinkHelper",
+      "Source": "Events/_dispReferences_Events.cs",
+      "Category": "Events",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Events",
+      "Source": "DispatchInterfaces/Events.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.LinkedWindows",
+      "Source": "Classes/LinkedWindows.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.ProjectTemplate",
+      "Source": "Classes/ProjectTemplate.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Properties",
+      "Source": "Classes/Properties.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Property",
+      "Source": "DispatchInterfaces/Property.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Reference",
+      "Source": "DispatchInterfaces/Reference.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.References",
+      "Source": "Classes/References.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.ReferencesEvents",
+      "Source": "Classes/ReferencesEvents.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.ReferencesEvents_ItemAddedEventHandler",
+      "Source": "Classes/ReferencesEvents.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.ReferencesEvents_ItemRemovedEventHandler",
+      "Source": "Classes/ReferencesEvents.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.References_ItemAddedEventHandler",
+      "Source": "Classes/References.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.References_ItemRemovedEventHandler",
+      "Source": "Classes/References.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "delegate"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.SelectedComponents",
+      "Source": "DispatchInterfaces/SelectedComponents.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Tools.COMAddin",
+      "Source": "Tools/COMAddin.cs",
+      "Category": "Tools",
+      "Ownership": "companion",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.VBComponent",
+      "Source": "Classes/VBComponent.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.VBComponents",
+      "Source": "Classes/VBComponents.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.VBE",
+      "Source": "DispatchInterfaces/VBE.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.VBProject",
+      "Source": "Classes/VBProject.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.VBProjects",
+      "Source": "Classes/VBProjects.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Window",
+      "Source": "DispatchInterfaces/Window.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi.Windows",
+      "Source": "Classes/Windows.cs",
+      "Category": "Classes",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._AddIns",
+      "Source": "DispatchInterfaces/_AddIns.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._CodeModule",
+      "Source": "DispatchInterfaces/_CodeModule.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._CodePane",
+      "Source": "DispatchInterfaces/_CodePane.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._CodePanes",
+      "Source": "DispatchInterfaces/_CodePanes.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._CommandBarControlEvents",
+      "Source": "Interfaces/_CommandBarControlEvents.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._Component",
+      "Source": "DispatchInterfaces/_Component.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._Components",
+      "Source": "DispatchInterfaces/_Components.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._LinkedWindows",
+      "Source": "DispatchInterfaces/_LinkedWindows.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._ProjectTemplate",
+      "Source": "DispatchInterfaces/_ProjectTemplate.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._Properties",
+      "Source": "DispatchInterfaces/_Properties.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._References",
+      "Source": "DispatchInterfaces/_References.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._ReferencesEvents",
+      "Source": "Interfaces/_ReferencesEvents.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBComponent",
+      "Source": "DispatchInterfaces/_VBComponent.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBComponent_Old",
+      "Source": "DispatchInterfaces/_VBComponent_Old.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBComponents",
+      "Source": "DispatchInterfaces/_VBComponents.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBComponentsEvents",
+      "Source": "Interfaces/_VBComponentsEvents.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBComponents_Old",
+      "Source": "DispatchInterfaces/_VBComponents_Old.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBProject",
+      "Source": "DispatchInterfaces/_VBProject.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBProject_Old",
+      "Source": "DispatchInterfaces/_VBProject_Old.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBProjects",
+      "Source": "DispatchInterfaces/_VBProjects.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBProjectsEvents",
+      "Source": "Interfaces/_VBProjectsEvents.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._VBProjects_Old",
+      "Source": "DispatchInterfaces/_VBProjects_Old.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._Windows",
+      "Source": "DispatchInterfaces/_Windows.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._Windows_old",
+      "Source": "DispatchInterfaces/_Windows_old.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._dispVBComponentsEvents",
+      "Source": "DispatchInterfaces/_dispVBComponentsEvents.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.VBIDEApi._dispVBProjectsEvents",
+      "Source": "DispatchInterfaces/_dispVBProjectsEvents.cs",
+      "Category": "DispatchInterfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "VBIDEApi.Utils.ProjectInfo",
+      "Source": "Utils/ProjectInfo.cs",
+      "Category": "Utils",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    }
+  ]
+}

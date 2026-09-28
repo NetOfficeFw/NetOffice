@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://netoffice.io/schemas/wrapper-semantic-diff-1.0.json",
+  "title": "NetOffice Wrapper Semantic Diff",
+  "type": "object",
+  "required": ["SchemaVersion", "ContractKind", "NormalizationProfile", "Summary", "Products"],
+  "properties": {
+    "SchemaVersion": { "const": "1.0" },
+    "ContractKind": { "const": "NetOffice.WrapperSemanticDiff" },
+    "NormalizationProfile": { "const": "csharp-semantic/v1" },
+    "Summary": { "$ref": "#/$defs/summary" },
+    "Products": { "type": "array", "items": { "$ref": "#/$defs/product" } }
+  },
+  "$defs": {
+    "summary": {
+      "type": "object",
+      "required": ["Products", "Differences", "IntentionalDifferences", "UnexplainedDifferences", "ByDifferenceKind", "ByRecordKind", "ByFacet"],
+      "properties": {
+        "Products": { "type": "integer", "minimum": 0 },
+        "Differences": { "type": "integer", "minimum": 0 },
+        "IntentionalDifferences": { "type": "integer", "minimum": 0 },
+        "UnexplainedDifferences": { "type": "integer", "minimum": 0 },
+        "ByDifferenceKind": { "$ref": "#/$defs/counts" },
+        "ByRecordKind": { "$ref": "#/$defs/counts" },
+        "ByFacet": { "$ref": "#/$defs/counts" }
+      },
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "product": {
+      "type": "object",
+      "required": ["SchemaVersion", "ContractKind", "NormalizationProfile", "Api", "Summary", "FirstDivergentLogicalIds", "Differences"],
+      "properties": {
+        "SchemaVersion": { "const": "1.0" },
+        "ContractKind": { "const": "NetOffice.WrapperProductSemanticDiff" },
+        "NormalizationProfile": { "const": "csharp-semantic/v1" },
+        "Api": { "type": "string", "minLength": 1 },
+        "Summary": { "$ref": "#/$defs/summary" },
+        "FirstDivergentLogicalIds": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "Differences": { "type": "array", "items": { "$ref": "#/$defs/difference" } }
+      },
+      "additionalProperties": false
+    },
+    "difference": {
+      "type": "object",
+      "required": ["LogicalId", "RecordKind", "Facet", "DifferenceKind", "Expected", "Actual", "Intentional", "LedgerRationale", "LedgerProvenance"],
+      "properties": {
+        "LogicalId": { "type": "string", "minLength": 1 },
+        "RecordKind": { "enum": ["type", "member"] },
+        "Facet": { "type": "string", "minLength": 1 },
+        "DifferenceKind": { "enum": ["missing", "extra", "changed"] },
+        "Expected": { "type": ["string", "null"] },
+        "Actual": { "type": ["string", "null"] },
+        "Intentional": { "type": "boolean" },
+        "LedgerRationale": { "type": ["string", "null"] },
+        "LedgerProvenance": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

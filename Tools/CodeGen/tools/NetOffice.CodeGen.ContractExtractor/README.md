@@ -10,28 +10,85 @@ source.
 
 ## Invocation
 
-From the `NetOffice` repository root:
+From the `NetOffice` repository root, extract every supported API product:
 
 ```text
 dotnet run --project Tools/CodeGen/tools/NetOffice.CodeGen.ContractExtractor/NetOffice.CodeGen.ContractExtractor.csproj -- \
-  --source Source --api DAO \
-  --output Tools/CodeGen/contracts/wrapper/DAO.wrapper-contract.json
+  extract-all --source Source --output-dir Tools/CodeGen/contracts/wrapper
 ```
 
-The command writes the contract and, beside it, `<Api>.compatibility-ledger.json`
-and `<Api>.classification.json`. Use `--ledger` and `--classification` to choose
-explicit paths. `--help` prints the complete option synopsis.
+The fixed corpus is ADODB, Access, DAO, Excel, MSComctlLib, MSDATASRC,
+Office, Outlook, OWC10, PowerPoint, VBIDE, and Word. `extract` accepts
+`--source`, `--api`, and optional `--output`, `--ledger`, and
+`--classification` arguments for a single product. The legacy form beginning
+directly with `--source` remains equivalent to `extract`.
+
+Validate checked-in artifacts and prove byte-deterministic re-extraction:
+
+```text
+dotnet run --project Tools/CodeGen/tools/NetOffice.CodeGen.ContractExtractor/NetOffice.CodeGen.ContractExtractor.csproj -- \
+  validate --contracts Tools/CodeGen/contracts/wrapper --source Source
+```
+
+Compare generated source semantically with the immutable oracle:
+
+```text
+dotnet run --project Tools/CodeGen/tools/NetOffice.CodeGen.ContractExtractor/NetOffice.CodeGen.ContractExtractor.csproj -- \
+  compare --expected Tools/CodeGen/contracts/wrapper --actual <generated-tree> \
+  --report <report.json>
+```
+
+The comparison writes the aggregate report and one
+`<Api>.semantic-diff.json` report beside it. It compares types, members,
+attributes, defaults, bases/interfaces, invocation facets, support versions,
+baseline documentation, and source partition. Reports keep intentional
+compatibility-ledger differences explicit and separately count unexplained
+differences. Exit code `0` means semantic parity and exit code `3` means
+unexplained drift.
+Semantic reports declare normalization profile `csharp-semantic/v1`. It treats
+`global::` qualification, the generated `NetRuntimeSystem` alias, CLR primitive
+names versus C# keywords, qualified attribute names/`Attribute` suffixes,
+insignificant C# whitespace, token trivia and redundant top-level empty
+statements in invocation snippets, optional trailing enum-value commas, XML-doc
+trivia whitespace, and field-like versus custom-accessor event declaration
+syntax as equivalent. Event `add`/`remove`
+bodies are retained in the invocation facet. String literals, parameter
+names/defaults, attribute presence/arguments, invocation token order and
+operations/arguments/statements, documentation text/elements/links, and file
+partitions remain exact semantic comparisons.
 
 ## Contract shape
 
 `contracts/wrapper/wrapper-contract.schema.json` defines schema version `1.0`.
 A contract contains the normalized source roots and sorted source-file hashes,
-type records, public/protected member signatures, attributes, base types,
-interfaces, safely recognizable invocation text, and explicit `Unknowns` and
-`Ambiguities` arrays. File and record ordering is ordinal and output is UTF-8
-without a BOM with a final newline. Source paths use `/` separators, and source
-hashes are calculated over normalized LF text.
+type records, public/protected member signatures, attributes, base types and
+interfaces, safely recognizable invocation text, parameter default values, and
+captured baseline XML documentation. Partial declarations are consolidated under
+one unique logical type ID while `Parts` preserves every declaration's source
+partition, signature, attributes, bases/interfaces, and documentation.
+Malformed XML documentation retains its raw text and parse error on the
+documentation record instead of making an otherwise projectable contract
+ambiguous. Properties, indexers, events, methods, fields, constructors, enum
+values, and explicit interface implementations are classified from complete
+declaration state rather than a single source line. Unknowns and ambiguities
+remain explicit for unresolved wrapper-generated declarations; non-wrapper
+runtime/companion parser gaps are represented by the ownership classification
+and do not contaminate the projectable wrapper contract.
+Documentation/attribute trivia is consumed by its immediately following
+declaration even when that declaration is private or outside wrapper ownership;
+it never leaks onto a later public member. Validation rejects any extracted
+`<param>` name absent from its member signature.
+File and record ordering is ordinal and output is UTF-8 without a BOM with a
+final newline. Source paths use `/` separators, and source hashes are calculated
+over normalized LF text.
 
-The checked-in DAO files are a reproducible example and can be regenerated with
-the command above. The extractor never reads network resources, compiled
-assemblies, or product-specific configuration.
+Each product also has a complete file/type classification. Canonical wrapper
+folders are marked `wrapper-generated`; API tools/properties are `companion`;
+native interop files are `runtime`; and remaining project files are `manual`.
+`BuildAction` tells an isolated-tree consumer whether to generate the file or
+copy hand-maintained companion source, so checked-in wrapper implementations
+are never used as generation input.
+
+All twelve checked-in product artifact sets are regenerated by `extract-all`.
+The extractor never reads network resources, compiled assemblies, or
+product-specific configuration.

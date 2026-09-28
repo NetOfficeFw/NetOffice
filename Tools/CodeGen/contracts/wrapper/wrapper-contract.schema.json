@@ -56,7 +56,7 @@
   "$defs": {
     "type": {
       "type": "object",
-      "required": ["LogicalId", "Namespace", "Name", "Kind", "Accessibility", "Modifiers", "Interfaces", "Attributes", "Source", "Line", "Signature", "Members"],
+      "required": ["LogicalId", "Namespace", "Name", "Kind", "Accessibility", "Modifiers", "SupportVersions", "Interfaces", "Attributes", "Source", "Line", "Signature", "Parts", "Members"],
       "properties": {
         "LogicalId": { "type": "string", "minLength": 1 },
         "Namespace": { "type": "string" },
@@ -64,31 +64,69 @@
         "Kind": { "enum": ["class", "interface", "struct", "enum", "delegate"] },
         "Accessibility": { "type": "string" },
         "Modifiers": { "type": "array", "items": { "type": "string" } },
+        "SupportVersions": { "type": "array", "items": { "type": "string" } },
         "BaseType": { "type": ["string", "null"] },
         "Interfaces": { "type": "array", "items": { "type": "string" } },
         "Attributes": { "type": "array", "items": { "type": "string" } },
+        "Documentation": { "anyOf": [{ "$ref": "#/$defs/documentation" }, { "type": "null" }] },
         "Source": { "type": "string", "minLength": 1 },
         "Line": { "type": "integer", "minimum": 1 },
         "Signature": { "type": "string", "minLength": 1 },
+        "Parts": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/typePart" } },
         "Members": { "type": "array", "items": { "$ref": "#/$defs/member" } }
+      },
+      "additionalProperties": false
+    },
+    "typePart": {
+      "type": "object",
+      "required": ["Source", "Line", "Signature", "Attributes", "BaseType", "Interfaces", "Documentation"],
+      "properties": {
+        "Source": { "type": "string", "minLength": 1 },
+        "Line": { "type": "integer", "minimum": 1 },
+        "Signature": { "type": "string", "minLength": 1 },
+        "Attributes": { "type": "array", "items": { "type": "string" } },
+        "BaseType": { "type": ["string", "null"] },
+        "Interfaces": { "type": "array", "items": { "type": "string" } },
+        "Documentation": { "anyOf": [{ "$ref": "#/$defs/documentation" }, { "type": "null" }] }
       },
       "additionalProperties": false
     },
     "member": {
       "type": "object",
-      "required": ["Name", "Kind", "Accessibility", "Modifiers", "Signature", "Attributes", "InvocationText", "Source", "Line"],
+      "required": ["LogicalId", "Name", "Kind", "Accessibility", "Modifiers", "SupportVersions", "Signature", "Attributes", "InvocationText", "Source", "Line"],
       "properties": {
+        "LogicalId": { "type": "string", "minLength": 1 },
         "Name": { "type": "string", "minLength": 1 },
         "Kind": { "type": "string", "minLength": 1 },
         "Accessibility": { "type": "string" },
         "Modifiers": { "type": "array", "items": { "type": "string" } },
         "ReturnType": { "type": ["string", "null"] },
         "Parameters": { "type": ["string", "null"] },
+        "DefaultValues": { "type": "object", "additionalProperties": { "type": "string" } },
+        "Documentation": { "anyOf": [{ "$ref": "#/$defs/documentation" }, { "type": "null" }] },
         "Signature": { "type": "string", "minLength": 1 },
         "Attributes": { "type": "array", "items": { "type": "string" } },
         "InvocationText": { "type": "array", "items": { "type": "string" } },
+        "SupportVersions": { "type": "array", "items": { "type": "string" } },
         "Source": { "type": "string", "minLength": 1 },
         "Line": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "documentation": {
+      "type": "object",
+      "required": ["ParseStatus", "ParseError", "Raw", "Parameters", "TypeParameters", "Exceptions"],
+      "properties": {
+        "ParseStatus": { "enum": ["parsed", "invalid"] },
+        "ParseError": { "type": ["string", "null"] },
+        "Raw": { "type": ["string", "null"] },
+        "Summary": { "type": ["string", "null"] },
+        "Remarks": { "type": ["string", "null"] },
+        "Returns": { "type": ["string", "null"] },
+        "Value": { "type": ["string", "null"] },
+        "Parameters": { "type": "object", "additionalProperties": { "type": "string" } },
+        "TypeParameters": { "type": "object", "additionalProperties": { "type": "string" } },
+        "Exceptions": { "type": "array", "items": { "type": "string" } }
       },
       "additionalProperties": false
     },

@@ -1,0 +1,1290 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperContract",
+  "Generator": {
+    "Name": "NetOffice.CodeGen.ContractExtractor",
+    "Version": "1.0.0"
+  },
+  "Source": {
+    "Root": "Source",
+    "Api": "MSDATASRC",
+    "SourceRoots": [
+      "Source/MSDATASRC"
+    ],
+    "Files": [
+      {
+        "Path": "AssemblyInfo.cs",
+        "Sha256": "679012083555a0cc2658fb9a247ee206a6f3177a5ae7282e9464fc2db5544c12",
+        "LineCount": 27
+      },
+      {
+        "Path": "Interfaces/DataSource.cs",
+        "Sha256": "4f4e8e4d88498ef34ad0c3dd718d908c65985edf981bf59bc2d50a0e2dd94c9f",
+        "LineCount": 174
+      },
+      {
+        "Path": "Interfaces/DataSourceListener.cs",
+        "Sha256": "da15eda19ef0e7f8d2e169c741537d3515e999f039badfcbb3fac9ad5bb28655",
+        "LineCount": 152
+      },
+      {
+        "Path": "Utils/ProjectInfo.cs",
+        "Sha256": "60e4e98c6d79ded93fe8689be860c7aebfa736bf3af75380195474b66d120602",
+        "LineCount": 121
+      }
+    ]
+  },
+  "Types": [
+    {
+      "LogicalId": "MSDATASRCApi.Utils.ProjectInfo",
+      "Namespace": "MSDATASRCApi.Utils",
+      "Name": "ProjectInfo",
+      "Kind": "class",
+      "Accessibility": "public",
+      "Modifiers": [],
+      "SupportVersions": [],
+      "BaseType": "IFactoryInfo",
+      "Interfaces": [],
+      "Attributes": [],
+      "Documentation": {
+        "ParseStatus": "parsed",
+        "ParseError": null,
+        "Raw": "<summary>\nNecessary factory info, used from NetOffice.Core while Initialize()\n</summary>",
+        "Summary": "Necessary factory info, used from NetOffice.Core while Initialize()",
+        "Remarks": null,
+        "Returns": null,
+        "Value": null,
+        "Parameters": {},
+        "TypeParameters": {},
+        "Exceptions": []
+      },
+      "Source": "Utils/ProjectInfo.cs",
+      "Line": 12,
+      "Signature": "public class ProjectInfo : IFactoryInfo",
+      "Parts": [
+        {
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 12,
+          "Signature": "public class ProjectInfo : IFactoryInfo",
+          "Attributes": [],
+          "BaseType": "IFactoryInfo",
+          "Interfaces": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nNecessary factory info, used from NetOffice.Core while Initialize()\n</summary>",
+            "Summary": "Necessary factory info, used from NetOffice.Core while Initialize()",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ],
+      "Members": [
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::constructor:ProjectInfo()",
+          "Name": "ProjectInfo",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "()",
+          "DefaultValues": {},
+          "Signature": "public ProjectInfo() {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 28
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::method:Contains(Type type)",
+          "Name": "Contains",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "bool",
+          "Parameters": "(Type type)",
+          "DefaultValues": {},
+          "Signature": "public bool Contains(Type type) {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 89
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::method:Contains(string className)",
+          "Name": "Contains",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "bool",
+          "Parameters": "(string className)",
+          "DefaultValues": {},
+          "Signature": "public bool Contains(string className) {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 103
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::property:Assembly",
+          "Name": "Assembly",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Assembly",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public Assembly Assembly {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 63
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::property:AssemblyAttribute",
+          "Name": "AssemblyAttribute",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "NetOfficeAssemblyAttribute",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public NetOfficeAssemblyAttribute AssemblyAttribute {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 71
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::property:AssemblyName",
+          "Name": "AssemblyName",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "string",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public string AssemblyName {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 39
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::property:AssemblyNamespace",
+          "Name": "AssemblyNamespace",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "string",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public string AssemblyNamespace {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 47
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::property:ComponentGuid",
+          "Name": "ComponentGuid",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Guid[]",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public Guid[] ComponentGuid {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 55
+        },
+        {
+          "LogicalId": "MSDATASRCApi.Utils.ProjectInfo::property:Dependencies",
+          "Name": "Dependencies",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "string[]",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public string[] Dependencies {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Utils/ProjectInfo.cs",
+          "Line": 79
+        }
+      ]
+    },
+    {
+      "LogicalId": "NetOffice.MSDATASRCApi.DataSource",
+      "Namespace": "NetOffice.MSDATASRCApi",
+      "Name": "DataSource",
+      "Kind": "class",
+      "Accessibility": "public",
+      "Modifiers": [],
+      "SupportVersions": [
+        "\"MSDATASRC\", 4"
+      ],
+      "BaseType": "COMObject",
+      "Interfaces": [],
+      "Attributes": [
+        "EntityType(EntityType.IsInterface)",
+        "SupportByVersion(\"MSDATASRC\", 4)"
+      ],
+      "Documentation": {
+        "ParseStatus": "parsed",
+        "ParseError": null,
+        "Raw": "<summary>\nInterface DataSource\nSupportByVersion MSDATASRC, 4\n</summary>",
+        "Summary": "Interface DataSource SupportByVersion MSDATASRC, 4",
+        "Remarks": null,
+        "Returns": null,
+        "Value": null,
+        "Parameters": {},
+        "TypeParameters": {},
+        "Exceptions": []
+      },
+      "Source": "Interfaces/DataSource.cs",
+      "Line": 14,
+      "Signature": "public class DataSource : COMObject",
+      "Parts": [
+        {
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 14,
+          "Signature": "public class DataSource : COMObject",
+          "Attributes": [
+            "SupportByVersion(\"MSDATASRC\", 4)",
+            "EntityType(EntityType.IsInterface)"
+          ],
+          "BaseType": "COMObject",
+          "Interfaces": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nInterface DataSource\nSupportByVersion MSDATASRC, 4\n</summary>",
+            "Summary": "Interface DataSource SupportByVersion MSDATASRC, 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ],
+      "Members": [
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource()",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "()",
+          "DefaultValues": {},
+          "Signature": "public DataSource() : base() {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 96
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(Core factory, ICOMObject parentObject, COMProxyShare proxyShare)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(Core factory, ICOMObject parentObject, COMProxyShare proxyShare)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare) {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"factory\">current used factory core</param>\n<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"proxyShare\">proxy share instead if com proxy</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "factory": "current used factory core",
+              "parentObject": "object there has created the proxy",
+              "proxyShare": "proxy share instead if com proxy"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 52
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(Core factory, ICOMObject parentObject, object comProxy)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(Core factory, ICOMObject parentObject, object comProxy)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy) {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"factory\">current used factory core</param>\n<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "factory": "current used factory core",
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 59
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"factory\">current used factory core</param>\n<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>\n<param name=\"comProxyType\">Type of inner wrapped COM proxy\"</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "factory": "current used factory core",
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy",
+              "comProxyType": "Type of inner wrapped COM proxy\""
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 76
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(ICOMObject parentObject, object comProxy)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(ICOMObject parentObject, object comProxy)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 67
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>\n<param name=\"comProxyType\">Type of inner wrapped COM proxy\"</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy",
+              "comProxyType": "Type of inner wrapped COM proxy\""
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 85
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(ICOMObject replacedObject)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(ICOMObject replacedObject)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(ICOMObject replacedObject) : base(replacedObject) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"replacedObject\">object to replaced. replacedObject are not usable after this action</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "replacedObject": "object to replaced. replacedObject are not usable after this action"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 91
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::constructor:DataSource(string progId)",
+          "Name": "DataSource",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(string progId)",
+          "DefaultValues": {},
+          "Signature": "public DataSource(string progId) : base(progId) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"progId\">registered progID</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "progId": "registered progID"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 102
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::method:addDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)",
+          "Name": "addDataSourceListener",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Int32",
+          "Parameters": "(NetOffice.MSDATASRCApi.DataSourceListener pDSL)",
+          "DefaultValues": {},
+          "Signature": "public Int32 addDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteInt32MethodGet(this, \"addDataSourceListener\", pDSL);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"pDSL\">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "pDSL": "NetOffice.MSDATASRCApi.DataSourceListener pDSL"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 153
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::method:getDataMember(string bstrDM, Guid riid)",
+          "Name": "getDataMember",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "object",
+          "Parameters": "(string bstrDM, Guid riid)",
+          "DefaultValues": {},
+          "Signature": "public object getDataMember(string bstrDM, Guid riid) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteVariantMethodGet(this, \"getDataMember\", bstrDM, riid);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"bstrDM\">string bstrDM</param>\n<param name=\"riid\">Guid riid</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "bstrDM": "string bstrDM",
+              "riid": "Guid riid"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 121
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::method:getDataMemberCount()",
+          "Name": "getDataMemberCount",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Int32",
+          "Parameters": "()",
+          "DefaultValues": {},
+          "Signature": "public Int32 getDataMemberCount() {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteInt32MethodGet(this, \"getDataMemberCount\");"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 142
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::method:getDataMemberName(Int32 lIndex)",
+          "Name": "getDataMemberName",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "string",
+          "Parameters": "(Int32 lIndex)",
+          "DefaultValues": {},
+          "Signature": "public string getDataMemberName(Int32 lIndex) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteStringMethodGet(this, \"getDataMemberName\", lIndex);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"lIndex\">Int32 lIndex</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "lIndex": "Int32 lIndex"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 132
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::method:removeDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL)",
+          "Name": "removeDataSourceListener",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Int32",
+          "Parameters": "(NetOffice.MSDATASRCApi.DataSourceListener pDSL)",
+          "DefaultValues": {},
+          "Signature": "public Int32 removeDataSourceListener(NetOffice.MSDATASRCApi.DataSourceListener pDSL) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteInt32MethodGet(this, \"removeDataSourceListener\", pDSL);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"pDSL\">NetOffice.MSDATASRCApi.DataSourceListener pDSL</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "pDSL": "NetOffice.MSDATASRCApi.DataSourceListener pDSL"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 164
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::property:InstanceType",
+          "Name": "InstanceType",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [
+            "override"
+          ],
+          "ReturnType": "Type",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public override Type InstanceType {",
+          "Attributes": [
+            "Browsable(false)",
+            "Category(\"NetOffice\")",
+            "CoreOverridden",
+            "EditorBrowsable(EditorBrowsableState.Advanced)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nInstance Type\n</summary>",
+            "Summary": "Instance Type",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 24
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSource::property:LateBindingApiWrapperType",
+          "Name": "LateBindingApiWrapperType",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [
+            "static"
+          ],
+          "ReturnType": "Type",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public static Type LateBindingApiWrapperType {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Interfaces/DataSource.cs",
+          "Line": 35
+        }
+      ]
+    },
+    {
+      "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener",
+      "Namespace": "NetOffice.MSDATASRCApi",
+      "Name": "DataSourceListener",
+      "Kind": "class",
+      "Accessibility": "public",
+      "Modifiers": [],
+      "SupportVersions": [
+        "\"MSDATASRC\", 4"
+      ],
+      "BaseType": "COMObject",
+      "Interfaces": [],
+      "Attributes": [
+        "EntityType(EntityType.IsInterface)",
+        "SupportByVersion(\"MSDATASRC\", 4)"
+      ],
+      "Documentation": {
+        "ParseStatus": "parsed",
+        "ParseError": null,
+        "Raw": "<summary>\nInterface DataSourceListener\nSupportByVersion MSDATASRC, 4\n</summary>",
+        "Summary": "Interface DataSourceListener SupportByVersion MSDATASRC, 4",
+        "Remarks": null,
+        "Returns": null,
+        "Value": null,
+        "Parameters": {},
+        "TypeParameters": {},
+        "Exceptions": []
+      },
+      "Source": "Interfaces/DataSourceListener.cs",
+      "Line": 14,
+      "Signature": "public class DataSourceListener : COMObject",
+      "Parts": [
+        {
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 14,
+          "Signature": "public class DataSourceListener : COMObject",
+          "Attributes": [
+            "SupportByVersion(\"MSDATASRC\", 4)",
+            "EntityType(EntityType.IsInterface)"
+          ],
+          "BaseType": "COMObject",
+          "Interfaces": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nInterface DataSourceListener\nSupportByVersion MSDATASRC, 4\n</summary>",
+            "Summary": "Interface DataSourceListener SupportByVersion MSDATASRC, 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          }
+        }
+      ],
+      "Members": [
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener()",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "()",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener() : base() {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 96
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(Core factory, ICOMObject parentObject, COMProxyShare proxyShare)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(Core factory, ICOMObject parentObject, COMProxyShare proxyShare)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare) {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"factory\">current used factory core</param>\n<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"proxyShare\">proxy share instead if com proxy</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "factory": "current used factory core",
+              "parentObject": "object there has created the proxy",
+              "proxyShare": "proxy share instead if com proxy"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 52
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(Core factory, ICOMObject parentObject, object comProxy)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(Core factory, ICOMObject parentObject, object comProxy)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy) {",
+          "Attributes": [],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"factory\">current used factory core</param>\n<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "factory": "current used factory core",
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 59
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"factory\">current used factory core</param>\n<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>\n<param name=\"comProxyType\">Type of inner wrapped COM proxy\"</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "factory": "current used factory core",
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy",
+              "comProxyType": "Type of inner wrapped COM proxy\""
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 76
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(ICOMObject parentObject, object comProxy)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(ICOMObject parentObject, object comProxy)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 67
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"parentObject\">object there has created the proxy</param>\n<param name=\"comProxy\">inner wrapped COM proxy</param>\n<param name=\"comProxyType\">Type of inner wrapped COM proxy\"</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "parentObject": "object there has created the proxy",
+              "comProxy": "inner wrapped COM proxy",
+              "comProxyType": "Type of inner wrapped COM proxy\""
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 85
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(ICOMObject replacedObject)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(ICOMObject replacedObject)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(ICOMObject replacedObject) : base(replacedObject) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"replacedObject\">object to replaced. replacedObject are not usable after this action</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "replacedObject": "object to replaced. replacedObject are not usable after this action"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 91
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::constructor:DataSourceListener(string progId)",
+          "Name": "DataSourceListener",
+          "Kind": "constructor",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": null,
+          "Parameters": "(string progId)",
+          "DefaultValues": {},
+          "Signature": "public DataSourceListener(string progId) : base(progId) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<param name=\"progId\">registered progID</param>",
+            "Summary": null,
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "progId": "registered progID"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 102
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::method:dataMemberAdded(string bstrDM)",
+          "Name": "dataMemberAdded",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Int32",
+          "Parameters": "(string bstrDM)",
+          "DefaultValues": {},
+          "Signature": "public Int32 dataMemberAdded(string bstrDM) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteInt32MethodGet(this, \"dataMemberAdded\", bstrDM);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"bstrDM\">string bstrDM</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "bstrDM": "string bstrDM"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 131
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::method:dataMemberChanged(string bstrDM)",
+          "Name": "dataMemberChanged",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Int32",
+          "Parameters": "(string bstrDM)",
+          "DefaultValues": {},
+          "Signature": "public Int32 dataMemberChanged(string bstrDM) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteInt32MethodGet(this, \"dataMemberChanged\", bstrDM);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"bstrDM\">string bstrDM</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "bstrDM": "string bstrDM"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 120
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::method:dataMemberRemoved(string bstrDM)",
+          "Name": "dataMemberRemoved",
+          "Kind": "method",
+          "Accessibility": "public",
+          "Modifiers": [],
+          "ReturnType": "Int32",
+          "Parameters": "(string bstrDM)",
+          "DefaultValues": {},
+          "Signature": "public Int32 dataMemberRemoved(string bstrDM) {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)",
+            "SupportByVersion(\"MSDATASRC\", 4)"
+          ],
+          "InvocationText": [
+            "return Factory.ExecuteInt32MethodGet(this, \"dataMemberRemoved\", bstrDM);"
+          ],
+          "SupportVersions": [
+            "\"MSDATASRC\", 4"
+          ],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nSupportByVersion MSDATASRC 4\n</summary>\n<param name=\"bstrDM\">string bstrDM</param>",
+            "Summary": "SupportByVersion MSDATASRC 4",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {
+              "bstrDM": "string bstrDM"
+            },
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 142
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::property:InstanceType",
+          "Name": "InstanceType",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [
+            "override"
+          ],
+          "ReturnType": "Type",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public override Type InstanceType {",
+          "Attributes": [
+            "Browsable(false)",
+            "Category(\"NetOffice\")",
+            "CoreOverridden",
+            "EditorBrowsable(EditorBrowsableState.Advanced)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": {
+            "ParseStatus": "parsed",
+            "ParseError": null,
+            "Raw": "<summary>\nInstance Type\n</summary>",
+            "Summary": "Instance Type",
+            "Remarks": null,
+            "Returns": null,
+            "Value": null,
+            "Parameters": {},
+            "TypeParameters": {},
+            "Exceptions": []
+          },
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 24
+        },
+        {
+          "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener::property:LateBindingApiWrapperType",
+          "Name": "LateBindingApiWrapperType",
+          "Kind": "property",
+          "Accessibility": "public",
+          "Modifiers": [
+            "static"
+          ],
+          "ReturnType": "Type",
+          "Parameters": null,
+          "DefaultValues": {},
+          "Signature": "public static Type LateBindingApiWrapperType {",
+          "Attributes": [
+            "Browsable(false)",
+            "EditorBrowsable(EditorBrowsableState.Never)"
+          ],
+          "InvocationText": [],
+          "SupportVersions": [],
+          "Documentation": null,
+          "Source": "Interfaces/DataSourceListener.cs",
+          "Line": 35
+        }
+      ]
+    }
+  ],
+  "Unknowns": [],
+  "Ambiguities": []
+}

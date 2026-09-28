@@ -1,0 +1,68 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperClassification",
+  "Api": "MSDATASRC",
+  "Files": [
+    {
+      "Path": "AssemblyInfo.cs",
+      "Ownership": "manual",
+      "BuildAction": "copy-companion",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Hand-maintained project source outside generator ownership.",
+      "TypeLogicalIds": []
+    },
+    {
+      "Path": "Interfaces/DataSource.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSDATASRCApi.DataSource"
+      ]
+    },
+    {
+      "Path": "Interfaces/DataSourceListener.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "NetOffice.MSDATASRCApi.DataSourceListener"
+      ]
+    },
+    {
+      "Path": "Utils/ProjectInfo.cs",
+      "Ownership": "wrapper-generated",
+      "BuildAction": "generate",
+      "RequiredForIsolatedBuild": true,
+      "Reason": "Canonical wrapper category emitted from the logical API graph.",
+      "TypeLogicalIds": [
+        "MSDATASRCApi.Utils.ProjectInfo"
+      ]
+    }
+  ],
+  "Entries": [
+    {
+      "LogicalId": "MSDATASRCApi.Utils.ProjectInfo",
+      "Source": "Utils/ProjectInfo.cs",
+      "Category": "Utils",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSDATASRCApi.DataSource",
+      "Source": "Interfaces/DataSource.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    },
+    {
+      "LogicalId": "NetOffice.MSDATASRCApi.DataSourceListener",
+      "Source": "Interfaces/DataSourceListener.cs",
+      "Category": "Interfaces",
+      "Ownership": "wrapper-generated",
+      "Kind": "class"
+    }
+  ]
+}
