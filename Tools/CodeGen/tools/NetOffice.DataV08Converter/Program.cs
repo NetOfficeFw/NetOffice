@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Xml;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using NetOffice.CodeGen.Data;
@@ -18,13 +20,16 @@ internal static class ConverterProgram
         var options = ParseOptions(args);
         if (options.Error is not null)
             return await WriteFailureAsync(options.Report, "usage", options.Error);
-        var inputOption = options.Input!;
-        var outputOption = options.Output!;
         var reportOption = options.Report!;
         var schemaOption = options.Schema!;
         if (!File.Exists(schemaOption))
             return await WriteFailureAsync(reportOption, "schema-missing", $"Schema file was not found: {schemaOption}");
 
+        if (options.InputXml is not null)
+            return await RunXmlAsync(args, options.InputXml, options.Product, options.Output!, reportOption, schemaOption);
+
+        var inputOption = options.Input!;
+        var outputOption = options.Output!;
         var input = ResolveInput(inputOption);
         if (input.Error is not null)
             return await WriteFailureAsync(reportOption, "input-unavailable", input.Error);
@@ -54,6 +59,7 @@ internal static class ConverterProgram
             {
                 schemaVersion = DataSchema.Version,
                 serialization = DataSchema.Serialization,
+                mode = "canonical-json",
                 input = input.Path,
                 output = issues.Length == 0 ? graphPath : null,
                 status = issues.Length == 0 ? "ok" : "invalid",
@@ -73,33 +79,110 @@ internal static class ConverterProgram
         }
     }
 
-    private static (string? Input, string? Output, string? Report, string? Schema, string? Error) ParseOptions(string[] args)
+    private static async Task<int> RunXmlAsync(string[] args, string inputXml, string? product, string output, string report, string schema)
+    {
+        if (!Directory.Exists(inputXml))
+            return await WriteFailureAsync(report, "input-unavailable", $"XML input directory does not exist: {inputXml}");
+        try
+        {
+            var stopwatch = Stopwatch.StartNew();
+            var tree = TreeHasher.ComputeDirectory(inputXml);
+            var schemaDigest = TreeHasher.ComputeFile(schema);
+            var conversion = XmlCorpusConverter.Convert(inputXml, inputXml, tree.Digest, product);
+            var graphPath = Path.Combine(output, "graph.json");
+            Directory.CreateDirectory(output);
+            var validation = DataGraphValidator.Validate(conversion.Graph);
+            CanonicalJson.WritePrecomputed(graphPath, conversion.Graph);
+            var validationIssues = validation.Issues.Select(static issue => issue.ToString()).ToArray();
+            var incomplete = conversion.Graph.Unknowns.Count != 0
+                || conversion.Graph.AbsentFacts.Count != 0
+                || conversion.Graph.StaleRecords.Count != 0
+                || conversion.Graph.Ambiguities.Count != 0
+                || validationIssues.Length != 0;
+            var reportDocument = new
+            {
+                schemaVersion = DataSchema.Version,
+                serialization = DataSchema.Serialization,
+                mode = "input-xml-exploratory",
+                pinned = false,
+                product,
+                input = Path.GetFullPath(inputXml),
+                output = Path.GetFullPath(graphPath),
+                inputTreeHash = tree.Digest,
+                schemaDigest,
+                graphDigest = conversion.Graph.Digest,
+                status = incomplete ? "exploratory-incomplete" : "exploratory-ok",
+                command = Environment.CommandLine,
+                reproductionCommand = BuildCommand(args),
+                elapsedMilliseconds = stopwatch.ElapsedMilliseconds,
+                peakWorkingSetBytes = Process.GetCurrentProcess().PeakWorkingSet64,
+                counts = conversion.Stats,
+                absentFacts = conversion.Graph.AbsentFacts.Select(static fact => new
+                {
+                    fact.LogicalId,
+                    fact.TargetId,
+                    fact.Kind,
+                    fact.Reason,
+                    fact.Provenance
+                }).ToArray(),
+                diagnostics = conversion.Diagnostics,
+                validationIssues
+            };
+            await WriteReportAsync(report, reportDocument);
+            return 0;
+        }
+        catch (XmlException exception)
+        {
+            return await WriteFailureAsync(report, "input-invalid", exception.Message);
+        }
+        catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or InvalidDataException)
+        {
+            return await WriteFailureAsync(report, "conversion-failed", exception.Message);
+        }
+    }
+
+    private static string BuildCommand(string[] args)
+        => "dotnet run --project Tools/CodeGen/tools/NetOffice.DataV08Converter/NetOffice.DataV08Converter.csproj -- "
+            + string.Join(" ", args.Select(Quote));
+
+    private static string Quote(string value)
+        => value.IndexOfAny([' ', '\t', '"']) < 0 ? value : "\"" + value.Replace("\"", "\\\"", StringComparison.Ordinal) + "\"";
+
+    private static (string? Input, string? InputXml, string? Product, string? Output, string? Report, string? Schema, string? Error) ParseOptions(string[] args)
     {
         string? input = null;
+        string? inputXml = null;
+        string? product = null;
         string? output = null;
         string? report = null;
         string? schema = null;
         for (var index = 0; index < args.Length; index++)
         {
             var value = args[index];
-            if (value is "--input" or "--output" or "--report" or "--schema")
+            if (value is "--input" or "--input-xml" or "--product" or "--output" or "--report" or "--schema")
             {
                 if (++index >= args.Length)
-                    return (null, null, report, schema ?? "schema.json", $"Missing value for {value}.");
+                    return (null, null, null, null, report, schema ?? "schema.json", $"Missing value for {value}.");
                 switch (value)
                 {
                     case "--input": input = args[index]; break;
+                    case "--input-xml": inputXml = args[index]; break;
+                    case "--product": product = args[index]; break;
                     case "--output": output = args[index]; break;
                     case "--report": report = args[index]; break;
                     case "--schema": schema = args[index]; break;
                 }
             }
             else
-                return (null, null, report, schema ?? "schema.json", $"Unknown argument {value}.");
+                return (null, null, null, null, report, schema ?? "schema.json", $"Unknown argument {value}.");
         }
-        if (string.IsNullOrWhiteSpace(input) || string.IsNullOrWhiteSpace(output) || string.IsNullOrWhiteSpace(report))
-            return (null, null, report, schema ?? "schema.json", "--input, --output, and --report are required.");
-        return (input, output, report, schema ?? "schema.json", null);
+        if (string.IsNullOrWhiteSpace(output) || string.IsNullOrWhiteSpace(report))
+            return (null, null, null, null, report, schema ?? "schema.json", "--output and --report are required.");
+        if (string.IsNullOrWhiteSpace(input) == string.IsNullOrWhiteSpace(inputXml))
+            return (null, null, null, null, report, schema ?? "schema.json", "Exactly one of --input or --input-xml is required.");
+        if (input is not null && product is not null)
+            return (null, null, null, null, report, schema ?? "schema.json", "--product is valid only with --input-xml.");
+        return (input, inputXml, product, output, report, schema ?? "schema.json", null);
     }
 
     private static (string? Path, string? Error) ResolveInput(string input)

@@ -8,6 +8,31 @@ public sealed record CanonicalInput
     public string Format { get; init; } = "netoffice-data-input-v1";
     public DataSource Source { get; init; } = new();
     public IReadOnlyList<CanonicalInputLibrary> Libraries { get; init; } = Array.Empty<CanonicalInputLibrary>();
+    public IReadOnlyList<CanonicalInputAlias> Aliases { get; init; } = Array.Empty<CanonicalInputAlias>();
+    public IReadOnlyList<CanonicalInputUnification> Unifications { get; init; } = Array.Empty<CanonicalInputUnification>();
+}
+
+public sealed record CanonicalInputParameter
+{
+    public string Name { get; init; } = "";
+    public string Type { get; init; } = "";
+    public string RefKind { get; init; } = "value";
+    public bool IsOptional { get; init; }
+    public string? DefaultValue { get; init; }
+}
+
+public sealed record CanonicalInputAlias
+{
+    public string Alias { get; init; } = "";
+    public string TargetKey { get; init; } = "";
+    public string Kind { get; init; } = "";
+}
+
+public sealed record CanonicalInputUnification
+{
+    public string CanonicalKey { get; init; } = "";
+    public IReadOnlyList<string> EquivalentKeys { get; init; } = Array.Empty<string>();
+    public string Reason { get; init; } = "";
 }
 
 public sealed record CanonicalInputLibrary
@@ -25,7 +50,16 @@ public sealed record CanonicalInputType
     public string Kind { get; init; } = "";
     public string? Key { get; init; }
     public IReadOnlyList<string> BaseTypeKeys { get; init; } = Array.Empty<string>();
+    public IReadOnlyList<CanonicalInputValue> Values { get; init; } = Array.Empty<CanonicalInputValue>();
     public IReadOnlyList<CanonicalInputMember> Members { get; init; } = Array.Empty<CanonicalInputMember>();
+}
+
+public sealed record CanonicalInputValue
+{
+    public string Name { get; init; } = "";
+    public string Kind { get; init; } = "";
+    public string Value { get; init; } = "";
+    public string? ValueType { get; init; }
 }
 
 public sealed record CanonicalInputMember
@@ -36,7 +70,11 @@ public sealed record CanonicalInputMember
     public int? DispId { get; init; }
     public string? ReturnType { get; init; }
     public IReadOnlyList<string> ParameterTypes { get; init; } = Array.Empty<string>();
+    public IReadOnlyList<CanonicalInputParameter> Parameters { get; init; } = Array.Empty<CanonicalInputParameter>();
     public string? AccessorGroup { get; init; }
+    public string? Value { get; init; }
+    public string? AccessorKind { get; init; }
+    public string? ValueType { get; init; }
 }
 
 public sealed record ConversionResult(DataGraph Graph, IReadOnlyList<ValidationIssue> Issues)
@@ -49,7 +87,8 @@ public static class CanonicalInputConverter
     private static readonly JsonSerializerOptions Options = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        UnmappedMemberHandling = JsonUnmappedMemberHandling.Disallow
     };
 
     public static CanonicalInput Parse(string json)
@@ -79,6 +118,7 @@ public static class CanonicalInputConverter
         var libraries = new List<DataLibrary>();
         var types = new List<DataType>();
         var members = new List<DataMember>();
+        var values = new List<DataValue>();
         var groups = new Dictionary<string, AccessorGroup>(StringComparer.Ordinal);
         var ambiguities = new List<AmbiguityRecord>();
 
@@ -152,6 +192,21 @@ public static class CanonicalInputConverter
                         AddAmbiguity(ambiguities, "missing-base-type", $"{typeId}:{baseKey}", [], ProvenanceFor(source, $"libraries/{libraryKey}/types/{typeKey}"), $"Base type {baseKey} was not found.");
                 }
                 types[types.FindIndex(item => item.LogicalId == typeId)] = type with { BaseTypeIds = baseIds };
+                foreach (var inputValue in inputType.Values.OrderBy(static item => item.Name, StringComparer.Ordinal))
+                {
+                    var valueKey = $"value:{inputValue.Name}";
+                    var valueProvenance = ProvenanceFor(source, $"libraries/{libraryKey}/types/{typeKey}/values/{inputValue.Name}");
+                    values.Add(new DataValue
+                    {
+                        LogicalId = LogicalIds.Member(typeId, valueKey),
+                        TypeId = typeId,
+                        Name = inputValue.Name,
+                        Kind = inputValue.Kind,
+                        Value = inputValue.Value,
+                        ValueType = inputValue.ValueType,
+                        Provenance = valueProvenance
+                    });
+                }
 
                 var memberEntries = inputType.Members
                     .OrderBy(static item => item.Key ?? item.Name, StringComparer.Ordinal)
@@ -175,6 +230,18 @@ public static class CanonicalInputConverter
                         ? null
                         : LogicalIds.AccessorGroup(typeId, inputMember.AccessorGroup!);
                     var provenance = ProvenanceFor(source, $"libraries/{libraryKey}/types/{typeKey}/members/{memberKey}");
+                    var parameters = inputMember.Parameters.Select((parameter, index) => new DataParameter
+                    {
+                        Name = parameter.Name,
+                        Type = parameter.Type,
+                        RefKind = parameter.RefKind,
+                        IsOptional = parameter.IsOptional,
+                        HasDefaultValue = parameter.DefaultValue is not null,
+                        DefaultValue = parameter.DefaultValue,
+                        Provenance = ProvenanceFor(source, $"{provenance.Location}/parameters/{index}")
+                    }).ToArray();
+                    if (inputMember.ParameterTypes.Count != 0 && parameters.Length == 0)
+                        issues.Add(new("input.signature.parameters", "Parameter names/ref/default facts are required; parameterTypes alone cannot be emitted.", provenance.Location));
                     members.Add(new DataMember
                     {
                         LogicalId = memberId,
@@ -184,8 +251,12 @@ public static class CanonicalInputConverter
                         SourceKey = memberKey,
                         DispId = inputMember.DispId,
                         ReturnType = inputMember.ReturnType,
-                        ParameterTypes = inputMember.ParameterTypes,
+                        ParameterTypes = inputMember.ParameterTypes.Count == 0 ? parameters.Select(static item => item.Type).ToArray() : inputMember.ParameterTypes,
+                        Parameters = parameters,
+                        Value = inputMember.Value,
+                        ValueType = inputMember.ValueType,
                         AccessorGroupId = accessorId,
+                        AccessorKind = inputMember.AccessorKind,
                         Provenance = provenance
                     });
                     if (ordinal > 0)
@@ -193,11 +264,48 @@ public static class CanonicalInputConverter
                     if (accessorId is not null)
                     {
                         if (!groups.TryGetValue(accessorId, out var group))
-                            group = new AccessorGroup { LogicalId = accessorId, TypeId = typeId, Name = inputMember.AccessorGroup! };
+                            group = new AccessorGroup { LogicalId = accessorId, TypeId = typeId, Name = inputMember.AccessorGroup!, Kind = inputMember.Kind, Provenance = provenance };
                         groups[accessorId] = group with { MemberIds = group.MemberIds.Concat([memberId]).ToArray() };
                     }
                 }
             }
+        }
+        var aliases = new List<AliasRecord>();
+        var unifications = new List<UnificationRecord>();
+        var knownEntityIds = libraries.Select(static item => item.LogicalId)
+            .Concat(types.Select(static item => item.LogicalId))
+            .Concat(members.Select(static item => item.LogicalId))
+            .Concat(values.Select(static item => item.LogicalId))
+            .ToHashSet(StringComparer.Ordinal);
+        foreach (var inputAlias in input.Aliases.OrderBy(static item => item.Alias, StringComparer.Ordinal))
+        {
+            var targetId = knownEntityIds.Contains(inputAlias.TargetKey)
+                ? inputAlias.TargetKey
+                : types.FirstOrDefault(item => item.SourceKey == inputAlias.TargetKey)?.LogicalId
+                    ?? members.FirstOrDefault(item => item.SourceKey == inputAlias.TargetKey)?.LogicalId
+                    ?? libraries.FirstOrDefault(item => item.Name == inputAlias.TargetKey)?.LogicalId;
+            var provenance = ProvenanceFor(source, $"aliases/{inputAlias.Alias}");
+            if (targetId is null)
+            {
+                AddAmbiguity(ambiguities, "missing-alias-target", inputAlias.Alias, [], provenance, $"Alias target {inputAlias.TargetKey} was not found.");
+                continue;
+            }
+            aliases.Add(new AliasRecord { LogicalId = LogicalIds.Alias(inputAlias.Alias), Alias = inputAlias.Alias, TargetId = targetId, Kind = inputAlias.Kind, Provenance = provenance });
+        }
+        foreach (var inputUnification in input.Unifications.OrderBy(static item => item.CanonicalKey, StringComparer.Ordinal))
+        {
+            var canonicalId = knownEntityIds.Contains(inputUnification.CanonicalKey)
+                ? inputUnification.CanonicalKey
+                : types.FirstOrDefault(item => item.SourceKey == inputUnification.CanonicalKey)?.LogicalId
+                    ?? members.FirstOrDefault(item => item.SourceKey == inputUnification.CanonicalKey)?.LogicalId;
+            var provenance = ProvenanceFor(source, $"unifications/{inputUnification.CanonicalKey}");
+            if (canonicalId is null)
+            {
+                AddAmbiguity(ambiguities, "missing-unification-target", inputUnification.CanonicalKey, [], provenance, "Unification canonical identity was not found.");
+                continue;
+            }
+            var equivalentIds = inputUnification.EquivalentKeys.Select(key => knownEntityIds.Contains(key) ? key : members.FirstOrDefault(item => item.SourceKey == key)?.LogicalId ?? types.FirstOrDefault(item => item.SourceKey == key)?.LogicalId).Where(static id => id is not null).Cast<string>().ToArray();
+            unifications.Add(new UnificationRecord { LogicalId = LogicalIds.Unification(inputUnification.CanonicalKey), CanonicalId = canonicalId, EquivalentIds = equivalentIds, Reason = inputUnification.Reason, Provenance = provenance });
         }
 
         var graph = new DataGraph
@@ -206,7 +314,10 @@ public static class CanonicalInputConverter
             Libraries = libraries,
             Types = types,
             Members = members,
+            Values = values,
             AccessorGroups = groups.Values.ToArray(),
+            Aliases = aliases,
+            Unifications = unifications,
             Ambiguities = ambiguities
         };
         graph = graph with { Digest = CanonicalJson.ComputeDigest(graph) };
