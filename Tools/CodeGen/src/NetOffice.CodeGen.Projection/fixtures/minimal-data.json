@@ -34,11 +34,66 @@
       "kind": "method",
       "sourceKey": "Run",
       "returnType": "void",
-      "parameterTypes": ["string"],
+      "parameterTypes": [ "string" ],
+      "parameters": [
+        {
+          "name": "value",
+          "type": "string",
+          "refKind": "value",
+          "isOptional": false,
+          "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000", "location": "members/Run/parameters/0" }
+        }
+      ],
+      "supportObservationIds": [ "fixture.support" ],
+      "invocationEvidenceId": "fixture.invoke",
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000", "location": "members/Run" }
+    }
+  ],
+  "values": [],
+  "accessorGroups": [],
+  "supportObservations": [
+    {
+      "logicalId": "fixture.support",
+      "targetId": "fixture.member",
+      "product": "Fixture",
+      "version": "1.0",
+      "present": true,
       "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
     }
   ],
-  "accessorGroups": [],
+  "aliases": [
+    {
+      "logicalId": "fixture.alias",
+      "alias": "RunAlias",
+      "targetId": "fixture.member",
+      "kind": "member",
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
+    }
+  ],
+  "unifications": [
+    {
+      "logicalId": "fixture.unification",
+      "canonicalId": "fixture.type",
+      "equivalentIds": [ "fixture.type" ],
+      "reason": "fixture identity",
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
+    }
+  ],
+  "invocationEvidence": [
+    {
+      "logicalId": "fixture.invoke",
+      "memberId": "fixture.member",
+      "operation": "method",
+      "dispatchName": "Run",
+      "argumentCount": 1,
+      "resultType": "void",
+      "requiresProxy": true,
+      "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" }
+    }
+  ],
+  "accessorEvidence": [],
+  "unknowns": [],
+  "staleRecords": [],
   "ambiguities": [],
-  "digest": "ee20249d178bc0a42091f9af1dd84ba7c1c40cd58a4d7f2ebeccc66f11879879"
+  "digest": "e3c6f34300efa8813a7f49560d1ea3a43ae79a63b5a5ab1790856165be56f568"
 }

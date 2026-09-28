@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "projection-fixture/v1",
+  "entities": [
+    { "scenario": "DAO Database", "logicalId": "dao.database", "namespace": "NetOffice.DAOApi", "category": "DispatchInterfaces", "capability": null },
+    { "scenario": "Excel Range", "logicalId": "excel.range", "namespace": "NetOffice.ExcelApi", "category": "DispatchInterfaces", "capability": null },
+    { "scenario": "PowerPoint collection", "logicalId": "powerpoint.presentations", "namespace": "NetOffice.PowerPointApi", "category": "DispatchInterfaces", "capability": "collection" },
+    { "scenario": "PowerPoint event source", "logicalId": "powerpoint.application", "namespace": "NetOffice.PowerPointApi", "category": "DispatchInterfaces", "capability": "event" },
+    { "scenario": "PowerPoint event interface", "logicalId": "powerpoint.eapplication", "namespace": "NetOffice.PowerPointApi.Events", "category": "Events", "capability": "event" },
+    { "scenario": "Outlook event conflict", "logicalId": "outlook.application", "namespace": "NetOffice.OutlookApi", "category": "DispatchInterfaces", "capability": "event" },
+    { "scenario": "Access event conflict", "logicalId": "access.application", "namespace": "NetOffice.AccessApi", "category": "DispatchInterfaces", "capability": "event" },
+    { "scenario": "ADODB duplicate and inheritance", "logicalId": "adodb.recordset", "namespace": "NetOffice.ADODBApi", "category": "Classes", "capability": "activation" },
+    { "scenario": "Office adjustments", "logicalId": "office.adjustments", "namespace": "NetOffice.OfficeApi", "category": "DispatchInterfaces", "capability": "indexer" }
+  ]
+}

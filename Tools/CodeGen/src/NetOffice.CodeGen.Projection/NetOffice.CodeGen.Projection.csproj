@@ -12,4 +12,9 @@
     <ProjectReference Include="..\NetOffice.CodeGen.Data\NetOffice.CodeGen.Data.csproj" />
     <Compile Include="..\..\policy\ProjectionPolicy.cs" Link="Policy\ProjectionPolicy.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Tests\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="Tests\**" />
+  </ItemGroup>
 </Project>
