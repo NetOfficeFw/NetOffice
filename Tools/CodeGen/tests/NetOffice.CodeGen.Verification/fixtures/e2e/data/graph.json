@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2.0",
+  "serialization": "netoffice-data-v2-json",
+  "source": { "kind": "fixture", "path": "minimal", "sha256": "0000000000000000000000000000000000000000000000000000000000000000" },
+  "projects": [{ "logicalId": "fixture.project", "name": "Fixture", "namespace": "Fixture", "sourceKey": "Fixture", "version": "1.0", "fileVersion": "1.0", "sourceCategories": ["Interfaces"], "libraryIds": ["fixture.lib"], "referenceProjectIds": [], "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "libraries": [{ "logicalId": "fixture.lib", "name": "Fixture", "guid": "00000000-0000-0000-0000-000000000001", "sourceKey": "Fixture", "version": "1.0", "major": "1", "minor": "0", "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "types": [{ "logicalId": "fixture.type", "libraryId": "fixture.lib", "projectId": "fixture.project", "namespace": "Fixture", "sourceCategory": "Interfaces", "name": "Widget", "kind": "Interface", "sourceKey": "Widget", "baseTypeIds": [], "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "members": [{ "logicalId": "fixture.member", "typeId": "fixture.type", "name": "Run", "kind": "method", "sourceKey": "Run", "returnType": "void", "parameterTypes": ["string"], "parameters": [{ "name": "value", "type": "string", "refKind": "value", "isOptional": false, "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000", "location": "members/Run/parameters/0" } }], "supportObservationIds": ["fixture.support"], "invocationEvidenceId": "fixture.invoke", "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000", "location": "members/Run" } }],
+  "values": [], "accessorGroups": [],
+  "supportObservations": [{ "logicalId": "fixture.support", "targetId": "fixture.member", "product": "Fixture", "versions": ["1.0"], "libraryIds": ["fixture.lib"], "present": true, "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "aliases": [{ "logicalId": "fixture.alias", "alias": "RunAlias", "targetId": "fixture.member", "kind": "member", "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "unifications": [{ "logicalId": "fixture.unification", "canonicalId": "fixture.type", "equivalentIds": ["fixture.type"], "reason": "fixture identity", "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "invocationEvidence": [{ "logicalId": "fixture.invoke", "memberId": "fixture.member", "operation": "method", "dispatchName": "Run", "argumentCount": 1, "resultType": "void", "requiresProxy": true, "provenance": { "sourcePath": "minimal", "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000" } }],
+  "accessorEvidence": [], "unknowns": [], "staleRecords": [], "ambiguities": [],
+  "digest": "f5e6aa51d554c4797ae52b4076583dfd27421b4745fa88225c904fa8fccd9bb7"
+}

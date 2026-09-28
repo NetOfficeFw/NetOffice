@@ -1,0 +1,11 @@
+{
+  "SchemaVersion": "1.0",
+  "ContractKind": "NetOffice.WrapperContract",
+  "Generator": { "Name": "fixture", "Version": "1.0" },
+  "Source": { "Root": "Source", "Api": "Fixture", "SourceRoots": ["Source/Fixture"], "Files": [] },
+  "Types": [{
+    "LogicalId": "Fixture.Widget", "Namespace": "Fixture", "Name": "Widget", "Kind": "interface", "Accessibility": "public", "Modifiers": [], "BaseType": null, "Interfaces": [], "Attributes": [], "Source": "Widget.cs", "Line": 1, "Signature": "public interface Widget",
+    "Members": [{ "Name": "Run", "Kind": "method", "Accessibility": "public", "Modifiers": [], "ReturnType": "void", "Parameters": "(string value)", "Signature": "void Run(string value)", "Attributes": [], "InvocationText": [], "Source": "Widget.cs", "Line": 3 }]
+  }],
+  "Unknowns": [], "Ambiguities": []
+}

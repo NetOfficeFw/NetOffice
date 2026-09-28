@@ -16,6 +16,7 @@
     <ProjectReference Include="..\..\src\NetOffice.CodeGen.Emit\NetOffice.CodeGen.Emit.csproj" />
     <ProjectReference Include="..\..\src\NetOffice.CodeGen.Storage\NetOffice.CodeGen.Storage.csproj" />
     <ProjectReference Include="..\..\src\NetOffice.CodeGen.Docs\NetOffice.CodeGen.Docs.csproj" />
+    <ProjectReference Include="..\..\src\NetOffice.CodeGen.Cli\NetOffice.CodeGen.Cli.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fixtures\**\*" CopyToOutputDirectory="PreserveNewest" />

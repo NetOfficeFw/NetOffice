@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "projection-policy/v1", "dataSchemaVersion": "2.0", "contractSchemaVersion": "1.0", "generatedRoot": "Generated", "filePartitionStrategy": "type", "fileExtension": ".cs", "docsKeyPrefix": "vba",
+  "names": { "reservedWords": ["class", "event", "interface", "namespace", "object", "string", "base", "this", "params", "ref", "out", "in", "void", "new", "public", "private", "protected", "internal", "static", "readonly", "get", "set", "value"], "invalidCharacterReplacement": "_" },
+  "overrides": [], "runtimeCapabilities": {}, "digest": "cfed3b76caefc35d33ee2544005aa9753517eac2e02a7debf30570cb6a95e3f2"
+}

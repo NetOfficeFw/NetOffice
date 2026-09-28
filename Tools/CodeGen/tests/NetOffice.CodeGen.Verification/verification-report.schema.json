@@ -1,13 +1,135 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://netoffice.io/schemas/codegen-verification-report-1.0.json",
+  "$id": "https://netoffice.io/schemas/codegen-verification-report-2.0.json",
   "title": "NetOffice CodeGen Verification Report",
   "type": "object",
-  "required": ["schemaVersion", "outcome", "firstDivergentStage", "checks"],
+  "required": ["schemaVersion", "outcome", "firstDivergentStage", "firstDivergentOwner", "checks"],
   "properties": {
-    "schemaVersion": { "const": "netoffice-codegen-verification/v1" },
+    "schemaVersion": { "const": "netoffice-codegen-verification/v2" },
     "outcome": { "enum": ["passed", "failed"] },
     "firstDivergentStage": { "type": "string" },
+    "firstDivergentOwner": { "type": "string" },
+    "evidence": {
+      "type": ["object", "null"],
+      "required": ["command", "inputDigest", "outputDigest", "outputReportSchema", "csharpValidation", "firstDivergentStage"],
+      "properties": {
+        "command": { "type": "string", "minLength": 1 },
+        "inputDigest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "outputDigest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "outputReportSchema": { "const": "codegen-report-v3" },
+        "csharpValidation": { "const": "CSharp7_3-block-namespace" },
+        "firstDivergentStage": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "fullCorpus": {
+      "type": ["object", "null"],
+      "required": ["schemaVersion", "outcome", "firstDivergentOwner", "graphDigest", "coverage", "compilation", "gates", "diagnosticsByOwner"],
+      "properties": {
+        "schemaVersion": { "const": "netoffice-codegen-full-corpus/v1" },
+        "outcome": { "enum": ["passed", "failed"] },
+        "firstDivergentOwner": { "type": "string", "minLength": 1 },
+        "dataPath": { "type": "string" },
+        "sourcePath": { "type": "string" },
+        "contractsPath": { "type": "string" },
+        "graphDigest": { "type": "string" },
+        "inputProducts": { "type": "array", "items": { "type": "string" } },
+        "contractFiles": { "type": "array", "items": { "type": "string" } },
+        "coverage": {
+          "type": "object",
+          "required": ["dataTypes", "projectedTypes", "dataMembers", "projectedDataMembers", "dataValues", "projectedValues"],
+          "properties": {
+            "dataTypes": { "type": "integer", "minimum": 0 },
+            "projectedTypes": { "type": "integer", "minimum": 0 },
+            "dataMembers": { "type": "integer", "minimum": 0 },
+            "projectedDataMembers": { "type": "integer", "minimum": 0 },
+            "dataValues": { "type": "integer", "minimum": 0 },
+            "projectedValues": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "expectedFiles": { "type": "integer", "minimum": 0 },
+        "additionalFiles": { "type": "integer", "minimum": 0 },
+        "actualFiles": { "type": "integer", "minimum": 0 },
+        "invalidInvariantFiles": { "type": "integer", "minimum": 0 },
+        "manifestFiles": { "type": "integer", "minimum": 0 },
+        "outputDigest": { "type": "string" },
+        "repeatedOutputDigest": { "type": "string" },
+        "generation": { "type": ["object", "null"] },
+        "semanticParity": {
+          "type": ["object", "null"],
+          "required": ["schemaVersion", "normalizationProfile", "products", "facets", "diagnosticCount", "firstDivergentOwner"],
+          "properties": {
+            "schemaVersion": { "const": "semantic-parity/v1" },
+            "normalizationProfile": { "const": "csharp-semantic/v1" },
+            "products": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["product", "status", "expectedTypes", "actualTypes", "diagnosticCount"],
+                "properties": {
+                  "product": { "type": "string", "minLength": 1 },
+                  "status": { "enum": ["matched", "divergent", "missing-contract"] },
+                  "expectedTypes": { "type": "integer", "minimum": 0 },
+                  "actualTypes": { "type": "integer", "minimum": 0 },
+                  "diagnosticCount": { "type": "integer", "minimum": 0 }
+                },
+                "additionalProperties": false
+              }
+            },
+            "facets": {
+              "type": "object",
+              "additionalProperties": { "type": "integer", "minimum": 0 }
+            },
+            "diagnosticCount": { "type": "integer", "minimum": 0 },
+            "firstDivergentOwner": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "compilation": {
+          "type": ["object", "null"],
+          "required": ["schemaVersion", "outcome", "firstDivergentOwner", "libraries", "diagnosticCount", "diagnosticsByOwner"],
+          "properties": {
+            "schemaVersion": { "const": "generated-library-compilation/v1" },
+            "outcome": { "enum": ["passed", "failed"] },
+            "firstDivergentOwner": { "type": "string", "minLength": 1 },
+            "libraries": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["product", "projectPath", "exitCode", "diagnosticCount"],
+                "properties": {
+                  "product": { "type": "string", "minLength": 1 },
+                  "projectPath": { "type": "string", "minLength": 1 },
+                  "exitCode": { "type": "integer" },
+                  "diagnosticCount": { "type": "integer", "minimum": 0 }
+                },
+                "additionalProperties": false
+              }
+            },
+            "diagnosticCount": { "type": "integer", "minimum": 0 },
+            "diagnosticsByOwner": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/diagnostic" }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "generatedLibraries": { "type": "array", "items": { "type": "object" } },
+        "gates": { "type": "object", "additionalProperties": { "type": "boolean" } },
+        "diagnosticsByOwner": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/diagnostic" }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
     "checks": {
       "type": "array",
       "items": {
@@ -21,6 +143,23 @@
         },
         "additionalProperties": false
       }
+    }
+  },
+  "$defs": {
+    "diagnostic": {
+      "type": "object",
+      "required": ["owner", "code", "path", "product", "message", "severity"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "code": { "type": "string", "minLength": 1 },
+        "path": { "type": "string" },
+        "product": { "type": "string" },
+        "line": { "type": ["integer", "null"], "minimum": 1 },
+        "column": { "type": ["integer", "null"], "minimum": 1 },
+        "message": { "type": "string", "minLength": 1 },
+        "severity": { "enum": ["error", "warning"] }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

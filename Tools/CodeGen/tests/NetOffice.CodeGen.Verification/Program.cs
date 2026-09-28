@@ -1,4 +1,5 @@
 using System.Collections.Immutable;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -13,27 +14,62 @@ namespace NetOffice.CodeGen.Verification;
 
 internal static class Program
 {
+    internal static object? EndToEndEvidence { get; private set; }
+    internal static FullCorpusReport? FullCorpusEvidence { get; private set; }
+
     private static int Main(string[] args)
     {
         var fixtureRoot = Path.Combine(AppContext.BaseDirectory, "fixtures");
-        var checks = new (string Id, string Stage, Action Run)[]
+        var fullOptions = FullCorpusOptions.Parse(args);
+        var checks = new List<(string Id, string Stage, Action Run)>
         {
             ("data-schema-and-digest", "schema", () => VerifyDataSchemaAndDigest(fixtureRoot)),
             ("data-fixture-diagnostics", "schema", () => VerifyDataFixtures(fixtureRoot)),
             ("typelib-diagnostics", "typelib", () => VerifyTypeLibFixtures(fixtureRoot)),
             ("output-invariants", "emission", VerifyOutputInvariants),
+            ("manual-companion-isolation", "compilation", VerifyManualCompanionIsolation),
             ("manifest-safety", "storage", VerifyManifestSafety),
             ("documentation-attribution", "documentation", () => VerifyDocumentation(fixtureRoot)),
             ("fault-injection-rollback", "storage", VerifyRollback),
+            ("e2e-cli-pipeline", "orchestration", () => VerifyEndToEnd(fixtureRoot)),
         };
+        if (fullOptions.Enabled)
+        {
+            var fullCorpus = new Lazy<FullCorpusReport>(() => FullCorpusEvidence = FullCorpusHarness.Run(fullOptions));
+            checks.Add(("full-corpus-projection", "projection", () => RequireFullGates(fullCorpus.Value, "converted-graph-valid", "canonical-corpus-size", "all-products", "projection-coverage")));
+            checks.Add(("full-corpus-generation", "orchestration", () => RequireFullGates(fullCorpus.Value, "generation-succeeded", "complete-output")));
+            checks.Add(("full-corpus-output-invariants", "emission", () => RequireFullGates(fullCorpus.Value, "csharp73-bom-crlf-d9", "no-source-wrapper-copy")));
+            checks.Add(("full-corpus-determinism-manifest", "storage", () => RequireFullGates(fullCorpus.Value, "deterministic-output", "complete-manifest")));
+            checks.Add(("full-corpus-semantic-parity-shape", "parity-contract", () => RequireFullGates(fullCorpus.Value, "semantic-parity-shape")));
+            checks.Add(("full-corpus-semantic-parity", "projection", () => RequireFullGates(fullCorpus.Value, "semantic-parity")));
+            checks.Add(("full-corpus-isolated-build", "compilation", () => RequireFullGates(fullCorpus.Value, "isolated-generated-library-builds")));
+        }
 
         var report = VerificationEngine.Run(checks);
         var reportPath = ReadReportPath(args) ?? Path.Combine(Path.GetTempPath(), "netoffice-codegen-verification-report.json");
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(reportPath))!);
         File.WriteAllText(reportPath, report.ToJson(), new UTF8Encoding(false));
+        if (fullOptions.Enabled && FullCorpusEvidence is not null)
+        {
+            var fullReportPath = fullOptions.ReportPath ?? Path.Combine(Path.GetDirectoryName(Path.GetFullPath(reportPath))!, Path.GetFileNameWithoutExtension(reportPath) + ".full-corpus.json");
+            Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(fullReportPath))!);
+            File.WriteAllText(fullReportPath, FullCorpusEvidence.ToJson(), new UTF8Encoding(false));
+            Console.WriteLine($"Full-corpus report: {fullReportPath}");
+        }
         Console.WriteLine($"Verification report: {reportPath}");
         Console.WriteLine(report.Passed ? "Verification passed." : $"Verification failed at stage '{report.FirstDivergentStage}'.");
         return report.Passed ? 0 : 1;
+    }
+
+    private static void RequireFullGates(FullCorpusReport report, params string[] gates)
+    {
+        var failed = gates.Where(gate => !report.Gate(gate)).ToArray();
+        if (failed.Length == 0) return;
+        var diagnostics = report.Diagnostics
+            .Where(diagnostic => diagnostic.Owner == report.FirstDivergentOwner)
+            .Take(5)
+            .Select(diagnostic => $"{diagnostic.Code}: {diagnostic.Message}");
+        throw new InvalidOperationException($"Full-corpus gates failed: {string.Join(", ", failed)}. First divergent owner: {report.FirstDivergentOwner}. {string.Join(" | ", diagnostics)}");
     }
 
     private static string? ReadReportPath(IEnumerable<string> args)
@@ -145,6 +181,29 @@ internal static class Program
         Assert(emitted.Text.Contains("<summary>", StringComparison.Ordinal) && emitted.Text.Contains("A &amp; B", StringComparison.Ordinal), "XML documentation must be escaped and retained");
     }
 
+    private static void VerifyManualCompanionIsolation()
+    {
+        var root = NewTempRoot("companions");
+        try
+        {
+            var source = Path.Combine(root, "source", "Fixture");
+            var contracts = Path.Combine(root, "contracts");
+            var generatedProject = Path.Combine(root, "generated-project");
+            Directory.CreateDirectory(Path.Combine(source, "Manual"));
+            Directory.CreateDirectory(Path.Combine(source, "DispatchInterfaces"));
+            Directory.CreateDirectory(contracts);
+            File.WriteAllText(Path.Combine(source, "Manual", "Helper.cs"), "internal sealed class Helper {}");
+            File.WriteAllText(Path.Combine(source, "DispatchInterfaces", "Wrapper.cs"), "public sealed class Wrapper {}");
+            File.WriteAllText(Path.Combine(contracts, "Fixture.classification.json"),
+                "{\"Files\":[{\"Path\":\"Manual/Helper.cs\",\"Ownership\":\"manual\",\"RequiredForIsolatedBuild\":true},{\"Path\":\"DispatchInterfaces/Wrapper.cs\",\"Ownership\":\"wrapper-generated\",\"RequiredForIsolatedBuild\":true}]}");
+
+            var copied = FullCorpusHarness.CopyManualCompanions("Fixture", Path.Combine(root, "source"), contracts, generatedProject);
+            Assert(copied.Length == 1 && copied[0].EndsWith(Path.Combine("Manual", "Helper.cs"), StringComparison.Ordinal), "isolated builds must copy only classified manual companions");
+            Assert(!Directory.EnumerateFiles(generatedProject, "*.cs", SearchOption.AllDirectories).Any(path => path.EndsWith("Wrapper.cs", StringComparison.Ordinal)), "isolated builds must never copy source wrappers");
+        }
+        finally { DeleteTempRoot(root); }
+    }
+
     private static void VerifyManifestSafety()
     {
         var root = NewTempRoot("manifest");
@@ -201,6 +260,116 @@ internal static class Program
             Assert(notice.Contains(required, StringComparison.OrdinalIgnoreCase), "third-party notice is missing required attribution text: " + required);
     }
 
+
+    private static void VerifyEndToEnd(string fixtureRoot)
+    {
+        var root = NewTempRoot("e2e");
+        try
+        {
+            var data = Path.Combine(root, "data");
+            var source = Path.Combine(root, "source");
+            var output = Path.Combine(root, "output");
+            var second = Path.Combine(root, "second");
+            Directory.CreateDirectory(data);
+            Directory.CreateDirectory(source);
+            File.Copy(Fixture(fixtureRoot, "e2e/data/graph.json"), Path.Combine(data, "graph.json"));
+            File.Copy(Fixture(fixtureRoot, "e2e/contract.json"), Path.Combine(root, "contract.json"));
+            File.Copy(Fixture(fixtureRoot, "e2e/policy.json"), Path.Combine(root, "policy.json"));
+            File.WriteAllText(Path.Combine(source, "source-only-sentinel.txt"), "must never be copied");
+
+            var common = new[] { "--locked", "--no-cache", "--data", data, "--contract", Path.Combine(root, "contract.json"), "--policy", Path.Combine(root, "policy.json"), "--source", source };
+            var first = RunCli("generate", common.Concat(new[] { "--output", output, "--report", Path.Combine(root, "generate.json") }));
+            Assert(first.ExitCode == 0, "the real CLI generate command must succeed: " + first.Stderr);
+            var generatedFiles = Directory.EnumerateFiles(output, "Widget.cs", SearchOption.AllDirectories).ToArray();
+            Assert(generatedFiles.Length == 1, "projection must emit exactly one expected type file");
+            var generated = generatedFiles[0];
+            var generatedRelative = Path.GetRelativePath(output, generated).Replace('\\', '/');
+            using var generationReport = JsonDocument.Parse(File.ReadAllText(Path.Combine(root, "generate.json")));
+            var generationRoot = generationReport.RootElement;
+            var emittedPaths = generationRoot.GetProperty("emittedPaths").EnumerateArray().Select(item => item.GetString() ?? "").ToArray();
+            Assert(generationRoot.GetProperty("schemaVersion").GetString() == "codegen-report-v3", "CLI output report must use codegen-report-v3");
+            Assert(emittedPaths.SequenceEqual(new[] { generatedRelative }, StringComparer.Ordinal), "codegen-report-v3 emittedPaths must exactly describe the projected output");
+            Assert(!RelativeFiles(output).Any(path => path.EndsWith("source-only-sentinel.txt", StringComparison.Ordinal)), "generate must not copy source-only files");
+            Assert(RelativeFiles(output).SequenceEqual(emittedPaths, StringComparer.Ordinal), "only codegen-report-v3 emitted paths may be emitted");
+            var bytes = File.ReadAllBytes(generated);
+            var text = Encoding.UTF8.GetString(bytes);
+            Assert(bytes.AsSpan().StartsWith(new byte[] { 0xef, 0xbb, 0xbf }), "generated output must have a UTF-8 BOM");
+            Assert(text.Contains(OwnershipMarker.D9, StringComparison.Ordinal), "generated output must contain D9 ownership");
+            Assert(text.EndsWith("\r\n", StringComparison.Ordinal) && !text.Replace("\r\n", "", StringComparison.Ordinal).Contains('\n'), "generated output must use CRLF and a final newline");
+            Assert(text.Contains("namespace Fixture\r\n{", StringComparison.Ordinal), "generated output must validate as C# 7.3 block-namespace syntax");
+
+            var secondRun = RunCli("generate", common.Concat(new[] { "--output", second, "--report", Path.Combine(root, "second.json") }));
+            Assert(secondRun.ExitCode == 0, "the repeated real CLI generation must succeed");
+            Assert(TreeDigest(output) == TreeDigest(second), "repeated locked generation must be byte deterministic");
+
+            var beforeCheck = TreeDigest(output);
+            var cleanCheck = RunCli("generate", common.Concat(new[] { "--output", output, "--check", "--report", Path.Combine(root, "check.json") }));
+            Assert(cleanCheck.ExitCode == 0, "a clean --check must exit zero");
+            Assert(TreeDigest(output) == beforeCheck, "--check must not change output bytes");
+
+            var expected = Path.Combine(root, "expected");
+            CopyTree(output, expected);
+            var generatedDirectory = Path.GetDirectoryName(generated)!;
+            var expectedGenerated = Path.Combine(expected, generatedRelative);
+            File.WriteAllBytes(generated, File.ReadAllBytes(generated).Concat(Encoding.UTF8.GetBytes("// drift\r\n")).ToArray());
+            File.WriteAllText(Path.Combine(generatedDirectory, "Added.cs"), "added\r\n");
+            File.Delete(expectedGenerated);
+            File.WriteAllText(Path.Combine(Path.GetDirectoryName(expectedGenerated)!, "Deleted.cs"), "deleted\r\n");
+            var diff = RunCli("diff", new[] { "--expected", expected, "--actual", output, "--report", Path.Combine(root, "diff.json") });
+            var diffOutput = diff.Stdout + diff.Stderr;
+            Assert(diff.ExitCode == 2 && diffOutput.Contains("Widget.cs", StringComparison.Ordinal) && diffOutput.Contains("Added.cs", StringComparison.Ordinal) && diffOutput.Contains("Deleted.cs", StringComparison.Ordinal), "diff must report changed, added, and deleted paths with exit 2");
+
+            var invalid = Path.Combine(root, "invalid");
+            CopyTree(data, invalid);
+            File.WriteAllText(Path.Combine(invalid, "graph.json"), File.ReadAllText(Path.Combine(invalid, "graph.json")).Replace("\"2.0\"", "\"2.invalid\"", StringComparison.Ordinal));
+            var invalidResult = RunCli("generate", common.Concat(new[] { "--data", invalid, "--output", Path.Combine(root, "invalid-output") }));
+            Assert(invalidResult.ExitCode == 1, "an invalid graph must exit 1");
+            var inputDigest = Hex(SHA256.HashData(Encoding.UTF8.GetBytes(string.Join("\n", new[] { FileDigest(Path.Combine(data, "graph.json")), FileDigest(Path.Combine(root, "contract.json")), FileDigest(Path.Combine(root, "policy.json")) }) + "\n")));
+            var outputDigest = TreeDigest(second);
+            EndToEndEvidence = new { command = $"dotnet {CliDisplayPath()} generate --locked --no-cache --data <data> --contract <contract> --policy <policy> --source <source> --output <output>", inputDigest, outputDigest, outputReportSchema = "codegen-report-v3", csharpValidation = "CSharp7_3-block-namespace", firstDivergentStage = "none" };
+            Console.WriteLine($"e2e command=dotnet {CliDisplayPath()} generate --locked --no-cache --data <data> --contract <contract> --policy <policy> --source <source> --output <output>; inputDigest={inputDigest}; outputDigest={outputDigest}; csharp=7.3; firstDivergentStage=none");
+        }
+        finally { DeleteTempRoot(root); }
+    }
+
+    private static CliResult RunCli(string command, IEnumerable<string> arguments)
+    {
+        var cli = Path.Combine(AppContext.BaseDirectory, "NetOffice.CodeGen.Cli.dll");
+        Assert(File.Exists(cli), "verification must invoke the built CLI application: " + cli);
+        var info = new ProcessStartInfo("dotnet") { RedirectStandardOutput = true, RedirectStandardError = true, UseShellExecute = false };
+        info.ArgumentList.Add(cli);
+        info.ArgumentList.Add(command);
+        foreach (var argument in arguments) info.ArgumentList.Add(argument);
+        using var process = Process.Start(info) ?? throw new InvalidOperationException("unable to start dotnet CLI");
+        var stdout = process.StandardOutput.ReadToEnd();
+        var stderr = process.StandardError.ReadToEnd();
+        process.WaitForExit();
+        return new CliResult(process.ExitCode, stdout, stderr);
+    }
+
+    private static string CliDisplayPath() => Path.Combine(AppContext.BaseDirectory, "NetOffice.CodeGen.Cli.dll");
+
+    private static string[] RelativeFiles(string root) => Directory.EnumerateFiles(root, "*", SearchOption.AllDirectories)
+        .Where(x => !x.Contains(Path.DirectorySeparatorChar + ".codegen" + Path.DirectorySeparatorChar, StringComparison.Ordinal))
+        .Select(x => Path.GetRelativePath(root, x).Replace(Path.DirectorySeparatorChar, '/'))
+        .Order(StringComparer.Ordinal).ToArray();
+
+    private static string TreeDigest(string root) => Hex(SHA256.HashData(Encoding.UTF8.GetBytes(string.Join("\n", RelativeFiles(root).Select(path => path + ":" + FileDigest(Path.Combine(root, path.Replace('/', Path.DirectorySeparatorChar))))) + "\n")));
+
+
+    private static void CopyTree(string source, string destination)
+    {
+        foreach (var file in Directory.EnumerateFiles(source, "*", SearchOption.AllDirectories))
+        {
+            var relative = Path.GetRelativePath(source, file);
+            var target = Path.Combine(destination, relative);
+            Directory.CreateDirectory(Path.GetDirectoryName(target)!);
+            File.Copy(file, target);
+        }
+    }
+    private static string FileDigest(string path) => Hex(SHA256.HashData(File.ReadAllBytes(path)));
+
+    private sealed record CliResult(int ExitCode, string Stdout, string Stderr);
     private static void VerifyRollback()
     {
         var root = NewTempRoot("rollback");
@@ -305,12 +474,15 @@ internal static class VerificationEngine
 
 internal sealed class VerificationReport
 {
-    [JsonPropertyName("schemaVersion")] public string SchemaVersion { get; init; } = "netoffice-codegen-verification/v1";
+    [JsonPropertyName("schemaVersion")] public string SchemaVersion { get; init; } = "netoffice-codegen-verification/v2";
     [JsonPropertyName("outcome")] public string Outcome { get; init; } = "failed";
     [JsonPropertyName("firstDivergentStage")] public string FirstDivergentStage { get; init; } = "none";
+    [JsonPropertyName("firstDivergentOwner")] public string FirstDivergentOwner => Program.FullCorpusEvidence?.FirstDivergentOwner ?? "none";
     [JsonPropertyName("checks")] public IReadOnlyList<VerificationCheck> Checks { get; init; } = Array.Empty<VerificationCheck>();
+    [JsonPropertyName("evidence")] public object? Evidence => Program.EndToEndEvidence;
+    [JsonPropertyName("fullCorpus")] public FullCorpusReport? FullCorpus => Program.FullCorpusEvidence;
     [JsonIgnore] public bool Passed => Outcome == "passed";
-    public string ToJson() => JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
+    public string ToJson() => JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase, DictionaryKeyPolicy = JsonNamingPolicy.CamelCase, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull });
 }
 
 internal sealed class VerificationCheck
