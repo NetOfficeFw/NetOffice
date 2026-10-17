@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.9.12
+
+### Fixed
+* Fix Excel `GlobalModule.DDERequest` invoking `Selection` instead of `DDERequest` [#522](https://github.com/NetOfficeFw/NetOffice/issues/522).
+* Fix the 31-argument Excel `GlobalModule._Run2` overload invoking `Run` instead of `_Run2`, preserving argument order and neighboring overloads [#521](https://github.com/NetOfficeFw/NetOffice/issues/521).
+
 ## v1.9.11
 
 ### Changed
