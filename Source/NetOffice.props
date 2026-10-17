@@ -70,6 +70,15 @@
     </None>
   </ItemGroup>
 
+  <!--
+    Reference .NET Framework reference assemblies explicitly. The SDK only adds this package
+    implicitly when the targeting pack is not installed, which makes packages.lock.json
+    differ between machines and breaks restore in locked mode.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.3233" />
