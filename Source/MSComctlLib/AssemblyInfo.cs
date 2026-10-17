@@ -6,8 +6,8 @@ using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
-	Name - Description - SupportByVersion
-	MSComctlLib - Microsoft Windows Common Controls 6.0 - 6
+    Name - Description - SupportByVersion
+    MSComctlLib - Microsoft Windows Common Controls 6.0 - 6
 
 */
 

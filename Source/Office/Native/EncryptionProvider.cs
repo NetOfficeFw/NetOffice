@@ -31,7 +31,7 @@ namespace NetOffice.OfficeApi.Native
         /// <returns>Long</returns>
         [DispId(1610743809)]
         [MethodImpl(4096)]
-        int NewSession([MarshalAs(25)] [In] object ParentWindow);
+        int NewSession([MarshalAs(25)][In] object ParentWindow);
 
         /// <summary>
         /// Used to determine whether the user has the proper permissions to open the encrypted document.
@@ -43,7 +43,7 @@ namespace NetOffice.OfficeApi.Native
         /// <returns>Long</returns>
         [DispId(1610743810)]
         [MethodImpl(4096)]
-        int Authenticate([MarshalAs(25)] [In] object ParentWindow, [MarshalAs(25)] [In] object EncryptionData, out uint PermissionsMask);
+        int Authenticate([MarshalAs(25)][In] object ParentWindow, [MarshalAs(25)][In] object EncryptionData, out uint PermissionsMask);
 
         /// <summary>
         /// Creates a second, working copy of the EncryptionProvider object's encryption session for a file that is about to be saved.
@@ -73,7 +73,7 @@ namespace NetOffice.OfficeApi.Native
         /// <returns>Long</returns>
         [DispId(1610743813)]
         [MethodImpl(4096)]
-        int Save([In] int SessionHandle, [MarshalAs(25)] [In] object EncryptionData);
+        int Save([In] int SessionHandle, [MarshalAs(25)][In] object EncryptionData);
 
         /// <summary>
         /// Encrypts and returns a stream of data for a document.
@@ -85,7 +85,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="EncryptedStream">The data stream information after it has been encrypted.</param>
         [DispId(1610743814)]
         [MethodImpl(4096)]
-        void EncryptStream([In] int SessionHandle, [MarshalAs(19)] [In] string StreamName, [MarshalAs(25)] [In] object UnencryptedStream, [MarshalAs(25)] [In] object EncryptedStream);
+        void EncryptStream([In] int SessionHandle, [MarshalAs(19)][In] string StreamName, [MarshalAs(25)][In] object UnencryptedStream, [MarshalAs(25)][In] object EncryptedStream);
 
         /// <summary>
         /// Decrypts and returns a stream of encrypted data for a document.
@@ -97,7 +97,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="UnencryptedStream">The data stream before dencryption.</param>
         [DispId(1610743815)]
         [MethodImpl(4096)]
-        void DecryptStream([In] int SessionHandle, [MarshalAs(19)] [In] string StreamName, [MarshalAs(25)] [In] object EncryptedStream, [MarshalAs(25)] [In] object UnencryptedStream);
+        void DecryptStream([In] int SessionHandle, [MarshalAs(19)][In] string StreamName, [MarshalAs(25)][In] object EncryptedStream, [MarshalAs(25)][In] object UnencryptedStream);
 
         /// <summary>
         /// Used to display a dialog of the encryption settings for the current document.
@@ -109,6 +109,6 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="Remove">If True the encryption for a document will be removed during the next save operation.</param>
         [DispId(1610743816)]
         [MethodImpl(4096)]
-        void ShowSettings([In] int SessionHandle, [MarshalAs(25)] [In] object ParentWindow, [In] bool ReadOnly, out bool Remove);
+        void ShowSettings([In] int SessionHandle, [MarshalAs(25)][In] object ParentWindow, [In] bool ReadOnly, out bool Remove);
     }
 }

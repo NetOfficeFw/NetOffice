@@ -70,7 +70,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution
             catch
             {
                 return null;
-            }           
+            }
         }
 
         #endregion

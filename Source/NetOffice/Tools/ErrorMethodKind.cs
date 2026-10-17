@@ -50,6 +50,6 @@ namespace NetOffice.Tools
         /// <summary>
         /// the error is occured while NetOffice try to create the custom addin object instance
         /// </summary>
-        CreateCustomAddinInstance = 8        
+        CreateCustomAddinInstance = 8
     }
 }

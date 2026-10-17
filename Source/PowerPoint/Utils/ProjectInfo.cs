@@ -5,7 +5,7 @@ using NetOffice.Attributes;
 
 namespace PowerPointApi.Utils
 {
-    #pragma warning disable
+#pragma warning disable
     /// <summary>
     /// Necessary factory info, used from NetOffice.Core while Initialize()
     /// </summary>
@@ -13,14 +13,14 @@ namespace PowerPointApi.Utils
     {
         #region Fields
 
-        private string    _name;
-        private string    _namespace     = "NetOffice.PowerPointApi";
-        private Guid[]    _componentGuid = new Guid[]{new Guid("91493440-5A91-11CF-8700-00AA0060263B")};
-        private Assembly  _assembly;
+        private string _name;
+        private string _namespace = "NetOffice.PowerPointApi";
+        private Guid[] _componentGuid = new Guid[] { new Guid("91493440-5A91-11CF-8700-00AA0060263B") };
+        private Assembly _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
-        private Type[]	  _exportedTypes;
-		private string[]  _dependents;
-		
+        private Type[] _exportedTypes;
+        private string[] _dependents;
+
         #endregion
 
         #region Ctor
@@ -80,8 +80,8 @@ namespace PowerPointApi.Utils
         {
             get
             {
-				if(null == _dependents)
-					_dependents = new string[]{"OfficeApi.dll","VBIDEApi.dll"};
+                if (null == _dependents)
+                    _dependents = new string[] { "OfficeApi.dll", "VBIDEApi.dll" };
                 return _dependents;
             }
         }
@@ -116,5 +116,5 @@ namespace PowerPointApi.Utils
 
         #endregion
     }
-    #pragma warning restore
+#pragma warning restore
 }

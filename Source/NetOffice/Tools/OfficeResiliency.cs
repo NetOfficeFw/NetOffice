@@ -45,7 +45,7 @@ namespace NetOffice.Tools
                 {
                     case DisabledItemType.AddInByFilename:
                     case DisabledItemType.AddInByDEPFilename:
-                        
+
                         if (countData > 2)
                         {
                             var moduleBytes = reader.ReadBytes(countData - 2);

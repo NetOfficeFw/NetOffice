@@ -7,7 +7,7 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ExcelApi.Events
 {
-    #pragma warning disable CS1591
+#pragma warning disable CS1591
 
     #region SinkPoint Interface
 
@@ -25,13 +25,13 @@ namespace NetOffice.ExcelApi.Events
         [SinkArgument("target", typeof(ExcelApi.Range))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1537)]
-        void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
+        void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In][Out] ref object cancel);
 
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [SinkArgument("target", typeof(ExcelApi.Range))]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(1534)]
-        void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel);
+        void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In][Out] ref object cancel);
 
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(304)]
@@ -72,7 +72,7 @@ namespace NetOffice.ExcelApi.Events
         [SinkArgument("valueChangeEnd", SinkArgumentType.Int32)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2889)]
-        void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel);
+        void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In][Out] ref object cancel);
 
         [SupportByVersion("Excel", 14, 15, 16)]
         [SinkArgument("targetPivotTable", typeof(ExcelApi.PivotTable))]
@@ -80,7 +80,7 @@ namespace NetOffice.ExcelApi.Events
         [SinkArgument("valueChangeEnd", SinkArgumentType.Int32)]
         [SinkArgument("cancel", SinkArgumentType.Bool)]
         [PreserveSig, MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime), DispId(2892)]
-        void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel);
+        void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In][Out] ref object cancel);
 
         [SupportByVersion("Excel", 14, 15, 16)]
         [SinkArgument("targetPivotTable", typeof(ExcelApi.PivotTable))]
@@ -147,7 +147,7 @@ namespace NetOffice.ExcelApi.Events
             EventBinding.RaiseCustomEvent("SelectionChange", ref paramsArray);
         }
 
-        public void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
+        public void BeforeDoubleClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeDoubleClick"))
             {
@@ -164,7 +164,7 @@ namespace NetOffice.ExcelApi.Events
             cancel = ToBoolean(paramsArray[1]);
         }
 
-        public void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In] [Out] ref object cancel)
+        public void BeforeRightClick([In, MarshalAs(UnmanagedType.IDispatch)] object target, [In][Out] ref object cancel)
         {
             if (!Validate("BeforeRightClick"))
             {
@@ -272,7 +272,7 @@ namespace NetOffice.ExcelApi.Events
             EventBinding.RaiseCustomEvent("PivotTableAfterValueChange", ref paramsArray);
         }
 
-        public void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
+        public void PivotTableBeforeAllocateChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In][Out] ref object cancel)
         {
             if (!Validate("PivotTableBeforeAllocateChanges"))
             {
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi.Events
             cancel = ToBoolean(paramsArray[3]);
         }
 
-        public void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In] [Out] ref object cancel)
+        public void PivotTableBeforeCommitChanges([In, MarshalAs(UnmanagedType.IDispatch)] object targetPivotTable, [In] object valueChangeStart, [In] object valueChangeEnd, [In][Out] ref object cancel)
         {
             if (!Validate("PivotTableBeforeCommitChanges"))
             {
@@ -387,5 +387,5 @@ namespace NetOffice.ExcelApi.Events
 
     #endregion
 
-    #pragma warning restore CS1591
+#pragma warning restore CS1591
 }

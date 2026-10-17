@@ -35,10 +35,10 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             Addin = comAddin;
             ViewOptions = new TrayMenuMonitorItem.Options(EnumeratorGrid, HierarchicalGrid, HighlightTimer, OnDisableHighlight);
             AutoExpandCheckBox.DataBindings.Add("Checked", ViewOptions, "AutoExpandNodes", false, DataSourceUpdateMode.OnPropertyChanged);
-            HighlightCheckBox.DataBindings.Add("Checked", ViewOptions, "HighlightNewNodes", false, DataSourceUpdateMode.OnPropertyChanged);     
+            HighlightCheckBox.DataBindings.Add("Checked", ViewOptions, "HighlightNewNodes", false, DataSourceUpdateMode.OnPropertyChanged);
             ShowTimeColumnCheckBox.DataBindings.Add("Checked", ViewOptions, "ShowConsoleTimeColumn", false, DataSourceUpdateMode.OnPropertyChanged);
             ShowKindColumnCheckBox.DataBindings.Add("Checked", ViewOptions, "ShowConsoleKindColumn", false, DataSourceUpdateMode.OnPropertyChanged);
-            
+
             HighlightNodes = new Dictionary<TreeNode, DateTime>();
 
             ContentPanel.Controls.Remove(OverlayPanel);
@@ -72,7 +72,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         }
 
         #endregion
-        
+
         #region Properties
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             else
             {
                 RadioButton button = GetHeaderButton(mode);
-                if(!button.Visible)
+                if (!button.Visible)
                     HeaderRadioButton_CheckedChanged(button, EventArgs.Empty);
             }
         }
@@ -323,12 +323,12 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 {
                     case 1:
                         EnumeratorGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.NotSet;
-                        EnumeratorGrid.Columns[0].Width = EnumeratorGrid.Width - 32;                       
+                        EnumeratorGrid.Columns[0].Width = EnumeratorGrid.Width - 32;
                         break;
                     case 2:
                         EnumeratorGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.NotSet;
                         EnumeratorGrid.Columns[0].Width = (EnumeratorGrid.Width / 2) - 16;
-                        EnumeratorGrid.Columns[1].Width = (EnumeratorGrid.Width / 2) - 16;                      
+                        EnumeratorGrid.Columns[1].Width = (EnumeratorGrid.Width / 2) - 16;
                         break;
                     case 3:
                         EnumeratorGrid.Columns[0].Width = FirstColumnOptimumWidht();
@@ -467,7 +467,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         }
 
         #endregion
-        
+
         #region Trigger
 
         private void HeaderRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -494,7 +494,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             catch (Exception exception)
             {
                 ShowOverlayError(exception);
-            }       
+            }
         }
 
         private void Core_ProxyAdded(Core sender, IEnumerable<ICOMObject> ownerPath, ICOMObject comObject)
@@ -695,7 +695,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             catch (Exception exception)
             {
                 ShowOverlayError(exception);
-            }         
+            }
         }
 
         private void CloseOverlayButton_Click(object sender, EventArgs e)
@@ -714,7 +714,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         {
             try
             {
-                DateTime now = DateTime.Now;             
+                DateTime now = DateTime.Now;
                 foreach (KeyValuePair<TreeNode, DateTime> item in HighlightNodes)
                 {
                     if ((now - item.Value).TotalMilliseconds >= 1000)

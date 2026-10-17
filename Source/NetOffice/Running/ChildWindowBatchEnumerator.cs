@@ -92,7 +92,7 @@ namespace NetOffice.Running
         #endregion
 
         #region Properties
-     
+
         /// <summary>
         /// Search order as top down batch
         /// </summary>
@@ -203,7 +203,7 @@ namespace NetOffice.Running
             Result.Clear();
             foreach (IntPtr item in LastStepResult)
                 Result.Add(item);
-            
+
             return Result;
         }
 
@@ -215,13 +215,13 @@ namespace NetOffice.Running
             {
                 return false;
             }
-             
+
             StringBuilder nameBuilder = new StringBuilder(100);
             int result = GetClassName(hWnd, nameBuilder, nameBuilder.Capacity);
             if (result != 0)
             {
                 string className = nameBuilder.ToString();
-                if(Current.ClassName.Equals(className, StringComparison.InvariantCultureIgnoreCase))
+                if (Current.ClassName.Equals(className, StringComparison.InvariantCultureIgnoreCase))
                 {
                     List<IntPtr> childHandles = gcChildhandlesList.Target as List<IntPtr>;
                     childHandles.Add(hWnd);

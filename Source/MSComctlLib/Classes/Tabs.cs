@@ -5,27 +5,27 @@ using NetOffice.Attributes;
 
 namespace NetOffice.MSComctlLibApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	#pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass Tabs 
-	/// SupportByVersion MSComctlLib, 6
-	/// </summary>
-	[SupportByVersion("MSComctlLib", 6)]
-	[EntityType(EntityType.IsCoClass)]
- 	public class Tabs : ITabs
-	{
-		#pragma warning disable
+    /// <summary>
+    /// CoClass Tabs 
+    /// SupportByVersion MSComctlLib, 6
+    /// </summary>
+    [SupportByVersion("MSComctlLib", 6)]
+    [EntityType(EntityType.IsCoClass)]
+    public class Tabs : ITabs
+    {
+#pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
 
         #endregion
@@ -43,11 +43,11 @@ namespace NetOffice.MSComctlLibApi
                 return LateBindingApiWrapperType;
             }
         }
-        
+
         /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -57,78 +57,78 @@ namespace NetOffice.MSComctlLibApi
                 return _type;
             }
         }
-        
-        #endregion
-        		
-		#region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        #endregion
+
+        #region Construction
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Tabs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Tabs(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Tabs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public Tabs(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Tabs(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Tabs(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Tabs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Tabs(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Tabs(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+
+        }
+
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Tabs(ICOMObject replacedObject) : base(replacedObject)
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of Tabs 
         /// </summary>		
-		public Tabs():base("MSComctlLib.Tabs")
-		{
-			
-		}
-		
-		/// <summary>
+        public Tabs() : base("MSComctlLib.Tabs")
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of Tabs
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public Tabs(string progId):base(progId)
-		{
-			
-		}
+        public Tabs(string progId) : base(progId)
+        {
 
-		#endregion
+        }
 
-		#region Static CoClass Methods
-		#endregion
+        #endregion
 
-		#region Events
+        #region Static CoClass Methods
+        #endregion
 
-		#endregion
-       
-		#pragma warning restore
-	}
+        #region Events
+
+        #endregion
+
+#pragma warning restore
+    }
 }

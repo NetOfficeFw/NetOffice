@@ -48,7 +48,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
                 lock (_lock)
                 {
                     if (null == _assemblyInfo)
-                        _assemblyInfo = _owner.OnCreateAssemblyInfo();                    
+                        _assemblyInfo = _owner.OnCreateAssemblyInfo();
                 }
                 return _assemblyInfo;
             }
@@ -64,7 +64,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
                 lock (_lock)
                 {
                     if (null == _appDomainInfo)
-                        _appDomainInfo = _owner.OnCreateAppDomainInfo();                    
+                        _appDomainInfo = _owner.OnCreateAppDomainInfo();
                 }
                 return _appDomainInfo;
             }
@@ -80,7 +80,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
                 lock (_lock)
                 {
                     if (null == _environmentInfo)
-                        _environmentInfo = _owner.OnCreateEnvironmentInfo();                    
+                        _environmentInfo = _owner.OnCreateEnvironmentInfo();
                 }
                 return _environmentInfo;
             }
@@ -96,7 +96,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
                 lock (_lock)
                 {
                     if (null == _hostInfo)
-                        _hostInfo = _owner.OnCreateHostInfo();                    
+                        _hostInfo = _owner.OnCreateHostInfo();
                 }
                 return _hostInfo;
             }
@@ -122,8 +122,8 @@ namespace NetOffice.OfficeApi.Tools.Informations
         /// </summary>
         /// <param name="diagnostics">sender instance</param>
         protected internal virtual void GetCustomInformations(DiagnosticPairCollection diagnostics)
-        { 
-        
+        {
+
         }
 
         #endregion

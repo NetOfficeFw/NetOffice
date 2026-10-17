@@ -55,6 +55,6 @@ namespace NetOffice.OfficeApi.Native
         [SinkArgument("Hwnd", SinkArgumentType.Int32)]
         [SinkArgument("Status", SinkArgumentType.Enum, typeof(NetOffice.OfficeApi.Enums.MsoDocInspectorStatus))]
         [SinkArgument("Result", SinkArgumentType.String)]
-        void Fix([MarshalAs(UnmanagedType.IDispatch)] [In] object Doc, [In] int Hwnd, out MsoDocInspectorStatus Status, [MarshalAs(UnmanagedType.BStr)] out string Result);
+        void Fix([MarshalAs(UnmanagedType.IDispatch)][In] object Doc, [In] int Hwnd, out MsoDocInspectorStatus Status, [MarshalAs(UnmanagedType.BStr)] out string Result);
     }
 }

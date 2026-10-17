@@ -62,8 +62,8 @@ namespace NetOffice.Filtering
             }
             set
             {
-                if( value != (_messageFilter != null))
-                { 
+                if (value != (_messageFilter != null))
+                {
                     if (value)
                         RegisterFilter();
                     else
@@ -72,7 +72,7 @@ namespace NetOffice.Filtering
                 }
             }
         }
-    
+
         /// <summary>
         /// Get or set retry options
         /// </summary>

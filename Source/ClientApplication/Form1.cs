@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 using NetOffice;
-  
+
 namespace ClientApplication
 {
     public class Form1 : System.Windows.Forms.Form
-    { 
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>

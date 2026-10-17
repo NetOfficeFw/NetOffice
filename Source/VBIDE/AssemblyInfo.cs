@@ -6,10 +6,10 @@ using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
-	Name - Description - SupportByVersion
-	VBIDE - Microsoft Visual Basic for Applications Extensibility 5.3 - 5.3
-	VBIDE - Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
-	VBIDE - Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 14
+    Name - Description - SupportByVersion
+    VBIDE - Microsoft Visual Basic for Applications Extensibility 5.3 - 5.3
+    VBIDE - Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 12
+    VBIDE - Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C - 14
 
 */
 

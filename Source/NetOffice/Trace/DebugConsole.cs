@@ -172,7 +172,7 @@ namespace NetOffice
         private object _thisLock = new object();
 
         private static object _sharedLock = new object();
-        
+
         private List<ConsoleMessage> _messageList = new List<ConsoleMessage>();
 
         private string _name = "";
@@ -225,12 +225,12 @@ namespace NetOffice
             {
                 PipeErrorEventArgs args = new PipeErrorEventArgs(pipeName, text, error);
                 PipeError(this, args);
-                return args.DisableSharedOutput;                
+                return args.DisableSharedOutput;
             }
             else
                 return true;
         }
-        
+
         #endregion
 
         #region Properties
@@ -262,7 +262,7 @@ namespace NetOffice
 
             }
         }
-      
+
         /// <summary>
         /// Name of the Console instance
         /// </summary>
@@ -409,7 +409,7 @@ namespace NetOffice
             lock (_thisLock)
             {
                 string output = message;
-                
+
                 if (AppendTimeInfoEnabled)
                     output = DateTime.Now.ToLongTimeString() + " - " + message;
 
@@ -448,9 +448,9 @@ namespace NetOffice
                 string message = CreateExecptionLog(exception);
                 AddToMessageList(message, MessageKind.Error);
                 WriteLine(message);
-            }          
+            }
         }
-      
+
         /// <summary>
         /// Append message to logfile
         /// </summary>
@@ -558,7 +558,7 @@ namespace NetOffice
                 AddToMessageList("Failed to send shared message.", MessageKind.Warning);
                 if (RaisePipeError(name, text, exception))
                     EnableSharedOutput = false;
-            }         
+            }
         }
 
         #endregion

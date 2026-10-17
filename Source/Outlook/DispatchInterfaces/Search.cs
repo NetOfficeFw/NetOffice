@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OutlookApi
 {
-	/// <summary>
-	/// DispatchInterface Search 
-	/// SupportByVersion Outlook, 10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search"/> </remarks>
-	[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Search : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Search 
+    /// SupportByVersion Outlook, 10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search"/> </remarks>
+    [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class Search : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,254 +42,254 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Search(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Search(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Search(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Search(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Search(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Search(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public Search(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Search(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Search(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Search() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Search(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Search(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Application"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Class"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Search(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Session"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Search(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Parent"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Search() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Filter"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public string Filter
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Filter");
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Search(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.IsSynchronous"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public bool IsSynchronous
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsSynchronous");
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Results"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._Results Results
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Results>(this, "Results");
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.SearchSubFolders"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public bool SearchSubFolders
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "SearchSubFolders");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Application"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Tag"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public string Tag
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Tag");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Class"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlObjectClass Class
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Scope"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public string Scope
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Scope");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Session"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._NameSpace Session
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Parent"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Filter"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public string Filter
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Filter");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Stop"/> </remarks>
-		[SupportByVersion("Outlook", 10,11,12,14,15,16)]
-		public void Stop()
-		{
-			 Factory.ExecuteMethod(this, "Stop");
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.IsSynchronous"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public bool IsSynchronous
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IsSynchronous");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Save"/> </remarks>
-		/// <param name="name">string name</param>
-		[SupportByVersion("Outlook", 11,12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi.MAPIFolder Save(string name)
-		{
-			return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "Save", name);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Results"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._Results Results
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Results>(this, "Results");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.GetTable"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Table GetTable()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.SearchSubFolders"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public bool SearchSubFolders
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "SearchSubFolders");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Tag"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public string Tag
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Tag");
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Scope"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public string Scope
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Scope");
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Outlook 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Stop"/> </remarks>
+        [SupportByVersion("Outlook", 10, 11, 12, 14, 15, 16)]
+        public void Stop()
+        {
+            Factory.ExecuteMethod(this, "Stop");
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.Save"/> </remarks>
+        /// <param name="name">string name</param>
+        [SupportByVersion("Outlook", 11, 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi.MAPIFolder Save(string name)
+        {
+            return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi.MAPIFolder>(this, "Save", name);
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.Search.GetTable"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Table GetTable()
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.OutlookApi.Table>(this, "GetTable", NetOffice.OutlookApi.Table.LateBindingApiWrapperType);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

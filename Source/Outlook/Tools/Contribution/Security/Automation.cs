@@ -10,7 +10,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
     /// <summary>
     /// Outlook Security Automation
     /// </summary>
-    public class Automation : IDisposable 
+    public class Automation : IDisposable
     {
         #region Fields
 
@@ -99,7 +99,7 @@ namespace NetOffice.OutlookApi.Tools.Contribution.Security
         }
 
         #endregion
-        
+
         #region Properties
 
         /// <summary>

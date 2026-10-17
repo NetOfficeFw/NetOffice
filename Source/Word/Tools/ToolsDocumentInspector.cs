@@ -53,7 +53,7 @@ namespace NetOffice.WordApi.Tools
         /// <param name="status">An MsoDocInspectorStatus value that represents the results of the inspection.</param>
         /// <param name="result">Contains a list of the information items or document properties found in the document.</param>
         /// <param name="action">Indicates to the user what action to take based on the results of the inspection.</param>
-        public abstract void Inspect(Word.Document doc, out MsoDocInspectorStatus status,  out string result, out string action);
+        public abstract void Inspect(Word.Document doc, out MsoDocInspectorStatus status, out string result, out string action);
 
         /// <summary>
         /// Performs some action on specific information items or document properties by using a custom Document Inspector module.

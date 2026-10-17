@@ -3,15 +3,15 @@ using Access = NetOffice.AccessApi;
 
 namespace NetOffice.AccessApi.Tools
 {
-	/// <summary>
+    /// <summary>
     /// Custom task pane UserControl instance may implement this interface to be notified about the lifetime of the custom task pane.
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<Access.Application>
     {
-		/// <summary>
+        /// <summary>
         /// Called when Microsoft Office application is shuting down. This method is not called in case of unexpected termination of the process.
         /// </summary>
-		void OnDisconnection();
+        void OnDisconnection();
 
         /// <summary>
         /// Called when the user changes the dock position of the custom task pane.
@@ -24,5 +24,5 @@ namespace NetOffice.AccessApi.Tools
         /// </summary>
         /// <param name="visible">the current visibility for the instance</param>
         void OnVisibleStateChanged(bool visible);
-	}
+    }
 }

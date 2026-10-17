@@ -22,7 +22,7 @@ namespace NetOffice.Availability
         /// <param name="name">name of the target entity</param>
         /// <returns>true if supported, otherwise false</returns>
         /// <exception cref="AvailabilityException">An unexpected error occurs. See inner exception(s) for details.</exception>
-        internal bool Find(Core factory, ref Dictionary<string,string> list, SupportedEntityType searchType, object proxy, string name)
+        internal bool Find(Core factory, ref Dictionary<string, string> list, SupportedEntityType searchType, object proxy, string name)
         {
             try
             {

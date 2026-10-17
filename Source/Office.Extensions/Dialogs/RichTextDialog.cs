@@ -110,7 +110,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
         {
             InitializeComponent();
             labelHeaderCaption.Text = caption;
-            if(IsRichText(text))
+            if (IsRichText(text))
                 richTextBoxText.Rtf = text;
             else
                 richTextBoxText.Text = text;
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
             if (text.TrimStart().StartsWith("{\rtf1", StringComparison.Ordinal))
                 return true;
             else
-                return false;      
+                return false;
         }
 
         private void DoClose()
@@ -187,7 +187,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
             }
             catch (Exception exception)
             {
-                ShowSingleException(exception);                
+                ShowSingleException(exception);
             }
         }
 
@@ -198,7 +198,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
                 labelTimeLeft.Visible = false;
                 CloseTimer.Enabled = false;
                 _timeoutMode = false;
-            }         
+            }
         }
 
         private void richTextBoxText_LinkClicked(object sender, LinkClickedEventArgs e)

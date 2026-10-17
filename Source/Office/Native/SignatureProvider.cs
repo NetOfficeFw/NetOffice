@@ -26,7 +26,7 @@ namespace NetOffice.OfficeApi.Native
         [MethodImpl(4096)]
         [return: ComAliasName("stdole.IPictureDisp")]
         [return: MarshalAs(28)]
-        IPictureDisp GenerateSignatureLineImage([In] SignatureLineImage siglnimg, [MarshalAs(28)] [In] SignatureSetup psigsetup, [MarshalAs(28)] [In] SignatureInfo psiginfo, [MarshalAs(25)] [In] object XmlDsigStream);
+        IPictureDisp GenerateSignatureLineImage([In] SignatureLineImage siglnimg, [MarshalAs(28)][In] SignatureSetup psigsetup, [MarshalAs(28)][In] SignatureInfo psiginfo, [MarshalAs(25)][In] object XmlDsigStream);
 
         /// <summary>
         /// Provides a signature provider add-in the opportunity to display the Signature Setup dialog box to the user. 
@@ -36,7 +36,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="psigsetup">Specifies initial settings of the signature provider.</param>
         [DispId(1610743809)]
         [MethodImpl(4096)]
-        void ShowSignatureSetup([MarshalAs(25)] [In] object ParentWindow, [MarshalAs(28)] [In] SignatureSetup psigsetup);
+        void ShowSignatureSetup([MarshalAs(25)][In] object ParentWindow, [MarshalAs(28)][In] SignatureSetup psigsetup);
 
         /// <summary>
         /// Provides a signature provider add-in the opportunity to display the Signature dialog box to users, allowing them to specify their identity and then be authenticated.
@@ -47,7 +47,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="psiginfo">Specifies information about the signature provider.</param>
         [DispId(1610743810)]
         [MethodImpl(4096)]
-        void ShowSigningCeremony([MarshalAs(25)] [In] object ParentWindow, [MarshalAs(28)] [In] SignatureSetup psigsetup, [MarshalAs(28)] [In] SignatureInfo psiginfo);
+        void ShowSigningCeremony([MarshalAs(25)][In] object ParentWindow, [MarshalAs(28)][In] SignatureSetup psigsetup, [MarshalAs(28)][In] SignatureInfo psiginfo);
 
         /// <summary>
         /// Used to sign the XMLDSIG template.
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="XmlDsigStream">Represents a steam of data containing XML, which represents an XMLDSIG object.</param>
         [DispId(1610743811)]
         [MethodImpl(4096)]
-        void SignXmlDsig([MarshalAs(25)] [In] object QueryContinue, [MarshalAs(28)] [In] SignatureSetup psigsetup, [MarshalAs(28)] [In] SignatureInfo psiginfo, [MarshalAs(25)] [In] object XmlDsigStream);
+        void SignXmlDsig([MarshalAs(25)][In] object QueryContinue, [MarshalAs(28)][In] SignatureSetup psigsetup, [MarshalAs(28)][In] SignatureInfo psiginfo, [MarshalAs(25)][In] object XmlDsigStream);
 
         /// <summary>
         /// Used to display a dialog box informing the user that the signing process has completed and providing additional functionality for the add-in.
@@ -70,7 +70,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="psiginfo">Contains information about the signature provider add-in.</param>
         [DispId(1610743812)]
         [MethodImpl(4096)]
-        void NotifySignatureAdded([MarshalAs(25)] [In] object ParentWindow, [MarshalAs(28)] [In] SignatureSetup psigsetup, [MarshalAs(28)] [In] SignatureInfo psiginfo);
+        void NotifySignatureAdded([MarshalAs(25)][In] object ParentWindow, [MarshalAs(28)][In] SignatureSetup psigsetup, [MarshalAs(28)][In] SignatureInfo psiginfo);
 
         /// <summary>
         /// Verifies a signature based on the signed state of the document and the legitimacy of the certificate used for signing.
@@ -84,7 +84,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="pcertverres">Specifies the status of the signing certificate verification.</param>
         [DispId(1610743813)]
         [MethodImpl(4096)]
-        void VerifyXmlDsig([MarshalAs(25)] [In] object QueryContinue, [MarshalAs(28)] [In] SignatureSetup psigsetup, [MarshalAs(28)] [In] SignatureInfo psiginfo, [MarshalAs(25)] [In] object XmlDsigStream, [In] [Out] ref ContentVerificationResults pcontverres, [In] [Out] ref CertificateVerificationResults pcertverres);
+        void VerifyXmlDsig([MarshalAs(25)][In] object QueryContinue, [MarshalAs(28)][In] SignatureSetup psigsetup, [MarshalAs(28)][In] SignatureInfo psiginfo, [MarshalAs(25)][In] object XmlDsigStream, [In][Out] ref ContentVerificationResults pcontverres, [In][Out] ref CertificateVerificationResults pcertverres);
 
         /// <summary>
         /// Provides a signature provider add-in the opportunity to display details about a signed signature line and display additional stored information such as a secure time-stamp.
@@ -98,7 +98,7 @@ namespace NetOffice.OfficeApi.Native
         /// <param name="pcertverres">Contains a value representing the results of verificating the signing certification.</param>
         [DispId(1610743814)]
         [MethodImpl(4096)]
-        void ShowSignatureDetails([MarshalAs(25)] [In] object ParentWindow, [MarshalAs(28)] [In] SignatureSetup psigsetup, [MarshalAs(28)] [In] SignatureInfo psiginfo, [MarshalAs(25)] [In] object XmlDsigStream, [In] [Out] ref ContentVerificationResults pcontverres, [In] [Out] ref CertificateVerificationResults pcertverres);
+        void ShowSignatureDetails([MarshalAs(25)][In] object ParentWindow, [MarshalAs(28)][In] SignatureSetup psigsetup, [MarshalAs(28)][In] SignatureInfo psiginfo, [MarshalAs(25)][In] object XmlDsigStream, [In][Out] ref ContentVerificationResults pcontverres, [In][Out] ref CertificateVerificationResults pcertverres);
 
         /// <summary>
         /// Queries the signature provider add-in for various details. 
@@ -121,6 +121,6 @@ namespace NetOffice.OfficeApi.Native
         [DispId(1610743816)]
         [MethodImpl(4096)]
         [return: MarshalAs(29, SafeArraySubType = VarEnum.VT_UI1)]
-        Array HashStream([MarshalAs(25)] [In] object QueryContinue, [MarshalAs(25)] [In] object Stream);
+        Array HashStream([MarshalAs(25)][In] object QueryContinue, [MarshalAs(25)][In] object Stream);
     }
 }

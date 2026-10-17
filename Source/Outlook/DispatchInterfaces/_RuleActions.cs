@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.OutlookApi
 {
-	/// <summary>
-	/// DispatchInterface _RuleActions 
-	/// SupportByVersion Outlook, 12,14,15,16
-	/// </summary>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class _RuleActions : COMObject, IEnumerableProvider<NetOffice.OutlookApi._RuleAction>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface _RuleActions 
+    /// SupportByVersion Outlook, 12,14,15,16
+    /// </summary>
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface), BaseType, Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class _RuleActions : COMObject, IEnumerableProvider<NetOffice.OutlookApi._RuleAction>
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -44,401 +44,401 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public _RuleActions(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public _RuleActions(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public _RuleActions(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public _RuleActions(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RuleActions(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RuleActions(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public _RuleActions(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RuleActions(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RuleActions(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RuleActions() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public _RuleActions(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public _RuleActions(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Application"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._Application Application
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Class"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.Enums.OlObjectClass Class
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _RuleActions(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Session"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[BaseResult]
-		public NetOffice.OutlookApi._NameSpace Session
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _RuleActions(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Parent"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _RuleActions() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Count"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public _RuleActions(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.CopyToFolder"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.MoveOrCopyRuleAction CopyToFolder
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.MoveOrCopyRuleAction>(this, "CopyToFolder", NetOffice.OutlookApi.MoveOrCopyRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.DeletePermanently"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction DeletePermanently
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "DeletePermanently", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Delete"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction Delete
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "Delete", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Application"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._Application Application
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._Application>(this, "Application");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.DesktopAlert"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction DesktopAlert
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "DesktopAlert", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Class"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.Enums.OlObjectClass Class
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OutlookApi.Enums.OlObjectClass>(this, "Class");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.NotifyDelivery"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction NotifyDelivery
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "NotifyDelivery", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Session"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [BaseResult]
+        public NetOffice.OutlookApi._NameSpace Session
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferencePropertyGet<NetOffice.OutlookApi._NameSpace>(this, "Session");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.NotifyRead"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction NotifyRead
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "NotifyRead", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Parent"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Stop"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction Stop
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "Stop", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Count"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.MoveToFolder"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.MoveOrCopyRuleAction MoveToFolder
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.MoveOrCopyRuleAction>(this, "MoveToFolder", NetOffice.OutlookApi.MoveOrCopyRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.CopyToFolder"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.MoveOrCopyRuleAction CopyToFolder
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.MoveOrCopyRuleAction>(this, "CopyToFolder", NetOffice.OutlookApi.MoveOrCopyRuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.CC"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.SendRuleAction CC
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "CC", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.DeletePermanently"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction DeletePermanently
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "DeletePermanently", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Forward"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.SendRuleAction Forward
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "Forward", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Delete"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction Delete
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "Delete", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.ForwardAsAttachment"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.SendRuleAction ForwardAsAttachment
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "ForwardAsAttachment", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.DesktopAlert"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction DesktopAlert
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "DesktopAlert", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Redirect"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.SendRuleAction Redirect
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "Redirect", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.NotifyDelivery"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction NotifyDelivery
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "NotifyDelivery", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.AssignToCategory"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.AssignToCategoryRuleAction AssignToCategory
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AssignToCategoryRuleAction>(this, "AssignToCategory", NetOffice.OutlookApi.AssignToCategoryRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.NotifyRead"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction NotifyRead
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "NotifyRead", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.PlaySound"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.PlaySoundRuleAction PlaySound
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.PlaySoundRuleAction>(this, "PlaySound", NetOffice.OutlookApi.PlaySoundRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Stop"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction Stop
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "Stop", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.MarkAsTask"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.MarkAsTaskRuleAction MarkAsTask
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.MarkAsTaskRuleAction>(this, "MarkAsTask", NetOffice.OutlookApi.MarkAsTaskRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.MoveToFolder"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.MoveOrCopyRuleAction MoveToFolder
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.MoveOrCopyRuleAction>(this, "MoveToFolder", NetOffice.OutlookApi.MoveOrCopyRuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.NewItemAlert"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.NewItemAlertRuleAction NewItemAlert
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.NewItemAlertRuleAction>(this, "NewItemAlert", NetOffice.OutlookApi.NewItemAlertRuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.CC"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.SendRuleAction CC
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "CC", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.ClearCategories"/> </remarks>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		public NetOffice.OutlookApi.RuleAction ClearCategories
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "ClearCategories", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Forward"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.SendRuleAction Forward
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "Forward", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.ForwardAsAttachment"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.SendRuleAction ForwardAsAttachment
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "ForwardAsAttachment", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.Redirect"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.SendRuleAction Redirect
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.SendRuleAction>(this, "Redirect", NetOffice.OutlookApi.SendRuleAction.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Outlook 12, 14, 15, 16
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Outlook", 12,14,15,16)]
-		[BaseResult]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.OutlookApi._RuleAction this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._RuleAction>(this, "Item", index);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.AssignToCategory"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.AssignToCategoryRuleAction AssignToCategory
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.AssignToCategoryRuleAction>(this, "AssignToCategory", NetOffice.OutlookApi.AssignToCategoryRuleAction.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.PlaySound"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.PlaySoundRuleAction PlaySound
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.PlaySoundRuleAction>(this, "PlaySound", NetOffice.OutlookApi.PlaySoundRuleAction.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.MarkAsTask"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.MarkAsTaskRuleAction MarkAsTask
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.MarkAsTaskRuleAction>(this, "MarkAsTask", NetOffice.OutlookApi.MarkAsTaskRuleAction.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.NewItemAlert"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.NewItemAlertRuleAction NewItemAlert
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.NewItemAlertRuleAction>(this, "NewItemAlert", NetOffice.OutlookApi.NewItemAlertRuleAction.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.RuleActions.ClearCategories"/> </remarks>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        public NetOffice.OutlookApi.RuleAction ClearCategories
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OutlookApi.RuleAction>(this, "ClearCategories", NetOffice.OutlookApi.RuleAction.LateBindingApiWrapperType);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Outlook 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("Outlook", 12, 14, 15, 16)]
+        [BaseResult]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.OutlookApi._RuleAction this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteBaseReferenceMethodGet<NetOffice.OutlookApi._RuleAction>(this, "Item", index);
+            }
+        }
 
         #endregion
 
@@ -496,6 +496,6 @@ namespace NetOffice.OutlookApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

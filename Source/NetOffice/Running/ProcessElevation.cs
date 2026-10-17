@@ -18,7 +18,7 @@ namespace NetOffice.Running
         #endregion
 
         #region Imports
- 
+
         [DllImport("advapi32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool OpenProcessToken(IntPtr ProcessHandle, UInt32 DesiredAccess, out IntPtr TokenHandle);
@@ -73,7 +73,7 @@ namespace NetOffice.Running
         #endregion
 
         #region Methods
-        
+
         /// <summary>
         /// Converts nullable bool to <see cref="ProcessElevation"/> value.
         /// </summary>

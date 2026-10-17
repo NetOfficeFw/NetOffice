@@ -16,11 +16,11 @@ using NetOffice.OutlookApi.Enums;
 using System.Runtime.CompilerServices;
 
 namespace NetOffice.OutlookApi.Tools
-{  
+{
     /// <summary>
     /// NetOffice MS-Outlook COM Addin
     /// </summary>
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
+    [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin, Native.FormRegionStartup
     {
         #region Fields
@@ -28,7 +28,7 @@ namespace NetOffice.OutlookApi.Tools
         /// <summary>
         /// MS-Outlook Addin Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Outlook\\Addins\\";
+        private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Outlook\\Addins\\";
 
         /// <summary>
         /// MS-Outlook FormRegion Registry Path 
@@ -44,7 +44,7 @@ namespace NetOffice.OutlookApi.Tools
         /// Cache field used in IsLoadedFromSystem() method
         /// </summary>
         private bool? _isLoadedFromSystem;
-     
+
         /// <summary>
         /// Instance factory to avoid trouble with addins in same appdomain
         /// </summary>
@@ -63,7 +63,7 @@ namespace NetOffice.OutlookApi.Tools
             if (null == _factory)
                 _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
-			TaskPaneInstances = new List<ITaskPane>();
+            TaskPaneInstances = new List<ITaskPane>();
             OpenFormRegions = new List<OpenFormRegion>();
         }
 
@@ -80,7 +80,7 @@ namespace NetOffice.OutlookApi.Tools
         /// Host Application Instance
         /// </summary>
         protected internal Outlook.Application Application { get; private set; }
-        
+
         /// <summary>
         /// Collection with all created custom Task Panes
         /// </summary>
@@ -91,10 +91,10 @@ namespace NetOffice.OutlookApi.Tools
         /// </summary>
         public Office.ICTPFactory TaskPaneFactory { get; set; }
 
-		/// <summary>
+        /// <summary>
         /// ITaskPane Instances
         /// </summary>
-		protected List<ITaskPane> TaskPaneInstances { get; set; }
+        protected List<ITaskPane> TaskPaneInstances { get; set; }
 
         /// <summary>
         /// Ribbon instance to manipulate ui at runtime 
@@ -111,10 +111,10 @@ namespace NetOffice.OutlookApi.Tools
         /// </summary>
         private MethodInfo ErrorMethod { get; set; }
 
-		/// <summary>
+        /// <summary>
         /// Cached Register Error Method Delegate
         /// </summary>
-		private static MethodInfo RegisterErrorMethod { get; set; }
+        private static MethodInfo RegisterErrorMethod { get; set; }
 
         #endregion
 
@@ -178,7 +178,7 @@ namespace NetOffice.OutlookApi.Tools
             }
             catch (NetRuntimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
@@ -192,7 +192,7 @@ namespace NetOffice.OutlookApi.Tools
             }
             catch (NetRuntimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnDisconnection, exception);
             }
         }
@@ -206,7 +206,7 @@ namespace NetOffice.OutlookApi.Tools
             }
             catch (NetRuntimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnConnection, exception);
             }
         }
@@ -220,7 +220,7 @@ namespace NetOffice.OutlookApi.Tools
             }
             catch (NetRuntimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnAddInsUpdate, exception);
             }
         }
@@ -234,13 +234,13 @@ namespace NetOffice.OutlookApi.Tools
             }
             catch (NetRuntimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.OnBeginShutdown, exception);
             }
         }
 
         #endregion
-       
+
         #region COMAddinBase
 
         /// <summary>
@@ -334,7 +334,7 @@ namespace NetOffice.OutlookApi.Tools
                 try
                 {
                     RaiseOnDisconnection(RemoveMode, ref custom);
-                    Tweaks.DisposeTweaks(Factory, this, Type);                   
+                    Tweaks.DisposeTweaks(Factory, this, Type);
                     Utils.Dispose();
                 }
                 catch (NetRuntimeSystem.Exception exception)
@@ -377,7 +377,7 @@ namespace NetOffice.OutlookApi.Tools
                 {
                     NetOffice.DebugConsole.Default.WriteException(exception);
                 }
-                
+
                 foreach (var item in TaskPanes)
                 {
                     try
@@ -422,7 +422,7 @@ namespace NetOffice.OutlookApi.Tools
                 catch (NetRuntimeSystem.Exception exception)
                 {
                     NetOffice.DebugConsole.Default.WriteException(exception);
-                }	
+                }
             }
             catch (NetRuntimeSystem.Exception exception)
             {
@@ -487,10 +487,10 @@ namespace NetOffice.OutlookApi.Tools
             }
             catch (NetRuntimeSystem.Exception exception)
             {
-				NetOffice.DebugConsole.Default.WriteException(exception);
+                NetOffice.DebugConsole.Default.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
                 return String.Empty;
-            } 
+            }
         }
 
         /// <summary>
@@ -544,140 +544,140 @@ namespace NetOffice.OutlookApi.Tools
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
         /// <param name="paneInfo">pane definition</param>
-		/// <returns>true if pane shoul be create, otherwise false</returns>
-		protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
-		{
-			return true;
-		}
-		
+        /// <returns>true if pane shoul be create, otherwise false</returns>
+        protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        {
+            return true;
+        }
+
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
-		protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-	
-		}
+        protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
 
-		/// <summary>
+        }
+
+        /// <summary>
         /// Called after any position changes but not for size changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
-		protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			
-		}
+        protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
 
-		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        }
+
+        private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane == customTaskPaneInst)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
+                            if (null != target && item.Pane == customTaskPaneInst)
+                            {
+                                try
                                 {
-									target.OnVisibleStateChanged(item.Pane.Visible);
-								}
-								catch(NetRuntimeSystem.Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(NetRuntimeSystem.Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                    target.OnVisibleStateChanged(item.Pane.Visible);
+                                }
+                                catch (NetRuntimeSystem.Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (NetRuntimeSystem.Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
-			}
-			catch(NetRuntimeSystem.Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane == customTaskPaneInst)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
-								{
+                            if (null != target && item.Pane == customTaskPaneInst)
+                            {
+                                try
+                                {
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
-								}
-								catch(NetRuntimeSystem.Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(NetRuntimeSystem.Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                }
+                                catch (NetRuntimeSystem.Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (NetRuntimeSystem.Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneDockStateChanged(customTaskPaneInst);
-			}
-			catch(NetRuntimeSystem.Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
-		{
-			try
-			{
-				return OnCreateTaskPaneInfo(paneInfo);
-			}
-			catch(NetRuntimeSystem.Exception exception)
-			{
-				Factory.Console.WriteException(exception);
+        private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        {
+            try
+            {
+                return OnCreateTaskPaneInfo(paneInfo);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-				return false;
-			}
-		}
-		
+                return false;
+            }
+        }
+
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
-        {           
-			try
-			{
-				CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
-			}
-			catch(NetRuntimeSystem.Exception exception)
-			{
-				Factory.Console.WriteException(exception);
-			}
+        {
+            try
+            {
+                CallTaskPaneVisibleStateChange(CustomTaskPaneInst);
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
         }
 
         private void AttributePane_DockPositionStateChange(Office._CustomTaskPane CustomTaskPaneInst)
         {
-			try
-			{
+            try
+            {
                 CallTaskPaneDockPositionStateChange(CustomTaskPaneInst);
-			}
-			catch(NetRuntimeSystem.Exception exception)
-			{
-				Factory.Console.WriteException(exception);
-			}            
+            }
+            catch (NetRuntimeSystem.Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
         }
 
         #endregion
@@ -785,7 +785,7 @@ namespace NetOffice.OutlookApi.Tools
         /// <param name="LCID">The locale ID that identifies the language that Outlook is currently using. This value is used to obtain the localization strings corresponding to this language for the form region.</param>
         /// <returns></returns>
         [EditorBrowsable(EditorBrowsableState.Advanced)]
-        public virtual object GetFormRegionManifest([MarshalAs(19)] [In] string FormRegionName, [In] int LCID)
+        public virtual object GetFormRegionManifest([MarshalAs(19)][In] string FormRegionName, [In] int LCID)
         {
             try
             {
@@ -1001,7 +1001,7 @@ namespace NetOffice.OutlookApi.Tools
             if (null != _isLoadedFromSystem)
                 return _isLoadedFromSystem;
 
-            OfficeApi.Tools.Contribution.RegistryLocationResult result = 
+            OfficeApi.Tools.Contribution.RegistryLocationResult result =
                 OfficeApi.Tools.Contribution.CommonUtils.TryFindAddinLoadLocation(Type,
                                         ApplicationIdentifiers.ApplicationType.Outlook);
             switch (result)
@@ -1012,8 +1012,8 @@ namespace NetOffice.OutlookApi.Tools
                 case Office.Tools.Contribution.RegistryLocationResult.System:
                     _isLoadedFromSystem = true;
                     break;
-                //default:
-                //    throw new IndexOutOfRangeException();
+                    //default:
+                    //    throw new IndexOutOfRangeException();
             }
 
             return _isLoadedFromSystem;
@@ -1074,7 +1074,7 @@ namespace NetOffice.OutlookApi.Tools
         /// Called from regasm while register 
         /// </summary>
         /// <param name="type">Type information for the class</param>
-        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable( EditorBrowsableState.Never)]
+        [ComRegisterFunctionAttribute, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void RegisterFunction(Type type)
         {
             if (null == type)
@@ -1201,7 +1201,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (System.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
-                if(!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
                     throw;
             }
         }
@@ -1223,7 +1223,7 @@ namespace NetOffice.OutlookApi.Tools
             catch (System.Exception exception)
             {
                 NetOffice.DebugConsole.Default.WriteException(exception);
-                if(!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
+                if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, RegisterErrorMethodKind.Register, exception))
                     throw;
             }
         }

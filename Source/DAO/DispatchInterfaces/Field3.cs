@@ -11,9 +11,9 @@ namespace NetOffice.DAOApi
     /// </summary>
     [SupportByVersion("DAO", 12.0)]
     [EntityType(EntityType.IsDispatchInterface)]
-     public class Field3 : Field2
+    public class Field3 : Field2
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 

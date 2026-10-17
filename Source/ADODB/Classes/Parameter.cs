@@ -5,27 +5,27 @@ using NetOffice.Attributes;
 
 namespace NetOffice.ADODBApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	#pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass Parameter 
-	/// SupportByVersion ADODB, 2.1,2.5
-	/// </summary>
-	[SupportByVersion("ADODB", 2.1,2.5)]
-	[EntityType(EntityType.IsCoClass)]
- 	public class Parameter : _Parameter
-	{
-		#pragma warning disable
+    /// <summary>
+    /// CoClass Parameter 
+    /// SupportByVersion ADODB, 2.1,2.5
+    /// </summary>
+    [SupportByVersion("ADODB", 2.1, 2.5)]
+    [EntityType(EntityType.IsCoClass)]
+    public class Parameter : _Parameter
+    {
+#pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
 
         #endregion
@@ -43,11 +43,11 @@ namespace NetOffice.ADODBApi
                 return LateBindingApiWrapperType;
             }
         }
-        
-		/// <summary>
+
+        /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -57,80 +57,80 @@ namespace NetOffice.ADODBApi
                 return _type;
             }
         }
-        
-        #endregion
-        		
-		#region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        #endregion
+
+        #region Construction
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Parameter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Parameter(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Parameter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public Parameter(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Parameter(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Parameter(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Parameter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Parameter(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Parameter(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+
+        }
+
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Parameter(ICOMObject replacedObject) : base(replacedObject)
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of Parameter 
         /// </summary>		
-		public Parameter():base("ADODB.Parameter")
-		{
-			
-		}
-		
-		/// <summary>
+        public Parameter() : base("ADODB.Parameter")
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of Parameter
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public Parameter(string progId):base(progId)
-		{
-			
-		}
+        public Parameter(string progId) : base(progId)
+        {
 
-		#endregion
+        }
 
-		#region Static CoClass Methods
-		#endregion
+        #endregion
 
-		#region Events
+        #region Static CoClass Methods
+        #endregion
 
-		#endregion
-       
+        #region Events
 
-		#pragma warning restore
-	}
+        #endregion
+
+
+#pragma warning restore
+    }
 }
 

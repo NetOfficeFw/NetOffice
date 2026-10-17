@@ -55,7 +55,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// <returns>collection instance</returns>
         protected internal override TrayMenuItems OnCreateMenuItems()
         {
-            return new TrayMenuStubItems(Owner, this);        
+            return new TrayMenuStubItems(Owner, this);
         }
 
         #endregion

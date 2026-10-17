@@ -110,7 +110,7 @@ namespace NetOffice.Loader
                     }
                 }
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 Owner.Console.WriteLine("AssemblyLoad Exception<{1}> {0}", Path.GetFileName(fileName), exception.GetType().Name);
             }
@@ -159,7 +159,7 @@ namespace NetOffice.Loader
                 else
                     return null;
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 if (localPath != String.Empty && false == String.IsNullOrEmpty(name.CodeBase))
                     Owner.Console.WriteLine("AssemblyLoad(From Path) Exception<{1}> {0}", Path.GetFileName(localPath), exception.GetType().Name);
@@ -196,11 +196,11 @@ namespace NetOffice.Loader
         internal bool ValidateVersion(AssemblyName name)
         {
             if (name.Version == AssemblyVersion)
-            { 
+            {
                 return true;
             }
             else
-            { 
+            {
                 Owner.Console.WriteLine($"Assembly version mismatch. Assembly '{name.Name}' has version {name.Version}, but NetOffice expects '{AssemblyVersion}'.");
                 return false;
             }
@@ -259,7 +259,7 @@ namespace NetOffice.Loader
                     return assembly;
                 }
                 else
-                { 
+                {
                     Owner.Console.WriteLine(string.Format("Unable to resolve assembly {0}. The file doesn't exists in current codebase.", args.Name));
                     return null;
                 }

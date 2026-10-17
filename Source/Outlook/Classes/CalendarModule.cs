@@ -4,28 +4,28 @@ using System.ComponentModel;
 using NetOffice.Attributes;
 namespace NetOffice.OutlookApi
 {
-	#region Delegates
+    #region Delegates
 
-	#pragma warning disable
-	#pragma warning restore
+#pragma warning disable
+#pragma warning restore
 
-	#endregion
+    #endregion
 
-	/// <summary>
-	/// CoClass CalendarModule 
-	/// SupportByVersion Outlook, 12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.CalendarModule"/> </remarks>
-	[SupportByVersion("Outlook", 12,14,15,16)]
-	[EntityType(EntityType.IsCoClass)]
- 	public class CalendarModule : _CalendarModule
-	{
-		#pragma warning disable
+    /// <summary>
+    /// CoClass CalendarModule 
+    /// SupportByVersion Outlook, 12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Outlook.CalendarModule"/> </remarks>
+    [SupportByVersion("Outlook", 12, 14, 15, 16)]
+    [EntityType(EntityType.IsCoClass)]
+    public class CalendarModule : _CalendarModule
+    {
+#pragma warning disable
 
-		#region Fields
-		
-		private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
-		private string _activeSinkId;
+        #region Fields
+
+        private NetRuntimeSystem.Runtime.InteropServices.ComTypes.IConnectionPoint _connectPoint;
+        private string _activeSinkId;
         private static Type _type;
 
         #endregion
@@ -43,11 +43,11 @@ namespace NetOffice.OutlookApi
                 return LateBindingApiWrapperType;
             }
         }
-        
-		/// <summary>
+
+        /// <summary>
         /// Type Cache
         /// </summary>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -57,80 +57,80 @@ namespace NetOffice.OutlookApi
                 return _type;
             }
         }
-        
-        #endregion
-        		
-		#region Construction
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        #endregion
+
+        #region Construction
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CalendarModule(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public CalendarModule(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public CalendarModule(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-			
-		}
+        public CalendarModule(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CalendarModule(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
-			
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CalendarModule(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		///<param name="parentObject">object there has created the proxy</param>
+        }
+
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CalendarModule(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-			
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public CalendarModule(ICOMObject replacedObject) : base(replacedObject)
-		{
-			
-		}
-		
-		/// <summary>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CalendarModule(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+
+        }
+
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public CalendarModule(ICOMObject replacedObject) : base(replacedObject)
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of CalendarModule 
         /// </summary>		
-		public CalendarModule():base("Outlook.CalendarModule")
-		{
-			
-		}
-		
-		/// <summary>
+        public CalendarModule() : base("Outlook.CalendarModule")
+        {
+
+        }
+
+        /// <summary>
         /// Creates a new instance of CalendarModule
         /// </summary>
         ///<param name="progId">registered ProgID</param>
-		public CalendarModule(string progId):base(progId)
-		{
-			
-		}
+        public CalendarModule(string progId) : base(progId)
+        {
 
-		#endregion
+        }
 
-		#region Static CoClass Methods
-		#endregion
+        #endregion
 
-		#region Events
+        #region Static CoClass Methods
+        #endregion
 
-		#endregion
-       
+        #region Events
 
-		#pragma warning restore
-	}
+        #endregion
+
+
+#pragma warning restore
+    }
 }
 

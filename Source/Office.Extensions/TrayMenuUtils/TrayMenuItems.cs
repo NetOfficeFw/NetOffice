@@ -10,7 +10,7 @@ using System.Collections;
 using NetOffice.Tools;
 
 namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
-{  
+{
     /// <summary>
     /// Represents a collection of tray menu items
     /// </summary>
@@ -74,7 +74,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         #endregion
 
         #region Properties
-        
+
         /// <summary>
         /// Returns the item count
         /// </summary>
@@ -185,7 +185,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             TrayMenuItemType type = GetItemType<T>();
             return Add(text, visible, Image.FromStream(ReadRessource(imageResourceName)), type) as T;
         }
-        
+
         /// <summary>
         /// Add items to the collection
         /// </summary>
@@ -201,8 +201,8 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             for (int i = 0; i < text.Length; i++)
             {
                 string itemText = text[i];
-                T item = Add<T>(itemText);          
-                result[i] = item;             
+                T item = Add<T>(itemText);
+                result[i] = item;
             }
 
             return result;
@@ -224,18 +224,18 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 _items.Add(item);
                 result[i] = item;
                 RaiseItemAdded(item);
-            }            
+            }
 
             return result;
         }
-        
+
         /// <summary>
         /// Add an item to the collection
         /// </summary>
         /// <param name="text">shown item caption</param>
         /// <returns>new created item</returns>
         public virtual TrayMenuItem Add(string text)
-        {           
+        {
             TrayMenuItem item = new TrayMenuItem(_owner, text);
             _items.Add(item);
             RaiseItemAdded(item);
@@ -249,7 +249,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// <param name="visible">item visibility</param>
         /// <returns>new created item</returns>
         public virtual TrayMenuItem Add(string text, bool visible)
-        {          
+        {
             TrayMenuItem item = new TrayMenuItem(_owner, text, visible);
             _items.Add(item);
             RaiseItemAdded(item);
@@ -294,7 +294,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         {
             return Add(text, visible, null, itemType);
         }
-       
+
         /// <summary>
         /// Add an item to the collection
         /// </summary>
@@ -318,7 +318,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         ///  <param name="control">custom control</param>
         /// <returns>new created item</returns>
         public virtual TrayMenuItem Add(string text, bool visible, Image image, TrayMenuItemType itemType, object control)
-        {          
+        {
             TrayMenuItem item = null;
 
             switch (itemType)
@@ -373,7 +373,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             RaiseItemAdded(item);
             return item;
         }
-        
+
         /// <summary>
         /// Remove an item 
         /// </summary>

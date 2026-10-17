@@ -5,7 +5,7 @@ using NetOffice.Attributes;
 
 namespace VBIDEApi.Utils
 {
-    #pragma warning disable
+#pragma warning disable
     /// <summary>
     /// Necessary factory info, used from NetOffice.Core while Initialize()
     /// </summary>
@@ -13,14 +13,14 @@ namespace VBIDEApi.Utils
     {
         #region Fields
 
-        private string    _name;
-        private string    _namespace     = "NetOffice.VBIDEApi";
-        private Guid[]    _componentGuid = new Guid[]{new Guid("0002E157-0000-0000-C000-000000000046")};
-        private Assembly  _assembly;
+        private string _name;
+        private string _namespace = "NetOffice.VBIDEApi";
+        private Guid[] _componentGuid = new Guid[] { new Guid("0002E157-0000-0000-C000-000000000046") };
+        private Assembly _assembly;
         private NetOfficeAssemblyAttribute _assemblyAttribute;
-        private Type[]	  _exportedTypes;
-		private string[]  _dependents;
-		
+        private Type[] _exportedTypes;
+        private string[] _dependents;
+
         #endregion
 
         #region Ctor
@@ -80,8 +80,8 @@ namespace VBIDEApi.Utils
         {
             get
             {
-				if(null == _dependents)
-					_dependents = new string[]{"OfficeApi.dll"};
+                if (null == _dependents)
+                    _dependents = new string[] { "OfficeApi.dll" };
                 return _dependents;
             }
         }
@@ -116,5 +116,5 @@ namespace VBIDEApi.Utils
 
         #endregion
     }
-    #pragma warning restore
+#pragma warning restore
 }

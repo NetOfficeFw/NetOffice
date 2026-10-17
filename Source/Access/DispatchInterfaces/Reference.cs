@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.AccessApi
 {
-	/// <summary>
-	/// DispatchInterface Reference 
-	/// SupportByVersion Access, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference"/> </remarks>
-	[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Reference : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Reference 
+    /// SupportByVersion Access, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference"/> </remarks>
+    [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class Reference : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,215 +42,215 @@ namespace NetOffice.AccessApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Reference(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Reference(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Reference(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Reference(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Reference(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Reference(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public Reference(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Reference(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Reference(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Reference() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Reference(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Reference(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Collection"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.AccessApi.References Collection
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.References>(this, "Collection", NetOffice.AccessApi.References.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Name"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Name
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Name");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Reference(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Guid"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string Guid
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "Guid");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Reference(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Major"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 Major
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Major");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Reference() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Minor"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public Int32 Minor
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Minor");
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Reference(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.FullPath"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public string FullPath
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "FullPath");
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.BuiltIn"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool BuiltIn
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.IsBroken"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public bool IsBroken
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IsBroken");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Collection"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.AccessApi.References Collection
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.AccessApi.References>(this, "Collection", NetOffice.AccessApi.References.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Kind"/> </remarks>
-		[SupportByVersion("Access", 9,10,11,12,14,15,16)]
-		public NetOffice.VBIDEApi.Enums.vbext_RefKind Kind
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_RefKind>(this, "Kind");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Name"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public string Name
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Name");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Guid"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public string Guid
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "Guid");
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Major"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 Major
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Major");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Access 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="dispid">Int32 dispid</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		[SupportByVersion("Access", 11,12,14,15,16)]
-		public bool IsMemberSafe(Int32 dispid)
-		{
-			return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
-		}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Minor"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 Minor
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Minor");
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.FullPath"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public string FullPath
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "FullPath");
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.BuiltIn"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public bool BuiltIn
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "BuiltIn");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.IsBroken"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public bool IsBroken
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IsBroken");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Access 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Access.Reference.Kind"/> </remarks>
+        [SupportByVersion("Access", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.VBIDEApi.Enums.vbext_RefKind Kind
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.VBIDEApi.Enums.vbext_RefKind>(this, "Kind");
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Access 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="dispid">Int32 dispid</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [SupportByVersion("Access", 11, 12, 14, 15, 16)]
+        public bool IsMemberSafe(Int32 dispid)
+        {
+            return Factory.ExecuteBoolMethodGet(this, "IsMemberSafe", dispid);
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

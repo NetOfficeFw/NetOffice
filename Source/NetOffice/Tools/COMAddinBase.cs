@@ -83,6 +83,6 @@ namespace NetOffice.Tools
                 if (System.Windows.Forms.Application.VisualStyleState == System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled)
                     System.Windows.Forms.Application.EnableVisualStyles();
             }
-        } 
+        }
     }
 }

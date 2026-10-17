@@ -43,7 +43,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         #endregion
 
         #region Properties
-       
+
         /// <summary>
         /// Max Text Length
         /// </summary>

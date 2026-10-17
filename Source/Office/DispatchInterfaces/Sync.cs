@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.OfficeApi
 {
-	/// <summary>
-	/// DispatchInterface Sync 
-	/// SupportByVersion Office, 11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync"/> </remarks>
-	[SupportByVersion("Office", 11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class Sync : _IMsoDispObj
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface Sync 
+    /// SupportByVersion Office, 11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync"/> </remarks>
+    [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class Sync : _IMsoDispObj
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,201 +42,201 @@ namespace NetOffice.OfficeApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public Sync(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public Sync(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public Sync(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public Sync(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sync(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sync(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public Sync(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sync(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sync(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sync() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public Sync(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public Sync(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.Status"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncStatusType>(this, "Status");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.WorkspaceLastChangedBy"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public string WorkspaceLastChangedBy
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "WorkspaceLastChangedBy");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sync(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.LastSyncTime"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public object LastSyncTime
-		{
-			get
-			{
-				return Factory.ExecuteVariantPropertyGet(this, "LastSyncTime");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sync(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.ErrorType"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncErrorType>(this, "ErrorType");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sync() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.Parent"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public Sync(string progId) : base(progId)
+        {
+        }
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/office.sync.getupdate"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void GetUpdate()
-		{
-			 Factory.ExecuteMethod(this, "GetUpdate");
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.Status"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.Enums.MsoSyncStatusType Status
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncStatusType>(this, "Status");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.PutUpdate"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void PutUpdate()
-		{
-			 Factory.ExecuteMethod(this, "PutUpdate");
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.WorkspaceLastChangedBy"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public string WorkspaceLastChangedBy
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "WorkspaceLastChangedBy");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.OpenVersion"/> </remarks>
-		/// <param name="syncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType</param>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
-		{
-			 Factory.ExecuteMethod(this, "OpenVersion", syncVersionType);
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.LastSyncTime"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public object LastSyncTime
+        {
+            get
+            {
+                return Factory.ExecuteVariantPropertyGet(this, "LastSyncTime");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.ResolveConflict"/> </remarks>
-		/// <param name="syncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution</param>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
-		{
-			 Factory.ExecuteMethod(this, "ResolveConflict", syncConflictResolution);
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.ErrorType"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public NetOffice.OfficeApi.Enums.MsoSyncErrorType ErrorType
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoSyncErrorType>(this, "ErrorType");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Office 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.Unsuspend"/> </remarks>
-		[SupportByVersion("Office", 11,12,14,15,16)]
-		public void Unsuspend()
-		{
-			 Factory.ExecuteMethod(this, "Unsuspend");
-		}
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.Parent"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/office.sync.getupdate"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public void GetUpdate()
+        {
+            Factory.ExecuteMethod(this, "GetUpdate");
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.PutUpdate"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public void PutUpdate()
+        {
+            Factory.ExecuteMethod(this, "PutUpdate");
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.OpenVersion"/> </remarks>
+        /// <param name="syncVersionType">NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType</param>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public void OpenVersion(NetOffice.OfficeApi.Enums.MsoSyncVersionType syncVersionType)
+        {
+            Factory.ExecuteMethod(this, "OpenVersion", syncVersionType);
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.ResolveConflict"/> </remarks>
+        /// <param name="syncConflictResolution">NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution</param>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public void ResolveConflict(NetOffice.OfficeApi.Enums.MsoSyncConflictResolutionType syncConflictResolution)
+        {
+            Factory.ExecuteMethod(this, "ResolveConflict", syncConflictResolution);
+        }
+
+        /// <summary>
+        /// SupportByVersion Office 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Office.Sync.Unsuspend"/> </remarks>
+        [SupportByVersion("Office", 11, 12, 14, 15, 16)]
+        public void Unsuspend()
+        {
+            Factory.ExecuteMethod(this, "Unsuspend");
+        }
+
+        #endregion
+
+#pragma warning restore
+    }
 }

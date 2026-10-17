@@ -8,34 +8,34 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.WordApi
 {
-	/// <summary>
-	/// DispatchInterface PageNumbers 
-	/// SupportByVersion Word, 9,10,11,12,14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.pagenumbers"/> </remarks>
-	[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class PageNumbers : COMObject, IEnumerableProvider<NetOffice.WordApi.PageNumber>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface PageNumbers 
+    /// SupportByVersion Word, 9,10,11,12,14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.pagenumbers"/> </remarks>
+    [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Property), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class PageNumbers : COMObject, IEnumerableProvider<NetOffice.WordApi.PageNumber>
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -45,325 +45,325 @@ namespace NetOffice.WordApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PageNumbers(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public PageNumbers(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PageNumbers(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public PageNumbers(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PageNumbers(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PageNumbers(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public PageNumbers(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PageNumbers(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PageNumbers(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PageNumbers() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PageNumbers(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public PageNumbers(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Application"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Creator"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PageNumbers(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Parent"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PageNumbers(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Count"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PageNumbers() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.NumberStyle"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Enums.WdPageNumberStyle NumberStyle
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdPageNumberStyle>(this, "NumberStyle");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "NumberStyle", value);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PageNumbers(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.IncludeChapterNumber"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool IncludeChapterNumber
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "IncludeChapterNumber");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "IncludeChapterNumber", value);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.HeadingLevelForChapter"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 HeadingLevelForChapter
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "HeadingLevelForChapter");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "HeadingLevelForChapter", value);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.ChapterPageSeparator"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.Enums.WdSeparatorType ChapterPageSeparator
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdSeparatorType>(this, "ChapterPageSeparator");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "ChapterPageSeparator", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Application"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.WordApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.WordApi.Application>(this, "Application", NetOffice.WordApi.Application.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.RestartNumberingAtSection"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool RestartNumberingAtSection
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "RestartNumberingAtSection");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "RestartNumberingAtSection", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Creator"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 Creator
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.StartingNumber"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public Int32 StartingNumber
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "StartingNumber");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "StartingNumber", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Parent"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.ShowFirstPageNumber"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool ShowFirstPageNumber
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "ShowFirstPageNumber");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "ShowFirstPageNumber", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Count"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.DoubleQuote"/> </remarks>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public bool DoubleQuote
-		{
-			get
-			{
-				return Factory.ExecuteBoolPropertyGet(this, "DoubleQuote");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "DoubleQuote", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.NumberStyle"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.WordApi.Enums.WdPageNumberStyle NumberStyle
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdPageNumberStyle>(this, "NumberStyle");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "NumberStyle", value);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.IncludeChapterNumber"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public bool IncludeChapterNumber
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "IncludeChapterNumber");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "IncludeChapterNumber", value);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.HeadingLevelForChapter"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 HeadingLevelForChapter
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "HeadingLevelForChapter");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "HeadingLevelForChapter", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <param name="index">Int32 index</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.WordApi.PageNumber this[Int32 index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Item", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType, index);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.ChapterPageSeparator"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.WordApi.Enums.WdSeparatorType ChapterPageSeparator
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.WordApi.Enums.WdSeparatorType>(this, "ChapterPageSeparator");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "ChapterPageSeparator", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Add"/> </remarks>
-		/// <param name="pageNumberAlignment">optional object pageNumberAlignment</param>
-		/// <param name="firstPage">optional object firstPage</param>
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment, object firstPage)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Add", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType, pageNumberAlignment, firstPage);
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.RestartNumberingAtSection"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public bool RestartNumberingAtSection
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "RestartNumberingAtSection");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "RestartNumberingAtSection", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Add"/> </remarks>
-		[CustomMethod]
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.PageNumber Add()
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Add", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType);
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.StartingNumber"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public Int32 StartingNumber
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "StartingNumber");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "StartingNumber", value);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Add"/> </remarks>
-		/// <param name="pageNumberAlignment">optional object pageNumberAlignment</param>
-		[CustomMethod]
-		[SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Add", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType, pageNumberAlignment);
-		}
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.ShowFirstPageNumber"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public bool ShowFirstPageNumber
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "ShowFirstPageNumber");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "ShowFirstPageNumber", value);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.DoubleQuote"/> </remarks>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public bool DoubleQuote
+        {
+            get
+            {
+                return Factory.ExecuteBoolPropertyGet(this, "DoubleQuote");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "DoubleQuote", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <param name="index">Int32 index</param>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.WordApi.PageNumber this[Int32 index]
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Item", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType, index);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Add"/> </remarks>
+        /// <param name="pageNumberAlignment">optional object pageNumberAlignment</param>
+        /// <param name="firstPage">optional object firstPage</param>
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment, object firstPage)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Add", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType, pageNumberAlignment, firstPage);
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Add"/> </remarks>
+        [CustomMethod]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.WordApi.PageNumber Add()
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Add", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType);
+        }
+
+        /// <summary>
+        /// SupportByVersion Word 9, 10, 11, 12, 14, 15, 16
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/Word.PageNumbers.Add"/> </remarks>
+        /// <param name="pageNumberAlignment">optional object pageNumberAlignment</param>
+        [CustomMethod]
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        public NetOffice.WordApi.PageNumber Add(object pageNumberAlignment)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.WordApi.PageNumber>(this, "Add", NetOffice.WordApi.PageNumber.LateBindingApiWrapperType, pageNumberAlignment);
+        }
 
         #endregion
 
@@ -401,14 +401,14 @@ namespace NetOffice.WordApi
         /// <summary>
         /// SupportByVersion Word, 9,10,11,12,14,15,16
         /// </summary>
-        [SupportByVersion("Word", 9,10,11,12,14,15,16)]
-		IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
-		{
-			return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
-		}
+        [SupportByVersion("Word", 9, 10, 11, 12, 14, 15, 16)]
+        IEnumerator NetRuntimeSystem.Collections.IEnumerable.GetEnumerator()
+        {
+            return NetOffice.Utils.GetProxyEnumeratorAsProperty(this);
+        }
 
-		#endregion
+        #endregion
 
-		#pragma warning restore
-	}
+#pragma warning restore
+    }
 }

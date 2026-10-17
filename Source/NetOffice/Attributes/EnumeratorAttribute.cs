@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 
 namespace NetOffice.Attributes
-{    
+{
     /// <summary>
-     /// Indicates how an enumerator want invoke internally
-     /// </summary>
+    /// Indicates how an enumerator want invoke internally
+    /// </summary>
     public enum EnumeratorInvoke
     {
         /// <summary>
@@ -19,7 +19,7 @@ namespace NetOffice.Attributes
         /// Invoke as method
         /// </summary>
         Method = 1,
-       
+
         /// <summary>
         /// Underlying instance doesn't have an enumerator. Enumerator is created by NetOffice instead by using this+Count.
         /// Using a custom enumerator may cause performance/memory dropdown when heavy amount of data is returned

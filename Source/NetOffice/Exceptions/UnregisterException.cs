@@ -11,13 +11,13 @@ namespace NetOffice.Exceptions
         /// Default Error Message
         /// </summary>
         private static string _exceptionMessage = "An error occured while calling unregister.";
-            
+
         /// <summary>
         /// Creates an instance of the class
         /// </summary>
         public UnregisterException() : base(_exceptionMessage, null)
         {
-            
+
         }
 
         /// <summary>

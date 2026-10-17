@@ -28,7 +28,7 @@ namespace NetOffice.Tools
     {
         #region Fields
 
-        private static string[] _noTweakNames = new string[] { "NOConsoleMode", "NOConsoleShare", "NOExceptionHandling", "NOExceptionMessage", "NOCultureInfo", 
+        private static string[] _noTweakNames = new string[] { "NOConsoleMode", "NOConsoleShare", "NOExceptionHandling", "NOExceptionMessage", "NOCultureInfo",
                                                                "NOMessageFilter", "NOSafeMode", "NOAdHocLoad", "NODeepLoad",
                                                                "NODebugOut", "NODebugOut", "NOEventOut" };
         private static string[] _addinValueNames = new string[] { "FriendlyName", "Description", "LoadBehavior", "CommandLineSafe", "CreatedAt" };
@@ -88,7 +88,7 @@ namespace NetOffice.Tools
                     return;
 
                 RegistryKey hiveKey = systemKey == true ? Registry.LocalMachine : Registry.CurrentUser;
-                 
+
                 RegistryKey key = hiveKey.OpenSubKey("Software\\Microsoft\\Office\\" + registryEndPoint + "\\Addins\\" + progIDAttribute.Value);
                 if (null != key)
                 {

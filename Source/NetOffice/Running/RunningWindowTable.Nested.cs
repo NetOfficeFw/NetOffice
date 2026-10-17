@@ -201,7 +201,7 @@ namespace NetOffice.Running
                         {
                             ;
                         }
-                    } 
+                    }
                 }
                 Clear();
             }

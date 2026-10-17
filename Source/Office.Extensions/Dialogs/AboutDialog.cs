@@ -69,7 +69,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
         {
             try
             {
-                if(!String.IsNullOrEmpty(link))
+                if (!String.IsNullOrEmpty(link))
                     Process.Start(link);
             }
             catch

@@ -24,7 +24,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         private COMAddinBase _addin;
 
         #endregion
-        
+
         #region Ctor
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         {
             _addin = addin;
             _contextMenu = new ContextMenuStrip();
-            _contextMenu.Font = new System.Drawing.Font("Arial", 8.00F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161))); 
+            _contextMenu.Font = new System.Drawing.Font("Arial", 8.00F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             _contextMenu.Opening += ContextMenu_Opening;
             Items = new TrayMenuItems(this);
             Enabled = true;
@@ -43,7 +43,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         #endregion
 
         #region Events
-        
+
         /// <summary>
         /// Occurs when a selected object from TrayMenuDropDownList has been changed
         /// </summary>
@@ -87,7 +87,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         #endregion
 
         #region Properties
-      
+
         /// <summary>
         /// Addin Owner
         /// </summary>
@@ -255,7 +255,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// Returns the internal representation from current used ui system
         /// </summary>
         /// <returns>inner ui instance or null</returns>
-        internal T GetMenuInternal<T>() where T: class
+        internal T GetMenuInternal<T>() where T : class
         {
             return _contextMenu as T;
         }
@@ -362,7 +362,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         {
             ToolStripItem targetStrip = Find(item);
             if (null != targetStrip)
-                targetStrip.Visible = item.Visible;   
+                targetStrip.Visible = item.Visible;
         }
 
         /// <summary>
@@ -377,7 +377,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
 
             RaiseItemTextChanged(item);
         }
-        
+
         /// <summary>
         /// Notify an item enabled state has been changed
         /// </summary>
@@ -454,7 +454,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             if (null != targetStrip)
                 targetStrip.TextAlign = item.TextAlign;
         }
-        
+
         /// <summary>
         /// Notify an item padding has been changed
         /// </summary>
@@ -522,7 +522,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             ToolStripComboBox targetStrip = Find(item) as ToolStripComboBox;
             if (null != targetStrip)
             {
-                targetStrip.DropDownStyle = (ComboBoxStyle)item.DropDownStyle;                   
+                targetStrip.DropDownStyle = (ComboBoxStyle)item.DropDownStyle;
             }
         }
 
@@ -593,8 +593,8 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             }
             else
                 return item.MaxLength;
-        }       
-    
+        }
+
         /// <summary>
         /// Notify an item check state been changed
         /// </summary>
@@ -697,7 +697,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             switch (item.ItemType)
             {
                 case TrayMenuItemType.Item:
-                    newItem = new ToolStripMenuItem();                   
+                    newItem = new ToolStripMenuItem();
                     break;
                 case TrayMenuItemType.Label:
                     newItem = new ToolStripLabel();
@@ -721,7 +721,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                     break;
                 case TrayMenuItemType.Progress:
                     newItem = new ToolStripProgressBar();
-                    (item as TrayMenuProgressItem).SetProgressElements((newItem as ToolStripProgressBar).Minimum, (newItem as ToolStripProgressBar).Maximum, (newItem as ToolStripProgressBar).Value, (TrayMenuProgressItem.ProgressBarStyle)(newItem as ToolStripProgressBar).Style);                    
+                    (item as TrayMenuProgressItem).SetProgressElements((newItem as ToolStripProgressBar).Minimum, (newItem as ToolStripProgressBar).Maximum, (newItem as ToolStripProgressBar).Value, (TrayMenuProgressItem.ProgressBarStyle)(newItem as ToolStripProgressBar).Style);
                     break;
                 case TrayMenuItemType.DropDownList:
                     newItem = new ToolStripComboBox();
@@ -733,7 +733,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 case TrayMenuItemType.Separator:
                     newItem = new ToolStripSeparator();
                     break;
-                case TrayMenuItemType.Custom:          
+                case TrayMenuItemType.Custom:
                     newItem = new ToolStripControlHost((System.Windows.Forms.Control)(item as TrayMenuCustomItem).Control);
                     break;
                 case TrayMenuItemType.Monitor:
@@ -744,7 +744,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 case TrayMenuItemType.AutoClose:
                     newItem = new ToolStripMenuItem();
                     (newItem as ToolStripMenuItem).CheckOnClick = true;
-                    (newItem as ToolStripMenuItem).Checked = AutoClose;                
+                    (newItem as ToolStripMenuItem).Checked = AutoClose;
                     (newItem as ToolStripMenuItem).CheckedChanged += ToolAutoCloseStripItem_CheckedChanged;
                     break;
                 case TrayMenuItemType.Close:
@@ -754,7 +754,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            
+
             newItem.Tag = item;
             newItem.Text = item.Text;
             newItem.ToolTipText = item.ToolTipText;
@@ -877,7 +877,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// <summary>
         /// Gets a value indicating whether the control has been disposed of.
         /// </summary>
-        public bool IsDisposed { get; private set; }      
+        public bool IsDisposed { get; private set; }
 
         /// <summary>
         /// Dispose the instance.
@@ -970,7 +970,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             {
                 ToolStripMenuItem toolStripItem = sender as ToolStripMenuItem;
                 TrayMenuItem menuItem = toolStripItem.Tag as TrayMenuItem;
-                RaiseItemChecked(menuItem, toolStripItem.Checked);             
+                RaiseItemChecked(menuItem, toolStripItem.Checked);
             }
             catch (Exception exception)
             {
@@ -1026,7 +1026,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             {
                 ToolStripControlHost toolStripItem = sender as ToolStripControlHost;
                 TrayMenuItem menuItem = toolStripItem.Tag as TrayMenuItem;
-                RaiseItemKeyDown(menuItem, e);   
+                RaiseItemKeyDown(menuItem, e);
             }
             catch (Exception exception)
             {
@@ -1040,7 +1040,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             {
                 ToolStripControlHost toolStripItem = sender as ToolStripControlHost;
                 TrayMenuItem menuItem = toolStripItem.Tag as TrayMenuItem;
-                RaiseItemKeyUp(menuItem, e);               
+                RaiseItemKeyUp(menuItem, e);
             }
             catch (Exception exception)
             {
@@ -1061,7 +1061,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 NetOffice.Core.Default.Console.WriteException(exception);
             }
         }
-        
+
         #endregion
     }
 }

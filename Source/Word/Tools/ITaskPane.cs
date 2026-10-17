@@ -3,15 +3,15 @@ using Word = NetOffice.WordApi;
 
 namespace NetOffice.WordApi.Tools
 {
- 	/// <summary>
+    /// <summary>
     /// Custom task pane UserControl instance may implement this interface to be notified about the lifetime of the custom task pane.
     /// </summary>
     public interface ITaskPane : OfficeApi.Tools.ITaskPaneConnection<Word.Application>
     {
-		/// <summary>
+        /// <summary>
         /// Called when Microsoft Office application is shuting down. This method is not called in case of unexpected termination of the process.
         /// </summary>
-		void OnDisconnection();
+        void OnDisconnection();
 
         /// <summary>
         /// Called when the user changes the dock position of the custom task pane.

@@ -50,7 +50,7 @@ namespace NetOffice.Running
         /// <param name="libraryID">id of the component where the proxy comes from</param>
         /// <param name="processID">pid</param>
         /// <param name="elevation">process elevation</param>
-        public ProxyInformation(object proxy, string displayName, string id, string name, 
+        public ProxyInformation(object proxy, string displayName, string id, string name,
             string component, string libraryID, IntPtr processID, ProcessElevation elevation)
         {
             if (null == proxy)

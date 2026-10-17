@@ -13,7 +13,7 @@ namespace NetOffice
         /// The standard message from <see cref="Settings.ExceptionDefaultMessage"/>.
         /// </summary>
         Default = 0,
-        
+
         /// <summary>
         /// The message from the source exception.
         /// </summary>

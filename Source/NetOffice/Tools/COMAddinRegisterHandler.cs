@@ -9,7 +9,7 @@ namespace NetOffice.Tools
     /// Handle COMAddin register process
     /// </summary>
     public static class COMAddinRegisterHandler
-    {  
+    {
         /// <summary>
         /// Do register process per user installation
         /// </summary>
@@ -62,14 +62,14 @@ namespace NetOffice.Tools
                     {
                         if (!CallDerivedRegisterMethod(registerMethod, type, registerAttribute.Value == RegisterMode.Replace ? RegisterCall.Replace : RegisterCall.CallBefore, scope, keyState))
                         {
-                            if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type, 
-                                                                                    RegisterErrorMethodKind.Register, 
+                            if (!RegisterErrorHandler.RaiseStaticErrorHandlerMethod(type,
+                                                                                    RegisterErrorMethodKind.Register,
                                                                                     new RegisterException(errorBlock)))
                                 return;
                         }
 
                         if (registerAttribute.Value == RegisterMode.Replace)
-                                return;
+                            return;
                     }
                 }
                 catch (Exception)
@@ -77,7 +77,7 @@ namespace NetOffice.Tools
                     errorBlock = 1;
                     throw;
                 }
-                
+
                 if (null != programmable)
                 {
                     try
@@ -106,7 +106,7 @@ namespace NetOffice.Tools
                     {
                         errorBlock = 3;
                         throw;
-                    }                  
+                    }
                 }
 
                 if (null != lockBack)
@@ -120,7 +120,7 @@ namespace NetOffice.Tools
                     try
                     {
                         foreach (string item in addinOfficeRegistryKey)
-                        {                        
+                        {
                             RegistryLocationAttribute.CreateApplicationKey(isSystemAddin, item, progId.Value,
                                                                            addin.LoadBehavior, addin.Name, addin.Description, addin.CommandLineSafe, null != timestamp);
                         }
@@ -129,7 +129,7 @@ namespace NetOffice.Tools
                     {
                         errorBlock = 5;
                         throw;
-                    }                      
+                    }
                 }
 
                 if ((null != registerAttribute && true == registerMethodPresent) && (registerAttribute.Value == RegisterMode.CallAfter || registerAttribute.Value == RegisterMode.CallBeforeAndAfter))
@@ -156,7 +156,7 @@ namespace NetOffice.Tools
         /// <param name="scope">current register scope</param>
         /// <param name="keyState">office reg key state</param>
         /// <returns>true if no exception occurs, otherwise false</returns>
-        public static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type, 
+        public static bool CallDerivedRegisterMethod(MethodInfo registerMethod, Type type,
             RegisterCall callType, InstallScope scope, OfficeRegisterKeyState keyState)
         {
             try
@@ -169,7 +169,7 @@ namespace NetOffice.Tools
                         registerMethod.Invoke(null, new object[0]);
                         break;
                     case 1:
-                        if(arguments[0].ParameterType.GUID == typeof(InstallScope).GUID)
+                        if (arguments[0].ParameterType.GUID == typeof(InstallScope).GUID)
                             registerMethod.Invoke(null, new object[] { scope });
                         else if (arguments[0].ParameterType.GUID == typeof(RegisterCall).GUID)
                             registerMethod.Invoke(null, new object[] { callType });
@@ -193,7 +193,7 @@ namespace NetOffice.Tools
             catch (Exception)
             {
                 return false;
-            }          
-        }        
+            }
+        }
     }
 }

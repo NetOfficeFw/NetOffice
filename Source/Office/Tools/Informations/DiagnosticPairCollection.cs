@@ -48,19 +48,19 @@ namespace NetOffice.OfficeApi.Tools.Informations
             List<DiagnosticPair> list = new List<DiagnosticPair>();
 
             if (null != Owner.Infos.Assembly)
-            { 
+            {
                 foreach (KeyValuePair<string, string> item in Owner.Infos.Assembly)
                     list.Add(new DiagnosticPair(item.Key, item.Value));
             }
 
             if (null != Owner.Infos.Environment)
-            { 
+            {
                 foreach (KeyValuePair<string, string> item in Owner.Infos.Environment)
                     list.Add(new DiagnosticPair(item.Key, item.Value));
             }
 
             if (null != Owner.Infos.AppDomain)
-            { 
+            {
                 foreach (KeyValuePair<string, string> item in Owner.Infos.AppDomain)
                     list.Add(new DiagnosticPair(item.Key, item.Value));
             }
@@ -68,7 +68,7 @@ namespace NetOffice.OfficeApi.Tools.Informations
             if (null != Owner.Infos.Host)
             {
                 foreach (KeyValuePair<string, string> item in Owner.Infos.Host)
-                    list.Add(new DiagnosticPair(item.Key, item.Value));            
+                    list.Add(new DiagnosticPair(item.Key, item.Value));
             }
 
             Owner.Infos.GetCustomInformations(this);

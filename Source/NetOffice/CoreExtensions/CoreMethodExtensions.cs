@@ -48,7 +48,7 @@ namespace NetOffice
         /// <param name="argument">argument as any</param>
         public static void ExecuteMethod(this Core value, ICOMObject caller, string name, object argument)
         {
-            ExecuteMethod(value, caller, name, new object[] { argument});
+            ExecuteMethod(value, caller, name, new object[] { argument });
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace NetOffice
         /// <param name="argument2">argument as any</param>
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
-        public static void ExecuteMethod(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, 
+        public static void ExecuteMethod(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3,
             object argument4)
         {
             ExecuteMethod(value, caller, name, new object[] { argument1, argument2, argument3, argument4 });
@@ -105,7 +105,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static void ExecuteMethod(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4, 
+        public static void ExecuteMethod(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
             object argument5)
         {
             ExecuteMethod(value, caller, name, new object[] { argument1, argument2, argument3, argument4, argument5 });
@@ -185,9 +185,9 @@ namespace NetOffice
         }
 
         #endregion
-      
+
         #region ExecuteObjectMethodGet
-     
+
         /// <summary>
         /// Execute a method with object return value
         /// </summary>
@@ -264,7 +264,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static object ExecuteObjectMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4, 
+        public static object ExecuteObjectMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
             object argument5)
         {
             return ExecuteObjectMethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
@@ -283,7 +283,7 @@ namespace NetOffice
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
         /// <param name="argument6">argument as any</param>
-        public static object ExecuteObjectMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4, 
+        public static object ExecuteObjectMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
             object argument5, object argument6)
         {
             return ExecuteObjectMethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
@@ -506,7 +506,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ExecuteInt32MethodGet
 
         /// <summary>
@@ -585,7 +585,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static Int32 ExecuteInt32MethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4, 
+        public static Int32 ExecuteInt32MethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
             object argument5)
         {
             return ExecuteInt32MethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
@@ -610,7 +610,7 @@ namespace NetOffice
             return ExecuteInt32MethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6 });
         }
-        
+
         /// <summary>
         /// Execute a method with Int32 return value
         /// </summary>
@@ -651,7 +651,7 @@ namespace NetOffice
             return ExecuteInt32MethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6, argument7, argument8 });
         }
-        
+
         /// <summary>
         /// Execute a method with Int32 return value
         /// </summary>
@@ -680,7 +680,7 @@ namespace NetOffice
         {
             return ExecuteDoubleMethodGet(value, caller, name, _emptyParams);
         }
-       
+
         /// <summary>
         /// Execute a method with double return value
         /// </summary>
@@ -746,7 +746,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static double ExecuteDoubleMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, 
+        public static double ExecuteDoubleMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3,
             object argument4, object argument5)
         {
             return ExecuteDoubleMethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
@@ -812,7 +812,7 @@ namespace NetOffice
             return ExecuteDoubleMethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6, argument7, argument8 });
         }
-        
+
         /// <summary>
         /// Execute a method with double return value
         /// </summary>
@@ -830,7 +830,7 @@ namespace NetOffice
         #endregion
 
         #region ExecuteSingleMethodGet
-      
+
         /// <summary>
         /// Execute a method with single return value
         /// </summary>
@@ -973,7 +973,7 @@ namespace NetOffice
             return ExecuteSingleMethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
                 argument5, argument6, argument7, argument8 });
         }
-        
+
         /// <summary>
         /// Execute a method with single return value
         /// </summary>
@@ -1150,7 +1150,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ExecuteDateTimeMethodGet
 
         /// <summary>
@@ -1311,7 +1311,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ExecuteStringMethodGet
 
         /// <summary>
@@ -1474,7 +1474,7 @@ namespace NetOffice
         #endregion
 
         #region ExecuteEnumMethodGet
-        
+
         /// <summary>
         /// Execute a method with enum return value
         /// </summary>
@@ -1522,7 +1522,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         public static T ExecuteEnumMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : struct, IConvertible
         {
-            return ExecuteEnumMethodGet<T>(value, caller, name, new object[] { argument1, argument2 , argument3 });
+            return ExecuteEnumMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3 });
         }
 
         /// <summary>
@@ -1640,7 +1640,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ExecuteReferenceMethodGet
 
         /// <summary>
@@ -1690,7 +1690,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         public static T ExecuteReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3) where T : class, ICOMObject
         {
-            return ExecuteReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3});
+            return ExecuteReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3 });
         }
 
         /// <summary>
@@ -1719,7 +1719,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static T ExecuteReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4, 
+        public static T ExecuteReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
             object argument5) where T : class, ICOMObject
         {
             return ExecuteReferenceMethodGet<T>(value, caller, name, new object[] { argument1, argument2, argument3, argument4,
@@ -1964,7 +1964,7 @@ namespace NetOffice
         }
 
         #endregion
-        
+
         #region ExecuteKnownReferenceMethodGet
 
         /// <summary>
@@ -2049,7 +2049,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4, 
+        public static T ExecuteKnownReferenceMethodGet<T>(this Core value, ICOMObject caller, string name, Type knownType, object argument1, object argument2, object argument3, object argument4,
             object argument5) where T : class, ICOMObject
         {
             return ExecuteKnownReferenceMethodGet<T>(value, caller, name, knownType, new object[] { argument1, argument2, argument3, argument4,
@@ -2137,7 +2137,7 @@ namespace NetOffice
         #endregion
 
         #region ExecuteVariantMethodGet
-       
+
         /// <summary>
         /// Execute a method with unknown return value
         /// </summary>
@@ -2160,7 +2160,7 @@ namespace NetOffice
         {
             return ExecuteVariantMethodGet(value, caller, name, new object[] { argument });
         }
-        
+
         /// <summary>
         /// Execute a method with unknown return value
         /// </summary>
@@ -2214,7 +2214,7 @@ namespace NetOffice
         /// <param name="argument3">argument as any</param>
         /// <param name="argument4">argument as any</param>
         /// <param name="argument5">argument as any</param>
-        public static object ExecuteVariantMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4, 
+        public static object ExecuteVariantMethodGet(this Core value, ICOMObject caller, string name, object argument1, object argument2, object argument3, object argument4,
             object argument5)
         {
             return ExecuteVariantMethodGet(value, caller, name, new object[] { argument1, argument2, argument3, argument4,

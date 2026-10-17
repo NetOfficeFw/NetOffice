@@ -37,7 +37,7 @@ namespace NetOffice
         #endregion
 
         #region Properties
-        
+
         /// <summary>
         /// CoClass Instance
         /// </summary>
@@ -243,7 +243,7 @@ namespace NetOffice
         #endregion
 
         #region Methods
-        
+
         /// <summary>
         /// Create event binding
         /// </summary>
@@ -426,7 +426,7 @@ namespace NetOffice
         /// <typeparam name="T">type of System.Enum</typeparam>
         /// <param name="value">value to cast</param>
         /// <returns>ast value or default(T) if exception occurs</returns>
-        protected static T ToEnum<T>(object value) where T:struct
+        protected static T ToEnum<T>(object value) where T : struct
         {
             try
             {

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using COMTypes = System.Runtime.InteropServices.ComTypes;
 using NetOffice.ComTypes;
 using NetOffice.Exceptions;
-    
+
 namespace NetOffice
 {
     internal static class CoreFactoryExtensions
@@ -33,7 +33,7 @@ namespace NetOffice
                 new Guid("000C0370-0000-0000-C000-000000000046"),
                 new Guid("000C0398-0000-0000-C000-000000000046")
             };
-        
+
         /// <summary>
         /// Get wrapper class factory info
         /// </summary>
@@ -43,7 +43,7 @@ namespace NetOffice
         /// <param name="comProxy">new created proxy</param>
         /// <param name="throwException">throw exception if no info found or return null</param>
         /// <returns>factory info from corresponding assembly</returns>
-        internal static IFactoryInfo GetFactoryInfo(this Core value, 
+        internal static IFactoryInfo GetFactoryInfo(this Core value,
             Dictionary<Guid, Guid> hostCache, ICOMObject caller,
             object comProxy, bool throwException)
         {
@@ -55,9 +55,9 @@ namespace NetOffice
             Guid hostGuid = GetParentLibraryGuid(value, comProxy, typeid);
 
             if (null != caller && typeid.IsDuplicateType())
-            {             
+            {
                 foreach (IFactoryInfo item in value.Assemblies)
-                {                   
+                {
                     if (item.AssemblyName != caller.InstanceComponentName)
                         continue;
                     foreach (var guid in item.ComponentGuid)
@@ -99,7 +99,7 @@ namespace NetOffice
             else
                 return null;
         }
-        
+
         /// <summary>
         /// Returns parent library id
         /// </summary>

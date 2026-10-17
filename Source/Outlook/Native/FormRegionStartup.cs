@@ -34,7 +34,7 @@ namespace NetOffice.OutlookApi.Native
         [SinkArgument("OlFormRegionMode", SinkArgumentType.Enum, typeof(NetOffice.OutlookApi.Enums.OlFormRegionMode))]
         [SinkArgument("FormRegionSize", SinkArgumentType.Enum, typeof(NetOffice.OutlookApi.Enums.OlFormRegionSize))]
         [return: MarshalAs(27)]
-        object GetFormRegionStorage([MarshalAs(UnmanagedType.BStr)] [In] object FormRegionName, [MarshalAs(UnmanagedType.IDispatch)] [In] object Item, [In] object LCID, [In] object FormRegionMode, [In] object FormRegionSize);
+        object GetFormRegionStorage([MarshalAs(UnmanagedType.BStr)][In] object FormRegionName, [MarshalAs(UnmanagedType.IDispatch)][In] object Item, [In] object LCID, [In] object FormRegionMode, [In] object FormRegionSize);
 
         /// <summary>
         /// Allows an add-in to update the user interface of a form region before it is displayed. 
@@ -44,7 +44,7 @@ namespace NetOffice.OutlookApi.Native
         [MethodImpl(4096)]
         [SupportByVersion("Outlook", 12, 14, 15, 16)]
         [SinkArgument("FormRegion", typeof(FormRegion))]
-        void BeforeFormRegionShow([MarshalAs(28)] [In] object FormRegion);
+        void BeforeFormRegionShow([MarshalAs(28)][In] object FormRegion);
 
         /// <summary>
         /// Obtains the XML manifest for a form region.
@@ -58,8 +58,8 @@ namespace NetOffice.OutlookApi.Native
         [SinkArgument("FormRegionName", SinkArgumentType.String)]
         [SinkArgument("LCID", SinkArgumentType.Int32)]
         [return: MarshalAs(UnmanagedType.Struct)]
-        object GetFormRegionManifest([MarshalAs(UnmanagedType.BStr)] [In] string FormRegionName, [In] int LCID);
-       
+        object GetFormRegionManifest([MarshalAs(UnmanagedType.BStr)][In] string FormRegionName, [In] int LCID);
+
         /// <summary>
         /// Obtains an icon image that will be displayed for a particular type of icon for the form region.
         /// </summary>
@@ -74,6 +74,6 @@ namespace NetOffice.OutlookApi.Native
         [SinkArgument("LCID", SinkArgumentType.Int32)]
         [SinkArgument("Icon", SinkArgumentType.Enum, typeof(NetOffice.OutlookApi.Enums.OlFormRegionIcon))]
         [return: MarshalAs(27)]
-        object GetFormRegionIcon([MarshalAs(UnmanagedType.BStr)] [In] object FormRegionName, [In] object LCID, [In] object Icon);
+        object GetFormRegionIcon([MarshalAs(UnmanagedType.BStr)][In] object FormRegionName, [In] object LCID, [In] object Icon);
     }
 }

@@ -13,7 +13,7 @@ namespace NetOffice.ExcelApi
     [EntityType(EntityType.IsDispatchInterface)]
     public class IRTDUpdateEvent : COMObject
     {
-        #pragma warning disable
+#pragma warning disable
 
         #region Type Information
 
@@ -50,14 +50,14 @@ namespace NetOffice.ExcelApi
         /// <param name="parentObject">object there has created the proxy</param>
         /// <param name="proxyShare">proxy share instead if com proxy</param>
         public IRTDUpdateEvent(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
+        {
         }
 
         ///<param name="factory">current used factory core</param>
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         public IRTDUpdateEvent(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
+        {
 
         }
 
@@ -65,7 +65,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRTDUpdateEvent(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
+        {
         }
 
         ///<param name="factory">current used factory core</param>
@@ -74,7 +74,7 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRTDUpdateEvent(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        {
 
         }
 
@@ -83,24 +83,24 @@ namespace NetOffice.ExcelApi
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRTDUpdateEvent(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
+        {
         }
 
         ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRTDUpdateEvent(ICOMObject replacedObject) : base(replacedObject)
-		{
+        {
         }
 
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRTDUpdateEvent() : base()
-		{
+        {
         }
 
         /// <param name="progId">registered progID</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public IRTDUpdateEvent(string progId) : base(progId)
-		{
+        {
         }
 
         #endregion
@@ -112,7 +112,7 @@ namespace NetOffice.ExcelApi
         /// Get/Set
         /// </summary>
         /// <remarks>Setting the HeartbeatInterval property to -1 will result in the Heartbeat method not being called. Note The heartbeat interval cannot be set below 15,000 milliseconds due to the standard 15-second time out</remarks>
-		[SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
+        [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public Int32 HeartbeatInterval
         {
             get
@@ -145,6 +145,6 @@ namespace NetOffice.ExcelApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

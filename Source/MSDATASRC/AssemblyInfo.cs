@@ -6,8 +6,8 @@ using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
-	Name - Description - SupportByVersion
-	MSDATASRC - Microsoft Data Source Interfaces - 4
+    Name - Description - SupportByVersion
+    MSDATASRC - Microsoft Data Source Interfaces - 4
 
 */
 

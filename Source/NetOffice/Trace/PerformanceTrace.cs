@@ -18,7 +18,7 @@ namespace NetOffice
         /// Specify the kind of call
         /// </summary>
         public enum CallType
-        { 
+        {
             /// <summary>
             /// Method without return value
             /// </summary>
@@ -28,7 +28,7 @@ namespace NetOffice
             /// Method with return value
             /// </summary>
             Function = 2,
-            
+
             /// <summary>
             /// Property Get
             /// </summary>
@@ -37,7 +37,7 @@ namespace NetOffice
             /// <summary>
             /// Property Set
             /// </summary>
-            PropertySet = 4        
+            PropertySet = 4
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace NetOffice
             /// Class name of the NetOffice wrapper
             /// </summary>
             public string EntityName { get; private set; }
-            
+
             /// <summary>
             /// Method or property name
             /// </summary>
@@ -149,7 +149,7 @@ namespace NetOffice
         }
 
         #endregion
-       
+
         #region Properties
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NetOffice
             set
             {
                 if (value != _enabled)
-                { 
+                {
                     _enabled = value;
                     OnPropertyChanged?.Invoke("PerformanceTrace.Enabled");
                 }
@@ -213,7 +213,7 @@ namespace NetOffice
                     throw new ArgumentNullException("componentName");
                 if (String.IsNullOrWhiteSpace(entityName))
                     throw new ArgumentNullException("entityName");
-             
+
                 lock (_lock)
                 {
                     PerformanceTraceSettingCollection list = null;
@@ -261,7 +261,7 @@ namespace NetOffice
                 }
             }
         }
-        
+
         /// <summary>
         /// Occurs when a property value changes
         /// </summary>
@@ -278,7 +278,7 @@ namespace NetOffice
         {
             lock (_lock)
             {
-                _repository.Clear();                
+                _repository.Clear();
             }
         }
 
@@ -290,7 +290,7 @@ namespace NetOffice
             PerformanceTraceSettingCollection list = null;
             if (_repository.TryGetValue(componentName, out list))
             {
-               
+
                 bool result = list.TryStartMeasureTime(entityName, methodName, callType);
                 return result;
             }

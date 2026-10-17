@@ -11,7 +11,7 @@ namespace NetOffice.ExcelApi.Tools.Contribution
         #region Fields
 
         private ExcelApi.Application _ownerApplication;
-        private FileUtils _fileUtils; 
+        private FileUtils _fileUtils;
 
         #endregion
 
@@ -55,7 +55,7 @@ namespace NetOffice.ExcelApi.Tools.Contribution
         /// <param name="owner">addin owner</param>
         /// <param name="isAutomation">indicates the host application is currently in automation</param>
         /// <param name="ownerAssembly">owner application</param>
-        internal CommonUtils(NetOffice.Tools.COMAddinBase owner, bool isAutomation, Assembly ownerAssembly)  : base(owner, isAutomation, ownerAssembly)
+        internal CommonUtils(NetOffice.Tools.COMAddinBase owner, bool isAutomation, Assembly ownerAssembly) : base(owner, isAutomation, ownerAssembly)
         {
 
         }

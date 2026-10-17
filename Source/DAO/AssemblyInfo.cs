@@ -6,9 +6,9 @@ using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
-	Name - Description - SupportByVersion
-	DAO - Microsoft DAO 3.6 Object Library - 3.6
-	DAO - <NoDescription> - 12.0
+    Name - Description - SupportByVersion
+    DAO - Microsoft DAO 3.6 Object Library - 3.6
+    DAO - <NoDescription> - 12.0
 
 */
 

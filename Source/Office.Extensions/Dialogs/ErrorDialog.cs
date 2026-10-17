@@ -36,7 +36,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
             internal ErrorDescription(Exception exception)
             {
                 _exception = exception;
-                Message =  null != exception ? exception.Message : String.Empty;
+                Message = null != exception ? exception.Message : String.Empty;
                 Type = null != exception ? exception.GetType().Name : String.Empty;
                 Source = null != exception && null != exception.TargetSite ? exception.TargetSite.ToString() : String.Empty;
             }
@@ -161,7 +161,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
 
         private void ShowSingleException(ErrorDescription error)
         {
-            MessageBox.Show(this, error.ToString(), Text, MessageBoxButtons.OK, MessageBoxIcon.Error);        
+            MessageBox.Show(this, error.ToString(), Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void CopyErrorInfoToClipboard(IEnumerable<ErrorDescription> errors)
@@ -200,7 +200,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
             try
             {
                 buttonShowDetails.Enabled = false;
-                FormBorderStyle = FormBorderStyle.Sizable;             
+                FormBorderStyle = FormBorderStyle.Sizable;
                 Height = _extendedHeight;
                 MinimumSize = new System.Drawing.Size(_minimumWidth, _extendedHeight);
                 buttonShowDetails.Enabled = false;

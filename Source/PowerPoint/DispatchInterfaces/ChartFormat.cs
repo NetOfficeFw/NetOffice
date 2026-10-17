@@ -5,34 +5,34 @@ using NetOffice.Attributes;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface ChartFormat 
-	/// SupportByVersion PowerPoint, 14,15,16
-	/// </summary>
-	/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat"/> </remarks>
-	[SupportByVersion("PowerPoint", 14,15,16)]
-	[EntityType(EntityType.IsDispatchInterface)]
- 	public class ChartFormat : COMObject
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface ChartFormat 
+    /// SupportByVersion PowerPoint, 14,15,16
+    /// </summary>
+    /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat"/> </remarks>
+    [SupportByVersion("PowerPoint", 14, 15, 16)]
+    [EntityType(EntityType.IsDispatchInterface)]
+    public class ChartFormat : COMObject
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -42,265 +42,265 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public ChartFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public ChartFormat(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public ChartFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public ChartFormat(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFormat(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public ChartFormat(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFormat(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFormat() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public ChartFormat(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public ChartFormat(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Fill"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.FillFormat Fill
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FillFormat>(this, "Fill", NetOffice.PowerPointApi.FillFormat.LateBindingApiWrapperType);
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Glow"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.OfficeApi.GlowFormat Glow
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.GlowFormat>(this, "Glow", NetOffice.OfficeApi.GlowFormat.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartFormat(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Line"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.LineFormat Line
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.LineFormat>(this, "Line", NetOffice.PowerPointApi.LineFormat.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartFormat(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// Unknown COM Proxy
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Parent"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16), ProxyResult]
-		public object Parent
-		{
-			get
-			{
-				return Factory.ExecuteReferencePropertyGet(this, "Parent");
-			}
-		}
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartFormat() : base()
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.PictureFormat"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.PictureFormat PictureFormat
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PictureFormat>(this, "PictureFormat", NetOffice.PowerPointApi.PictureFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public ChartFormat(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Shadow"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.ShadowFormat Shadow
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ShadowFormat>(this, "Shadow", NetOffice.PowerPointApi.ShadowFormat.LateBindingApiWrapperType);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.SoftEdge"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SoftEdgeFormat>(this, "SoftEdge", NetOffice.OfficeApi.SoftEdgeFormat.LateBindingApiWrapperType);
-			}
-		}
+        #region Properties
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.TextFrame2"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.TextFrame2 TextFrame2
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TextFrame2>(this, "TextFrame2", NetOffice.PowerPointApi.TextFrame2.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Fill"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.FillFormat Fill
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.FillFormat>(this, "Fill", NetOffice.PowerPointApi.FillFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.ThreeD"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.ThreeDFormat ThreeD
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ThreeDFormat>(this, "ThreeD", NetOffice.PowerPointApi.ThreeDFormat.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Glow"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.OfficeApi.GlowFormat Glow
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.GlowFormat>(this, "Glow", NetOffice.OfficeApi.GlowFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Creator"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public Int32 Creator
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Creator");
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Line"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.LineFormat Line
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.LineFormat>(this, "Line", NetOffice.PowerPointApi.LineFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 14, 15, 16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Application"/> </remarks>
-		[SupportByVersion("PowerPoint", 14,15,16)]
-		public NetOffice.PowerPointApi.Application Application
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// Unknown COM Proxy
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Parent"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16), ProxyResult]
+        public object Parent
+        {
+            get
+            {
+                return Factory.ExecuteReferencePropertyGet(this, "Parent");
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 15,16
-		/// Get
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartformat.adjustments"/> </remarks>
-		[SupportByVersion("PowerPoint", 15, 16)]
-		public NetOffice.PowerPointApi.Adjustments Adjustments
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Adjustments>(this, "Adjustments", NetOffice.PowerPointApi.Adjustments.LateBindingApiWrapperType);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.PictureFormat"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.PictureFormat PictureFormat
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PictureFormat>(this, "PictureFormat", NetOffice.PowerPointApi.PictureFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 15,16
-		/// Get/Set
-		/// </summary>
-		/// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartformat.autoshapetype"/> </remarks>
-		[SupportByVersion("PowerPoint", 15, 16)]
-		public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
-		{
-			get
-			{
-				return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAutoShapeType>(this, "AutoShapeType");
-			}
-			set
-			{
-				Factory.ExecuteEnumPropertySet(this, "AutoShapeType", value);
-			}
-		}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Shadow"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.ShadowFormat Shadow
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ShadowFormat>(this, "Shadow", NetOffice.PowerPointApi.ShadowFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.SoftEdge"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.OfficeApi.SoftEdgeFormat SoftEdge
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.OfficeApi.SoftEdgeFormat>(this, "SoftEdge", NetOffice.OfficeApi.SoftEdgeFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		#region Methods
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.TextFrame2"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.TextFrame2 TextFrame2
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.TextFrame2>(this, "TextFrame2", NetOffice.PowerPointApi.TextFrame2.LateBindingApiWrapperType);
+            }
+        }
 
-		#endregion
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.ThreeD"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.ThreeDFormat ThreeD
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.ThreeDFormat>(this, "ThreeD", NetOffice.PowerPointApi.ThreeDFormat.LateBindingApiWrapperType);
+            }
+        }
 
-		#pragma warning restore
-	}
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Creator"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public Int32 Creator
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Creator");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 14, 15, 16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.ChartFormat.Application"/> </remarks>
+        [SupportByVersion("PowerPoint", 14, 15, 16)]
+        public NetOffice.PowerPointApi.Application Application
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Application>(this, "Application", NetOffice.PowerPointApi.Application.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 15,16
+        /// Get
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartformat.adjustments"/> </remarks>
+        [SupportByVersion("PowerPoint", 15, 16)]
+        public NetOffice.PowerPointApi.Adjustments Adjustments
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.Adjustments>(this, "Adjustments", NetOffice.PowerPointApi.Adjustments.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 15,16
+        /// Get/Set
+        /// </summary>
+        /// <remarks> Docs: <see href="https://docs.microsoft.com/en-us/office/vba/api/PowerPoint.chartformat.autoshapetype"/> </remarks>
+        [SupportByVersion("PowerPoint", 15, 16)]
+        public NetOffice.OfficeApi.Enums.MsoAutoShapeType AutoShapeType
+        {
+            get
+            {
+                return Factory.ExecuteEnumPropertyGet<NetOffice.OfficeApi.Enums.MsoAutoShapeType>(this, "AutoShapeType");
+            }
+            set
+            {
+                Factory.ExecuteEnumPropertySet(this, "AutoShapeType", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        #endregion
+
+#pragma warning restore
+    }
 }

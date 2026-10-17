@@ -118,7 +118,7 @@ namespace NetOffice.OfficeApi.Extensions.Dialogs
             {
                 this.Close();
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 ShowSingleException(exception);
             }

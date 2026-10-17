@@ -8,33 +8,33 @@ using NetOffice.CollectionsGeneric;
 
 namespace NetOffice.PowerPointApi
 {
-	/// <summary>
-	/// DispatchInterface PPRadioCluster 
-	/// SupportByVersion PowerPoint, 9
-	/// </summary>
-	[SupportByVersion("PowerPoint", 9)]
-	[EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
-	public class PPRadioCluster : PPControl, IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>
-	{
-		#pragma warning disable
+    /// <summary>
+    /// DispatchInterface PPRadioCluster 
+    /// SupportByVersion PowerPoint, 9
+    /// </summary>
+    [SupportByVersion("PowerPoint", 9)]
+    [EntityType(EntityType.IsDispatchInterface), Enumerator(Enumerator.Reference, EnumeratorInvoke.Custom), HasIndexProperty(IndexInvoke.Method, "Item")]
+    public class PPRadioCluster : PPControl, IEnumerableProvider<NetOffice.PowerPointApi.PPRadioButton>
+    {
+#pragma warning disable
 
-		#region Type Information
+        #region Type Information
 
-		/// <summary>
-		/// Instance Type
-		/// </summary>
-		[EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
-		public override Type InstanceType
-		{
-			get
-			{
-				return LateBindingApiWrapperType;
-			}
-		}
+        /// <summary>
+        /// Instance Type
+        /// </summary>
+        [EditorBrowsable(EditorBrowsableState.Advanced), Browsable(false), Category("NetOffice"), CoreOverridden]
+        public override Type InstanceType
+        {
+            get
+            {
+                return LateBindingApiWrapperType;
+            }
+        }
 
         private static Type _type;
 
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
         public static Type LateBindingApiWrapperType
         {
             get
@@ -44,145 +44,145 @@ namespace NetOffice.PowerPointApi
                 return _type;
             }
         }
-        
+
         #endregion
-        
-		#region Ctor
 
-		/// <param name="factory">current used factory core</param>
-		/// <param name="parentObject">object there has created the proxy</param>
-		/// <param name="proxyShare">proxy share instead if com proxy</param>
-		public PPRadioCluster(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
-		{
-		}
+        #region Ctor
 
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
+        /// <param name="factory">current used factory core</param>
+        /// <param name="parentObject">object there has created the proxy</param>
+        /// <param name="proxyShare">proxy share instead if com proxy</param>
+        public PPRadioCluster(Core factory, ICOMObject parentObject, COMProxyShare proxyShare) : base(factory, parentObject, proxyShare)
+        {
+        }
+
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
-		public PPRadioCluster(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
-		{
-			
-		}
+        public PPRadioCluster(Core factory, ICOMObject parentObject, object comProxy) : base(factory, parentObject, comProxy)
+        {
+
+        }
 
         ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPRadioCluster(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
-		{
-		}
-		
-		///<param name="factory">current used factory core</param>
-		///<param name="parentObject">object there has created the proxy</param>
-        ///<param name="comProxy">inner wrapped COM proxy</param>
-        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPRadioCluster(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
-		{
+        public PPRadioCluster(ICOMObject parentObject, object comProxy) : base(parentObject, comProxy)
+        {
+        }
 
-		}
-
-		///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="factory">current used factory core</param>
+        ///<param name="parentObject">object there has created the proxy</param>
         ///<param name="comProxy">inner wrapped COM proxy</param>
         ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
         [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPRadioCluster(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
-		{
-		}
-		
-		///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPRadioCluster(ICOMObject replacedObject) : base(replacedObject)
-		{
-		}
-		
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPRadioCluster() : base()
-		{
-		}
-		
-		/// <param name="progId">registered progID</param>
-		[EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
-		public PPRadioCluster(string progId) : base(progId)
-		{
-		}
-		
-		#endregion
-		
-		#region Properties
+        public PPRadioCluster(Core factory, ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(factory, parentObject, comProxy, comProxyType)
+        {
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// Get
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-		public Int32 Count
-		{
-			get
-			{
-				return Factory.ExecuteInt32PropertyGet(this, "Count");
-			}
-		}
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// Get
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPRadioButton Selected
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Selected", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType);
-			}
-		}
+        ///<param name="parentObject">object there has created the proxy</param>
+        ///<param name="comProxy">inner wrapped COM proxy</param>
+        ///<param name="comProxyType">Type of inner wrapped COM proxy"</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPRadioCluster(ICOMObject parentObject, object comProxy, NetRuntimeSystem.Type comProxyType) : base(parentObject, comProxy, comProxyType)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// Get/Set
-		/// </summary>
-		[SupportByVersion("PowerPoint", 9)]
-		public string OnClick
-		{
-			get
-			{
-				return Factory.ExecuteStringPropertyGet(this, "OnClick");
-			}
-			set
-			{
-				Factory.ExecuteValuePropertySet(this, "OnClick", value);
-			}
-		}
+        ///<param name="replacedObject">object to replaced. replacedObject are not usable after this action</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPRadioCluster(ICOMObject replacedObject) : base(replacedObject)
+        {
+        }
 
-		#endregion
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPRadioCluster() : base()
+        {
+        }
 
-		#region Methods
+        /// <param name="progId">registered progID</param>
+        [EditorBrowsable(EditorBrowsableState.Never), Browsable(false)]
+        public PPRadioCluster(string progId) : base(progId)
+        {
+        }
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// </summary>
-		/// <param name="index">object index</param>
-		[SupportByVersion("PowerPoint", 9)]
-		[NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
-		public NetOffice.PowerPointApi.PPRadioButton this[object index]
-		{
-			get
-			{
-				return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Item", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType, index);
-			}
-		}
+        #endregion
 
-		/// <summary>
-		/// SupportByVersion PowerPoint 9
-		/// </summary>
-		/// <param name="left">Single left</param>
-		/// <param name="top">Single top</param>
-		/// <param name="width">Single width</param>
-		/// <param name="height">Single height</param>
-		[SupportByVersion("PowerPoint", 9)]
-		public NetOffice.PowerPointApi.PPRadioButton Add(Single left, Single top, Single width, Single height)
-		{
-			return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Add", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType, left, top, width, height);
-		}
+        #region Properties
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// Get
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        public Int32 Count
+        {
+            get
+            {
+                return Factory.ExecuteInt32PropertyGet(this, "Count");
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// Get
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        public NetOffice.PowerPointApi.PPRadioButton Selected
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferencePropertyGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Selected", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// Get/Set
+        /// </summary>
+        [SupportByVersion("PowerPoint", 9)]
+        public string OnClick
+        {
+            get
+            {
+                return Factory.ExecuteStringPropertyGet(this, "OnClick");
+            }
+            set
+            {
+                Factory.ExecuteValuePropertySet(this, "OnClick", value);
+            }
+        }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// </summary>
+        /// <param name="index">object index</param>
+        [SupportByVersion("PowerPoint", 9)]
+        [NetRuntimeSystem.Runtime.CompilerServices.IndexerName("Item"), IndexProperty]
+        public NetOffice.PowerPointApi.PPRadioButton this[object index]
+        {
+            get
+            {
+                return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Item", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType, index);
+            }
+        }
+
+        /// <summary>
+        /// SupportByVersion PowerPoint 9
+        /// </summary>
+        /// <param name="left">Single left</param>
+        /// <param name="top">Single top</param>
+        /// <param name="width">Single width</param>
+        /// <param name="height">Single height</param>
+        [SupportByVersion("PowerPoint", 9)]
+        public NetOffice.PowerPointApi.PPRadioButton Add(Single left, Single top, Single width, Single height)
+        {
+            return Factory.ExecuteKnownReferenceMethodGet<NetOffice.PowerPointApi.PPRadioButton>(this, "Add", NetOffice.PowerPointApi.PPRadioButton.LateBindingApiWrapperType, left, top, width, height);
+        }
 
         #endregion
 
@@ -240,6 +240,6 @@ namespace NetOffice.PowerPointApi
 
         #endregion
 
-        #pragma warning restore
+#pragma warning restore
     }
 }

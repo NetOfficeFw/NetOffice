@@ -18,7 +18,7 @@ namespace NetOffice.ExcelApi.Tools
     /// <summary>
     /// NetOffice MS-Excel COM Addin
     /// </summary>
-    [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)] 
+    [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual)]
     public abstract class COMAddin : COMAddinBase, IOfficeCOMAddin
     {
         #region Fields
@@ -26,7 +26,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <summary>
         /// MS-Excel Registry Path 
         /// </summary>
-        private static readonly string _addinOfficeRegistryKey  = "Software\\Microsoft\\Office\\Excel\\Addins\\";
+        private static readonly string _addinOfficeRegistryKey = "Software\\Microsoft\\Office\\Excel\\Addins\\";
 
         /// <summary>
         /// First field in OnConnection custom argument array
@@ -56,7 +56,7 @@ namespace NetOffice.ExcelApi.Tools
             if (null == _factory)
                 _factory = Core.Default;
             TaskPanes = new CustomTaskPaneCollection();
-			TaskPaneInstances = new List<ITaskPane>();
+            TaskPaneInstances = new List<ITaskPane>();
         }
 
         #endregion
@@ -83,10 +83,10 @@ namespace NetOffice.ExcelApi.Tools
         /// </summary>
         protected Office.ICTPFactory TaskPaneFactory { get; set; }
 
-		/// <summary>
+        /// <summary>
         /// ITaskPane Instances
         /// </summary>
-		protected List<ITaskPane> TaskPaneInstances { get; set; }
+        protected List<ITaskPane> TaskPaneInstances { get; set; }
 
         /// <summary>
         /// Ribbon instance to manipulate ui at runtime 
@@ -103,10 +103,10 @@ namespace NetOffice.ExcelApi.Tools
         /// </summary>
         private MethodInfo ErrorMethod { get; set; }
 
-		/// <summary>
+        /// <summary>
         /// Cached Register Error Method Delegate
         /// </summary>
-		private static MethodInfo RegisterErrorMethod { get; set; }
+        private static MethodInfo RegisterErrorMethod { get; set; }
 
         #endregion
 
@@ -277,15 +277,15 @@ namespace NetOffice.ExcelApi.Tools
         #endregion
 
         #region IDTExtensibility2 Members
-         
+
         void NetOffice.Tools.Native.IDTExtensibility2.OnStartupComplete(ref Array custom)
         {
             try
-            {               
+            {
                 Tweaks.ApplyTweaks(Factory, this, Type, "Excel", IsLoadedFromSystem);
                 LoadingTimeElapsed = (DateTime.Now - _creationTime);
                 Roots = OnCreateRoots();
-                RaiseOnStartupComplete(ref custom);               
+                RaiseOnStartupComplete(ref custom);
             }
             catch (Exception exception)
             {
@@ -293,7 +293,7 @@ namespace NetOffice.ExcelApi.Tools
                 OnError(ErrorMethodKind.OnStartupComplete, exception);
             }
         }
-        
+
         void NetOffice.Tools.Native.IDTExtensibility2.OnConnection(object application, ext_ConnectMode ConnectMode, object AddInInst, ref Array custom)
         {
             try
@@ -304,7 +304,7 @@ namespace NetOffice.ExcelApi.Tools
                     string tryString = null != firstCustomItem ? firstCustomItem.ToString() : String.Empty;
                     System.Int32.TryParse(tryString, out _automationCode);
                 }
-                
+
                 this.Application = new Excel.Application(Factory, null, application);
                 Utils = OnCreateUtils();
                 TryCreateCustomObject(AddInInst);
@@ -356,7 +356,7 @@ namespace NetOffice.ExcelApi.Tools
                         Factory.Console.WriteException(exception);
                     }
                 }
-                
+
                 try
                 {
                     if (null != TaskPaneFactory && false == TaskPaneFactory.IsDisposed)
@@ -388,7 +388,7 @@ namespace NetOffice.ExcelApi.Tools
                 catch (NetRuntimeSystem.Exception exception)
                 {
                     Factory.Console.WriteException(exception);
-                }	
+                }
             }
             catch (Exception exception)
             {
@@ -437,7 +437,7 @@ namespace NetOffice.ExcelApi.Tools
         {
             try
             {
-                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, RibbonID);                                
+                CustomUIAttribute ribbon = AttributeReflector.GetRibbonAttribute(Type, RibbonID);
                 if (null != ribbon)
                     return Utils.Resource.ReadString(CustomUIAttribute.BuildPath(ribbon.Value, ribbon.UseAssemblyNamespace, Type.Namespace));
                 else
@@ -447,8 +447,8 @@ namespace NetOffice.ExcelApi.Tools
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.GetCustomUI, exception);
-				return String.Empty;
-            } 
+                return String.Empty;
+            }
         }
 
         /// <summary>
@@ -489,133 +489,133 @@ namespace NetOffice.ExcelApi.Tools
 
                 CustomTaskPaneHandler paneHandler = new CustomTaskPaneHandler();
                 paneHandler.ProceedCustomPaneAttributes(TaskPanes, Type, this, CallOnCreateTaskPaneInfo, AttributePane_VisibleStateChange, AttributePane_DockPositionStateChange);
-                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Excel.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);		
+                TaskPaneFactory = paneHandler.CreateCustomPanes<ITaskPane, Excel.Application>(Factory, CTPFactoryInst, TaskPanes, TaskPaneInstances, OnError, Application);
             }
             catch (NetRuntimeSystem.Exception exception)
             {
                 Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-            } 
+            }
         }
 
         /// <summary>
         /// The method is called while the CustomPane attribute is processed
         /// </summary>
         /// <param name="paneInfo">pane definition</param>
-		/// <returns>true if pane should be create, otherwise false</returns>
-		protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
-		{
-			return true;
-		}
-		
+        /// <returns>true if pane should be create, otherwise false</returns>
+        protected internal virtual bool OnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        {
+            return true;
+        }
+
         /// <summary>
         /// Called after any visibility changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
-		protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-	
-		}
+        protected internal virtual void TaskPaneVisibleStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
 
-		/// <summary>
+        }
+
+        /// <summary>
         /// Called after any position changes but not for size changes
         /// </summary>
         /// <param name="customTaskPaneInst">pane instance</param>
-		protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			
-		}
+        protected internal virtual void TaskPaneDockStateChanged(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
 
-		private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        }
+
+        private void CallTaskPaneVisibleStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane == customTaskPaneInst)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
+                            if (null != target && item.Pane == customTaskPaneInst)
+                            {
+                                try
                                 {
-									target.OnVisibleStateChanged(item.Pane.Visible);
-								}
-								catch(Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                    target.OnVisibleStateChanged(item.Pane.Visible);
+                                }
+                                catch (Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneVisibleStateChanged(customTaskPaneInst);
-			}
-			catch(Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
-		{
-			try
-			{
-				foreach(TaskPaneInfo item in TaskPanes)
-				{
-					if(item.Pane == customTaskPaneInst)
-					{
-						try
-						{
+        private void CallTaskPaneDockPositionStateChange(NetOffice.OfficeApi._CustomTaskPane customTaskPaneInst)
+        {
+            try
+            {
+                foreach (TaskPaneInfo item in TaskPanes)
+                {
+                    if (item.Pane == customTaskPaneInst)
+                    {
+                        try
+                        {
                             ITaskPane target = item.Pane.ContentControl as ITaskPane;
-							if (null != target && item.Pane == customTaskPaneInst)
-							{
-								try
-								{
+                            if (null != target && item.Pane == customTaskPaneInst)
+                            {
+                                try
+                                {
                                     target.OnDockPositionChanged(item.Pane.DockPosition);
-								}
-								catch(Exception exception)
-								{
-									Factory.Console.WriteException(exception);
-								}
-							}
-						}
-						catch(Exception exception)
-						{
-							Factory.Console.WriteException(exception);
-						}
-					}
-				}
+                                }
+                                catch (Exception exception)
+                                {
+                                    Factory.Console.WriteException(exception);
+                                }
+                            }
+                        }
+                        catch (Exception exception)
+                        {
+                            Factory.Console.WriteException(exception);
+                        }
+                    }
+                }
                 TaskPaneDockStateChanged(customTaskPaneInst);
-			}
-			catch(Exception exception)
-			{
-			   Factory.Console.WriteException(exception);
-			}
-		}
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
+            }
+        }
 
-		private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
-		{
-			try
-			{
-				return OnCreateTaskPaneInfo(paneInfo);
-			}
-			catch(Exception exception)
-			{
-				Factory.Console.WriteException(exception);
+        private bool CallOnCreateTaskPaneInfo(TaskPaneInfo paneInfo)
+        {
+            try
+            {
+                return OnCreateTaskPaneInfo(paneInfo);
+            }
+            catch (Exception exception)
+            {
+                Factory.Console.WriteException(exception);
                 OnError(ErrorMethodKind.CTPFactoryAvailable, exception);
-				return false;
-			}
-		}
+                return false;
+            }
+        }
 
         #endregion
-        
+
         #region EventHandler
 
         private void AttributePane_VisibleStateChange(NetOffice.OfficeApi._CustomTaskPane CustomTaskPaneInst)
@@ -728,8 +728,8 @@ namespace NetOffice.ExcelApi.Tools
             ForceInitializeAttribute attribute = AttributeReflector.GetForceInitializeAttribute(Type);
             if (null != attribute)
             {
-               core.Settings.EnableMoreDebugOutput = attribute.EnableMoreDebugOutput;
-               core.CheckInitialize();
+                core.Settings.EnableMoreDebugOutput = attribute.EnableMoreDebugOutput;
+                core.CheckInitialize();
             }
             return core;
         }
@@ -775,8 +775,8 @@ namespace NetOffice.ExcelApi.Tools
                 case Office.Tools.Contribution.RegistryLocationResult.System:
                     _isLoadedFromSystem = true;
                     break;
-                //default:
-                //    throw new IndexOutOfRangeException();
+                    //default:
+                    //    throw new IndexOutOfRangeException();
             }
 
             return _isLoadedFromSystem;
@@ -845,7 +845,7 @@ namespace NetOffice.ExcelApi.Tools
         /// <param name="type">Type information for the class</param>
         [ComUnregisterFunction, Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
         public static void UnregisterFunction(Type type)
-        {          
+        {
             if (null == type)
                 throw new ArgumentNullException("type");
             if (null != type.GetCustomAttribute<DontRegisterAddinAttribute>())

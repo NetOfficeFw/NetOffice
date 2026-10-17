@@ -20,7 +20,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         {
             Item = item;
             SelectedObject = selectedObject;
-            SelectedIndex = selectedIndex;            
+            SelectedIndex = selectedIndex;
         }
 
         /// <summary>
@@ -44,5 +44,5 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
     /// </summary>
     /// <param name="instance">sender instance</param>
     /// <param name="args">changed arguments</param>
-    public delegate void TrayMenuItemSelectedObjectChangedEventHandler(object instance, TrayMenuItemSelectedObjectChangedEventArgs args);     
+    public delegate void TrayMenuItemSelectedObjectChangedEventHandler(object instance, TrayMenuItemSelectedObjectChangedEventArgs args);
 }

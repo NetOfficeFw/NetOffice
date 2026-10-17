@@ -20,7 +20,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// DropDownList Display Style
         /// </summary>
         public enum DropDownListStyle
-        {            
+        {
             /// <summary>
             /// Table View With Free Text
             /// </summary>
@@ -103,7 +103,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
                 {
                     _items.Add(item);
                     Parent.Owner.OnDropDownItem_ListItemAdded(Parent, item);
-                }               
+                }
             }
 
             /// <summary>

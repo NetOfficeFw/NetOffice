@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;    
+using System.Collections.Generic;
 using NetOffice.CollectionsGeneric;
 using NetOffice.Contribution.CollectionsGeneric;
 
@@ -66,7 +66,7 @@ namespace NetOffice.Running
                 return GetActiveExcelApplicationProxiesFromDesktop();
             }
             else
-            { 
+            {
                 return RunningObjectTable.GetActiveProxies(componentName, className);
             }
         }
@@ -133,7 +133,7 @@ namespace NetOffice.Running
                 throw;
             }
         }
-    
+
         private static string ValidateArgumentString(string arg)
         {
             string result = arg;

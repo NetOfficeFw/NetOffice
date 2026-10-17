@@ -111,7 +111,7 @@ namespace NetOffice.Tools
         /// Gives info the Addin is commandline safe
         /// </summary>
         public readonly int CommandLineSafe;
-       
+
         /// <summary>
         /// Creates an instance of the attribute
         /// </summary>

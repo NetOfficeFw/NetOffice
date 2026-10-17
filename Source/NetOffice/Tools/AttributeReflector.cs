@@ -98,7 +98,7 @@ namespace NetOffice.Tools
             }
             return false;
         }
-        
+
         /// <summary>
         /// Looks for a method with the UnRegisterFunctionAttribute
         /// </summary>
@@ -171,7 +171,7 @@ namespace NetOffice.Tools
                 return result;
             }
             else
-            { 
+            {
                 return new CustomPaneAttribute[0];
             }
         }

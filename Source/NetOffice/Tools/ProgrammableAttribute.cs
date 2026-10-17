@@ -34,7 +34,7 @@ namespace NetOffice.Tools
             }
             catch
             {
-                if(throwExceptionOnError)
+                if (throwExceptionOnError)
                     throw;
                 return false;
             }

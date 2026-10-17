@@ -46,7 +46,7 @@ namespace NetOffice.Extensions.Invoker
             }
             else
             {
-                if(throwException)
+                if (throwException)
                     throw new MethodCOMException("Unable to cast ICOMObject.");
             }
         }
@@ -64,7 +64,7 @@ namespace NetOffice.Extensions.Invoker
             ICOMObject comObject = value as ICOMObject;
             if (null != comObject)
             {
-                object result = CoreMethodExtensions.ExecuteVariantMethodGet(comObject.Factory, 
+                object result = CoreMethodExtensions.ExecuteVariantMethodGet(comObject.Factory,
                                                 comObject, methodName, paramsArray);
                 if (result is T)
                     return (T)result;
@@ -76,7 +76,7 @@ namespace NetOffice.Extensions.Invoker
                 if (throwException)
                     throw new MethodCOMException("Unable to cast ICOMObject.");
                 else
-                     return default(T);
+                    return default(T);
             }
         }
     }

@@ -6,9 +6,9 @@ using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
-	Name - Description - SupportByVersion
-	ADODB - Microsoft ActiveX Data Objects 2.1 Library - 2.1
-	ADODB - Microsoft ActiveX Data Objects 2.5 Library - 2.5
+    Name - Description - SupportByVersion
+    ADODB - Microsoft ActiveX Data Objects 2.1 Library - 2.1
+    ADODB - Microsoft ActiveX Data Objects 2.5 Library - 2.5
 
 */
 

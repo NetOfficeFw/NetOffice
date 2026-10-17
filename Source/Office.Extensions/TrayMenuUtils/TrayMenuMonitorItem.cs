@@ -19,7 +19,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// View Options
         /// </summary>
         public class Options : INotifyPropertyChanged
-        {         
+        {
             private bool _autoExpandNodes = true;
             private bool _highlightNewNodes = true;
             private bool _showConsoleTimeColumn = false;
@@ -250,7 +250,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         {
             get
             {
-                return _control.GetCurrentMode();            
+                return _control.GetCurrentMode();
             }
             set
             {

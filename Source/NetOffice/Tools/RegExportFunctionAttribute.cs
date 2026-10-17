@@ -15,6 +15,6 @@ namespace NetOffice.Tools
     [System.AttributeUsage(System.AttributeTargets.Method, AllowMultiple = false)]
     public class RegExportFunctionAttribute : System.Attribute
     {
-        
+
     }
 }

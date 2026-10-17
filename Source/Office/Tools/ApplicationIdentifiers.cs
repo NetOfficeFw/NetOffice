@@ -65,7 +65,7 @@ namespace NetOffice.OfficeApi.Tools
         /// <summary>
         /// 000208D5-0000-0000-C000-000000000046
         /// </summary>
-        public static Guid Excel {get; private set;}
+        public static Guid Excel { get; private set; }
 
         /// <summary>
         /// 00020970-0000-0000-C000-000000000046
@@ -81,7 +81,7 @@ namespace NetOffice.OfficeApi.Tools
         /// 91493442-5A91-11CF-8700-00AA0060263B
         /// </summary>
         public static Guid PowerPoint { get; private set; }
-         
+
         /// <summary>
         /// 68CCE6C0-6129-101B-AF4E-00AA003F0F07
         /// </summary>

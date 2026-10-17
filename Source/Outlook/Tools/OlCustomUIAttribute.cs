@@ -27,7 +27,7 @@ namespace NetOffice.OutlookApi.Tools
         /// Use root namespace of the calling instance
         /// </summary>
         public readonly bool UseAssemblyNamespace;
-       
+
         /// <summary>
         /// Creates an instance of the Attribute
         /// </summary>

@@ -6,8 +6,8 @@ using NetOffice.Attributes;
 
 /*
     Contains the following Type Libraries:
-	Name - Description - SupportByVersion
-	OWC10 - Microsoft Office XP Web Components - 1
+    Name - Description - SupportByVersion
+    OWC10 - Microsoft Office XP Web Components - 1
 
 */
 

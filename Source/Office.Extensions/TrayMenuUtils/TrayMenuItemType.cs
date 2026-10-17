@@ -29,7 +29,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// Standard Button
         /// </summary>
         Button = 3,
-       
+
         /// <summary>
         /// Standard Text Box
         /// </summary>
@@ -59,7 +59,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         /// Custom Element
         /// </summary>
         Custom = 9,
-        
+
         /// <summary>
         /// Diagnostics Monitor
         /// </summary>

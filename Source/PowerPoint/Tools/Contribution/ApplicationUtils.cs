@@ -40,9 +40,9 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
 
         [DllImport("User32")]
         private static extern bool EnumChildWindows(IntPtr hWndParent, EnumChildCallback lpEnumFunc, ref int lParam);
-     
+
         [DllImport("Oleacc.dll")]
-        private static extern int AccessibleObjectFromWindow(int hwnd, uint dwObjectID, byte[] riid, [MarshalAs(UnmanagedType.IDispatch)]ref object ptr);
+        private static extern int AccessibleObjectFromWindow(int hwnd, uint dwObjectID, byte[] riid, [MarshalAs(UnmanagedType.IDispatch)] ref object ptr);
 
         private delegate bool EnumChildCallback(IntPtr hwnd, ref int lParam);
 
@@ -84,7 +84,7 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
             get
             {
                 if (0 == _hwnd)
-                    _hwnd =  TryGetHostApplicationWindowHandleFromDesktop();
+                    _hwnd = TryGetHostApplicationWindowHandleFromDesktop();
                 return _hwnd;
             }
         }
@@ -111,7 +111,7 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
                 IntPtr[] handles = enumerator.EnumerateWindows(2000);
 
                 // if we have only one - we dont need to find out more
-                if(null != handles && handles.Length == 1)
+                if (null != handles && handles.Length == 1)
                     return (int)handles[0];
 
                 foreach (IntPtr item in handles)
@@ -208,7 +208,7 @@ namespace NetOffice.PowerPointApi.Tools.Contribution
             {
                 int hwndA = GetVBEMainWindowHandle(applicationProxyA);
                 int hwndB = GetVBEMainWindowHandle(applicationProxyB);
-                return hwndA == hwndB;        
+                return hwndA == hwndB;
             }
             catch (Exception)
             {

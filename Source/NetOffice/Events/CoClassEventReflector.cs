@@ -57,7 +57,7 @@ namespace NetOffice.Events
                 Delegate[] delegates = eventDelegate.GetInvocationList();
                 return delegates.Length > 0;
             }
-            
+
             return false;
         }
 

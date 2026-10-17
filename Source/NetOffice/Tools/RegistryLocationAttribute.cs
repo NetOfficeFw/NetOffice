@@ -9,7 +9,7 @@ namespace NetOffice.Tools
     /// Specify possible registry locations
     /// </summary>
     public enum RegistrySaveLocation
-    {        
+    {
         /// <summary>
         /// Based on current scope but related addin key want set always in CurrentUser
         /// </summary>
@@ -123,13 +123,13 @@ namespace NetOffice.Tools
         {
             string targetKey = officeKey + progId;
             RegistryKey applicationKey = null;
-            if(isSystem)
+            if (isSystem)
                 applicationKey = Registry.LocalMachine.CreateSubKey(targetKey);
             else
                 applicationKey = Registry.CurrentUser.CreateSubKey(targetKey);
 
             applicationKey.Close();
-            
+
             if (isSystem)
                 applicationKey = Registry.LocalMachine.OpenSubKey(targetKey, true);
             else
@@ -147,7 +147,7 @@ namespace NetOffice.Tools
             if (createTimeStamp)
                 applicationKey.SetValue("CreatedAt", DateTime.Now.ToString(), RegistryValueKind.String);
 
-            applicationKey.Close();           
+            applicationKey.Close();
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace NetOffice.Tools
         public static bool TryDeleteApplicationKey(bool isSystem, string officeKey, string progId)
         {
             try
-            {             
+            {
                 if (isSystem)
                 {
                     Registry.LocalMachine.DeleteSubKey(officeKey + progId, false);

@@ -142,7 +142,7 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
             {
                 if (value != _style)
                 {
-                    _style = value; 
+                    _style = value;
                     Owner.OnProgressItemStyleChanged(this);
                 }
             }
