@@ -630,7 +630,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object DDERequest(Int32 channel, string item)
         {
-            return Factory.ExecuteVariantMethodGet(_instance, "Selection", channel, item);
+            return Factory.ExecuteVariantMethodGet(_instance, "DDERequest", channel, item);
         }
 
         /// <summary>
@@ -2280,7 +2280,7 @@ namespace NetOffice.ExcelApi.GlobalHelperModules
         [SupportByVersion("Excel", 9, 10, 11, 12, 14, 15, 16)]
         public static object _Run2(object macro, object arg1, object arg2, object arg3, object arg4, object arg5, object arg6, object arg7, object arg8, object arg9, object arg10, object arg11, object arg12, object arg13, object arg14, object arg15, object arg16, object arg17, object arg18, object arg19, object arg20, object arg21, object arg22, object arg23, object arg24, object arg25, object arg26, object arg27, object arg28, object arg29, object arg30)
         {
-            return Factory.ExecuteVariantMethodGet(_instance, "Run", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
+            return Factory.ExecuteVariantMethodGet(_instance, "_Run2", new object[] { macro, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19, arg20, arg21, arg22, arg23, arg24, arg25, arg26, arg27, arg28, arg29, arg30 });
         }
 
         /// <summary>
