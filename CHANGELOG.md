@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.9.11
+
+### Changed
+* Make `COMDynamicMetaObject` and `DynamicObjectEntity` classes obsolete [#491](https://github.com/NetOfficeFw/NetOffice/pull/491)
+
 ## v1.9.10
 
 ### Added
