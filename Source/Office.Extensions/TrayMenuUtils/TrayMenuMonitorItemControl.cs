@@ -72,12 +72,13 @@ namespace NetOffice.OfficeApi.Extensions.TrayMenuUtils
         }
 
         #endregion
-        
+
         #region Properties
 
         /// <summary>
         /// View Options
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public TrayMenuMonitorItem.Options ViewOptions { get; set; }
 
         private TrayMenuMonitorItem.ShowMode Mode { get; set; }

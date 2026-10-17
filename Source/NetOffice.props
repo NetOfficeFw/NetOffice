@@ -1,4 +1,4 @@
-﻿<Project>
+<Project>
   <!-- Common properties for NetOffice projects -->
   <PropertyGroup>
     <NetOfficeRelease>2.0.0</NetOfficeRelease>
@@ -31,12 +31,16 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFrameworks>net462;net8.0-windows;net10.0-windows</TargetFrameworks>
     <Configuration>Debug</Configuration>
   </PropertyGroup>
 
   <PropertyGroup>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
     <GenerateDocumentationFile Condition=" '$(GenerateDocumentationFile)' == '' ">true</GenerateDocumentationFile>
     <SignAssembly>true</SignAssembly>
     <AssemblySearchPaths>$(AssemblySearchPaths);{GAC}</AssemblySearchPaths>
