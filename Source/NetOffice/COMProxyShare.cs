@@ -237,11 +237,17 @@ namespace NetOffice
         /// <returns>true if underlying proxy is released, otherwise false</returns>
         public virtual bool Release()
         {
+            bool countChanged = false;
             try
             { 
                 lock (_thisLock)
                 {
+                    // reference counter is already zero, don't decrement below zero
+                    if (_count <= 0)
+                        return false;
+
                     _count--;
+                    countChanged = true;
                     if (0 == _count)
                     {
                         ReleaseComObject();                    
@@ -262,7 +268,8 @@ namespace NetOffice
             }
             finally
             {
-                RaiseCountChanged();
+                if (countChanged)
+                    RaiseCountChanged();
             }
         }
 

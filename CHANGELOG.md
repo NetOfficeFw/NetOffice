@@ -9,6 +9,9 @@
   * classes `COMDynamicObject`, `DuckException`, `COMDynamicObjectExpandableObjectConverter`, `COMObjectExpandableObjectConverter`, `ExpandableSettingsConverter`
   * event `OnCreateCOMDynamicEvent`
 
+### Fixed
+* Fix `COMObject.Dispose()` to be idempotent and not release a shared COM proxy which is still used by another instance [#479](https://github.com/NetOfficeFw/NetOffice/issues/479)
+
 
 ## v1.9.10
 

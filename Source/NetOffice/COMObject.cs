@@ -934,6 +934,11 @@ namespace NetOffice
             {
                 lock (_disposeLock)
                 {
+                    // instance is already disposed or currently disposing,
+                    // releasing the shared proxy again would decrement its reference counter twice
+                    if (_isDisposed || _isCurrentlyDisposing)
+                        return;
+
                     // skip check 
                     bool cancel = RaiseOnDispose();
                     if (cancel)
@@ -997,6 +1002,8 @@ namespace NetOffice
             }
             catch (Exception exception)
             {
+                // allow to retry dispose after a failure
+                _isCurrentlyDisposing = false;
                 throw new COMDisposeException("An unexpected error occured while disposing <" + 
                     InstanceName + ">.", exception);
             }
