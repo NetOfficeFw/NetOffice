@@ -71,7 +71,7 @@ namespace NetOffice
             internal OnCreateProxyShareEventArgs(ICOMObject requestedFrom, bool isEnumerator)
             {
                 RequestedFrom = requestedFrom;
-                IsEnumerator = IsEnumerator;
+                IsEnumerator = isEnumerator;
             }
 
             /// <summary>

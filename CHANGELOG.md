@@ -9,6 +9,9 @@
   * classes `COMDynamicObject`, `DuckException`, `COMDynamicObjectExpandableObjectConverter`, `COMObjectExpandableObjectConverter`, `ExpandableSettingsConverter`
   * event `OnCreateCOMDynamicEvent`
 
+### Fixed
+* Fix `Core.OnCreateProxyShareEventArgs.IsEnumerator` property which always returned `false` in `Core.CreateProxyShare` event handlers [#482](https://github.com/NetOfficeFw/NetOffice/issues/482)
+
 
 ## v1.9.10
 
